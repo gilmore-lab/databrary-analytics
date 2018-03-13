@@ -1,0 +1,52 @@
+---
+title: "databrary-user-growth"
+author: "Andrea R. Seisler"
+date: "`r Sys.time()`"
+output: 
+  html_document:
+  self_contained: false
+code_folding: show
+toc: true
+toc_depth: 3
+toc_float: true
+dpi: 300
+dev: pdf
+github_document: default
+---
+## Background
+
+This document contains data and graphs related to Databrary institution and user growth.
+
+## Import data
+
+Here we import the data file found in `csv/institutionAuthCounts.csv`, include `YearMonth`, `Institutions`, and `Authorized Investigators` in dataframe (df).   
+
+```{r import-data}
+# Import data and clean
+
+df <- read.csv(file = "csv/institutionAuthCounts.csv", header = TRUE)
+
+# Remove extra characters from df$YearMonth
+df$YearMonth <- substr(df$YearMonth, 2, 8)
+
+```
+
+```{r p-user-growth-plot, include=TRUE}
+
+y_lbl <- 'Date'
+
+
+# Plot for all Institutions and Authorized Investigators vs. date
+
+ggplot2::qplot(x = df$Institutions, y = df$YearMonth)
+ggplot2::qplot(x = df$Authorized.Investigators, y = df$YearMonth)
+
+# the below code does not work
+p <- ggplot2::ggplot(data=df, ggplot2::aes(x=Institutions, y=YearMonth)) 
+p <- p + 
+  geom_line(aes(group=, color=)) +
+  labs(x=NULL, y=y_lbl) +
+  #ggtitle(title_text)
+  
+  
+```
