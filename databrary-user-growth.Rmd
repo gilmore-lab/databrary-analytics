@@ -23,6 +23,8 @@ This document contains data and graphs related to Databrary institution and user
 #Load Libraries
 library(ggplot2)
 library(reshape2)
+library(dplyr)
+library(knitr)
 ```
 
 ## Import data
@@ -39,27 +41,43 @@ df$YearMonth <- substr(df$YearMonth, 2, 8)
 
 ```
 
+## Plot of User Growth
+
+Here we plot all authorized Institutions and Investigators vs. date
+
 ```{r p-user-growth-plot, include=TRUE}
-
-#y_lbl <- 'Date'
-
 
 # Plot for all Institutions and Authorized Investigators vs. date
 
 # the below code needs to be changed to geom_line
 
-
+# Reshape df
 df.melt <- melt(df, id = "YearMonth")
 
+# Using Points
 p <- 
   ggplot(data=df.melt, aes(x= YearMonth, y = value, color = variable)) +
   geom_point() +  
-  theme_bw() +
-  labs(title="Databrary User Growth", x="Date", y="# Users")
-
+  theme_classic() +
+  scale_colour_manual(values=c("black", "orange")) +
+  ylab("#Users") +
+  xlab("Date") +
+  labs(title="Databrary User Growth") +
+  scale_y_continuous(limits = c(0, 800)) #+
+  #scale_x_continuous(breaks=seq(df$YearMonth[1],df$YearMonth[46], 12))
 p
- 
 
+# Using geom_line - not working as expected 
+p2 <- 
+  ggplot(data=df.melt, aes(x= YearMonth, y = value)) +
+  geom_line() +
+  scale_colour_manual(values=c("black", "orange")) +
+  theme_classic() +
+  ylab("#Users") +
+  xlab("Date") +
+  labs(title="Databrary User Growth")
+
+p2
   
   
 ```
