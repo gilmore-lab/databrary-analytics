@@ -1,52 +1,58 @@
----
-title: "databrary-user-growth"
-author: "Andrea R. Seisler"
-date: '`r Sys.time()`'
-output:
-  html_document:
-    code_folding: show
-    dev: pdf
-    dpi: 300
-    self_contained: no
-    toc: yes
-    toc_depth: 3
-    toc_float: yes
-  github_document: default
----
-## Background
+databrary-user-growth
+================
+Andrea R. Seisler
+2018-03-14 13:28:21
+
+Background
+----------
 
 This document contains data and graphs related to Databrary institution and user growth.
 
-## Load Libraries
+Load Libraries
+--------------
 
-```{r load-libraries}
+``` r
 #Load Libraries
 library(ggplot2)
 library(reshape2)
 library(dplyr)
+```
+
+    ## 
+    ## Attaching package: 'dplyr'
+
+    ## The following objects are masked from 'package:stats':
+    ## 
+    ##     filter, lag
+
+    ## The following objects are masked from 'package:base':
+    ## 
+    ##     intersect, setdiff, setequal, union
+
+``` r
 library(knitr)
 ```
 
-## Import data
+Import data
+-----------
 
-Here we import the data file found in `csv/institutionAuthCounts.csv`, include `YearMonth`, `Institutions`, and `Authorized Investigators` in dataframe (df).   
+Here we import the data file found in `csv/institutionAuthCounts.csv`, include `YearMonth`, `Institutions`, and `Authorized Investigators` in dataframe (df).
 
-```{r import-data}
+``` r
 # Import data and clean
 
 df <- read.csv(file = "csv/institutionAuthCounts.csv", header = TRUE)
 
 # Remove extra characters from df$YearMonth
 df$YearMonth <- substr(df$YearMonth, 2, 8)
-
 ```
 
-## Plot of User Growth
+Plot of User Growth
+-------------------
 
 Here we plot all authorized Institutions and Investigators vs. date
 
-```{r p-user-growth-plot, include=TRUE}
-
+``` r
 # Plot for all Institutions and Authorized Investigators vs. date
 
 # the below code needs to be changed to geom_line
@@ -59,16 +65,19 @@ p <-
   ggplot(data=df.melt, aes(x= YearMonth, y = value, color = variable)) +
   geom_point() +  
   theme_classic() +
-  scale_colour_manual(values=c("black", "orange")) +  # What colors do we want to use?
+  scale_colour_manual(values=c("black", "orange")) +
   ylab("#Users") +
   xlab("Date") +
   labs(title="Databrary User Growth") +
   theme(legend.title=element_blank()) +
-  scale_y_continuous(limits = c(0, 800)) 
-  # To Do: Change x labels so they are readable and only every year
+  scale_y_continuous(limits = c(0, 800)) #+
   #scale_x_continuous(breaks=seq(df$YearMonth[1],df$YearMonth[46], 12))
 p
+```
 
+![](databrary-user-growth_files/figure-markdown_github/p-user-growth-plot-1.png)
+
+``` r
 # Using geom_line - not working as expected 
 p2 <- 
   ggplot(data=df.melt, aes(x= YearMonth, y = value)) +
@@ -80,11 +89,13 @@ p2 <-
   labs(title="Databrary User Growth")
 
 p2
-  
-  
 ```
 
-## Questions
+![](databrary-user-growth_files/figure-markdown_github/p-user-growth-plot-2.png)
+
+Questions
+---------
 
 #### How do I create the pretty file with the code and plots so it is viewable?
-  - Knit to github document?
+
+-   Knit to github document?
