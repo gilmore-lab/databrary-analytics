@@ -4,14 +4,14 @@ author: "Andrea R. Seisler"
 date: "`r Sys.time()`"
 output: 
   html_document:
-  self_contained: false
-code_folding: show
-toc: true
-toc_depth: 3
-toc_float: true
-dpi: 300
-dev: pdf
-github_document: default
+    self_contained: false
+    code_folding: show
+    toc: true
+    toc_depth: 3
+    toc_float: true
+    dpi: 300
+    dev: pdf
+  github_document: default
 ---
 ## Background
 
@@ -81,3 +81,7 @@ p2
   
   
 ```
+
+## Questions
+
+#### How do I create the pretty file with the code and plots so it is viewable?
