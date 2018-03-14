@@ -17,6 +17,14 @@ github_document: default
 
 This document contains data and graphs related to Databrary institution and user growth.
 
+## Load Libraries
+
+```{r load-libraries}
+#Load Libraries
+library(ggplot2)
+library(reshape2)
+```
+
 ## Import data
 
 Here we import the data file found in `csv/institutionAuthCounts.csv`, include `YearMonth`, `Institutions`, and `Authorized Investigators` in dataframe (df).   
@@ -33,20 +41,25 @@ df$YearMonth <- substr(df$YearMonth, 2, 8)
 
 ```{r p-user-growth-plot, include=TRUE}
 
-y_lbl <- 'Date'
+#y_lbl <- 'Date'
 
 
 # Plot for all Institutions and Authorized Investigators vs. date
 
-ggplot2::qplot(x = df$Institutions, y = df$YearMonth)
-ggplot2::qplot(x = df$Authorized.Investigators, y = df$YearMonth)
+# the below code needs to be changed to geom_line
 
-# the below code does not work
-p <- ggplot2::ggplot(data=df, ggplot2::aes(x=Institutions, y=YearMonth)) 
-p <- p + 
-  geom_line(aes(group=, color=)) +
-  labs(x=NULL, y=y_lbl) +
-  #ggtitle(title_text)
+
+df.melt <- melt(df, id = "YearMonth")
+
+p <- 
+  ggplot(data=df.melt, aes(x= YearMonth, y = value, color = variable)) +
+  geom_point() +  
+  theme_bw() +
+  labs(title="Databrary User Growth", x="Date", y="# Users")
+
+p
+ 
+
   
   
 ```
