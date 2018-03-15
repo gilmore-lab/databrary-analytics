@@ -23,6 +23,7 @@ library(ggplot2)
 library(reshape2)
 library(dplyr)
 library(knitr)
+library(cowplot)
 ```
 
 ## Import data
@@ -58,19 +59,18 @@ p <-
   ggplot(data=df.melt, aes(x = YearMonth, y = Count, color = Type, group = Type)) +
   geom_point() + 
   geom_line(size=3) +
-  theme_classic() +
-  #scale_colour_manual(values=c("black", "orange")) +  # What colors do we want to use?
-  ylab("Counts") +
+  theme_classic(base_size = 14) +                        #Axis Label Size
+  scale_colour_manual(values=c("#fadbc7", "#b2ddd4")) +  #Databrary Colors
+  ylab("Authorizations") +
   xlab("Date") +
   #labs(title="Databrary User Growth") +
-  theme(legend.title=element_blank()) +
-  scale_y_continuous(breaks = c(50,100,150,200,250,300,350,400,450,500,550,600,650,700,750))
-  # To Do: Change x labels so they are readable and only every year
-  #scale_x_continuous(breaks=seq(df$YearMonth[1],df$YearMonth[46], 12))
-p
+  theme(legend.position="none", axis.text = element_text(size = rel(0.8), colour = "black")) +    #Axis text size and color
+  scale_y_continuous(breaks = c(50,100,150,200,250,300,350,400,450,500,550,600,650,700,750)) 
+  
+ggdraw(p) + 
+  draw_label("Investigators", .9, .84) +
+  draw_label("Institutions", .9, .44)
+
 ```
 
-## Questions
 
-#### How do I create the pretty file with the code and plots so it is viewable?
-  - Knit to github document?
