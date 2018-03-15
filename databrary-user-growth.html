@@ -25,8 +25,8 @@
 <script src="databrary-user-growth_files/tocify-1.9.1/jquery.tocify.js"></script>
 <script src="databrary-user-growth_files/navigation-1.1/tabsets.js"></script>
 <script src="databrary-user-growth_files/navigation-1.1/codefolding.js"></script>
-<link href="databrary-user-growth_files/highlightjs-9.12.0/default.css" rel="stylesheet" />
-<script src="databrary-user-growth_files/highlightjs-9.12.0/highlight.js"></script>
+<link href="databrary-user-growth_files/highlightjs-1.1/default.css" rel="stylesheet" />
+<script src="databrary-user-growth_files/highlightjs-1.1/highlight.js"></script>
 
 <style type="text/css">code{white-space: pre;}</style>
 <style type="text/css">
@@ -35,12 +35,10 @@
   }
 </style>
 <script type="text/javascript">
-if (window.hljs) {
-  hljs.configure({languages: []});
-  hljs.initHighlightingOnLoad();
-  if (document.readyState && document.readyState === "complete") {
-    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
-  }
+if (window.hljs && document.readyState && document.readyState === "complete") {
+   window.setTimeout(function() {
+      hljs.initHighlighting();
+   }, 0);
 }
 </script>
 
@@ -235,7 +233,7 @@ div.tocify {
 
 <h1 class="title toc-ignore">databrary-user-growth</h1>
 <h4 class="author"><em>Andrea R. Seisler</em></h4>
-<h4 class="date"><em>2018-03-14 13:30:42</em></h4>
+<h4 class="date"><em>2018-03-15 08:59:29</em></h4>
 
 </div>
 
@@ -268,7 +266,9 @@ library(dplyr)</code></pre>
 df &lt;- read.csv(file = &quot;csv/institutionAuthCounts.csv&quot;, header = TRUE)
 
 # Remove extra characters from df$YearMonth
-df$YearMonth &lt;- substr(df$YearMonth, 2, 8)</code></pre>
+df$YearMonth &lt;- as.Date(substr(df$YearMonth, 2, 11))
+df$Year &lt;- substr(df$YearMonth, 1, 4)
+df$Month &lt;- as.numeric(substr(df$YearMonth, 6, 7))</code></pre>
 </div>
 <div id="plot-of-user-growth" class="section level2">
 <h2>Plot of User Growth</h2>
@@ -278,35 +278,24 @@ df$YearMonth &lt;- substr(df$YearMonth, 2, 8)</code></pre>
 # the below code needs to be changed to geom_line
 
 # Reshape df
-df.melt &lt;- melt(df, id = &quot;YearMonth&quot;)
+df.melt &lt;- melt(df, id = c(&quot;YearMonth&quot;, &quot;Year&quot;, &quot;Month&quot;), value.name = &quot;Count&quot;, variable.name = &quot;Type&quot;)
 
 # Using Points
 p &lt;- 
-  ggplot(data=df.melt, aes(x= YearMonth, y = value, color = variable)) +
-  geom_point() +  
+  ggplot(data=df.melt, aes(x=YearMonth, y = Count, color = Type, group = Type)) +
+  geom_point() + 
+  geom_line(size=3) +
   theme_classic() +
-  scale_colour_manual(values=c(&quot;black&quot;, &quot;orange&quot;)) +  # What colors do we want to use?
-  ylab(&quot;#Users&quot;) +
+  #scale_colour_manual(values=c(&quot;black&quot;, &quot;orange&quot;)) +  # What colors do we want to use?
+  ylab(&quot;Counts&quot;) +
   xlab(&quot;Date&quot;) +
   labs(title=&quot;Databrary User Growth&quot;) +
   theme(legend.title=element_blank()) +
-  scale_y_continuous(limits = c(0, 800)) 
+  scale_y_continuous(breaks = c(50,100,150,200,250,300,350,400,450,500,550,600,650,700,750))
   # To Do: Change x labels so they are readable and only every year
   #scale_x_continuous(breaks=seq(df$YearMonth[1],df$YearMonth[46], 12))
 p</code></pre>
-<embed src="databrary-user-growth_files/figure-html/p-user-growth-plot-1.pdf" width="672" type="application/pdf" />
-<pre class="r"><code># Using geom_line - not working as expected 
-p2 &lt;- 
-  ggplot(data=df.melt, aes(x= YearMonth, y = value)) +
-  geom_line() +
-  scale_colour_manual(values=c(&quot;black&quot;, &quot;orange&quot;)) +
-  theme_classic() +
-  ylab(&quot;#Users&quot;) +
-  xlab(&quot;Date&quot;) +
-  labs(title=&quot;Databrary User Growth&quot;)
-
-p2</code></pre>
-<embed src="databrary-user-growth_files/figure-html/p-user-growth-plot-2.pdf" width="672" type="application/pdf" />
+<p><img src="databrary-user-growth_files/figure-html/p-user-growth-plot-1.png" width="672" /></p>
 </div>
 <div id="questions" class="section level2">
 <h2>Questions</h2>
