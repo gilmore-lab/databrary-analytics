@@ -235,7 +235,7 @@ div.tocify {
 
 <h1 class="title toc-ignore">databrary-user-growth</h1>
 <h4 class="author"><em>Andrea R. Seisler</em></h4>
-<h4 class="date"><em>2018-03-16 11:39:09</em></h4>
+<h4 class="date"><em>2018-03-16 11:47:26</em></h4>
 
 </div>
 
@@ -301,9 +301,7 @@ p &lt;-
   theme(axis.title.x=element_blank()) +
   theme(legend.position=&quot;none&quot;, axis.text = element_text(size = rel(0.8), colour = &quot;black&quot;)) +    #Axis text size and color
   theme(axis.line = element_blank()) +
-  scale_y_continuous(breaks = seq(0, 700, 100)) +
-  coord_cartesian()
- 
+  scale_y_continuous(breaks = seq(0, 700, 100))
   
 ggdraw(p) + 
   draw_label(&quot;Investigators&quot;, .9, .8) +

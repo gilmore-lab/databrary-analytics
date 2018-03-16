@@ -67,9 +67,7 @@ p <-
   theme(axis.title.x=element_blank()) +
   theme(legend.position="none", axis.text = element_text(size = rel(0.8), colour = "black")) +    #Axis text size and color
   theme(axis.line = element_blank()) +
-  scale_y_continuous(breaks = seq(0, 700, 100)) +
-  coord_cartesian()
- 
+  scale_y_continuous(breaks = seq(0, 700, 100))
   
 ggdraw(p) + 
   draw_label("Investigators", .9, .8) +
