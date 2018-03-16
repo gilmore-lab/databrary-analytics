@@ -235,7 +235,7 @@ div.tocify {
 
 <h1 class="title toc-ignore">databrary-user-growth</h1>
 <h4 class="author"><em>Andrea R. Seisler</em></h4>
-<h4 class="date"><em>2018-03-16 12:43:54</em></h4>
+<h4 class="date"><em>2018-03-16 13:14:07</em></h4>
 
 </div>
 
@@ -294,7 +294,7 @@ p &lt;-
   geom_point() + 
   geom_line(size=3) +
   theme_classic(base_size = 14) +                        #Axis Label Size
-  scale_colour_manual(values=c(&quot;#F49B85&quot;, &quot;#4CAE99&quot;)) +  #Saturated Databrary Colors 
+  scale_colour_manual(values=c(&quot;#ec7751&quot;, &quot;#4CAE99&quot;)) +  #Saturated Databrary Colors 
   ylab(&quot;Authorizations&quot;) +
   #xlab(&quot;Year&quot;) +
   #labs(title=&quot;Databrary User Growth&quot;) +
@@ -306,8 +306,8 @@ p &lt;-
   
   
 ggdraw(p) + 
-  draw_label(&quot;Investigators&quot;, .9, .8) +
-  draw_label(&quot;Institutions&quot;, .9, .38)</code></pre>
+  draw_label(&quot;Investigators&quot;, colour = &quot;#4CAE99&quot;, .9, .8) +
+  draw_label(&quot;Institutions&quot;, colour = &quot;#ec7751&quot;, .9, .38)</code></pre>
 <pre><code>## Warning: Removed 6 rows containing missing values (geom_point).</code></pre>
 <pre><code>## Warning: Removed 6 rows containing missing values (geom_path).</code></pre>
 <p><img src="databrary-user-growth_files/figure-html/p-user-growth-plot-1.png" width="672" /></p>

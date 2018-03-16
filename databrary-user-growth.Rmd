@@ -60,7 +60,7 @@ p <-
   geom_point() + 
   geom_line(size=3) +
   theme_classic(base_size = 14) +                        #Axis Label Size
-  scale_colour_manual(values=c("#F49B85", "#4CAE99")) +  #Saturated Databrary Colors 
+  scale_colour_manual(values=c("#ec7751", "#4CAE99")) +  #Saturated Databrary Colors 
   ylab("Authorizations") +
   #xlab("Year") +
   #labs(title="Databrary User Growth") +
@@ -72,8 +72,8 @@ p <-
   
   
 ggdraw(p) + 
-  draw_label("Investigators", .9, .8) +
-  draw_label("Institutions", .9, .38)
+  draw_label("Investigators", colour = "#4CAE99", .9, .8) +
+  draw_label("Institutions", colour = "#ec7751", .9, .38)
 
 ```
 
