@@ -60,15 +60,15 @@ p <-
   geom_point() + 
   geom_line(size=3) +
   theme_classic(base_size = 14) +                        #Axis Label Size
-  scale_colour_manual(values=c("#EE823A", "#4CAE99")) +  #Saturated Databrary Colors 
+  scale_colour_manual(values=c("#F49B85", "#4CAE99")) +  #Saturated Databrary Colors 
   ylab("Authorizations") +
   #xlab("Year") +
   #labs(title="Databrary User Growth") +
   theme(axis.title.x=element_blank()) +
   theme(legend.position="none", axis.text = element_text(size = rel(0.8), colour = "black")) +    #Axis text size and color
   theme(axis.line = element_blank()) +
-  scale_y_continuous(breaks = seq(0, 700, 100))
- 
+  scale_y_continuous(breaks = seq(0, 700, 100)) +
+  coord_cartesian()
  
   
 ggdraw(p) + 
