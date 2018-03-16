@@ -60,7 +60,7 @@ p <-
   geom_point() + 
   geom_line(size=3) +
   theme_classic(base_size = 14) +                        #Axis Label Size
-  scale_colour_manual(values=c("#f6ba93", "#91CFC1")) +  #Saturated Databrary Colors 
+  scale_colour_manual(values=c("#EE823A", "#4CAE99")) +  #Saturated Databrary Colors 
   ylab("Authorizations") +
   #xlab("Year") +
   #labs(title="Databrary User Growth") +
