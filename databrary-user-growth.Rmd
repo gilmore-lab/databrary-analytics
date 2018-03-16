@@ -60,13 +60,14 @@ p <-
   geom_point() + 
   geom_line(size=3) +
   theme_classic(base_size = 14) +                        #Axis Label Size
-  scale_colour_manual(values=c("#fadbc7", "#b2ddd4")) +  #Databrary Colors
+  scale_colour_manual(values=c("#f6ba93", "#91CFC1")) +  #Databrary Colors ("#fadbc7", "#b2ddd4")
   ylab("Authorizations") +
   #xlab("Year") +
-  #labs(title="Databrary User Growth") 
+  #labs(title="Databrary User Growth") +
   theme(axis.title.x=element_blank()) +
   theme(legend.position="none", axis.text = element_text(size = rel(0.8), colour = "black")) +    #Axis text size and color
-  scale_y_continuous(breaks = c(50,100,150,200,250,300,350,400,450,500,550,600,650,700,750)) 
+  theme(axis.line = element_line(colour = "white")) +
+  scale_y_continuous(breaks = c(0,100,200,300,400,500,600,700))
   
 ggdraw(p) + 
   draw_label("Investigators", .9, .78) +
