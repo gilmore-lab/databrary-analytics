@@ -235,7 +235,7 @@ div.tocify {
 
 <h1 class="title toc-ignore">databrary-user-growth</h1>
 <h4 class="author"><em>Andrea R. Seisler</em></h4>
-<h4 class="date"><em>2018-03-16 10:55:24</em></h4>
+<h4 class="date"><em>2018-03-16 11:23:54</em></h4>
 
 </div>
 
@@ -290,7 +290,7 @@ df.melt &lt;- melt(df, id = c(&quot;YearMonth&quot;, &quot;Year&quot;, &quot;Mon
 
 # Using Points
 p &lt;- 
-  ggplot(data=df.melt, aes(x = YearMonth, y = Count, color = Type, group = Type), xaxs = &quot;i&quot;) +
+  ggplot(data=df.melt, aes(x = YearMonth, y = Count, color = Type, group = Type)) +
   geom_point() + 
   geom_line(size=3) +
   theme_classic(base_size = 14) +                        #Axis Label Size
@@ -301,13 +301,12 @@ p &lt;-
   theme(axis.title.x=element_blank()) +
   theme(legend.position=&quot;none&quot;, axis.text = element_text(size = rel(0.8), colour = &quot;black&quot;)) +    #Axis text size and color
   theme(axis.line = element_blank()) +
-  scale_y_continuous(breaks = seq(0, 700, 100)) 
-  
-
-  
+  scale_y_continuous(breaks = seq(0, 700, 100))
+ 
+ 
   
 ggdraw(p) + 
-  draw_label(&quot;Investigators&quot;, .9, .78) +
+  draw_label(&quot;Investigators&quot;, .9, .8) +
   draw_label(&quot;Institutions&quot;, .9, .4)</code></pre>
 <pre><code>## Warning: Removed 6 rows containing missing values (geom_point).</code></pre>
 <pre><code>## Warning: Removed 6 rows containing missing values (geom_path).</code></pre>
