@@ -49,12 +49,10 @@ Here we plot all authorized Institutions and Investigators vs. date. I used http
 
 # Plot for all Institutions and Authorized Investigators vs. date
 
-# the below code needs to be changed to geom_line
-
 # Reshape df
 df.melt <- melt(df, id = c("YearMonth", "Year", "Month"), value.name = "Count", variable.name = "Type")
 
-# Using Points
+# Plot
 p <- 
   ggplot(data=df.melt, aes(x = YearMonth, y = Count, color = Type, group = Type)) +
   geom_point() + 

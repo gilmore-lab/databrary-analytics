@@ -235,7 +235,7 @@ div.tocify {
 
 <h1 class="title toc-ignore">databrary-user-growth</h1>
 <h4 class="author"><em>Andrea R. Seisler</em></h4>
-<h4 class="date"><em>2018-03-16 13:14:07</em></h4>
+<h4 class="date"><em>2018-03-19 12:14:16</em></h4>
 
 </div>
 
@@ -283,12 +283,10 @@ df$Month &lt;- as.numeric(substr(df$YearMonth, 6, 7))</code></pre>
 <p>Here we plot all authorized Institutions and Investigators vs. date. I used <a href="https://www.hexcolortool.com" class="uri">https://www.hexcolortool.com</a> to saturate the Databrary colors (“#fadbc7”, “#b2ddd4”) so they are darker on the graph.</p>
 <pre class="r"><code># Plot for all Institutions and Authorized Investigators vs. date
 
-# the below code needs to be changed to geom_line
-
 # Reshape df
 df.melt &lt;- melt(df, id = c(&quot;YearMonth&quot;, &quot;Year&quot;, &quot;Month&quot;), value.name = &quot;Count&quot;, variable.name = &quot;Type&quot;)
 
-# Using Points
+# Plot
 p &lt;- 
   ggplot(data=df.melt, aes(x = YearMonth, y = Count, color = Type, group = Type)) +
   geom_point() + 
