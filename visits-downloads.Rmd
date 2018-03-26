@@ -52,13 +52,17 @@ visit.down %>%
   geom_point(alpha = .5) +
   theme_classic()
 ```
-## Table of top downloads
+
+## Table of all downloads and visits
+
 ```{r visit-downloads-table}
 visit.down %>%
   filter(!is.na(downloads)) %>%
   knitr::kable()
 ```
-## Top downloads and volume owners
+
+## Top `r (n.tops <- 20)` downloads and volume owners
+
 ```{r summarize-top-volumes}
 list_volume_owners <- function(volume) {
   v <- databraryapi::download_containers_records(volume)
@@ -86,7 +90,6 @@ list_volume_owners <- function(volume) {
 Here's a table of the top downloads.
 
 ```{r list-of-top-visits}
-n.tops <- 5
 vs <- head(visit.down, n.tops)$volume
 ```
 
@@ -115,10 +118,10 @@ list_volume_owners <- function(volume) {
   }
 }
 
-top.20.visits <- head(visit.down, 20)
-assoc.vols <- Reduce(function(x,y) merge(x, y, all=TRUE), lapply(top.20.visits$volume, list_volume_owners))
-top.20.visits.vols <- left_join(assoc.vols, top.20.visits)
-top.20.visits.vols %>%
+top.n.visits <- head(visit.down, n.tops)
+assoc.vols <- Reduce(function(x,y) merge(x, y, all=TRUE), lapply(top.n.visits$volume, list_volume_owners))
+top.n.visits.vols <- left_join(assoc.vols, top.n.visits)
+top.n.visits.vols %>%
   arrange(desc(visits)) %>%
   knitr::kable()
 ```
