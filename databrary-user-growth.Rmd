@@ -23,6 +23,7 @@ library(ggplot2)
 library(reshape2)
 library(dplyr)
 library(knitr)
+library(cowplot)
 ```
 
 ## Import data
@@ -42,35 +43,36 @@ df$Month <- as.numeric(substr(df$YearMonth, 6, 7))
 
 ## Plot of User Growth
 
-Here we plot all authorized Institutions and Investigators vs. date
+Here we plot all authorized Institutions and Investigators vs. date. I used https://www.hexcolortool.com to saturate the Databrary colors ("#fadbc7", "#b2ddd4") so they are darker on the graph.
 
 ```{r p-user-growth-plot, include=TRUE}
 
 # Plot for all Institutions and Authorized Investigators vs. date
 
-# the below code needs to be changed to geom_line
-
 # Reshape df
 df.melt <- melt(df, id = c("YearMonth", "Year", "Month"), value.name = "Count", variable.name = "Type")
 
-# Using Points
+# Plot
 p <- 
   ggplot(data=df.melt, aes(x = YearMonth, y = Count, color = Type, group = Type)) +
   geom_point() + 
   geom_line(size=3) +
-  theme_classic() +
-  #scale_colour_manual(values=c("black", "orange")) +  # What colors do we want to use?
-  ylab("Counts") +
-  xlab("Date") +
+  theme_classic(base_size = 14) +                        #Axis Label Size
+  scale_colour_manual(values=c("#ec7751", "#4CAE99")) +  #Saturated Databrary Colors 
+  ylab("Authorizations") +
+  #xlab("Year") +
   #labs(title="Databrary User Growth") +
-  theme(legend.title=element_blank()) +
-  scale_y_continuous(breaks = c(50,100,150,200,250,300,350,400,450,500,550,600,650,700,750))
-  # To Do: Change x labels so they are readable and only every year
-  #scale_x_continuous(breaks=seq(df$YearMonth[1],df$YearMonth[46], 12))
-p
+  theme(axis.title.x=element_blank()) +
+  theme(legend.position="none", axis.text = element_text(size = rel(0.8), colour = "black")) +    #Axis text size and color
+  theme(axis.line = element_blank()) +
+  scale_y_continuous(breaks = seq(0, 700, 100), expand = c(0,0)) +
+  coord_cartesian(ylim = c(0, 730))
+  
+  
+ggdraw(p) + 
+  draw_label("Investigators", colour = "#4CAE99", .9, .8) +
+  draw_label("Institutions", colour = "#ec7751", .9, .38)
+
 ```
 
-## Questions
 
-#### How do I create the pretty file with the code and plots so it is viewable?
-  - Knit to github document?
