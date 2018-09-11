@@ -1,5 +1,5 @@
 ---
-title: "databrary-analytics"
+title: "databrary-analytics-working"
 author: "Rick Gilmore"
 date: "`r Sys.time()`"
 output: html_document
@@ -192,23 +192,29 @@ In practice, there is a bug in `databraryapi::list_assets_by_type()` with some v
 databraryapi::list_assets_by_type(721)
 ```
 
-Volume 721 contains a single session with one video.
+Volume 721 contains a single session with one video. 
+The error message is as follows:
+
+    Error: `by` can't contain join column `format` which is missing from LHS
 
 ```{r, eval=FALSE}
 databraryapi::list_assets_by_type(720)
 ```
 
 Volume 720 contains *no* videos.
+The error message is as follows:
+
+    Error: `by` can't contain join column `format` which is missing from LHS
 
 **NOTE** This bug in `databraryapi::list_assets_by_type()` should be fixed soon.
 
-I also observed a bug in `databraryapi::list_assets_by_type()` with volume 4 that has lots of videos.
+~~I also observed a bug in `databraryapi::list_assets_by_type()` with volume 4 that has lots of videos~~.
 
-```{r, eval=FALSE}
+```{r list-vol-4-assets}
 databraryapi::list_assets_by_type(4)
 ```
 
-This looks like a bug in the way non-shared or private sessions are handled.
+~~This looks like a bug in the way non-shared or private sessions are handled~~. As of 2018-09-09-11:28 this bug is now fixed.
 
 For now, I will just do a bunch of these manually and comment-out the volumes that trigger the bug(s).
 
@@ -225,12 +231,78 @@ v8 <- databraryapi::list_assets_by_type(shared_w_db_vols[8])
 #v10 <- databraryapi::list_assets_by_type(shared_w_db_vols[10])
 ```
 
-I'm afraid the bug happens often enough that I need to fix it ASAP.
-Once this bug is fixed then the following code should generate a data frame with all of the shared videos.
+~~I'm afraid the bug happens often enough that I need to fix it ASAP.
+Once this bug is fixed then the following code should generate a data frame with all of the shared videos.~~
+I fixed this bug on 2018-09-09.
 
 ```{r, eval=FALSE}
 # Not evaluated now
 shared_vid_list <- lapply(shared_w_db_vols, databraryapi::list_assets_by_type)
 shared_vid_df <-  plyr::rbind.fill(shared_vid_list)
+```
+
+I ran similar code on 2018-09-10 and generated a 9,008 line data file.
+Needless to say, the code takes a very long time to run, I'd guess about 4-5 mins.
+The file is saved in `csv/csv/shared_videos_2018-09-10.csv` for future work.
+
+The following code uses a new function from the `databraryapi` to produce a summary report.
+
+```{r}
+video_stats_list <- lapply(shared_w_db_vols, databraryapi::get_video_stats)
+video_stats_df <- plyr::rbind.fill(video_stats_df)
+```
+
+
+
+## "Nice" list of shared Databrary volumes
+
+Since I need to work on the `databraryapi` package to accomplish my original goals, for now I'll just generate a nice file of the shared Databrary volumes.
+
+The following code is copied from a new function I created in `R/list_shared_volumes.R`.
+
+```{r save-shared-volume-list}
+list_shared_volumes <- function(min_vol = 1, max_vol = 800, sharing_level = 'full') {
+  if (max_vol < 1) {
+    stop("max_vol must be >= 1")
+  }
+  if (min_vol < 1) {
+    stop("min_vol must be >= 1")
+  }
+  if (min_vol >= max_vol) {
+    stop("min_vol must be < max_vol")
+  }
+  source("R/list_volume_sharing.R")
+  
+  # Add Databrary login here...
+  
+  # what is the largest volume id? Should know
+  cat("Getting shared volume indices.\n")
+  volume_sharing_df <- list_volume_sharing(min_vol, max_vol)
+  if (is.null(volume_sharing_df)) {
+    error("Shared volume list is empty.")
+  }
+  shared_vol_ids <- volume_sharing_df[volume_sharing_df$sharing_level == sharing_level, 'id']
+  cat(paste0("Found ", length(shared_vol_ids), " volumes with 'sharing_level' == '", sharing_level, "'.\n"))
+  
+  cat("Getting metadata from shared volumes.\n")
+  shared_vol_metadata_list <- lapply(shared_vol_ids, databraryapi::list_volume_metadata)
+  if (is.null(shared_vol_metadata_list)) {
+    error("Volume metadata list is empty.")
+  } else {
+    plyr::rbind.fill(shared_vol_metadata_list)
+  }
+}
+
+save_shared_volumes_csv <- function(min_vol = 1, max_vol = 800, 
+                                    out.fn = "csv/shared_vols_metadata.csv") {
+  df <- list_shared_volumes(min_vol = min_vol, max_vol = max_vol, sharing_level = 'full')
+  if (!is.null(df)) {
+    # Should check to see if file exists before overwriting
+    write.csv(df, file = out.fn, row.names = FALSE)
+    cat(paste0("Saved volume metadata to '", out.fn, "'\n"))
+  } else {
+    error("List of shared volumes is empty.")
+  }
+}
 ```
 

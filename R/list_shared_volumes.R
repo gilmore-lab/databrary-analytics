@@ -1,4 +1,6 @@
-list_shared_volumes <- function(min_vol = 1, max_vol = 800, sharing_level = 'full') {
+list_shared_volumes <- function(min_vol = 1, max_vol = 800, sharing_level = 'full',
+                                sharing_permission_lvls = c("none", "shared_w_db", "collaborator", "co-owner", "owner"),
+                                vb = TRUE) {
   if (max_vol < 1) {
     stop("max_vol must be >= 1")
   }
@@ -13,20 +15,24 @@ list_shared_volumes <- function(min_vol = 1, max_vol = 800, sharing_level = 'ful
   # Add Databrary login here...
   
   # what is the largest volume id? Should know
-  cat("Getting shared volume indices.\n")
+  if (vb) message(paste0("Getting shared volume numbers."))
   volume_sharing_df <- list_volume_sharing(min_vol, max_vol)
   if (is.null(volume_sharing_df)) {
     error("Shared volume list is empty.")
   }
   shared_vol_ids <- volume_sharing_df[volume_sharing_df$sharing_level == sharing_level, 'id']
-  cat(paste0("Found ", length(shared_vol_ids), " volumes with 'sharing_level' == '", sharing_level, "'.\n"))
+  if (vb) message(paste0("Found ", length(shared_vol_ids), " volumes with 'sharing_level' == '", 
+                 sharing_level, "'."))
   
-  cat("Getting metadata from shared volumes.\n")
+  if (vb) message("Getting metadata from shared volumes.")
   shared_vol_metadata_list <- lapply(shared_vol_ids, databraryapi::list_volume_metadata)
   if (is.null(shared_vol_metadata_list)) {
-    error("Volume metadata list is empty.")
+    if (vb) message("Volume metadata list is empty.")
+    NULL
   } else {
-    plyr::rbind.fill(shared_vol_metadata_list)
+    df <- plyr::rbind.fill(shared_vol_metadata_list)
+    df$how_shared_w_me <- sharing_permission_lvls[df$permission]
+    df
   }
 }
 
@@ -36,7 +42,7 @@ save_shared_volumes_csv <- function(min_vol = 1, max_vol = 800,
   if (!is.null(df)) {
     # Should check to see if file exists before overwriting
     write.csv(df, file = out.fn, row.names = FALSE)
-    cat(paste0("Saved volume metadata to '", out.fn, "'\n"))
+    cat(paste0("Saved volume metadata to '", out.fn, "'."))
   } else {
     error("List of shared volumes is empty.")
   }
