@@ -28,17 +28,17 @@ library(cowplot)
 
 ## Import data
 
-Here we import the data file found in `csv/institutionAuthCounts.csv`, include `Date`, `Institutions`, and `Authorized Investigators` in dataframe (df).   
+Here we import the data file found in `csv/institutionAuthCounts.csv`, include `YearMonth`, `Institutions`, and `Authorized Investigators` in dataframe (df).   
 
 ```{r import-data}
 # Import data and clean
 
-df <- read.csv(file = "csv/institutionAuthCounts_new.csv", header = TRUE)
+df <- read.csv(file = "csv/institutionAuthCounts.csv", header = TRUE)
 
 # Remove extra characters from df$YearMonth
-df$Date <- as.Date(substr(df$Date, 2, 11))
-df$Year <- substr(df$Date, 1, 4)
-df$Month <- as.numeric(substr(df$Date, 6, 7))
+df$YearMonth <- as.Date(substr(df$YearMonth, 2, 11))
+df$Year <- substr(df$YearMonth, 1, 4)
+df$Month <- as.numeric(substr(df$YearMonth, 6, 7))
 ```
 
 ## Plot of User Growth
@@ -50,11 +50,11 @@ Here we plot all authorized Institutions and Investigators vs. date. I used http
 # Plot for all Institutions and Authorized Investigators vs. date
 
 # Reshape df
-df.melt <- melt(df, id = c("Date", "Year", "Month"), value.name = "Count", variable.name = "Type")
+df.melt <- melt(df, id = c("YearMonth", "Year", "Month"), value.name = "Count", variable.name = "Type")
 
 # Plot
 p <- 
-  ggplot(data=df.melt, aes(x = Date, y = Count, color = Type, group = Type)) +
+  ggplot(data=df.melt, aes(x = YearMonth, y = Count, color = Type, group = Type)) +
   geom_point() + 
   geom_line(size=3) +
   theme_classic(base_size = 14) +                        #Axis Label Size
