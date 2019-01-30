@@ -301,7 +301,7 @@ div.tocify {
 
 <h1 class="title toc-ignore">databrary-user-growth</h1>
 <h4 class="author"><em>Andrea R. Seisler</em></h4>
-<h4 class="date"><em>2019-01-30 11:12:16</em></h4>
+<h4 class="date"><em>2019-01-30 13:43:58</em></h4>
 
 </div>
 
@@ -343,18 +343,27 @@ df &lt;- read.csv(file = &quot;csv/institutionAuthCounts.csv&quot;, header = TRU
 df$YearMonth &lt;- as.Date(substr(df$YearMonth, 2, 11))
 df$Year &lt;- substr(df$YearMonth, 1, 4)
 df$Month &lt;- as.numeric(substr(df$YearMonth, 6, 7))</code></pre>
-<p>Here we import the data file found in ‘csv/volumes-citations-monthly.csv’, include ‘date’, ‘shared_volumes’, ‘unshared_volumes’, ‘databrary_citations’, ‘datavyu_citations’ in dataframe (df2)</p>
-<pre><code>{r import-data}
-df2 &lt;- read.csv(file = &quot;csv/volumes-citations-monthly.csv&quot;, header = TRUE)
+<p>Here we import the data file found in <code>csv/citations-monthly.csv</code>, include <code>date</code>, <code>databrary_citations</code>, <code>datavyu_citations</code> in dataframe (df2)</p>
+<pre class="r"><code>df2 &lt;- read.csv(file = &quot;csv/citations-monthly.csv&quot;, header = TRUE)
 
 # Remove extra characters from df2$date
-df2$date &lt;- as.Date(substr(df$date, 1, 10))
-df2$Year &lt;- substr(df$date, 1, 4)
-df2$Month &lt;- as.numeric(substr(df$date, 6, 7))</code></pre>
+df2$date &lt;- as.Date(substr(df2$date, 1, 10))
+df2$Year &lt;- substr(df2$date, 1, 4)
+df2$Month &lt;- as.numeric(substr(df2$date, 6, 7))</code></pre>
+<p>Here we import the data file found in <code>csv/citations-yearly.csv</code>, include <code>date_year</code>, <code>databrary_citations</code>, <code>datavyu_citations</code> in dataframe (df4)</p>
+<pre class="r"><code>df4 &lt;- read.csv(file = &quot;csv/citations-yearly.csv&quot;, header = TRUE)
+#df4$date &lt;- as.Date(substr(df2$date, 1, 10))</code></pre>
+<p>Here we import the data file found in <code>csv/db-volumes-monthly.csv</code>, include <code>date</code>, <code>shared_volumes',</code>unshared_volumes` in dataframe (df3)</p>
+<pre class="r"><code>df3 &lt;- read.csv(file = &quot;csv/db-volumes-monthly.csv&quot;, header = TRUE)
+
+# Remove extra characters from df2$date
+df3$date &lt;- as.Date(substr(df3$date, 1, 10))
+df3$Year &lt;- substr(df3$date, 1, 4)
+df3$Month &lt;- as.numeric(substr(df3$date, 6, 7))</code></pre>
 </div>
 <div id="plot-of-user-growth" class="section level2">
 <h2>Plot of User Growth</h2>
-<p>Here we plot all authorized Institutions and Investigators vs. date. I used <a href="https://www.hexcolortool.com" class="uri">https://www.hexcolortool.com</a> to saturate the Databrary colors (“#fadbc7”, “#b2ddd4”) so they are darker on the graph.</p>
+<p>Here we plot all Authorized Institutions and Investigators vs. date. I used <a href="https://www.hexcolortool.com" class="uri">https://www.hexcolortool.com</a> to saturate the Databrary colors (“#fadbc7”, “#b2ddd4”) so they are darker on the graph.</p>
 <pre class="r"><code># Plot for all Institutions and Authorized Investigators vs. date
 
 # Reshape df
@@ -381,6 +390,102 @@ ggdraw(p) +
   draw_label(&quot;Investigators&quot;, colour = &quot;#4CAE99&quot;, .9, .73) +
   draw_label(&quot;Institutions&quot;, colour = &quot;#ec7751&quot;, .9, .38)</code></pre>
 <p><img src="databrary-user-growth_files/figure-html/p-user-growth-plot-1.png" width="672" /></p>
+</div>
+<div id="plot-of-citation-growth" class="section level2">
+<h2>Plot of Citation Growth</h2>
+<p>Here we plot all Databrary and Datavyu Citations vs. date. I used <a href="https://www.hexcolortool.com" class="uri">https://www.hexcolortool.com</a> to saturate the Databrary colors (“#fadbc7”, “#b2ddd4”) so they are darker on the graph.</p>
+<pre class="r"><code># Plot for all Databrary and Datavyu Citations vs. date
+
+# Reshape df2
+df2.melt &lt;- melt(df2, id = c(&quot;date&quot;, &quot;Year&quot;, &quot;Month&quot;), value.name = &quot;Count&quot;, variable.name = &quot;Type&quot;)
+
+# Plot
+p2 &lt;- 
+  ggplot(data=df2.melt, aes(x = date, y = Count, color = Type, group = Type)) +
+  geom_point() + 
+  geom_line(size=3) +
+  theme_classic(base_size = 14) +                        #Axis Label Size
+  scale_colour_manual(values=c(&quot;#ec7751&quot;, &quot;#4CAE99&quot;)) +  #Saturated Databrary Colors 
+  ylab(&quot;Citations&quot;) +
+  #xlab(&quot;Year&quot;) +
+  #labs(title=&quot;Databrary Citation Growth&quot;) +
+  theme(axis.title.x=element_blank()) +
+  theme(legend.position=&quot;none&quot;, axis.text = element_text(size = rel(0.8), colour = &quot;black&quot;)) +    #Axis text size and color
+  theme(axis.line = element_blank()) +
+  scale_y_continuous(breaks = seq(0, 200, 50), expand = c(0,0)) +
+  coord_cartesian(ylim = c(0, 200))
+  
+  
+ggdraw(p2) + 
+  draw_label(&quot;Datavyu&quot;, colour = &quot;#4CAE99&quot;, .9, .73) +
+  draw_label(&quot;Databrary&quot;, colour = &quot;#ec7751&quot;, .7, .97)</code></pre>
+<p><img src="databrary-user-growth_files/figure-html/p-citation-growth-plot-1.png" width="672" /></p>
+</div>
+<div id="plot-of-yearly-citation-growth" class="section level2">
+<h2>Plot of Yearly Citation Growth</h2>
+<p>Here we plot all Databrary and Datavyu Citations vs. date. I used <a href="https://www.hexcolortool.com" class="uri">https://www.hexcolortool.com</a> to saturate the Databrary colors (“#fadbc7”, “#b2ddd4”) so they are darker on the graph.</p>
+<pre class="r"><code># Plot for all Databrary and Datavyu Citations vs. date
+
+# Reshape df2
+# df4.melt &lt;- melt(df4, id = c(&quot;date_year&quot;), value.name = &quot;Count&quot;, variable.name = &quot;Type&quot;)
+
+#df4.melt &lt;- data.frame(citations=factor(rep(c(&quot;databrary_citations&quot;, &quot;datavyu_citations&quot;), each=8)))
+
+# Plot
+
+# p4 &lt;- 
+  # ggplot(df4.melt, aes(x = date_year)) + 
+  # geom_histogram()
+
+  
+  #ggplot(data=df4.melt) +
+  #geom_histogram() + 
+  #geom_line(size=3) +
+  #theme_classic(base_size = 14) +                        #Axis Label Size
+  #scale_colour_manual(values=c(&quot;#ec7751&quot;, &quot;#4CAE99&quot;)) +  #Saturated Databrary Colors 
+  #ylab(&quot;Citations&quot;) +
+  #xlab(&quot;Year&quot;) +
+  #labs(title=&quot;Databrary Citation Growth&quot;) +
+  #theme(axis.title.x=element_blank()) +
+  #theme(legend.position=&quot;none&quot;, axis.text = element_text(size = rel(0.8), colour = &quot;black&quot;)) +    #Axis text size and color
+  #theme(axis.line = element_blank()) +
+  #scale_y_continuous(breaks = seq(0, 200, 50), expand = c(0,0)) +
+  #coord_cartesian(ylim = c(0, 200))
+  
+  
+#ggdraw(p4) + 
+  #draw_label(&quot;Datavyu&quot;, colour = &quot;#4CAE99&quot;, .9, .73) +
+  #draw_label(&quot;Databrary&quot;, colour = &quot;#ec7751&quot;, .7, .97)</code></pre>
+</div>
+<div id="plot-of-volume-growth" class="section level2">
+<h2>Plot of Volume Growth</h2>
+<p>Here we plot all Shared and Unshared Volumes vs. date. I used <a href="https://www.hexcolortool.com" class="uri">https://www.hexcolortool.com</a> to saturate the Databrary colors (“#fadbc7”, “#b2ddd4”) so they are darker on the graph.</p>
+<pre class="r"><code># Plot for all Databrary Shared and Unshared Volumes vs. date
+
+# Reshape df3
+df3.melt &lt;- melt(df3, id = c(&quot;date&quot;, &quot;Year&quot;, &quot;Month&quot;), value.name = &quot;Count&quot;, variable.name = &quot;Type&quot;)
+
+# Plot
+p3 &lt;- 
+  ggplot(data=df3.melt, aes(x = date, y = Count, color = Type, group = Type)) +
+  geom_point() + 
+  geom_line(size=3) +
+  theme_classic(base_size = 14) +                        #Axis Label Size
+  scale_colour_manual(values=c(&quot;#ec7751&quot;, &quot;#4CAE99&quot;)) +  #Saturated Databrary Colors 
+  ylab(&quot;Volumes&quot;) +
+  #xlab(&quot;Year&quot;) +
+  #labs(title=&quot;Databrary Citation Growth&quot;) +
+  theme(axis.title.x=element_blank()) +
+  theme(legend.position=&quot;none&quot;, axis.text = element_text(size = rel(0.8), colour = &quot;black&quot;)) +    #Axis text size and color
+  theme(axis.line = element_blank()) +
+  scale_y_continuous(breaks = seq(0, 500, 100), expand = c(0,0)) +
+  coord_cartesian(ylim = c(0, 500))
+  
+  
+ggdraw(p3) + 
+  draw_label(&quot;Unshared&quot;, colour = &quot;#4CAE99&quot;, .86, .88) +
+  draw_label(&quot;Shared&quot;, colour = &quot;#ec7751&quot;, .84, .65)</code></pre>
+<p><img src="databrary-user-growth_files/figure-html/p-volume-monthly-growth-plot-1.png" width="672" /></p>
 </div>
 
 

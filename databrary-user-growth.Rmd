@@ -42,9 +42,9 @@ df$Month <- as.numeric(substr(df$YearMonth, 6, 7))
 ```
 
 
-Here we import the data file found in 'csv/citations-monthly.csv', include 'date', 'shared_volumes', 'unshared_volumes', 'databrary_citations', 'datavyu_citations' in dataframe (df2)
+Here we import the data file found in `csv/citations-monthly.csv`, include `date`, `databrary_citations`, `datavyu_citations` in dataframe (df2)
 
-```{r import-data}
+```{r import-data2}
 df2 <- read.csv(file = "csv/citations-monthly.csv", header = TRUE)
 
 # Remove extra characters from df2$date
@@ -53,14 +53,16 @@ df2$Year <- substr(df2$date, 1, 4)
 df2$Month <- as.numeric(substr(df2$date, 6, 7))
 ```
 
-Here we import the data file found in 'csv/db-volumes-monthly.csv', include 'date', 'shared_volumes', 'unshared_volumes', 'databrary_citations', 'datavyu_citations' in dataframe (df2)
+Here we import the data file found in `csv/citations-yearly.csv`, include `date_year`, `databrary_citations`, `datavyu_citations` in dataframe (df4)
 
-```{r import-data}
+```{r import-data4}
 df4 <- read.csv(file = "csv/citations-yearly.csv", header = TRUE)
 #df4$date <- as.Date(substr(df2$date, 1, 10))
 ```
 
-```{r import-data}
+Here we import the data file found in `csv/db-volumes-monthly.csv`, include `date`, `shared_volumes', `unshared_volumes` in dataframe (df3)
+
+```{r import-data3}
 df3 <- read.csv(file = "csv/db-volumes-monthly.csv", header = TRUE)
 
 # Remove extra characters from df2$date
@@ -71,7 +73,7 @@ df3$Month <- as.numeric(substr(df3$date, 6, 7))
 
 ## Plot of User Growth
 
-Here we plot all authorized Institutions and Investigators vs. date. I used https://www.hexcolortool.com to saturate the Databrary colors ("#fadbc7", "#b2ddd4") so they are darker on the graph.
+Here we plot all Authorized Institutions and Investigators vs. date. I used https://www.hexcolortool.com to saturate the Databrary colors ("#fadbc7", "#b2ddd4") so they are darker on the graph.
 
 ```{r p-user-growth-plot, include=TRUE}
 
@@ -134,8 +136,10 @@ p2 <-
 ggdraw(p2) + 
   draw_label("Datavyu", colour = "#4CAE99", .9, .73) +
   draw_label("Databrary", colour = "#ec7751", .7, .97)
-
 ```
+
+
+## Plot of Yearly Citation Growth
 
 Here we plot all Databrary and Datavyu Citations vs. date. I used https://www.hexcolortool.com to saturate the Databrary colors ("#fadbc7", "#b2ddd4") so they are darker on the graph.
 
@@ -144,16 +148,16 @@ Here we plot all Databrary and Datavyu Citations vs. date. I used https://www.he
 # Plot for all Databrary and Datavyu Citations vs. date
 
 # Reshape df2
-df4.melt <- melt(df4, id = c("date_year"), value.name = "Count", variable.name = "Type")
+# df4.melt <- melt(df4, id = c("date_year"), value.name = "Count", variable.name = "Type")
 
 #df4.melt <- data.frame(citations=factor(rep(c("databrary_citations", "datavyu_citations"), each=8)))
 
 # Plot
 
-p4 <- 
-  ggplot(df4.melt, aes(x = date_year)) + 
-  geom_histogram()
-p4
+# p4 <- 
+  # ggplot(df4.melt, aes(x = date_year)) + 
+  # geom_histogram()
+
   
   #ggplot(data=df4.melt) +
   #geom_histogram() + 
@@ -175,8 +179,11 @@ p4
   #draw_label("Databrary", colour = "#ec7751", .7, .97)
 ```
 
+## Plot of Volume Growth
 
-```{r p-citation-monthly-growth-plot, include=TRUE}
+Here we plot all Shared and Unshared Volumes vs. date. I used https://www.hexcolortool.com to saturate the Databrary colors ("#fadbc7", "#b2ddd4") so they are darker on the graph.
+
+```{r p-volume-monthly-growth-plot, include=TRUE}
 
 # Plot for all Databrary Shared and Unshared Volumes vs. date
 
@@ -200,8 +207,8 @@ p3 <-
   coord_cartesian(ylim = c(0, 500))
   
   
-ggdraw(p2) + 
-  draw_label("Unshared", colour = "#4CAE99", .9, .73) +
-  draw_label("Shared", colour = "#ec7751", .7, .97)
+ggdraw(p3) + 
+  draw_label("Unshared", colour = "#4CAE99", .86, .88) +
+  draw_label("Shared", colour = "#ec7751", .84, .65)
 
 ```
