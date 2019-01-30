@@ -184,7 +184,7 @@ $(document).ready(function () {
 </style>
 <script>
 $(document).ready(function () {
-  window.initializeCodeFolding("show" === "show");
+  window.initializeCodeFolding("hide" === "show");
 });
 </script>
 
@@ -301,7 +301,7 @@ div.tocify {
 
 <h1 class="title toc-ignore">databrary-user-growth</h1>
 <h4 class="author"><em>Andrea R. Seisler</em></h4>
-<h4 class="date"><em>2019-01-28 14:09:31</em></h4>
+<h4 class="date"><em>2019-01-30 11:12:16</em></h4>
 
 </div>
 
@@ -343,6 +343,14 @@ df &lt;- read.csv(file = &quot;csv/institutionAuthCounts.csv&quot;, header = TRU
 df$YearMonth &lt;- as.Date(substr(df$YearMonth, 2, 11))
 df$Year &lt;- substr(df$YearMonth, 1, 4)
 df$Month &lt;- as.numeric(substr(df$YearMonth, 6, 7))</code></pre>
+<p>Here we import the data file found in ‘csv/volumes-citations-monthly.csv’, include ‘date’, ‘shared_volumes’, ‘unshared_volumes’, ‘databrary_citations’, ‘datavyu_citations’ in dataframe (df2)</p>
+<pre><code>{r import-data}
+df2 &lt;- read.csv(file = &quot;csv/volumes-citations-monthly.csv&quot;, header = TRUE)
+
+# Remove extra characters from df2$date
+df2$date &lt;- as.Date(substr(df$date, 1, 10))
+df2$Year &lt;- substr(df$date, 1, 4)
+df2$Month &lt;- as.numeric(substr(df$date, 6, 7))</code></pre>
 </div>
 <div id="plot-of-user-growth" class="section level2">
 <h2>Plot of User Growth</h2>
