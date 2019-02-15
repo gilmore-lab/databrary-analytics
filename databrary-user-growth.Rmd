@@ -129,13 +129,13 @@ p2 <-
   theme(axis.title.x=element_blank()) +
   theme(legend.position="none", axis.text = element_text(size = rel(0.8), colour = "black")) +    #Axis text size and color
   theme(axis.line = element_blank()) +
-  scale_y_continuous(breaks = seq(0, 200, 50), expand = c(0,0)) +
-  coord_cartesian(ylim = c(0, 200))
+  scale_y_continuous(breaks = seq(0, 250, 50), expand = c(0,0)) +
+  coord_cartesian(ylim = c(0, 250))
   
   
 ggdraw(p2) + 
-  draw_label("Datavyu", colour = "#4CAE99", .9, .73) +
-  draw_label("Databrary", colour = "#ec7751", .7, .97)
+  draw_label("Datavyu", colour = "#4CAE99", .9, .6) +
+  draw_label("Databrary", colour = "#ec7751", .7, .85)
 ```
 
 
