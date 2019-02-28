@@ -301,7 +301,7 @@ div.tocify {
 
 <h1 class="title toc-ignore">Databrary Report</h1>
 <h4 class="author"><em>Rick O. Gilmore</em></h4>
-<h4 class="date"><em>2019-02-28 17:03:38</em></h4>
+<h4 class="date"><em>2019-02-28 17:45:19</em></h4>
 
 </div>
 
@@ -350,6 +350,78 @@ ggdraw(p) +
   draw_label(&quot;Investigators&quot;, colour = &quot;#4CAE99&quot;, .9, .73) +
   draw_label(&quot;Institutions&quot;, colour = &quot;#ec7751&quot;, .9, .38)</code></pre>
 <p><img src="databrary_weekly_files/figure-html/db-inst-user-plot-1.png" width="672" /></p>
+<div id="new-investigators" class="section level2">
+<h2><span class="header-section-number">1.1</span> New investigators</h2>
+<pre class="r"><code>new_people &lt;- databraryapi::get_db_stats(type = &quot;people&quot;)
+new_people %&gt;%
+  select(., sortname, prename, affiliation) %&gt;%
+  knitr::kable()</code></pre>
+<table>
+<thead>
+<tr class="header">
+<th align="left">sortname</th>
+<th align="left">prename</th>
+<th align="left">affiliation</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">Venker</td>
+<td align="left">Courtney</td>
+<td align="left">Michigan State University</td>
+</tr>
+<tr class="even">
+<td align="left">Carkenord</td>
+<td align="left">David Michael</td>
+<td align="left">Longwood University</td>
+</tr>
+<tr class="odd">
+<td align="left">Bowden</td>
+<td align="left">Edward</td>
+<td align="left">University of Wisconsin-Parkside</td>
+</tr>
+<tr class="even">
+<td align="left">Lloyd</td>
+<td align="left">Marianne</td>
+<td align="left">Seton Hall University</td>
+</tr>
+<tr class="odd">
+<td align="left">Lombardi</td>
+<td align="left">Doug</td>
+<td align="left">Temple University</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="new-institutions" class="section level2">
+<h2><span class="header-section-number">1.2</span> New institutions</h2>
+<pre class="r"><code>new_institutions &lt;- databraryapi::get_db_stats(type = &quot;institutions&quot;)
+new_institutions %&gt;%
+  select(., sortname, url) %&gt;%
+  knitr::kable()</code></pre>
+<table>
+<thead>
+<tr class="header">
+<th align="left">sortname</th>
+<th align="left">url</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">Longwood University</td>
+<td align="left"><a href="http://www.longwood.edu/" class="uri">http://www.longwood.edu/</a></td>
+</tr>
+<tr class="even">
+<td align="left">University of Wisconsin, Parkside</td>
+<td align="left"><a href="https://www.uwp.edu/" class="uri">https://www.uwp.edu/</a></td>
+</tr>
+<tr class="odd">
+<td align="left">Seton Hall University</td>
+<td align="left">NA</td>
+</tr>
+</tbody>
+</table>
+</div>
 </div>
 <div id="volumes" class="section level1">
 <h1><span class="header-section-number">2</span> Volumes</h1>
@@ -389,6 +461,44 @@ ggdraw(vols_plot) +
   draw_label(&quot;Unshared&quot;, colour = &quot;#4CAE99&quot;, .86, .88) +
   draw_label(&quot;Shared&quot;, colour = &quot;#ec7751&quot;, .84, .65)</code></pre>
 <p><img src="databrary_weekly_files/figure-html/db-vols-plot-1.png" width="672" /></p>
+<div id="new-volumes" class="section level2">
+<h2><span class="header-section-number">2.1</span> New volumes</h2>
+<pre class="r"><code>new_volumes &lt;- databraryapi::get_db_stats(type = &quot;datasets&quot;)
+new_volumes %&gt;%
+  select(., name, creation, owners) %&gt;%
+  knitr::kable()</code></pre>
+<table>
+<thead>
+<tr class="header">
+<th align="left">name</th>
+<th align="left">creation</th>
+<th align="left">owners</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">NoHelp Simple</td>
+<td align="left">2019-02-28T21:04:11.564882Z</td>
+<td align="left">list(name = “Beier, Jonathan”, id = 594)</td>
+</tr>
+<tr class="even">
+<td align="left">Goals and Equality</td>
+<td align="left">2019-02-25T19:42:23.701911Z</td>
+<td align="left">list(name = “Beier, Jonathan”, id = 594)</td>
+</tr>
+<tr class="odd">
+<td align="left">MEL2 Project</td>
+<td align="left">2019-02-21T21:36:38.274161Z</td>
+<td align="left">list(name = “Lombardi, Doug”, id = 4945)</td>
+</tr>
+<tr class="even">
+<td align="left">MEL2 Project</td>
+<td align="left">2019-02-21T18:07:52.721509Z</td>
+<td align="left">list(name = “Lombardi, Doug”, id = 4945)</td>
+</tr>
+</tbody>
+</table>
+</div>
 </div>
 <div id="citation-counts" class="section level1">
 <h1><span class="header-section-number">3</span> Citation counts</h1>
@@ -493,7 +603,7 @@ vols_joined &lt;- dplyr::left_join(vols_data, video_stats, by = c(&quot;vol_id&q
 <!-- I need to dig in to determine what variable depicts the sharing level. -->
 <!-- For now, let's note that volumes with permission == 2 are available to all Databrary users. -->
 <!-- Volumes with a DOI have partial information available to all Databrary users. -->
-<p>There are 119 volumes with DOIs (shared) that have sessions and at least one video as of today (2019-02-28 17:04:16).</p>
+<p>There are 119 volumes with DOIs (shared) that have sessions and at least one video as of today (2019-02-28 17:46:03).</p>
 <!-- Let's export a CSV of these. -->
 <!-- ```{r} -->
 <!-- shared_vols_w_video <- vols_joined %>%  -->

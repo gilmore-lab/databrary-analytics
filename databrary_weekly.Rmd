@@ -79,6 +79,24 @@ ggdraw(p) +
   draw_label("Institutions", colour = "#ec7751", .9, .38)
 ```
 
+##  New investigators
+
+```{r}
+new_people <- databraryapi::get_db_stats(type = "people")
+new_people %>%
+  select(., sortname, prename, affiliation) %>%
+  knitr::kable()
+```
+
+## New institutions
+
+```{r}
+new_institutions <- databraryapi::get_db_stats(type = "institutions")
+new_institutions %>%
+  select(., sortname, url) %>%
+  knitr::kable()
+```
+
 # Volumes
 
 The volumes data can also be rewritten back to Databrary at some future date.
@@ -123,6 +141,16 @@ ggdraw(vols_plot) +
   draw_label("Shared", colour = "#ec7751", .84, .65)
 
 ```
+
+## New volumes
+
+```{r}
+new_volumes <- databraryapi::get_db_stats(type = "datasets")
+new_volumes %>%
+  select(., name, creation, owners) %>%
+  knitr::kable()
+```
+
 
 # Citation counts
 
