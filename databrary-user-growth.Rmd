@@ -29,7 +29,6 @@ library(cowplot)
 ## Import data
 
 Here we import the data file found in `csv/institutionAuthCounts.csv`, include `YearMonth`, `Institutions`, and `Authorized Investigators` in dataframe (df).   
-
 ```{r import-data}
 # Import data and clean
 
@@ -40,7 +39,6 @@ df$YearMonth <- as.Date(substr(df$YearMonth, 2, 11))
 df$Year <- substr(df$YearMonth, 1, 4)
 df$Month <- as.numeric(substr(df$YearMonth, 6, 7))
 ```
-
 
 Here we import the data file found in `csv/citations-monthly.csv`, include `date`, `databrary_citations`, `datavyu_citations` in dataframe (df2)
 

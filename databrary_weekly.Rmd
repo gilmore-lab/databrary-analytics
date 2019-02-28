@@ -1,0 +1,259 @@
+---
+title: "Databrary Report"
+author: "Rick O. Gilmore"
+date: "`r Sys.time()`"
+output:
+  html_document:
+    toc: true
+    toc_depth: 3
+    toc_float: true
+    number_sections: true
+    code_folding: hide
+params:
+  db_account: rogilmore@psu.edu
+  vols_to_test: 10
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, message = FALSE)
+
+library(databraryapi)
+library(tidyverse)
+library(reshape2)
+library(cowplot)
+
+if (!databraryapi::login_db(params$db_account)) {
+  message("Log-in failed.")
+}
+```
+
+# Institutions & Authorized Users
+
+At the moment, the `old_stats` come from a CSV stored locally.
+Once we have API commands to upload new data, the `old_stats` can come from Databrary directly.
+
+```{r get-databrary-stats}
+new_stats <- databraryapi::get_db_stats()
+
+old_stats <- read_csv("csv/institutionAuthCounts.csv")
+
+# initialize updated_stats
+updated_stats <- old_stats
+next_entry <- dim(updated_stats)[1] + 1
+updated_stats[next_entry,] = NA
+
+# fill with new data
+updated_stats$YearMonth[next_entry] <- new_stats$date
+updated_stats$Institutions[next_entry] <- new_stats$institutions
+updated_stats$`Authorized Investigators`[next_entry] <- new_stats$investigators
+
+# hate the variable names
+updated_stats <- 
+  updated_stats %>%
+  rename(date = YearMonth, institutions = Institutions, investigators = `Authorized Investigators`)
+```
+
+```{r db-inst-user-plot}
+updated_stats <- updated_stats %>%
+  gather(., key = "type", value = "count", -date)
+
+# Plot
+p <- updated_stats %>%
+  ggplot(., aes(x = date, y = count, color = type, group = type)) +
+  geom_point() + 
+  geom_line(size=3) +
+  theme_classic(base_size = 14) +                        #Axis Label Size
+  scale_colour_manual(values=c("#ec7751", "#4CAE99")) +  #Saturated Databrary Colors 
+  ylab("Authorizations") +
+  #xlab("Year") +
+  #labs(title="Databrary User Growth") +
+  theme(axis.title.x=element_blank()) +
+  theme(legend.position="none", axis.text = element_text(size = rel(0.8), colour = "black")) +    #Axis text size and color
+  theme(axis.line = element_blank()) +
+  scale_y_continuous(breaks = seq(0, 900, 100), expand = c(0,0)) +
+  coord_cartesian(ylim = c(0, 900))
+  
+ggdraw(p) + 
+  draw_label("Investigators", colour = "#4CAE99", .9, .73) +
+  draw_label("Institutions", colour = "#ec7751", .9, .38)
+```
+
+# Volumes
+
+The volumes data can also be rewritten back to Databrary at some future date.
+
+```{r}
+old_vols <- read_csv("csv/db-volumes-monthly.csv")
+
+# Update
+updated_vols <- old_vols
+next_entry <- dim(updated_vols)[1] + 1
+updated_vols[next_entry,] = NA
+
+updated_vols$date[next_entry] <- new_stats$date
+updated_vols$shared_volumes[next_entry] <- new_stats$datasets.shared
+updated_vols$unshared_volumes[next_entry] <- 
+  new_stats$datasets.total - new_stats$datasets.shared
+```
+
+```{r db-vols-plot}
+updated_vols <- updated_vols %>%
+  gather(., key = "type", value = "count", -date)
+
+# Plot
+vols_plot <- updated_vols %>%
+  ggplot(., aes(x = date, y = count, color = type, group = type)) +
+  geom_point() + 
+  geom_line(size=3) +
+  theme_classic(base_size = 14) +                        #Axis Label Size
+  scale_colour_manual(values=c("#ec7751", "#4CAE99")) +  #Saturated Databrary Colors 
+  ylab("Volumes") +
+  #xlab("Year") +
+  #labs(title="Databrary Citation Growth") +
+  theme(axis.title.x=element_blank()) +
+  theme(legend.position="none", axis.text = element_text(size = rel(0.8), colour = "black")) +    #Axis text size and color
+  theme(axis.line = element_blank()) +
+  scale_y_continuous(breaks = seq(0, 500, 100), expand = c(0,0)) +
+  coord_cartesian(ylim = c(0, 500))
+  
+  
+ggdraw(vols_plot) + 
+  draw_label("Unshared", colour = "#4CAE99", .86, .88) +
+  draw_label("Shared", colour = "#ec7751", .84, .65)
+
+```
+
+# Citation counts
+
+This section will eventually update and show the citation counts for Databrary and Datavyu.
+For now, it just shows the stored data file that we update manually.
+This can be automated, we just have to write a function to parse the HTML returned from Google Scholar to pull the relevant data.
+
+<!-- Here we plot all Databrary and Datavyu Citations vs. date. I used https://www.hexcolortool.com to saturate the Databrary colors ("#fadbc7", "#b2ddd4") so they are darker on the graph. -->
+
+```{r db-dv-citations-plot}
+citations <- read_csv("csv/citations-monthly.csv")
+
+citations <- citations %>%
+  gather(., key = "type", value = "count", -date)
+
+# Plot
+citations_plot <- 
+  citations %>%
+  ggplot(., aes(x = date, y = count, color = type, group = type)) +
+  geom_point() + 
+  geom_line(size=3) +
+  theme_classic(base_size = 14) +                        #Axis Label Size
+  scale_colour_manual(values=c("#ec7751", "#4CAE99")) +  #Saturated Databrary Colors 
+  ylab("Citations") +
+  #xlab("Year") +
+  #labs(title="Databrary Citation Growth") +
+  theme(axis.title.x=element_blank()) +
+  theme(legend.position="none", axis.text = element_text(size = rel(0.8), colour = "black")) +    #Axis text size and color
+  theme(axis.line = element_blank()) +
+  scale_y_continuous(breaks = seq(0, 250, 50), expand = c(0,0)) +
+  coord_cartesian(ylim = c(0, 250))
+  
+ggdraw(citations_plot) + 
+  draw_label("Datavyu", colour = "#4CAE99", .9, .6) +
+  draw_label("Databrary", colour = "#ec7751", .7, .85)
+```
+
+# Data about volumes with videos
+
+```{r}
+# List files with metadata
+csv_files <- list.files(path = "csv", pattern = "vol_", full.names = TRUE)
+
+# Extract vector of volume numbers, determine the maximum
+vol_nums <- stringr::str_match(csv_files, pattern = "_([0-9]+)\\.")
+vol_ids <- as.numeric(vol_nums[,2])
+last_vol <- max(vol_ids)
+vols_to_test <- params$vols_to_test
+
+# Create function to write new data files for each volum
+write_vid_csv <- function(vol.id = 1) {
+  message(paste0("Getting data for volume ", vol.id))
+  vid_dat <- get_video_stats(vol.id)
+  # This .Rmd file is already in working/
+  if (!is.null(vid_dat)) {
+    write.csv(vid_dat, file = paste0("csv/vol_", vol.id, ".csv"),
+              row.names = FALSE)
+  }
+} 
+```
+
+```{r query-for-video-data}
+lapply(last_vol:(last_vol + vols_to_test), write_vid_csv)
+```
+
+```{r}
+vol_files <- list.files("csv", pattern = "vol_[0-9]+", full.names = TRUE)
+
+# Import the individual csv files
+video_data <- lapply(vol_files, read_csv)
+video_stats <- Reduce(function(x,y) merge(x, y, all = TRUE), video_data)
+```
+
+The median number of videos per volume is `r median(video_stats$n_videos)` with a range of [`r min(video_stats$n_videos)`, `r max(video_stats$n_videos)`].
+
+```{r}
+vols <- video_stats$vol_id
+vol_info <- lapply(vols, list_volume_metadata)
+vols_data <- Reduce(function(x,y) merge(x, y, all = TRUE), vol_info)
+vols_joined <- dplyr::left_join(vols_data, video_stats, by = c("vol_id" = "vol_id"))
+```
+
+<!-- NB: -->
+
+<!-- Permission 2: Access via Databrary sharing only -->
+<!-- Permission 3: Non-named collaborator (through X?) -->
+<!-- Permission 4: Named collaborator -->
+<!-- Permission 5: Investigator, Volume overview shared OR Private -->
+
+<!-- I need to dig in to determine what variable depicts the sharing level. -->
+
+<!-- For now, let's note that volumes with permission == 2 are available to all Databrary users. -->
+<!-- Volumes with a DOI have partial information available to all Databrary users. -->
+
+There are `r dim(vols_data[vols_data$doi != "NA",])[1]` volumes with DOIs (shared) that have sessions and at least one video as of today (`r Sys.time()`).
+
+<!-- Let's export a CSV of these. -->
+
+<!-- ```{r} -->
+<!-- shared_vols_w_video <- vols_joined %>%  -->
+<!--   dplyr::filter(doi != "NA") -->
+
+<!-- write.csv(shared_vols_w_video, file = "shared_vols_w_video_2018-12-28.csv", row.names = FALSE) -->
+<!-- ``` -->
+
+## Number of videos in a (shared) volume
+
+```{r n-vids-shared-vols}
+vols_joined %>%
+  filter(!is.na(doi)) %>%
+  ggplot(.) +
+  aes(x=n_videos)+
+  geom_histogram()
+```
+
+## Number of sessions in a (shared) volume
+
+```{r n-sessions-shared-vols}
+vols_joined %>%
+  filter(!is.na(doi)) %>%
+  ggplot(.) +
+  aes(x=n_sessions)+
+  geom_histogram()
+```
+
+## Total video hours in a (shared) volume
+
+```{r tot-hrs-shared-vols}
+vols_joined %>%
+  filter(!is.na(doi)) %>%
+  ggplot(.) +
+  aes(x=tot_hrs)+
+  geom_histogram()
+```
+
