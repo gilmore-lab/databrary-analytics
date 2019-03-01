@@ -301,7 +301,7 @@ div.tocify {
 
 <h1 class="title toc-ignore">databrary-user-growth</h1>
 <h4 class="author"><em>Andrea R. Seisler</em></h4>
-<h4 class="date"><em>2019-02-01 09:16:12</em></h4>
+<h4 class="date"><em>2019-03-01 09:23:58</em></h4>
 
 </div>
 
@@ -382,8 +382,8 @@ p &lt;-
   theme(axis.title.x=element_blank()) +
   theme(legend.position=&quot;none&quot;, axis.text = element_text(size = rel(0.8), colour = &quot;black&quot;)) +    #Axis text size and color
   theme(axis.line = element_blank()) +
-  scale_y_continuous(breaks = seq(0, 900, 100), expand = c(0,0)) +
-  coord_cartesian(ylim = c(0, 900))
+  scale_y_continuous(breaks = seq(0, 1000, 100), expand = c(0,0)) +
+  coord_cartesian(ylim = c(0, 1000))
   
   
 ggdraw(p) + 
@@ -412,18 +412,19 @@ p2 &lt;-
   theme(axis.title.x=element_blank()) +
   theme(legend.position=&quot;none&quot;, axis.text = element_text(size = rel(0.8), colour = &quot;black&quot;)) +    #Axis text size and color
   theme(axis.line = element_blank()) +
-  scale_y_continuous(breaks = seq(0, 200, 50), expand = c(0,0)) +
-  coord_cartesian(ylim = c(0, 200))
+  scale_y_continuous(breaks = seq(0, 250, 50), expand = c(0,0)) +
+  coord_cartesian(ylim = c(0, 250))
   
   
 ggdraw(p2) + 
-  draw_label(&quot;Datavyu&quot;, colour = &quot;#4CAE99&quot;, .9, .73) +
-  draw_label(&quot;Databrary&quot;, colour = &quot;#ec7751&quot;, .7, .97)</code></pre>
+  draw_label(&quot;Datavyu&quot;, colour = &quot;#4CAE99&quot;, .9, .6) +
+  draw_label(&quot;Databrary&quot;, colour = &quot;#ec7751&quot;, .7, .85)</code></pre>
 <p><img src="databrary-user-growth_files/figure-html/p-citation-growth-plot-1.png" width="672" /></p>
 </div>
 <div id="plot-of-yearly-citation-growth" class="section level2">
 <h2>Plot of Yearly Citation Growth</h2>
 <p>Here we plot all Databrary and Datavyu Citations vs. date. I used <a href="https://www.hexcolortool.com" class="uri">https://www.hexcolortool.com</a> to saturate the Databrary colors (“#fadbc7”, “#b2ddd4”) so they are darker on the graph.</p>
+<p><strong>This code needs to be updated for a bar graph with each bar representing a year</strong></p>
 <pre class="r"><code># Plot for all Databrary and Datavyu Citations vs. date
 
 # Reshape df2
