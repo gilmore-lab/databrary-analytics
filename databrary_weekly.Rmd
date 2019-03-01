@@ -26,6 +26,19 @@ library(cowplot)
 if (!databraryapi::login_db(params$db_account)) {
   message("Log-in failed.")
 }
+
+# Graphic theme elements
+ln_size <- 3
+base_size <- 14
+color_orange <- "#ec7751"
+color_teal <- "#4CAE99"
+
+databrary_theme <- 
+  theme_classic(base_size = base_size) +
+  theme(axis.title.x=element_blank()) +
+  theme(legend.position="none", 
+        axis.text = element_text(size = rel(0.8), colour = "black")) +
+  theme(axis.line = element_blank())
 ```
 
 # Institutions & Authorized Users
@@ -35,7 +48,6 @@ Once we have API commands to upload new data, the `old_stats` can come from Data
 
 ```{r get-databrary-stats}
 new_stats <- databraryapi::get_db_stats()
-
 old_stats <- read_csv("csv/institutionAuthCounts.csv")
 
 # initialize updated_stats
@@ -62,21 +74,16 @@ updated_stats <- updated_stats %>%
 p <- updated_stats %>%
   ggplot(., aes(x = date, y = count, color = type, group = type)) +
   geom_point() + 
-  geom_line(size=3) +
-  theme_classic(base_size = 14) +                        #Axis Label Size
-  scale_colour_manual(values=c("#ec7751", "#4CAE99")) +  #Saturated Databrary Colors 
+  geom_line(size = ln_size) +
+  scale_colour_manual(values=c(color_orange, color_teal)) +  
   ylab("Authorizations") +
-  #xlab("Year") +
-  #labs(title="Databrary User Growth") +
-  theme(axis.title.x=element_blank()) +
-  theme(legend.position="none", axis.text = element_text(size = rel(0.8), colour = "black")) +    #Axis text size and color
-  theme(axis.line = element_blank()) +
+  databrary_theme +
   scale_y_continuous(breaks = seq(0, 900, 100), expand = c(0,0)) +
   coord_cartesian(ylim = c(0, 900))
   
 ggdraw(p) + 
-  draw_label("Investigators", colour = "#4CAE99", .9, .73) +
-  draw_label("Institutions", colour = "#ec7751", .9, .38)
+  draw_label("Investigators", colour = color_teal, .9, .73) +
+  draw_label("Institutions", colour = color_orange, .9, .38)
 ```
 
 ##  New investigators
@@ -123,22 +130,16 @@ updated_vols <- updated_vols %>%
 vols_plot <- updated_vols %>%
   ggplot(., aes(x = date, y = count, color = type, group = type)) +
   geom_point() + 
-  geom_line(size=3) +
-  theme_classic(base_size = 14) +                        #Axis Label Size
-  scale_colour_manual(values=c("#ec7751", "#4CAE99")) +  #Saturated Databrary Colors 
+  geom_line(size=ln_size) +
+  scale_colour_manual(values=c(color_orange, color_teal)) +  
   ylab("Volumes") +
-  #xlab("Year") +
-  #labs(title="Databrary Citation Growth") +
-  theme(axis.title.x=element_blank()) +
-  theme(legend.position="none", axis.text = element_text(size = rel(0.8), colour = "black")) +    #Axis text size and color
-  theme(axis.line = element_blank()) +
+  databrary_theme +
   scale_y_continuous(breaks = seq(0, 500, 100), expand = c(0,0)) +
   coord_cartesian(ylim = c(0, 500))
   
-  
 ggdraw(vols_plot) + 
-  draw_label("Unshared", colour = "#4CAE99", .86, .88) +
-  draw_label("Shared", colour = "#ec7751", .84, .65)
+  draw_label("Unshared", colour = color_teal, .86, .88) +
+  draw_label("Shared", colour = color_orange, .84, .65)
 
 ```
 
@@ -154,15 +155,45 @@ new_volumes %>%
 
 # Citation counts
 
-This section will eventually update and show the citation counts for Databrary and Datavyu.
-For now, it just shows the stored data file that we update manually.
-This can be automated, we just have to write a function to parse the HTML returned from Google Scholar to pull the relevant data.
+```{r get-new-citations}
+# Get citation counts from Google Scholar
+get_citation_stats <- function(project = 'databrary') {
+  if (project %in% c('databrary', 'Databrary')) {
+    url <- 'https://scholar.google.com/scholar?hl=en&as_sdt=1%2C39&as_vis=1&q=%22databrary%22&btnG='
+  } else if (project %in% c('datavyu', 'Datavyu')) {
+    url <- 'https://scholar.google.com/scholar?hl=en&as_sdt=1%2C39&as_vis=1&q=%22datavyu%22&btnG='
+  }
+  
+  r <- httr::GET(url = url)
+  if (httr::status_code(r) == 200) {
+    content <- httr::content(r, 'text')
+  } else {
+    message(paste0('Download Failed, HTTP status ', httr::status_code(r)))
+  }
+  
+  n_results <- stringr::str_match(content, pattern = "About ([0-9]+)")[2]
+  if (is.null(n_results)) {
+    message(paste0('Unable to parse results from search.'))
+    return(NULL)
+  } else {
+    return(as.numeric(n_results))
+  }
+}
 
-<!-- Here we plot all Databrary and Datavyu Citations vs. date. I used https://www.hexcolortool.com to saturate the Databrary colors ("#fadbc7", "#b2ddd4") so they are darker on the graph. -->
+databrary_cites <- get_citation_stats('databrary')
+datavyu_cites <- get_citation_stats('datavyu')
+
+old_citations <- citations <- read_csv("csv/citations-monthly.csv")
+next_value <- dim(old_citations)[1] + 1
+citations <- old_citations
+citations[next_value,] <- NA
+
+citations$date[next_value] <- Sys.Date()
+citations$databrary_citations[next_value] <- databrary_cites
+citations$datavyu_citations[next_value] <- datavyu_cites
+```
 
 ```{r db-dv-citations-plot}
-citations <- read_csv("csv/citations-monthly.csv")
-
 citations <- citations %>%
   gather(., key = "type", value = "count", -date)
 
@@ -171,21 +202,16 @@ citations_plot <-
   citations %>%
   ggplot(., aes(x = date, y = count, color = type, group = type)) +
   geom_point() + 
-  geom_line(size=3) +
-  theme_classic(base_size = 14) +                        #Axis Label Size
-  scale_colour_manual(values=c("#ec7751", "#4CAE99")) +  #Saturated Databrary Colors 
+  geom_line(size = ln_size) +
+  scale_colour_manual(values=c(color_orange, color_teal)) +
   ylab("Citations") +
-  #xlab("Year") +
-  #labs(title="Databrary Citation Growth") +
-  theme(axis.title.x=element_blank()) +
-  theme(legend.position="none", axis.text = element_text(size = rel(0.8), colour = "black")) +    #Axis text size and color
-  theme(axis.line = element_blank()) +
+  databrary_theme +
   scale_y_continuous(breaks = seq(0, 250, 50), expand = c(0,0)) +
   coord_cartesian(ylim = c(0, 250))
   
 ggdraw(citations_plot) + 
-  draw_label("Datavyu", colour = "#4CAE99", .9, .6) +
-  draw_label("Databrary", colour = "#ec7751", .7, .85)
+  draw_label("Datavyu", colour = color_teal, .9, .6) +
+  draw_label("Databrary", colour = color_orange, .7, .85)
 ```
 
 # Data about volumes with videos
@@ -212,7 +238,7 @@ write_vid_csv <- function(vol.id = 1) {
 } 
 ```
 
-```{r query-for-video-data}
+```{r query-for-video-data, include=FALSE}
 lapply(last_vol:(last_vol + vols_to_test), write_vid_csv)
 ```
 
@@ -233,30 +259,9 @@ vols_data <- Reduce(function(x,y) merge(x, y, all = TRUE), vol_info)
 vols_joined <- dplyr::left_join(vols_data, video_stats, by = c("vol_id" = "vol_id"))
 ```
 
-<!-- NB: -->
-
-<!-- Permission 2: Access via Databrary sharing only -->
-<!-- Permission 3: Non-named collaborator (through X?) -->
-<!-- Permission 4: Named collaborator -->
-<!-- Permission 5: Investigator, Volume overview shared OR Private -->
-
-<!-- I need to dig in to determine what variable depicts the sharing level. -->
-
-<!-- For now, let's note that volumes with permission == 2 are available to all Databrary users. -->
-<!-- Volumes with a DOI have partial information available to all Databrary users. -->
-
 There are `r dim(vols_data[vols_data$doi != "NA",])[1]` volumes with DOIs (shared) that have sessions and at least one video as of today (`r Sys.time()`).
 
-<!-- Let's export a CSV of these. -->
-
-<!-- ```{r} -->
-<!-- shared_vols_w_video <- vols_joined %>%  -->
-<!--   dplyr::filter(doi != "NA") -->
-
-<!-- write.csv(shared_vols_w_video, file = "shared_vols_w_video_2018-12-28.csv", row.names = FALSE) -->
-<!-- ``` -->
-
-## Number of videos in a (shared) volume
+## Number of videos in (shared) volumes
 
 ```{r n-vids-shared-vols}
 vols_joined %>%
@@ -266,7 +271,7 @@ vols_joined %>%
   geom_histogram()
 ```
 
-## Number of sessions in a (shared) volume
+## Number of sessions in (shared) volumes
 
 ```{r n-sessions-shared-vols}
 vols_joined %>%
@@ -276,7 +281,7 @@ vols_joined %>%
   geom_histogram()
 ```
 
-## Total video hours in a (shared) volume
+## Total video hours in (shared) volumes
 
 ```{r tot-hrs-shared-vols}
 vols_joined %>%
@@ -285,4 +290,3 @@ vols_joined %>%
   aes(x=tot_hrs)+
   geom_histogram()
 ```
-

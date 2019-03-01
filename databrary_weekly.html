@@ -301,7 +301,7 @@ div.tocify {
 
 <h1 class="title toc-ignore">Databrary Report</h1>
 <h4 class="author"><em>Rick O. Gilmore</em></h4>
-<h4 class="date"><em>2019-02-28 17:45:19</em></h4>
+<h4 class="date"><em>2019-03-01 10:15:15</em></h4>
 
 </div>
 
@@ -310,7 +310,6 @@ div.tocify {
 <h1><span class="header-section-number">1</span> Institutions &amp; Authorized Users</h1>
 <p>At the moment, the <code>old_stats</code> come from a CSV stored locally. Once we have API commands to upload new data, the <code>old_stats</code> can come from Databrary directly.</p>
 <pre class="r"><code>new_stats &lt;- databraryapi::get_db_stats()
-
 old_stats &lt;- read_csv(&quot;csv/institutionAuthCounts.csv&quot;)
 
 # initialize updated_stats
@@ -334,21 +333,16 @@ updated_stats &lt;-
 p &lt;- updated_stats %&gt;%
   ggplot(., aes(x = date, y = count, color = type, group = type)) +
   geom_point() + 
-  geom_line(size=3) +
-  theme_classic(base_size = 14) +                        #Axis Label Size
-  scale_colour_manual(values=c(&quot;#ec7751&quot;, &quot;#4CAE99&quot;)) +  #Saturated Databrary Colors 
+  geom_line(size = ln_size) +
+  scale_colour_manual(values=c(color_orange, color_teal)) +  
   ylab(&quot;Authorizations&quot;) +
-  #xlab(&quot;Year&quot;) +
-  #labs(title=&quot;Databrary User Growth&quot;) +
-  theme(axis.title.x=element_blank()) +
-  theme(legend.position=&quot;none&quot;, axis.text = element_text(size = rel(0.8), colour = &quot;black&quot;)) +    #Axis text size and color
-  theme(axis.line = element_blank()) +
+  databrary_theme +
   scale_y_continuous(breaks = seq(0, 900, 100), expand = c(0,0)) +
   coord_cartesian(ylim = c(0, 900))
   
 ggdraw(p) + 
-  draw_label(&quot;Investigators&quot;, colour = &quot;#4CAE99&quot;, .9, .73) +
-  draw_label(&quot;Institutions&quot;, colour = &quot;#ec7751&quot;, .9, .38)</code></pre>
+  draw_label(&quot;Investigators&quot;, colour = color_teal, .9, .73) +
+  draw_label(&quot;Institutions&quot;, colour = color_orange, .9, .38)</code></pre>
 <p><img src="databrary_weekly_files/figure-html/db-inst-user-plot-1.png" width="672" /></p>
 <div id="new-investigators" class="section level2">
 <h2><span class="header-section-number">1.1</span> New investigators</h2>
@@ -366,6 +360,16 @@ new_people %&gt;%
 </thead>
 <tbody>
 <tr class="odd">
+<td align="left">Kalagher</td>
+<td align="left">Hilary</td>
+<td align="left">Drew University</td>
+</tr>
+<tr class="even">
+<td align="left">Lanning</td>
+<td align="left">Kevin</td>
+<td align="left">Florida Atlantic University</td>
+</tr>
+<tr class="odd">
 <td align="left">Venker</td>
 <td align="left">Courtney</td>
 <td align="left">Michigan State University</td>
@@ -379,16 +383,6 @@ new_people %&gt;%
 <td align="left">Bowden</td>
 <td align="left">Edward</td>
 <td align="left">University of Wisconsin-Parkside</td>
-</tr>
-<tr class="even">
-<td align="left">Lloyd</td>
-<td align="left">Marianne</td>
-<td align="left">Seton Hall University</td>
-</tr>
-<tr class="odd">
-<td align="left">Lombardi</td>
-<td align="left">Doug</td>
-<td align="left">Temple University</td>
 </tr>
 </tbody>
 </table>
@@ -408,16 +402,16 @@ new_institutions %&gt;%
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left">Longwood University</td>
-<td align="left"><a href="http://www.longwood.edu/" class="uri">http://www.longwood.edu/</a></td>
+<td align="left">Drew University</td>
+<td align="left"><a href="https://www.drew.edu/" class="uri">https://www.drew.edu/</a></td>
 </tr>
 <tr class="even">
-<td align="left">University of Wisconsin, Parkside</td>
-<td align="left"><a href="https://www.uwp.edu/" class="uri">https://www.uwp.edu/</a></td>
+<td align="left">Florida Atlantic University</td>
+<td align="left"><a href="https://www.fau.edu/" class="uri">https://www.fau.edu/</a></td>
 </tr>
 <tr class="odd">
-<td align="left">Seton Hall University</td>
-<td align="left">NA</td>
+<td align="left">Longwood University</td>
+<td align="left"><a href="http://www.longwood.edu/" class="uri">http://www.longwood.edu/</a></td>
 </tr>
 </tbody>
 </table>
@@ -444,22 +438,16 @@ updated_vols$unshared_volumes[next_entry] &lt;-
 vols_plot &lt;- updated_vols %&gt;%
   ggplot(., aes(x = date, y = count, color = type, group = type)) +
   geom_point() + 
-  geom_line(size=3) +
-  theme_classic(base_size = 14) +                        #Axis Label Size
-  scale_colour_manual(values=c(&quot;#ec7751&quot;, &quot;#4CAE99&quot;)) +  #Saturated Databrary Colors 
+  geom_line(size=ln_size) +
+  scale_colour_manual(values=c(color_orange, color_teal)) +  
   ylab(&quot;Volumes&quot;) +
-  #xlab(&quot;Year&quot;) +
-  #labs(title=&quot;Databrary Citation Growth&quot;) +
-  theme(axis.title.x=element_blank()) +
-  theme(legend.position=&quot;none&quot;, axis.text = element_text(size = rel(0.8), colour = &quot;black&quot;)) +    #Axis text size and color
-  theme(axis.line = element_blank()) +
+  databrary_theme +
   scale_y_continuous(breaks = seq(0, 500, 100), expand = c(0,0)) +
   coord_cartesian(ylim = c(0, 500))
   
-  
 ggdraw(vols_plot) + 
-  draw_label(&quot;Unshared&quot;, colour = &quot;#4CAE99&quot;, .86, .88) +
-  draw_label(&quot;Shared&quot;, colour = &quot;#ec7751&quot;, .84, .65)</code></pre>
+  draw_label(&quot;Unshared&quot;, colour = color_teal, .86, .88) +
+  draw_label(&quot;Shared&quot;, colour = color_orange, .84, .65)</code></pre>
 <p><img src="databrary_weekly_files/figure-html/db-vols-plot-1.png" width="672" /></p>
 <div id="new-volumes" class="section level2">
 <h2><span class="header-section-number">2.1</span> New volumes</h2>
@@ -502,11 +490,42 @@ new_volumes %&gt;%
 </div>
 <div id="citation-counts" class="section level1">
 <h1><span class="header-section-number">3</span> Citation counts</h1>
-<p>This section will eventually update and show the citation counts for Databrary and Datavyu. For now, it just shows the stored data file that we update manually. This can be automated, we just have to write a function to parse the HTML returned from Google Scholar to pull the relevant data.</p>
-<!-- Here we plot all Databrary and Datavyu Citations vs. date. I used https://www.hexcolortool.com to saturate the Databrary colors ("#fadbc7", "#b2ddd4") so they are darker on the graph. -->
-<pre class="r"><code>citations &lt;- read_csv(&quot;csv/citations-monthly.csv&quot;)
+<pre class="r"><code># Get citation counts from Google Scholar
+get_citation_stats &lt;- function(project = &#39;databrary&#39;) {
+  if (project %in% c(&#39;databrary&#39;, &#39;Databrary&#39;)) {
+    url &lt;- &#39;https://scholar.google.com/scholar?hl=en&amp;as_sdt=1%2C39&amp;as_vis=1&amp;q=%22databrary%22&amp;btnG=&#39;
+  } else if (project %in% c(&#39;datavyu&#39;, &#39;Datavyu&#39;)) {
+    url &lt;- &#39;https://scholar.google.com/scholar?hl=en&amp;as_sdt=1%2C39&amp;as_vis=1&amp;q=%22datavyu%22&amp;btnG=&#39;
+  }
+  
+  r &lt;- httr::GET(url = url)
+  if (httr::status_code(r) == 200) {
+    content &lt;- httr::content(r, &#39;text&#39;)
+  } else {
+    message(paste0(&#39;Download Failed, HTTP status &#39;, httr::status_code(r)))
+  }
+  
+  n_results &lt;- stringr::str_match(content, pattern = &quot;About ([0-9]+)&quot;)[2]
+  if (is.null(n_results)) {
+    message(paste0(&#39;Unable to parse results from search.&#39;))
+    return(NULL)
+  } else {
+    return(as.numeric(n_results))
+  }
+}
 
-citations &lt;- citations %&gt;%
+databrary_cites &lt;- get_citation_stats(&#39;databrary&#39;)
+datavyu_cites &lt;- get_citation_stats(&#39;datavyu&#39;)
+
+old_citations &lt;- citations &lt;- read_csv(&quot;csv/citations-monthly.csv&quot;)
+next_value &lt;- dim(old_citations)[1] + 1
+citations &lt;- old_citations
+citations[next_value,] &lt;- NA
+
+citations$date[next_value] &lt;- Sys.Date()
+citations$databrary_citations[next_value] &lt;- databrary_cites
+citations$datavyu_citations[next_value] &lt;- datavyu_cites</code></pre>
+<pre class="r"><code>citations &lt;- citations %&gt;%
   gather(., key = &quot;type&quot;, value = &quot;count&quot;, -date)
 
 # Plot
@@ -514,21 +533,16 @@ citations_plot &lt;-
   citations %&gt;%
   ggplot(., aes(x = date, y = count, color = type, group = type)) +
   geom_point() + 
-  geom_line(size=3) +
-  theme_classic(base_size = 14) +                        #Axis Label Size
-  scale_colour_manual(values=c(&quot;#ec7751&quot;, &quot;#4CAE99&quot;)) +  #Saturated Databrary Colors 
+  geom_line(size = ln_size) +
+  scale_colour_manual(values=c(color_orange, color_teal)) +
   ylab(&quot;Citations&quot;) +
-  #xlab(&quot;Year&quot;) +
-  #labs(title=&quot;Databrary Citation Growth&quot;) +
-  theme(axis.title.x=element_blank()) +
-  theme(legend.position=&quot;none&quot;, axis.text = element_text(size = rel(0.8), colour = &quot;black&quot;)) +    #Axis text size and color
-  theme(axis.line = element_blank()) +
+  databrary_theme +
   scale_y_continuous(breaks = seq(0, 250, 50), expand = c(0,0)) +
   coord_cartesian(ylim = c(0, 250))
   
 ggdraw(citations_plot) + 
-  draw_label(&quot;Datavyu&quot;, colour = &quot;#4CAE99&quot;, .9, .6) +
-  draw_label(&quot;Databrary&quot;, colour = &quot;#ec7751&quot;, .7, .85)</code></pre>
+  draw_label(&quot;Datavyu&quot;, colour = color_teal, .9, .6) +
+  draw_label(&quot;Databrary&quot;, colour = color_orange, .7, .85)</code></pre>
 <p><img src="databrary_weekly_files/figure-html/db-dv-citations-plot-1.png" width="672" /></p>
 </div>
 <div id="data-about-volumes-with-videos" class="section level1">
@@ -552,39 +566,6 @@ write_vid_csv &lt;- function(vol.id = 1) {
               row.names = FALSE)
   }
 } </code></pre>
-<pre class="r"><code>lapply(last_vol:(last_vol + vols_to_test), write_vid_csv)</code></pre>
-<pre><code>## [[1]]
-## NULL
-## 
-## [[2]]
-## NULL
-## 
-## [[3]]
-## NULL
-## 
-## [[4]]
-## NULL
-## 
-## [[5]]
-## NULL
-## 
-## [[6]]
-## NULL
-## 
-## [[7]]
-## NULL
-## 
-## [[8]]
-## NULL
-## 
-## [[9]]
-## NULL
-## 
-## [[10]]
-## NULL
-## 
-## [[11]]
-## NULL</code></pre>
 <pre class="r"><code>vol_files &lt;- list.files(&quot;csv&quot;, pattern = &quot;vol_[0-9]+&quot;, full.names = TRUE)
 
 # Import the individual csv files
@@ -595,23 +576,9 @@ video_stats &lt;- Reduce(function(x,y) merge(x, y, all = TRUE), video_data)</cod
 vol_info &lt;- lapply(vols, list_volume_metadata)
 vols_data &lt;- Reduce(function(x,y) merge(x, y, all = TRUE), vol_info)
 vols_joined &lt;- dplyr::left_join(vols_data, video_stats, by = c(&quot;vol_id&quot; = &quot;vol_id&quot;))</code></pre>
-<!-- NB: -->
-<!-- Permission 2: Access via Databrary sharing only -->
-<!-- Permission 3: Non-named collaborator (through X?) -->
-<!-- Permission 4: Named collaborator -->
-<!-- Permission 5: Investigator, Volume overview shared OR Private -->
-<!-- I need to dig in to determine what variable depicts the sharing level. -->
-<!-- For now, let's note that volumes with permission == 2 are available to all Databrary users. -->
-<!-- Volumes with a DOI have partial information available to all Databrary users. -->
-<p>There are 119 volumes with DOIs (shared) that have sessions and at least one video as of today (2019-02-28 17:46:03).</p>
-<!-- Let's export a CSV of these. -->
-<!-- ```{r} -->
-<!-- shared_vols_w_video <- vols_joined %>%  -->
-<!--   dplyr::filter(doi != "NA") -->
-<!-- write.csv(shared_vols_w_video, file = "shared_vols_w_video_2018-12-28.csv", row.names = FALSE) -->
-<!-- ``` -->
-<div id="number-of-videos-in-a-shared-volume" class="section level2">
-<h2><span class="header-section-number">4.1</span> Number of videos in a (shared) volume</h2>
+<p>There are 119 volumes with DOIs (shared) that have sessions and at least one video as of today (2019-03-01 10:15:48).</p>
+<div id="number-of-videos-in-shared-volumes" class="section level2">
+<h2><span class="header-section-number">4.1</span> Number of videos in (shared) volumes</h2>
 <pre class="r"><code>vols_joined %&gt;%
   filter(!is.na(doi)) %&gt;%
   ggplot(.) +
@@ -619,8 +586,8 @@ vols_joined &lt;- dplyr::left_join(vols_data, video_stats, by = c(&quot;vol_id&q
   geom_histogram()</code></pre>
 <p><img src="databrary_weekly_files/figure-html/n-vids-shared-vols-1.png" width="672" /></p>
 </div>
-<div id="number-of-sessions-in-a-shared-volume" class="section level2">
-<h2><span class="header-section-number">4.2</span> Number of sessions in a (shared) volume</h2>
+<div id="number-of-sessions-in-shared-volumes" class="section level2">
+<h2><span class="header-section-number">4.2</span> Number of sessions in (shared) volumes</h2>
 <pre class="r"><code>vols_joined %&gt;%
   filter(!is.na(doi)) %&gt;%
   ggplot(.) +
@@ -628,8 +595,8 @@ vols_joined &lt;- dplyr::left_join(vols_data, video_stats, by = c(&quot;vol_id&q
   geom_histogram()</code></pre>
 <p><img src="databrary_weekly_files/figure-html/n-sessions-shared-vols-1.png" width="672" /></p>
 </div>
-<div id="total-video-hours-in-a-shared-volume" class="section level2">
-<h2><span class="header-section-number">4.3</span> Total video hours in a (shared) volume</h2>
+<div id="total-video-hours-in-shared-volumes" class="section level2">
+<h2><span class="header-section-number">4.3</span> Total video hours in (shared) volumes</h2>
 <pre class="r"><code>vols_joined %&gt;%
   filter(!is.na(doi)) %&gt;%
   ggplot(.) +
