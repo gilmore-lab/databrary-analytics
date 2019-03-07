@@ -3,9 +3,10 @@ Code to produce and plot analytics about Databrary
 
 - `visits-downloads.Rmd` produces plots and tables from a March 2018 analysis of unique visits and downloads of the site. `visit-downloads.md` shows the output.
 - `databrary-user-growth.Rmd` produces a plot of the growth in authorized users and institutions.
-- `databrary_weekly.Rmd` produces a combined report on Databrary. An [HTML](https://gilmore-lab.github.io/databrary-analytics/databrary_weekly.html) version is also available.
+- `databrary_monthly.Rmd` produces a combined report on Databrary. An [HTML](https://gilmore-lab.github.io/databrary-analytics/databrary_monthly.html) version is also available.
 
 # Data acquired monthly
+
 - These numbers are from the Databrary Actitity site https://nyu.databrary.org/api/activity
 
 - "Databrary" and "Datavyu" (with quotes) are used to reduce bad hits in [Google Scholar](https://scholar.google.com)     
