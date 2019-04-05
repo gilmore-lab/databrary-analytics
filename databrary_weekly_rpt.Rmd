@@ -1,6 +1,6 @@
 ---
 title: "Databrary Weekly"
-author: "Rick O. Gilmore"
+author: "Rick O. Gilmore & Andrea Seisler"
 date: "`r Sys.time()`"
 output:
   html_document:
@@ -59,8 +59,9 @@ new_stats$date <- lubridate::as_datetime(new_stats$date)
 
 Let's try a Google Sheets-centered workflow.
 If this is the first time you are rendering this document in your current work session, please run this command to authenticate to Google from the command line, that is **outside of RMarkdown**:
+
 ```
-db <- gs_title('Databrary-analytics')
+db <- googlesheets::gs_title('Databrary-analytics')
 ```
 
 ```{r data-from-googlesheets}
@@ -133,7 +134,7 @@ if (as.logical(params$update_gs)) {
 ##  New investigators
 
 ```{r}
- new_people <- databraryapi::get_db_stats(type = "people")
+new_people <- databraryapi::get_db_stats(type = "people")
 new_people %>%
   mutate(url = paste0("https://databrary.org/party/", id)) %>%
   select(., sortname, prename, affiliation, url) %>%
@@ -178,9 +179,12 @@ if (as.logical(params$update_stats)) {
   updated_vols[next_entry,] = NA
   
   updated_vols$date[next_entry] <- new_stats$date
-  updated_vols$shared_volumes[next_entry] <- new_stats$datasets.shared
+  if (is.null(new_stats$datasets_shared)) {
+    new_stats$datasets_shared = 0
+  }
+  updated_vols$shared_volumes[next_entry] <- new_stats$datasets_shared
   updated_vols$unshared_volumes[next_entry] <- 
-    new_stats$datasets.total - new_stats$datasets.shared
+    new_stats$datasets_total - new_stats$datasets_shared
 }
 updated_vols <- updated_vols %>%
   gather(., key = "type", value = "count", -date)
@@ -208,13 +212,12 @@ Next, we update the Google Sheet if `params$update_gs` is TRUE.
 ```{r update-vols-shared-unshared}
 if (as.logical(params$update_gs)) {
   new_data <- data_frame(date = Sys.Date(), 
-                         shared_volumes = new_stats$datasets.shared, 
-                         unshared_volumes = new_stats$datasets.total - new_stats$datasets.shared)
+                         shared_volumes = new_stats$datasets_shared, 
+                         unshared_volumes = new_stats$datasets_total - new_stats$datasets_shared)
   db <- db %>%
     gs_add_row(ws = 'volumes-shared-unshared', input = new_data)  
 } else {
   message("'update_gs' parameter is 'false', so Google Sheet data unmodified.")
-  
 }
 ```
 
@@ -223,13 +226,16 @@ if (as.logical(params$update_gs)) {
 ```{r}
 # define helper functions
 new_volumes <- databraryapi::get_db_stats(type = "datasets")
+if (is.null(new_volumes)) {
+  stop('New volumes data not downloaded.')
+}
 
 unnested_vols <- new_volumes %>%
   unnest(.) %>%
   rename(., owner_name = name1, owner_id = id1) %>%
-  mutate(., url = paste0("https://doi.org/", doi),
+  mutate(., url = paste0("https://nyu.databrary.org/volume/", id),
          date_created = lubridate::as_date(creation))
-
+  
 unnested_vols %>%
   select(., name, date_created, owner_name, url) %>%
   knitr::kable()

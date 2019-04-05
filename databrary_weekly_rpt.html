@@ -74,9 +74,7 @@ h6 {
 </style>
 
 
-</head>
 
-<body>
 
 <style type = "text/css">
 .main-container {
@@ -107,8 +105,6 @@ summary {
 </style>
 
 
-
-<div class="container-fluid main-container">
 
 <!-- tabsets -->
 
@@ -275,6 +271,16 @@ div.tocify {
 
 </style>
 
+
+
+</head>
+
+<body>
+
+
+<div class="container-fluid main-container">
+
+
 <!-- setup 3col/9col grid for toc_float and main content  -->
 <div class="row-fluid">
 <div class="col-xs-12 col-sm-4 col-md-3">
@@ -300,8 +306,8 @@ div.tocify {
 
 
 <h1 class="title toc-ignore">Databrary Weekly</h1>
-<h4 class="author"><em>Rick O. Gilmore</em></h4>
-<h4 class="date"><em>2019-03-20 11:04:37</em></h4>
+<h4 class="author">Rick O. Gilmore</h4>
+<h4 class="date">2019-04-05 10:21:18</h4>
 
 </div>
 
@@ -314,7 +320,7 @@ div.tocify {
 # old_stats &lt;- read_csv(&quot;csv/institutionAuthCounts.csv&quot;)
 new_stats$date &lt;- lubridate::as_datetime(new_stats$date)</code></pre>
 <p>Let’s try a Google Sheets-centered workflow. If this is the first time you are rendering this document in your current work session, please run this command to authenticate to Google from the command line, that is <strong>outside of RMarkdown</strong>:</p>
-<pre><code>db &lt;- gs_title(&#39;Databrary-analytics&#39;)</code></pre>
+<pre><code>db &lt;- googlesheets::gs_title(&#39;Databrary-analytics&#39;)</code></pre>
 <pre class="r"><code>key &lt;- &quot;1tvlIQzULrMtXo97aJu71ljdTmNXkwwpU9eOOasVer3g&quot;
 db &lt;- gs_title(&#39;Databrary-analytics&#39;)</code></pre>
 <p>Now, let’s load the data about the number of institutions and investigators.</p>
@@ -339,9 +345,9 @@ updated_stats &lt;- updated_stats %&gt;%
   gather(., key = &quot;type&quot;, value = &quot;count&quot;, -date) %&gt;%
   mutate(DATE = lubridate::as_date(date)) %&gt;%
   select(DATE, count, type) %&gt;%
-  rename(date = DATE)
-
-# Plot
+  rename(date = DATE)</code></pre>
+<pre><code>## Warning: 2 failed to parse.</code></pre>
+<pre class="r"><code># Plot
 p &lt;- updated_stats %&gt;%
   ggplot(., aes(x = date, y = count, color = type, group = type)) +
   geom_point() + 
@@ -356,6 +362,8 @@ p &lt;- updated_stats %&gt;%
 ggdraw(p) + 
   draw_label(&quot;Investigators&quot;, colour = color_teal, .9, .73) +
   draw_label(&quot;Institutions&quot;, colour = color_orange, .9, .38)</code></pre>
+<pre><code>## Warning: Removed 2 rows containing missing values (geom_point).</code></pre>
+<pre><code>## Warning: Removed 2 rows containing missing values (geom_path).</code></pre>
 <p><img src="databrary_weekly_rpt_files/figure-html/db-inst-user-plot-1.png" width="672" /></p>
 <p>Next, we update the Google Sheet if <code>params$update_gs</code> is TRUE.</p>
 <pre class="r"><code>if (as.logical(params$update_gs)) {
@@ -366,7 +374,7 @@ ggdraw(p) +
 }</code></pre>
 <div id="new-investigators" class="section level2">
 <h2><span class="header-section-number">1.1</span> New investigators</h2>
-<pre class="r"><code> new_people &lt;- databraryapi::get_db_stats(type = &quot;people&quot;)
+<pre class="r"><code>new_people &lt;- databraryapi::get_db_stats(type = &quot;people&quot;)
 new_people %&gt;%
   mutate(url = paste0(&quot;https://databrary.org/party/&quot;, id)) %&gt;%
   select(., sortname, prename, affiliation, url) %&gt;%
@@ -382,40 +390,34 @@ new_people %&gt;%
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left">Anggoro</td>
-<td align="left">Florencia</td>
-<td align="left">College of the Holy Cross</td>
-<td align="left"><a href="https://databrary.org/party/5179" class="uri">https://databrary.org/party/5179</a></td>
+<td align="left">Ladd</td>
+<td align="left">Kevin</td>
+<td align="left">Indiana University South Bend</td>
+<td align="left"><a href="https://databrary.org/party/5228" class="uri">https://databrary.org/party/5228</a></td>
 </tr>
 <tr class="even">
-<td align="left">Cirelli</td>
-<td align="left">Laura</td>
-<td align="left">University of Toronto Mississauga</td>
-<td align="left"><a href="https://databrary.org/party/2738" class="uri">https://databrary.org/party/2738</a></td>
+<td align="left">Jordan</td>
+<td align="left">Kerry</td>
+<td align="left">Utah State University</td>
+<td align="left"><a href="https://databrary.org/party/5234" class="uri">https://databrary.org/party/5234</a></td>
 </tr>
 <tr class="odd">
-<td align="left">Todorovic</td>
-<td align="left">Sinisa</td>
-<td align="left">Oregon State University</td>
-<td align="left"><a href="https://databrary.org/party/4743" class="uri">https://databrary.org/party/4743</a></td>
+<td align="left">Sturge-Apple</td>
+<td align="left">Melissa</td>
+<td align="left">University of Rochester</td>
+<td align="left"><a href="https://databrary.org/party/5264" class="uri">https://databrary.org/party/5264</a></td>
 </tr>
 <tr class="even">
-<td align="left">Alarcón</td>
-<td align="left">David</td>
-<td align="left">Universidad Pablo de Olavide de Sevilla</td>
-<td align="left"><a href="https://databrary.org/party/1033" class="uri">https://databrary.org/party/1033</a></td>
+<td align="left">Stieglitz</td>
+<td align="left">Jonathan</td>
+<td align="left">University of New Mexico</td>
+<td align="left"><a href="https://databrary.org/party/5261" class="uri">https://databrary.org/party/5261</a></td>
 </tr>
 <tr class="odd">
-<td align="left">Simonelli</td>
-<td align="left">Alessandra</td>
-<td align="left">University of Padua</td>
-<td align="left"><a href="https://databrary.org/party/4888" class="uri">https://databrary.org/party/4888</a></td>
-</tr>
-<tr class="even">
-<td align="left">Henshaw</td>
-<td align="left">Erin</td>
-<td align="left">Denison University</td>
-<td align="left"><a href="https://databrary.org/party/5089" class="uri">https://databrary.org/party/5089</a></td>
+<td align="left">Admin</td>
+<td align="left">Databrary</td>
+<td align="left">NYU</td>
+<td align="left"><a href="https://databrary.org/party/3341" class="uri">https://databrary.org/party/3341</a></td>
 </tr>
 </tbody>
 </table>
@@ -437,14 +439,14 @@ new_institutions %&gt;%
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left">Pablo de Olavide University, Seville</td>
-<td align="left"><a href="https://www.upo.es" class="uri">https://www.upo.es</a></td>
-<td align="left"><a href="https://databrary.org/party/5211" class="uri">https://databrary.org/party/5211</a></td>
+<td align="left">Indiana University, South Bend</td>
+<td align="left"><a href="https://www.iusb.edu/" class="uri">https://www.iusb.edu/</a></td>
+<td align="left"><a href="https://databrary.org/party/5286" class="uri">https://databrary.org/party/5286</a></td>
 </tr>
 <tr class="even">
-<td align="left">University of Padua</td>
-<td align="left">NA</td>
-<td align="left"><a href="https://databrary.org/party/143" class="uri">https://databrary.org/party/143</a></td>
+<td align="left">Utah State University</td>
+<td align="left"><a href="https://www.usu.edu/" class="uri">https://www.usu.edu/</a></td>
+<td align="left"><a href="https://databrary.org/party/5280" class="uri">https://databrary.org/party/5280</a></td>
 </tr>
 </tbody>
 </table>
@@ -468,9 +470,12 @@ if (as.logical(params$update_stats)) {
   updated_vols[next_entry,] = NA
   
   updated_vols$date[next_entry] &lt;- new_stats$date
-  updated_vols$shared_volumes[next_entry] &lt;- new_stats$datasets.shared
+  if (is.null(new_stats$datasets_shared)) {
+    new_stats$datasets_shared = 0
+  }
+  updated_vols$shared_volumes[next_entry] &lt;- new_stats$datasets_shared
   updated_vols$unshared_volumes[next_entry] &lt;- 
-    new_stats$datasets.total - new_stats$datasets.shared
+    new_stats$datasets_total - new_stats$datasets_shared
 }
 updated_vols &lt;- updated_vols %&gt;%
   gather(., key = &quot;type&quot;, value = &quot;count&quot;, -date)</code></pre>
@@ -492,25 +497,27 @@ ggdraw(vols_plot) +
 <p>Next, we update the Google Sheet if <code>params$update_gs</code> is TRUE.</p>
 <pre class="r"><code>if (as.logical(params$update_gs)) {
   new_data &lt;- data_frame(date = Sys.Date(), 
-                         shared_volumes = new_stats$datasets.shared, 
-                         unshared_volumes = new_stats$datasets.total - new_stats$datasets.shared)
+                         shared_volumes = new_stats$datasets_shared, 
+                         unshared_volumes = new_stats$datasets_total - new_stats$datasets_shared)
   db &lt;- db %&gt;%
     gs_add_row(ws = &#39;volumes-shared-unshared&#39;, input = new_data)  
 } else {
   message(&quot;&#39;update_gs&#39; parameter is &#39;false&#39;, so Google Sheet data unmodified.&quot;)
-  
 }</code></pre>
 <div id="new-volumes" class="section level2">
 <h2><span class="header-section-number">2.1</span> New volumes</h2>
 <pre class="r"><code># define helper functions
 new_volumes &lt;- databraryapi::get_db_stats(type = &quot;datasets&quot;)
+if (is.null(new_volumes)) {
+  stop(&#39;New volumes data not downloaded.&#39;)
+}
 
 unnested_vols &lt;- new_volumes %&gt;%
   unnest(.) %&gt;%
   rename(., owner_name = name1, owner_id = id1) %&gt;%
-  mutate(., url = paste0(&quot;https://doi.org/&quot;, doi),
+  mutate(., url = paste0(&quot;https://nyu.databrary.org/volume/&quot;, id),
          date_created = lubridate::as_date(creation))
-
+  
 unnested_vols %&gt;%
   select(., name, date_created, owner_name, url) %&gt;%
   knitr::kable()</code></pre>
@@ -525,40 +532,52 @@ unnested_vols %&gt;%
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left">Keen</td>
-<td align="left">2019-03-06</td>
-<td align="left">Adolph, Karen</td>
-<td align="left"><a href="https://doi.org/10.17910/b7.868" class="uri">https://doi.org/10.17910/b7.868</a></td>
+<td align="left">Theory of Mind and Deception</td>
+<td align="left">2019-04-04</td>
+<td align="left">Vishton, Peter</td>
+<td align="left"><a href="https://nyu.databrary.org/volume/879" class="uri">https://nyu.databrary.org/volume/879</a></td>
 </tr>
 <tr class="even">
-<td align="left">Transition from crawling to walking and infants’ actions with objects and people</td>
-<td align="left">2016-10-19</td>
-<td align="left">Karasik, Lana</td>
-<td align="left"><a href="https://doi.org/10.17910/b7.271" class="uri">https://doi.org/10.17910/b7.271</a></td>
+<td align="left">2019 Gendered Ads</td>
+<td align="left">2019-04-04</td>
+<td align="left">Vishton, Peter</td>
+<td align="left"><a href="https://nyu.databrary.org/volume/878" class="uri">https://nyu.databrary.org/volume/878</a></td>
 </tr>
 <tr class="odd">
-<td align="left">Transition from crawling to walking and infants’ actions with objects and people</td>
-<td align="left">2016-10-19</td>
-<td align="left">Adolph, Karen</td>
-<td align="left"><a href="https://doi.org/10.17910/b7.271" class="uri">https://doi.org/10.17910/b7.271</a></td>
+<td align="left">2019 Reasoning about the Self, Other, and Future Preferences</td>
+<td align="left">2019-04-04</td>
+<td align="left">Vishton, Peter</td>
+<td align="left"><a href="https://nyu.databrary.org/volume/877" class="uri">https://nyu.databrary.org/volume/877</a></td>
 </tr>
 <tr class="even">
-<td align="left">Transition from crawling to walking and infants’ actions with objects and people</td>
-<td align="left">2016-10-19</td>
-<td align="left">Tamis-LeMonda, Catherine</td>
-<td align="left"><a href="https://doi.org/10.17910/b7.271" class="uri">https://doi.org/10.17910/b7.271</a></td>
+<td align="left">Play and Learning Across a Year (PLAY) Project</td>
+<td align="left">2019-04-01</td>
+<td align="left">Adolph, Karen</td>
+<td align="left"><a href="https://nyu.databrary.org/volume/876" class="uri">https://nyu.databrary.org/volume/876</a></td>
 </tr>
 <tr class="odd">
-<td align="left">Perceiving affordances for different motor skills (other conditions)</td>
-<td align="left">2017-07-13</td>
-<td align="left">Adolph, Karen</td>
-<td align="left"><a href="https://doi.org/10.17910/b7.452" class="uri">https://doi.org/10.17910/b7.452</a></td>
+<td align="left">Play and Learning Across a Year (PLAY) Project</td>
+<td align="left">2019-04-01</td>
+<td align="left">Gilmore, Rick O.</td>
+<td align="left"><a href="https://nyu.databrary.org/volume/876" class="uri">https://nyu.databrary.org/volume/876</a></td>
 </tr>
 <tr class="even">
-<td align="left">Perceiving affordances for different motor skills</td>
-<td align="left">2017-06-30</td>
+<td align="left">Play and Learning Across a Year (PLAY) Project</td>
+<td align="left">2019-04-01</td>
+<td align="left">Soska, Kasey</td>
+<td align="left"><a href="https://nyu.databrary.org/volume/876" class="uri">https://nyu.databrary.org/volume/876</a></td>
+</tr>
+<tr class="odd">
+<td align="left">NYU Datavyu Workshop Fisher-Price 2019-04-05</td>
+<td align="left">2019-03-29</td>
 <td align="left">Adolph, Karen</td>
-<td align="left"><a href="https://doi.org/10.17910/b7.443" class="uri">https://doi.org/10.17910/b7.443</a></td>
+<td align="left"><a href="https://nyu.databrary.org/volume/875" class="uri">https://nyu.databrary.org/volume/875</a></td>
+</tr>
+<tr class="even">
+<td align="left">NYU Datavyu Workshop Fisher-Price 2019-04-05</td>
+<td align="left">2019-03-29</td>
+<td align="left">Soska, Kasey</td>
+<td align="left"><a href="https://nyu.databrary.org/volume/875" class="uri">https://nyu.databrary.org/volume/875</a></td>
 </tr>
 </tbody>
 </table>
@@ -597,7 +616,7 @@ video_stats &lt;- Reduce(function(x,y) merge(x, y, all = TRUE), video_data)</cod
 vol_info &lt;- lapply(vols, list_volume_metadata)
 vols_data &lt;- Reduce(function(x,y) merge(x, y, all = TRUE), vol_info)
 vols_joined &lt;- dplyr::left_join(vols_data, video_stats, by = c(&quot;vol_id&quot; = &quot;vol_id&quot;))</code></pre>
-<p>There are 123 volumes with DOIs (shared) that have sessions and at least one video as of today (2019-03-20 11:05:13).</p>
+<p>There are 123 volumes with DOIs (shared) that have sessions and at least one video as of today (2019-04-05 10:21:51).</p>
 <div id="number-of-videos-in-shared-volumes" class="section level2">
 <h2><span class="header-section-number">3.1</span> Number of videos in (shared) volumes</h2>
 <pre class="r"><code>vols_joined %&gt;%
