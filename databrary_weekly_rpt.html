@@ -9,7 +9,7 @@
 <meta name="generator" content="pandoc" />
 
 
-<meta name="author" content="Rick O. Gilmore" />
+<meta name="author" content="Rick O. Gilmore &amp; Andrea Seisler" />
 
 
 <title>Databrary Weekly</title>
@@ -306,8 +306,8 @@ div.tocify {
 
 
 <h1 class="title toc-ignore">Databrary Weekly</h1>
-<h4 class="author">Rick O. Gilmore</h4>
-<h4 class="date">2019-04-05 10:21:18</h4>
+<h4 class="author">Rick O. Gilmore &amp; Andrea Seisler</h4>
+<h4 class="date">2019-05-01 09:23:18</h4>
 
 </div>
 
@@ -390,34 +390,40 @@ new_people %&gt;%
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left">Ladd</td>
-<td align="left">Kevin</td>
-<td align="left">Indiana University South Bend</td>
-<td align="left"><a href="https://databrary.org/party/5228" class="uri">https://databrary.org/party/5228</a></td>
+<td align="left">Bergmann</td>
+<td align="left">Christina</td>
+<td align="left">Max Planck Institute for Psycholinguistics</td>
+<td align="left"><a href="https://databrary.org/party/726" class="uri">https://databrary.org/party/726</a></td>
 </tr>
 <tr class="even">
-<td align="left">Jordan</td>
-<td align="left">Kerry</td>
-<td align="left">Utah State University</td>
-<td align="left"><a href="https://databrary.org/party/5234" class="uri">https://databrary.org/party/5234</a></td>
+<td align="left">Frankenhuis</td>
+<td align="left">Willem</td>
+<td align="left">Radboud University</td>
+<td align="left"><a href="https://databrary.org/party/5325" class="uri">https://databrary.org/party/5325</a></td>
 </tr>
 <tr class="odd">
-<td align="left">Sturge-Apple</td>
-<td align="left">Melissa</td>
-<td align="left">University of Rochester</td>
-<td align="left"><a href="https://databrary.org/party/5264" class="uri">https://databrary.org/party/5264</a></td>
+<td align="left">Riser</td>
+<td align="left">Diana</td>
+<td align="left">Columbus State University</td>
+<td align="left"><a href="https://databrary.org/party/4844" class="uri">https://databrary.org/party/4844</a></td>
 </tr>
 <tr class="even">
-<td align="left">Stieglitz</td>
-<td align="left">Jonathan</td>
-<td align="left">University of New Mexico</td>
-<td align="left"><a href="https://databrary.org/party/5261" class="uri">https://databrary.org/party/5261</a></td>
+<td align="left">Cheung</td>
+<td align="left">Pierina</td>
+<td align="left">Nanyang Technological University / National Institute of Education</td>
+<td align="left"><a href="https://databrary.org/party/1309" class="uri">https://databrary.org/party/1309</a></td>
 </tr>
 <tr class="odd">
-<td align="left">Admin</td>
-<td align="left">Databrary</td>
-<td align="left">NYU</td>
-<td align="left"><a href="https://databrary.org/party/3341" class="uri">https://databrary.org/party/3341</a></td>
+<td align="left">Ayaz</td>
+<td align="left">Hasan</td>
+<td align="left">Drexel University</td>
+<td align="left"><a href="https://databrary.org/party/5276" class="uri">https://databrary.org/party/5276</a></td>
+</tr>
+<tr class="even">
+<td align="left">Ware</td>
+<td align="left">Elizabeth</td>
+<td align="left">Viterbo University</td>
+<td align="left"><a href="https://databrary.org/party/1319" class="uri">https://databrary.org/party/1319</a></td>
 </tr>
 </tbody>
 </table>
@@ -439,14 +445,14 @@ new_institutions %&gt;%
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left">Indiana University, South Bend</td>
-<td align="left"><a href="https://www.iusb.edu/" class="uri">https://www.iusb.edu/</a></td>
-<td align="left"><a href="https://databrary.org/party/5286" class="uri">https://databrary.org/party/5286</a></td>
+<td align="left">Columbus State University</td>
+<td align="left"><a href="https://www.columbusstate.edu/" class="uri">https://www.columbusstate.edu/</a></td>
+<td align="left"><a href="https://databrary.org/party/5359" class="uri">https://databrary.org/party/5359</a></td>
 </tr>
 <tr class="even">
-<td align="left">Utah State University</td>
-<td align="left"><a href="https://www.usu.edu/" class="uri">https://www.usu.edu/</a></td>
-<td align="left"><a href="https://databrary.org/party/5280" class="uri">https://databrary.org/party/5280</a></td>
+<td align="left">Drexel University</td>
+<td align="left"><a href="https://drexel.edu/" class="uri">https://drexel.edu/</a></td>
+<td align="left"><a href="https://databrary.org/party/5331" class="uri">https://databrary.org/party/5331</a></td>
 </tr>
 </tbody>
 </table>
@@ -504,6 +510,8 @@ ggdraw(vols_plot) +
 } else {
   message(&quot;&#39;update_gs&#39; parameter is &#39;false&#39;, so Google Sheet data unmodified.&quot;)
 }</code></pre>
+<pre><code>## Warning: `data_frame()` is deprecated, use `tibble()`.
+## This warning is displayed once per session.</code></pre>
 <div id="new-volumes" class="section level2">
 <h2><span class="header-section-number">2.1</span> New volumes</h2>
 <pre class="r"><code># define helper functions
@@ -532,52 +540,28 @@ unnested_vols %&gt;%
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left">Theory of Mind and Deception</td>
-<td align="left">2019-04-04</td>
-<td align="left">Vishton, Peter</td>
-<td align="left"><a href="https://nyu.databrary.org/volume/879" class="uri">https://nyu.databrary.org/volume/879</a></td>
-</tr>
-<tr class="even">
-<td align="left">2019 Gendered Ads</td>
-<td align="left">2019-04-04</td>
-<td align="left">Vishton, Peter</td>
-<td align="left"><a href="https://nyu.databrary.org/volume/878" class="uri">https://nyu.databrary.org/volume/878</a></td>
-</tr>
-<tr class="odd">
-<td align="left">2019 Reasoning about the Self, Other, and Future Preferences</td>
-<td align="left">2019-04-04</td>
-<td align="left">Vishton, Peter</td>
-<td align="left"><a href="https://nyu.databrary.org/volume/877" class="uri">https://nyu.databrary.org/volume/877</a></td>
-</tr>
-<tr class="even">
-<td align="left">Play and Learning Across a Year (PLAY) Project</td>
-<td align="left">2019-04-01</td>
+<td align="left">Containers dataset</td>
+<td align="left">2019-05-01</td>
 <td align="left">Adolph, Karen</td>
-<td align="left"><a href="https://nyu.databrary.org/volume/876" class="uri">https://nyu.databrary.org/volume/876</a></td>
-</tr>
-<tr class="odd">
-<td align="left">Play and Learning Across a Year (PLAY) Project</td>
-<td align="left">2019-04-01</td>
-<td align="left">Gilmore, Rick O.</td>
-<td align="left"><a href="https://nyu.databrary.org/volume/876" class="uri">https://nyu.databrary.org/volume/876</a></td>
+<td align="left"><a href="https://nyu.databrary.org/volume/894" class="uri">https://nyu.databrary.org/volume/894</a></td>
 </tr>
 <tr class="even">
-<td align="left">Play and Learning Across a Year (PLAY) Project</td>
-<td align="left">2019-04-01</td>
-<td align="left">Soska, Kasey</td>
-<td align="left"><a href="https://nyu.databrary.org/volume/876" class="uri">https://nyu.databrary.org/volume/876</a></td>
+<td align="left">Danger Learning Study</td>
+<td align="left">2019-04-30</td>
+<td align="left">Frankenhuis, Willem</td>
+<td align="left"><a href="https://nyu.databrary.org/volume/893" class="uri">https://nyu.databrary.org/volume/893</a></td>
 </tr>
 <tr class="odd">
-<td align="left">NYU Datavyu Workshop Fisher-Price 2019-04-05</td>
-<td align="left">2019-03-29</td>
-<td align="left">Adolph, Karen</td>
-<td align="left"><a href="https://nyu.databrary.org/volume/875" class="uri">https://nyu.databrary.org/volume/875</a></td>
+<td align="left">Fantasy Orientation</td>
+<td align="left">2019-04-25</td>
+<td align="left">Lillard, Angeline</td>
+<td align="left"><a href="https://nyu.databrary.org/volume/892" class="uri">https://nyu.databrary.org/volume/892</a></td>
 </tr>
 <tr class="even">
-<td align="left">NYU Datavyu Workshop Fisher-Price 2019-04-05</td>
-<td align="left">2019-03-29</td>
-<td align="left">Soska, Kasey</td>
-<td align="left"><a href="https://nyu.databrary.org/volume/875" class="uri">https://nyu.databrary.org/volume/875</a></td>
+<td align="left">Remote Tool Use and Perception</td>
+<td align="left">2019-04-17</td>
+<td align="left">Vishton, Peter</td>
+<td align="left"><a href="https://nyu.databrary.org/volume/889" class="uri">https://nyu.databrary.org/volume/889</a></td>
 </tr>
 </tbody>
 </table>
@@ -616,7 +600,7 @@ video_stats &lt;- Reduce(function(x,y) merge(x, y, all = TRUE), video_data)</cod
 vol_info &lt;- lapply(vols, list_volume_metadata)
 vols_data &lt;- Reduce(function(x,y) merge(x, y, all = TRUE), vol_info)
 vols_joined &lt;- dplyr::left_join(vols_data, video_stats, by = c(&quot;vol_id&quot; = &quot;vol_id&quot;))</code></pre>
-<p>There are 123 volumes with DOIs (shared) that have sessions and at least one video as of today (2019-04-05 10:21:51).</p>
+<p>There are 123 volumes with DOIs (shared) that have sessions and at least one video as of today (2019-05-01 09:23:54).</p>
 <div id="number-of-videos-in-shared-volumes" class="section level2">
 <h2><span class="header-section-number">3.1</span> Number of videos in (shared) volumes</h2>
 <pre class="r"><code>vols_joined %&gt;%
