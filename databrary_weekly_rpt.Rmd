@@ -112,8 +112,8 @@ p <- updated_stats %>%
   ylab("Authorizations") +
   databrary_theme +
   # TODO: Make scale adapt to growth in maximum
-  scale_y_continuous(breaks = seq(0, 900, 100), expand = c(0,0)) +
-  coord_cartesian(ylim = c(0, 900))
+  scale_y_continuous(breaks = seq(0, 1000, 100), expand = c(0,0)) +
+  coord_cartesian(ylim = c(0, 1000))
 
 ggdraw(p) + 
   draw_label("Investigators", colour = color_teal, .9, .73) +
@@ -204,7 +204,7 @@ vols_plot <- updated_vols %>%
 
 ggdraw(vols_plot) + 
   draw_label("Unshared", colour = color_teal, .86, .88) +
-  draw_label("Shared", colour = color_orange, .84, .65)
+  draw_label("Shared", colour = color_orange, .84, .75)
 ```
 
 Next, we update the Google Sheet if `params$update_gs` is TRUE.

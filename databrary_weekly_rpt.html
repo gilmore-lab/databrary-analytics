@@ -307,7 +307,7 @@ div.tocify {
 
 <h1 class="title toc-ignore">Databrary Weekly</h1>
 <h4 class="author">Rick O. Gilmore &amp; Andrea Seisler</h4>
-<h4 class="date">2019-05-10 09:07:03</h4>
+<h4 class="date">2019-05-23 17:24:01</h4>
 
 </div>
 
@@ -356,8 +356,8 @@ p &lt;- updated_stats %&gt;%
   ylab(&quot;Authorizations&quot;) +
   databrary_theme +
   # TODO: Make scale adapt to growth in maximum
-  scale_y_continuous(breaks = seq(0, 900, 100), expand = c(0,0)) +
-  coord_cartesian(ylim = c(0, 900))
+  scale_y_continuous(breaks = seq(0, 1000, 100), expand = c(0,0)) +
+  coord_cartesian(ylim = c(0, 1000))
 
 ggdraw(p) + 
   draw_label(&quot;Investigators&quot;, colour = color_teal, .9, .73) +
@@ -390,28 +390,22 @@ new_people %&gt;%
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left">Radell</td>
-<td align="left">Milen</td>
-<td align="left">Niagara University</td>
-<td align="left"><a href="https://databrary.org/party/5047" class="uri">https://databrary.org/party/5047</a></td>
+<td align="left">Mills</td>
+<td align="left">Monique</td>
+<td align="left">University of Houston</td>
+<td align="left"><a href="https://databrary.org/party/5353" class="uri">https://databrary.org/party/5353</a></td>
 </tr>
 <tr class="even">
-<td align="left">Carvalho</td>
-<td align="left">Chrissie Ferreira de</td>
-<td align="left">Federal University of Santa Catarina</td>
-<td align="left"><a href="https://databrary.org/party/4766" class="uri">https://databrary.org/party/4766</a></td>
+<td align="left">Sharon</td>
+<td align="left">Tanya Lee</td>
+<td align="left">Mercer University</td>
+<td align="left"><a href="https://databrary.org/party/4517" class="uri">https://databrary.org/party/4517</a></td>
 </tr>
 <tr class="odd">
-<td align="left">Taylor</td>
-<td align="left">Marianne</td>
-<td align="left">Pacific Lutheran University</td>
-<td align="left"><a href="https://databrary.org/party/5303" class="uri">https://databrary.org/party/5303</a></td>
-</tr>
-<tr class="even">
-<td align="left">Mastergeorge</td>
-<td align="left">Ann</td>
-<td align="left">Texas Tech University</td>
-<td align="left"><a href="https://databrary.org/party/5356" class="uri">https://databrary.org/party/5356</a></td>
+<td align="left">Leech</td>
+<td align="left">Katie</td>
+<td align="left">University of Maryland</td>
+<td align="left"><a href="https://databrary.org/party/896" class="uri">https://databrary.org/party/896</a></td>
 </tr>
 </tbody>
 </table>
@@ -433,19 +427,14 @@ new_institutions %&gt;%
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left">Federal University of Santa Catarina</td>
-<td align="left"><a href="https://ufsc.br/" class="uri">https://ufsc.br/</a></td>
-<td align="left"><a href="https://databrary.org/party/5410" class="uri">https://databrary.org/party/5410</a></td>
+<td align="left">Muppets University</td>
+<td align="left">NA</td>
+<td align="left"><a href="https://databrary.org/party/5417" class="uri">https://databrary.org/party/5417</a></td>
 </tr>
 <tr class="even">
-<td align="left">Pacific Lutheran University</td>
-<td align="left"><a href="https://www.plu.edu/" class="uri">https://www.plu.edu/</a></td>
-<td align="left"><a href="https://databrary.org/party/5408" class="uri">https://databrary.org/party/5408</a></td>
-</tr>
-<tr class="odd">
-<td align="left">Texas Tech University</td>
-<td align="left"><a href="https://www.ttu.edu/" class="uri">https://www.ttu.edu/</a></td>
-<td align="left"><a href="https://databrary.org/party/5407" class="uri">https://databrary.org/party/5407</a></td>
+<td align="left">Mercer University</td>
+<td align="left"><a href="https://www.mercer.edu/" class="uri">https://www.mercer.edu/</a></td>
+<td align="left"><a href="https://databrary.org/party/5297" class="uri">https://databrary.org/party/5297</a></td>
 </tr>
 </tbody>
 </table>
@@ -491,7 +480,7 @@ vols_plot &lt;- updated_vols %&gt;%
 
 ggdraw(vols_plot) + 
   draw_label(&quot;Unshared&quot;, colour = color_teal, .86, .88) +
-  draw_label(&quot;Shared&quot;, colour = color_orange, .84, .65)</code></pre>
+  draw_label(&quot;Shared&quot;, colour = color_orange, .84, .75)</code></pre>
 <p><img src="databrary_weekly_rpt_files/figure-html/db-vols-plot-1.png" width="672" /></p>
 <p>Next, we update the Google Sheet if <code>params$update_gs</code> is TRUE.</p>
 <pre class="r"><code>if (as.logical(params$update_gs)) {
@@ -533,76 +522,52 @@ unnested_vols %&gt;%
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left">Holiday word learning in 12- to 19-month-olds</td>
-<td align="left">2019-05-09</td>
-<td align="left">Arunachalam, Sudha</td>
-<td align="left"><a href="https://nyu.databrary.org/volume/901" class="uri">https://nyu.databrary.org/volume/901</a></td>
+<td align="left">Storybook</td>
+<td align="left">2019-05-23</td>
+<td align="left">Foushee, Ruthe</td>
+<td align="left"><a href="https://nyu.databrary.org/volume/912" class="uri">https://nyu.databrary.org/volume/912</a></td>
 </tr>
 <tr class="even">
-<td align="left">Novel verb learning in 2- to 3.5-year-olds</td>
-<td align="left">2019-05-07</td>
-<td align="left">Arunachalam, Sudha</td>
-<td align="left"><a href="https://nyu.databrary.org/volume/900" class="uri">https://nyu.databrary.org/volume/900</a></td>
+<td align="left">Storybook</td>
+<td align="left">2019-05-23</td>
+<td align="left">Srinivasan, Mahesh</td>
+<td align="left"><a href="https://nyu.databrary.org/volume/912" class="uri">https://nyu.databrary.org/volume/912</a></td>
 </tr>
 <tr class="odd">
-<td align="left">NYU PLAY Project Pilots</td>
-<td align="left">2019-05-07</td>
-<td align="left">Adolph, Karen</td>
-<td align="left"><a href="https://nyu.databrary.org/volume/899" class="uri">https://nyu.databrary.org/volume/899</a></td>
+<td align="left">NewFAMS 18mo</td>
+<td align="left">2019-05-22</td>
+<td align="left">Raver, Cybele</td>
+<td align="left"><a href="https://nyu.databrary.org/volume/910" class="uri">https://nyu.databrary.org/volume/910</a></td>
 </tr>
 <tr class="even">
-<td align="left">NYU PLAY Project Pilots</td>
-<td align="left">2019-05-07</td>
-<td align="left">Tamis-LeMonda, Catherine</td>
-<td align="left"><a href="https://nyu.databrary.org/volume/899" class="uri">https://nyu.databrary.org/volume/899</a></td>
+<td align="left">Shape Up: Parent and Child Spatial Play</td>
+<td align="left">2019-05-15</td>
+<td align="left">Casasola, Marianella</td>
+<td align="left"><a href="https://nyu.databrary.org/volume/909" class="uri">https://nyu.databrary.org/volume/909</a></td>
 </tr>
 <tr class="odd">
-<td align="left">UoA_ManyBabies</td>
-<td align="left">2019-05-05</td>
-<td align="left">Henderson, Annette</td>
-<td align="left"><a href="https://nyu.databrary.org/volume/898" class="uri">https://nyu.databrary.org/volume/898</a></td>
+<td align="left">test3</td>
+<td align="left">2019-05-14</td>
+<td align="left">Frog, Kermit</td>
+<td align="left"><a href="https://nyu.databrary.org/volume/908" class="uri">https://nyu.databrary.org/volume/908</a></td>
 </tr>
 <tr class="even">
-<td align="left">Quantifying sources of variability in infancy research using the infant-directed speech preference</td>
-<td align="left">2019-05-02</td>
-<td align="left">Bergmann, Christina</td>
-<td align="left"><a href="https://nyu.databrary.org/volume/896" class="uri">https://nyu.databrary.org/volume/896</a></td>
+<td align="left">test2</td>
+<td align="left">2019-05-14</td>
+<td align="left">Frog, Kermit</td>
+<td align="left"><a href="https://nyu.databrary.org/volume/907" class="uri">https://nyu.databrary.org/volume/907</a></td>
 </tr>
 <tr class="odd">
-<td align="left">Quantifying sources of variability in infancy research using the infant-directed speech preference</td>
-<td align="left">2019-05-02</td>
-<td align="left">Soderstrom, Melanie</td>
-<td align="left"><a href="https://nyu.databrary.org/volume/896" class="uri">https://nyu.databrary.org/volume/896</a></td>
+<td align="left">Efficacy Judgments Stimuli Check</td>
+<td align="left">2019-05-14</td>
+<td align="left">Lillard, Angeline</td>
+<td align="left"><a href="https://nyu.databrary.org/volume/905" class="uri">https://nyu.databrary.org/volume/905</a></td>
 </tr>
 <tr class="even">
-<td align="left">Quantifying sources of variability in infancy research using the infant-directed speech preference</td>
-<td align="left">2019-05-02</td>
-<td align="left">Hamlin, Kiley</td>
-<td align="left"><a href="https://nyu.databrary.org/volume/896" class="uri">https://nyu.databrary.org/volume/896</a></td>
-</tr>
-<tr class="odd">
-<td align="left">Quantifying sources of variability in infancy research using the infant-directed speech preference</td>
-<td align="left">2019-05-02</td>
-<td align="left">Frank, Michael C.</td>
-<td align="left"><a href="https://nyu.databrary.org/volume/896" class="uri">https://nyu.databrary.org/volume/896</a></td>
-</tr>
-<tr class="even">
-<td align="left">Quantifying sources of variability in infancy research using the infant-directed speech preference</td>
-<td align="left">2019-05-02</td>
-<td align="left">Kline, Melissa</td>
-<td align="left"><a href="https://nyu.databrary.org/volume/896" class="uri">https://nyu.databrary.org/volume/896</a></td>
-</tr>
-<tr class="odd">
-<td align="left">Quantifying sources of variability in infancy research using the infant-directed speech preference</td>
-<td align="left">2019-05-02</td>
-<td align="left">Byers-Heinlein, Krista</td>
-<td align="left"><a href="https://nyu.databrary.org/volume/896" class="uri">https://nyu.databrary.org/volume/896</a></td>
-</tr>
-<tr class="even">
-<td align="left">Quantifying sources of variability in infancy research using the infant-directed speech preference</td>
-<td align="left">2019-05-02</td>
-<td align="left">Lew-Williams, Casey</td>
-<td align="left"><a href="https://nyu.databrary.org/volume/896" class="uri">https://nyu.databrary.org/volume/896</a></td>
+<td align="left">Efficacy Judgments</td>
+<td align="left">2019-05-14</td>
+<td align="left">Lillard, Angeline</td>
+<td align="left"><a href="https://nyu.databrary.org/volume/904" class="uri">https://nyu.databrary.org/volume/904</a></td>
 </tr>
 </tbody>
 </table>
@@ -641,7 +606,7 @@ video_stats &lt;- Reduce(function(x,y) merge(x, y, all = TRUE), video_data)</cod
 vol_info &lt;- lapply(vols, list_volume_metadata)
 vols_data &lt;- Reduce(function(x,y) merge(x, y, all = TRUE), vol_info)
 vols_joined &lt;- dplyr::left_join(vols_data, video_stats, by = c(&quot;vol_id&quot; = &quot;vol_id&quot;))</code></pre>
-<p>There are 123 volumes with DOIs (shared) that have sessions and at least one video as of today (2019-05-10 09:07:42).</p>
+<p>There are 123 volumes with DOIs (shared) that have sessions and at least one video as of today (2019-05-23 17:24:44).</p>
 <div id="number-of-videos-in-shared-volumes" class="section level2">
 <h2><span class="header-section-number">3.1</span> Number of videos in (shared) volumes</h2>
 <pre class="r"><code>vols_joined %&gt;%

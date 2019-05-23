@@ -136,7 +136,6 @@ ggdraw(p2) +
   draw_label("Databrary", colour = "#ec7751", .7, .85)
 ```
 
-
 ## Plot of Yearly Citation Growth
 
 Here we plot all Databrary and Datavyu Citations vs. date. I used https://www.hexcolortool.com to saturate the Databrary colors ("#fadbc7", "#b2ddd4") so they are darker on the graph.
