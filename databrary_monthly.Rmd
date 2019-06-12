@@ -22,6 +22,7 @@ library(databraryapi)
 library(tidyverse)
 library(reshape2)
 library(cowplot)
+library(plyr)
 
 if (!databraryapi::login_db(params$db_account)) {
   message("Log-in failed.")
@@ -56,14 +57,14 @@ next_entry <- dim(updated_stats)[1] + 1
 updated_stats[next_entry,] = NA
 
 # fill with new data
-updated_stats$YearMonth[next_entry] <- new_stats$date
-updated_stats$Institutions[next_entry] <- new_stats$institutions
-updated_stats$`Authorized Investigators`[next_entry] <- new_stats$investigators
+updated_stats$date[next_entry] <- new_stats$date
+updated_stats$institutions[next_entry] <- new_stats$institutions
+updated_stats$investigators[next_entry] <- new_stats$investigators
 
 # hate the variable names
-updated_stats <- 
-  updated_stats %>%
-  rename(date = YearMonth, institutions = Institutions, investigators = `Authorized Investigators`)
+#updated_stats <- 
+#  updated_stats %>%
+#  rename(date = YearMonth, institutions = Institutions, investigators = `Authorized #Investigators`)
 ```
 
 ```{r db-inst-user-plot}
@@ -78,8 +79,8 @@ p <- updated_stats %>%
   scale_colour_manual(values=c(color_orange, color_teal)) +  
   ylab("Authorizations") +
   databrary_theme +
-  scale_y_continuous(breaks = seq(0, 900, 100), expand = c(0,0)) +
-  coord_cartesian(ylim = c(0, 900))
+  scale_y_continuous(breaks = seq(0, round_any(max(updated_stats$count), 100), 100), expand = c(0,0)) +
+  coord_cartesian(ylim = c(0, round_any(max(updated_stats$count), 100)))
   
 ggdraw(p) + 
   draw_label("Investigators", colour = color_teal, .9, .73) +
