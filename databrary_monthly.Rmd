@@ -110,9 +110,9 @@ p <- updated_stats %>%
   coord_cartesian(ylim = c(0, round_any(max(updated_stats$count), 100, ceiling)))
   
 ggdraw(p) + 
-  draw_label("Investigators", colour = color_teal, .9, .73) +
-  draw_label("Institutions", colour = color_orange, .9, .38) +
-  draw_label("Affiliates", colour = color_purple, .9, .28)
+  draw_label("Investigators", colour = color_teal, .8, .9) +
+  draw_label("Institutions", colour = color_orange, .9, .6)+
+  draw_label("Affiliates", colour = color_purple, .9, .3)
 ```
 
 ##  New investigators
