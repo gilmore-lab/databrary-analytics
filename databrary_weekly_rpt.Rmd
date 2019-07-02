@@ -83,6 +83,7 @@ old_stats <- db %>%
 ```
 
 We then update the old stats with new data if `params$update_stats` is TRUE.
+In the current context, `params$update_stats` == `r params$update_stats`.
 
 ```{r update-stats}
 # initialize updated_stats
@@ -106,10 +107,17 @@ Now, we plot the data.
 # Create a tidy form for plotting both institutions and investigators
 updated_stats <- updated_stats %>%
   gather(., key = "type", value = "count", -date) %>%
+<<<<<<< HEAD
   mutate(date = lubridate::as_date(date)) %>%
   select(date, count, type) 
   #%>%
   #rename(date = DATE)
+=======
+  mutate(DATE = lubridate::as_date(date)) %>%
+  select(DATE, count, type) %>%
+  rename(date = DATE) %>%
+  filter(type %in% c('institutions', 'investigators'))
+>>>>>>> 5e1a1bb7e87b564d32e1789dbc23fa5fb9bec71a
 
 # Plot
 p <- updated_stats %>%
@@ -129,13 +137,15 @@ ggdraw(p) +
 ```
 
 Next, we update the Google Sheet if `params$update_gs` is TRUE.
+In the current context, `params$update_gs` == `r params$update_gs`.
 
 ```{r update-inst-inv-gs}
 if (as.logical(params$update_gs)) {
   db <- db %>%
     gs_add_row(ws = 'institutions-investigators', input = new_stats[,c(1, 4, 2)])
+  message("'update_gs' parameter is 'TRUE', so Google Sheet data will be updated.")
 } else {
-  message("'update_gs' parameter is 'false', so Google Sheet data unmodified.")
+  message("'update_gs' parameter is 'FALSE', so Google Sheet data unmodified.")
 }
 ```
 
@@ -160,14 +170,6 @@ new_institutions %>%
 ```
 
 # Volumes
-
-<!-- The volumes data can also be rewritten back to Databrary at some future date. -->
-
-<!-- Read from a locally stored copy. -->
-
-<!-- ```{r} -->
-<!-- old_vols <- read_csv("csv/db-volumes-monthly.csv") -->
-<!-- ``` -->
 
 Let's try a new workflow based on Google Sheets.
 We should already have the spreadsheet loaded.
@@ -207,8 +209,13 @@ vols_plot <- updated_vols %>%
   scale_colour_manual(values=c(color_orange, color_teal)) +  
   ylab("Volumes") +
   databrary_theme +
+<<<<<<< HEAD
   scale_y_continuous(breaks = seq(0, round_any(max(updated_vols$count), 100, ceiling), 100), expand = c(0,0)) +
   coord_cartesian(ylim = c(0, round_any(max(updated_vols$count), 100, ceiling)))
+=======
+  scale_y_continuous(breaks = seq(0, 600, 100), expand = c(0,0)) +
+  coord_cartesian(ylim = c(0, 600))
+>>>>>>> 5e1a1bb7e87b564d32e1789dbc23fa5fb9bec71a
 
 ggdraw(vols_plot) + 
   draw_label("Unshared", colour = color_teal, .86, .88) +
