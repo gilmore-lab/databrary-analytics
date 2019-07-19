@@ -20,7 +20,21 @@ params:
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE, message = FALSE)
 
+# Install packages if needed
+cran_packages <- c('ggplot2', 'tidyverse', 'reshape2', 'cowplot',
+                    'googledrive', 'plyr', 'googlesheets')
+not_installed <- cran_packages[!(cran_packages %in% installed.packages()[,"Package"])]
+if(length(not_installed)) {
+  message('Installing packages required for this document.')
+  install.packages(not_installed)
+}
+
+github_packages <- 'PLAY-behaviorome/databraryapi'
+not_installed <- github_packages[!(github_packages %in% installed.packages()[,"Package"])]
+if(length(not_installed)) devtools::install_github(not_installed)
+
 # Load
+
 library(databraryapi)
 library(tidyverse)
 library(reshape2)
@@ -30,7 +44,6 @@ library(googledrive)
 library(plyr)
 library(googlesheets) 
   options(httr_oob_default=TRUE) 
-
 
 # Log in to Databrary
 if (!databraryapi::login_db(params$db_account)) {
@@ -109,8 +122,8 @@ updated_stats <- updated_stats %>%
   gather(., key = "type", value = "count", -date) %>%
   mutate(date = lubridate::as_date(date)) %>%
   select(date, count, type) %>%
-  filter(type %in% c('institutions', 'investigators', 'affiliates'))
-
+  filter(type %in% c('institutions', 'investigators', 'affiliates')) %>%
+  filter(!is.na(count))
 
 # Plot
 p <- updated_stats %>%
@@ -124,9 +137,9 @@ p <- updated_stats %>%
   coord_cartesian(ylim = c(0, round_any(max(updated_stats$count), 100, ceiling)))
 
 ggdraw(p) + 
-  draw_label("Investigators", colour = color_teal, .8, .9) +
-  draw_label("Institutions", colour = color_orange, .9, .6)+
-  draw_label("Affiliates", colour = color_purple, .9, .3)
+  draw_label("Investigators", colour = color_teal, .75, .9) +
+  draw_label("Institutions", colour = color_orange, .75, .6)+
+  draw_label("Affiliates", colour = color_purple, .75, .3)
 ```
 
 Next, we update the Google Sheet if `params$update_gs` is TRUE.
@@ -227,7 +240,7 @@ if (as.logical(params$update_gs)) {
 
 ## New volumes
 
-```{r}
+```{r new-volumes}
 # define helper functions
 new_volumes <- databraryapi::get_db_stats(type = "datasets")
 if (is.null(new_volumes)) {
@@ -235,8 +248,13 @@ if (is.null(new_volumes)) {
 }
 
 unnested_vols <- new_volumes %>%
-  unnest(.) %>%
-  rename(., owner_name = name1, owner_id = id1) %>%
+  unnest(.)
+  # rename(., owner_name = name1, owner_id = id1) %>%
+
+unnested_vols$owner_name <- unnested_vols$name1
+unnested_vols$owner_id = unnested_vols$name1
+
+unnested_vols <- unnested_vols %>%
   mutate(., url = paste0("https://nyu.databrary.org/volume/", id),
          date_created = lubridate::as_date(creation))
   

@@ -7,6 +7,7 @@
 <meta charset="utf-8" />
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
 
 
 <meta name="author" content="Rick O. Gilmore &amp; Andrea Seisler" />
@@ -162,56 +163,12 @@ summary {
 }
 </style>
 
-<script>
-$(document).ready(function () {
-  window.buildTabsets("TOC");
-});
-
-$(document).ready(function () {
-  $('.tabset-dropdown > .nav-tabs > li').click(function () {
-    $(this).parent().toggleClass('nav-tabs-open')
-  });
-});
-</script>
-
 <!-- code folding -->
 <style type="text/css">
 .code-folding-btn { margin-bottom: 4px; }
 </style>
-<script>
-$(document).ready(function () {
-  window.initializeCodeFolding("hide" === "show");
-});
-</script>
 
 
-
-<script>
-$(document).ready(function ()  {
-
-    // move toc-ignore selectors from section div to header
-    $('div.section.toc-ignore')
-        .removeClass('toc-ignore')
-        .children('h1,h2,h3,h4,h5').addClass('toc-ignore');
-
-    // establish options
-    var options = {
-      selectors: "h1,h2,h3",
-      theme: "bootstrap3",
-      context: '.toc-content',
-      hashGenerator: function (text) {
-        return text.replace(/[.\\/?&!#<>]/g, '').replace(/\s/g, '_').toLowerCase();
-      },
-      ignoreSelector: ".toc-ignore",
-      scrollTo: 0
-    };
-    options.showAndHide = true;
-    options.smoothScroll = true;
-
-    // tocify
-    var toc = $("#TOC").tocify(options).data("toc-tocify");
-});
-</script>
 
 <style type="text/css">
 
@@ -305,7 +262,7 @@ div.tocify {
 
 <h1 class="title toc-ignore">Databrary Weekly</h1>
 <h4 class="author">Rick O. Gilmore &amp; Andrea Seisler</h4>
-<h4 class="date">2019-07-02 10:02:15</h4>
+<h4 class="date">2019-07-19 10:24:00</h4>
 
 </div>
 
@@ -319,12 +276,12 @@ div.tocify {
 new_stats$date &lt;- lubridate::as_datetime(new_stats$date)</code></pre>
 <p>Let’s try a Google Sheets-centered workflow. If this is the first time you are rendering this document in your current work session, please run this command to authenticate to Google from the command line, that is <strong>outside of RMarkdown</strong>:</p>
 <pre><code>db &lt;- googlesheets::gs_title(&#39;Databrary-analytics&#39;)</code></pre>
-<pre class="r"><code>key &lt;- &quot;1tvlIQzULrMtXo97aJu71ljdTmNXkwwpU9eOOasVer3g&quot;
+<pre class="r"><code>#key &lt;- &quot;1tvlIQzULrMtXo97aJu71ljdTmNXkwwpU9eOOasVer3g&quot;
 db &lt;- gs_title(&#39;Databrary-analytics&#39;)</code></pre>
 <p>Now, let’s load the data about the number of institutions and investigators.</p>
 <pre class="r"><code>old_stats &lt;- db %&gt;%
   gs_read(ws = &#39;institutions-investigators&#39;)</code></pre>
-<p>We then update the old stats with new data if <code>params$update_stats</code> is TRUE. In the current context, <code>params$update_stats</code> == FALSE.</p>
+<p>We then update the old stats with new data if <code>params$update_stats</code> is TRUE. In the current context, <code>params$update_stats</code> == TRUE.</p>
 <pre class="r"><code># initialize updated_stats
 updated_stats &lt;- old_stats
 if (as.logical(params$update_stats)) {
@@ -336,33 +293,35 @@ if (as.logical(params$update_stats)) {
   updated_stats$date[next_entry] &lt;- new_stats$date
   updated_stats$institutions[next_entry] &lt;- new_stats$institutions
   updated_stats$investigators[next_entry] &lt;- new_stats$investigators
+  updated_stats$affiliates[next_entry] &lt;- new_stats$affiliates
 }</code></pre>
 <p>Now, we plot the data.</p>
 <pre class="r"><code># Create a tidy form for plotting both institutions and investigators
 updated_stats &lt;- updated_stats %&gt;%
   gather(., key = &quot;type&quot;, value = &quot;count&quot;, -date) %&gt;%
-  mutate(DATE = lubridate::as_date(date)) %&gt;%
-  select(DATE, count, type) %&gt;%
-  rename(date = DATE) %&gt;%
-  filter(type %in% c(&#39;institutions&#39;, &#39;investigators&#39;))
-
-# Plot
+  mutate(date = lubridate::as_date(date)) %&gt;%
+  select(date, count, type) %&gt;%
+  filter(type %in% c(&#39;institutions&#39;, &#39;investigators&#39;, &#39;affiliates&#39;))</code></pre>
+<pre><code>## Warning: 3 failed to parse.</code></pre>
+<pre class="r"><code># Plot
 p &lt;- updated_stats %&gt;%
   ggplot(., aes(x = date, y = count, color = type, group = type)) +
-  geom_point() + 
+  geom_point() +
   geom_line(size = ln_size) +
-  scale_colour_manual(values=c(color_orange, color_teal)) +  
+  scale_colour_manual(values=c(color_purple, color_orange, color_teal)) +  
   ylab(&quot;Authorizations&quot;) +
   databrary_theme +
-  # TODO: Make scale adapt to growth in maximum
-  scale_y_continuous(breaks = seq(0, 1000, 100), expand = c(0,0)) +
-  coord_cartesian(ylim = c(0, 1000))
+  scale_y_continuous(breaks = seq(0, round_any(max(updated_stats$count), 100, ceiling), 100), expand = c(0,0)) +
+  coord_cartesian(ylim = c(0, round_any(max(updated_stats$count), 100, ceiling)))
 
 ggdraw(p) + 
-  draw_label(&quot;Investigators&quot;, colour = color_teal, .9, .73) +
-  draw_label(&quot;Institutions&quot;, colour = color_orange, .9, .38)</code></pre>
+  draw_label(&quot;Investigators&quot;, colour = color_teal, .8, .9) +
+  draw_label(&quot;Institutions&quot;, colour = color_orange, .9, .6)+
+  draw_label(&quot;Affiliates&quot;, colour = color_purple, .9, .3)</code></pre>
+<pre><code>## Warning: Removed 3 rows containing missing values (geom_point).</code></pre>
+<pre><code>## Warning: Removed 3 rows containing missing values (geom_path).</code></pre>
 <p><img src="databrary_weekly_rpt_files/figure-html/db-inst-user-plot-1.png" width="672" /></p>
-<p>Next, we update the Google Sheet if <code>params$update_gs</code> is TRUE. In the current context, <code>params$update_gs</code> == FALSE.</p>
+<p>Next, we update the Google Sheet if <code>params$update_gs</code> is TRUE. In the current context, <code>params$update_gs</code> == TRUE.</p>
 <pre class="r"><code>if (as.logical(params$update_gs)) {
   db &lt;- db %&gt;%
     gs_add_row(ws = &#39;institutions-investigators&#39;, input = new_stats[,c(1, 4, 2)])
@@ -388,34 +347,40 @@ new_people %&gt;%
 </thead>
 <tbody>
 <tr class="odd">
+<td align="left">Farr</td>
+<td align="left">Rachel</td>
+<td align="left">University of Kentucky</td>
+<td align="left"><a href="https://databrary.org/party/4689" class="uri">https://databrary.org/party/4689</a></td>
+</tr>
+<tr class="even">
+<td align="left">Suzuka</td>
+<td align="left">Kara</td>
+<td align="left">University of Hawaii</td>
+<td align="left"><a href="https://databrary.org/party/2326" class="uri">https://databrary.org/party/2326</a></td>
+</tr>
+<tr class="odd">
+<td align="left">Boor</td>
+<td align="left">Brandon</td>
+<td align="left">Purdue University</td>
+<td align="left"><a href="https://databrary.org/party/5598" class="uri">https://databrary.org/party/5598</a></td>
+</tr>
+<tr class="even">
+<td align="left">Lai</td>
+<td align="left">Carlo</td>
+<td align="left">Department of Dynamic and Clinical Psychology, Sapienza University of Rome</td>
+<td align="left"><a href="https://databrary.org/party/4918" class="uri">https://databrary.org/party/4918</a></td>
+</tr>
+<tr class="odd">
+<td align="left">Gampe</td>
+<td align="left">Anja</td>
+<td align="left">University of Zurich</td>
+<td align="left"><a href="https://databrary.org/party/5594" class="uri">https://databrary.org/party/5594</a></td>
+</tr>
+<tr class="even">
 <td align="left">Kayyal</td>
 <td align="left">Mary</td>
 <td align="left">University of Massachusetts Dartmouth</td>
 <td align="left"><a href="https://databrary.org/party/5308" class="uri">https://databrary.org/party/5308</a></td>
-</tr>
-<tr class="even">
-<td align="left">Boyle</td>
-<td align="left">Elizabeth</td>
-<td align="left">Johns Hopkins University</td>
-<td align="left"><a href="https://databrary.org/party/5552" class="uri">https://databrary.org/party/5552</a></td>
-</tr>
-<tr class="odd">
-<td align="left">Gweon</td>
-<td align="left">Hyowon</td>
-<td align="left">Stanford University</td>
-<td align="left"><a href="https://databrary.org/party/5475" class="uri">https://databrary.org/party/5475</a></td>
-</tr>
-<tr class="even">
-<td align="left">Brakke</td>
-<td align="left">Karen</td>
-<td align="left">Spelman College</td>
-<td align="left"><a href="https://databrary.org/party/915" class="uri">https://databrary.org/party/915</a></td>
-</tr>
-<tr class="odd">
-<td align="left">Simpson</td>
-<td align="left">Royce</td>
-<td align="left">Spring Hill College</td>
-<td align="left"><a href="https://databrary.org/party/4882" class="uri">https://databrary.org/party/4882</a></td>
 </tr>
 </tbody>
 </table>
@@ -437,19 +402,14 @@ new_institutions %&gt;%
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left">University of Massachusetts, Dartmouth</td>
-<td align="left"><a href="https://www.umassd.edu/" class="uri">https://www.umassd.edu/</a></td>
-<td align="left"><a href="https://databrary.org/party/5595" class="uri">https://databrary.org/party/5595</a></td>
+<td align="left">University of Hawaii at Manoa</td>
+<td align="left"><a href="https://manoa.hawaii.edu/" class="uri">https://manoa.hawaii.edu/</a></td>
+<td align="left"><a href="https://databrary.org/party/797" class="uri">https://databrary.org/party/797</a></td>
 </tr>
 <tr class="even">
-<td align="left">Spelman College</td>
-<td align="left"><a href="http://www.spelman.edu/" class="uri">http://www.spelman.edu/</a></td>
-<td align="left"><a href="https://databrary.org/party/5589" class="uri">https://databrary.org/party/5589</a></td>
-</tr>
-<tr class="odd">
-<td align="left">Spring Hill College</td>
-<td align="left"><a href="https://www.shc.edu/" class="uri">https://www.shc.edu/</a></td>
-<td align="left"><a href="https://databrary.org/party/5588" class="uri">https://databrary.org/party/5588</a></td>
+<td align="left">Rutgers University, New Brunswick</td>
+<td align="left"><a href="https://newbrunswick.rutgers.edu/" class="uri">https://newbrunswick.rutgers.edu/</a></td>
+<td align="left"><a href="https://databrary.org/party/52" class="uri">https://databrary.org/party/52</a></td>
 </tr>
 </tbody>
 </table>
@@ -485,8 +445,9 @@ vols_plot &lt;- updated_vols %&gt;%
   scale_colour_manual(values=c(color_orange, color_teal)) +  
   ylab(&quot;Volumes&quot;) +
   databrary_theme +
-  scale_y_continuous(breaks = seq(0, 600, 100), expand = c(0,0)) +
-  coord_cartesian(ylim = c(0, 600))
+  scale_y_continuous(breaks = seq(0, round_any(max(updated_vols$count), 100, ceiling), 100), expand = c(0,0)) +
+  coord_cartesian(ylim = c(0, round_any(max(updated_vols$count), 100, ceiling)))
+
 
 ggdraw(vols_plot) + 
   draw_label(&quot;Unshared&quot;, colour = color_teal, .86, .88) +
@@ -502,6 +463,8 @@ ggdraw(vols_plot) +
 } else {
   message(&quot;&#39;update_gs&#39; parameter is &#39;false&#39;, so Google Sheet data unmodified.&quot;)
 }</code></pre>
+<pre><code>## Warning: `data_frame()` is deprecated, use `tibble()`.
+## This warning is displayed once per session.</code></pre>
 <div id="new-volumes" class="section level2">
 <h2><span class="header-section-number">2.1</span> New volumes</h2>
 <pre class="r"><code># define helper functions
@@ -511,8 +474,13 @@ if (is.null(new_volumes)) {
 }
 
 unnested_vols &lt;- new_volumes %&gt;%
-  unnest(.) %&gt;%
-  rename(., owner_name = name1, owner_id = id1) %&gt;%
+  unnest(.)
+  # rename(., owner_name = name1, owner_id = id1) %&gt;%
+
+unnested_vols$owner_name &lt;- unnested_vols$name1
+unnested_vols$owner_id = unnested_vols$name1
+
+unnested_vols &lt;- unnested_vols %&gt;%
   mutate(., url = paste0(&quot;https://nyu.databrary.org/volume/&quot;, id),
          date_created = lubridate::as_date(creation))
   
@@ -530,52 +498,34 @@ unnested_vols %&gt;%
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left">Complex Emotion Expression Database</td>
-<td align="left">2019-03-27</td>
-<td align="left">Scherf, Kathryn Suzanne</td>
-<td align="left"><a href="https://nyu.databrary.org/volume/874" class="uri">https://nyu.databrary.org/volume/874</a></td>
+<td align="left">“Dancing” together: Infant-mother locomotor synchrony across space and time</td>
+<td align="left">2019-07-15</td>
+<td align="left">Adolph, Karen</td>
+<td align="left"><a href="https://nyu.databrary.org/volume/943" class="uri">https://nyu.databrary.org/volume/943</a></td>
 </tr>
 <tr class="even">
-<td align="left">Complex Emotion Expression Database</td>
-<td align="left">2019-03-27</td>
-<td align="left">Benda, Margaret Suzanne</td>
-<td align="left"><a href="https://nyu.databrary.org/volume/874" class="uri">https://nyu.databrary.org/volume/874</a></td>
+<td align="left">Trust in Context: Flipped</td>
+<td align="left">2019-07-12</td>
+<td align="left">Palmquist, Carolyn</td>
+<td align="left"><a href="https://nyu.databrary.org/volume/942" class="uri">https://nyu.databrary.org/volume/942</a></td>
 </tr>
 <tr class="odd">
-<td align="left">Adapt</td>
-<td align="left">2019-06-27</td>
-<td align="left">Ellwood-Lowe, Monica</td>
-<td align="left"><a href="https://nyu.databrary.org/volume/938" class="uri">https://nyu.databrary.org/volume/938</a></td>
+<td align="left">Walking and Talking</td>
+<td align="left">2019-07-11</td>
+<td align="left">Adolph, Karen</td>
+<td align="left"><a href="https://nyu.databrary.org/volume/941" class="uri">https://nyu.databrary.org/volume/941</a></td>
 </tr>
 <tr class="even">
-<td align="left">Adapt</td>
-<td align="left">2019-06-27</td>
-<td align="left">Srinivasan, Mahesh</td>
-<td align="left"><a href="https://nyu.databrary.org/volume/938" class="uri">https://nyu.databrary.org/volume/938</a></td>
+<td align="left">Emotion Portrayal Creation</td>
+<td align="left">2019-07-09</td>
+<td align="left">Goldstein, Thalia R.</td>
+<td align="left"><a href="https://nyu.databrary.org/volume/940" class="uri">https://nyu.databrary.org/volume/940</a></td>
 </tr>
 <tr class="odd">
-<td align="left">Adapt</td>
-<td align="left">2019-06-27</td>
-<td align="left">Bunge, Silvia</td>
-<td align="left"><a href="https://nyu.databrary.org/volume/938" class="uri">https://nyu.databrary.org/volume/938</a></td>
-</tr>
-<tr class="even">
-<td align="left">Parental Beliefs about Infant and Child Learning</td>
-<td align="left">2019-06-27</td>
-<td align="left">Casasola, Marianella</td>
-<td align="left"><a href="https://nyu.databrary.org/volume/937" class="uri">https://nyu.databrary.org/volume/937</a></td>
-</tr>
-<tr class="odd">
-<td align="left">Beyond the FFA: Brain-behavior correspondences in face recognition abilities</td>
-<td align="left">2016-12-19</td>
-<td align="left">Elbich, Daniel</td>
-<td align="left"><a href="https://nyu.databrary.org/volume/302" class="uri">https://nyu.databrary.org/volume/302</a></td>
-</tr>
-<tr class="even">
-<td align="left">Beyond the FFA: Brain-behavior correspondences in face recognition abilities</td>
-<td align="left">2016-12-19</td>
-<td align="left">Scherf, Kathryn Suzanne</td>
-<td align="left"><a href="https://nyu.databrary.org/volume/302" class="uri">https://nyu.databrary.org/volume/302</a></td>
+<td align="left">Emotion Portrayal Creation</td>
+<td align="left">2019-07-09</td>
+<td align="left">Chulla, Kaylee Rose</td>
+<td align="left"><a href="https://nyu.databrary.org/volume/940" class="uri">https://nyu.databrary.org/volume/940</a></td>
 </tr>
 </tbody>
 </table>
@@ -614,7 +564,7 @@ video_stats &lt;- Reduce(function(x,y) merge(x, y, all = TRUE), video_data)</cod
 vol_info &lt;- lapply(vols, list_volume_metadata)
 vols_data &lt;- Reduce(function(x,y) merge(x, y, all = TRUE), vol_info)
 vols_joined &lt;- dplyr::left_join(vols_data, video_stats, by = c(&quot;vol_id&quot; = &quot;vol_id&quot;))</code></pre>
-<p>There are 123 volumes with DOIs (shared) that have sessions and at least one video as of today (2019-07-02 10:02:54).</p>
+<p>There are 123 volumes with DOIs (shared) that have sessions and at least one video as of today (2019-07-19 10:24:35).</p>
 <div id="number-of-videos-in-shared-volumes" class="section level2">
 <h2><span class="header-section-number">3.1</span> Number of videos in (shared) volumes</h2>
 <pre class="r"><code>vols_joined %&gt;%
@@ -662,6 +612,54 @@ $(document).ready(function () {
 });
 
 
+</script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open')
+  });
+});
+</script>
+
+<!-- code folding -->
+<script>
+$(document).ready(function () {
+  window.initializeCodeFolding("hide" === "show");
+});
+</script>
+
+<script>
+$(document).ready(function ()  {
+
+    // move toc-ignore selectors from section div to header
+    $('div.section.toc-ignore')
+        .removeClass('toc-ignore')
+        .children('h1,h2,h3,h4,h5').addClass('toc-ignore');
+
+    // establish options
+    var options = {
+      selectors: "h1,h2,h3",
+      theme: "bootstrap3",
+      context: '.toc-content',
+      hashGenerator: function (text) {
+        return text.replace(/[.\\/?&!#<>]/g, '').replace(/\s/g, '_').toLowerCase();
+      },
+      ignoreSelector: ".toc-ignore",
+      scrollTo: 0
+    };
+    options.showAndHide = true;
+    options.smoothScroll = true;
+
+    // tocify
+    var toc = $("#TOC").tocify(options).data("toc-tocify");
+});
 </script>
 
 <!-- dynamically load mathjax for compatibility with self-contained -->
