@@ -95,8 +95,15 @@ if (as.logical(params$update_stats)) {
 
 
 ```{r db-inst-user-plot}
+
+# Create a tidy form for plotting both institutions and investigators and affiliates
 updated_stats <- updated_stats %>%
-  gather(., key = "type", value = "count", -date)
+  gather(., key = "type", value = "count", -date) %>%
+  mutate(date = lubridate::as_date(date)) %>%
+  select(date, count, type) %>%
+  filter(type %in% c('institutions', 'investigators', 'affiliates')) %>%
+  filter(!is.na(count))
+
 
 # Plot
 p <- updated_stats %>%
@@ -168,7 +175,7 @@ vols_plot <- updated_vols %>%
   
 ggdraw(vols_plot) + 
   draw_label("Unshared", colour = color_teal, .86, .88) +
-  draw_label("Shared", colour = color_orange, .84, .65)
+  draw_label("Shared", colour = color_orange, .84, .75)
 ```
 
 ## New volumes
