@@ -262,7 +262,7 @@ div.tocify {
 
 <h1 class="title toc-ignore">Databrary Weekly</h1>
 <h4 class="author">Rick O. Gilmore &amp; Andrea Seisler</h4>
-<h4 class="date">2019-07-19 10:24:00</h4>
+<h4 class="date">2019-07-30 09:35:09</h4>
 
 </div>
 
@@ -301,7 +301,8 @@ updated_stats &lt;- updated_stats %&gt;%
   gather(., key = &quot;type&quot;, value = &quot;count&quot;, -date) %&gt;%
   mutate(date = lubridate::as_date(date)) %&gt;%
   select(date, count, type) %&gt;%
-  filter(type %in% c(&#39;institutions&#39;, &#39;investigators&#39;, &#39;affiliates&#39;))</code></pre>
+  filter(type %in% c(&#39;institutions&#39;, &#39;investigators&#39;, &#39;affiliates&#39;)) %&gt;%
+  filter(!is.na(count))</code></pre>
 <pre><code>## Warning: 3 failed to parse.</code></pre>
 <pre class="r"><code># Plot
 p &lt;- updated_stats %&gt;%
@@ -315,9 +316,9 @@ p &lt;- updated_stats %&gt;%
   coord_cartesian(ylim = c(0, round_any(max(updated_stats$count), 100, ceiling)))
 
 ggdraw(p) + 
-  draw_label(&quot;Investigators&quot;, colour = color_teal, .8, .9) +
-  draw_label(&quot;Institutions&quot;, colour = color_orange, .9, .6)+
-  draw_label(&quot;Affiliates&quot;, colour = color_purple, .9, .3)</code></pre>
+  draw_label(&quot;Investigators&quot;, colour = color_teal, .75, .9) +
+  draw_label(&quot;Institutions&quot;, colour = color_orange, .75, .6)+
+  draw_label(&quot;Affiliates&quot;, colour = color_purple, .75, .3)</code></pre>
 <pre><code>## Warning: Removed 3 rows containing missing values (geom_point).</code></pre>
 <pre><code>## Warning: Removed 3 rows containing missing values (geom_path).</code></pre>
 <p><img src="databrary_weekly_rpt_files/figure-html/db-inst-user-plot-1.png" width="672" /></p>
@@ -347,40 +348,34 @@ new_people %&gt;%
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left">Farr</td>
-<td align="left">Rachel</td>
-<td align="left">University of Kentucky</td>
-<td align="left"><a href="https://databrary.org/party/4689" class="uri">https://databrary.org/party/4689</a></td>
+<td align="left">Yoshikawa</td>
+<td align="left">Takahiro</td>
+<td align="left">Osaka City University Graduate School of Medicine</td>
+<td align="left"><a href="https://databrary.org/party/5629" class="uri">https://databrary.org/party/5629</a></td>
 </tr>
 <tr class="even">
-<td align="left">Suzuka</td>
-<td align="left">Kara</td>
-<td align="left">University of Hawaii</td>
-<td align="left"><a href="https://databrary.org/party/2326" class="uri">https://databrary.org/party/2326</a></td>
+<td align="left">Rushton</td>
+<td align="left">Gregory</td>
+<td align="left">Middle Tennessee State University</td>
+<td align="left"><a href="https://databrary.org/party/5351" class="uri">https://databrary.org/party/5351</a></td>
 </tr>
 <tr class="odd">
-<td align="left">Boor</td>
-<td align="left">Brandon</td>
-<td align="left">Purdue University</td>
-<td align="left"><a href="https://databrary.org/party/5598" class="uri">https://databrary.org/party/5598</a></td>
+<td align="left">Danielson</td>
+<td align="left">Kyle</td>
+<td align="left">University of Toronto</td>
+<td align="left"><a href="https://databrary.org/party/2328" class="uri">https://databrary.org/party/2328</a></td>
 </tr>
 <tr class="even">
-<td align="left">Lai</td>
-<td align="left">Carlo</td>
-<td align="left">Department of Dynamic and Clinical Psychology, Sapienza University of Rome</td>
-<td align="left"><a href="https://databrary.org/party/4918" class="uri">https://databrary.org/party/4918</a></td>
+<td align="left">Jovic</td>
+<td align="left">Svetlana</td>
+<td align="left">SUNY College at Old Westbury</td>
+<td align="left"><a href="https://databrary.org/party/4671" class="uri">https://databrary.org/party/4671</a></td>
 </tr>
 <tr class="odd">
-<td align="left">Gampe</td>
-<td align="left">Anja</td>
-<td align="left">University of Zurich</td>
-<td align="left"><a href="https://databrary.org/party/5594" class="uri">https://databrary.org/party/5594</a></td>
-</tr>
-<tr class="even">
-<td align="left">Kayyal</td>
-<td align="left">Mary</td>
-<td align="left">University of Massachusetts Dartmouth</td>
-<td align="left"><a href="https://databrary.org/party/5308" class="uri">https://databrary.org/party/5308</a></td>
+<td align="left">Lombardi</td>
+<td align="left">Doug</td>
+<td align="left">University of Maryland</td>
+<td align="left"><a href="https://databrary.org/party/4945" class="uri">https://databrary.org/party/4945</a></td>
 </tr>
 </tbody>
 </table>
@@ -402,14 +397,19 @@ new_institutions %&gt;%
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left">University of Hawaii at Manoa</td>
-<td align="left"><a href="https://manoa.hawaii.edu/" class="uri">https://manoa.hawaii.edu/</a></td>
-<td align="left"><a href="https://databrary.org/party/797" class="uri">https://databrary.org/party/797</a></td>
+<td align="left">Osaka City University, Graduate School of Medicine</td>
+<td align="left"><a href="http://www.med.osaka-u.ac.jp/eng/" class="uri">http://www.med.osaka-u.ac.jp/eng/</a></td>
+<td align="left"><a href="https://databrary.org/party/5674" class="uri">https://databrary.org/party/5674</a></td>
 </tr>
 <tr class="even">
-<td align="left">Rutgers University, New Brunswick</td>
-<td align="left"><a href="https://newbrunswick.rutgers.edu/" class="uri">https://newbrunswick.rutgers.edu/</a></td>
-<td align="left"><a href="https://databrary.org/party/52" class="uri">https://databrary.org/party/52</a></td>
+<td align="left">Middle Tennessee State University</td>
+<td align="left"><a href="https://www.mtsu.edu/" class="uri">https://www.mtsu.edu/</a></td>
+<td align="left"><a href="https://databrary.org/party/5673" class="uri">https://databrary.org/party/5673</a></td>
+</tr>
+<tr class="odd">
+<td align="left">SUNY College at Old Westbury</td>
+<td align="left"><a href="https://www.oldwestbury.edu/" class="uri">https://www.oldwestbury.edu/</a></td>
+<td align="left"><a href="https://databrary.org/party/5672" class="uri">https://databrary.org/party/5672</a></td>
 </tr>
 </tbody>
 </table>
@@ -498,34 +498,34 @@ unnested_vols %&gt;%
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left">“Dancing” together: Infant-mother locomotor synchrony across space and time</td>
-<td align="left">2019-07-15</td>
-<td align="left">Adolph, Karen</td>
-<td align="left"><a href="https://nyu.databrary.org/volume/943" class="uri">https://nyu.databrary.org/volume/943</a></td>
+<td align="left">Scientific Reasoning</td>
+<td align="left">2019-07-29</td>
+<td align="left">Weisberg, Deena Skolnick</td>
+<td align="left"><a href="https://nyu.databrary.org/volume/950" class="uri">https://nyu.databrary.org/volume/950</a></td>
 </tr>
 <tr class="even">
-<td align="left">Trust in Context: Flipped</td>
-<td align="left">2019-07-12</td>
+<td align="left">BioBehavioral Synchrony</td>
+<td align="left">2019-07-29</td>
+<td align="left">Tamis-LeMonda, Catherine</td>
+<td align="left"><a href="https://nyu.databrary.org/volume/949" class="uri">https://nyu.databrary.org/volume/949</a></td>
+</tr>
+<tr class="odd">
+<td align="left">BioBehavioral Synchrony</td>
+<td align="left">2019-07-29</td>
+<td align="left">Hirsh-Pasek, Kathy</td>
+<td align="left"><a href="https://nyu.databrary.org/volume/949" class="uri">https://nyu.databrary.org/volume/949</a></td>
+</tr>
+<tr class="even">
+<td align="left">HAB &amp; Trust V2</td>
+<td align="left">2019-07-26</td>
 <td align="left">Palmquist, Carolyn</td>
-<td align="left"><a href="https://nyu.databrary.org/volume/942" class="uri">https://nyu.databrary.org/volume/942</a></td>
+<td align="left"><a href="https://nyu.databrary.org/volume/948" class="uri">https://nyu.databrary.org/volume/948</a></td>
 </tr>
 <tr class="odd">
-<td align="left">Walking and Talking</td>
-<td align="left">2019-07-11</td>
-<td align="left">Adolph, Karen</td>
-<td align="left"><a href="https://nyu.databrary.org/volume/941" class="uri">https://nyu.databrary.org/volume/941</a></td>
-</tr>
-<tr class="even">
-<td align="left">Emotion Portrayal Creation</td>
-<td align="left">2019-07-09</td>
-<td align="left">Goldstein, Thalia R.</td>
-<td align="left"><a href="https://nyu.databrary.org/volume/940" class="uri">https://nyu.databrary.org/volume/940</a></td>
-</tr>
-<tr class="odd">
-<td align="left">Emotion Portrayal Creation</td>
-<td align="left">2019-07-09</td>
-<td align="left">Chulla, Kaylee Rose</td>
-<td align="left"><a href="https://nyu.databrary.org/volume/940" class="uri">https://nyu.databrary.org/volume/940</a></td>
+<td align="left">iTRAC Mobile Eye Tracking Complete</td>
+<td align="left">2019-07-26</td>
+<td align="left">Perez-Edgar, Koraly</td>
+<td align="left"><a href="https://nyu.databrary.org/volume/947" class="uri">https://nyu.databrary.org/volume/947</a></td>
 </tr>
 </tbody>
 </table>
@@ -564,7 +564,7 @@ video_stats &lt;- Reduce(function(x,y) merge(x, y, all = TRUE), video_data)</cod
 vol_info &lt;- lapply(vols, list_volume_metadata)
 vols_data &lt;- Reduce(function(x,y) merge(x, y, all = TRUE), vol_info)
 vols_joined &lt;- dplyr::left_join(vols_data, video_stats, by = c(&quot;vol_id&quot; = &quot;vol_id&quot;))</code></pre>
-<p>There are 123 volumes with DOIs (shared) that have sessions and at least one video as of today (2019-07-19 10:24:35).</p>
+<p>There are 123 volumes with DOIs (shared) that have sessions and at least one video as of today (2019-07-30 09:35:51).</p>
 <div id="number-of-videos-in-shared-volumes" class="section level2">
 <h2><span class="header-section-number">3.1</span> Number of videos in (shared) volumes</h2>
 <pre class="r"><code>vols_joined %&gt;%
