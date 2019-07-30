@@ -117,7 +117,7 @@ if (as.logical(params$update_stats)) {
 Now, we plot the data.
 
 ```{r db-inst-user-plot}
-# Create a tidy form for plotting both institutions and investigators
+# Create a tidy form for plotting both institutions and investigators and affiliates
 updated_stats <- updated_stats %>%
   gather(., key = "type", value = "count", -date) %>%
   mutate(date = lubridate::as_date(date)) %>%
@@ -137,9 +137,9 @@ p <- updated_stats %>%
   coord_cartesian(ylim = c(0, round_any(max(updated_stats$count), 100, ceiling)))
 
 ggdraw(p) + 
-  draw_label("Investigators", colour = color_teal, .75, .9) +
-  draw_label("Institutions", colour = color_orange, .75, .6)+
-  draw_label("Affiliates", colour = color_purple, .75, .3)
+  draw_label("Investigators", colour = color_teal, .8, .9) +
+  draw_label("Institutions", colour = color_orange, .9, .6)+
+  draw_label("Affiliates", colour = color_purple, .9, .3)
 ```
 
 Next, we update the Google Sheet if `params$update_gs` is TRUE.
