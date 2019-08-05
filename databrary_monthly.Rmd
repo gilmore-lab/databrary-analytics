@@ -140,6 +140,19 @@ new_institutions %>%
   knitr::kable()
 ```
 
+Next, we update the Google Sheet if `params$update_gs` is TRUE.
+In the current context, `params$update_gs` == `r params$update_gs`.
+
+```{r update-inst-inv-gs}
+if (as.logical(params$update_gs)) {
+  db <- db %>%
+    gs_add_row(ws = 'institutions-investigators', input = new_stats[,c(1, 4, 2, 3)])
+  message("'update_gs' parameter is 'TRUE', so Google Sheet data will be updated.")
+} else {
+  message("'update_gs' parameter is 'FALSE', so Google Sheet data unmodified.")
+}
+```
+
 # Volumes
 
 The volumes data can also be rewritten back to Databrary at some future date.
@@ -177,6 +190,19 @@ ggdraw(vols_plot) +
   draw_label("Unshared", colour = color_teal, .86, .88) +
   draw_label("Shared", colour = color_orange, .84, .75)
 ```
+Next, we update the Google Sheet if `params$update_gs` is TRUE.
+In the current context, `params$update_gs` == `r params$update_gs`.
+
+#```{r update-shared-vols-gs}
+if (as.logical(params$update_gs)) {
+  db <- db %>%
+    gs_add_row(ws = 'volumes-shared-unshared', input = new_data[,c(1, 2, 3])
+  message("'update_gs' parameter is 'TRUE', so Google Sheet data will be updated.")
+} else {
+  message("'update_gs' parameter is 'FALSE', so Google Sheet data unmodified.")
+}
+```
+
 
 ## New volumes
 
@@ -249,6 +275,19 @@ ggdraw(citations_plot) +
   draw_label("Datavyu", colour = color_teal, .9, .6) +
   draw_label("Databrary", colour = color_orange, .7, .85)
 ```
+#```{r update-citations-gs}
+
+## This is WRONG. Fix
+
+if (as.logical(params$update_gs)) {
+  db <- db %>%
+    gs_add_row(ws = 'citations-monthly', input = new_stats[,c(1)], input(,c(2))= databrary_cites[(1)], datavyu_cites[(1)])
+  message("'update_gs' parameter is 'TRUE', so Google Sheet data will be updated.")
+} else {
+  message("'update_gs' parameter is 'FALSE', so Google Sheet data unmodified.")
+}
+
+
 
 # Data about volumes with videos
 
@@ -262,7 +301,7 @@ vol_ids <- as.numeric(vol_nums[,2])
 last_vol <- max(vol_ids)
 vols_to_test <- params$vols_to_test
 
-# Create function to write new data files for each volum
+# Create function to write new data files for each volume
 write_vid_csv <- function(vol.id = 1) {
   message(paste0("Getting data for volume ", vol.id))
   vid_dat <- get_video_stats(vol.id)

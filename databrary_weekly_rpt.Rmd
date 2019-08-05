@@ -148,7 +148,7 @@ In the current context, `params$update_gs` == `r params$update_gs`.
 ```{r update-inst-inv-gs}
 if (as.logical(params$update_gs)) {
   db <- db %>%
-    gs_add_row(ws = 'institutions-investigators', input = new_stats[,c(1, 4, 2)])
+    gs_add_row(ws = 'institutions-investigators', input = new_stats[,c(1, 4, 2, 3)])
   message("'update_gs' parameter is 'TRUE', so Google Sheet data will be updated.")
 } else {
   message("'update_gs' parameter is 'FALSE', so Google Sheet data unmodified.")
@@ -277,7 +277,7 @@ vol_ids <- as.numeric(vol_nums[,2])
 last_vol <- max(vol_ids)
 vols_to_test <- params$vols_to_test
 
-# Create function to write new data files for each volum
+# Create function to write new data files for each volume
 write_vid_csv <- function(vol.id = 1) {
   message(paste0("Getting data for volume ", vol.id))
   vid_dat <- get_video_stats(vol.id)

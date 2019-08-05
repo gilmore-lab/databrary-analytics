@@ -7,26 +7,27 @@
 <meta charset="utf-8" />
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
 
 
 <meta name="author" content="Rick O. Gilmore" />
 
 
-<title>Databrary Report</title>
+<title>Databrary Monthly</title>
 
-<script src="databrary_weekly_files/jquery-1.11.3/jquery.min.js"></script>
+<script src="databrary_monthly_files/jquery-1.11.3/jquery.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<link href="databrary_weekly_files/bootstrap-3.3.5/css/bootstrap.min.css" rel="stylesheet" />
-<script src="databrary_weekly_files/bootstrap-3.3.5/js/bootstrap.min.js"></script>
-<script src="databrary_weekly_files/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
-<script src="databrary_weekly_files/bootstrap-3.3.5/shim/respond.min.js"></script>
-<script src="databrary_weekly_files/jqueryui-1.11.4/jquery-ui.min.js"></script>
-<link href="databrary_weekly_files/tocify-1.9.1/jquery.tocify.css" rel="stylesheet" />
-<script src="databrary_weekly_files/tocify-1.9.1/jquery.tocify.js"></script>
-<script src="databrary_weekly_files/navigation-1.1/tabsets.js"></script>
-<script src="databrary_weekly_files/navigation-1.1/codefolding.js"></script>
-<link href="databrary_weekly_files/highlightjs-9.12.0/default.css" rel="stylesheet" />
-<script src="databrary_weekly_files/highlightjs-9.12.0/highlight.js"></script>
+<link href="databrary_monthly_files/bootstrap-3.3.5/css/bootstrap.min.css" rel="stylesheet" />
+<script src="databrary_monthly_files/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="databrary_monthly_files/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="databrary_monthly_files/bootstrap-3.3.5/shim/respond.min.js"></script>
+<script src="databrary_monthly_files/jqueryui-1.11.4/jquery-ui.min.js"></script>
+<link href="databrary_monthly_files/tocify-1.9.1/jquery.tocify.css" rel="stylesheet" />
+<script src="databrary_monthly_files/tocify-1.9.1/jquery.tocify.js"></script>
+<script src="databrary_monthly_files/navigation-1.1/tabsets.js"></script>
+<script src="databrary_monthly_files/navigation-1.1/codefolding.js"></script>
+<link href="databrary_monthly_files/highlightjs-9.12.0/default.css" rel="stylesheet" />
+<script src="databrary_monthly_files/highlightjs-9.12.0/highlight.js"></script>
 
 <style type="text/css">code{white-space: pre;}</style>
 <style type="text/css">
@@ -74,9 +75,7 @@ h6 {
 </style>
 
 
-</head>
 
-<body>
 
 <style type = "text/css">
 .main-container {
@@ -107,8 +106,6 @@ summary {
 </style>
 
 
-
-<div class="container-fluid main-container">
 
 <!-- tabsets -->
 
@@ -166,56 +163,12 @@ summary {
 }
 </style>
 
-<script>
-$(document).ready(function () {
-  window.buildTabsets("TOC");
-});
-
-$(document).ready(function () {
-  $('.tabset-dropdown > .nav-tabs > li').click(function () {
-    $(this).parent().toggleClass('nav-tabs-open')
-  });
-});
-</script>
-
 <!-- code folding -->
 <style type="text/css">
 .code-folding-btn { margin-bottom: 4px; }
 </style>
-<script>
-$(document).ready(function () {
-  window.initializeCodeFolding("hide" === "show");
-});
-</script>
 
 
-
-<script>
-$(document).ready(function ()  {
-
-    // move toc-ignore selectors from section div to header
-    $('div.section.toc-ignore')
-        .removeClass('toc-ignore')
-        .children('h1,h2,h3,h4,h5').addClass('toc-ignore');
-
-    // establish options
-    var options = {
-      selectors: "h1,h2,h3",
-      theme: "bootstrap3",
-      context: '.toc-content',
-      hashGenerator: function (text) {
-        return text.replace(/[.\\/?&!#<>]/g, '').replace(/\s/g, '_').toLowerCase();
-      },
-      ignoreSelector: ".toc-ignore",
-      scrollTo: 0
-    };
-    options.showAndHide = true;
-    options.smoothScroll = true;
-
-    // tocify
-    var toc = $("#TOC").tocify(options).data("toc-tocify");
-});
-</script>
 
 <style type="text/css">
 
@@ -264,8 +217,6 @@ div.tocify {
 
 .tocify-subheader .tocify-item {
   font-size: 0.90em;
-  padding-left: 25px;
-  text-indent: 0;
 }
 
 .tocify .list-group-item {
@@ -274,6 +225,16 @@ div.tocify {
 
 
 </style>
+
+
+
+</head>
+
+<body>
+
+
+<div class="container-fluid main-container">
+
 
 <!-- setup 3col/9col grid for toc_float and main content  -->
 <div class="row-fluid">
@@ -299,9 +260,9 @@ div.tocify {
 
 
 
-<h1 class="title toc-ignore">Databrary Report</h1>
-<h4 class="author"><em>Rick O. Gilmore</em></h4>
-<h4 class="date"><em>2019-03-01 10:15:15</em></h4>
+<h1 class="title toc-ignore">Databrary Monthly</h1>
+<h4 class="author">Rick O. Gilmore</h4>
+<h4 class="date">2019-08-05 14:03:04</h4>
 
 </div>
 
@@ -310,40 +271,53 @@ div.tocify {
 <h1><span class="header-section-number">1</span> Institutions &amp; Authorized Users</h1>
 <p>At the moment, the <code>old_stats</code> come from a CSV stored locally. Once we have API commands to upload new data, the <code>old_stats</code> can come from Databrary directly.</p>
 <pre class="r"><code>new_stats &lt;- databraryapi::get_db_stats()
-old_stats &lt;- read_csv(&quot;csv/institutionAuthCounts.csv&quot;)
-
-# initialize updated_stats
+# old_stats &lt;- read_csv(&quot;csv/institutionAuthCounts.csv&quot;)
+new_stats$date &lt;- lubridate::as_datetime(new_stats$date)</code></pre>
+<pre class="r"><code>#key &lt;- &quot;1tvlIQzULrMtXo97aJu71ljdTmNXkwwpU9eOOasVer3g&quot;
+db &lt;- gs_title(&#39;Databrary-analytics&#39;)</code></pre>
+<p>Now, let’s load the data about the number of institutions, investigators and affiliates.</p>
+<pre class="r"><code>old_stats &lt;- db %&gt;%
+  gs_read(ws = &#39;institutions-investigators&#39;)</code></pre>
+<p>We then update the old stats with new data if <code>params$update_stats</code> is TRUE.</p>
+<pre class="r"><code># initialize updated_stats
 updated_stats &lt;- old_stats
-next_entry &lt;- dim(updated_stats)[1] + 1
-updated_stats[next_entry,] = NA
-
-# fill with new data
-updated_stats$YearMonth[next_entry] &lt;- new_stats$date
-updated_stats$Institutions[next_entry] &lt;- new_stats$institutions
-updated_stats$`Authorized Investigators`[next_entry] &lt;- new_stats$investigators
-
-# hate the variable names
-updated_stats &lt;- 
-  updated_stats %&gt;%
-  rename(date = YearMonth, institutions = Institutions, investigators = `Authorized Investigators`)</code></pre>
-<pre class="r"><code>updated_stats &lt;- updated_stats %&gt;%
-  gather(., key = &quot;type&quot;, value = &quot;count&quot;, -date)
-
-# Plot
+if (as.logical(params$update_stats)) {
+  next_entry &lt;- dim(updated_stats)[1] + 1
+  updated_stats[next_entry,] = NA
+  updated_stats &lt;- updated_stats
+  
+  # fill with new data
+  updated_stats$date[next_entry] &lt;- new_stats$date
+  updated_stats$institutions[next_entry] &lt;- new_stats$institutions
+  updated_stats$investigators[next_entry] &lt;- new_stats$investigators
+  updated_stats$affiliates[next_entry] &lt;- new_stats$affiliates
+}</code></pre>
+<pre class="r"><code># Create a tidy form for plotting both institutions and investigators and affiliates
+updated_stats &lt;- updated_stats %&gt;%
+  gather(., key = &quot;type&quot;, value = &quot;count&quot;, -date) %&gt;%
+  mutate(date = lubridate::as_date(date)) %&gt;%
+  select(date, count, type) %&gt;%
+  filter(type %in% c(&#39;institutions&#39;, &#39;investigators&#39;, &#39;affiliates&#39;)) %&gt;%
+  filter(!is.na(count))</code></pre>
+<pre><code>## Warning: 3 failed to parse.</code></pre>
+<pre class="r"><code># Plot
 p &lt;- updated_stats %&gt;%
   ggplot(., aes(x = date, y = count, color = type, group = type)) +
   geom_point() + 
   geom_line(size = ln_size) +
-  scale_colour_manual(values=c(color_orange, color_teal)) +  
+  scale_colour_manual(values=c(color_purple, color_orange, color_teal)) +  
   ylab(&quot;Authorizations&quot;) +
   databrary_theme +
-  scale_y_continuous(breaks = seq(0, 900, 100), expand = c(0,0)) +
-  coord_cartesian(ylim = c(0, 900))
+  scale_y_continuous(breaks = seq(0, round_any(max(updated_stats$count), 100, ceiling), 100), expand = c(0,0)) +
+  coord_cartesian(ylim = c(0, round_any(max(updated_stats$count), 100, ceiling)))
   
 ggdraw(p) + 
-  draw_label(&quot;Investigators&quot;, colour = color_teal, .9, .73) +
-  draw_label(&quot;Institutions&quot;, colour = color_orange, .9, .38)</code></pre>
-<p><img src="databrary_weekly_files/figure-html/db-inst-user-plot-1.png" width="672" /></p>
+  draw_label(&quot;Investigators&quot;, colour = color_teal, .8, .9) +
+  draw_label(&quot;Institutions&quot;, colour = color_orange, .9, .6)+
+  draw_label(&quot;Affiliates&quot;, colour = color_purple, .9, .3)</code></pre>
+<pre><code>## Warning: Removed 3 rows containing missing values (geom_point).</code></pre>
+<pre><code>## Warning: Removed 3 rows containing missing values (geom_path).</code></pre>
+<p><img src="databrary_monthly_files/figure-html/db-inst-user-plot-1.png" width="672" /></p>
 <div id="new-investigators" class="section level2">
 <h2><span class="header-section-number">1.1</span> New investigators</h2>
 <pre class="r"><code>new_people &lt;- databraryapi::get_db_stats(type = &quot;people&quot;)
@@ -360,29 +334,19 @@ new_people %&gt;%
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left">Kalagher</td>
-<td align="left">Hilary</td>
-<td align="left">Drew University</td>
+<td align="left">Carcea</td>
+<td align="left">Ioana</td>
+<td align="left">Rutgers BHI</td>
 </tr>
 <tr class="even">
-<td align="left">Lanning</td>
-<td align="left">Kevin</td>
-<td align="left">Florida Atlantic University</td>
+<td align="left">Bauer</td>
+<td align="left">Patricia</td>
+<td align="left">Emory University</td>
 </tr>
 <tr class="odd">
-<td align="left">Venker</td>
-<td align="left">Courtney</td>
-<td align="left">Michigan State University</td>
-</tr>
-<tr class="even">
-<td align="left">Carkenord</td>
-<td align="left">David Michael</td>
-<td align="left">Longwood University</td>
-</tr>
-<tr class="odd">
-<td align="left">Bowden</td>
-<td align="left">Edward</td>
-<td align="left">University of Wisconsin-Parkside</td>
+<td align="left">Hupp</td>
+<td align="left">Julie</td>
+<td align="left">Ohio State University</td>
 </tr>
 </tbody>
 </table>
@@ -402,16 +366,16 @@ new_institutions %&gt;%
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left">Drew University</td>
-<td align="left"><a href="https://www.drew.edu/" class="uri">https://www.drew.edu/</a></td>
+<td align="left">Indiana Wesleyan University</td>
+<td align="left"><a href="https://www.indwes.edu/" class="uri">https://www.indwes.edu/</a></td>
 </tr>
 <tr class="even">
-<td align="left">Florida Atlantic University</td>
-<td align="left"><a href="https://www.fau.edu/" class="uri">https://www.fau.edu/</a></td>
+<td align="left">Children’s Hospital of Philadelphia (CHOP)</td>
+<td align="left"><a href="http://www.chop.edu/" class="uri">http://www.chop.edu/</a></td>
 </tr>
 <tr class="odd">
-<td align="left">Longwood University</td>
-<td align="left"><a href="http://www.longwood.edu/" class="uri">http://www.longwood.edu/</a></td>
+<td align="left">Carthage College</td>
+<td align="left"><a href="https://www.carthage.edu/" class="uri">https://www.carthage.edu/</a></td>
 </tr>
 </tbody>
 </table>
@@ -428,9 +392,9 @@ next_entry &lt;- dim(updated_vols)[1] + 1
 updated_vols[next_entry,] = NA
 
 updated_vols$date[next_entry] &lt;- new_stats$date
-updated_vols$shared_volumes[next_entry] &lt;- new_stats$datasets.shared
+updated_vols$shared_volumes[next_entry] &lt;- new_stats$datasets_shared
 updated_vols$unshared_volumes[next_entry] &lt;- 
-  new_stats$datasets.total - new_stats$datasets.shared</code></pre>
+  new_stats$datasets_total - new_stats$datasets_shared</code></pre>
 <pre class="r"><code>updated_vols &lt;- updated_vols %&gt;%
   gather(., key = &quot;type&quot;, value = &quot;count&quot;, -date)
 
@@ -442,13 +406,13 @@ vols_plot &lt;- updated_vols %&gt;%
   scale_colour_manual(values=c(color_orange, color_teal)) +  
   ylab(&quot;Volumes&quot;) +
   databrary_theme +
-  scale_y_continuous(breaks = seq(0, 500, 100), expand = c(0,0)) +
-  coord_cartesian(ylim = c(0, 500))
+  scale_y_continuous(breaks = seq(0, round_any(max(updated_vols$count), 100, ceiling), 100), expand = c(0,0)) +
+  coord_cartesian(ylim = c(0, round_any(max(updated_vols$count), 100, ceiling)))
   
 ggdraw(vols_plot) + 
   draw_label(&quot;Unshared&quot;, colour = color_teal, .86, .88) +
-  draw_label(&quot;Shared&quot;, colour = color_orange, .84, .65)</code></pre>
-<p><img src="databrary_weekly_files/figure-html/db-vols-plot-1.png" width="672" /></p>
+  draw_label(&quot;Shared&quot;, colour = color_orange, .84, .75)</code></pre>
+<p><img src="databrary_monthly_files/figure-html/db-vols-plot-1.png" width="672" /></p>
 <div id="new-volumes" class="section level2">
 <h2><span class="header-section-number">2.1</span> New volumes</h2>
 <pre class="r"><code>new_volumes &lt;- databraryapi::get_db_stats(type = &quot;datasets&quot;)
@@ -465,24 +429,34 @@ new_volumes %&gt;%
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left">NoHelp Simple</td>
-<td align="left">2019-02-28T21:04:11.564882Z</td>
-<td align="left">list(name = “Beier, Jonathan”, id = 594)</td>
+<td align="left">Oh, Behave!</td>
+<td align="left">2019-08-05T13:08:28.335188Z</td>
+<td align="left">list(name = c(“Adolph, Karen”, “Xu, Melody”), id = c(5, 2775))</td>
 </tr>
 <tr class="even">
-<td align="left">Goals and Equality</td>
-<td align="left">2019-02-25T19:42:23.701911Z</td>
-<td align="left">list(name = “Beier, Jonathan”, id = 594)</td>
+<td align="left">ELP PLAY 2019</td>
+<td align="left">2019-08-01T20:40:40.40773Z</td>
+<td align="left">list(name = c(“Barr, Rachel”, “Blanchfield, Olivia”), id = c(104, 4834))</td>
 </tr>
 <tr class="odd">
-<td align="left">MEL2 Project</td>
-<td align="left">2019-02-21T21:36:38.274161Z</td>
-<td align="left">list(name = “Lombardi, Doug”, id = 4945)</td>
+<td align="left">Kosie &amp; Baldwin Video Corpus</td>
+<td align="left">2019-07-30T21:59:13.905102Z</td>
+<td align="left">list(name = “Baldwin, Dare”, id = 3746)</td>
 </tr>
 <tr class="even">
-<td align="left">MEL2 Project</td>
-<td align="left">2019-02-21T18:07:52.721509Z</td>
-<td align="left">list(name = “Lombardi, Doug”, id = 4945)</td>
+<td align="left">Kosie &amp; Baldwin Video Corpus</td>
+<td align="left">2019-07-30T21:53:17.51328Z</td>
+<td align="left">list(name = “Baldwin, Dare”, id = 3746)</td>
+</tr>
+<tr class="odd">
+<td align="left">The D.R.E.A.M Study (Development, Replicability, Experience, Attention, &amp; Memory)</td>
+<td align="left">2019-07-30T20:08:40.712888Z</td>
+<td align="left">list(name = c(“Prado, Elizabeth”, “Oakes, Lisa”), id = c(4458, 538))</td>
+</tr>
+<tr class="even">
+<td align="left">Scientific Reasoning</td>
+<td align="left">2019-07-29T17:53:12.335283Z</td>
+<td align="left">list(name = “Weisberg, Deena Skolnick”, id = 562)</td>
 </tr>
 </tbody>
 </table>
@@ -537,13 +511,14 @@ citations_plot &lt;-
   scale_colour_manual(values=c(color_orange, color_teal)) +
   ylab(&quot;Citations&quot;) +
   databrary_theme +
-  scale_y_continuous(breaks = seq(0, 250, 50), expand = c(0,0)) +
-  coord_cartesian(ylim = c(0, 250))
+ scale_y_continuous(breaks = seq(0, round_any(max(citations$count), 100, ceiling), 100), expand = c(0,0)) +
+  coord_cartesian(ylim = c(0, round_any(max(citations$count), 100, ceiling)))
+  
   
 ggdraw(citations_plot) + 
   draw_label(&quot;Datavyu&quot;, colour = color_teal, .9, .6) +
   draw_label(&quot;Databrary&quot;, colour = color_orange, .7, .85)</code></pre>
-<p><img src="databrary_weekly_files/figure-html/db-dv-citations-plot-1.png" width="672" /></p>
+<p><img src="databrary_monthly_files/figure-html/db-dv-citations-plot-1.png" width="672" /></p>
 </div>
 <div id="data-about-volumes-with-videos" class="section level1">
 <h1><span class="header-section-number">4</span> Data about volumes with videos</h1>
@@ -576,7 +551,7 @@ video_stats &lt;- Reduce(function(x,y) merge(x, y, all = TRUE), video_data)</cod
 vol_info &lt;- lapply(vols, list_volume_metadata)
 vols_data &lt;- Reduce(function(x,y) merge(x, y, all = TRUE), vol_info)
 vols_joined &lt;- dplyr::left_join(vols_data, video_stats, by = c(&quot;vol_id&quot; = &quot;vol_id&quot;))</code></pre>
-<p>There are 119 volumes with DOIs (shared) that have sessions and at least one video as of today (2019-03-01 10:15:48).</p>
+<p>There are 16 volumes with DOIs (shared) that have sessions and at least one video as of today (2019-08-05 14:03:32).</p>
 <div id="number-of-videos-in-shared-volumes" class="section level2">
 <h2><span class="header-section-number">4.1</span> Number of videos in (shared) volumes</h2>
 <pre class="r"><code>vols_joined %&gt;%
@@ -584,7 +559,7 @@ vols_joined &lt;- dplyr::left_join(vols_data, video_stats, by = c(&quot;vol_id&q
   ggplot(.) +
   aes(x=n_videos)+
   geom_histogram()</code></pre>
-<p><img src="databrary_weekly_files/figure-html/n-vids-shared-vols-1.png" width="672" /></p>
+<p><img src="databrary_monthly_files/figure-html/n-vids-shared-vols-1.png" width="672" /></p>
 </div>
 <div id="number-of-sessions-in-shared-volumes" class="section level2">
 <h2><span class="header-section-number">4.2</span> Number of sessions in (shared) volumes</h2>
@@ -593,7 +568,7 @@ vols_joined &lt;- dplyr::left_join(vols_data, video_stats, by = c(&quot;vol_id&q
   ggplot(.) +
   aes(x=n_sessions)+
   geom_histogram()</code></pre>
-<p><img src="databrary_weekly_files/figure-html/n-sessions-shared-vols-1.png" width="672" /></p>
+<p><img src="databrary_monthly_files/figure-html/n-sessions-shared-vols-1.png" width="672" /></p>
 </div>
 <div id="total-video-hours-in-shared-volumes" class="section level2">
 <h2><span class="header-section-number">4.3</span> Total video hours in (shared) volumes</h2>
@@ -602,7 +577,7 @@ vols_joined &lt;- dplyr::left_join(vols_data, video_stats, by = c(&quot;vol_id&q
   ggplot(.) +
   aes(x=tot_hrs)+
   geom_histogram()</code></pre>
-<p><img src="databrary_weekly_files/figure-html/tot-hrs-shared-vols-1.png" width="672" /></p>
+<p><img src="databrary_monthly_files/figure-html/tot-hrs-shared-vols-1.png" width="672" /></p>
 </div>
 </div>
 
@@ -624,6 +599,54 @@ $(document).ready(function () {
 });
 
 
+</script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open')
+  });
+});
+</script>
+
+<!-- code folding -->
+<script>
+$(document).ready(function () {
+  window.initializeCodeFolding("hide" === "show");
+});
+</script>
+
+<script>
+$(document).ready(function ()  {
+
+    // move toc-ignore selectors from section div to header
+    $('div.section.toc-ignore')
+        .removeClass('toc-ignore')
+        .children('h1,h2,h3,h4,h5').addClass('toc-ignore');
+
+    // establish options
+    var options = {
+      selectors: "h1,h2,h3",
+      theme: "bootstrap3",
+      context: '.toc-content',
+      hashGenerator: function (text) {
+        return text.replace(/[.\\/?&!#<>]/g, '').replace(/\s/g, '_').toLowerCase();
+      },
+      ignoreSelector: ".toc-ignore",
+      scrollTo: 0
+    };
+    options.showAndHide = true;
+    options.smoothScroll = true;
+
+    // tocify
+    var toc = $("#TOC").tocify(options).data("toc-tocify");
+});
 </script>
 
 <!-- dynamically load mathjax for compatibility with self-contained -->
