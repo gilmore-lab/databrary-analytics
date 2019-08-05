@@ -193,14 +193,15 @@ ggdraw(vols_plot) +
 Next, we update the Google Sheet if `params$update_gs` is TRUE.
 In the current context, `params$update_gs` == `r params$update_gs`.
 
-#```{r update-shared-vols-gs}
-if (as.logical(params$update_gs)) {
-  db <- db %>%
-    gs_add_row(ws = 'volumes-shared-unshared', input = new_data[,c(1, 2, 3])
-  message("'update_gs' parameter is 'TRUE', so Google Sheet data will be updated.")
-} else {
-  message("'update_gs' parameter is 'FALSE', so Google Sheet data unmodified.")
-}
+```{r update-shared-vols-gs}
+
+#if (as.logical(params$update_gs)) {
+#  db <- db %>%
+#    gs_add_row(ws = 'volumes-shared-unshared', input = new_data[,c(1, 2, 3])
+#  message("'update_gs' parameter is 'TRUE', so Google Sheet data will be updated.")
+#} else {
+#  message("'update_gs' parameter is 'FALSE', so Google Sheet data unmodified.")
+#}
 ```
 
 
@@ -275,17 +276,18 @@ ggdraw(citations_plot) +
   draw_label("Datavyu", colour = color_teal, .9, .6) +
   draw_label("Databrary", colour = color_orange, .7, .85)
 ```
-#```{r update-citations-gs}
+
+```{r update-citations-gs}
 
 ## This is WRONG. Fix
 
-if (as.logical(params$update_gs)) {
-  db <- db %>%
-    gs_add_row(ws = 'citations-monthly', input = new_stats[,c(1)], input(,c(2))= databrary_cites[(1)], datavyu_cites[(1)])
-  message("'update_gs' parameter is 'TRUE', so Google Sheet data will be updated.")
-} else {
-  message("'update_gs' parameter is 'FALSE', so Google Sheet data unmodified.")
-}
+#if (as.logical(params$update_gs)) {
+#  db <- db %>%
+#    gs_add_row(ws = 'citations-monthly', input = new_stats[,c(1)], input(,c(2))= #databrary_cites[(1)], datavyu_cites[(1)])
+#  message("'update_gs' parameter is 'TRUE', so Google Sheet data will be updated.")
+#} else {
+#  message("'update_gs' parameter is 'FALSE', so Google Sheet data unmodified.")
+#}
 
 
 
