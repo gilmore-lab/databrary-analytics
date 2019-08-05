@@ -262,7 +262,7 @@ div.tocify {
 
 <h1 class="title toc-ignore">Databrary Weekly</h1>
 <h4 class="author">Rick O. Gilmore &amp; Andrea Seisler</h4>
-<h4 class="date">2019-07-19 10:24:00</h4>
+<h4 class="date">2019-08-05 14:08:07</h4>
 
 </div>
 
@@ -281,7 +281,7 @@ db &lt;- gs_title(&#39;Databrary-analytics&#39;)</code></pre>
 <p>Now, let’s load the data about the number of institutions and investigators.</p>
 <pre class="r"><code>old_stats &lt;- db %&gt;%
   gs_read(ws = &#39;institutions-investigators&#39;)</code></pre>
-<p>We then update the old stats with new data if <code>params$update_stats</code> is TRUE. In the current context, <code>params$update_stats</code> == TRUE.</p>
+<p>We then update the old stats with new data if <code>params$update_stats</code> is TRUE. In the current context, <code>params$update_stats</code> == FALSE.</p>
 <pre class="r"><code># initialize updated_stats
 updated_stats &lt;- old_stats
 if (as.logical(params$update_stats)) {
@@ -296,14 +296,15 @@ if (as.logical(params$update_stats)) {
   updated_stats$affiliates[next_entry] &lt;- new_stats$affiliates
 }</code></pre>
 <p>Now, we plot the data.</p>
-<pre class="r"><code># Create a tidy form for plotting both institutions and investigators
+<pre class="r"><code># Create a tidy form for plotting both institutions and investigators and affiliates
 updated_stats &lt;- updated_stats %&gt;%
   gather(., key = &quot;type&quot;, value = &quot;count&quot;, -date) %&gt;%
   mutate(date = lubridate::as_date(date)) %&gt;%
   select(date, count, type) %&gt;%
-  filter(type %in% c(&#39;institutions&#39;, &#39;investigators&#39;, &#39;affiliates&#39;))</code></pre>
-<pre><code>## Warning: 3 failed to parse.</code></pre>
-<pre class="r"><code># Plot
+  filter(type %in% c(&#39;institutions&#39;, &#39;investigators&#39;, &#39;affiliates&#39;)) %&gt;%
+  filter(!is.na(count))
+
+# Plot
 p &lt;- updated_stats %&gt;%
   ggplot(., aes(x = date, y = count, color = type, group = type)) +
   geom_point() +
@@ -318,10 +319,8 @@ ggdraw(p) +
   draw_label(&quot;Investigators&quot;, colour = color_teal, .8, .9) +
   draw_label(&quot;Institutions&quot;, colour = color_orange, .9, .6)+
   draw_label(&quot;Affiliates&quot;, colour = color_purple, .9, .3)</code></pre>
-<pre><code>## Warning: Removed 3 rows containing missing values (geom_point).</code></pre>
-<pre><code>## Warning: Removed 3 rows containing missing values (geom_path).</code></pre>
 <p><img src="databrary_weekly_rpt_files/figure-html/db-inst-user-plot-1.png" width="672" /></p>
-<p>Next, we update the Google Sheet if <code>params$update_gs</code> is TRUE. In the current context, <code>params$update_gs</code> == TRUE.</p>
+<p>Next, we update the Google Sheet if <code>params$update_gs</code> is TRUE. In the current context, <code>params$update_gs</code> == FALSE.</p>
 <pre class="r"><code>if (as.logical(params$update_gs)) {
   db &lt;- db %&gt;%
     gs_add_row(ws = &#39;institutions-investigators&#39;, input = new_stats[,c(1, 4, 2)])
@@ -347,40 +346,22 @@ new_people %&gt;%
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left">Farr</td>
-<td align="left">Rachel</td>
-<td align="left">University of Kentucky</td>
-<td align="left"><a href="https://databrary.org/party/4689" class="uri">https://databrary.org/party/4689</a></td>
+<td align="left">Carcea</td>
+<td align="left">Ioana</td>
+<td align="left">Rutgers BHI</td>
+<td align="left"><a href="https://databrary.org/party/4732" class="uri">https://databrary.org/party/4732</a></td>
 </tr>
 <tr class="even">
-<td align="left">Suzuka</td>
-<td align="left">Kara</td>
-<td align="left">University of Hawaii</td>
-<td align="left"><a href="https://databrary.org/party/2326" class="uri">https://databrary.org/party/2326</a></td>
+<td align="left">Bauer</td>
+<td align="left">Patricia</td>
+<td align="left">Emory University</td>
+<td align="left"><a href="https://databrary.org/party/5539" class="uri">https://databrary.org/party/5539</a></td>
 </tr>
 <tr class="odd">
-<td align="left">Boor</td>
-<td align="left">Brandon</td>
-<td align="left">Purdue University</td>
-<td align="left"><a href="https://databrary.org/party/5598" class="uri">https://databrary.org/party/5598</a></td>
-</tr>
-<tr class="even">
-<td align="left">Lai</td>
-<td align="left">Carlo</td>
-<td align="left">Department of Dynamic and Clinical Psychology, Sapienza University of Rome</td>
-<td align="left"><a href="https://databrary.org/party/4918" class="uri">https://databrary.org/party/4918</a></td>
-</tr>
-<tr class="odd">
-<td align="left">Gampe</td>
-<td align="left">Anja</td>
-<td align="left">University of Zurich</td>
-<td align="left"><a href="https://databrary.org/party/5594" class="uri">https://databrary.org/party/5594</a></td>
-</tr>
-<tr class="even">
-<td align="left">Kayyal</td>
-<td align="left">Mary</td>
-<td align="left">University of Massachusetts Dartmouth</td>
-<td align="left"><a href="https://databrary.org/party/5308" class="uri">https://databrary.org/party/5308</a></td>
+<td align="left">Hupp</td>
+<td align="left">Julie</td>
+<td align="left">Ohio State University</td>
+<td align="left"><a href="https://databrary.org/party/4427" class="uri">https://databrary.org/party/4427</a></td>
 </tr>
 </tbody>
 </table>
@@ -402,14 +383,19 @@ new_institutions %&gt;%
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left">University of Hawaii at Manoa</td>
-<td align="left"><a href="https://manoa.hawaii.edu/" class="uri">https://manoa.hawaii.edu/</a></td>
-<td align="left"><a href="https://databrary.org/party/797" class="uri">https://databrary.org/party/797</a></td>
+<td align="left">Indiana Wesleyan University</td>
+<td align="left"><a href="https://www.indwes.edu/" class="uri">https://www.indwes.edu/</a></td>
+<td align="left"><a href="https://databrary.org/party/5022" class="uri">https://databrary.org/party/5022</a></td>
 </tr>
 <tr class="even">
-<td align="left">Rutgers University, New Brunswick</td>
-<td align="left"><a href="https://newbrunswick.rutgers.edu/" class="uri">https://newbrunswick.rutgers.edu/</a></td>
-<td align="left"><a href="https://databrary.org/party/52" class="uri">https://databrary.org/party/52</a></td>
+<td align="left">Children’s Hospital of Philadelphia (CHOP)</td>
+<td align="left"><a href="http://www.chop.edu/" class="uri">http://www.chop.edu/</a></td>
+<td align="left"><a href="https://databrary.org/party/2418" class="uri">https://databrary.org/party/2418</a></td>
+</tr>
+<tr class="odd">
+<td align="left">Carthage College</td>
+<td align="left"><a href="https://www.carthage.edu/" class="uri">https://www.carthage.edu/</a></td>
+<td align="left"><a href="https://databrary.org/party/4987" class="uri">https://databrary.org/party/4987</a></td>
 </tr>
 </tbody>
 </table>
@@ -463,8 +449,6 @@ ggdraw(vols_plot) +
 } else {
   message(&quot;&#39;update_gs&#39; parameter is &#39;false&#39;, so Google Sheet data unmodified.&quot;)
 }</code></pre>
-<pre><code>## Warning: `data_frame()` is deprecated, use `tibble()`.
-## This warning is displayed once per session.</code></pre>
 <div id="new-volumes" class="section level2">
 <h2><span class="header-section-number">2.1</span> New volumes</h2>
 <pre class="r"><code># define helper functions
@@ -498,34 +482,58 @@ unnested_vols %&gt;%
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left">“Dancing” together: Infant-mother locomotor synchrony across space and time</td>
-<td align="left">2019-07-15</td>
+<td align="left">Oh, Behave!</td>
+<td align="left">2019-08-05</td>
 <td align="left">Adolph, Karen</td>
-<td align="left"><a href="https://nyu.databrary.org/volume/943" class="uri">https://nyu.databrary.org/volume/943</a></td>
+<td align="left"><a href="https://nyu.databrary.org/volume/955" class="uri">https://nyu.databrary.org/volume/955</a></td>
 </tr>
 <tr class="even">
-<td align="left">Trust in Context: Flipped</td>
-<td align="left">2019-07-12</td>
-<td align="left">Palmquist, Carolyn</td>
-<td align="left"><a href="https://nyu.databrary.org/volume/942" class="uri">https://nyu.databrary.org/volume/942</a></td>
+<td align="left">Oh, Behave!</td>
+<td align="left">2019-08-05</td>
+<td align="left">Xu, Melody</td>
+<td align="left"><a href="https://nyu.databrary.org/volume/955" class="uri">https://nyu.databrary.org/volume/955</a></td>
 </tr>
 <tr class="odd">
-<td align="left">Walking and Talking</td>
-<td align="left">2019-07-11</td>
-<td align="left">Adolph, Karen</td>
-<td align="left"><a href="https://nyu.databrary.org/volume/941" class="uri">https://nyu.databrary.org/volume/941</a></td>
+<td align="left">ELP PLAY 2019</td>
+<td align="left">2019-08-01</td>
+<td align="left">Barr, Rachel</td>
+<td align="left"><a href="https://nyu.databrary.org/volume/954" class="uri">https://nyu.databrary.org/volume/954</a></td>
 </tr>
 <tr class="even">
-<td align="left">Emotion Portrayal Creation</td>
-<td align="left">2019-07-09</td>
-<td align="left">Goldstein, Thalia R.</td>
-<td align="left"><a href="https://nyu.databrary.org/volume/940" class="uri">https://nyu.databrary.org/volume/940</a></td>
+<td align="left">ELP PLAY 2019</td>
+<td align="left">2019-08-01</td>
+<td align="left">Blanchfield, Olivia</td>
+<td align="left"><a href="https://nyu.databrary.org/volume/954" class="uri">https://nyu.databrary.org/volume/954</a></td>
 </tr>
 <tr class="odd">
-<td align="left">Emotion Portrayal Creation</td>
-<td align="left">2019-07-09</td>
-<td align="left">Chulla, Kaylee Rose</td>
-<td align="left"><a href="https://nyu.databrary.org/volume/940" class="uri">https://nyu.databrary.org/volume/940</a></td>
+<td align="left">Kosie &amp; Baldwin Video Corpus</td>
+<td align="left">2019-07-30</td>
+<td align="left">Baldwin, Dare</td>
+<td align="left"><a href="https://nyu.databrary.org/volume/953" class="uri">https://nyu.databrary.org/volume/953</a></td>
+</tr>
+<tr class="even">
+<td align="left">Kosie &amp; Baldwin Video Corpus</td>
+<td align="left">2019-07-30</td>
+<td align="left">Baldwin, Dare</td>
+<td align="left"><a href="https://nyu.databrary.org/volume/952" class="uri">https://nyu.databrary.org/volume/952</a></td>
+</tr>
+<tr class="odd">
+<td align="left">The D.R.E.A.M Study (Development, Replicability, Experience, Attention, &amp; Memory)</td>
+<td align="left">2019-07-30</td>
+<td align="left">Prado, Elizabeth</td>
+<td align="left"><a href="https://nyu.databrary.org/volume/951" class="uri">https://nyu.databrary.org/volume/951</a></td>
+</tr>
+<tr class="even">
+<td align="left">The D.R.E.A.M Study (Development, Replicability, Experience, Attention, &amp; Memory)</td>
+<td align="left">2019-07-30</td>
+<td align="left">Oakes, Lisa</td>
+<td align="left"><a href="https://nyu.databrary.org/volume/951" class="uri">https://nyu.databrary.org/volume/951</a></td>
+</tr>
+<tr class="odd">
+<td align="left">Scientific Reasoning</td>
+<td align="left">2019-07-29</td>
+<td align="left">Weisberg, Deena Skolnick</td>
+<td align="left"><a href="https://nyu.databrary.org/volume/950" class="uri">https://nyu.databrary.org/volume/950</a></td>
 </tr>
 </tbody>
 </table>
@@ -564,7 +572,7 @@ video_stats &lt;- Reduce(function(x,y) merge(x, y, all = TRUE), video_data)</cod
 vol_info &lt;- lapply(vols, list_volume_metadata)
 vols_data &lt;- Reduce(function(x,y) merge(x, y, all = TRUE), vol_info)
 vols_joined &lt;- dplyr::left_join(vols_data, video_stats, by = c(&quot;vol_id&quot; = &quot;vol_id&quot;))</code></pre>
-<p>There are 123 volumes with DOIs (shared) that have sessions and at least one video as of today (2019-07-19 10:24:35).</p>
+<p>There are 16 volumes with DOIs (shared) that have sessions and at least one video as of today (2019-08-05 14:08:37).</p>
 <div id="number-of-videos-in-shared-volumes" class="section level2">
 <h2><span class="header-section-number">3.1</span> Number of videos in (shared) volumes</h2>
 <pre class="r"><code>vols_joined %&gt;%
