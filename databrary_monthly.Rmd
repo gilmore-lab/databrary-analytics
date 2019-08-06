@@ -187,21 +187,22 @@ vols_plot <- updated_vols %>%
   coord_cartesian(ylim = c(0, round_any(max(updated_vols$count), 100, ceiling)))
   
 ggdraw(vols_plot) + 
-  draw_label("Unshared", colour = color_teal, .86, .88) +
-  draw_label("Shared", colour = color_orange, .84, .75)
+  draw_label("Unshared", colour = color_teal, .84, .92) +
+  draw_label("Shared", colour = color_orange, .84, .70)
 ```
 Next, we update the Google Sheet if `params$update_gs` is TRUE.
 In the current context, `params$update_gs` == `r params$update_gs`.
 
-```{r update-shared-vols-gs}
-
-#if (as.logical(params$update_gs)) {
-#  db <- db %>%
-#    gs_add_row(ws = 'volumes-shared-unshared', input = new_data[,c(1, 2, 3])
-#  message("'update_gs' parameter is 'TRUE', so Google Sheet data will be updated.")
-#} else {
-#  message("'update_gs' parameter is 'FALSE', so Google Sheet data unmodified.")
-#}
+```{r update-vols-shared-unshared}
+if (as.logical(params$update_gs)) {
+  new_data <- data_frame(date = Sys.Date(), 
+                         shared_volumes = new_stats$datasets_shared, 
+                         unshared_volumes = new_stats$datasets_total - new_stats$datasets_shared)
+  db <- db %>%
+    gs_add_row(ws = 'volumes-shared-unshared', input = new_data)  
+} else {
+  message("'update_gs' parameter is 'false', so Google Sheet data unmodified.")
+}
 ```
 
 
@@ -278,18 +279,18 @@ ggdraw(citations_plot) +
 ```
 
 ```{r update-citations-gs}
+if (as.logical(params$update_gs)) {
+  new_data <- data_frame(date = Sys.Date(), 
+                         databrary_citations = databrary_cites, 
+                         datavyu_citations = datavyu_cites)
+  db <- db %>%
+    gs_add_row(ws = 'citations-monthly', input = new_data)
+  message("'update_gs' parameter is 'TRUE', so Google Sheet data will be updated.")
+} else {
+  message("'update_gs' parameter is 'FALSE', so Google Sheet data unmodified.")
+}
 
-## This is WRONG. Fix
-
-#if (as.logical(params$update_gs)) {
-#  db <- db %>%
-#    gs_add_row(ws = 'citations-monthly', input = new_stats[,c(1)], input(,c(2))= #databrary_cites[(1)], datavyu_cites[(1)])
-#  message("'update_gs' parameter is 'TRUE', so Google Sheet data will be updated.")
-#} else {
-#  message("'update_gs' parameter is 'FALSE', so Google Sheet data unmodified.")
-#}
-
-
+```
 
 # Data about volumes with videos
 

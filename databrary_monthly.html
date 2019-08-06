@@ -262,7 +262,7 @@ div.tocify {
 
 <h1 class="title toc-ignore">Databrary Monthly</h1>
 <h4 class="author">Rick O. Gilmore</h4>
-<h4 class="date">2019-08-05 14:03:04</h4>
+<h4 class="date">2019-08-06 10:44:16</h4>
 
 </div>
 
@@ -298,9 +298,10 @@ updated_stats &lt;- updated_stats %&gt;%
   mutate(date = lubridate::as_date(date)) %&gt;%
   select(date, count, type) %&gt;%
   filter(type %in% c(&#39;institutions&#39;, &#39;investigators&#39;, &#39;affiliates&#39;)) %&gt;%
-  filter(!is.na(count))</code></pre>
-<pre><code>## Warning: 3 failed to parse.</code></pre>
-<pre class="r"><code># Plot
+  filter(!is.na(count))
+
+
+# Plot
 p &lt;- updated_stats %&gt;%
   ggplot(., aes(x = date, y = count, color = type, group = type)) +
   geom_point() + 
@@ -315,8 +316,6 @@ ggdraw(p) +
   draw_label(&quot;Investigators&quot;, colour = color_teal, .8, .9) +
   draw_label(&quot;Institutions&quot;, colour = color_orange, .9, .6)+
   draw_label(&quot;Affiliates&quot;, colour = color_purple, .9, .3)</code></pre>
-<pre><code>## Warning: Removed 3 rows containing missing values (geom_point).</code></pre>
-<pre><code>## Warning: Removed 3 rows containing missing values (geom_path).</code></pre>
 <p><img src="databrary_monthly_files/figure-html/db-inst-user-plot-1.png" width="672" /></p>
 <div id="new-investigators" class="section level2">
 <h2><span class="header-section-number">1.1</span> New investigators</h2>
@@ -334,16 +333,21 @@ new_people %&gt;%
 </thead>
 <tbody>
 <tr class="odd">
+<td align="left">Chevalier</td>
+<td align="left">Nicolas</td>
+<td align="left">University of Edinburgh</td>
+</tr>
+<tr class="even">
 <td align="left">Carcea</td>
 <td align="left">Ioana</td>
 <td align="left">Rutgers BHI</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td align="left">Bauer</td>
 <td align="left">Patricia</td>
 <td align="left">Emory University</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td align="left">Hupp</td>
 <td align="left">Julie</td>
 <td align="left">Ohio State University</td>
@@ -379,6 +383,14 @@ new_institutions %&gt;%
 </tr>
 </tbody>
 </table>
+<p>Next, we update the Google Sheet if <code>params$update_gs</code> is TRUE. In the current context, <code>params$update_gs</code> == FALSE.</p>
+<pre class="r"><code>if (as.logical(params$update_gs)) {
+  db &lt;- db %&gt;%
+    gs_add_row(ws = &#39;institutions-investigators&#39;, input = new_stats[,c(1, 4, 2, 3)])
+  message(&quot;&#39;update_gs&#39; parameter is &#39;TRUE&#39;, so Google Sheet data will be updated.&quot;)
+} else {
+  message(&quot;&#39;update_gs&#39; parameter is &#39;FALSE&#39;, so Google Sheet data unmodified.&quot;)
+}</code></pre>
 </div>
 </div>
 <div id="volumes" class="section level1">
@@ -410,9 +422,18 @@ vols_plot &lt;- updated_vols %&gt;%
   coord_cartesian(ylim = c(0, round_any(max(updated_vols$count), 100, ceiling)))
   
 ggdraw(vols_plot) + 
-  draw_label(&quot;Unshared&quot;, colour = color_teal, .86, .88) +
-  draw_label(&quot;Shared&quot;, colour = color_orange, .84, .75)</code></pre>
-<p><img src="databrary_monthly_files/figure-html/db-vols-plot-1.png" width="672" /></p>
+  draw_label(&quot;Unshared&quot;, colour = color_teal, .84, .92) +
+  draw_label(&quot;Shared&quot;, colour = color_orange, .84, .70)</code></pre>
+<p><img src="databrary_monthly_files/figure-html/db-vols-plot-1.png" width="672" /> Next, we update the Google Sheet if <code>params$update_gs</code> is TRUE. In the current context, <code>params$update_gs</code> == FALSE.</p>
+<pre class="r"><code>if (as.logical(params$update_gs)) {
+  new_data &lt;- data_frame(date = Sys.Date(), 
+                         shared_volumes = new_stats$datasets_shared, 
+                         unshared_volumes = new_stats$datasets_total - new_stats$datasets_shared)
+  db &lt;- db %&gt;%
+    gs_add_row(ws = &#39;volumes-shared-unshared&#39;, input = new_data)  
+} else {
+  message(&quot;&#39;update_gs&#39; parameter is &#39;false&#39;, so Google Sheet data unmodified.&quot;)
+}</code></pre>
 <div id="new-volumes" class="section level2">
 <h2><span class="header-section-number">2.1</span> New volumes</h2>
 <pre class="r"><code>new_volumes &lt;- databraryapi::get_db_stats(type = &quot;datasets&quot;)
@@ -452,11 +473,6 @@ new_volumes %&gt;%
 <td align="left">The D.R.E.A.M Study (Development, Replicability, Experience, Attention, &amp; Memory)</td>
 <td align="left">2019-07-30T20:08:40.712888Z</td>
 <td align="left">list(name = c(“Prado, Elizabeth”, “Oakes, Lisa”), id = c(4458, 538))</td>
-</tr>
-<tr class="even">
-<td align="left">Scientific Reasoning</td>
-<td align="left">2019-07-29T17:53:12.335283Z</td>
-<td align="left">list(name = “Weisberg, Deena Skolnick”, id = 562)</td>
 </tr>
 </tbody>
 </table>
@@ -519,6 +535,16 @@ ggdraw(citations_plot) +
   draw_label(&quot;Datavyu&quot;, colour = color_teal, .9, .6) +
   draw_label(&quot;Databrary&quot;, colour = color_orange, .7, .85)</code></pre>
 <p><img src="databrary_monthly_files/figure-html/db-dv-citations-plot-1.png" width="672" /></p>
+<pre class="r"><code>if (as.logical(params$update_gs)) {
+  new_data &lt;- data_frame(date = Sys.Date(), 
+                         databrary_citations = databrary_cites, 
+                         datavyu_citations = datavyu_cites)
+  db &lt;- db %&gt;%
+    gs_add_row(ws = &#39;citations-monthly&#39;, input = new_data)
+  message(&quot;&#39;update_gs&#39; parameter is &#39;TRUE&#39;, so Google Sheet data will be updated.&quot;)
+} else {
+  message(&quot;&#39;update_gs&#39; parameter is &#39;FALSE&#39;, so Google Sheet data unmodified.&quot;)
+}</code></pre>
 </div>
 <div id="data-about-volumes-with-videos" class="section level1">
 <h1><span class="header-section-number">4</span> Data about volumes with videos</h1>
@@ -531,7 +557,7 @@ vol_ids &lt;- as.numeric(vol_nums[,2])
 last_vol &lt;- max(vol_ids)
 vols_to_test &lt;- params$vols_to_test
 
-# Create function to write new data files for each volum
+# Create function to write new data files for each volume
 write_vid_csv &lt;- function(vol.id = 1) {
   message(paste0(&quot;Getting data for volume &quot;, vol.id))
   vid_dat &lt;- get_video_stats(vol.id)
@@ -551,7 +577,7 @@ video_stats &lt;- Reduce(function(x,y) merge(x, y, all = TRUE), video_data)</cod
 vol_info &lt;- lapply(vols, list_volume_metadata)
 vols_data &lt;- Reduce(function(x,y) merge(x, y, all = TRUE), vol_info)
 vols_joined &lt;- dplyr::left_join(vols_data, video_stats, by = c(&quot;vol_id&quot; = &quot;vol_id&quot;))</code></pre>
-<p>There are 16 volumes with DOIs (shared) that have sessions and at least one video as of today (2019-08-05 14:03:32).</p>
+<p>There are 16 volumes with DOIs (shared) that have sessions and at least one video as of today (2019-08-06 10:44:42).</p>
 <div id="number-of-videos-in-shared-volumes" class="section level2">
 <h2><span class="header-section-number">4.1</span> Number of videos in (shared) volumes</h2>
 <pre class="r"><code>vols_joined %&gt;%

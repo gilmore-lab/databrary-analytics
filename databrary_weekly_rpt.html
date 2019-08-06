@@ -262,17 +262,16 @@ div.tocify {
 
 <h1 class="title toc-ignore">Databrary Weekly</h1>
 <h4 class="author">Rick O. Gilmore &amp; Andrea Seisler</h4>
-<h4 class="date">2019-08-05 14:08:07</h4>
+<h4 class="date">2019-08-06 10:45:46</h4>
 
 </div>
 
 
 <div id="institutions-authorized-users" class="section level1">
 <h1><span class="header-section-number">1</span> Institutions &amp; Authorized Users</h1>
-<!-- At the moment, the `old_stats` come from a CSV stored locally. -->
+<!-- At the moment, the `old_stats` come from google sheets. -->
 <!-- Once we have API commands to upload new data, the `old_stats` can come from Databrary directly. -->
 <pre class="r"><code>new_stats &lt;- databraryapi::get_db_stats()
-# old_stats &lt;- read_csv(&quot;csv/institutionAuthCounts.csv&quot;)
 new_stats$date &lt;- lubridate::as_datetime(new_stats$date)</code></pre>
 <p>Let’s try a Google Sheets-centered workflow. If this is the first time you are rendering this document in your current work session, please run this command to authenticate to Google from the command line, that is <strong>outside of RMarkdown</strong>:</p>
 <pre><code>db &lt;- googlesheets::gs_title(&#39;Databrary-analytics&#39;)</code></pre>
@@ -323,7 +322,7 @@ ggdraw(p) +
 <p>Next, we update the Google Sheet if <code>params$update_gs</code> is TRUE. In the current context, <code>params$update_gs</code> == FALSE.</p>
 <pre class="r"><code>if (as.logical(params$update_gs)) {
   db &lt;- db %&gt;%
-    gs_add_row(ws = &#39;institutions-investigators&#39;, input = new_stats[,c(1, 4, 2)])
+    gs_add_row(ws = &#39;institutions-investigators&#39;, input = new_stats[,c(1, 4, 2, 3)])
   message(&quot;&#39;update_gs&#39; parameter is &#39;TRUE&#39;, so Google Sheet data will be updated.&quot;)
 } else {
   message(&quot;&#39;update_gs&#39; parameter is &#39;FALSE&#39;, so Google Sheet data unmodified.&quot;)
@@ -346,18 +345,24 @@ new_people %&gt;%
 </thead>
 <tbody>
 <tr class="odd">
+<td align="left">Chevalier</td>
+<td align="left">Nicolas</td>
+<td align="left">University of Edinburgh</td>
+<td align="left"><a href="https://databrary.org/party/4406" class="uri">https://databrary.org/party/4406</a></td>
+</tr>
+<tr class="even">
 <td align="left">Carcea</td>
 <td align="left">Ioana</td>
 <td align="left">Rutgers BHI</td>
 <td align="left"><a href="https://databrary.org/party/4732" class="uri">https://databrary.org/party/4732</a></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td align="left">Bauer</td>
 <td align="left">Patricia</td>
 <td align="left">Emory University</td>
 <td align="left"><a href="https://databrary.org/party/5539" class="uri">https://databrary.org/party/5539</a></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td align="left">Hupp</td>
 <td align="left">Julie</td>
 <td align="left">Ohio State University</td>
@@ -436,8 +441,8 @@ vols_plot &lt;- updated_vols %&gt;%
 
 
 ggdraw(vols_plot) + 
-  draw_label(&quot;Unshared&quot;, colour = color_teal, .86, .88) +
-  draw_label(&quot;Shared&quot;, colour = color_orange, .84, .75)</code></pre>
+  draw_label(&quot;Unshared&quot;, colour = color_teal, .84, .92) +
+  draw_label(&quot;Shared&quot;, colour = color_orange, .84, .70)</code></pre>
 <p><img src="databrary_weekly_rpt_files/figure-html/db-vols-plot-1.png" width="672" /></p>
 <p>Next, we update the Google Sheet if <code>params$update_gs</code> is TRUE.</p>
 <pre class="r"><code>if (as.logical(params$update_gs)) {
@@ -529,12 +534,6 @@ unnested_vols %&gt;%
 <td align="left">Oakes, Lisa</td>
 <td align="left"><a href="https://nyu.databrary.org/volume/951" class="uri">https://nyu.databrary.org/volume/951</a></td>
 </tr>
-<tr class="odd">
-<td align="left">Scientific Reasoning</td>
-<td align="left">2019-07-29</td>
-<td align="left">Weisberg, Deena Skolnick</td>
-<td align="left"><a href="https://nyu.databrary.org/volume/950" class="uri">https://nyu.databrary.org/volume/950</a></td>
-</tr>
 </tbody>
 </table>
 </div>
@@ -552,7 +551,7 @@ vol_ids &lt;- as.numeric(vol_nums[,2])
 last_vol &lt;- max(vol_ids)
 vols_to_test &lt;- params$vols_to_test
 
-# Create function to write new data files for each volum
+# Create function to write new data files for each volume
 write_vid_csv &lt;- function(vol.id = 1) {
   message(paste0(&quot;Getting data for volume &quot;, vol.id))
   vid_dat &lt;- get_video_stats(vol.id)
@@ -572,7 +571,7 @@ video_stats &lt;- Reduce(function(x,y) merge(x, y, all = TRUE), video_data)</cod
 vol_info &lt;- lapply(vols, list_volume_metadata)
 vols_data &lt;- Reduce(function(x,y) merge(x, y, all = TRUE), vol_info)
 vols_joined &lt;- dplyr::left_join(vols_data, video_stats, by = c(&quot;vol_id&quot; = &quot;vol_id&quot;))</code></pre>
-<p>There are 16 volumes with DOIs (shared) that have sessions and at least one video as of today (2019-08-05 14:08:37).</p>
+<p>There are 16 volumes with DOIs (shared) that have sessions and at least one video as of today (2019-08-06 10:46:11).</p>
 <div id="number-of-videos-in-shared-volumes" class="section level2">
 <h2><span class="header-section-number">3.1</span> Number of videos in (shared) volumes</h2>
 <pre class="r"><code>vols_joined %&gt;%

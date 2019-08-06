@@ -67,12 +67,11 @@ databrary_theme <-
 
 # Institutions & Authorized Users
 
-<!-- At the moment, the `old_stats` come from a CSV stored locally. -->
+<!-- At the moment, the `old_stats` come from google sheets. -->
 <!-- Once we have API commands to upload new data, the `old_stats` can come from Databrary directly. -->
 
 ```{r get-databrary-stats}
 new_stats <- databraryapi::get_db_stats()
-# old_stats <- read_csv("csv/institutionAuthCounts.csv")
 new_stats$date <- lubridate::as_datetime(new_stats$date)
 ```
 
@@ -220,8 +219,8 @@ vols_plot <- updated_vols %>%
 
 
 ggdraw(vols_plot) + 
-  draw_label("Unshared", colour = color_teal, .86, .88) +
-  draw_label("Shared", colour = color_orange, .84, .75)
+  draw_label("Unshared", colour = color_teal, .84, .92) +
+  draw_label("Shared", colour = color_orange, .84, .70)
 ```
 
 Next, we update the Google Sheet if `params$update_gs` is TRUE.
