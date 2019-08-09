@@ -3,18 +3,21 @@ title: "Databrary Weekly"
 author: "Rick O. Gilmore & Andrea Seisler"
 date: "`r Sys.time()`"
 output:
+  pdf_document:
+    toc: yes
+    toc_depth: '3'
   html_document:
-    toc: true
-    toc_depth: 3
-    toc_float: true
-    number_sections: true
     code_folding: hide
-    self_contained: false
+    number_sections: yes
+    self_contained: no
+    toc: yes
+    toc_depth: 3
+    toc_float: yes
 params:
   db_account: rogilmore@psu.edu
+  update_gs: no
+  update_stats: no
   vols_to_test: 10
-  update_gs: false
-  update_stats: false
 ---
 
 ```{r setup, include=FALSE}
