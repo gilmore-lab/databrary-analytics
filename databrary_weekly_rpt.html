@@ -262,17 +262,16 @@ div.tocify {
 
 <h1 class="title toc-ignore">Databrary Weekly</h1>
 <h4 class="author">Rick O. Gilmore &amp; Andrea Seisler</h4>
-<h4 class="date">2019-07-30 09:35:09</h4>
+<h4 class="date">2019-08-09 12:07:11</h4>
 
 </div>
 
 
 <div id="institutions-authorized-users" class="section level1">
 <h1><span class="header-section-number">1</span> Institutions &amp; Authorized Users</h1>
-<!-- At the moment, the `old_stats` come from a CSV stored locally. -->
+<!-- At the moment, the `old_stats` come from google sheets. -->
 <!-- Once we have API commands to upload new data, the `old_stats` can come from Databrary directly. -->
 <pre class="r"><code>new_stats &lt;- databraryapi::get_db_stats()
-# old_stats &lt;- read_csv(&quot;csv/institutionAuthCounts.csv&quot;)
 new_stats$date &lt;- lubridate::as_datetime(new_stats$date)</code></pre>
 <p>Let’s try a Google Sheets-centered workflow. If this is the first time you are rendering this document in your current work session, please run this command to authenticate to Google from the command line, that is <strong>outside of RMarkdown</strong>:</p>
 <pre><code>db &lt;- googlesheets::gs_title(&#39;Databrary-analytics&#39;)</code></pre>
@@ -281,7 +280,7 @@ db &lt;- gs_title(&#39;Databrary-analytics&#39;)</code></pre>
 <p>Now, let’s load the data about the number of institutions and investigators.</p>
 <pre class="r"><code>old_stats &lt;- db %&gt;%
   gs_read(ws = &#39;institutions-investigators&#39;)</code></pre>
-<p>We then update the old stats with new data if <code>params$update_stats</code> is TRUE. In the current context, <code>params$update_stats</code> == TRUE.</p>
+<p>We then update the old stats with new data if <code>params$update_stats</code> is TRUE. In the current context, <code>params$update_stats</code> == FALSE.</p>
 <pre class="r"><code># initialize updated_stats
 updated_stats &lt;- old_stats
 if (as.logical(params$update_stats)) {
@@ -296,15 +295,15 @@ if (as.logical(params$update_stats)) {
   updated_stats$affiliates[next_entry] &lt;- new_stats$affiliates
 }</code></pre>
 <p>Now, we plot the data.</p>
-<pre class="r"><code># Create a tidy form for plotting both institutions and investigators
+<pre class="r"><code># Create a tidy form for plotting both institutions and investigators and affiliates
 updated_stats &lt;- updated_stats %&gt;%
   gather(., key = &quot;type&quot;, value = &quot;count&quot;, -date) %&gt;%
   mutate(date = lubridate::as_date(date)) %&gt;%
   select(date, count, type) %&gt;%
   filter(type %in% c(&#39;institutions&#39;, &#39;investigators&#39;, &#39;affiliates&#39;)) %&gt;%
   filter(!is.na(count))</code></pre>
-<pre><code>## Warning: 3 failed to parse.</code></pre>
-<pre class="r"><code># Plot
+
+# Plot
 p &lt;- updated_stats %&gt;%
   ggplot(., aes(x = date, y = count, color = type, group = type)) +
   geom_point() +
@@ -316,16 +315,14 @@ p &lt;- updated_stats %&gt;%
   coord_cartesian(ylim = c(0, round_any(max(updated_stats$count), 100, ceiling)))
 
 ggdraw(p) + 
-  draw_label(&quot;Investigators&quot;, colour = color_teal, .75, .9) +
-  draw_label(&quot;Institutions&quot;, colour = color_orange, .75, .6)+
-  draw_label(&quot;Affiliates&quot;, colour = color_purple, .75, .3)</code></pre>
-<pre><code>## Warning: Removed 3 rows containing missing values (geom_point).</code></pre>
-<pre><code>## Warning: Removed 3 rows containing missing values (geom_path).</code></pre>
+  draw_label(&quot;Investigators&quot;, colour = color_teal, .8, .9) +
+  draw_label(&quot;Institutions&quot;, colour = color_orange, .9, .6)+
+  draw_label(&quot;Affiliates&quot;, colour = color_purple, .9, .3)</code></pre>
 <p><img src="databrary_weekly_rpt_files/figure-html/db-inst-user-plot-1.png" width="672" /></p>
-<p>Next, we update the Google Sheet if <code>params$update_gs</code> is TRUE. In the current context, <code>params$update_gs</code> == TRUE.</p>
+<p>Next, we update the Google Sheet if <code>params$update_gs</code> is TRUE. In the current context, <code>params$update_gs</code> == FALSE.</p>
 <pre class="r"><code>if (as.logical(params$update_gs)) {
   db &lt;- db %&gt;%
-    gs_add_row(ws = &#39;institutions-investigators&#39;, input = new_stats[,c(1, 4, 2)])
+    gs_add_row(ws = &#39;institutions-investigators&#39;, input = new_stats[,c(1, 4, 2, 3)])
   message(&quot;&#39;update_gs&#39; parameter is &#39;TRUE&#39;, so Google Sheet data will be updated.&quot;)
 } else {
   message(&quot;&#39;update_gs&#39; parameter is &#39;FALSE&#39;, so Google Sheet data unmodified.&quot;)
@@ -348,34 +345,34 @@ new_people %&gt;%
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left">Yoshikawa</td>
-<td align="left">Takahiro</td>
-<td align="left">Osaka City University Graduate School of Medicine</td>
-<td align="left"><a href="https://databrary.org/party/5629" class="uri">https://databrary.org/party/5629</a></td>
+<td align="left">Lei</td>
+<td align="left">Ryan</td>
+<td align="left">Haverford College</td>
+<td align="left"><a href="https://databrary.org/party/5676" class="uri">https://databrary.org/party/5676</a></td>
 </tr>
 <tr class="even">
-<td align="left">Rushton</td>
-<td align="left">Gregory</td>
-<td align="left">Middle Tennessee State University</td>
-<td align="left"><a href="https://databrary.org/party/5351" class="uri">https://databrary.org/party/5351</a></td>
+<td align="left">Kalpidou</td>
+<td align="left">Maria</td>
+<td align="left">Assumption College</td>
+<td align="left"><a href="https://databrary.org/party/5686" class="uri">https://databrary.org/party/5686</a></td>
 </tr>
 <tr class="odd">
-<td align="left">Danielson</td>
-<td align="left">Kyle</td>
-<td align="left">University of Toronto</td>
-<td align="left"><a href="https://databrary.org/party/2328" class="uri">https://databrary.org/party/2328</a></td>
+<td align="left">Sutherland</td>
+<td align="left">Clare</td>
+<td align="left">University of Western Australia</td>
+<td align="left"><a href="https://databrary.org/party/2285" class="uri">https://databrary.org/party/2285</a></td>
 </tr>
 <tr class="even">
-<td align="left">Jovic</td>
-<td align="left">Svetlana</td>
-<td align="left">SUNY College at Old Westbury</td>
-<td align="left"><a href="https://databrary.org/party/4671" class="uri">https://databrary.org/party/4671</a></td>
+<td align="left">St Loe</td>
+<td align="left">Stephanie</td>
+<td align="left">Kwantlen Polytechnic University</td>
+<td align="left"><a href="https://databrary.org/party/5529" class="uri">https://databrary.org/party/5529</a></td>
 </tr>
 <tr class="odd">
-<td align="left">Lombardi</td>
-<td align="left">Doug</td>
-<td align="left">University of Maryland</td>
-<td align="left"><a href="https://databrary.org/party/4945" class="uri">https://databrary.org/party/4945</a></td>
+<td align="left">Bernstein</td>
+<td align="left">Michael</td>
+<td align="left">Penn State University</td>
+<td align="left"><a href="https://databrary.org/party/982" class="uri">https://databrary.org/party/982</a></td>
 </tr>
 </tbody>
 </table>
@@ -397,19 +394,19 @@ new_institutions %&gt;%
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left">Osaka City University, Graduate School of Medicine</td>
-<td align="left"><a href="http://www.med.osaka-u.ac.jp/eng/" class="uri">http://www.med.osaka-u.ac.jp/eng/</a></td>
-<td align="left"><a href="https://databrary.org/party/5674" class="uri">https://databrary.org/party/5674</a></td>
+<td align="left">Haverford College</td>
+<td align="left"><a href="https://www.haverford.edu/" class="uri">https://www.haverford.edu/</a></td>
+<td align="left"><a href="https://databrary.org/party/5722" class="uri">https://databrary.org/party/5722</a></td>
 </tr>
 <tr class="even">
-<td align="left">Middle Tennessee State University</td>
-<td align="left"><a href="https://www.mtsu.edu/" class="uri">https://www.mtsu.edu/</a></td>
-<td align="left"><a href="https://databrary.org/party/5673" class="uri">https://databrary.org/party/5673</a></td>
+<td align="left">Assumption College</td>
+<td align="left"><a href="https://www.assumption.edu/" class="uri">https://www.assumption.edu/</a></td>
+<td align="left"><a href="https://databrary.org/party/5720" class="uri">https://databrary.org/party/5720</a></td>
 </tr>
 <tr class="odd">
-<td align="left">SUNY College at Old Westbury</td>
-<td align="left"><a href="https://www.oldwestbury.edu/" class="uri">https://www.oldwestbury.edu/</a></td>
-<td align="left"><a href="https://databrary.org/party/5672" class="uri">https://databrary.org/party/5672</a></td>
+<td align="left">Kwantlen Polytechnic University</td>
+<td align="left"><a href="https://www.kpu.ca/" class="uri">https://www.kpu.ca/</a></td>
+<td align="left"><a href="https://databrary.org/party/5711" class="uri">https://databrary.org/party/5711</a></td>
 </tr>
 </tbody>
 </table>
@@ -450,8 +447,8 @@ vols_plot &lt;- updated_vols %&gt;%
 
 
 ggdraw(vols_plot) + 
-  draw_label(&quot;Unshared&quot;, colour = color_teal, .86, .88) +
-  draw_label(&quot;Shared&quot;, colour = color_orange, .84, .75)</code></pre>
+  draw_label(&quot;Unshared&quot;, colour = color_teal, .84, .92) +
+  draw_label(&quot;Shared&quot;, colour = color_orange, .84, .70)</code></pre>
 <p><img src="databrary_weekly_rpt_files/figure-html/db-vols-plot-1.png" width="672" /></p>
 <p>Next, we update the Google Sheet if <code>params$update_gs</code> is TRUE.</p>
 <pre class="r"><code>if (as.logical(params$update_gs)) {
@@ -463,8 +460,6 @@ ggdraw(vols_plot) +
 } else {
   message(&quot;&#39;update_gs&#39; parameter is &#39;false&#39;, so Google Sheet data unmodified.&quot;)
 }</code></pre>
-<pre><code>## Warning: `data_frame()` is deprecated, use `tibble()`.
-## This warning is displayed once per session.</code></pre>
 <div id="new-volumes" class="section level2">
 <h2><span class="header-section-number">2.1</span> New volumes</h2>
 <pre class="r"><code># define helper functions
@@ -498,34 +493,40 @@ unnested_vols %&gt;%
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left">Scientific Reasoning</td>
-<td align="left">2019-07-29</td>
-<td align="left">Weisberg, Deena Skolnick</td>
-<td align="left"><a href="https://nyu.databrary.org/volume/950" class="uri">https://nyu.databrary.org/volume/950</a></td>
+<td align="left">Oh, Behave!</td>
+<td align="left">2019-08-05</td>
+<td align="left">Adolph, Karen</td>
+<td align="left"><a href="https://nyu.databrary.org/volume/955" class="uri">https://nyu.databrary.org/volume/955</a></td>
 </tr>
 <tr class="even">
-<td align="left">BioBehavioral Synchrony</td>
-<td align="left">2019-07-29</td>
-<td align="left">Tamis-LeMonda, Catherine</td>
-<td align="left"><a href="https://nyu.databrary.org/volume/949" class="uri">https://nyu.databrary.org/volume/949</a></td>
+<td align="left">Oh, Behave!</td>
+<td align="left">2019-08-05</td>
+<td align="left">Xu, Melody</td>
+<td align="left"><a href="https://nyu.databrary.org/volume/955" class="uri">https://nyu.databrary.org/volume/955</a></td>
 </tr>
 <tr class="odd">
-<td align="left">BioBehavioral Synchrony</td>
-<td align="left">2019-07-29</td>
-<td align="left">Hirsh-Pasek, Kathy</td>
-<td align="left"><a href="https://nyu.databrary.org/volume/949" class="uri">https://nyu.databrary.org/volume/949</a></td>
+<td align="left">ELP PLAY 2019</td>
+<td align="left">2019-08-01</td>
+<td align="left">Barr, Rachel</td>
+<td align="left"><a href="https://nyu.databrary.org/volume/954" class="uri">https://nyu.databrary.org/volume/954</a></td>
 </tr>
 <tr class="even">
-<td align="left">HAB &amp; Trust V2</td>
-<td align="left">2019-07-26</td>
-<td align="left">Palmquist, Carolyn</td>
-<td align="left"><a href="https://nyu.databrary.org/volume/948" class="uri">https://nyu.databrary.org/volume/948</a></td>
+<td align="left">ELP PLAY 2019</td>
+<td align="left">2019-08-01</td>
+<td align="left">Blanchfield, Olivia</td>
+<td align="left"><a href="https://nyu.databrary.org/volume/954" class="uri">https://nyu.databrary.org/volume/954</a></td>
 </tr>
 <tr class="odd">
-<td align="left">iTRAC Mobile Eye Tracking Complete</td>
-<td align="left">2019-07-26</td>
-<td align="left">Perez-Edgar, Koraly</td>
-<td align="left"><a href="https://nyu.databrary.org/volume/947" class="uri">https://nyu.databrary.org/volume/947</a></td>
+<td align="left">Example Videos - Pupillometry as a Window on the Role of Motionese in Infants’ Processing of Dynamic Activity</td>
+<td align="left">2019-07-30</td>
+<td align="left">Baldwin, Dare</td>
+<td align="left"><a href="https://nyu.databrary.org/volume/953" class="uri">https://nyu.databrary.org/volume/953</a></td>
+</tr>
+<tr class="even">
+<td align="left">Kosie &amp; Baldwin Video Corpus</td>
+<td align="left">2019-07-30</td>
+<td align="left">Baldwin, Dare</td>
+<td align="left"><a href="https://nyu.databrary.org/volume/952" class="uri">https://nyu.databrary.org/volume/952</a></td>
 </tr>
 </tbody>
 </table>
@@ -544,7 +545,7 @@ vol_ids &lt;- as.numeric(vol_nums[,2])
 last_vol &lt;- max(vol_ids)
 vols_to_test &lt;- params$vols_to_test
 
-# Create function to write new data files for each volum
+# Create function to write new data files for each volume
 write_vid_csv &lt;- function(vol.id = 1) {
   message(paste0(&quot;Getting data for volume &quot;, vol.id))
   vid_dat &lt;- get_video_stats(vol.id)
@@ -564,7 +565,7 @@ video_stats &lt;- Reduce(function(x,y) merge(x, y, all = TRUE), video_data)</cod
 vol_info &lt;- lapply(vols, list_volume_metadata)
 vols_data &lt;- Reduce(function(x,y) merge(x, y, all = TRUE), vol_info)
 vols_joined &lt;- dplyr::left_join(vols_data, video_stats, by = c(&quot;vol_id&quot; = &quot;vol_id&quot;))</code></pre>
-<p>There are 123 volumes with DOIs (shared) that have sessions and at least one video as of today (2019-07-30 09:35:51).</p>
+<p>There are 16 volumes with DOIs (shared) that have sessions and at least one video as of today (2019-08-09 12:07:34).</p>
 <div id="number-of-videos-in-shared-volumes" class="section level2">
 <h2><span class="header-section-number">3.1</span> Number of videos in (shared) volumes</h2>
 <pre class="r"><code>vols_joined %&gt;%
