@@ -67,7 +67,7 @@ new_stats$date <- lubridate::as_datetime(new_stats$date)
 db <- gs_title('Databrary-analytics')
 ```
 
-Now, let's load the data about the number of institutions, investigators and affiliates.
+Now, let's load the data about the number of institutions, investigators.
 
 ```{r load-inst-invest-from-googlesheets}
 old_stats <- db %>%
@@ -101,7 +101,8 @@ updated_stats <- updated_stats %>%
   gather(., key = "type", value = "count", -date) %>%
   mutate(date = lubridate::as_date(date)) %>%
   select(date, count, type) %>%
-  filter(type %in% c('institutions', 'investigators', 'affiliates')) %>%
+  #filter(type %in% c('institutions', 'investigators', 'affiliates')) %>%
+  filter(type %in% c('institutions', 'investigators')) %>%
   filter(!is.na(count))
 
 
@@ -110,16 +111,18 @@ p <- updated_stats %>%
   ggplot(., aes(x = date, y = count, color = type, group = type)) +
   geom_point() + 
   geom_line(size = ln_size) +
-  scale_colour_manual(values=c(color_purple, color_orange, color_teal)) +  
+  #scale_colour_manual(values=c(color_purple, color_orange, color_teal)) +  
+  scale_colour_manual(values=c(color_orange, color_teal)) +
   ylab("Authorizations") +
   databrary_theme +
   scale_y_continuous(breaks = seq(0, round_any(max(updated_stats$count), 100, ceiling), 100), expand = c(0,0)) +
   coord_cartesian(ylim = c(0, round_any(max(updated_stats$count), 100, ceiling)))
   
 ggdraw(p) + 
+  #draw_label("Affiliates", colour = color_purple, .9, .3)+
   draw_label("Investigators", colour = color_teal, .8, .9) +
-  draw_label("Institutions", colour = color_orange, .9, .6)+
-  draw_label("Affiliates", colour = color_purple, .9, .3)
+  draw_label("Institutions", colour = color_orange, .9, .6)
+  
 ```
 
 ##  New investigators
@@ -190,6 +193,7 @@ ggdraw(vols_plot) +
   draw_label("Unshared", colour = color_teal, .84, .92) +
   draw_label("Shared", colour = color_orange, .84, .70)
 ```
+
 Next, we update the Google Sheet if `params$update_gs` is TRUE.
 In the current context, `params$update_gs` == `r params$update_gs`.
 
@@ -208,13 +212,30 @@ if (as.logical(params$update_gs)) {
 
 ## New volumes
 
-```{r}
+```{r new-volumes}
+# define helper functions
 new_volumes <- databraryapi::get_db_stats(type = "datasets")
-new_volumes %>%
-  select(., name, creation, owners) %>%
+if (is.null(new_volumes)) {
+  stop('New volumes data not downloaded.')
+}
+
+unnested_vols <- new_volumes %>%
+  unnest(.)
+  # rename(., owner_name = name1, owner_id = id1) %>%
+
+unnested_vols$owner_name <- unnested_vols$name1
+unnested_vols$owner_id = unnested_vols$name1
+
+unnested_vols <- unnested_vols %>%
+  mutate(., url = paste0("https://nyu.databrary.org/volume/", id),
+         date_created = lubridate::as_date(creation))
+  
+unnested_vols %>%
+  select(., name, date_created, owner_name, url) %>%
   knitr::kable()
 ```
 
+If there are multiple investigators for the volume, there will be a row for each investigator on the new volume.
 
 # Citation counts
 
@@ -295,6 +316,8 @@ if (as.logical(params$update_gs)) {
 # Data about volumes with videos
 
 ```{r}
+# TODO: Fix this. It's hacky and awful.
+
 # List files with metadata
 csv_files <- list.files(path = "csv", pattern = "vol_", full.names = TRUE)
 

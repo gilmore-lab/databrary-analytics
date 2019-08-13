@@ -1,0 +1,437 @@
+---
+title: "Databrary Metadata Report"
+author: "Rick O. Gilmore & Andrea Seisler"
+date: "`r Sys.time()`"
+
+# Appends the date to the output filename
+knit: (function(inputFile, encoding) { rmarkdown::render(inputFile, encoding = encoding, output_file = paste0(substr(inputFile,1,nchar(inputFile)-4),'_',Sys.Date(),'.html')) })
+
+output:
+  html_document:
+    code_folding: hide
+    number_sections: yes
+    self_contained: no
+    toc: yes
+    toc_depth: 3
+    toc_float: yes
+params:
+  db_account: rogilmore@psu.edu
+  update_gs: false
+  update_stats: false
+  vols_to_test: 10
+  #rpt_weekly: true
+  #rpt_monthly: false
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, message = FALSE)
+
+# Install packages if needed
+cran_packages <- c('ggplot2', 'tidyverse', 'reshape2', 'cowplot',
+                    'googledrive', 'plyr', 'googlesheets')
+not_installed <- cran_packages[!(cran_packages %in% installed.packages()[,"Package"])]
+if(length(not_installed)) {
+  message('Installing packages required for this document.')
+  install.packages(not_installed)
+}
+
+github_packages <- 'PLAY-behaviorome/databraryapi'
+not_installed <- github_packages[!(github_packages %in% installed.packages()[,"Package"])]
+if(length(not_installed)) devtools::install_github(not_installed)
+
+# Load
+
+library(databraryapi)
+library(tidyverse)
+library(reshape2)
+library(cowplot)
+library(googledrive)
+  drive_auth(use_oob = TRUE)
+library(plyr)
+library(googlesheets) 
+  options(httr_oob_default=TRUE) 
+
+# Log in to Databrary
+if (!databraryapi::login_db(params$db_account)) {
+  message("Log-in failed.")
+}
+
+# Graphic theme elements
+ln_size <- 3
+base_size <- 14
+color_orange <- "#ec7751"
+color_teal <- "#4CAE99"
+color_purple <-"#AB00FF"
+
+databrary_theme <- 
+  theme_classic(base_size = base_size) +
+  theme(axis.title.x=element_blank()) +
+  theme(legend.position="none", 
+        axis.text = element_text(size = rel(0.8), colour = "black")) +
+  theme(axis.line = element_blank())
+```
+
+# Institutions & Authorized Users
+
+<!-- At the moment, the `old_stats` come from google sheets. -->
+<!-- Once we have API commands to upload new data, the `old_stats` can come from Databrary directly. -->
+
+```{r get-databrary-stats}
+new_stats <- databraryapi::get_db_stats()
+new_stats$date <- lubridate::as_datetime(new_stats$date)
+```
+
+Let's try a Google Sheets-centered workflow.
+If this is the first time you are rendering this document in your current work session, please run this command to authenticate to Google from the command line, that is **outside of RMarkdown**:
+
+```
+db <- googlesheets::gs_title('Databrary-analytics')
+```
+
+```{r data-from-googlesheets}
+#key <- "1tvlIQzULrMtXo97aJu71ljdTmNXkwwpU9eOOasVer3g"
+db <- gs_title('Databrary-analytics')
+```
+
+Now, let's load the data about the number of institutions and investigators.
+
+```{r load-inst-invest-from-googlesheets}
+old_stats <- db %>%
+  gs_read(ws = 'institutions-investigators')
+```
+
+We then update the old stats with new data if `params$update_stats` is TRUE.
+In the current context, `params$update_stats` == `r params$update_stats`.
+
+```{r update-stats}
+# initialize updated_stats
+updated_stats <- old_stats
+if (as.logical(params$update_stats)) {
+  next_entry <- dim(updated_stats)[1] + 1
+  updated_stats[next_entry,] = NA
+  updated_stats <- updated_stats
+  
+  # fill with new data
+  updated_stats$date[next_entry] <- new_stats$date
+  updated_stats$institutions[next_entry] <- new_stats$institutions
+  updated_stats$investigators[next_entry] <- new_stats$investigators
+  updated_stats$affiliates[next_entry] <- new_stats$affiliates
+}
+```
+
+Now, we plot the data.
+
+```{r db-inst-user-plot}
+# Create a tidy form for plotting both institutions and investigators and affiliates
+updated_stats <- updated_stats %>%
+  gather(., key = "type", value = "count", -date) %>%
+  mutate(date = lubridate::as_date(date)) %>%
+  select(date, count, type) %>%
+  #filter(type %in% c('institutions', 'investigators', 'affiliates')) %>%
+  filter(type %in% c('institutions', 'investigators')) %>%
+  filter(!is.na(count))
+
+# Plot
+p <- updated_stats %>%
+  ggplot(., aes(x = date, y = count, color = type, group = type)) +
+  geom_point() +
+  geom_line(size = ln_size) +
+  #scale_colour_manual(values=c(color_purple, color_orange, color_teal)) +  
+  scale_colour_manual(values=c(color_orange, color_teal)) + 
+  ylab("Authorizations") +
+  databrary_theme +
+  scale_y_continuous(breaks = seq(0, round_any(max(updated_stats$count), 100, ceiling), 100), expand = c(0,0)) +
+  coord_cartesian(ylim = c(0, round_any(max(updated_stats$count), 100, ceiling)))
+
+ggdraw(p) + 
+  #draw_label("Affiliates", colour = color_purple, .9, .3)+
+  draw_label("Investigators", colour = color_teal, .8, .9) +
+  draw_label("Institutions", colour = color_orange, .9, .6)
+  
+```
+
+Next, we update the Google Sheet if `params$update_gs` is TRUE.
+In the current context, `params$update_gs` == `r params$update_gs`.
+
+```{r update-inst-inv-gs}
+if (as.logical(params$update_gs)) {
+  db <- db %>%
+    gs_add_row(ws = 'institutions-investigators', input = new_stats[,c(1, 4, 2, 3)])
+  message("'update_gs' parameter is 'TRUE', so Google Sheet data will be updated.")
+} else {
+  message("'update_gs' parameter is 'FALSE', so Google Sheet data unmodified.")
+}
+```
+
+##  New investigators
+
+```{r}
+new_people <- databraryapi::get_db_stats(type = "people")
+new_people %>%
+  mutate(url = paste0("https://databrary.org/party/", id)) %>%
+  select(., sortname, prename, affiliation, url) %>%
+  knitr::kable()
+```
+
+## New institutions
+
+```{r}
+new_institutions <- databraryapi::get_db_stats(type = "institutions")
+new_institutions %>%
+  mutate(db_url = paste0("https://databrary.org/party/", id)) %>%
+  select(., sortname, url, db_url) %>%
+  knitr::kable()
+```
+
+# Volumes
+
+Let's try a new workflow based on Google Sheets.
+We should already have the spreadsheet loaded.
+
+```{r}
+# Read from Google Sheet
+old_vols <- db %>%
+  gs_read(ws = 'volumes-shared-unshared')
+```
+
+Now update from information derived from `databraryapi::db_stats()` if `params$update_stats` is TRUE.
+
+```{r update-volumes-data}
+updated_vols <- old_vols
+if (as.logical(params$update_stats)) {
+  next_entry <- dim(updated_vols)[1] + 1
+  updated_vols[next_entry,] = NA
+  
+  updated_vols$date[next_entry] <- new_stats$date
+  if (is.null(new_stats$datasets_shared)) {
+    new_stats$datasets_shared = 0
+  }
+  updated_vols$shared_volumes[next_entry] <- new_stats$datasets_shared
+  updated_vols$unshared_volumes[next_entry] <- 
+    new_stats$datasets_total - new_stats$datasets_shared
+}
+updated_vols <- updated_vols %>%
+  gather(., key = "type", value = "count", -date)
+```
+
+```{r db-vols-plot}
+# Plot
+vols_plot <- updated_vols %>%
+  ggplot(., aes(x = date, y = count, color = type, group = type)) +
+  geom_point() + 
+  geom_line(size=ln_size) +
+  scale_colour_manual(values=c(color_orange, color_teal)) +  
+  ylab("Volumes") +
+  databrary_theme +
+  scale_y_continuous(breaks = seq(0, round_any(max(updated_vols$count), 100, ceiling), 100), expand = c(0,0)) +
+  coord_cartesian(ylim = c(0, round_any(max(updated_vols$count), 100, ceiling)))
+
+
+ggdraw(vols_plot) + 
+  draw_label("Unshared", colour = color_teal, .84, .92) +
+  draw_label("Shared", colour = color_orange, .84, .70)
+```
+
+Next, we update the Google Sheet if `params$update_gs` is TRUE.
+
+```{r update-vols-shared-unshared}
+if (as.logical(params$update_gs)) {
+  new_data <- data_frame(date = Sys.Date(), 
+                         shared_volumes = new_stats$datasets_shared, 
+                         unshared_volumes = new_stats$datasets_total - new_stats$datasets_shared)
+  db <- db %>%
+    gs_add_row(ws = 'volumes-shared-unshared', input = new_data)  
+} else {
+  message("'update_gs' parameter is 'false', so Google Sheet data unmodified.")
+}
+```
+
+## New volumes
+
+```{r new-volumes}
+# define helper functions
+new_volumes <- databraryapi::get_db_stats(type = "datasets")
+if (is.null(new_volumes)) {
+  stop('New volumes data not downloaded.')
+}
+
+unnested_vols <- new_volumes %>%
+  unnest(.)
+  # rename(., owner_name = name1, owner_id = id1) %>%
+
+unnested_vols$owner_name <- unnested_vols$name1
+unnested_vols$owner_id = unnested_vols$name1
+
+unnested_vols <- unnested_vols %>%
+  mutate(., url = paste0("https://nyu.databrary.org/volume/", id),
+         date_created = lubridate::as_date(creation))
+  
+unnested_vols %>%
+  select(., name, date_created, owner_name, url) %>%
+  knitr::kable()
+```
+
+If there are multiple investigators for the volume, there will be a row for each investigator on the new 
+
+
+
+# Citation counts
+
+Run this section only for monthly report. How do we do this?
+
+
+
+```{r get-new-citations}
+# Get citation counts from Google Scholar
+get_citation_stats <- function(project = 'databrary') {
+  if (project %in% c('databrary', 'Databrary')) {
+    url <- 'https://scholar.google.com/scholar?hl=en&as_sdt=1%2C39&as_vis=1&q=%22databrary%22&btnG='
+  } else if (project %in% c('datavyu', 'Datavyu')) {
+    url <- 'https://scholar.google.com/scholar?hl=en&as_sdt=1%2C39&as_vis=1&q=%22datavyu%22&btnG='
+  }
+  
+  r <- httr::GET(url = url)
+  if (httr::status_code(r) == 200) {
+    content <- httr::content(r, 'text')
+  } else {
+    message(paste0('Download Failed, HTTP status ', httr::status_code(r)))
+  }
+  
+  n_results <- stringr::str_match(content, pattern = "About ([0-9]+)")[2]
+  if (is.null(n_results)) {
+    message(paste0('Unable to parse results from search.'))
+    return(NULL)
+  } else {
+    return(as.numeric(n_results))
+  }
+}
+
+databrary_cites <- get_citation_stats('databrary')
+datavyu_cites <- get_citation_stats('datavyu')
+
+old_citations <- citations <- read_csv("csv/citations-monthly.csv")
+next_value <- dim(old_citations)[1] + 1
+citations <- old_citations
+citations[next_value,] <- NA
+
+citations$date[next_value] <- Sys.Date()
+citations$databrary_citations[next_value] <- databrary_cites
+citations$datavyu_citations[next_value] <- datavyu_cites
+```
+
+```{r db-dv-citations-plot}
+citations <- citations %>%
+  gather(., key = "type", value = "count", -date)
+
+# Plot
+citations_plot <- 
+  citations %>%
+  ggplot(., aes(x = date, y = count, color = type, group = type)) +
+  geom_point() + 
+  geom_line(size = ln_size) +
+  scale_colour_manual(values=c(color_orange, color_teal)) +
+  ylab("Citations") +
+  databrary_theme +
+ scale_y_continuous(breaks = seq(0, round_any(max(citations$count), 100, ceiling), 100), expand = c(0,0)) +
+  coord_cartesian(ylim = c(0, round_any(max(citations$count), 100, ceiling)))
+  
+  
+ggdraw(citations_plot) + 
+  draw_label("Datavyu", colour = color_teal, .9, .6) +
+  draw_label("Databrary", colour = color_orange, .7, .85)
+```
+
+```{r update-citations-gs}
+if (as.logical(params$update_gs)) {
+  new_data <- data_frame(date = Sys.Date(), 
+                         databrary_citations = databrary_cites, 
+                         datavyu_citations = datavyu_cites)
+  db <- db %>%
+    gs_add_row(ws = 'citations-monthly', input = new_data)
+  message("'update_gs' parameter is 'TRUE', so Google Sheet data will be updated.")
+} else {
+  message("'update_gs' parameter is 'FALSE', so Google Sheet data unmodified.")
+}
+
+```
+
+
+
+# Data about volumes with videos
+
+```{r}
+# TODO: Fix this. It's hacky and awful.
+
+# List files with metadata
+csv_files <- list.files(path = "csv", pattern = "vol_", full.names = TRUE)
+
+# Extract vector of volume numbers, determine the maximum
+vol_nums <- stringr::str_match(csv_files, pattern = "_([0-9]+)\\.")
+vol_ids <- as.numeric(vol_nums[,2])
+last_vol <- max(vol_ids)
+vols_to_test <- params$vols_to_test
+
+# Create function to write new data files for each volume
+write_vid_csv <- function(vol.id = 1) {
+  message(paste0("Getting data for volume ", vol.id))
+  vid_dat <- get_video_stats(vol.id)
+  # This .Rmd file is already in working/
+  if (!is.null(vid_dat)) {
+    write.csv(vid_dat, file = paste0("csv/vol_", vol.id, ".csv"),
+              row.names = FALSE)
+  }
+} 
+```
+
+```{r query-for-video-data, include=FALSE}
+lapply(last_vol:(last_vol + vols_to_test), write_vid_csv)
+```
+
+```{r}
+vol_files <- list.files("csv", pattern = "vol_[0-9]+", full.names = TRUE)
+
+# Import the individual csv files
+video_data <- lapply(vol_files, read_csv)
+video_stats <- Reduce(function(x,y) merge(x, y, all = TRUE), video_data)
+```
+
+The median number of videos per volume is `r median(video_stats$n_videos)` with a range of [`r min(video_stats$n_videos)`, `r max(video_stats$n_videos)`].
+
+```{r}
+vols <- video_stats$vol_id
+vol_info <- lapply(vols, list_volume_metadata)
+vols_data <- Reduce(function(x,y) merge(x, y, all = TRUE), vol_info)
+vols_joined <- dplyr::left_join(vols_data, video_stats, by = c("vol_id" = "vol_id"))
+```
+
+There are `r dim(vols_data[vols_data$doi != "NA",])[1]` volumes with DOIs (shared) that have sessions and at least one video as of today (`r Sys.time()`).
+
+## Number of videos in (shared) volumes
+
+```{r n-vids-shared-vols}
+vols_joined %>%
+  filter(!is.na(doi)) %>%
+  ggplot(.) +
+  aes(x=n_videos)+
+  geom_histogram()
+```
+
+## Number of sessions in (shared) volumes
+
+```{r n-sessions-shared-vols}
+vols_joined %>%
+  filter(!is.na(doi)) %>%
+  ggplot(.) +
+  aes(x=n_sessions)+
+  geom_histogram()
+```
+
+## Total video hours in (shared) volumes
+
+```{r tot-hrs-shared-vols}
+vols_joined %>%
+  filter(!is.na(doi)) %>%
+  ggplot(.) +
+  aes(x=tot_hrs)+
+  geom_histogram()
+```

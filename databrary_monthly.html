@@ -262,7 +262,7 @@ div.tocify {
 
 <h1 class="title toc-ignore">Databrary Monthly</h1>
 <h4 class="author">Rick O. Gilmore</h4>
-<h4 class="date">2019-08-06 10:44:16</h4>
+<h4 class="date">2019-08-13 12:19:33</h4>
 
 </div>
 
@@ -275,7 +275,7 @@ div.tocify {
 new_stats$date &lt;- lubridate::as_datetime(new_stats$date)</code></pre>
 <pre class="r"><code>#key &lt;- &quot;1tvlIQzULrMtXo97aJu71ljdTmNXkwwpU9eOOasVer3g&quot;
 db &lt;- gs_title(&#39;Databrary-analytics&#39;)</code></pre>
-<p>Now, let’s load the data about the number of institutions, investigators and affiliates.</p>
+<p>Now, let’s load the data about the number of institutions, investigators.</p>
 <pre class="r"><code>old_stats &lt;- db %&gt;%
   gs_read(ws = &#39;institutions-investigators&#39;)</code></pre>
 <p>We then update the old stats with new data if <code>params$update_stats</code> is TRUE.</p>
@@ -297,7 +297,8 @@ updated_stats &lt;- updated_stats %&gt;%
   gather(., key = &quot;type&quot;, value = &quot;count&quot;, -date) %&gt;%
   mutate(date = lubridate::as_date(date)) %&gt;%
   select(date, count, type) %&gt;%
-  filter(type %in% c(&#39;institutions&#39;, &#39;investigators&#39;, &#39;affiliates&#39;)) %&gt;%
+  #filter(type %in% c(&#39;institutions&#39;, &#39;investigators&#39;, &#39;affiliates&#39;)) %&gt;%
+  filter(type %in% c(&#39;institutions&#39;, &#39;investigators&#39;)) %&gt;%
   filter(!is.na(count))
 
 
@@ -306,16 +307,17 @@ p &lt;- updated_stats %&gt;%
   ggplot(., aes(x = date, y = count, color = type, group = type)) +
   geom_point() + 
   geom_line(size = ln_size) +
-  scale_colour_manual(values=c(color_purple, color_orange, color_teal)) +  
+  #scale_colour_manual(values=c(color_purple, color_orange, color_teal)) +  
+  scale_colour_manual(values=c(color_orange, color_teal)) +
   ylab(&quot;Authorizations&quot;) +
   databrary_theme +
   scale_y_continuous(breaks = seq(0, round_any(max(updated_stats$count), 100, ceiling), 100), expand = c(0,0)) +
   coord_cartesian(ylim = c(0, round_any(max(updated_stats$count), 100, ceiling)))
   
 ggdraw(p) + 
+  #draw_label(&quot;Affiliates&quot;, colour = color_purple, .9, .3)+
   draw_label(&quot;Investigators&quot;, colour = color_teal, .8, .9) +
-  draw_label(&quot;Institutions&quot;, colour = color_orange, .9, .6)+
-  draw_label(&quot;Affiliates&quot;, colour = color_purple, .9, .3)</code></pre>
+  draw_label(&quot;Institutions&quot;, colour = color_orange, .9, .6)</code></pre>
 <p><img src="databrary_monthly_files/figure-html/db-inst-user-plot-1.png" width="672" /></p>
 <div id="new-investigators" class="section level2">
 <h2><span class="header-section-number">1.1</span> New investigators</h2>
@@ -333,24 +335,29 @@ new_people %&gt;%
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left">Chevalier</td>
-<td align="left">Nicolas</td>
-<td align="left">University of Edinburgh</td>
+<td align="left">Danilovich</td>
+<td align="left">Margaret</td>
+<td align="left">Northwestern University</td>
 </tr>
 <tr class="even">
-<td align="left">Carcea</td>
-<td align="left">Ioana</td>
-<td align="left">Rutgers BHI</td>
+<td align="left">Kaur</td>
+<td align="left">Maninderjit</td>
+<td align="left">MGH Institute of Health Professions</td>
 </tr>
 <tr class="odd">
-<td align="left">Bauer</td>
-<td align="left">Patricia</td>
-<td align="left">Emory University</td>
+<td align="left">Demir-Lira</td>
+<td align="left">O. Ece</td>
+<td align="left">University of Iowa</td>
 </tr>
 <tr class="even">
-<td align="left">Hupp</td>
-<td align="left">Julie</td>
-<td align="left">Ohio State University</td>
+<td align="left">Myers</td>
+<td align="left">Lauren</td>
+<td align="left">Lafayette College</td>
+</tr>
+<tr class="odd">
+<td align="left">Lei</td>
+<td align="left">Ryan</td>
+<td align="left">Haverford College</td>
 </tr>
 </tbody>
 </table>
@@ -370,16 +377,16 @@ new_institutions %&gt;%
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left">Indiana Wesleyan University</td>
-<td align="left"><a href="https://www.indwes.edu/" class="uri">https://www.indwes.edu/</a></td>
+<td align="left">MGH Institute of Health Professions</td>
+<td align="left"><a href="https://www.mghihp.edu/" class="uri">https://www.mghihp.edu/</a></td>
 </tr>
 <tr class="even">
-<td align="left">Children’s Hospital of Philadelphia (CHOP)</td>
-<td align="left"><a href="http://www.chop.edu/" class="uri">http://www.chop.edu/</a></td>
+<td align="left">Lafayette College</td>
+<td align="left"><a href="https://www.lafayette.edu/" class="uri">https://www.lafayette.edu/</a></td>
 </tr>
 <tr class="odd">
-<td align="left">Carthage College</td>
-<td align="left"><a href="https://www.carthage.edu/" class="uri">https://www.carthage.edu/</a></td>
+<td align="left">Haverford College</td>
+<td align="left"><a href="https://www.haverford.edu/" class="uri">https://www.haverford.edu/</a></td>
 </tr>
 </tbody>
 </table>
@@ -424,7 +431,8 @@ vols_plot &lt;- updated_vols %&gt;%
 ggdraw(vols_plot) + 
   draw_label(&quot;Unshared&quot;, colour = color_teal, .84, .92) +
   draw_label(&quot;Shared&quot;, colour = color_orange, .84, .70)</code></pre>
-<p><img src="databrary_monthly_files/figure-html/db-vols-plot-1.png" width="672" /> Next, we update the Google Sheet if <code>params$update_gs</code> is TRUE. In the current context, <code>params$update_gs</code> == FALSE.</p>
+<p><img src="databrary_monthly_files/figure-html/db-vols-plot-1.png" width="672" /></p>
+<p>Next, we update the Google Sheet if <code>params$update_gs</code> is TRUE. In the current context, <code>params$update_gs</code> == FALSE.</p>
 <pre class="r"><code>if (as.logical(params$update_gs)) {
   new_data &lt;- data_frame(date = Sys.Date(), 
                          shared_volumes = new_stats$datasets_shared, 
@@ -436,46 +444,69 @@ ggdraw(vols_plot) +
 }</code></pre>
 <div id="new-volumes" class="section level2">
 <h2><span class="header-section-number">2.1</span> New volumes</h2>
-<pre class="r"><code>new_volumes &lt;- databraryapi::get_db_stats(type = &quot;datasets&quot;)
-new_volumes %&gt;%
-  select(., name, creation, owners) %&gt;%
+<pre class="r"><code># define helper functions
+new_volumes &lt;- databraryapi::get_db_stats(type = &quot;datasets&quot;)
+if (is.null(new_volumes)) {
+  stop(&#39;New volumes data not downloaded.&#39;)
+}
+
+unnested_vols &lt;- new_volumes %&gt;%
+  unnest(.)
+  # rename(., owner_name = name1, owner_id = id1) %&gt;%
+
+unnested_vols$owner_name &lt;- unnested_vols$name1
+unnested_vols$owner_id = unnested_vols$name1
+
+unnested_vols &lt;- unnested_vols %&gt;%
+  mutate(., url = paste0(&quot;https://nyu.databrary.org/volume/&quot;, id),
+         date_created = lubridate::as_date(creation))
+  
+unnested_vols %&gt;%
+  select(., name, date_created, owner_name, url) %&gt;%
   knitr::kable()</code></pre>
 <table>
 <thead>
 <tr class="header">
 <th align="left">name</th>
-<th align="left">creation</th>
-<th align="left">owners</th>
+<th align="left">date_created</th>
+<th align="left">owner_name</th>
+<th align="left">url</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
+<td align="left">Test</td>
+<td align="left">2019-08-13</td>
+<td align="left">Frank, Jennifer</td>
+<td align="left"><a href="https://nyu.databrary.org/volume/959" class="uri">https://nyu.databrary.org/volume/959</a></td>
+</tr>
+<tr class="even">
+<td align="left">ESC Sparkle</td>
+<td align="left">2019-08-09</td>
+<td align="left">Adolph, Karen</td>
+<td align="left"><a href="https://nyu.databrary.org/volume/957" class="uri">https://nyu.databrary.org/volume/957</a></td>
+</tr>
+<tr class="odd">
+<td align="left">ESC Modeling</td>
+<td align="left">2019-08-09</td>
+<td align="left">Adolph, Karen</td>
+<td align="left"><a href="https://nyu.databrary.org/volume/956" class="uri">https://nyu.databrary.org/volume/956</a></td>
+</tr>
+<tr class="even">
 <td align="left">Oh, Behave!</td>
-<td align="left">2019-08-05T13:08:28.335188Z</td>
-<td align="left">list(name = c(“Adolph, Karen”, “Xu, Melody”), id = c(5, 2775))</td>
-</tr>
-<tr class="even">
-<td align="left">ELP PLAY 2019</td>
-<td align="left">2019-08-01T20:40:40.40773Z</td>
-<td align="left">list(name = c(“Barr, Rachel”, “Blanchfield, Olivia”), id = c(104, 4834))</td>
+<td align="left">2019-08-05</td>
+<td align="left">Adolph, Karen</td>
+<td align="left"><a href="https://nyu.databrary.org/volume/955" class="uri">https://nyu.databrary.org/volume/955</a></td>
 </tr>
 <tr class="odd">
-<td align="left">Kosie &amp; Baldwin Video Corpus</td>
-<td align="left">2019-07-30T21:59:13.905102Z</td>
-<td align="left">list(name = “Baldwin, Dare”, id = 3746)</td>
-</tr>
-<tr class="even">
-<td align="left">Kosie &amp; Baldwin Video Corpus</td>
-<td align="left">2019-07-30T21:53:17.51328Z</td>
-<td align="left">list(name = “Baldwin, Dare”, id = 3746)</td>
-</tr>
-<tr class="odd">
-<td align="left">The D.R.E.A.M Study (Development, Replicability, Experience, Attention, &amp; Memory)</td>
-<td align="left">2019-07-30T20:08:40.712888Z</td>
-<td align="left">list(name = c(“Prado, Elizabeth”, “Oakes, Lisa”), id = c(4458, 538))</td>
+<td align="left">Oh, Behave!</td>
+<td align="left">2019-08-05</td>
+<td align="left">Xu, Melody</td>
+<td align="left"><a href="https://nyu.databrary.org/volume/955" class="uri">https://nyu.databrary.org/volume/955</a></td>
 </tr>
 </tbody>
 </table>
+<p>If there are multiple investigators for the volume, there will be a row for each investigator on the new volume.</p>
 </div>
 </div>
 <div id="citation-counts" class="section level1">
@@ -548,7 +579,9 @@ ggdraw(citations_plot) +
 </div>
 <div id="data-about-volumes-with-videos" class="section level1">
 <h1><span class="header-section-number">4</span> Data about volumes with videos</h1>
-<pre class="r"><code># List files with metadata
+<pre class="r"><code># TODO: Fix this. It&#39;s hacky and awful.
+
+# List files with metadata
 csv_files &lt;- list.files(path = &quot;csv&quot;, pattern = &quot;vol_&quot;, full.names = TRUE)
 
 # Extract vector of volume numbers, determine the maximum
@@ -577,7 +610,7 @@ video_stats &lt;- Reduce(function(x,y) merge(x, y, all = TRUE), video_data)</cod
 vol_info &lt;- lapply(vols, list_volume_metadata)
 vols_data &lt;- Reduce(function(x,y) merge(x, y, all = TRUE), vol_info)
 vols_joined &lt;- dplyr::left_join(vols_data, video_stats, by = c(&quot;vol_id&quot; = &quot;vol_id&quot;))</code></pre>
-<p>There are 16 volumes with DOIs (shared) that have sessions and at least one video as of today (2019-08-06 10:44:42).</p>
+<p>There are 16 volumes with DOIs (shared) that have sessions and at least one video as of today (2019-08-13 12:19:58).</p>
 <div id="number-of-videos-in-shared-volumes" class="section level2">
 <h2><span class="header-section-number">4.1</span> Number of videos in (shared) volumes</h2>
 <pre class="r"><code>vols_joined %&gt;%
