@@ -6,6 +6,8 @@ date: "`r Sys.time()`"
 # Appends the date to the output filename
 knit: (function(inputFile, encoding) { rmarkdown::render(inputFile, encoding = encoding, output_file = paste0(substr(inputFile,1,nchar(inputFile)-4),'_',Sys.Date(),'.html')) })
 
+# How do we move the folder with the files for this?
+
 output: 
   #pdf_document:
     #code_folding: hide - this does not work
