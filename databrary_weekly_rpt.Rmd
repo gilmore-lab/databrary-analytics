@@ -23,8 +23,8 @@ output:
     toc_float: yes
 params:
   db_account: rogilmore@psu.edu
-  update_gs: false
-  update_stats: false
+  update_gs: true
+  update_stats: true
   vols_to_test: 10
 ---
 
