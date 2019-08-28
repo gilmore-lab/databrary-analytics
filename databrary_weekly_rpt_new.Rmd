@@ -74,10 +74,9 @@ databrary_theme <-
 
 # Institutions & Authorized Users 
 
+
 ```{r child = 'users.Rmd'}
 ```
-
-# Institutions
 
 
 # Volumes
