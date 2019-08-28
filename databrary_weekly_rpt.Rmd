@@ -9,12 +9,7 @@ knit: (function(inputFile, encoding) { rmarkdown::render(inputFile, encoding = e
 # How do we move the folder with the files for this?
 
 output: 
-  #pdf_document:
-    #code_folding: hide - this does not work
-    #number_sections: true
-    #toc: true
-    #toc_depth: 3
-  html_document:
+   html_document:
     code_folding: hide
     number_sections: yes
     self_contained: no
@@ -23,13 +18,16 @@ output:
     toc_float: yes
 params:
   db_account: rogilmore@psu.edu
-  update_gs: true
-  update_stats: true
+  update_gs: no
+  update_stats: no
   vols_to_test: 10
 ---
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE, message = FALSE)
+
+today = Sys.Date()
+
 
 # Install packages if needed
 cran_packages <- c('ggplot2', 'tidyverse', 'reshape2', 'cowplot',
@@ -144,6 +142,7 @@ p <- updated_stats %>%
   geom_line(size = ln_size) +
   #scale_colour_manual(values=c(color_purple, color_orange, color_teal)) +  
   scale_colour_manual(values=c(color_orange, color_teal)) +  
+  ggtitle(Authorizations as of "Sys.Date()") +
   ylab("Authorizations") +
   databrary_theme +
   scale_y_continuous(breaks = seq(0, round_any(max(updated_stats$count), 100, ceiling), 100), expand = c(0,0)) +

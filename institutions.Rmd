@@ -1,0 +1,68 @@
+---
+title: "Institutions"
+author: "Andrea Seisler"
+date: "`r Sys.time()`"
+
+# Appends the date to the output filename
+knit: (function(inputFile, encoding) { rmarkdown::render(inputFile, encoding = encoding, output_file = paste0(substr(inputFile,1,nchar(inputFile)-4),'_',Sys.Date(),'.html')) })
+
+# How do we move the folder with the files for this?
+
+output: 
+  html_document:
+    code_folding: hide
+    number_sections: yes
+    self_contained: no
+    toc: yes
+    toc_depth: 3
+    toc_float: yes
+params:
+  db_account: rogilmore@psu.edu
+  update_gs: no
+  update_stats: no
+  vols_to_test: 10
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, message = FALSE)
+
+# Install packages if needed
+cran_packages <- c('ggplot2', 'tidyverse', 'reshape2', 'cowplot',
+                    'googledrive', 'plyr', 'googlesheets')
+not_installed <- cran_packages[!(cran_packages %in% installed.packages()[,"Package"])]
+if(length(not_installed)) {
+  message('Installing packages required for this document.')
+  install.packages(not_installed)
+}
+
+github_packages <- 'PLAY-behaviorome/databraryapi'
+not_installed <- github_packages[!(github_packages %in% installed.packages()[,"Package"])]
+if(length(not_installed)) devtools::install_github(not_installed)
+
+# Load
+
+#library(rmarkdown)
+library(databraryapi)
+library(tidyverse)
+library(reshape2)
+library(cowplot)
+#library(googledrive)
+#  drive_auth(use_oob = TRUE)
+library(plyr)
+#library(googlesheets) 
+#  options(httr_oob_default=TRUE) 
+
+# Log in to Databrary
+if (!databraryapi::login_db(params$db_account)) {
+  message("Log-in failed.")
+}
+```
+## New institutions
+
+```{r}
+new_institutions <- databraryapi::get_db_stats(type = "institutions")
+new_institutions %>%
+  mutate(db_url = paste0("https://databrary.org/party/", id)) %>%
+  select(., sortname, url, db_url) %>%
+  knitr::kable()
+```
