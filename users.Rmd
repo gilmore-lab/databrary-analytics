@@ -1,0 +1,165 @@
+---
+title: "Authorized Institutions and Investigators"
+author: "Andrea Seisler"
+date:  "`r Sys.time()`"
+
+# Appends the date to the output filename
+knit: (function(inputFile, encoding) { rmarkdown::render(inputFile, encoding = encoding, output_file = paste0(substr(inputFile,1,nchar(inputFile)-4),'_',Sys.Date(),'.html')) })
+
+# How do we move the folder with the files for this?
+
+output: 
+  html_document:
+    code_folding: hide
+    number_sections: yes
+    self_contained: no
+    toc: yes
+    toc_depth: 3
+    toc_float: yes
+params:
+  db_account: rogilmore@psu.edu
+  update_gs: no
+  update_stats: no
+  vols_to_test: 10
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, message = FALSE)
+
+# Install packages if needed
+cran_packages <- c('ggplot2', 'tidyverse', 'reshape2', 'cowplot',
+                    'googledrive', 'plyr', 'googlesheets')
+not_installed <- cran_packages[!(cran_packages %in% installed.packages()[,"Package"])]
+if(length(not_installed)) {
+  message('Installing packages required for this document.')
+  install.packages(not_installed)
+}
+
+github_packages <- 'PLAY-behaviorome/databraryapi'
+not_installed <- github_packages[!(github_packages %in% installed.packages()[,"Package"])]
+if(length(not_installed)) devtools::install_github(not_installed)
+
+# Load
+
+#library(rmarkdown)
+library(databraryapi)
+library(tidyverse)
+library(reshape2)
+library(cowplot)
+library(googledrive)
+  drive_auth(use_oob = TRUE)
+library(plyr)
+library(googlesheets) 
+  options(httr_oob_default=TRUE) 
+
+# Log in to Databrary
+if (!databraryapi::login_db(params$db_account)) {
+  message("Log-in failed.")
+}
+
+# Graphic theme elements
+ln_size <- 3
+base_size <- 14
+color_orange <- "#ec7751"
+color_teal <- "#4CAE99"
+color_purple <-"#AB00FF"
+
+databrary_theme <- 
+  theme_classic(base_size = base_size) +
+  theme(axis.title.x=element_blank()) +
+  theme(legend.position="none", 
+        axis.text = element_text(size = rel(0.8), colour = "black")) +
+  theme(axis.line = element_blank())
+```
+
+
+# Institutions & Authorized Users
+
+<!-- At the moment, the `old_stats` come from google sheets. -->
+<!-- Once we have API commands to upload new data, the `old_stats` can come from Databrary directly. -->
+
+```{r get-databrary-stats}
+new_stats <- databraryapi::get_db_stats()
+new_stats$date <- lubridate::as_datetime(new_stats$date)
+```
+
+<!-- Let's try a Google Sheets-centered workflow. -->
+<!-- If this is the first time you are rendering this document in your current work session, please run this command to  -->
+<!-- authenticate to Google from the command line, that is **outside of RMarkdown**: -->
+
+
+
+```{r data-from-googlesheets}
+#key <- "1tvlIQzULrMtXo97aJu71ljdTmNXkwwpU9eOOasVer3g"
+db <- gs_title('Databrary-analytics')
+```
+
+<!-- Now, let's load the data about the number of institutions and investigators. -->
+
+```{r load-inst-invest-from-googlesheets}
+old_stats <- db %>%
+  gs_read(ws = 'institutions-investigators')
+```
+
+<!-- We then update the old stats with new data if `params$update_stats` is TRUE. -->
+<!-- In the current context, `params$update_stats` == `r params$update_stats`. -->
+
+```{r update-stats}
+# initialize updated_stats
+updated_stats <- old_stats
+if (as.logical(params$update_stats)) {
+  next_entry <- dim(updated_stats)[1] + 1
+  updated_stats[next_entry,] = NA
+  updated_stats <- updated_stats
+  
+  # fill with new data
+  updated_stats$date[next_entry] <- new_stats$date
+  updated_stats$institutions[next_entry] <- new_stats$institutions
+  updated_stats$investigators[next_entry] <- new_stats$investigators
+  updated_stats$affiliates[next_entry] <- new_stats$affiliates
+}
+```
+
+<!-- Now, we plot the data. -->
+
+```{r db-inst-user-plot}
+# Create a tidy form for plotting both institutions and investigators and affiliates
+updated_stats <- updated_stats %>%
+  gather(., key = "type", value = "count", -date) %>%
+  mutate(date = lubridate::as_date(date)) %>%
+  select(date, count, type) %>%
+  #filter(type %in% c('institutions', 'investigators', 'affiliates')) %>%
+  filter(type %in% c('institutions', 'investigators')) %>%
+  filter(!is.na(count))
+
+# Plot
+p <- updated_stats %>%
+  ggplot(., aes(x = date, y = count, color = type, group = type)) +
+  geom_point() +
+  geom_line(size = ln_size) +
+  #scale_colour_manual(values=c(color_purple, color_orange, color_teal)) +  
+  scale_colour_manual(values=c(color_orange, color_teal)) +  
+  ylab("Authorizations") +
+  databrary_theme +
+  scale_y_continuous(breaks = seq(0, round_any(max(updated_stats$count), 100, ceiling), 100), expand = c(0,0)) +
+  coord_cartesian(ylim = c(0, round_any(max(updated_stats$count), 100, ceiling)))
+
+ggdraw(p) + 
+  #draw_label("Affiliates", colour = color_purple, .9, .3)+
+  draw_label("Investigators", colour = color_teal, .8, .9) +
+  #draw_label(max(updated_stats$count)) +
+  draw_label("Institutions", colour = color_orange, .9, .6)
+  
+```
+<!-- Next, we update the Google Sheet if `params$update_gs` is TRUE. -->
+<!-- In the current context, `params$update_gs` == `r params$update_gs`. -->
+
+```{r update-inst-inv-gs}
+if (as.logical(params$update_gs)) {
+  db <- db %>%
+    gs_add_row(ws = 'institutions-investigators', input = new_stats[,c(1, 4, 2, 3)])
+  message("'update_gs' parameter is 'TRUE', so Google Sheet data will be updated.")
+} else {
+  message("'update_gs' parameter is 'FALSE', so Google Sheet data unmodified.")
+}
+```

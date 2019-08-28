@@ -15,19 +15,19 @@
 
 <title>Databrary Weekly</title>
 
-<script src="databrary_weekly_rpt_new_2019-08-27_files/jquery-1.11.3/jquery.min.js"></script>
+<script src="databrary_weekly_rpt_2019-08-28_files/jquery-1.11.3/jquery.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<link href="databrary_weekly_rpt_new_2019-08-27_files/bootstrap-3.3.5/css/bootstrap.min.css" rel="stylesheet" />
-<script src="databrary_weekly_rpt_new_2019-08-27_files/bootstrap-3.3.5/js/bootstrap.min.js"></script>
-<script src="databrary_weekly_rpt_new_2019-08-27_files/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
-<script src="databrary_weekly_rpt_new_2019-08-27_files/bootstrap-3.3.5/shim/respond.min.js"></script>
-<script src="databrary_weekly_rpt_new_2019-08-27_files/jqueryui-1.11.4/jquery-ui.min.js"></script>
-<link href="databrary_weekly_rpt_new_2019-08-27_files/tocify-1.9.1/jquery.tocify.css" rel="stylesheet" />
-<script src="databrary_weekly_rpt_new_2019-08-27_files/tocify-1.9.1/jquery.tocify.js"></script>
-<script src="databrary_weekly_rpt_new_2019-08-27_files/navigation-1.1/tabsets.js"></script>
-<script src="databrary_weekly_rpt_new_2019-08-27_files/navigation-1.1/codefolding.js"></script>
-<link href="databrary_weekly_rpt_new_2019-08-27_files/highlightjs-9.12.0/default.css" rel="stylesheet" />
-<script src="databrary_weekly_rpt_new_2019-08-27_files/highlightjs-9.12.0/highlight.js"></script>
+<link href="databrary_weekly_rpt_2019-08-28_files/bootstrap-3.3.5/css/bootstrap.min.css" rel="stylesheet" />
+<script src="databrary_weekly_rpt_2019-08-28_files/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="databrary_weekly_rpt_2019-08-28_files/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="databrary_weekly_rpt_2019-08-28_files/bootstrap-3.3.5/shim/respond.min.js"></script>
+<script src="databrary_weekly_rpt_2019-08-28_files/jqueryui-1.11.4/jquery-ui.min.js"></script>
+<link href="databrary_weekly_rpt_2019-08-28_files/tocify-1.9.1/jquery.tocify.css" rel="stylesheet" />
+<script src="databrary_weekly_rpt_2019-08-28_files/tocify-1.9.1/jquery.tocify.js"></script>
+<script src="databrary_weekly_rpt_2019-08-28_files/navigation-1.1/tabsets.js"></script>
+<script src="databrary_weekly_rpt_2019-08-28_files/navigation-1.1/codefolding.js"></script>
+<link href="databrary_weekly_rpt_2019-08-28_files/highlightjs-9.12.0/default.css" rel="stylesheet" />
+<script src="databrary_weekly_rpt_2019-08-28_files/highlightjs-9.12.0/highlight.js"></script>
 
 <style type="text/css">code{white-space: pre;}</style>
 <style type="text/css">
@@ -262,7 +262,7 @@ div.tocify {
 
 <h1 class="title toc-ignore">Databrary Weekly</h1>
 <h4 class="author">Rick O. Gilmore &amp; Andrea Seisler</h4>
-<h4 class="date">2019-08-27 13:51:01</h4>
+<h4 class="date">2019-08-28 12:36:52</h4>
 
 </div>
 
@@ -273,17 +273,14 @@ div.tocify {
 <!-- Once we have API commands to upload new data, the `old_stats` can come from Databrary directly. -->
 <pre class="r"><code>new_stats &lt;- databraryapi::get_db_stats()
 new_stats$date &lt;- lubridate::as_datetime(new_stats$date)</code></pre>
-<!-- Let's try a Google Sheets-centered workflow. -->
-<!-- If this is the first time you are rendering this document in your current work session, please run this command to  -->
-<!-- authenticate to Google from the command line, that is **outside of RMarkdown**: -->
+<p>Let’s try a Google Sheets-centered workflow. If this is the first time you are rendering this document in your current work session, please run this command to authenticate to Google from the command line, that is <strong>outside of RMarkdown</strong>:</p>
 <pre><code>db &lt;- googlesheets::gs_title(&#39;Databrary-analytics&#39;)</code></pre>
 <pre class="r"><code>#key &lt;- &quot;1tvlIQzULrMtXo97aJu71ljdTmNXkwwpU9eOOasVer3g&quot;
 db &lt;- gs_title(&#39;Databrary-analytics&#39;)</code></pre>
-<!-- Now, let's load the data about the number of institutions and investigators. -->
+<p>Now, let’s load the data about the number of institutions and investigators.</p>
 <pre class="r"><code>old_stats &lt;- db %&gt;%
   gs_read(ws = &#39;institutions-investigators&#39;)</code></pre>
-<!-- We then update the old stats with new data if `params$update_stats` is TRUE. -->
-<!-- In the current context, `params$update_stats` == FALSE. -->
+<p>We then update the old stats with new data if <code>params$update_stats</code> is TRUE. In the current context, <code>params$update_stats</code> == TRUE.</p>
 <pre class="r"><code># initialize updated_stats
 updated_stats &lt;- old_stats
 if (as.logical(params$update_stats)) {
@@ -297,7 +294,7 @@ if (as.logical(params$update_stats)) {
   updated_stats$investigators[next_entry] &lt;- new_stats$investigators
   updated_stats$affiliates[next_entry] &lt;- new_stats$affiliates
 }</code></pre>
-<!-- Now, we plot the data. -->
+<p>Now, we plot the data.</p>
 <pre class="r"><code># Create a tidy form for plotting both institutions and investigators and affiliates
 updated_stats &lt;- updated_stats %&gt;%
   gather(., key = &quot;type&quot;, value = &quot;count&quot;, -date) %&gt;%
@@ -305,9 +302,9 @@ updated_stats &lt;- updated_stats %&gt;%
   select(date, count, type) %&gt;%
   #filter(type %in% c(&#39;institutions&#39;, &#39;investigators&#39;, &#39;affiliates&#39;)) %&gt;%
   filter(type %in% c(&#39;institutions&#39;, &#39;investigators&#39;)) %&gt;%
-  filter(!is.na(count))
-
-# Plot
+  filter(!is.na(count))</code></pre>
+<pre><code>## Warning: 3 failed to parse.</code></pre>
+<pre class="r"><code># Plot
 p &lt;- updated_stats %&gt;%
   ggplot(., aes(x = date, y = count, color = type, group = type)) +
   geom_point() +
@@ -323,9 +320,10 @@ ggdraw(p) +
   #draw_label(&quot;Affiliates&quot;, colour = color_purple, .9, .3)+
   draw_label(&quot;Investigators&quot;, colour = color_teal, .8, .9) +
   draw_label(&quot;Institutions&quot;, colour = color_orange, .9, .6)</code></pre>
-<p><img src="databrary_weekly_rpt_new_2019-08-27_files/figure-html/db-inst-user-plot-1.png" width="672" /></p>
-<!-- Next, we update the Google Sheet if `params$update_gs` is TRUE. -->
-<!-- In the current context, `params$update_gs` == FALSE. -->
+<pre><code>## Warning: Removed 2 rows containing missing values (geom_point).</code></pre>
+<pre><code>## Warning: Removed 2 rows containing missing values (geom_path).</code></pre>
+<p><img src="databrary_weekly_rpt_2019-08-28_files/figure-html/db-inst-user-plot-1.png" width="672" /></p>
+<p>Next, we update the Google Sheet if <code>params$update_gs</code> is TRUE. In the current context, <code>params$update_gs</code> == TRUE.</p>
 <pre class="r"><code>if (as.logical(params$update_gs)) {
   db &lt;- db %&gt;%
     gs_add_row(ws = &#39;institutions-investigators&#39;, input = new_stats[,c(1, 4, 2, 3)])
@@ -421,12 +419,11 @@ new_institutions %&gt;%
 </div>
 <div id="volumes" class="section level1">
 <h1><span class="header-section-number">2</span> Volumes</h1>
-<!-- Let's try a new workflow based on Google Sheets. -->
-<!-- We should already have the spreadsheet loaded. -->
+<p>Let’s try a new workflow based on Google Sheets. We should already have the spreadsheet loaded.</p>
 <pre class="r"><code># Read from Google Sheet
 old_vols &lt;- db %&gt;%
   gs_read(ws = &#39;volumes-shared-unshared&#39;)</code></pre>
-<!-- Now update from information derived from `databraryapi::db_stats()` if `params$update_stats` is TRUE. -->
+<p>Now update from information derived from <code>databraryapi::db_stats()</code> if <code>params$update_stats</code> is TRUE.</p>
 <pre class="r"><code>updated_vols &lt;- old_vols
 if (as.logical(params$update_stats)) {
   next_entry &lt;- dim(updated_vols)[1] + 1
@@ -457,8 +454,8 @@ vols_plot &lt;- updated_vols %&gt;%
 ggdraw(vols_plot) + 
   draw_label(&quot;Unshared&quot;, colour = color_teal, .84, .92) +
   draw_label(&quot;Shared&quot;, colour = color_orange, .84, .70)</code></pre>
-<p><img src="databrary_weekly_rpt_new_2019-08-27_files/figure-html/db-vols-plot-1.png" width="672" /></p>
-<!-- Next, we update the Google Sheet if `params$update_gs` is TRUE. -->
+<p><img src="databrary_weekly_rpt_2019-08-28_files/figure-html/db-vols-plot-1.png" width="672" /></p>
+<p>Next, we update the Google Sheet if <code>params$update_gs</code> is TRUE.</p>
 <pre class="r"><code>if (as.logical(params$update_gs)) {
   new_data &lt;- data_frame(date = Sys.Date(), 
                          shared_volumes = new_stats$datasets_shared, 
@@ -468,6 +465,8 @@ ggdraw(vols_plot) +
 } else {
   message(&quot;&#39;update_gs&#39; parameter is &#39;false&#39;, so Google Sheet data unmodified.&quot;)
 }</code></pre>
+<pre><code>## Warning: `data_frame()` is deprecated, use `tibble()`.
+## This warning is displayed once per session.</code></pre>
 <div id="new-volumes" class="section level2">
 <h2><span class="header-section-number">2.1</span> New volumes</h2>
 <pre class="r"><code># define helper functions
@@ -532,7 +531,69 @@ unnested_vols %&gt;%
 </tr>
 </tbody>
 </table>
-<!-- If there are multiple investigators for the volume, there will be a row for each investigator on the new volume. -->
+<p>If there are multiple investigators for the volume, there will be a row for each investigator on the new volume.</p>
+</div>
+</div>
+<div id="data-about-volumes-with-videos" class="section level1">
+<h1><span class="header-section-number">3</span> Data about volumes with videos</h1>
+<pre class="r"><code># TODO: Fix this. It&#39;s hacky and awful.
+
+# List files with metadata
+csv_files &lt;- list.files(path = &quot;csv&quot;, pattern = &quot;vol_&quot;, full.names = TRUE)
+
+# Extract vector of volume numbers, determine the maximum
+vol_nums &lt;- stringr::str_match(csv_files, pattern = &quot;_([0-9]+)\\.&quot;)
+vol_ids &lt;- as.numeric(vol_nums[,2])
+last_vol &lt;- max(vol_ids)
+vols_to_test &lt;- params$vols_to_test
+
+# Create function to write new data files for each volume
+write_vid_csv &lt;- function(vol.id = 1) {
+  message(paste0(&quot;Getting data for volume &quot;, vol.id))
+  vid_dat &lt;- get_video_stats(vol.id)
+  # This .Rmd file is already in working/
+  if (!is.null(vid_dat)) {
+    write.csv(vid_dat, file = paste0(&quot;csv/vol_&quot;, vol.id, &quot;.csv&quot;),
+              row.names = FALSE)
+  }
+} </code></pre>
+<pre class="r"><code>vol_files &lt;- list.files(&quot;csv&quot;, pattern = &quot;vol_[0-9]+&quot;, full.names = TRUE)
+
+# Import the individual csv files
+video_data &lt;- lapply(vol_files, read_csv)
+video_stats &lt;- Reduce(function(x,y) merge(x, y, all = TRUE), video_data)</code></pre>
+<p>The median number of videos per volume is 16 with a range of [1, 4368].</p>
+<pre class="r"><code>vols &lt;- video_stats$vol_id
+vol_info &lt;- lapply(vols, list_volume_metadata)
+vols_data &lt;- Reduce(function(x,y) merge(x, y, all = TRUE), vol_info)
+vols_joined &lt;- dplyr::left_join(vols_data, video_stats, by = c(&quot;vol_id&quot; = &quot;vol_id&quot;))</code></pre>
+<p>There are 16 volumes with DOIs (shared) that have sessions and at least one video as of today (2019-08-28 12:37:20).</p>
+<div id="number-of-videos-in-shared-volumes" class="section level2">
+<h2><span class="header-section-number">3.1</span> Number of videos in (shared) volumes</h2>
+<pre class="r"><code>vols_joined %&gt;%
+  filter(!is.na(doi)) %&gt;%
+  ggplot(.) +
+  aes(x=n_videos)+
+  geom_histogram()</code></pre>
+<p><img src="databrary_weekly_rpt_2019-08-28_files/figure-html/n-vids-shared-vols-1.png" width="672" /></p>
+</div>
+<div id="number-of-sessions-in-shared-volumes" class="section level2">
+<h2><span class="header-section-number">3.2</span> Number of sessions in (shared) volumes</h2>
+<pre class="r"><code>vols_joined %&gt;%
+  filter(!is.na(doi)) %&gt;%
+  ggplot(.) +
+  aes(x=n_sessions)+
+  geom_histogram()</code></pre>
+<p><img src="databrary_weekly_rpt_2019-08-28_files/figure-html/n-sessions-shared-vols-1.png" width="672" /></p>
+</div>
+<div id="total-video-hours-in-shared-volumes" class="section level2">
+<h2><span class="header-section-number">3.3</span> Total video hours in (shared) volumes</h2>
+<pre class="r"><code>vols_joined %&gt;%
+  filter(!is.na(doi)) %&gt;%
+  ggplot(.) +
+  aes(x=tot_hrs)+
+  geom_histogram()</code></pre>
+<p><img src="databrary_weekly_rpt_2019-08-28_files/figure-html/tot-hrs-shared-vols-1.png" width="672" /></p>
 </div>
 </div>
 

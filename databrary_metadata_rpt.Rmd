@@ -16,11 +16,9 @@ output:
     toc_float: yes
 params:
   db_account: rogilmore@psu.edu
-  update_gs: false
-  update_stats: false
+  update_gs: no
+  update_stats: no
   vols_to_test: 10
-  #rpt_weekly: true
-  #rpt_monthly: false
 ---
 
 ```{r setup, include=FALSE}
