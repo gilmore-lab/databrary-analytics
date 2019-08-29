@@ -19,7 +19,7 @@ output:
 params:
   db_account: rogilmore@psu.edu
   update_gs: no
-  update_stats: no
+  update_stats: yes
   vols_to_test: 10
 ---
 
@@ -51,6 +51,7 @@ library(googledrive)
 library(plyr)
 library(googlesheets) 
   options(httr_oob_default=TRUE) 
+library(kableExtra)
 
 # Log in to Databrary
 if (!databraryapi::login_db(params$db_account)) {
@@ -69,17 +70,28 @@ databrary_theme <-
   theme(axis.title.x=element_blank()) +
   theme(legend.position="none", 
         axis.text = element_text(size = rel(0.8), colour = "black")) +
-  theme(axis.line = element_blank())
+  theme(axis.line = element_blank()) +
+  theme(plot.title = element_text(hjust = 0.5))
 ```
 
 # Institutions & Authorized Users 
 
-
 ```{r child = 'users.Rmd'}
 ```
 
+## New Institutions
+
+```{r child = 'institutions.Rmd'}
+```
+
+## New Authorized Investigators
+
+#```{r child = 'investigators.Rmd'}
+#```
 
 # Volumes
 
+```{r child = 'volumes_shared.Rmd'}
+```
 
 
