@@ -47,7 +47,8 @@ library(tidyverse)
 library(reshape2)
 library(cowplot)
 library(googledrive)
-  drive_auth(use_oob = TRUE)
+  #drive_auth(use_oob = TRUE)
+ drive_deauth()
 library(plyr)
 library(googlesheets) 
   options(httr_oob_default=TRUE) 
@@ -74,6 +75,18 @@ databrary_theme <-
   theme(plot.title = element_text(hjust = 0.5))
 ```
 
+<!-- # Get Data -->
+
+```{r get-databrary-stats}
+new_stats <- databraryapi::get_db_stats()
+new_stats$date <- lubridate::as_datetime(new_stats$date)
+```
+
+```{r data-from-googlesheets}
+#key <- "1tvlIQzULrMtXo97aJu71ljdTmNXkwwpU9eOOasVer3g"
+db <- gs_title('Databrary-analytics')
+```
+
 # Institutions & Authorized Users 
 
 ```{r child = 'users.Rmd'}
@@ -86,8 +99,8 @@ databrary_theme <-
 
 ## New Authorized Investigators
 
-```{r child = 'investigators.Rmd'}
-```
+#```{r child = 'investigators.Rmd'}
+#```
 
 # Volumes
 

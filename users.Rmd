@@ -29,21 +29,21 @@ author: "Andrea Seisler"
 <!-- At the moment, the `old_stats` come from google sheets. -->
 <!-- Once we have API commands to upload new data, the `old_stats` can come from Databrary directly. -->
 
-```{r get-databrary-stats}
-new_stats <- databraryapi::get_db_stats()
-new_stats$date <- lubridate::as_datetime(new_stats$date)
-```
+<!-- ```{r get-databrary-stats} -->
+<!-- new_stats <- databraryapi::get_db_stats() -->
+<!-- new_stats$date <- lubridate::as_datetime(new_stats$date) -->
+<!-- ``` -->
 
-<!-- Let's try a Google Sheets-centered workflow. -->
-<!-- If this is the first time you are rendering this document in your current work session, please run this command to  -->
-<!-- authenticate to Google from the command line, that is **outside of RMarkdown**: -->
+<!-- <!-- Let's try a Google Sheets-centered workflow. --> -->
+<!-- <!-- If this is the first time you are rendering this document in your current work session, please run this command to  --> -->
+<!-- <!-- authenticate to Google from the command line, that is **outside of RMarkdown**: --> -->
 
 
 
-```{r data-from-googlesheets}
-#key <- "1tvlIQzULrMtXo97aJu71ljdTmNXkwwpU9eOOasVer3g"
-db <- gs_title('Databrary-analytics')
-```
+<!-- ```{r data-from-googlesheets} -->
+<!-- #key <- "1tvlIQzULrMtXo97aJu71ljdTmNXkwwpU9eOOasVer3g" -->
+<!-- db <- gs_title('Databrary-analytics') -->
+<!-- ``` -->
 
 <!-- Now, let's load the data about the number of institutions and investigators. -->
 
