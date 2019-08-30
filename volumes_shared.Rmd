@@ -1,78 +1,29 @@
 ---
 title: "volumes-shared"
 author: "Andrea Seisler"
-date:  "`r Sys.time()`"
-
-# Appends the date to the output filename
-knit: (function(inputFile, encoding) { rmarkdown::render(inputFile, encoding = encoding, output_file = paste0(substr(inputFile,1,nchar(inputFile)-4),'_',Sys.Date(),'.html')) })
-
-# How do we move the folder with the files for this?
-
-output:
-  html_document:
-    code_folding: hide
-    number_sections: yes
-    self_contained: no
-    toc: yes
-    toc_depth: 3
-    toc_float: yes
-params:
-  db_account: rogilmore@psu.edu
-  update_gs: no
-  update_stats: yes
-  vols_to_test: 10
+# date:  "`r Sys.time()`"
+# 
+# # Appends the date to the output filename
+# knit: (function(inputFile, encoding) { rmarkdown::render(inputFile, encoding = encoding, output_file = paste0(substr(inputFile,1,nchar(inputFile)-4),'_',Sys.Date(),'.html')) })
+# 
+# # How do we move the folder with the files for this?
+# 
+# output:
+#   html_document:
+#     code_folding: hide
+#     number_sections: yes
+#     self_contained: no
+#     toc: yes
+#     toc_depth: 3
+#     toc_float: yes
+# params:
+#   db_account: rogilmore@psu.edu
+#   update_gs: no
+#   update_stats: yes
+#   vols_to_test: 10
 ---
 
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE, message = FALSE)
 
-# Install packages if needed
-cran_packages <- c('ggplot2', 'tidyverse', 'reshape2', 'cowplot',
-                    'googledrive', 'plyr', 'googlesheets')
-not_installed <- cran_packages[!(cran_packages %in% installed.packages()[,"Package"])]
-if(length(not_installed)) {
-  message('Installing packages required for this document.')
-  install.packages(not_installed)
-}
-
-github_packages <- 'PLAY-behaviorome/databraryapi'
-not_installed <- github_packages[!(github_packages %in% installed.packages()[,"Package"])]
-if(length(not_installed)) devtools::install_github(not_installed)
-
-# Load
-
-#library(rmarkdown)
-library(databraryapi)
-library(tidyverse)
-library(reshape2)
-library(cowplot)
-library(googledrive)
-  drive_auth(use_oob = TRUE)
-library(plyr)
-library(googlesheets) 
-  options(httr_oob_default=TRUE) 
-library(kableExtra)
-
-# Log in to Databrary
-if (!databraryapi::login_db(params$db_account)) {
-  message("Log-in failed.")
-}
-
-# Graphic theme elements
-ln_size <- 3
-base_size <- 14
-color_orange <- "#ec7751"
-color_teal <- "#4CAE99"
-color_purple <-"#AB00FF"
-
-databrary_theme <- 
-  theme_classic(base_size = base_size) +
-  theme(axis.title.x=element_blank()) +
-  theme(legend.position="none", 
-        axis.text = element_text(size = rel(0.8), colour = "black")) +
-  theme(axis.line = element_blank()) +
-  theme(plot.title = element_text(hjust = 0.5))
-```
 
 
 <!-- # Volumes -->

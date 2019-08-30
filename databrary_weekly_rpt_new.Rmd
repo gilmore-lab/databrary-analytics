@@ -86,8 +86,8 @@ databrary_theme <-
 
 ## New Authorized Investigators
 
-#```{r child = 'investigators.Rmd'}
-#```
+```{r child = 'investigators.Rmd'}
+```
 
 # Volumes
 

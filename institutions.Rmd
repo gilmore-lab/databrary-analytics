@@ -1,26 +1,6 @@
 ---
 title: "Institutions"
 author: "Andrea Seisler"
-# date: "`r Sys.time()`"
-# 
-# # Appends the date to the output filename
-# knit: (function(inputFile, encoding) { rmarkdown::render(inputFile, encoding = encoding, output_file = paste0(substr(inputFile,1,nchar(inputFile)-4),'_',Sys.Date(),'.html')) })
-# 
-# # How do we move the folder with the files for this?
-# 
-# output: 
-#   html_document:
-#     code_folding: hide
-#     number_sections: yes
-#     self_contained: no
-#     toc: yes
-#     toc_depth: 3
-#     toc_float: yes
-# params:
-#   db_account: rogilmore@psu.edu
-#   update_gs: no
-#   update_stats: no
-#   vols_to_test: 10
 ---
 
 <!-- ## New institutions -->
