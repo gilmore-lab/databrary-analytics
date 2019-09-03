@@ -139,6 +139,7 @@ if (as.logical(params$update_stats)) {
 ```
 
 <!-- # Update Data -->
+
 ```{r update-inst-inv-gs}
 if (as.logical(params$update_gs)) {
   db <- db %>%

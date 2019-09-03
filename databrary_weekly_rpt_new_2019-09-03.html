@@ -263,7 +263,11 @@ div.tocify {
 
 <h1 class="title toc-ignore">Databrary Weekly</h1>
 <h4 class="author">Rick O. Gilmore &amp; Andrea Seisler</h4>
+<<<<<<< HEAD
 <h4 class="date">2019-09-03 10:59:37</h4>
+=======
+<h4 class="date">2019-09-03 09:30:58</h4>
+>>>>>>> 92c70aad4a159542e5eaae409b3acb4c740150b2
 
 </div>
 
@@ -338,6 +342,16 @@ ggdraw(p) +
 <pre><code>## Warning: Removed 2 rows containing missing values (geom_point).</code></pre>
 <pre><code>## Warning: Removed 2 rows containing missing values (geom_path).</code></pre>
 <p><img src="databrary_weekly_rpt_new_2019-09-03_files/figure-html/db-inst-user-plot-1.png" width="672" /> <!-- Next, we update the Google Sheet if `params$update_gs` is TRUE. --> <!-- In the current context, `params$update_gs` == FALSE. --></p>
+<<<<<<< HEAD
+=======
+<pre class="r"><code>if (as.logical(params$update_gs)) {
+  db &lt;- db %&gt;%
+    gs_add_row(ws = &#39;institutions-investigators&#39;, input = new_stats[,c(1, 4, 2, 3)])
+  message(&quot;&#39;update_gs&#39; parameter is &#39;TRUE&#39;, so Google Sheet data will be updated.&quot;)
+} else {
+  message(&quot;&#39;update_gs&#39; parameter is &#39;FALSE&#39;, so Google Sheet data unmodified.&quot;)
+}</code></pre>
+>>>>>>> 92c70aad4a159542e5eaae409b3acb4c740150b2
 <div id="new-institutions" class="section level2">
 <h2><span class="header-section-number">1.1</span> New Institutions</h2>
 <!-- ## New institutions -->
@@ -406,7 +420,11 @@ University of North Carolina, Charolotte
 new_people %&gt;%
   mutate(db_url = paste0(&quot;https://databrary.org/party/&quot;, id)) %&gt;%
   select(., sortname, prename, affiliation, db_url) %&gt;%
+<<<<<<< HEAD
   unite(col = &quot;Investigator Name&quot;, prename, sortname, sep=&quot; &quot;) %&gt;%
+=======
+  unite(col = &quot;Full Name&quot;, prename, sortname, sep=&quot; &quot;) %&gt;%
+>>>>>>> 92c70aad4a159542e5eaae409b3acb4c740150b2
   knitr::kable(col.names = c(&quot;Full Name&quot;, &quot;Affiliation&quot;, &quot;Databrary URL&quot;)) %&gt;%
   kable_styling() #%&gt;%</code></pre>
 <table class="table" style="margin-left: auto; margin-right: auto;">
@@ -426,6 +444,7 @@ Databrary URL
 <tbody>
 <tr>
 <td style="text-align:left;">
+<<<<<<< HEAD
 Branka Spehar
 </td>
 <td style="text-align:left;">
@@ -437,6 +456,8 @@ The University of New South Wales, Sydney, Australia
 </tr>
 <tr>
 <td style="text-align:left;">
+=======
+>>>>>>> 92c70aad4a159542e5eaae409b3acb4c740150b2
 Joan Bihun
 </td>
 <td style="text-align:left;">
@@ -479,6 +500,20 @@ UCLA
 <a href="https://databrary.org/party/5689" class="uri">https://databrary.org/party/5689</a>
 </td>
 </tr>
+<<<<<<< HEAD
+=======
+<tr>
+<td style="text-align:left;">
+Kelli Rudolph
+</td>
+<td style="text-align:left;">
+University of Kent
+</td>
+<td style="text-align:left;">
+<a href="https://databrary.org/party/5762" class="uri">https://databrary.org/party/5762</a>
+</td>
+</tr>
+>>>>>>> 92c70aad4a159542e5eaae409b3acb4c740150b2
 </tbody>
 </table>
 <pre class="r"><code>  #save_kable(file = &quot;new_institutions.html&quot;, self_contained = T)</code></pre>
