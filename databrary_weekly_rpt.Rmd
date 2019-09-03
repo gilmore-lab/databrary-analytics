@@ -23,6 +23,7 @@ params:
   vols_to_test: 10
 ---
 
+  
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE, message = FALSE)
 
@@ -50,7 +51,8 @@ library(tidyverse)
 library(reshape2)
 library(cowplot)
 library(googledrive)
-  drive_auth(use_oob = TRUE)
+  drive_deauth()
+  #drive_auth(use_oob = TRUE)
 library(plyr)
 library(googlesheets) 
   options(httr_oob_default=TRUE) 

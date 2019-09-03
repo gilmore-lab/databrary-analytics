@@ -18,7 +18,7 @@ output:
     toc_float: yes
 params:
   db_account: rogilmore@psu.edu
-  update_gs: no
+  update_gs: yes
   update_stats: yes
   vols_to_test: 10
 ---
@@ -105,6 +105,11 @@ db <- gs_title('Databrary-analytics')
 # Volumes
 
 ```{r child = 'volumes_shared.Rmd'}
+```
+
+# Citations
+
+```{r child = 'citations.Rmd'}
 ```
 
 

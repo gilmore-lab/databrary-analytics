@@ -34,9 +34,9 @@ author: "Andrea Seisler"
 <!-- new_stats$date <- lubridate::as_datetime(new_stats$date) -->
 <!-- ``` -->
 
-<!-- <!-- Let's try a Google Sheets-centered workflow. --> -->
-<!-- <!-- If this is the first time you are rendering this document in your current work session, please run this command to  --> -->
-<!-- <!-- authenticate to Google from the command line, that is **outside of RMarkdown**: --> -->
+<!-- <!-- Let's try a Google Sheets-centered workflow. --> 
+<!-- <!-- If this is the first time you are rendering this document in your current work session, please run this command to  -->
+<!-- <!-- authenticate to Google from the command line, that is **outside of RMarkdown**: -->
 
 
 

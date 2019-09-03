@@ -14,8 +14,8 @@ params:
   db_account: rogilmore@psu.edu
   #db_account: andrea.seisler@databrary.org
   vols_to_test: 10
-  update_gs: false
-  update_stats: false
+  update_gs: no
+  update_stats: no
 ---
 
 ```{r setup, include=FALSE}
@@ -27,7 +27,8 @@ library(reshape2)
 library(cowplot)
 library(plyr)
 library(googledrive)
-  drive_auth(use_oob = TRUE)
+  drive_deauth()
+  #drive_auth(use_oob = TRUE)
 library(googlesheets) 
   options(httr_oob_default=TRUE) 
 
