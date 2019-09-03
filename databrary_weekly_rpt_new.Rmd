@@ -18,7 +18,7 @@ output:
     toc_float: yes
 params:
   db_account: rogilmore@psu.edu
-  update_gs: yes
+  update_gs: no
   update_stats: yes
   vols_to_test: 10
 ---
@@ -99,8 +99,8 @@ db <- gs_title('Databrary-analytics')
 
 ## New Authorized Investigators
 
-#```{r child = 'investigators.Rmd'}
-#```
+```{r child = 'people.Rmd'}
+```
 
 # Volumes
 

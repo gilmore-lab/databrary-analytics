@@ -263,7 +263,7 @@ div.tocify {
 
 <h1 class="title toc-ignore">Databrary Weekly</h1>
 <h4 class="author">Rick O. Gilmore &amp; Andrea Seisler</h4>
-<h4 class="date">2019-09-03 08:48:23</h4>
+<h4 class="date">2019-09-03 09:30:58</h4>
 
 </div>
 
@@ -337,7 +337,7 @@ ggdraw(p) +
   draw_label(max(new_stats$institutions), colour = color_orange, .87, .5)</code></pre>
 <pre><code>## Warning: Removed 2 rows containing missing values (geom_point).</code></pre>
 <pre><code>## Warning: Removed 2 rows containing missing values (geom_path).</code></pre>
-<p><img src="databrary_weekly_rpt_new_2019-09-03_files/figure-html/db-inst-user-plot-1.png" width="672" /> <!-- Next, we update the Google Sheet if `params$update_gs` is TRUE. --> <!-- In the current context, `params$update_gs` == TRUE. --></p>
+<p><img src="databrary_weekly_rpt_new_2019-09-03_files/figure-html/db-inst-user-plot-1.png" width="672" /> <!-- Next, we update the Google Sheet if `params$update_gs` is TRUE. --> <!-- In the current context, `params$update_gs` == FALSE. --></p>
 <pre class="r"><code>if (as.logical(params$update_gs)) {
   db &lt;- db %&gt;%
     gs_add_row(ws = &#39;institutions-investigators&#39;, input = new_stats[,c(1, 4, 2, 3)])
@@ -408,7 +408,87 @@ University of North Carolina, Charolotte
 </div>
 <div id="new-authorized-investigators" class="section level2">
 <h2><span class="header-section-number">1.2</span> New Authorized Investigators</h2>
-<p>#<code>{r child = 'investigators.Rmd'} #</code></p>
+<!-- ## New investigators -->
+<pre class="r"><code>new_people &lt;- databraryapi::get_db_stats(type = &quot;people&quot;)
+new_people %&gt;%
+  mutate(db_url = paste0(&quot;https://databrary.org/party/&quot;, id)) %&gt;%
+  select(., sortname, prename, affiliation, db_url) %&gt;%
+  unite(col = &quot;Full Name&quot;, prename, sortname, sep=&quot; &quot;) %&gt;%
+  knitr::kable(col.names = c(&quot;Full Name&quot;, &quot;Affiliation&quot;, &quot;Databrary URL&quot;)) %&gt;%
+  kable_styling() #%&gt;%</code></pre>
+<table class="table" style="margin-left: auto; margin-right: auto;">
+<thead>
+<tr>
+<th style="text-align:left;">
+Full Name
+</th>
+<th style="text-align:left;">
+Affiliation
+</th>
+<th style="text-align:left;">
+Databrary URL
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+Joan Bihun
+</td>
+<td style="text-align:left;">
+University of Colorado Denver
+</td>
+<td style="text-align:left;">
+<a href="https://databrary.org/party/4478" class="uri">https://databrary.org/party/4478</a>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Brooke Spatta
+</td>
+<td style="text-align:left;">
+Presbyterian College
+</td>
+<td style="text-align:left;">
+<a href="https://databrary.org/party/5772" class="uri">https://databrary.org/party/5772</a>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Laura Marie Armstrong
+</td>
+<td style="text-align:left;">
+UNC Charlotte
+</td>
+<td style="text-align:left;">
+<a href="https://databrary.org/party/5492" class="uri">https://databrary.org/party/5492</a>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Melissa Paquette-Smith
+</td>
+<td style="text-align:left;">
+UCLA
+</td>
+<td style="text-align:left;">
+<a href="https://databrary.org/party/5689" class="uri">https://databrary.org/party/5689</a>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Kelli Rudolph
+</td>
+<td style="text-align:left;">
+University of Kent
+</td>
+<td style="text-align:left;">
+<a href="https://databrary.org/party/5762" class="uri">https://databrary.org/party/5762</a>
+</td>
+</tr>
+</tbody>
+</table>
+<pre class="r"><code>  #save_kable(file = &quot;new_institutions.html&quot;, self_contained = T)</code></pre>
 </div>
 </div>
 <div id="volumes" class="section level1">
@@ -419,7 +499,6 @@ University of North Carolina, Charolotte
 <!-- # new_stats$date <- lubridate::as_datetime(new_stats$date) -->
 <!-- # ``` -->
 <!-- <!-- Let's try a new workflow based on Google Sheets. -->
-<p>–&gt;</p>
 <!-- # ```{r data-from-googlesheets} -->
 <!-- # #key <- "1tvlIQzULrMtXo97aJu71ljdTmNXkwwpU9eOOasVer3g" -->
 <!-- # db <- gs_title('Databrary-analytics') -->
@@ -449,7 +528,7 @@ vols_plot &lt;- updated_vols %&gt;%
   geom_point() + 
   geom_line(size=ln_size) +
   scale_colour_manual(values=c(color_orange, color_teal)) + 
-  ggtitle(paste(&quot;Authorizations as of &quot;, Sys.Date())) +
+  ggtitle(paste(&quot;Volumes as of &quot;, Sys.Date())) +
   ylab(&quot;Volumes&quot;) +
   databrary_theme +
   scale_y_continuous(breaks = seq(0, round_any(max(updated_vols$count), 100, ceiling), 100), expand = c(0,0)) +
@@ -471,8 +550,6 @@ ggdraw(vols_plot) +
 } else {
   message(&quot;&#39;update_gs&#39; parameter is &#39;false&#39;, so Google Sheet data unmodified.&quot;)
 }</code></pre>
-<pre><code>## Warning: `data_frame()` is deprecated, use `tibble()`.
-## This warning is displayed once per session.</code></pre>
 <div id="new-volumes" class="section level2">
 <h2><span class="header-section-number">2.1</span> New volumes</h2>
 <pre class="r"><code># define helper functions
