@@ -18,7 +18,7 @@ output:
     toc_float: yes
 params:
   db_account: rogilmore@psu.edu
-  update_gs: yes
+  update_gs: no
   update_stats: yes
   vols_to_test: 10
 ---
@@ -47,8 +47,8 @@ library(tidyverse)
 library(reshape2)
 library(cowplot)
 library(googledrive)
-  #drive_auth(use_oob = TRUE)
- drive_deauth()
+  drive_auth(use_oob = TRUE)
+  #drive_deauth()
 library(plyr)
 library(googlesheets) 
   options(httr_oob_default=TRUE) 
@@ -87,6 +87,27 @@ new_stats$date <- lubridate::as_datetime(new_stats$date)
 db <- gs_title('Databrary-analytics')
 ```
 
+```{r load-inst-invest-from-googlesheets}
+old_stats <- db %>%
+  gs_read(ws = 'institutions-investigators')
+```
+
+```{r update-stats}
+# initialize updated_stats
+updated_stats <- old_stats
+if (as.logical(params$update_stats)) {
+  next_entry <- dim(updated_stats)[1] + 1
+  updated_stats[next_entry,] = NA
+  updated_stats <- updated_stats
+  
+  # fill with new data
+  updated_stats$date[next_entry] <- new_stats$date
+  updated_stats$institutions[next_entry] <- new_stats$investigators
+  updated_stats$investigators[next_entry] <- new_stats$investigators
+  updated_stats$affiliates[next_entry] <- new_stats$affiliates
+}
+```
+
 # Institutions & Authorized Users 
 
 ```{r child = 'users.Rmd'}
@@ -99,8 +120,8 @@ db <- gs_title('Databrary-analytics')
 
 ## New Authorized Investigators
 
-#```{r child = 'investigators.Rmd'}
-#```
+```{r child = 'people.Rmd'}
+```
 
 # Volumes
 
@@ -112,4 +133,18 @@ db <- gs_title('Databrary-analytics')
 ```{r child = 'citations.Rmd'}
 ```
 
+# Affiliates
 
+```{r child = 'affiliates.Rmd'}
+```
+
+<!-- # Update Data -->
+```{r update-inst-inv-gs}
+if (as.logical(params$update_gs)) {
+  db <- db %>%
+    gs_add_row(ws = 'institutions-investigators', input = new_stats[,c(1, 4, 2, 3)])
+  message("'update_gs' parameter is 'TRUE', so Google Sheet data will be updated.")
+} else {
+  message("'update_gs' parameter is 'FALSE', so Google Sheet data unmodified.")
+}
+```

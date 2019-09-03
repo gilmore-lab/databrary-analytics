@@ -1,6 +1,7 @@
 ---
 title: "citations.Rmd"
 author: "Andrea Seisler"
+date:  "`r Sys.time()`"
 ---
 
 <!-- # Citation counts -->

@@ -10,7 +10,7 @@ author: "Andrea Seisler"
 <!-- # new_stats$date <- lubridate::as_datetime(new_stats$date) -->
 <!-- # ``` -->
 
-<!-- <!-- Let's try a new workflow based on Google Sheets. --> -->
+<!-- <!-- Let's try a new workflow based on Google Sheets. -->
 
 <!-- # ```{r data-from-googlesheets} -->
 <!-- # #key <- "1tvlIQzULrMtXo97aJu71ljdTmNXkwwpU9eOOasVer3g" -->
@@ -50,7 +50,7 @@ vols_plot <- updated_vols %>%
   geom_point() + 
   geom_line(size=ln_size) +
   scale_colour_manual(values=c(color_orange, color_teal)) + 
-  ggtitle(paste("Authorizations as of ", Sys.Date())) +
+  ggtitle(paste("Volumes as of ", Sys.Date())) +
   ylab("Volumes") +
   databrary_theme +
   scale_y_continuous(breaks = seq(0, round_any(max(updated_vols$count), 100, ceiling), 100), expand = c(0,0)) +

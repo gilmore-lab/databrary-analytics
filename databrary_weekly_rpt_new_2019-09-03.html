@@ -263,7 +263,7 @@ div.tocify {
 
 <h1 class="title toc-ignore">Databrary Weekly</h1>
 <h4 class="author">Rick O. Gilmore &amp; Andrea Seisler</h4>
-<h4 class="date">2019-09-03 08:48:23</h4>
+<h4 class="date">2019-09-03 10:59:37</h4>
 
 </div>
 
@@ -273,6 +273,21 @@ div.tocify {
 new_stats$date &lt;- lubridate::as_datetime(new_stats$date)</code></pre>
 <pre class="r"><code>#key &lt;- &quot;1tvlIQzULrMtXo97aJu71ljdTmNXkwwpU9eOOasVer3g&quot;
 db &lt;- gs_title(&#39;Databrary-analytics&#39;)</code></pre>
+<pre class="r"><code>old_stats &lt;- db %&gt;%
+  gs_read(ws = &#39;institutions-investigators&#39;)</code></pre>
+<pre class="r"><code># initialize updated_stats
+updated_stats &lt;- old_stats
+if (as.logical(params$update_stats)) {
+  next_entry &lt;- dim(updated_stats)[1] + 1
+  updated_stats[next_entry,] = NA
+  updated_stats &lt;- updated_stats
+  
+  # fill with new data
+  updated_stats$date[next_entry] &lt;- new_stats$date
+  updated_stats$institutions[next_entry] &lt;- new_stats$investigators
+  updated_stats$investigators[next_entry] &lt;- new_stats$investigators
+  updated_stats$affiliates[next_entry] &lt;- new_stats$affiliates
+}</code></pre>
 <div id="institutions-authorized-users" class="section level1">
 <h1><span class="header-section-number">1</span> Institutions &amp; Authorized Users</h1>
 <!-- # Institutions & Authorized Users -->
@@ -290,23 +305,8 @@ db &lt;- gs_title(&#39;Databrary-analytics&#39;)</code></pre>
 <!-- db <- gs_title('Databrary-analytics') -->
 <!-- ``` -->
 <!-- Now, let's load the data about the number of institutions and investigators. -->
-<pre class="r"><code>old_stats &lt;- db %&gt;%
-  gs_read(ws = &#39;institutions-investigators&#39;)</code></pre>
 <!-- We then update the old stats with new data if `params$update_stats` is TRUE. -->
 <!-- In the current context, `params$update_stats` == TRUE. -->
-<pre class="r"><code># initialize updated_stats
-updated_stats &lt;- old_stats
-if (as.logical(params$update_stats)) {
-  next_entry &lt;- dim(updated_stats)[1] + 1
-  updated_stats[next_entry,] = NA
-  updated_stats &lt;- updated_stats
-  
-  # fill with new data
-  updated_stats$date[next_entry] &lt;- new_stats$date
-  updated_stats$institutions[next_entry] &lt;- new_stats$investigators
-  updated_stats$investigators[next_entry] &lt;- new_stats$investigators
-  updated_stats$affiliates[next_entry] &lt;- new_stats$affiliates
-}</code></pre>
 <!-- Now, we plot the data. -->
 <pre class="r"><code># Create a tidy form for plotting both institutions and investigators and affiliates
 updated_stats &lt;- updated_stats %&gt;%
@@ -337,14 +337,7 @@ ggdraw(p) +
   draw_label(max(new_stats$institutions), colour = color_orange, .87, .5)</code></pre>
 <pre><code>## Warning: Removed 2 rows containing missing values (geom_point).</code></pre>
 <pre><code>## Warning: Removed 2 rows containing missing values (geom_path).</code></pre>
-<p><img src="databrary_weekly_rpt_new_2019-09-03_files/figure-html/db-inst-user-plot-1.png" width="672" /> <!-- Next, we update the Google Sheet if `params$update_gs` is TRUE. --> <!-- In the current context, `params$update_gs` == TRUE. --></p>
-<pre class="r"><code>if (as.logical(params$update_gs)) {
-  db &lt;- db %&gt;%
-    gs_add_row(ws = &#39;institutions-investigators&#39;, input = new_stats[,c(1, 4, 2, 3)])
-  message(&quot;&#39;update_gs&#39; parameter is &#39;TRUE&#39;, so Google Sheet data will be updated.&quot;)
-} else {
-  message(&quot;&#39;update_gs&#39; parameter is &#39;FALSE&#39;, so Google Sheet data unmodified.&quot;)
-}</code></pre>
+<p><img src="databrary_weekly_rpt_new_2019-09-03_files/figure-html/db-inst-user-plot-1.png" width="672" /> <!-- Next, we update the Google Sheet if `params$update_gs` is TRUE. --> <!-- In the current context, `params$update_gs` == FALSE. --></p>
 <div id="new-institutions" class="section level2">
 <h2><span class="header-section-number">1.1</span> New Institutions</h2>
 <!-- ## New institutions -->
@@ -408,7 +401,87 @@ University of North Carolina, Charolotte
 </div>
 <div id="new-authorized-investigators" class="section level2">
 <h2><span class="header-section-number">1.2</span> New Authorized Investigators</h2>
-<p>#<code>{r child = 'investigators.Rmd'} #</code></p>
+<!-- ## New investigators -->
+<pre class="r"><code>new_people &lt;- databraryapi::get_db_stats(type = &quot;people&quot;)
+new_people %&gt;%
+  mutate(db_url = paste0(&quot;https://databrary.org/party/&quot;, id)) %&gt;%
+  select(., sortname, prename, affiliation, db_url) %&gt;%
+  unite(col = &quot;Investigator Name&quot;, prename, sortname, sep=&quot; &quot;) %&gt;%
+  knitr::kable(col.names = c(&quot;Full Name&quot;, &quot;Affiliation&quot;, &quot;Databrary URL&quot;)) %&gt;%
+  kable_styling() #%&gt;%</code></pre>
+<table class="table" style="margin-left: auto; margin-right: auto;">
+<thead>
+<tr>
+<th style="text-align:left;">
+Full Name
+</th>
+<th style="text-align:left;">
+Affiliation
+</th>
+<th style="text-align:left;">
+Databrary URL
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+Branka Spehar
+</td>
+<td style="text-align:left;">
+The University of New South Wales, Sydney, Australia
+</td>
+<td style="text-align:left;">
+<a href="https://databrary.org/party/5675" class="uri">https://databrary.org/party/5675</a>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Joan Bihun
+</td>
+<td style="text-align:left;">
+University of Colorado Denver
+</td>
+<td style="text-align:left;">
+<a href="https://databrary.org/party/4478" class="uri">https://databrary.org/party/4478</a>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Brooke Spatta
+</td>
+<td style="text-align:left;">
+Presbyterian College
+</td>
+<td style="text-align:left;">
+<a href="https://databrary.org/party/5772" class="uri">https://databrary.org/party/5772</a>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Laura Marie Armstrong
+</td>
+<td style="text-align:left;">
+UNC Charlotte
+</td>
+<td style="text-align:left;">
+<a href="https://databrary.org/party/5492" class="uri">https://databrary.org/party/5492</a>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Melissa Paquette-Smith
+</td>
+<td style="text-align:left;">
+UCLA
+</td>
+<td style="text-align:left;">
+<a href="https://databrary.org/party/5689" class="uri">https://databrary.org/party/5689</a>
+</td>
+</tr>
+</tbody>
+</table>
+<pre class="r"><code>  #save_kable(file = &quot;new_institutions.html&quot;, self_contained = T)</code></pre>
 </div>
 </div>
 <div id="volumes" class="section level1">
@@ -419,7 +492,6 @@ University of North Carolina, Charolotte
 <!-- # new_stats$date <- lubridate::as_datetime(new_stats$date) -->
 <!-- # ``` -->
 <!-- <!-- Let's try a new workflow based on Google Sheets. -->
-<p>–&gt;</p>
 <!-- # ```{r data-from-googlesheets} -->
 <!-- # #key <- "1tvlIQzULrMtXo97aJu71ljdTmNXkwwpU9eOOasVer3g" -->
 <!-- # db <- gs_title('Databrary-analytics') -->
@@ -449,7 +521,7 @@ vols_plot &lt;- updated_vols %&gt;%
   geom_point() + 
   geom_line(size=ln_size) +
   scale_colour_manual(values=c(color_orange, color_teal)) + 
-  ggtitle(paste(&quot;Authorizations as of &quot;, Sys.Date())) +
+  ggtitle(paste(&quot;Volumes as of &quot;, Sys.Date())) +
   ylab(&quot;Volumes&quot;) +
   databrary_theme +
   scale_y_continuous(breaks = seq(0, round_any(max(updated_vols$count), 100, ceiling), 100), expand = c(0,0)) +
@@ -471,8 +543,6 @@ ggdraw(vols_plot) +
 } else {
   message(&quot;&#39;update_gs&#39; parameter is &#39;false&#39;, so Google Sheet data unmodified.&quot;)
 }</code></pre>
-<pre><code>## Warning: `data_frame()` is deprecated, use `tibble()`.
-## This warning is displayed once per session.</code></pre>
 <div id="new-volumes" class="section level2">
 <h2><span class="header-section-number">2.1</span> New volumes</h2>
 <pre class="r"><code># define helper functions
@@ -711,6 +781,47 @@ ggdraw(citations_plot) +
                          datavyu_citations = datavyu_cites)
   db &lt;- db %&gt;%
     gs_add_row(ws = &#39;citations-monthly&#39;, input = new_data)
+  message(&quot;&#39;update_gs&#39; parameter is &#39;TRUE&#39;, so Google Sheet data will be updated.&quot;)
+} else {
+  message(&quot;&#39;update_gs&#39; parameter is &#39;FALSE&#39;, so Google Sheet data unmodified.&quot;)
+}</code></pre>
+</div>
+<div id="affiliates" class="section level1">
+<h1><span class="header-section-number">4</span> Affiliates</h1>
+<!-- # Affiliates -->
+<!-- We then update the old stats with new data if `params$update_stats` is TRUE. -->
+<!-- In the current context, `params$update_stats` == TRUE. -->
+<!-- Now, we plot the data. -->
+<pre class="r"><code># Create a tidy form for plotting both institutions and investigators and affiliates
+updated_stats &lt;- updated_stats %&gt;%
+  gather(., key = &quot;type&quot;, value = &quot;count&quot;, -date) %&gt;%
+  mutate(date = lubridate::as_date(date)) %&gt;%
+  select(date, count, type) %&gt;%
+  filter(type %in% c(&#39;affiliates&#39;)) %&gt;%
+  #filter(type %in% c(&#39;institutions&#39;, &#39;investigators&#39;)) %&gt;%
+  filter(!is.na(count))
+
+# Plot
+p &lt;- updated_stats %&gt;%
+  ggplot(., aes(x = date, y = count, color = type, group = type)) +
+  scale_x_date(date_labels = &quot;%Y&quot;, date_breaks = &#39;1 year&#39;) +
+  geom_point() +
+  geom_line(size = ln_size) +
+  scale_colour_manual(values=c(color_purple)) + 
+  ggtitle(paste(&quot;Affiliates as of &quot;, Sys.Date())) +
+  ylab(&quot;Authorized Affiliates&quot;) +
+  databrary_theme +
+  scale_y_continuous(breaks = seq(0, round_any(max(new_stats$affiliates), 100, ceiling), 100), expand = c(0,0)) +
+  coord_cartesian(ylim = c(0, round_any(max(new_stats$affiliates), 100, ceiling)))
+
+ggdraw(p) + 
+  draw_label(&quot;Affiliate, &quot;, colour = color_purple, .7, .8) +
+  draw_label(max(new_stats$affiliate), colour = color_purple, .78, .8)</code></pre>
+<p><img src="databrary_weekly_rpt_new_2019-09-03_files/figure-html/db-affiliate-plot-1.png" width="672" /> <!-- Next, we update the Google Sheet if `params$update_gs` is TRUE. --> <!-- In the current context, `params$update_gs` == FALSE. --></p>
+<!-- # Update Data -->
+<pre class="r"><code>if (as.logical(params$update_gs)) {
+  db &lt;- db %&gt;%
+    gs_add_row(ws = &#39;institutions-investigators&#39;, input = new_stats[,c(1, 4, 2, 3)])
   message(&quot;&#39;update_gs&#39; parameter is &#39;TRUE&#39;, so Google Sheet data will be updated.&quot;)
 } else {
   message(&quot;&#39;update_gs&#39; parameter is &#39;FALSE&#39;, so Google Sheet data unmodified.&quot;)
