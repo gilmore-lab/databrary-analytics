@@ -1,6 +1,7 @@
 ---
 title: "People"
 author: "Andrea Seisler"
+date:  "`r Sys.time()`"
 ---
 
 <!-- ## New investigators -->
