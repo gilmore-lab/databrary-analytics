@@ -24,7 +24,7 @@ params:
 ---
 
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE, message = FALSE)
+knitr::opts_chunk$set(echo = TRUE, message = FALSE, warning = FALSE)
 
 # Install packages if needed
 cran_packages <- c('ggplot2', 'tidyverse', 'reshape2', 'cowplot',
@@ -46,9 +46,10 @@ library(databraryapi)
 library(tidyverse)
 library(reshape2)
 library(cowplot)
-library(googledrive)
-  drive_auth(use_oob = TRUE)
+#library(googledrive)
+  #drive_auth(use_oob = TRUE)
 library(plyr)
+library(dplyr)
 library(googlesheets) 
   options(httr_oob_default=TRUE) 
 library(kableExtra)
@@ -132,10 +133,10 @@ if (as.logical(params$update_stats)) {
 ```{r child = 'citations.Rmd'}
 ```
 
-# Affiliates
+<!-- # Affiliates -->
 
-```{r child = 'affiliates.Rmd'}
-```
+<!-- #```{r child = 'affiliates.Rmd'} -->
+<!-- #``` -->
 
 <!-- # Update Data -->
 
