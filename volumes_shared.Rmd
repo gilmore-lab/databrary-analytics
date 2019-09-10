@@ -4,19 +4,6 @@ author: "Andrea Seisler"
 date:  "`r Sys.time()`"
 ---
 
-<!-- # Volumes -->
-
-<!-- # ```{r get-databrary-stats} -->
-<!-- # new_stats <- databraryapi::get_db_stats() -->
-<!-- # new_stats$date <- lubridate::as_datetime(new_stats$date) -->
-<!-- # ``` -->
-
-<!-- <!-- Let's try a new workflow based on Google Sheets. -->
-
-<!-- # ```{r data-from-googlesheets} -->
-<!-- # #key <- "1tvlIQzULrMtXo97aJu71ljdTmNXkwwpU9eOOasVer3g" -->
-<!-- # db <- gs_title('Databrary-analytics') -->
-<!-- # ``` -->
 
 ```{r}
 # Read from Google Sheet
@@ -92,7 +79,16 @@ unnested_vols <- new_volumes %>%
   # rename(., owner_name = name1, owner_id = id1) %>%
 
 unnested_vols$owner_name <- unnested_vols$name1
-unnested_vols$owner_id = unnested_vols$name1
+unnested_vols$owner_id = unnested_vols$name1 
+
+# Change format of owner_name
+char_split <- strsplit(unnested_vols$name1, ", ")
+# mat  <- matrix(unlist(char_split, ncol=2, byrow=TRUE)) #Getting error in this line but it worked previously
+# char_split   <- as.data.frame(mat)
+# colnames(char_split) <- c("last_name", "first_name")
+# char_split %>% unite(col = "full_name", first_name, last_name, sep=" ")
+# char_split -> unnested_vols$owner_name
+
 
 unnested_vols <- unnested_vols %>%
   mutate(., url = paste0("https://nyu.databrary.org/volume/", id),

@@ -7,10 +7,6 @@ date:  "`r Sys.time()`"
 
 <!-- # Affiliates -->
 
-<!-- We then update the old stats with new data if `params$update_stats` is TRUE. -->
-<!-- In the current context, `params$update_stats` == `r params$update_stats`. -->
-
-
 <!-- Now, we plot the data. -->
 
 ```{r db-affiliate-plot}
