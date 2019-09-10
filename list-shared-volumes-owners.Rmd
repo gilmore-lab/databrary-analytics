@@ -1,0 +1,147 @@
+---
+title: "List shared volumes and owners"
+author: "Rick Gilmore"
+date: "`r Sys.time()`"
+output: 
+  html_document:
+    code_folding: show
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library("tidyverse")
+```
+
+## Create some helper functions
+
+These are also in `R/list_volume_sharing.R` but we reload them here for clarity.
+
+First, we get the sharing level for a range of volumes.
+
+```{r}
+get_sharing_level <- function(id) {
+  vol_data <- databraryapi::download_containers_records(id)
+  if (is.null(vol_data)) {
+    NULL
+  } else {
+    data.frame(id = vol_data$id, sharing_level = vol_data$publicaccess)
+  }
+}
+
+list_volume_sharing <- function(min_vol = 1, max_vol = 800) {
+  if (max_vol < 1) {
+    stop("max_vol must be >= 1")
+  }
+  if (min_vol < 1) {
+    stop("min_vol must be >= 1")
+  }
+  if (min_vol >= max_vol) {
+    stop("min_vol must be < max_vol")
+  }
+  
+  vol_index <- min_vol:max_vol
+  vol_sharing_list <- lapply(vol_index, get_sharing_level)
+  if (!is.null(vol_sharing_list)) {
+    plyr::rbind.fill(vol_sharing_list)
+  }
+}
+```
+
+Then we get the owners from a range of volumes.
+**Note**: We could probably make this more efficient if we grabbed the sharing level and owner info in the same call to `databraryapi::download_containers_records`.
+
+```{r}
+get_volume_owner <- function(id) {
+  vol_data <- databraryapi::download_containers_records(id)
+  if (is.null(vol_data)) {
+    NULL
+  } else {
+    data.frame(id = vol_data$id, owners = vol_data$owners)
+  }
+}
+
+get_volume_owners <- function(min_vol = 1, max_vol = 10) {
+  if (max_vol < 1) {
+    stop("max_vol must be >= 1")
+  }
+  if (min_vol < 1) {
+    stop("min_vol must be >= 1")
+  }
+  if (min_vol >= max_vol) {
+    stop("min_vol must be < max_vol")
+  }
+  
+  vol_index <- min_vol:max_vol
+  vol_own_list <- lapply(vol_index, get_volume_owner)
+  if (!is.null(vol_own_list)) {
+    plyr::rbind.fill(vol_own_list)
+  }
+}
+```
+
+Now combine the shared volumes and owners data.
+
+```{r}
+list_shared_vols_owns <- function(min_vol = 1, max_vol = 10) {
+  if (max_vol < 1) {
+    stop("max_vol must be >= 1")
+  }
+  if (min_vol < 1) {
+    stop("min_vol must be >= 1")
+  }
+  if (min_vol >= max_vol) {
+    stop("min_vol must be < max_vol")
+  }
+  
+  #vol_index <- min_vol:max_vol
+  vols_shared <- list_volume_sharing(min_vol, max_vol)
+  vols_own <- get_volume_owners(min_vol, max_vol)
+  
+  # Merge data frames
+  dplyr::left_join(vols_shared, vols_own, by = ("id" = "id"))
+}
+```
+
+The defaults are to show data from volumes 1 through 10.
+In my experience, these repeated calls can be slow, so I suggest doing them in chunks and then merging the results.
+
+## Gather data from volumes 1 through 100
+
+```{r}
+v_01_20 <- list_shared_vols_owns(min_vol = 1, max_vol = 20)
+```
+
+```{r}
+v_21_40 <- list_shared_vols_owns(min_vol = 21, max_vol = 40)
+```
+
+```{r}
+v_41_60 <- list_shared_vols_owns(min_vol = 41, max_vol = 60)
+```
+
+```{r}
+v_61_80 <- list_shared_vols_owns(min_vol = 61, max_vol = 80)
+```
+
+```{r}
+v_81_100 <- list_shared_vols_owns(min_vol = 81, max_vol = 100)
+```
+
+## Merge data
+
+```{r}
+v_01_100 <- rbind(v_01_20, v_21_40, v_41_60, v_61_80, v_81_100)
+v_01_100
+```
+
+## Simple analyses
+
+```{r}
+v_01_100 %>% 
+  dplyr::group_by(owners.name, owners.id) %>%
+  dplyr::summarise(n_shared_vols = n()) %>%
+  dplyr::arrange(., desc(n_shared_vols)) %>%
+  dplyr::mutate(owner_url = paste0("https://nyu.databrary.org/party/", owners.id)) %>%
+  knitr::kable(.)
+```
+
