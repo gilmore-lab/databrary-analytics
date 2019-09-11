@@ -452,7 +452,7 @@ $(document).ready(function () {
 
 <h1 class="title toc-ignore">List shared volumes and owners</h1>
 <h4 class="author">Rick Gilmore</h4>
-<h4 class="date">2019-09-10 17:13:30</h4>
+<h4 class="date">2019-09-11 10:03:57</h4>
 
 </div>
 
@@ -622,12 +622,12 @@ v_01_100</code></pre>
   dplyr::summarise(n_shared_vols = n()) %&gt;%
   dplyr::arrange(., desc(n_shared_vols)) %&gt;%
   dplyr::mutate(owner_url = paste0(&quot;https://nyu.databrary.org/party/&quot;, owners.id)) %&gt;%
+  dplyr::select(-owners.id) %&gt;%
   knitr::kable(.)</code></pre>
 <table>
 <thead>
 <tr class="header">
 <th align="left">owners.name</th>
-<th align="right">owners.id</th>
 <th align="right">n_shared_vols</th>
 <th align="left">owner_url</th>
 </tr>
@@ -635,204 +635,209 @@ v_01_100</code></pre>
 <tbody>
 <tr class="odd">
 <td align="left">Adolph, Karen</td>
-<td align="right">5</td>
 <td align="right">11</td>
 <td align="left"><a href="https://nyu.databrary.org/party/5" class="uri">https://nyu.databrary.org/party/5</a></td>
 </tr>
 <tr class="even">
 <td align="left">Gilmore, Rick O.</td>
-<td align="right">6</td>
 <td align="right">11</td>
 <td align="left"><a href="https://nyu.databrary.org/party/6" class="uri">https://nyu.databrary.org/party/6</a></td>
 </tr>
 <tr class="odd">
 <td align="left">Frank, Michael C.</td>
-<td align="right">258</td>
 <td align="right">6</td>
 <td align="left"><a href="https://nyu.databrary.org/party/258" class="uri">https://nyu.databrary.org/party/258</a></td>
 </tr>
 <tr class="even">
 <td align="left">Bertenthal, Bennett I.</td>
-<td align="right">294</td>
 <td align="right">3</td>
 <td align="left"><a href="https://nyu.databrary.org/party/294" class="uri">https://nyu.databrary.org/party/294</a></td>
 </tr>
 <tr class="odd">
 <td align="left">Brannon, Elizabeth M</td>
-<td align="right">313</td>
 <td align="right">3</td>
 <td align="left"><a href="https://nyu.databrary.org/party/313" class="uri">https://nyu.databrary.org/party/313</a></td>
 </tr>
 <tr class="even">
 <td align="left">Smith, Linda B.</td>
-<td align="right">161</td>
 <td align="right">3</td>
 <td align="left"><a href="https://nyu.databrary.org/party/161" class="uri">https://nyu.databrary.org/party/161</a></td>
 </tr>
 <tr class="odd">
 <td align="left">Fabricius, William</td>
-<td align="right">288</td>
 <td align="right">2</td>
 <td align="left"><a href="https://nyu.databrary.org/party/288" class="uri">https://nyu.databrary.org/party/288</a></td>
 </tr>
 <tr class="even">
 <td align="left">Jayaraman, Swapnaa</td>
-<td align="right">254</td>
 <td align="right">2</td>
 <td align="left"><a href="https://nyu.databrary.org/party/254" class="uri">https://nyu.databrary.org/party/254</a></td>
 </tr>
 <tr class="odd">
 <td align="left">Admin, Databrary</td>
-<td align="right">3341</td>
 <td align="right">1</td>
 <td align="left"><a href="https://nyu.databrary.org/party/3341" class="uri">https://nyu.databrary.org/party/3341</a></td>
 </tr>
 <tr class="even">
 <td align="left">Amso, Dima</td>
-<td align="right">297</td>
 <td align="right">1</td>
 <td align="left"><a href="https://nyu.databrary.org/party/297" class="uri">https://nyu.databrary.org/party/297</a></td>
 </tr>
 <tr class="odd">
 <td align="left">Baker, David</td>
-<td align="right">332</td>
 <td align="right">1</td>
 <td align="left"><a href="https://nyu.databrary.org/party/332" class="uri">https://nyu.databrary.org/party/332</a></td>
 </tr>
 <tr class="even">
 <td align="left">Barr, Rachel</td>
-<td align="right">104</td>
 <td align="right">1</td>
 <td align="left"><a href="https://nyu.databrary.org/party/104" class="uri">https://nyu.databrary.org/party/104</a></td>
 </tr>
 <tr class="odd">
 <td align="left">DeLoache, Judy</td>
-<td align="right">264</td>
 <td align="right">1</td>
 <td align="left"><a href="https://nyu.databrary.org/party/264" class="uri">https://nyu.databrary.org/party/264</a></td>
 </tr>
 <tr class="even">
 <td align="left">Demuth, Katherine</td>
-<td align="right">537</td>
 <td align="right">1</td>
 <td align="left"><a href="https://nyu.databrary.org/party/537" class="uri">https://nyu.databrary.org/party/537</a></td>
 </tr>
 <tr class="odd">
 <td align="left">Fausey, Caitlin M.</td>
-<td align="right">126</td>
 <td align="right">1</td>
 <td align="left"><a href="https://nyu.databrary.org/party/126" class="uri">https://nyu.databrary.org/party/126</a></td>
 </tr>
 <tr class="even">
 <td align="left">Gordon, Peter</td>
-<td align="right">20</td>
 <td align="right">1</td>
 <td align="left"><a href="https://nyu.databrary.org/party/20" class="uri">https://nyu.databrary.org/party/20</a></td>
 </tr>
 <tr class="odd">
 <td align="left">Johnson, Scott</td>
-<td align="right">93</td>
 <td align="right">1</td>
 <td align="left"><a href="https://nyu.databrary.org/party/93" class="uri">https://nyu.databrary.org/party/93</a></td>
 </tr>
 <tr class="even">
 <td align="left">LoBue, Vanessa</td>
-<td align="right">82</td>
 <td align="right">1</td>
 <td align="left"><a href="https://nyu.databrary.org/party/82" class="uri">https://nyu.databrary.org/party/82</a></td>
 </tr>
 <tr class="odd">
 <td align="left">Messinger, Daniel</td>
-<td align="right">70</td>
 <td align="right">1</td>
 <td align="left"><a href="https://nyu.databrary.org/party/70" class="uri">https://nyu.databrary.org/party/70</a></td>
 </tr>
 <tr class="even">
 <td align="left">Naigles, Letitia</td>
-<td align="right">279</td>
 <td align="right">1</td>
 <td align="left"><a href="https://nyu.databrary.org/party/279" class="uri">https://nyu.databrary.org/party/279</a></td>
 </tr>
 <tr class="odd">
 <td align="left">Needham, Amy</td>
-<td align="right">118</td>
 <td align="right">1</td>
 <td align="left"><a href="https://nyu.databrary.org/party/118" class="uri">https://nyu.databrary.org/party/118</a></td>
 </tr>
 <tr class="even">
 <td align="left">Norcia, Anthony M.</td>
-<td align="right">378</td>
 <td align="right">1</td>
 <td align="left"><a href="https://nyu.databrary.org/party/378" class="uri">https://nyu.databrary.org/party/378</a></td>
 </tr>
 <tr class="odd">
 <td align="left">Raudies, Florian</td>
-<td align="right">160</td>
 <td align="right">1</td>
 <td align="left"><a href="https://nyu.databrary.org/party/160" class="uri">https://nyu.databrary.org/party/160</a></td>
 </tr>
 <tr class="even">
 <td align="left">Rhodes, Marjorie</td>
-<td align="right">277</td>
 <td align="right">1</td>
 <td align="left"><a href="https://nyu.databrary.org/party/277" class="uri">https://nyu.databrary.org/party/277</a></td>
 </tr>
 <tr class="odd">
 <td align="left">Saffran, Jenny</td>
-<td align="right">274</td>
 <td align="right">1</td>
 <td align="left"><a href="https://nyu.databrary.org/party/274" class="uri">https://nyu.databrary.org/party/274</a></td>
 </tr>
 <tr class="even">
 <td align="left">Seisler, Andrea R.</td>
-<td align="right">437</td>
 <td align="right">1</td>
 <td align="left"><a href="https://nyu.databrary.org/party/437" class="uri">https://nyu.databrary.org/party/437</a></td>
 </tr>
 <tr class="odd">
 <td align="left">Shapiro, Liza</td>
-<td align="right">80</td>
 <td align="right">1</td>
 <td align="left"><a href="https://nyu.databrary.org/party/80" class="uri">https://nyu.databrary.org/party/80</a></td>
 </tr>
 <tr class="even">
 <td align="left">Staff</td>
-<td align="right">308</td>
 <td align="right">1</td>
 <td align="left"><a href="https://nyu.databrary.org/party/308" class="uri">https://nyu.databrary.org/party/308</a></td>
 </tr>
 <tr class="odd">
 <td align="left">Tamis-LeMonda, Catherine</td>
-<td align="right">11</td>
 <td align="right">1</td>
 <td align="left"><a href="https://nyu.databrary.org/party/11" class="uri">https://nyu.databrary.org/party/11</a></td>
 </tr>
 <tr class="even">
 <td align="left">Thrasher, Cat</td>
-<td align="right">346</td>
 <td align="right">1</td>
 <td align="left"><a href="https://nyu.databrary.org/party/346" class="uri">https://nyu.databrary.org/party/346</a></td>
 </tr>
 <tr class="odd">
 <td align="left">Vishton, Peter</td>
-<td align="right">60</td>
 <td align="right">1</td>
 <td align="left"><a href="https://nyu.databrary.org/party/60" class="uri">https://nyu.databrary.org/party/60</a></td>
 </tr>
 <tr class="even">
 <td align="left">Wilkinson, Krista</td>
-<td align="right">245</td>
 <td align="right">1</td>
 <td align="left"><a href="https://nyu.databrary.org/party/245" class="uri">https://nyu.databrary.org/party/245</a></td>
 </tr>
 <tr class="odd">
 <td align="left">Wyble, Brad</td>
-<td align="right">273</td>
 <td align="right">1</td>
 <td align="left"><a href="https://nyu.databrary.org/party/273" class="uri">https://nyu.databrary.org/party/273</a></td>
 </tr>
 </tbody>
 </table>
+</div>
+<div id="a-better-implementation" class="section level2">
+<h2>A better implementation</h2>
+<p>The following grabs the owner(s) and shared volumes in a single call to <code>databraryapi::download_containers_records</code>.</p>
+<pre class="r"><code>get_volume_data &lt;- function(vol_id = 1) {
+  vol_data &lt;- databraryapi::download_containers_records(vol_id)
+  if (is.null(vol_data)) {
+    NULL
+  } else {
+    data.frame(id = vol_data$id, sharing_level = vol_data$publicaccess, owner.ids = vol_data$owners)
+  }
+}
+
+get_volumes_data &lt;- function(min_vol = 1, max_vol = 10) {
+  if (max_vol &lt; 1) {
+    stop(&quot;max_vol must be &gt;= 1&quot;)
+  }
+  if (min_vol &lt; 1) {
+    stop(&quot;min_vol must be &gt;= 1&quot;)
+  }
+  if (min_vol &gt;= max_vol) {
+    stop(&quot;min_vol must be &lt; max_vol&quot;)
+  }
+  
+  vol_index &lt;- min_vol:max_vol
+  vols_data &lt;- lapply(vol_index, get_volume_data)
+  
+  # Merge data frames
+  Reduce(function(x,y) merge(x,y, all = &quot;TRUE&quot;), vols_data)
+}</code></pre>
+<p>Test the functions.</p>
+<pre class="r"><code>get_volumes_data()</code></pre>
+<pre><code>##   id sharing_level           owner.ids.name owner.ids.id
+## 1  7          full            Adolph, Karen            5
+## 2  8          full Tamis-LeMonda, Catherine           11
+## 3  9          full            Adolph, Karen            5
+## 4 10          full            Gordon, Peter           20</code></pre>
+<p>This is not working as of 2019-09-11.</p>
 </div>
 
 

@@ -142,6 +142,48 @@ v_01_100 %>%
   dplyr::summarise(n_shared_vols = n()) %>%
   dplyr::arrange(., desc(n_shared_vols)) %>%
   dplyr::mutate(owner_url = paste0("https://nyu.databrary.org/party/", owners.id)) %>%
+  dplyr::select(-owners.id) %>%
   knitr::kable(.)
 ```
+
+## A better implementation
+
+The following grabs the owner(s) and shared volumes in a single call to `databraryapi::download_containers_records`.
+
+```{r}
+get_volume_data <- function(vol_id = 1) {
+  vol_data <- databraryapi::download_containers_records(vol_id)
+  if (is.null(vol_data)) {
+    NULL
+  } else {
+    data.frame(id = vol_data$id, sharing_level = vol_data$publicaccess, owner.ids = vol_data$owners)
+  }
+}
+
+get_volumes_data <- function(min_vol = 1, max_vol = 10) {
+  if (max_vol < 1) {
+    stop("max_vol must be >= 1")
+  }
+  if (min_vol < 1) {
+    stop("min_vol must be >= 1")
+  }
+  if (min_vol >= max_vol) {
+    stop("min_vol must be < max_vol")
+  }
+  
+  vol_index <- min_vol:max_vol
+  vols_data <- lapply(vol_index, get_volume_data)
+  
+  # Merge data frames
+  Reduce(function(x,y) merge(x,y, all = "TRUE"), vols_data)
+}
+```
+
+Test the functions.
+
+```{r}
+get_volumes_data()
+```
+
+This is not working as of 2019-09-11.
 
