@@ -140,7 +140,7 @@ v_01_100
 v_01_100 %>% 
   dplyr::group_by(owners.name, owners.id) %>%
   dplyr::summarise(n_shared_vols = n()) %>%
-  dplyr::arrange(., desc(n_shared_vols)) %>%
+  dplyr::arrange(., desc(n_shared_vols), owners.name) %>%
   dplyr::mutate(owner_url = paste0("https://nyu.databrary.org/party/", owners.id)) %>%
   dplyr::select(-owners.id) %>%
   knitr::kable(.)
@@ -186,4 +186,3 @@ get_volumes_data()
 ```
 
 This is not working as of 2019-09-11.
-

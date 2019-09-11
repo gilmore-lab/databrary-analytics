@@ -452,7 +452,7 @@ $(document).ready(function () {
 
 <h1 class="title toc-ignore">List shared volumes and owners</h1>
 <h4 class="author">Rick Gilmore</h4>
-<h4 class="date">2019-09-11 10:03:57</h4>
+<h4 class="date">2019-09-11 10:09:54</h4>
 
 </div>
 
@@ -620,7 +620,7 @@ v_01_100</code></pre>
 <pre class="r"><code>v_01_100 %&gt;% 
   dplyr::group_by(owners.name, owners.id) %&gt;%
   dplyr::summarise(n_shared_vols = n()) %&gt;%
-  dplyr::arrange(., desc(n_shared_vols)) %&gt;%
+  dplyr::arrange(., desc(n_shared_vols), owners.name) %&gt;%
   dplyr::mutate(owner_url = paste0(&quot;https://nyu.databrary.org/party/&quot;, owners.id)) %&gt;%
   dplyr::select(-owners.id) %&gt;%
   knitr::kable(.)</code></pre>
