@@ -5,11 +5,14 @@ date: "`r Sys.time()`"
 output: 
   html_document:
     code_folding: show
+params:
+  databrary_login: yours@email.com
 ---
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 library("tidyverse")
+databraryapi::login_db(params$databrary_login)
 ```
 
 ## Create some helper functions
@@ -175,7 +178,7 @@ get_volumes_data <- function(min_vol = 1, max_vol = 10) {
   vols_data <- lapply(vol_index, get_volume_data)
   
   # Merge data frames
-  Reduce(function(x,y) merge(x,y, all = "TRUE"), vols_data)
+  data.table::rbindlist(vols_data)
 }
 ```
 
@@ -185,4 +188,66 @@ Test the functions.
 get_volumes_data()
 ```
 
-This is not working as of 2019-09-11.
+I found this discussion (https://www.r-bloggers.com/concatenating-a-list-of-data-frames/) of the various ways to concatenate data frames helpful.
+In the end, `I used data.table::rbindlist` to concatenate the data frames.
+
+Here's another try at the data for a set of volumes.
+We'll use volume 101 to 200 just for fun.
+
+```{r}
+v_101_200 <- get_volumes_data(101, 200)
+
+v_101_200 %>% 
+  dplyr::group_by(owner.ids.name, owner.ids.id) %>%
+  dplyr::rename(investigator = owner.ids.name) %>%
+  dplyr::summarise(n_shared_vols = n()) %>%
+  dplyr::arrange(., desc(n_shared_vols), investigator) %>%
+  dplyr::mutate(owner_url = paste0("https://nyu.databrary.org/party/", owner.ids.id)) %>%
+  dplyr::select(-owner.ids.id) %>%
+  knitr::kable(.)
+```
+
+```{r}
+v_201_300 <- get_volumes_data(201, 300)
+```
+
+```{r}
+v_301_400 <- get_volumes_data(301, 400)
+```
+
+```{r}
+v_401_500 <- get_volumes_data(401, 500)
+```
+
+```{r}
+v_501_600 <- get_volumes_data(501, 600)
+```
+
+```{r}
+v_601_700 <- get_volumes_data(601, 700)
+```
+
+```{r}
+v_701_800 <- get_volumes_data(701, 800)
+```
+
+```{r}
+v_801_900 <- get_volumes_data(701, 800)
+```
+
+```{r}
+v_001_900 <- data.table::rbindlist(list(v_101_200, v_201_300, v_301_400,
+                                        v_401_500, v_501_600, v_601_700,
+                                        v_701_800, v_801_900))
+
+v_001_900 %>%
+  dplyr::group_by(owner.ids.name, owner.ids.id) %>%
+  dplyr::rename(investigator = owner.ids.name) %>%
+  dplyr::summarise(n_shared_vols = n()) %>%
+  dplyr::arrange(., desc(n_shared_vols), investigator) %>%
+  dplyr::mutate(owner_url = paste0("https://nyu.databrary.org/party/", owner.ids.id)) %>%
+  dplyr::select(-owner.ids.id) %>%
+  knitr::kable(.)  
+```
+
+There are `r length(unique(v_001_900$investigators))` who are investigators on shared volumes.
