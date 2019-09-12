@@ -15,6 +15,12 @@ library("tidyverse")
 databraryapi::login_db(params$databrary_login)
 ```
 
+## Purpose
+
+This document shows how to answer the question "Who are the heaviest users of Databrary?" using the `databraryapi` package Rick Gilmore developed.
+Here, we answer that question by providing data about which users have created and shared the largest number of volumes.
+There are other subtler and possibly more informative ways to think about answering this question, but this code is a start.
+
 ## Create some helper functions
 
 These are also in `R/list_volume_sharing.R` but we reload them here for clarity.

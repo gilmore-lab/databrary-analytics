@@ -25,3 +25,4 @@ Code to produce and plot analytics about Databrary
 # Shared volumes and owners report
 
 - <https://gilmore-lab.github.io/databrary-analytics/list-shared-volumes-owners.html>
+    - To run this report run `rmarkdown::render("list-shared-volumes-owners.Rmd", params = list(databrary_login = <YOURDATABRARYLOGIN))` replacing `<YOURDATABRARYLOGIN>` with your actual Databrary login (email).
