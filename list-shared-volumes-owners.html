@@ -452,7 +452,7 @@ $(document).ready(function () {
 
 <h1 class="title toc-ignore">List shared volumes and owners</h1>
 <h4 class="author">Rick Gilmore</h4>
-<h4 class="date">2019-09-11 10:09:54</h4>
+<h4 class="date">2019-09-12 11:10:28</h4>
 
 </div>
 
@@ -547,73 +547,160 @@ get_volume_owners &lt;- function(min_vol = 1, max_vol = 10) {
 <h2>Merge data</h2>
 <pre class="r"><code>v_01_100 &lt;- rbind(v_01_20, v_21_40, v_41_60, v_61_80, v_81_100)
 v_01_100</code></pre>
-<pre><code>##    id sharing_level              owners.name owners.id
-## 1   1          full            Adolph, Karen         5
-## 2   1          full         Gilmore, Rick O.         6
-## 3   1          full                    Staff       308
-## 4   1          full         Admin, Databrary      3341
-## 5   2          full         Gilmore, Rick O.         6
-## 6   4          full            Adolph, Karen         5
-## 7   5          full            Adolph, Karen         5
-## 8   7          full            Adolph, Karen         5
-## 9   8          full Tamis-LeMonda, Catherine        11
-## 10  9          full            Adolph, Karen         5
-## 11 10          full            Gordon, Peter        20
-## 12 15          full        Messinger, Daniel        70
-## 13 16          full            Adolph, Karen         5
-## 14 16          full            Shapiro, Liza        80
-## 15 23          full         Gilmore, Rick O.         6
-## 16 24          full            Adolph, Karen         5
-## 17 27          full        Wilkinson, Krista       245
-## 18 28          full            Adolph, Karen         5
-## 19 29          full           Johnson, Scott        93
-## 20 30          full           LoBue, Vanessa        82
-## 21 30          full            Thrasher, Cat       346
-## 22 31          full         Gilmore, Rick O.         6
-## 23 32          full         Gilmore, Rick O.         6
-## 24 33          full        Frank, Michael C.       258
-## 25 34          full        Frank, Michael C.       258
-## 26 35          full        Frank, Michael C.       258
-## 27 36          full        Frank, Michael C.       258
-## 28 37          full        Frank, Michael C.       258
-## 29 38          full        Frank, Michael C.       258
-## 30 40          full             Barr, Rachel       104
-## 31 42          full          Smith, Linda B.       161
-## 32 43          full           Saffran, Jenny       274
-## 33 44          full         Naigles, Letitia       279
-## 34 45          full         Rhodes, Marjorie       277
-## 35 46          full           Vishton, Peter        60
-## 36 47          full       Fabricius, William       288
-## 37 49          full         Gilmore, Rick O.         6
-## 38 50          full   Bertenthal, Bennett I.       294
-## 39 51          full   Bertenthal, Bennett I.       294
-## 40 53          full   Bertenthal, Bennett I.       294
-## 41 61          full           DeLoache, Judy       264
-## 42 62          full               Amso, Dima       297
-## 43 64          full             Needham, Amy       118
-## 44 65          full     Brannon, Elizabeth M       313
-## 45 68          full         Gilmore, Rick O.         6
-## 46 70          full             Baker, David       332
-## 47 73          full       Seisler, Andrea R.       437
-## 48 73          full         Gilmore, Rick O.         6
-## 49 75          full         Gilmore, Rick O.         6
-## 50 77          full         Gilmore, Rick O.         6
-## 51 77          full       Norcia, Anthony M.       378
-## 52 79          full              Wyble, Brad       273
-## 53 81          full       Jayaraman, Swapnaa       254
-## 54 81          full          Smith, Linda B.       161
-## 55 81          full         Raudies, Florian       160
-## 56 81          full         Gilmore, Rick O.         6
-## 57 84          full            Adolph, Karen         5
-## 58 86          full            Adolph, Karen         5
-## 59 89          full            Adolph, Karen         5
-## 60 90          full        Demuth, Katherine       537
-## 61 95          full     Brannon, Elizabeth M       313
-## 62 96          full     Brannon, Elizabeth M       313
-## 63 98          full       Fabricius, William       288
-## 64 99          full       Fausey, Caitlin M.       126
-## 65 99          full          Smith, Linda B.       161
-## 66 99          full       Jayaraman, Swapnaa       254</code></pre>
+<pre><code>##    id sharing_level              owners.name
+## 1   1          full            Adolph, Karen
+## 2   1          full         Gilmore, Rick O.
+## 3   1          full                    Staff
+## 4   1          full         Admin, Databrary
+## 5   2          full         Gilmore, Rick O.
+## 6   4          full            Adolph, Karen
+## 7   5          full            Adolph, Karen
+## 8   7          full            Adolph, Karen
+## 9   8          full Tamis-LeMonda, Catherine
+## 10  9          full            Adolph, Karen
+## 11 10          full            Gordon, Peter
+## 12 11          none            Karasik, Lana
+## 13 11          none Tamis-LeMonda, Catherine
+## 14 11          none            Adolph, Karen
+## 15 15          full        Messinger, Daniel
+## 16 16          full            Adolph, Karen
+## 17 16          full            Shapiro, Liza
+## 18 23          full         Gilmore, Rick O.
+## 19 24          full            Adolph, Karen
+## 20 27          full        Wilkinson, Krista
+## 21 28          full            Adolph, Karen
+## 22 29          full           Johnson, Scott
+## 23 30          full           LoBue, Vanessa
+## 24 30          full            Thrasher, Cat
+## 25 31          full         Gilmore, Rick O.
+## 26 32          full         Gilmore, Rick O.
+## 27 33          full        Frank, Michael C.
+## 28 34          full        Frank, Michael C.
+## 29 35          full        Frank, Michael C.
+## 30 36          full        Frank, Michael C.
+## 31 37          full        Frank, Michael C.
+## 32 38          full        Frank, Michael C.
+## 33 40          full             Barr, Rachel
+## 34 42          full          Smith, Linda B.
+## 35 43          full           Saffran, Jenny
+## 36 44          full         Naigles, Letitia
+## 37 45          full         Rhodes, Marjorie
+## 38 46          full           Vishton, Peter
+## 39 47          full       Fabricius, William
+## 40 49          full         Gilmore, Rick O.
+## 41 50          full   Bertenthal, Bennett I.
+## 42 51          full   Bertenthal, Bennett I.
+## 43 53          full   Bertenthal, Bennett I.
+## 44 61          full           DeLoache, Judy
+## 45 62          full               Amso, Dima
+## 46 64          full             Needham, Amy
+## 47 65          full     Brannon, Elizabeth M
+## 48 68          full         Gilmore, Rick O.
+## 49 70          full             Baker, David
+## 50 73          full       Seisler, Andrea R.
+## 51 73          full         Gilmore, Rick O.
+## 52 75          full         Gilmore, Rick O.
+## 53 77          full         Gilmore, Rick O.
+## 54 77          full       Norcia, Anthony M.
+## 55 79          full              Wyble, Brad
+## 56 81          full       Jayaraman, Swapnaa
+## 57 81          full          Smith, Linda B.
+## 58 81          full         Raudies, Florian
+## 59 81          full         Gilmore, Rick O.
+## 60 83          none            Adolph, Karen
+## 61 84          full            Adolph, Karen
+## 62 86          full            Adolph, Karen
+## 63 87          none            Karasik, Lana
+## 64 87          none            Adolph, Karen
+## 65 87          none Tamis-LeMonda, Catherine
+## 66 87          none           Spies, Jeffrey
+## 67 87          none                Nez, Reda
+## 68 88          none            Adolph, Karen
+## 69 89          full            Adolph, Karen
+## 70 90          full        Demuth, Katherine
+## 71 95          full     Brannon, Elizabeth M
+## 72 96          full     Brannon, Elizabeth M
+## 73 98          full       Fabricius, William
+## 74 99          full       Fausey, Caitlin M.
+## 75 99          full          Smith, Linda B.
+## 76 99          full       Jayaraman, Swapnaa
+##    owners.id
+## 1          5
+## 2          6
+## 3        308
+## 4       3341
+## 5          6
+## 6          5
+## 7          5
+## 8          5
+## 9         11
+## 10         5
+## 11        20
+## 12        32
+## 13        11
+## 14         5
+## 15        70
+## 16         5
+## 17        80
+## 18         6
+## 19         5
+## 20       245
+## 21         5
+## 22        93
+## 23        82
+## 24       346
+## 25         6
+## 26         6
+## 27       258
+## 28       258
+## 29       258
+## 30       258
+## 31       258
+## 32       258
+## 33       104
+## 34       161
+## 35       274
+## 36       279
+## 37       277
+## 38        60
+## 39       288
+## 40         6
+## 41       294
+## 42       294
+## 43       294
+## 44       264
+## 45       297
+## 46       118
+## 47       313
+## 48         6
+## 49       332
+## 50       437
+## 51         6
+## 52         6
+## 53         6
+## 54       378
+## 55       273
+## 56       254
+## 57       161
+## 58       160
+## 59         6
+## 60         5
+## 61         5
+## 62         5
+## 63        32
+## 64         5
+## 65        11
+## 66      4650
+## 67      4291
+## 68         5
+## 69         5
+## 70       537
+## 71       313
+## 72       313
+## 73       288
+## 74       126
+## 75       161
+## 76       254</code></pre>
 </div>
 <div id="simple-analyses" class="section level2">
 <h2>Simple analyses</h2>
@@ -635,7 +722,7 @@ v_01_100</code></pre>
 <tbody>
 <tr class="odd">
 <td align="left">Adolph, Karen</td>
-<td align="right">11</td>
+<td align="right">15</td>
 <td align="left"><a href="https://nyu.databrary.org/party/5" class="uri">https://nyu.databrary.org/party/5</a></td>
 </tr>
 <tr class="even">
@@ -664,14 +751,24 @@ v_01_100</code></pre>
 <td align="left"><a href="https://nyu.databrary.org/party/161" class="uri">https://nyu.databrary.org/party/161</a></td>
 </tr>
 <tr class="odd">
+<td align="left">Tamis-LeMonda, Catherine</td>
+<td align="right">3</td>
+<td align="left"><a href="https://nyu.databrary.org/party/11" class="uri">https://nyu.databrary.org/party/11</a></td>
+</tr>
+<tr class="even">
 <td align="left">Fabricius, William</td>
 <td align="right">2</td>
 <td align="left"><a href="https://nyu.databrary.org/party/288" class="uri">https://nyu.databrary.org/party/288</a></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td align="left">Jayaraman, Swapnaa</td>
 <td align="right">2</td>
 <td align="left"><a href="https://nyu.databrary.org/party/254" class="uri">https://nyu.databrary.org/party/254</a></td>
+</tr>
+<tr class="even">
+<td align="left">Karasik, Lana</td>
+<td align="right">2</td>
+<td align="left"><a href="https://nyu.databrary.org/party/32" class="uri">https://nyu.databrary.org/party/32</a></td>
 </tr>
 <tr class="odd">
 <td align="left">Admin, Databrary</td>
@@ -739,34 +836,44 @@ v_01_100</code></pre>
 <td align="left"><a href="https://nyu.databrary.org/party/118" class="uri">https://nyu.databrary.org/party/118</a></td>
 </tr>
 <tr class="even">
+<td align="left">Nez, Reda</td>
+<td align="right">1</td>
+<td align="left"><a href="https://nyu.databrary.org/party/4291" class="uri">https://nyu.databrary.org/party/4291</a></td>
+</tr>
+<tr class="odd">
 <td align="left">Norcia, Anthony M.</td>
 <td align="right">1</td>
 <td align="left"><a href="https://nyu.databrary.org/party/378" class="uri">https://nyu.databrary.org/party/378</a></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td align="left">Raudies, Florian</td>
 <td align="right">1</td>
 <td align="left"><a href="https://nyu.databrary.org/party/160" class="uri">https://nyu.databrary.org/party/160</a></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td align="left">Rhodes, Marjorie</td>
 <td align="right">1</td>
 <td align="left"><a href="https://nyu.databrary.org/party/277" class="uri">https://nyu.databrary.org/party/277</a></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td align="left">Saffran, Jenny</td>
 <td align="right">1</td>
 <td align="left"><a href="https://nyu.databrary.org/party/274" class="uri">https://nyu.databrary.org/party/274</a></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td align="left">Seisler, Andrea R.</td>
 <td align="right">1</td>
 <td align="left"><a href="https://nyu.databrary.org/party/437" class="uri">https://nyu.databrary.org/party/437</a></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td align="left">Shapiro, Liza</td>
 <td align="right">1</td>
 <td align="left"><a href="https://nyu.databrary.org/party/80" class="uri">https://nyu.databrary.org/party/80</a></td>
+</tr>
+<tr class="odd">
+<td align="left">Spies, Jeffrey</td>
+<td align="right">1</td>
+<td align="left"><a href="https://nyu.databrary.org/party/4650" class="uri">https://nyu.databrary.org/party/4650</a></td>
 </tr>
 <tr class="even">
 <td align="left">Staff</td>
@@ -774,26 +881,21 @@ v_01_100</code></pre>
 <td align="left"><a href="https://nyu.databrary.org/party/308" class="uri">https://nyu.databrary.org/party/308</a></td>
 </tr>
 <tr class="odd">
-<td align="left">Tamis-LeMonda, Catherine</td>
-<td align="right">1</td>
-<td align="left"><a href="https://nyu.databrary.org/party/11" class="uri">https://nyu.databrary.org/party/11</a></td>
-</tr>
-<tr class="even">
 <td align="left">Thrasher, Cat</td>
 <td align="right">1</td>
 <td align="left"><a href="https://nyu.databrary.org/party/346" class="uri">https://nyu.databrary.org/party/346</a></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td align="left">Vishton, Peter</td>
 <td align="right">1</td>
 <td align="left"><a href="https://nyu.databrary.org/party/60" class="uri">https://nyu.databrary.org/party/60</a></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td align="left">Wilkinson, Krista</td>
 <td align="right">1</td>
 <td align="left"><a href="https://nyu.databrary.org/party/245" class="uri">https://nyu.databrary.org/party/245</a></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td align="left">Wyble, Brad</td>
 <td align="right">1</td>
 <td align="left"><a href="https://nyu.databrary.org/party/273" class="uri">https://nyu.databrary.org/party/273</a></td>
@@ -828,16 +930,758 @@ get_volumes_data &lt;- function(min_vol = 1, max_vol = 10) {
   vols_data &lt;- lapply(vol_index, get_volume_data)
   
   # Merge data frames
-  Reduce(function(x,y) merge(x,y, all = &quot;TRUE&quot;), vols_data)
+  data.table::rbindlist(vols_data)
 }</code></pre>
 <p>Test the functions.</p>
 <pre class="r"><code>get_volumes_data()</code></pre>
-<pre><code>##   id sharing_level           owner.ids.name owner.ids.id
-## 1  7          full            Adolph, Karen            5
-## 2  8          full Tamis-LeMonda, Catherine           11
-## 3  9          full            Adolph, Karen            5
-## 4 10          full            Gordon, Peter           20</code></pre>
-<p>This is not working as of 2019-09-11.</p>
+<pre><code>##     id sharing_level           owner.ids.name
+##  1:  1          full            Adolph, Karen
+##  2:  1          full         Gilmore, Rick O.
+##  3:  1          full                    Staff
+##  4:  1          full         Admin, Databrary
+##  5:  2          full         Gilmore, Rick O.
+##  6:  4          full            Adolph, Karen
+##  7:  5          full            Adolph, Karen
+##  8:  7          full            Adolph, Karen
+##  9:  8          full Tamis-LeMonda, Catherine
+## 10:  9          full            Adolph, Karen
+## 11: 10          full            Gordon, Peter
+##     owner.ids.id
+##  1:            5
+##  2:            6
+##  3:          308
+##  4:         3341
+##  5:            6
+##  6:            5
+##  7:            5
+##  8:            5
+##  9:           11
+## 10:            5
+## 11:           20</code></pre>
+<p>I found this discussion (<a href="https://www.r-bloggers.com/concatenating-a-list-of-data-frames/" class="uri">https://www.r-bloggers.com/concatenating-a-list-of-data-frames/</a>) of the various ways to concatenate data frames helpful. In the end, <code>I used data.table::rbindlist</code> to concatenate the data frames.</p>
+<p>Here’s another try at the data for a set of volumes. We’ll use volume 101 to 200 just for fun.</p>
+<pre class="r"><code>v_101_200 &lt;- get_volumes_data(101, 200)
+
+v_101_200 %&gt;% 
+  dplyr::group_by(owner.ids.name, owner.ids.id) %&gt;%
+  dplyr::rename(investigator = owner.ids.name) %&gt;%
+  dplyr::summarise(n_shared_vols = n()) %&gt;%
+  dplyr::arrange(., desc(n_shared_vols), investigator) %&gt;%
+  dplyr::mutate(owner_url = paste0(&quot;https://nyu.databrary.org/party/&quot;, owner.ids.id)) %&gt;%
+  dplyr::select(-owner.ids.id) %&gt;%
+  knitr::kable(.)</code></pre>
+<table>
+<thead>
+<tr class="header">
+<th align="left">investigator</th>
+<th align="right">n_shared_vols</th>
+<th align="left">owner_url</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">Adolph, Karen</td>
+<td align="right">21</td>
+<td align="left"><a href="https://nyu.databrary.org/party/5" class="uri">https://nyu.databrary.org/party/5</a></td>
+</tr>
+<tr class="even">
+<td align="left">Gilmore, Rick O.</td>
+<td align="right">7</td>
+<td align="left"><a href="https://nyu.databrary.org/party/6" class="uri">https://nyu.databrary.org/party/6</a></td>
+</tr>
+<tr class="odd">
+<td align="left">Admin, Databrary</td>
+<td align="right">4</td>
+<td align="left"><a href="https://nyu.databrary.org/party/3341" class="uri">https://nyu.databrary.org/party/3341</a></td>
+</tr>
+<tr class="even">
+<td align="left">Franchak, John</td>
+<td align="right">3</td>
+<td align="left"><a href="https://nyu.databrary.org/party/14" class="uri">https://nyu.databrary.org/party/14</a></td>
+</tr>
+<tr class="odd">
+<td align="left">Seisler, Andrea R.</td>
+<td align="right">3</td>
+<td align="left"><a href="https://nyu.databrary.org/party/437" class="uri">https://nyu.databrary.org/party/437</a></td>
+</tr>
+<tr class="even">
+<td align="left">Brand, Rebecca</td>
+<td align="right">1</td>
+<td align="left"><a href="https://nyu.databrary.org/party/1513" class="uri">https://nyu.databrary.org/party/1513</a></td>
+</tr>
+<tr class="odd">
+<td align="left">Carlsen, William</td>
+<td align="right">1</td>
+<td align="left"><a href="https://nyu.databrary.org/party/325" class="uri">https://nyu.databrary.org/party/325</a></td>
+</tr>
+<tr class="even">
+<td align="left">Cordes, Sara</td>
+<td align="right">1</td>
+<td align="left"><a href="https://nyu.databrary.org/party/798" class="uri">https://nyu.databrary.org/party/798</a></td>
+</tr>
+<tr class="odd">
+<td align="left">Fausey, Caitlin M.</td>
+<td align="right">1</td>
+<td align="left"><a href="https://nyu.databrary.org/party/126" class="uri">https://nyu.databrary.org/party/126</a></td>
+</tr>
+<tr class="even">
+<td align="left">Frank, Michael C.</td>
+<td align="right">1</td>
+<td align="left"><a href="https://nyu.databrary.org/party/258" class="uri">https://nyu.databrary.org/party/258</a></td>
+</tr>
+<tr class="odd">
+<td align="left">Jayaraman, Swapnaa</td>
+<td align="right">1</td>
+<td align="left"><a href="https://nyu.databrary.org/party/254" class="uri">https://nyu.databrary.org/party/254</a></td>
+</tr>
+<tr class="even">
+<td align="left">Messinger, Daniel</td>
+<td align="right">1</td>
+<td align="left"><a href="https://nyu.databrary.org/party/70" class="uri">https://nyu.databrary.org/party/70</a></td>
+</tr>
+<tr class="odd">
+<td align="left">Neiderhiser, Jenae</td>
+<td align="right">1</td>
+<td align="left"><a href="https://nyu.databrary.org/party/330" class="uri">https://nyu.databrary.org/party/330</a></td>
+</tr>
+<tr class="even">
+<td align="left">Raudies, Florian</td>
+<td align="right">1</td>
+<td align="left"><a href="https://nyu.databrary.org/party/160" class="uri">https://nyu.databrary.org/party/160</a></td>
+</tr>
+<tr class="odd">
+<td align="left">Shai, Dana</td>
+<td align="right">1</td>
+<td align="left"><a href="https://nyu.databrary.org/party/1503" class="uri">https://nyu.databrary.org/party/1503</a></td>
+</tr>
+<tr class="even">
+<td align="left">Smith, Linda B.</td>
+<td align="right">1</td>
+<td align="left"><a href="https://nyu.databrary.org/party/161" class="uri">https://nyu.databrary.org/party/161</a></td>
+</tr>
+<tr class="odd">
+<td align="left">Staff</td>
+<td align="right">1</td>
+<td align="left"><a href="https://nyu.databrary.org/party/308" class="uri">https://nyu.databrary.org/party/308</a></td>
+</tr>
+</tbody>
+</table>
+<pre class="r"><code>v_201_300 &lt;- get_volumes_data(201, 300)</code></pre>
+<pre class="r"><code>v_301_400 &lt;- get_volumes_data(301, 400)</code></pre>
+<pre class="r"><code>v_401_500 &lt;- get_volumes_data(401, 500)</code></pre>
+<pre class="r"><code>v_501_600 &lt;- get_volumes_data(501, 600)</code></pre>
+<pre class="r"><code>v_601_700 &lt;- get_volumes_data(601, 700)</code></pre>
+<pre class="r"><code>v_701_800 &lt;- get_volumes_data(701, 800)</code></pre>
+<pre class="r"><code>v_801_900 &lt;- get_volumes_data(701, 800)</code></pre>
+<pre class="r"><code>v_001_900 &lt;- data.table::rbindlist(list(v_101_200, v_201_300, v_301_400,
+                                        v_401_500, v_501_600, v_601_700,
+                                        v_701_800, v_801_900))
+
+v_001_900 %&gt;%
+  dplyr::group_by(owner.ids.name, owner.ids.id) %&gt;%
+  dplyr::rename(investigator = owner.ids.name) %&gt;%
+  dplyr::summarise(n_shared_vols = n()) %&gt;%
+  dplyr::arrange(., desc(n_shared_vols), investigator) %&gt;%
+  dplyr::mutate(owner_url = paste0(&quot;https://nyu.databrary.org/party/&quot;, owner.ids.id)) %&gt;%
+  dplyr::select(-owner.ids.id) %&gt;%
+  knitr::kable(.)  </code></pre>
+<table>
+<thead>
+<tr class="header">
+<th align="left">investigator</th>
+<th align="right">n_shared_vols</th>
+<th align="left">owner_url</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">Jaswal, Vikram</td>
+<td align="right">74</td>
+<td align="left"><a href="https://nyu.databrary.org/party/1117" class="uri">https://nyu.databrary.org/party/1117</a></td>
+</tr>
+<tr class="even">
+<td align="left">Adolph, Karen</td>
+<td align="right">57</td>
+<td align="left"><a href="https://nyu.databrary.org/party/5" class="uri">https://nyu.databrary.org/party/5</a></td>
+</tr>
+<tr class="odd">
+<td align="left">Gilmore, Rick O.</td>
+<td align="right">25</td>
+<td align="left"><a href="https://nyu.databrary.org/party/6" class="uri">https://nyu.databrary.org/party/6</a></td>
+</tr>
+<tr class="even">
+<td align="left">Lillard, Angeline</td>
+<td align="right">14</td>
+<td align="left"><a href="https://nyu.databrary.org/party/318" class="uri">https://nyu.databrary.org/party/318</a></td>
+</tr>
+<tr class="odd">
+<td align="left">Tamis-LeMonda, Catherine</td>
+<td align="right">14</td>
+<td align="left"><a href="https://nyu.databrary.org/party/11" class="uri">https://nyu.databrary.org/party/11</a></td>
+</tr>
+<tr class="even">
+<td align="left">Bergelson, Elika</td>
+<td align="right">13</td>
+<td align="left"><a href="https://nyu.databrary.org/party/61" class="uri">https://nyu.databrary.org/party/61</a></td>
+</tr>
+<tr class="odd">
+<td align="left">Palmquist, Carolyn</td>
+<td align="right">13</td>
+<td align="left"><a href="https://nyu.databrary.org/party/2945" class="uri">https://nyu.databrary.org/party/2945</a></td>
+</tr>
+<tr class="even">
+<td align="left">Admin, Databrary</td>
+<td align="right">12</td>
+<td align="left"><a href="https://nyu.databrary.org/party/3341" class="uri">https://nyu.databrary.org/party/3341</a></td>
+</tr>
+<tr class="odd">
+<td align="left">Soska, Kasey</td>
+<td align="right">11</td>
+<td align="left"><a href="https://nyu.databrary.org/party/406" class="uri">https://nyu.databrary.org/party/406</a></td>
+</tr>
+<tr class="even">
+<td align="left">Seisler, Andrea R.</td>
+<td align="right">9</td>
+<td align="left"><a href="https://nyu.databrary.org/party/437" class="uri">https://nyu.databrary.org/party/437</a></td>
+</tr>
+<tr class="odd">
+<td align="left">Johnson, Scott</td>
+<td align="right">8</td>
+<td align="left"><a href="https://nyu.databrary.org/party/93" class="uri">https://nyu.databrary.org/party/93</a></td>
+</tr>
+<tr class="even">
+<td align="left">Scott, Lisa</td>
+<td align="right">8</td>
+<td align="left"><a href="https://nyu.databrary.org/party/2653" class="uri">https://nyu.databrary.org/party/2653</a></td>
+</tr>
+<tr class="odd">
+<td align="left">Beier, Jonathan</td>
+<td align="right">6</td>
+<td align="left"><a href="https://nyu.databrary.org/party/594" class="uri">https://nyu.databrary.org/party/594</a></td>
+</tr>
+<tr class="even">
+<td align="left">Frank, Michael C.</td>
+<td align="right">6</td>
+<td align="left"><a href="https://nyu.databrary.org/party/258" class="uri">https://nyu.databrary.org/party/258</a></td>
+</tr>
+<tr class="odd">
+<td align="left">Noles, Nicholaus</td>
+<td align="right">6</td>
+<td align="left"><a href="https://nyu.databrary.org/party/1699" class="uri">https://nyu.databrary.org/party/1699</a></td>
+</tr>
+<tr class="even">
+<td align="left">Needham, Amy</td>
+<td align="right">5</td>
+<td align="left"><a href="https://nyu.databrary.org/party/118" class="uri">https://nyu.databrary.org/party/118</a></td>
+</tr>
+<tr class="odd">
+<td align="left">Rhodes, Marjorie</td>
+<td align="right">5</td>
+<td align="left"><a href="https://nyu.databrary.org/party/277" class="uri">https://nyu.databrary.org/party/277</a></td>
+</tr>
+<tr class="even">
+<td align="left">Bonawitz, Elizabeth</td>
+<td align="right">4</td>
+<td align="left"><a href="https://nyu.databrary.org/party/2173" class="uri">https://nyu.databrary.org/party/2173</a></td>
+</tr>
+<tr class="odd">
+<td align="left">Cristia, Alejandrina</td>
+<td align="right">4</td>
+<td align="left"><a href="https://nyu.databrary.org/party/1034" class="uri">https://nyu.databrary.org/party/1034</a></td>
+</tr>
+<tr class="even">
+<td align="left">Jirout, Jamie</td>
+<td align="right">4</td>
+<td align="left"><a href="https://nyu.databrary.org/party/1197" class="uri">https://nyu.databrary.org/party/1197</a></td>
+</tr>
+<tr class="odd">
+<td align="left">Kaufman, Jordy</td>
+<td align="right">4</td>
+<td align="left"><a href="https://nyu.databrary.org/party/440" class="uri">https://nyu.databrary.org/party/440</a></td>
+</tr>
+<tr class="even">
+<td align="left">Scherf, Kathryn Suzanne</td>
+<td align="right">4</td>
+<td align="left"><a href="https://nyu.databrary.org/party/252" class="uri">https://nyu.databrary.org/party/252</a></td>
+</tr>
+<tr class="odd">
+<td align="left">Shirai, Nobu</td>
+<td align="right">4</td>
+<td align="left"><a href="https://nyu.databrary.org/party/2219" class="uri">https://nyu.databrary.org/party/2219</a></td>
+</tr>
+<tr class="even">
+<td align="left">Smith, Linda B.</td>
+<td align="right">4</td>
+<td align="left"><a href="https://nyu.databrary.org/party/161" class="uri">https://nyu.databrary.org/party/161</a></td>
+</tr>
+<tr class="odd">
+<td align="left">Srinivasan, Mahesh</td>
+<td align="right">4</td>
+<td align="left"><a href="https://nyu.databrary.org/party/1515" class="uri">https://nyu.databrary.org/party/1515</a></td>
+</tr>
+<tr class="even">
+<td align="left">Casasola, Marianella</td>
+<td align="right">3</td>
+<td align="left"><a href="https://nyu.databrary.org/party/650" class="uri">https://nyu.databrary.org/party/650</a></td>
+</tr>
+<tr class="odd">
+<td align="left">Cordes, Sara</td>
+<td align="right">3</td>
+<td align="left"><a href="https://nyu.databrary.org/party/798" class="uri">https://nyu.databrary.org/party/798</a></td>
+</tr>
+<tr class="even">
+<td align="left">Franchak, John</td>
+<td align="right">3</td>
+<td align="left"><a href="https://nyu.databrary.org/party/14" class="uri">https://nyu.databrary.org/party/14</a></td>
+</tr>
+<tr class="odd">
+<td align="left">International Congress on Infant Studies (ICIS)</td>
+<td align="right">3</td>
+<td align="left"><a href="https://nyu.databrary.org/party/2127" class="uri">https://nyu.databrary.org/party/2127</a></td>
+</tr>
+<tr class="even">
+<td align="left">Karasik, Lana</td>
+<td align="right">3</td>
+<td align="left"><a href="https://nyu.databrary.org/party/32" class="uri">https://nyu.databrary.org/party/32</a></td>
+</tr>
+<tr class="odd">
+<td align="left">Lee, Do Kyeong</td>
+<td align="right">3</td>
+<td align="left"><a href="https://nyu.databrary.org/party/384" class="uri">https://nyu.databrary.org/party/384</a></td>
+</tr>
+<tr class="even">
+<td align="left">Oakes, Lisa</td>
+<td align="right">3</td>
+<td align="left"><a href="https://nyu.databrary.org/party/538" class="uri">https://nyu.databrary.org/party/538</a></td>
+</tr>
+<tr class="odd">
+<td align="left">Staff</td>
+<td align="right">3</td>
+<td align="left"><a href="https://nyu.databrary.org/party/308" class="uri">https://nyu.databrary.org/party/308</a></td>
+</tr>
+<tr class="even">
+<td align="left">Vishton, Peter</td>
+<td align="right">3</td>
+<td align="left"><a href="https://nyu.databrary.org/party/60" class="uri">https://nyu.databrary.org/party/60</a></td>
+</tr>
+<tr class="odd">
+<td align="left">Yu, Chen</td>
+<td align="right">3</td>
+<td align="left"><a href="https://nyu.databrary.org/party/120" class="uri">https://nyu.databrary.org/party/120</a></td>
+</tr>
+<tr class="even">
+<td align="left">Araiza Alba, Paola</td>
+<td align="right">2</td>
+<td align="left"><a href="https://nyu.databrary.org/party/2479" class="uri">https://nyu.databrary.org/party/2479</a></td>
+</tr>
+<tr class="odd">
+<td align="left">Aschersleben, Gisa</td>
+<td align="right">2</td>
+<td align="left"><a href="https://nyu.databrary.org/party/2746" class="uri">https://nyu.databrary.org/party/2746</a></td>
+</tr>
+<tr class="even">
+<td align="left">Bahrick, Lorraine E.</td>
+<td align="right">2</td>
+<td align="left"><a href="https://nyu.databrary.org/party/376" class="uri">https://nyu.databrary.org/party/376</a></td>
+</tr>
+<tr class="odd">
+<td align="left">Bai, Yu</td>
+<td align="right">2</td>
+<td align="left"><a href="https://nyu.databrary.org/party/4603" class="uri">https://nyu.databrary.org/party/4603</a></td>
+</tr>
+<tr class="even">
+<td align="left">Barr, Rachel</td>
+<td align="right">2</td>
+<td align="left"><a href="https://nyu.databrary.org/party/104" class="uri">https://nyu.databrary.org/party/104</a></td>
+</tr>
+<tr class="odd">
+<td align="left">Bergmann, Christina</td>
+<td align="right">2</td>
+<td align="left"><a href="https://nyu.databrary.org/party/726" class="uri">https://nyu.databrary.org/party/726</a></td>
+</tr>
+<tr class="even">
+<td align="left">Blair, Clancy</td>
+<td align="right">2</td>
+<td align="left"><a href="https://nyu.databrary.org/party/1254" class="uri">https://nyu.databrary.org/party/1254</a></td>
+</tr>
+<tr class="odd">
+<td align="left">Chemla, Emmanuel</td>
+<td align="right">2</td>
+<td align="left"><a href="https://nyu.databrary.org/party/3701" class="uri">https://nyu.databrary.org/party/3701</a></td>
+</tr>
+<tr class="even">
+<td align="left">Cole, Pamela M</td>
+<td align="right">2</td>
+<td align="left"><a href="https://nyu.databrary.org/party/3648" class="uri">https://nyu.databrary.org/party/3648</a></td>
+</tr>
+<tr class="odd">
+<td align="left">Foushee, Ruthe</td>
+<td align="right">2</td>
+<td align="left"><a href="https://nyu.databrary.org/party/1001" class="uri">https://nyu.databrary.org/party/1001</a></td>
+</tr>
+<tr class="even">
+<td align="left">Goldstein, Thalia R.</td>
+<td align="right">2</td>
+<td align="left"><a href="https://nyu.databrary.org/party/531" class="uri">https://nyu.databrary.org/party/531</a></td>
+</tr>
+<tr class="odd">
+<td align="left">Golinkoff, Roberta</td>
+<td align="right">2</td>
+<td align="left"><a href="https://nyu.databrary.org/party/296" class="uri">https://nyu.databrary.org/party/296</a></td>
+</tr>
+<tr class="even">
+<td align="left">Hannon, Erin</td>
+<td align="right">2</td>
+<td align="left"><a href="https://nyu.databrary.org/party/3087" class="uri">https://nyu.databrary.org/party/3087</a></td>
+</tr>
+<tr class="odd">
+<td align="left">Hartshorne, Joshua</td>
+<td align="right">2</td>
+<td align="left"><a href="https://nyu.databrary.org/party/2521" class="uri">https://nyu.databrary.org/party/2521</a></td>
+</tr>
+<tr class="even">
+<td align="left">Hirsh-Pasek, Kathy</td>
+<td align="right">2</td>
+<td align="left"><a href="https://nyu.databrary.org/party/546" class="uri">https://nyu.databrary.org/party/546</a></td>
+</tr>
+<tr class="odd">
+<td align="left">Iverson, Jana</td>
+<td align="right">2</td>
+<td align="left"><a href="https://nyu.databrary.org/party/334" class="uri">https://nyu.databrary.org/party/334</a></td>
+</tr>
+<tr class="even">
+<td align="left">Kline, Melissa</td>
+<td align="right">2</td>
+<td align="left"><a href="https://nyu.databrary.org/party/1157" class="uri">https://nyu.databrary.org/party/1157</a></td>
+</tr>
+<tr class="odd">
+<td align="left">Krieger, Florian</td>
+<td align="right">2</td>
+<td align="left"><a href="https://nyu.databrary.org/party/4067" class="uri">https://nyu.databrary.org/party/4067</a></td>
+</tr>
+<tr class="even">
+<td align="left">Lakusta, Laura</td>
+<td align="right">2</td>
+<td align="left"><a href="https://nyu.databrary.org/party/590" class="uri">https://nyu.databrary.org/party/590</a></td>
+</tr>
+<tr class="odd">
+<td align="left">McDermott, Catherine</td>
+<td align="right">2</td>
+<td align="left"><a href="https://nyu.databrary.org/party/1704" class="uri">https://nyu.databrary.org/party/1704</a></td>
+</tr>
+<tr class="even">
+<td align="left">Nonaka, Tetsushi</td>
+<td align="right">2</td>
+<td align="left"><a href="https://nyu.databrary.org/party/1889" class="uri">https://nyu.databrary.org/party/1889</a></td>
+</tr>
+<tr class="odd">
+<td align="left">Ossmy, Ori</td>
+<td align="right">2</td>
+<td align="left"><a href="https://nyu.databrary.org/party/1526" class="uri">https://nyu.databrary.org/party/1526</a></td>
+</tr>
+<tr class="even">
+<td align="left">Paulus, Markus</td>
+<td align="right">2</td>
+<td align="left"><a href="https://nyu.databrary.org/party/959" class="uri">https://nyu.databrary.org/party/959</a></td>
+</tr>
+<tr class="odd">
+<td align="left">Perez-Edgar, Koraly</td>
+<td align="right">2</td>
+<td align="left"><a href="https://nyu.databrary.org/party/96" class="uri">https://nyu.databrary.org/party/96</a></td>
+</tr>
+<tr class="even">
+<td align="left">Prado, Elizabeth</td>
+<td align="right">2</td>
+<td align="left"><a href="https://nyu.databrary.org/party/4458" class="uri">https://nyu.databrary.org/party/4458</a></td>
+</tr>
+<tr class="odd">
+<td align="left">Ransom, Ashley</td>
+<td align="right">2</td>
+<td align="left"><a href="https://nyu.databrary.org/party/4065" class="uri">https://nyu.databrary.org/party/4065</a></td>
+</tr>
+<tr class="even">
+<td align="left">Robinovitch, Stephen</td>
+<td align="right">2</td>
+<td align="left"><a href="https://nyu.databrary.org/party/2693" class="uri">https://nyu.databrary.org/party/2693</a></td>
+</tr>
+<tr class="odd">
+<td align="left">Saffran, Jenny</td>
+<td align="right">2</td>
+<td align="left"><a href="https://nyu.databrary.org/party/274" class="uri">https://nyu.databrary.org/party/274</a></td>
+</tr>
+<tr class="even">
+<td align="left">Soderstrom, Melanie</td>
+<td align="right">2</td>
+<td align="left"><a href="https://nyu.databrary.org/party/518" class="uri">https://nyu.databrary.org/party/518</a></td>
+</tr>
+<tr class="odd">
+<td align="left">Soley, Gaye</td>
+<td align="right">2</td>
+<td align="left"><a href="https://nyu.databrary.org/party/3967" class="uri">https://nyu.databrary.org/party/3967</a></td>
+</tr>
+<tr class="even">
+<td align="left">Suh, Daniel Daewon</td>
+<td align="right">2</td>
+<td align="left"><a href="https://nyu.databrary.org/party/2578" class="uri">https://nyu.databrary.org/party/2578</a></td>
+</tr>
+<tr class="odd">
+<td align="left">Thompson, Brittany</td>
+<td align="right">2</td>
+<td align="left"><a href="https://nyu.databrary.org/party/3152" class="uri">https://nyu.databrary.org/party/3152</a></td>
+</tr>
+<tr class="even">
+<td align="left">Trehub, Sandra E</td>
+<td align="right">2</td>
+<td align="left"><a href="https://nyu.databrary.org/party/2854" class="uri">https://nyu.databrary.org/party/2854</a></td>
+</tr>
+<tr class="odd">
+<td align="left">Weisberg, Deena Skolnick</td>
+<td align="right">2</td>
+<td align="left"><a href="https://nyu.databrary.org/party/562" class="uri">https://nyu.databrary.org/party/562</a></td>
+</tr>
+<tr class="even">
+<td align="left">Woudstra, Mi-lan</td>
+<td align="right">2</td>
+<td align="left"><a href="https://nyu.databrary.org/party/1322" class="uri">https://nyu.databrary.org/party/1322</a></td>
+</tr>
+<tr class="odd">
+<td align="left">Xu, Melody</td>
+<td align="right">2</td>
+<td align="left"><a href="https://nyu.databrary.org/party/2775" class="uri">https://nyu.databrary.org/party/2775</a></td>
+</tr>
+<tr class="even">
+<td align="left">Yurovsky, Daniel</td>
+<td align="right">2</td>
+<td align="left"><a href="https://nyu.databrary.org/party/3037" class="uri">https://nyu.databrary.org/party/3037</a></td>
+</tr>
+<tr class="odd">
+<td align="left">Arshad, Ahmad</td>
+<td align="right">1</td>
+<td align="left"><a href="https://nyu.databrary.org/party/2223" class="uri">https://nyu.databrary.org/party/2223</a></td>
+</tr>
+<tr class="even">
+<td align="left">Brand, Rebecca</td>
+<td align="right">1</td>
+<td align="left"><a href="https://nyu.databrary.org/party/1513" class="uri">https://nyu.databrary.org/party/1513</a></td>
+</tr>
+<tr class="odd">
+<td align="left">Braun, Bettina</td>
+<td align="right">1</td>
+<td align="left"><a href="https://nyu.databrary.org/party/3830" class="uri">https://nyu.databrary.org/party/3830</a></td>
+</tr>
+<tr class="even">
+<td align="left">Brooker, Rebecca Jo</td>
+<td align="right">1</td>
+<td align="left"><a href="https://nyu.databrary.org/party/1280" class="uri">https://nyu.databrary.org/party/1280</a></td>
+</tr>
+<tr class="odd">
+<td align="left">Bunce, John</td>
+<td align="right">1</td>
+<td align="left"><a href="https://nyu.databrary.org/party/3312" class="uri">https://nyu.databrary.org/party/3312</a></td>
+</tr>
+<tr class="even">
+<td align="left">Carlsen, William</td>
+<td align="right">1</td>
+<td align="left"><a href="https://nyu.databrary.org/party/325" class="uri">https://nyu.databrary.org/party/325</a></td>
+</tr>
+<tr class="odd">
+<td align="left">Casillas, Marisa</td>
+<td align="right">1</td>
+<td align="left"><a href="https://nyu.databrary.org/party/3062" class="uri">https://nyu.databrary.org/party/3062</a></td>
+</tr>
+<tr class="even">
+<td align="left">Cirelli, Laura</td>
+<td align="right">1</td>
+<td align="left"><a href="https://nyu.databrary.org/party/2738" class="uri">https://nyu.databrary.org/party/2738</a></td>
+</tr>
+<tr class="odd">
+<td align="left">Cook, Susan Wagner</td>
+<td align="right">1</td>
+<td align="left"><a href="https://nyu.databrary.org/party/681" class="uri">https://nyu.databrary.org/party/681</a></td>
+</tr>
+<tr class="even">
+<td align="left">Durrant, Samantha</td>
+<td align="right">1</td>
+<td align="left"><a href="https://nyu.databrary.org/party/3046" class="uri">https://nyu.databrary.org/party/3046</a></td>
+</tr>
+<tr class="odd">
+<td align="left">Elbich, Daniel</td>
+<td align="right">1</td>
+<td align="left"><a href="https://nyu.databrary.org/party/1838" class="uri">https://nyu.databrary.org/party/1838</a></td>
+</tr>
+<tr class="even">
+<td align="left">Fabricius, William</td>
+<td align="right">1</td>
+<td align="left"><a href="https://nyu.databrary.org/party/288" class="uri">https://nyu.databrary.org/party/288</a></td>
+</tr>
+<tr class="odd">
+<td align="left">Fausey, Caitlin M.</td>
+<td align="right">1</td>
+<td align="left"><a href="https://nyu.databrary.org/party/126" class="uri">https://nyu.databrary.org/party/126</a></td>
+</tr>
+<tr class="even">
+<td align="left">Fawcett, Christine</td>
+<td align="right">1</td>
+<td align="left"><a href="https://nyu.databrary.org/party/1719" class="uri">https://nyu.databrary.org/party/1719</a></td>
+</tr>
+<tr class="odd">
+<td align="left">Gonzales, Christopher</td>
+<td align="right">1</td>
+<td align="left"><a href="https://nyu.databrary.org/party/289" class="uri">https://nyu.databrary.org/party/289</a></td>
+</tr>
+<tr class="even">
+<td align="left">Hasan, Shohan</td>
+<td align="right">1</td>
+<td align="left"><a href="https://nyu.databrary.org/party/431" class="uri">https://nyu.databrary.org/party/431</a></td>
+</tr>
+<tr class="odd">
+<td align="left">Hauck, Janet</td>
+<td align="right">1</td>
+<td align="left"><a href="https://nyu.databrary.org/party/997" class="uri">https://nyu.databrary.org/party/997</a></td>
+</tr>
+<tr class="even">
+<td align="left">Hay, Jessica</td>
+<td align="right">1</td>
+<td align="left"><a href="https://nyu.databrary.org/party/3299" class="uri">https://nyu.databrary.org/party/3299</a></td>
+</tr>
+<tr class="odd">
+<td align="left">Horst, Jessica S.</td>
+<td align="right">1</td>
+<td align="left"><a href="https://nyu.databrary.org/party/624" class="uri">https://nyu.databrary.org/party/624</a></td>
+</tr>
+<tr class="even">
+<td align="left">Jayaraman, Swapnaa</td>
+<td align="right">1</td>
+<td align="left"><a href="https://nyu.databrary.org/party/254" class="uri">https://nyu.databrary.org/party/254</a></td>
+</tr>
+<tr class="odd">
+<td align="left">Kaldy, Zsuzsa</td>
+<td align="right">1</td>
+<td align="left"><a href="https://nyu.databrary.org/party/102" class="uri">https://nyu.databrary.org/party/102</a></td>
+</tr>
+<tr class="even">
+<td align="left">Kibbe, Melissa</td>
+<td align="right">1</td>
+<td align="left"><a href="https://nyu.databrary.org/party/2400" class="uri">https://nyu.databrary.org/party/2400</a></td>
+</tr>
+<tr class="odd">
+<td align="left">Klassen, Kelsey</td>
+<td align="right">1</td>
+<td align="left"><a href="https://nyu.databrary.org/party/3126" class="uri">https://nyu.databrary.org/party/3126</a></td>
+</tr>
+<tr class="even">
+<td align="left">Kukke, Sahana Nalini</td>
+<td align="right">1</td>
+<td align="left"><a href="https://nyu.databrary.org/party/2704" class="uri">https://nyu.databrary.org/party/2704</a></td>
+</tr>
+<tr class="odd">
+<td align="left">Kyriakou, Lara</td>
+<td align="right">1</td>
+<td align="left"><a href="https://nyu.databrary.org/party/1400" class="uri">https://nyu.databrary.org/party/1400</a></td>
+</tr>
+<tr class="even">
+<td align="left">LIU, YANXI</td>
+<td align="right">1</td>
+<td align="left"><a href="https://nyu.databrary.org/party/3043" class="uri">https://nyu.databrary.org/party/3043</a></td>
+</tr>
+<tr class="odd">
+<td align="left">LoBue, Vanessa</td>
+<td align="right">1</td>
+<td align="left"><a href="https://nyu.databrary.org/party/82" class="uri">https://nyu.databrary.org/party/82</a></td>
+</tr>
+<tr class="even">
+<td align="left">Mei, Michelle</td>
+<td align="right">1</td>
+<td align="left"><a href="https://nyu.databrary.org/party/3585" class="uri">https://nyu.databrary.org/party/3585</a></td>
+</tr>
+<tr class="odd">
+<td align="left">Merry, Sally Engle</td>
+<td align="right">1</td>
+<td align="left"><a href="https://nyu.databrary.org/party/3854" class="uri">https://nyu.databrary.org/party/3854</a></td>
+</tr>
+<tr class="even">
+<td align="left">Messinger, Daniel</td>
+<td align="right">1</td>
+<td align="left"><a href="https://nyu.databrary.org/party/70" class="uri">https://nyu.databrary.org/party/70</a></td>
+</tr>
+<tr class="odd">
+<td align="left">Motta-Mena, Natalie V.</td>
+<td align="right">1</td>
+<td align="left"><a href="https://nyu.databrary.org/party/525" class="uri">https://nyu.databrary.org/party/525</a></td>
+</tr>
+<tr class="even">
+<td align="left">Moulson, Margaret</td>
+<td align="right">1</td>
+<td align="left"><a href="https://nyu.databrary.org/party/474" class="uri">https://nyu.databrary.org/party/474</a></td>
+</tr>
+<tr class="odd">
+<td align="left">Neiderhiser, Jenae</td>
+<td align="right">1</td>
+<td align="left"><a href="https://nyu.databrary.org/party/330" class="uri">https://nyu.databrary.org/party/330</a></td>
+</tr>
+<tr class="even">
+<td align="left">Norcia, Anthony M.</td>
+<td align="right">1</td>
+<td align="left"><a href="https://nyu.databrary.org/party/378" class="uri">https://nyu.databrary.org/party/378</a></td>
+</tr>
+<tr class="odd">
+<td align="left">Perfors, Amy</td>
+<td align="right">1</td>
+<td align="left"><a href="https://nyu.databrary.org/party/5748" class="uri">https://nyu.databrary.org/party/5748</a></td>
+</tr>
+<tr class="even">
+<td align="left">Raudies, Florian</td>
+<td align="right">1</td>
+<td align="left"><a href="https://nyu.databrary.org/party/160" class="uri">https://nyu.databrary.org/party/160</a></td>
+</tr>
+<tr class="odd">
+<td align="left">Raver, Cybele</td>
+<td align="right">1</td>
+<td align="left"><a href="https://nyu.databrary.org/party/368" class="uri">https://nyu.databrary.org/party/368</a></td>
+</tr>
+<tr class="even">
+<td align="left">Rosemberg, Celia</td>
+<td align="right">1</td>
+<td align="left"><a href="https://nyu.databrary.org/party/3094" class="uri">https://nyu.databrary.org/party/3094</a></td>
+</tr>
+<tr class="odd">
+<td align="left">Rowland, Caroline</td>
+<td align="right">1</td>
+<td align="left"><a href="https://nyu.databrary.org/party/3053" class="uri">https://nyu.databrary.org/party/3053</a></td>
+</tr>
+<tr class="even">
+<td align="left">Shai, Dana</td>
+<td align="right">1</td>
+<td align="left"><a href="https://nyu.databrary.org/party/1503" class="uri">https://nyu.databrary.org/party/1503</a></td>
+</tr>
+<tr class="odd">
+<td align="left">Stefan, Catrinel Alice</td>
+<td align="right">1</td>
+<td align="left"><a href="https://nyu.databrary.org/party/3600" class="uri">https://nyu.databrary.org/party/3600</a></td>
+</tr>
+<tr class="even">
+<td align="left">Sullivan, Jessica</td>
+<td align="right">1</td>
+<td align="left"><a href="https://nyu.databrary.org/party/2095" class="uri">https://nyu.databrary.org/party/2095</a></td>
+</tr>
+<tr class="odd">
+<td align="left">Warlaumont, Anne</td>
+<td align="right">1</td>
+<td align="left"><a href="https://nyu.databrary.org/party/477" class="uri">https://nyu.databrary.org/party/477</a></td>
+</tr>
+<tr class="even">
+<td align="left">Wilkinson, Krista</td>
+<td align="right">1</td>
+<td align="left"><a href="https://nyu.databrary.org/party/245" class="uri">https://nyu.databrary.org/party/245</a></td>
+</tr>
+<tr class="odd">
+<td align="left">Wojcik, Erica</td>
+<td align="right">1</td>
+<td align="left"><a href="https://nyu.databrary.org/party/2773" class="uri">https://nyu.databrary.org/party/2773</a></td>
+</tr>
+</tbody>
+</table>
+<p>There are 0 who are investigators on shared volumes.</p>
 </div>
 
 

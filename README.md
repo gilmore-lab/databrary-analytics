@@ -21,3 +21,7 @@ Code to produce and plot analytics about Databrary
     - choose the 'anytime' option for Citations Monthly
     - choose 'Since 2019' option for Citations Yearly
     - the boxes for *Include Patents* and *Include Citations* remain checked
+
+# Shared volumes and owners report
+
+- <https://gilmore-lab.github.io/databrary-analytics/list-shared-volumes-owners.html>
