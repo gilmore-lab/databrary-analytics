@@ -21,6 +21,9 @@ updated_stats <- updated_stats %>%
   filter(!is.na(count))
 
 # Plot
+
+updated_stats$count <- as.numeric(updated_stats$count)
+
 p <- updated_stats %>%
   ggplot(., aes(x = date, y = count, color = type, group = type)) +
   scale_x_date(date_labels = "%Y", date_breaks = '1 year') +
