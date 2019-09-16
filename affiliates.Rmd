@@ -20,6 +20,9 @@ updated_stats <- updated_stats %>%
   filter(!is.na(count))
 
 # Plot
+
+updated_stats$count <- as.numeric(updated_stats$count)
+
 p <- updated_stats %>%
   ggplot(., aes(x = date, y = count, color = type, group = type)) +
   scale_x_date(date_labels = "%Y", date_breaks = '1 year') +
@@ -31,6 +34,7 @@ p <- updated_stats %>%
   databrary_theme +
   scale_y_continuous(breaks = seq(0, round_any(max(updated_stats$count), 100, ceiling), 100), expand = c(0,0)) +
   coord_cartesian(ylim = c(0, round_any(max(updated_stats$count), 100, ceiling)))
+
 
 ggdraw(p) + 
   draw_label("Investigators, ", colour = color_teal, .7, .8) +

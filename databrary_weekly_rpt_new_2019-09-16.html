@@ -263,7 +263,7 @@ div.tocify {
 
 <h1 class="title toc-ignore">Databrary Weekly</h1>
 <h4 class="author">Rick O. Gilmore &amp; Andrea Seisler</h4>
-<h4 class="date">2019-09-16 12:08:55</h4>
+<h4 class="date">2019-09-16 12:49:15</h4>
 
 </div>
 
@@ -275,6 +275,8 @@ new_stats$date &lt;- lubridate::as_datetime(new_stats$date)</code></pre>
 db &lt;- gs_title(&#39;Databrary-analytics&#39;)</code></pre>
 <pre class="r"><code>old_stats &lt;- db %&gt;%
   gs_read(ws = &#39;institutions-investigators&#39;)</code></pre>
+<pre class="r"><code>old_citations &lt;- db %&gt;%
+  gs_read(ws = &#39;citations-monthly&#39;)</code></pre>
 <pre class="r"><code># initialize updated_stats
 updated_stats &lt;- old_stats
 if (as.logical(params$update_stats)) {
@@ -322,7 +324,7 @@ ggdraw(p) +
   draw_label(max(new_stats$investigators), colour = color_teal, .81, .8) +
   draw_label(&quot;Institutions, &quot;, colour = color_orange, .78, .5) +
   draw_label(max(new_stats$institutions), colour = color_orange, .87, .5)</code></pre>
-<p><img src="databrary_weekly_rpt_new_2019-09-16_files/figure-html/db-inst-user-plot-1.png" width="672" /> <!-- Next, we update the Google Sheet if `params$update_gs` is TRUE. --> <!-- In the current context, `params$update_gs` == TRUE. --></p>
+<p><img src="databrary_weekly_rpt_new_2019-09-16_files/figure-html/db-inst-user-plot-1.png" width="672" /> <!-- Next, we update the Google Sheet if `params$update_gs` is TRUE. --> <!-- In the current context, `params$update_gs` == FALSE. --></p>
 <div id="new-institutions" class="section level2">
 <h2><span class="header-section-number">1.1</span> New Institutions</h2>
 <!-- ## New institutions -->
@@ -658,7 +660,7 @@ get_citation_stats &lt;- function(project = &#39;databrary&#39;) {
 databrary_cites &lt;- get_citation_stats(&#39;databrary&#39;)
 datavyu_cites &lt;- get_citation_stats(&#39;datavyu&#39;)
 
-old_citations &lt;- citations &lt;- read_csv(&quot;csv/citations-monthly.csv&quot;)
+#old_citations &lt;- citations &lt;- read_csv(&quot;csv/citations-monthly.csv&quot;)
 next_value &lt;- dim(old_citations)[1] + 1
 citations &lt;- old_citations
 citations[next_value,] &lt;- NA
@@ -684,10 +686,10 @@ citations_plot &lt;-
   
   
 ggdraw(citations_plot) + 
-  draw_label(&quot;Datavyu, &quot;, colour = color_teal, .7, .5) +
-  draw_label(max(datavyu_cites), colour = color_teal, .78, .5) +
-  draw_label(max(databrary_cites), colour = color_orange, .79, .8) +
-  draw_label(&quot;Databrary, &quot;, colour = color_orange, .7, .8)</code></pre>
+  draw_label(&quot;Datavyu, &quot;, colour = color_teal, .8, .3) +
+  draw_label(max(datavyu_cites), colour = color_teal, .88, .3) +
+  draw_label(max(databrary_cites), colour = color_orange, .79, .7) +
+  draw_label(&quot;Databrary, &quot;, colour = color_orange, .7, .7)</code></pre>
 <p><img src="databrary_weekly_rpt_new_2019-09-16_files/figure-html/db-dv-citations-plot-1.png" width="672" /></p>
 <pre class="r"><code>if (as.logical(params$update_gs)) {
   new_data &lt;- data_frame(date = Sys.Date(), 
@@ -700,8 +702,8 @@ ggdraw(citations_plot) +
   message(&quot;&#39;update_gs&#39; parameter is &#39;FALSE&#39;, so Google Sheet data unmodified.&quot;)
 }</code></pre>
 <!-- # Affiliates -->
-<!-- #```{r child = 'affiliates.Rmd'} -->
-<!-- #``` -->
+<!-- ```{r child = 'affiliates.Rmd'} -->
+<!-- ``` -->
 <!-- # Update Data -->
 <pre class="r"><code>if (as.logical(params$update_gs)) {
   db &lt;- db %&gt;%
