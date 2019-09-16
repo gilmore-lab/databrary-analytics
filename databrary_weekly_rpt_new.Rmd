@@ -18,7 +18,7 @@ output:
     toc_float: yes
 params:
   db_account: rogilmore@psu.edu
-  update_gs: yes
+  update_gs: no
   update_stats: yes
   vols_to_test: 10
 ---
@@ -91,6 +91,10 @@ db <- gs_title('Databrary-analytics')
 old_stats <- db %>%
   gs_read(ws = 'institutions-investigators')
 ```
+```{r load-citations-from-googlesheets}
+old_citations <- db %>%
+  gs_read(ws = 'citations-monthly')
+```
 
 ```{r update-stats}
 # initialize updated_stats
@@ -135,8 +139,8 @@ if (as.logical(params$update_stats)) {
 
 <!-- # Affiliates -->
 
-<!-- #```{r child = 'affiliates.Rmd'} -->
-<!-- #``` -->
+<!-- ```{r child = 'affiliates.Rmd'} -->
+<!-- ``` -->
 
 <!-- # Update Data -->
 

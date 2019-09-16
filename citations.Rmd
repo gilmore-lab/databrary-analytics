@@ -34,7 +34,7 @@ get_citation_stats <- function(project = 'databrary') {
 databrary_cites <- get_citation_stats('databrary')
 datavyu_cites <- get_citation_stats('datavyu')
 
-old_citations <- citations <- read_csv("csv/citations-monthly.csv")
+#old_citations <- citations <- read_csv("csv/citations-monthly.csv")
 next_value <- dim(old_citations)[1] + 1
 citations <- old_citations
 citations[next_value,] <- NA
@@ -63,10 +63,10 @@ citations_plot <-
   
   
 ggdraw(citations_plot) + 
-  draw_label("Datavyu, ", colour = color_teal, .7, .5) +
-  draw_label(max(datavyu_cites), colour = color_teal, .78, .5) +
-  draw_label(max(databrary_cites), colour = color_orange, .79, .8) +
-  draw_label("Databrary, ", colour = color_orange, .7, .8)
+  draw_label("Datavyu, ", colour = color_teal, .8, .3) +
+  draw_label(max(datavyu_cites), colour = color_teal, .88, .3) +
+  draw_label(max(databrary_cites), colour = color_orange, .79, .7) +
+  draw_label("Databrary, ", colour = color_orange, .7, .7)
 ```
 
 ```{r update-citations-gs}
