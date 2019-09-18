@@ -91,6 +91,10 @@ db <- gs_title('Databrary-analytics')
 old_stats <- db %>%
   gs_read(ws = 'institutions-investigators')
 ```
+```{r load-citations-from-googlesheets}
+old_citations <- db %>%
+  gs_read(ws = 'citations-monthly')
+```
 
 ```{r update-stats}
 # initialize updated_stats
@@ -135,8 +139,8 @@ if (as.logical(params$update_stats)) {
 
 <!-- # Affiliates -->
 
-<!-- #```{r child = 'affiliates.Rmd'} -->
-<!-- #``` -->
+<!-- ```{r child = 'affiliates.Rmd'} -->
+<!-- ``` -->
 
 <!-- # Update Data -->
 
