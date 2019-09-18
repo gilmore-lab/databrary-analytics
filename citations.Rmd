@@ -58,7 +58,7 @@ citations_plot <-
   ggtitle(paste("Citations as of ", Sys.Date())) +
   ylab("Citations") +
   databrary_theme +
- scale_y_continuous(breaks = seq(0, round_any(max(citations$count), 100, ceiling), 100), expand = c(0,0)) +
+  scale_y_continuous(breaks = seq(0, round_any(max(citations$count), 100, ceiling), 100), expand = c(0,0)) +
   coord_cartesian(ylim = c(0, round_any(max(citations$count), 100, ceiling)))
   
   
