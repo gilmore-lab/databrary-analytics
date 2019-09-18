@@ -263,7 +263,7 @@ div.tocify {
 
 <h1 class="title toc-ignore">Databrary Weekly</h1>
 <h4 class="author">Rick O. Gilmore &amp; Andrea Seisler</h4>
-<h4 class="date">2019-09-18 08:06:08</h4>
+<h4 class="date">2019-09-18 13:26:32</h4>
 
 </div>
 
@@ -307,7 +307,7 @@ updated_stats &lt;- updated_stats %&gt;%
 
 updated_stats$count &lt;- as.numeric(updated_stats$count)
 
-p &lt;- updated_stats %&gt;%
+users_plot &lt;- updated_stats %&gt;%
   ggplot(., aes(x = date, y = count, color = type, group = type)) +
   scale_x_date(date_labels = &quot;%Y&quot;, date_breaks = &#39;1 year&#39;) +
   geom_point() +
@@ -319,11 +319,9 @@ p &lt;- updated_stats %&gt;%
   scale_y_continuous(breaks = seq(0, round_any(max(updated_stats$count), 100, ceiling), 100), expand = c(0,0)) +
   coord_cartesian(ylim = c(0, round_any(max(updated_stats$count), 100, ceiling)))
 
-ggdraw(p) + 
-  draw_label(&quot;Investigators, &quot;, colour = color_teal, .7, .8) +
-  draw_label(max(new_stats$investigators), colour = color_teal, .81, .8) +
-  draw_label(&quot;Institutions, &quot;, colour = color_orange, .78, .5) +
-  draw_label(max(new_stats$institutions), colour = color_orange, .87, .5)</code></pre>
+ggdraw(users_plot) + 
+  draw_label(paste0(&quot;Investigators: &quot;, new_stats$investigators), colour = color_teal, .7, .8) +
+  draw_label(paste0(&quot;Institutions: &quot;, new_stats$institutions), colour = color_orange, .78, .5)</code></pre>
 <p><img src="databrary_weekly_rpt_new_2019-09-18_files/figure-html/db-inst-user-plot-1.png" width="672" /> <!-- Next, we update the Google Sheet if `params$update_gs` is TRUE. --> <!-- In the current context, `params$update_gs` == FALSE. --></p>
 <div id="new-institutions" class="section level2">
 <h2><span class="header-section-number">1.1</span> New Institutions</h2>
@@ -506,10 +504,8 @@ vols_plot &lt;- updated_vols %&gt;%
 
 
 ggdraw(vols_plot) + 
-  draw_label(&quot;Unshared, &quot;, colour = color_teal, .75, .85) +
-  draw_label(max(new_stats$datasets_total - new_stats$datasets_shared), colour = color_teal, .84, .85) +
-  draw_label(max(new_stats$datasets_shared), colour = color_orange, .72, .6) +
-  draw_label(&quot;Shared, &quot;, colour = color_orange, .65, .6)</code></pre>
+  draw_label(paste0(&quot;Unshared: &quot;, new_stats$datasets_total - new_stats$datasets_shared), colour = color_teal, .75, .85) +
+  draw_label(paste0(&quot;Shared: &quot;, new_stats$datasets_shared), colour = color_orange, .65, .6)</code></pre>
 <p><img src="databrary_weekly_rpt_new_2019-09-18_files/figure-html/db-vols-plot-1.png" width="672" /> <!-- Next, we update the Google Sheet if `params$update_gs` is TRUE. --></p>
 <pre class="r"><code>if (as.logical(params$update_gs)) {
   new_data &lt;- data_frame(date = Sys.Date(), 
@@ -572,6 +568,20 @@ Databrary URL
 <tbody>
 <tr>
 <td style="text-align:left;">
+A-n-T: Attention and Temperament in Infancy
+</td>
+<td style="text-align:left;">
+2015-04-16
+</td>
+<td style="text-align:left;">
+Perez-Edgar, Koraly
+</td>
+<td style="text-align:left;">
+<a href="https://nyu.databrary.org/volume/119" class="uri">https://nyu.databrary.org/volume/119</a>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
 Learning Choice Check
 </td>
 <td style="text-align:left;">
@@ -610,20 +620,6 @@ Lew-Williams, Casey
 </td>
 <td style="text-align:left;">
 <a href="https://nyu.databrary.org/volume/979" class="uri">https://nyu.databrary.org/volume/979</a>
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-MB2_
-</td>
-<td style="text-align:left;">
-2019-09-11
-</td>
-<td style="text-align:left;">
-Hamlin, Kiley
-</td>
-<td style="text-align:left;">
-<a href="https://nyu.databrary.org/volume/978" class="uri">https://nyu.databrary.org/volume/978</a>
 </td>
 </tr>
 </tbody>
@@ -686,10 +682,8 @@ citations_plot &lt;-
   
   
 ggdraw(citations_plot) + 
-  draw_label(&quot;Datavyu, &quot;, colour = color_teal, .8, .3) +
-  draw_label(max(datavyu_cites), colour = color_teal, .88, .3) +
-  draw_label(max(databrary_cites), colour = color_orange, .79, .7) +
-  draw_label(&quot;Databrary, &quot;, colour = color_orange, .7, .7)</code></pre>
+  draw_label(paste0(&quot;Datavyu: &quot;,datavyu_cites), colour = color_teal, .8, .3) +
+  draw_label(paste0(&quot;Databrary: &quot;,databrary_cites), colour = color_orange, .7, .7)</code></pre>
 <p><img src="databrary_weekly_rpt_new_2019-09-18_files/figure-html/db-dv-citations-plot-1.png" width="672" /></p>
 <pre class="r"><code>if (as.logical(params$update_gs)) {
   new_data &lt;- data_frame(date = Sys.Date(), 
