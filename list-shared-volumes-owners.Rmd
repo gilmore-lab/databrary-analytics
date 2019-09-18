@@ -257,3 +257,24 @@ v_001_900 %>%
 ```
 
 There are `r length(unique(v_001_900$investigators))` who are investigators on shared volumes.
+
+## Making the report more meaningful
+
+Since creating and sharing a volume overview only is now the default, it would be good to modify this report so that we knew how many shared volumes had actual sessions 'lurking' beneath the surface.
+The following functions may be helpful in writing code to do that.
+
+In essence, if the `publicsharefull` field is `FALSE`, only a volume overview is shared.
+However, we can query some information about unshared volumes via the API even if they are not shown on the volume page. The `sessions_in_vol` function reports the number of sessions, regardless of whether they are visible.
+
+```{r}
+vol_overview_only <- function(vol_id) {
+  d <- databraryapi::list_containers_records(vol_id)
+  not(d$publicsharefull)
+}
+
+sessions_in_vol <- function(vol_id) {
+  d <- databraryapi::list_containers_records(vol_id)
+  dim(d$containers)[1]-1
+}
+```
+
