@@ -5,8 +5,8 @@ date: "`r Sys.time()`"
 output: html_document
 params:
   save_fn: "csv/shared_volumes_sessions.csv"
-  save_file: TRUE
-  used_saved_file: TRUE
+  save_file: 1
+  use_saved_file: 1
 ---
 
 ```{r set-up, include=FALSE}
@@ -44,8 +44,9 @@ get_volumes_data <- function(min_vol = 1, max_vol = 10) {
 ```
 
 ```{r}
-if (params$used_saved_file) {
+if (params$use_saved_file) {
   if (file.exists(params$save_fn)) {
+    message("Reading from saved file.")
     vols_sess_data <- read_csv(params$save_fn)
   } else {
     message("File not found.")

@@ -132,6 +132,11 @@ if (as.logical(params$update_stats)) {
 ```{r child = 'volumes_shared.Rmd'}
 ```
 
+<!-- ## Sharing type and session data -->
+
+<!-- ```{r child = 'shared-volumes-sessions.Rmd'} -->
+<!-- ``` -->
+
 # Citations
 
 ```{r child = 'citations.Rmd'}
