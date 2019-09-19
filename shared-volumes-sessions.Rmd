@@ -1,0 +1,93 @@
+---
+title: "shared-volumes-sessions"
+author: "Rick Gilmore"
+date: "`r Sys.time()`"
+output: html_document
+params:
+  save_fn: "csv/shared_volumes_sessions.csv"
+  save_file: TRUE
+  used_saved_file: TRUE
+---
+
+```{r set-up, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, message = FALSE, warning = FALSE)
+library(tidyverse)
+```
+
+```{r helper-functions}
+get_volume_data <- function(vol_id = 1) {
+  vol_data <- databraryapi::download_containers_records(vol_id)
+  if (is.null(vol_data)) {
+    NULL
+  } else {
+    data.frame(vol_id = vol_data$id, sharing_level = vol_data$publicaccess, owner.ids = vol_data$owners, sessions_shared = vol_data$publicsharefull, n_sessions = dim(vol_data$containers)[1]-1, created_date = lubridate::as_datetime(vol_data$creation))
+  }
+}
+
+get_volumes_data <- function(min_vol = 1, max_vol = 10) {
+  if (max_vol < 1) {
+    stop("max_vol must be >= 1")
+  }
+  if (min_vol < 1) {
+    stop("min_vol must be >= 1")
+  }
+  if (min_vol >= max_vol) {
+    stop("min_vol must be < max_vol")
+  }
+  
+  vol_index <- min_vol:max_vol
+  vols_data <- lapply(vol_index, get_volume_data)
+  
+  # Merge data frames
+  data.table::rbindlist(vols_data)
+}
+```
+
+```{r}
+if (params$used_saved_file) {
+  if (file.exists(params$save_fn)) {
+    vols_sess_data <- read_csv(params$save_fn)
+  } else {
+    message("File not found.")
+  }
+} else {
+  message("Generating new data from Databrary.")
+  v_001_100 <- get_volumes_data(1, 100)
+  v_101_200 <- get_volumes_data(101, 200)
+  v_201_300 <- get_volumes_data(201, 300)
+  v_301_400 <- get_volumes_data(301, 400)
+  v_401_500 <- get_volumes_data(401, 500)
+  v_501_600 <- get_volumes_data(501, 600)
+  v_601_700 <- get_volumes_data(601, 700)
+  v_701_800 <- get_volumes_data(701, 800)
+  v_801_900 <- get_volumes_data(801, 900)
+  v_901_1000 <- get_volumes_data(901, 1000)
+  v_1001_1100 <- get_volumes_data(1001, 1100)
+  vols_sess_data <- data.table::rbindlist(list(v_101_200, v_201_300, v_301_400,
+                                               v_401_500, v_501_600, v_601_700,
+                                               v_701_800, v_801_900, v_901_1000,
+                                               v_1001_1100))
+  
+}
+
+if (params$save_file) {
+  message(paste0("Saving file: ", params$save_fn))
+  write_csv(vols_sess_data, path = params$save_fn)
+}
+```
+
+```{r make-table, results = TRUE}
+vols_sess_data %>%
+  # change variable names, create full_volume vs. overview_only
+  dplyr::group_by(owner.ids.name, owner.ids.id) %>%
+  dplyr::rename(investigator = owner.ids.name, party_id = owner.ids.id) %>%
+  dplyr::mutate(shared_type = ifelse(sessions_shared == TRUE, "full_volume", "overview_only")) %>%
+  dplyr::select(investigator, party_id, vol_id, created_date, shared_type, n_sessions) %>%
+  dplyr::group_by(investigator, shared_type) %>%
+  # summarise by total shared volumes by type with session stats
+  dplyr::summarise(n_vols = n(), tot_sess = sum(n_sessions),
+            min_n_sess = min(n_sessions),  
+            max_n_sess = max(n_sessions)) %>%
+  dplyr::arrange(shared_type, desc(n_vols)) %>%
+  knitr::kable(.)
+```
