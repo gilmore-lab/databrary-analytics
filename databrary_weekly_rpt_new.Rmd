@@ -18,7 +18,7 @@ output:
     toc_float: yes
 params:
   db_account: rogilmore@psu.edu
-  update_gs: no
+  update_gs: yes
   update_stats: yes
   vols_to_test: 10
 ---
@@ -96,22 +96,6 @@ old_citations <- db %>%
   gs_read(ws = 'citations-monthly')
 ```
 
-```{r update-stats}
-# initialize updated_stats
-updated_stats <- old_stats
-if (as.logical(params$update_stats)) {
-  next_entry <- dim(updated_stats)[1] + 1
-  updated_stats[next_entry,] = NA
-  updated_stats <- updated_stats
-  
-  # fill with new data
-  updated_stats$date[next_entry] <- new_stats$date
-  updated_stats$institutions[next_entry] <- new_stats$investigators
-  updated_stats$investigators[next_entry] <- new_stats$investigators
-  updated_stats$affiliates[next_entry] <- new_stats$affiliates
-}
-```
-
 # Institutions & Authorized Users 
 
 ```{r child = 'users.Rmd'}
@@ -147,14 +131,6 @@ if (as.logical(params$update_stats)) {
 <!-- ```{r child = 'affiliates.Rmd'} -->
 <!-- ``` -->
 
-<!-- # Update Data -->
 
-```{r update-inst-inv-gs}
-if (as.logical(params$update_gs)) {
-  db <- db %>%
-    gs_add_row(ws = 'institutions-investigators', input = new_stats[,c(1, 4, 2, 3)])
-  message("'update_gs' parameter is 'TRUE', so Google Sheet data will be updated.")
-} else {
-  message("'update_gs' parameter is 'FALSE', so Google Sheet data unmodified.")
-}
-```
+
+
