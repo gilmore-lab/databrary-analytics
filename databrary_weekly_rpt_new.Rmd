@@ -6,8 +6,6 @@ date: "`r Sys.time()`"
 # Appends the date to the output filename
 knit: (function(inputFile, encoding) { rmarkdown::render(inputFile, encoding = encoding, output_file = paste0(substr(inputFile,1,nchar(inputFile)-4),'_',Sys.Date(),'.html')) })
 
-# How do we move the folder with the files for this?
-
 output:
   html_document:
     code_folding: hide
@@ -18,7 +16,7 @@ output:
     toc_float: yes
 params:
   db_account: rogilmore@psu.edu
-  update_gs: yes
+  update_gs: no
   update_stats: yes
   vols_to_test: 10
 ---
@@ -131,12 +129,8 @@ old_citations <- db %>%
 <!-- ```{r child = 'affiliates.Rmd'} -->
 <!-- ``` -->
 
-
+```{r move-reports}
 # Move reports into "weekly_report" folder
-# Move .html file
-library(filesstrings)
-filename <- paste0(getwd(),"/databrary_weekly_rpt_new_",Sys.Date(),".html")
-file.move(filename, "weekly_reports/")
 
 
 # Move folder
@@ -146,3 +140,11 @@ to   <- paste0(getwd(),"/weekly_reports")            #Path you want to move it.
 path1 <- paste0(from,"/databrary_weekly_rpt_new_",Sys.Date(),"_files/")
 path2 <- paste0(to,"/databrary_weekly_rpt_new_",Sys.Date(),"_files/")
 file.move(path1,path2)
+
+# Move .html file
+library(filesstrings)
+filename <- paste0(getwd(),"/databrary_weekly_rpt_new_",Sys.Date(),".html")
+#find.file(filename, dir = "", dirs = NULL)
+#file.move(filename, "weekly_reports/")
+
+```
