@@ -263,7 +263,7 @@ div.tocify {
 
 <h1 class="title toc-ignore">Databrary Weekly</h1>
 <h4 class="author">Rick O. Gilmore &amp; Andrea Seisler</h4>
-<h4 class="date">2019-10-01 11:57:33</h4>
+<h4 class="date">2019-10-01 12:04:58</h4>
 
 </div>
 
@@ -322,7 +322,7 @@ users_plot &lt;- updated_stats %&gt;%
 ggdraw(users_plot) + 
   draw_label(paste0(&quot;Investigators: &quot;, new_stats$investigators), colour = color_teal, .7, .8) +
   draw_label(paste0(&quot;Institutions: &quot;, new_stats$institutions), colour = color_orange, .78, .5)</code></pre>
-<p><img src="databrary_weekly_rpt_new_2019-10-01_files/figure-html/db-inst-user-plot-1.png" width="672" /> <!-- Next, we update the Google Sheet if `params$update_gs` is TRUE. --> <!-- In the current context, `params$update_gs` == TRUE. --></p>
+<p><img src="databrary_weekly_rpt_new_2019-10-01_files/figure-html/db-inst-user-plot-1.png" width="672" /> <!-- Next, we update the Google Sheet if `params$update_gs` is TRUE. --> <!-- In the current context, `params$update_gs` == FALSE. --></p>
 <pre class="r"><code>if (as.logical(params$update_gs)) {
   db &lt;- db %&gt;%
     gs_add_row(ws = &#39;institutions-investigators&#39;, input = new_stats[,c(1, 4, 2, 3)])
@@ -739,22 +739,25 @@ ggdraw(citations_plot) +
 <!-- # Affiliates -->
 <!-- ```{r child = 'affiliates.Rmd'} -->
 <!-- ``` -->
-<pre class="r"><code># Move reports into &quot;weekly_report&quot; folder
-
-
-# Move folder
-library(ff)
-from &lt;- getwd()      #Current path of your folder
-to   &lt;- paste0(getwd(),&quot;/weekly_reports&quot;)            #Path you want to move it.
-path1 &lt;- paste0(from,&quot;/databrary_weekly_rpt_new_&quot;,Sys.Date(),&quot;_files/&quot;)
-path2 &lt;- paste0(to,&quot;/databrary_weekly_rpt_new_&quot;,Sys.Date(),&quot;_files/&quot;)
-file.move(path1,path2)</code></pre>
-<pre><code>## [1] FALSE</code></pre>
-<pre class="r"><code># Move .html file
-library(filesstrings)
-filename &lt;- paste0(getwd(),&quot;/databrary_weekly_rpt_new_&quot;,Sys.Date(),&quot;.html&quot;)
-#find.file(filename, dir = &quot;&quot;, dirs = NULL)
-#file.move(filename, &quot;weekly_reports/&quot;)</code></pre>
+<!-- # ```{r move-reports} -->
+<!-- # # Move reports into "weekly_report" folder -->
+<!-- #  -->
+<!-- #  -->
+<!-- # # Move folder -->
+<!-- # library(ff) -->
+<!-- # from <- getwd()      #Current path of your folder -->
+<!-- # to   <- paste0(getwd(),"/weekly_reports")            #Path you want to move it. -->
+<!-- # path1 <- paste0(from,"/databrary_weekly_rpt_new_",Sys.Date(),"_files/") -->
+<!-- # path2 <- paste0(to,"/databrary_weekly_rpt_new_",Sys.Date(),"_files/") -->
+<!-- # file.move(path1,path2) -->
+<!-- #  -->
+<!-- # # Move .html file -->
+<!-- # library(filesstrings) -->
+<!-- # filename <- paste0(getwd(),"/databrary_weekly_rpt_new_",Sys.Date(),".html") -->
+<!-- # #find.file(filename, dir = "", dirs = NULL) -->
+<!-- # #file.move(filename, "weekly_reports/") -->
+<!-- #  -->
+<!-- # ``` -->
 </div>
 
 
