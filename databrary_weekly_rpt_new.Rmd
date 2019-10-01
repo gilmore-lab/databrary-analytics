@@ -132,5 +132,17 @@ old_citations <- db %>%
 <!-- ``` -->
 
 
+# Move reports into "weekly_report" folder
+# Move .html file
+library(filesstrings)
+filename <- paste0(getwd(),"/databrary_weekly_rpt_new_",Sys.Date(),".html")
+file.move(filename, "weekly_reports/")
 
 
+# Move folder
+library(ff)
+from <- getwd()      #Current path of your folder
+to   <- paste0(getwd(),"/weekly_reports")            #Path you want to move it.
+path1 <- paste0(from,"/databrary_weekly_rpt_new_",Sys.Date(),"_files/")
+path2 <- paste0(to,"/databrary_weekly_rpt_new_",Sys.Date(),"_files/")
+file.move(path1,path2)
