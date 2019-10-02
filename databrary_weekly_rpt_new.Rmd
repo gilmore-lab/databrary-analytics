@@ -26,7 +26,7 @@ knitr::opts_chunk$set(echo = TRUE, message = FALSE, warning = FALSE)
 
 # Install packages if needed
 cran_packages <- c('ggplot2', 'tidyverse', 'reshape2', 'cowplot',
-                    'googledrive', 'plyr', 'googlesheets')
+                    'googledrive', 'plyr', 'googlesheets', 'ezknitr')
 not_installed <- cran_packages[!(cran_packages %in% installed.packages()[,"Package"])]
 if(length(not_installed)) {
   message('Installing packages required for this document.')
@@ -39,6 +39,7 @@ if(length(not_installed)) devtools::install_github(not_installed)
 
 # Load
 
+library(ezknitr)
 #library(rmarkdown)
 library(databraryapi)
 library(tidyverse)
@@ -93,6 +94,13 @@ old_stats <- db %>%
 old_citations <- db %>%
   gs_read(ws = 'citations-monthly')
 ```
+
+<!-- # Save Data folders -->
+
+<!-- # ```{r} -->
+<!-- # ezknit(file = "databrary_weekly_rpt_new.Rmd", out_dir = paste0(getwd(),"weekly_reports/databrary_weekly_rpt_new_",Sys.Date(),".html", fig_dir = paste0(getwd(),"weekly_reports/databrary_weekly_rpt_new_",Sys.Date()) -->
+<!-- # ``` -->
+
 
 # Institutions & Authorized Users 
 
