@@ -127,3 +127,7 @@ old_citations <- db %>%
 <!-- ```{r child = 'affiliates.Rmd'} -->
 <!-- ``` -->
 
+<!-- # Copy and Move Report -->
+<!-- # ```{r} -->
+<!-- # copy_move_rpt() -->
+<!-- # ``` -->
