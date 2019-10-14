@@ -129,5 +129,7 @@ old_citations <- db %>%
 
 <!-- # Copy and Move Report -->
 
+<!-- # ```{r} -->
 <!-- # copy_move_rpt() -->
+<!-- # ``` -->
 
