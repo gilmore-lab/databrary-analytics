@@ -87,6 +87,12 @@ db <- gs_title('Databrary-analytics')
 old_stats <- db %>%
   gs_read(ws = 'institutions-investigators')
 ```
+
+```{r load-volumes-from-googlesheets}
+old_vols <- db %>%
+  gs_read(ws = 'volumes-shared-unshared')
+```
+
 ```{r load-citations-from-googlesheets}
 old_citations <- db %>%
   gs_read(ws = 'citations-monthly')

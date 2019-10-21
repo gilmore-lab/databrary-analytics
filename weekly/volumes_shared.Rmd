@@ -5,11 +5,6 @@ date:  "`r Sys.time()`"
 ---
 
 
-```{r}
-# Read from Google Sheet
-old_vols <- db %>%
-  gs_read(ws = 'volumes-shared-unshared')
-```
 
 <!-- Now update from information derived from `databraryapi::db_stats()` if `params$update_stats` is TRUE. -->
 
