@@ -8,12 +8,16 @@ date:  "`r Sys.time()`"
 
 ```{r db-people-table}
 new_people <- databraryapi::get_db_stats(type = "people")
-new_people %>%
-  mutate(db_url = paste0("https://databrary.org/party/", id)) %>%
-  select(., sortname, prename, affiliation, db_url) %>%
-  unite(col = "Investigator Name", prename, sortname, sep=" ") %>%
-  knitr::kable(col.names = c("Full Name", "Affiliation", 
-                             "Databrary URL")) %>%
-  kable_styling() #%>%
+if (!is.null(new_people)) {
+  new_people %>%
+    mutate(db_url = paste0("https://databrary.org/party/", id)) %>%
+    select(., sortname, prename, affiliation, db_url) %>%
+    unite(col = "Investigator Name", prename, sortname, sep=" ") %>%
+    knitr::kable(col.names = c("Full Name", "Affiliation", 
+                               "Databrary URL")) %>%
+    kable_styling() #%>%
   #save_kable(file = "new_institutions.html", self_contained = T)
+} else {
+  cat("No new investigators since last report.")
+}
 ```
