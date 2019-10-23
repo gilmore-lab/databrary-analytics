@@ -11,7 +11,8 @@ new_institutions <- databraryapi::get_db_stats(type = "institutions")
 new_institutions %>%
   mutate(db_url = paste0("https://databrary.org/party/", id)) %>%
   select(., sortname, url, db_url) %>%
-  knitr::kable(col.names = c("Institution Name", "Institution URL", "Databrary URL")) %>%
+  knitr::kable(col.names = c("Institution Name", 
+                             "Institution URL", "Databrary URL")) %>%
   kable_styling() #%>%
   #save_kable(file = "new_institutions.html", self_contained = T)
 ```
