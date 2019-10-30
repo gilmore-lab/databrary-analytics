@@ -108,7 +108,7 @@ old_citations <- db %>%
 ```{r child = 'institutions.Rmd'}
 ```
 
-## New Authorized Investigators
+## New and Updated Authorized Investigators
 
 ```{r child = 'people.Rmd'}
 ```
