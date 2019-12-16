@@ -63,7 +63,7 @@ citations_plot <-
   
   
 ggdraw(citations_plot) + 
-  draw_label(paste0("Datavyu: ",max(old_citations$datavyu_citations), " + ", (datavyu_cites-max(old_citations$datavyu_citations))), colour = color_teal, .8, .3) +
+  draw_label(paste0("Datavyu: ",max(old_citations$datavyu_citations), " + ", (datavyu_cites-max(old_citations$datavyu_citations))), colour = color_teal, .86, .3) +
   draw_label(paste0("Databrary: ",max(old_citations$databrary_citations), " + ", (databrary_cites-max(old_citations$databrary_citations))), colour = color_orange, .7, .7)
 ```
 
