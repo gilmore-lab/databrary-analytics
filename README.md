@@ -15,7 +15,7 @@ Code to produce and plot analytics about Databrary
         - where `YOUREMAIL@YOURDOMAIN` is replaced by your Databrary account. 
 
 - View the [current report](https://gilmore-lab.github.io/databrary-analytics/weekly/databrary_weekly_report.html).  
-- View old reports
+
 
 # Citation Data
 
