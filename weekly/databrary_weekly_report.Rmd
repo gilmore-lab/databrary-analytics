@@ -18,7 +18,7 @@ params:
 ---
 
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE, message = FALSE, warning = FALSE)
+knitr::opts_chunk$set(echo = FALSE, message = FALSE, warning = FALSE)
 
 # Install packages if needed
 cran_packages <- c('ggplot2', 'tidyverse', 'reshape2', 'cowplot',
@@ -138,3 +138,6 @@ old_citations <- db %>%
 <!-- # copy_move_rpt() -->
 <!-- # ``` -->
 
+# Old Weekly Reports
+
+<a href="https://lxclusterapps.tlt.psu.edu:8787/s/2da3aed6a51e5b6c85f44/files/R/databrary-analytics/old_weekly_reports/2019-10-08_databrary_weekly_report.html">One Old Weekly Report</a>
