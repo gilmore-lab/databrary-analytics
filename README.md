@@ -5,7 +5,7 @@ Code to produce and plot analytics about Databrary
     *- `visit-downloads.md` shows the output.*   
 *- `databrary-user-growth.Rmd` produces a plot of the growth in authorized users and institutions.*   
 *- `databrary_monthly.Rmd` produces a combined report on Databrary. An [HTML](https://gilmore-lab.github.io/databrary-analytics/databrary_monthly.html) version is also available.*   
-- `databrary_weekly_rpt.Rmd` produces a combined report about Databrary. It is run approximately weekly. An [HTML](https://gilmore-lab.github.io/databrary-analytics/databrary_weekly_rpt.html) version is available at the link.  
+- `databrary_weekly_rpt.Rmd` produces a combined report about Databrary. It is run approximately weekly. An [HTML](https://https://gilmore-lab.github.io/databrary-analytics/weekly/databrary_weekly_report.html) version is available at the link.  
 
 ## Weekly report
 
