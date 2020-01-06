@@ -42,7 +42,11 @@ vols_plot <- updated_vols %>%
 
 ggdraw(vols_plot) + 
   draw_label(paste0("Unshared: ", new_stats$datasets_total - new_stats$datasets_shared), colour = color_teal, .75, .85) +
-  draw_label(paste0("Shared: ", new_stats$datasets_shared), colour = color_orange, .6, .6)
+ # draw_label(paste0("Shared: ", new_stats$datasets_shared), colour = color_orange, .6, .6)
+
+# To add old vols + new vols should be something like this, but it doesn't work.
+
+  draw_label(paste0("Shared: ", max(old_stats$shared_volumes), " + ", (new_stats$datasets_shared-max(old_stats$shared_volumes)), colour = color_orange, .6, .6))
 ```
 <!-- Next, we update the Google Sheet if `params$update_gs` is TRUE. -->
 
