@@ -1,0 +1,25 @@
+---
+title: "old_weekly_reports"
+author: "Andrea R Seisler"
+date:  "`r Sys.time()`"
+---
+<!-- # Get List of Reports -->
+
+```{r get-list-old-reports}
+#print(getwd())
+filedir <- file.path("~/R/databaray-analytics/old_weekly_reports")
+#print(dir.exists(filedir))
+report_files <- list.files(filedir, pattern = "*.html")
+#print(report_files)
+```
+
+```{r create-links}
+
+old_report_files <- report_files %>%
+  mutate(., url = paste0("https://gilmore-lab.github.io/databrary-analytics/old_weekly_reports/", report_files))
+
+old_report_urls <- paste0("https://gilmore-lab.github.io/databrary-analytics/old_weekly_reports/", report_files)
+
+
+
+```
