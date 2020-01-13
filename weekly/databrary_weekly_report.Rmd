@@ -136,4 +136,5 @@ old_citations <- db %>%
 
 # Old Weekly Reports
 
-<a href="https://lxclusterapps.tlt.psu.edu:8787/s/2da3aed6a51e5b6c85f44/files/R/databrary-analytics/old_weekly_reports/2019-10-08_databrary_weekly_report.html">One Old Weekly Report</a>
+```{r child = 'old_weekly_reports.Rmd'}
+```
