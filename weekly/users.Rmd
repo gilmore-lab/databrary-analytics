@@ -53,8 +53,8 @@ users_plot <- updated_stats %>%
 
 ggdraw(users_plot) + 
   #draw_label(paste0("Investigators: ", new_stats$investigators), colour = color_teal, .7, .8) +
-  draw_label(paste0("Investigators: ", max(old_stats$investigators), " + ", (new_stats$investigators-max(old_stats$investigators))), colour = color_teal, .7, .8) +
-  draw_label(paste0("Institutions: ", max(old_stats$institutions), " + ", (new_stats$institutions-max(old_stats$institutions))), colour = color_orange, .78, .5)
+  draw_label(paste0("Investigators: ", max(old_stats$investigators), " + ", (new_stats$investigators-max(old_stats$investigators))), colour = color_teal, .65, .8) +
+  draw_label(paste0("Institutions: ", max(old_stats$institutions), " + ", (new_stats$institutions-max(old_stats$institutions))), colour = color_orange, .7, .45)
  
 ```
 <!-- Next, we update the Google Sheet if `params$update_gs` is TRUE. -->
