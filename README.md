@@ -16,7 +16,6 @@ Code to produce and plot analytics about Databrary
 
 - View the [current report](https://gilmore-lab.github.io/databrary-analytics/weekly/databrary_weekly_report.html).  
 
-
 # Citation Data
 
 - These numbers are from the Databrary Actitity site https://nyu.databrary.org/api/activity  
@@ -28,10 +27,7 @@ Code to produce and plot analytics about Databrary
 
 # Shared volumes and owners report
 
-*- [Report](https://gilmore-lab.github.io/databrary-analytics/shared-volumes-sessions.html) about full shared volumes and volume overviews only with session statistics.*  
-    *- To run this report run  *  
-        *-`rmarkdown::render("list-shared-volumes-sessions.Rmd", params = list(databrary_login = <YOURDATABRARYLOGIN))`  *
-            *- replacing `<YOURDATABRARYLOGIN>` with your actual Databrary login (email).*  
-*- [Report](https://gilmore-lab.github.io/databrary-analytics/list-shared-volumes-owners.html) with a summary of shared volumes but no session data.  *
-    *- To run this report run `rmarkdown::render("list-shared-volumes-owners.Rmd", params = list(databrary_login = <YOURDATABRARYLOGIN))`  *
-        *- replacing `<YOURDATABRARYLOGIN>` with your actual Databrary login (email).*  
+- [Report](https://gilmore-lab.github.io/databrary-analytics/shared-volumes-sessions/shared-volumes-sessions.html) about full shared volumes and volume overviews only with session statistics.* 
+    - To run this report run  
+        -`rmarkdown::render("shared-volumes-sessions/shared-volumes-sessions.Rmd", params = list(db_login = <YOURDATABRARYLOGIN))`
+        - replacing `<YOURDATABRARYLOGIN>` with your actual Databrary login (email).
