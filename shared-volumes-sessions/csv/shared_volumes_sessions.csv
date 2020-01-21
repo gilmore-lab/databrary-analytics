@@ -1,117 +1,269 @@
 vol_id,sharing_level,owner.ids.name,owner.ids.id,sessions_shared,n_sessions,created_date
+1,full,"Adolph, Karen",5,FALSE,25,2013-01-11T10:26:40Z
+1,full,"Gilmore, Rick O.",6,FALSE,25,2013-01-11T10:26:40Z
+1,full,Staff,308,FALSE,25,2013-01-11T10:26:40Z
+1,full,"Admin, Databrary",3341,FALSE,25,2013-01-11T10:26:40Z
+2,full,"Gilmore, Rick O.",6,FALSE,4,2013-10-02T11:33:36Z
+4,full,"Adolph, Karen",5,FALSE,69,2013-10-10T15:29:38Z
+5,full,"Adolph, Karen",5,FALSE,135,2013-10-10T16:35:22Z
+7,full,"Adolph, Karen",5,FALSE,57,2013-10-10T17:40:23Z
+8,full,"Tamis-LeMonda, Catherine",11,FALSE,1351,2013-10-14T15:54:05Z
+9,full,"Adolph, Karen",5,FALSE,1,2014-03-13T00:58:48Z
+10,full,"Gordon, Peter",20,FALSE,6,2014-03-18T17:54:30Z
+11,none,"Karasik, Lana",32,FALSE,234,2014-03-25T02:04:43Z
+11,none,"Tamis-LeMonda, Catherine",11,FALSE,234,2014-03-25T02:04:43Z
+11,none,"Adolph, Karen",5,FALSE,234,2014-03-25T02:04:43Z
+15,full,"Messinger, Daniel",70,FALSE,13,2014-04-24T19:30:13Z
+16,full,"Adolph, Karen",5,FALSE,11,2014-05-16T19:28:22Z
+16,full,"Shapiro, Liza",80,FALSE,11,2014-05-16T19:28:22Z
+23,full,"Gilmore, Rick O.",6,FALSE,1,2014-07-07T15:19:52Z
+24,full,"Adolph, Karen",5,FALSE,1,2014-07-08T22:29:33Z
+27,full,"Wilkinson, Krista",245,FALSE,4,2014-07-15T15:02:27Z
+28,full,"Adolph, Karen",5,FALSE,1,2014-07-18T14:28:57Z
+29,full,"Johnson, Scott",93,FALSE,1,2014-07-22T13:08:39Z
+30,full,"LoBue, Vanessa",82,FALSE,158,2014-07-23T15:57:05Z
+30,full,"Thrasher, Cat",346,FALSE,158,2014-07-23T15:57:05Z
+31,full,"Gilmore, Rick O.",6,FALSE,1,2014-07-23T16:32:41Z
+32,full,"Gilmore, Rick O.",6,FALSE,1,2014-07-23T16:52:20Z
+33,full,"Frank, Michael C.",258,FALSE,1,2014-07-28T17:21:21Z
+34,full,"Frank, Michael C.",258,FALSE,1,2014-07-28T17:32:23Z
+35,full,"Frank, Michael C.",258,FALSE,1,2014-07-28T17:48:26Z
+36,full,"Frank, Michael C.",258,FALSE,1,2014-07-28T18:18:46Z
+37,full,"Frank, Michael C.",258,FALSE,1,2014-07-28T19:12:00Z
+38,full,"Frank, Michael C.",258,FALSE,1,2014-07-28T20:21:58Z
+40,full,"Barr, Rachel",104,FALSE,1,2014-08-04T14:10:46Z
+42,full,"Smith, Linda B.",161,FALSE,11,2014-08-05T18:05:45Z
+43,full,"Saffran, Jenny",274,FALSE,1,2014-08-07T19:38:45Z
+44,full,"Naigles, Letitia",279,FALSE,1,2014-08-13T00:38:29Z
+45,full,"Rhodes, Marjorie",277,FALSE,1,2014-08-14T18:29:51Z
+46,full,"Vishton, Peter",60,FALSE,1,2014-08-21T21:10:04Z
+47,full,"Fabricius, William",288,FALSE,1,2014-08-25T20:28:44Z
+49,full,"Gilmore, Rick O.",6,FALSE,1,2014-09-01T23:57:43Z
+50,full,"Bertenthal, Bennett I.",294,FALSE,1,2014-09-04T18:51:27Z
+51,full,"Bertenthal, Bennett I.",294,FALSE,1,2014-09-04T19:50:35Z
+53,full,"Bertenthal, Bennett I.",294,FALSE,1,2014-09-04T20:05:53Z
+61,full,"DeLoache, Judy",264,FALSE,1,2014-09-25T21:26:54Z
+62,full,"Amso, Dima",297,FALSE,1,2014-09-26T15:15:43Z
+64,full,"Needham, Amy",118,FALSE,1,2014-09-27T01:13:48Z
+65,full,"Brannon, Elizabeth M",313,FALSE,1,2014-09-27T12:55:40Z
+68,full,"Gilmore, Rick O.",6,FALSE,0,2014-10-14T18:54:59Z
+70,full,"Baker, David",332,FALSE,308,2014-10-17T00:10:02Z
+73,full,"Seisler, Andrea R.",437,FALSE,32,2014-10-20T15:51:34Z
+73,full,"Gilmore, Rick O.",6,FALSE,32,2014-10-20T15:51:34Z
+75,full,"Gilmore, Rick O.",6,FALSE,34,2014-10-20T16:23:14Z
+77,full,"Gilmore, Rick O.",6,FALSE,6,2014-10-22T19:55:38Z
+77,full,"Norcia, Anthony M.",378,FALSE,6,2014-10-22T19:55:38Z
+79,full,"Wyble, Brad",273,FALSE,1,2014-10-23T13:44:10Z
+81,full,"Jayaraman, Swapnaa",254,FALSE,84,2014-10-27T17:32:43Z
+81,full,"Smith, Linda B.",161,FALSE,84,2014-10-27T17:32:43Z
+81,full,"Raudies, Florian",160,FALSE,84,2014-10-27T17:32:43Z
+81,full,"Gilmore, Rick O.",6,FALSE,84,2014-10-27T17:32:43Z
+83,none,"Adolph, Karen",5,FALSE,110,2014-10-29T17:37:08Z
+84,full,"Adolph, Karen",5,FALSE,104,2014-11-03T22:57:47Z
+86,full,"Adolph, Karen",5,FALSE,2,2014-11-07T21:05:09Z
+87,none,"Karasik, Lana",32,FALSE,233,2014-11-17T16:29:25Z
+87,none,"Adolph, Karen",5,FALSE,233,2014-11-17T16:29:25Z
+87,none,"Tamis-LeMonda, Catherine",11,FALSE,233,2014-11-17T16:29:25Z
+87,none,"Spies, Jeffrey",4650,FALSE,233,2014-11-17T16:29:25Z
+87,none,"Nez, Reda",4291,FALSE,233,2014-11-17T16:29:25Z
+88,none,"Adolph, Karen",5,FALSE,132,2014-11-17T19:08:27Z
+89,full,"Adolph, Karen",5,FALSE,114,2014-11-19T20:05:35Z
+90,full,"Demuth, Katherine",537,FALSE,314,2014-11-20T17:48:20Z
+95,full,"Brannon, Elizabeth M",313,FALSE,0,2014-12-05T15:56:51Z
+96,full,"Brannon, Elizabeth M",313,FALSE,1,2014-12-05T16:03:15Z
+98,full,"Fabricius, William",288,FALSE,34,2014-12-08T19:43:59Z
+99,full,"Fausey, Caitlin M.",126,FALSE,1,2014-12-17T02:36:55Z
+99,full,"Smith, Linda B.",161,FALSE,1,2014-12-17T02:36:55Z
+99,full,"Jayaraman, Swapnaa",254,FALSE,1,2014-12-17T02:36:55Z
 101,restricted,"Frank, Michael C.",258,FALSE,29,2015-01-09T20:47:22Z
-108,full,"Messinger, Daniel",70,TRUE,43,2015-02-12T21:28:59Z
-109,full,"Carlsen, William",325,TRUE,0,2015-02-25T15:59:21Z
-112,full,"Fausey, Caitlin M.",126,TRUE,2,2015-03-09T22:20:03Z
-112,full,"Smith, Linda B.",161,TRUE,2,2015-03-09T22:20:03Z
-112,full,"Jayaraman, Swapnaa",254,TRUE,2,2015-03-09T22:20:03Z
-114,full,"Adolph, Karen",5,TRUE,106,2015-03-13T17:49:55Z
-116,full,"Gilmore, Rick O.",6,TRUE,6,2015-03-16T20:49:39Z
-116,full,"Raudies, Florian",160,TRUE,6,2015-03-16T20:49:39Z
-116,full,"Franchak, John",14,TRUE,6,2015-03-16T20:49:39Z
-116,full,"Adolph, Karen",5,TRUE,6,2015-03-16T20:49:39Z
+104,none,"Neiderhiser, Jenae",330,FALSE,2,2015-01-29T14:40:51Z
+106,none,"Gilmore, Rick O.",6,FALSE,12,2015-02-02T14:35:56Z
+106,none,"Admin, Databrary",3341,FALSE,12,2015-02-02T14:35:56Z
+106,none,"Seisler, Andrea R.",437,FALSE,12,2015-02-02T14:35:56Z
+108,full,"Messinger, Daniel",70,FALSE,43,2015-02-12T21:28:59Z
+109,full,"Carlsen, William",325,FALSE,0,2015-02-25T15:59:21Z
+112,full,"Fausey, Caitlin M.",126,FALSE,2,2015-03-09T22:20:03Z
+112,full,"Smith, Linda B.",161,FALSE,2,2015-03-09T22:20:03Z
+112,full,"Jayaraman, Swapnaa",254,FALSE,2,2015-03-09T22:20:03Z
+114,full,"Adolph, Karen",5,FALSE,106,2015-03-13T17:49:55Z
+116,full,"Gilmore, Rick O.",6,FALSE,6,2015-03-16T20:49:39Z
+116,full,"Raudies, Florian",160,FALSE,6,2015-03-16T20:49:39Z
+116,full,"Franchak, John",14,FALSE,6,2015-03-16T20:49:39Z
+116,full,"Adolph, Karen",5,FALSE,6,2015-03-16T20:49:39Z
 119,restricted,"Perez-Edgar, Koraly",96,FALSE,301,2015-04-16T20:13:10Z
-121,full,"Adolph, Karen",5,TRUE,1,2015-04-21T19:46:11Z
-123,full,"Adolph, Karen",5,TRUE,37,2015-04-28T20:03:00Z
-124,full,"Adolph, Karen",5,TRUE,14,2015-04-28T20:32:07Z
-135,full,"Adolph, Karen",5,TRUE,27,2015-05-06T15:20:28Z
-135,full,"Franchak, John",14,TRUE,27,2015-05-06T15:20:28Z
-136,full,"Adolph, Karen",5,TRUE,62,2015-05-06T19:29:17Z
-140,full,"Adolph, Karen",5,TRUE,97,2015-06-02T23:01:46Z
-162,full,"Adolph, Karen",5,TRUE,93,2015-08-10T18:19:48Z
-163,full,"Adolph, Karen",5,TRUE,55,2015-09-01T21:23:50Z
-165,full,"Cordes, Sara",798,TRUE,3,2015-09-18T18:33:58Z
-192,full,"Franchak, John",14,TRUE,52,2015-11-29T16:01:13Z
-192,full,"Adolph, Karen",5,TRUE,52,2015-11-29T16:01:13Z
-193,full,"Adolph, Karen",5,TRUE,3,2015-11-30T19:58:52Z
-194,full,"Adolph, Karen",5,TRUE,3,2015-11-30T21:39:22Z
+121,full,"Adolph, Karen",5,FALSE,1,2015-04-21T19:46:11Z
+123,full,"Adolph, Karen",5,FALSE,37,2015-04-28T20:03:00Z
+124,full,"Adolph, Karen",5,FALSE,14,2015-04-28T20:32:07Z
+132,none,"Adolph, Karen",5,FALSE,19,2015-05-04T18:44:06Z
+135,full,"Adolph, Karen",5,FALSE,27,2015-05-06T15:20:28Z
+135,full,"Franchak, John",14,FALSE,27,2015-05-06T15:20:28Z
+136,full,"Adolph, Karen",5,FALSE,62,2015-05-06T19:29:17Z
+139,full,"Weisberg, Deena Skolnick",562,FALSE,142,2015-06-01T13:42:07Z
+139,full,"Sobel, David",111,FALSE,142,2015-06-01T13:42:07Z
+140,full,"Adolph, Karen",5,FALSE,97,2015-06-02T23:01:46Z
+142,none,"Adolph, Karen",5,FALSE,1,2015-06-09T17:26:40Z
+143,none,"Adolph, Karen",5,FALSE,11,2015-06-09T17:27:48Z
+144,none,"Gilmore, Rick O.",6,FALSE,53,2015-06-10T14:32:12Z
+145,none,"Adolph, Karen",5,FALSE,12,2015-06-10T14:50:25Z
+146,none,"Gilmore, Rick O.",6,FALSE,39,2015-06-11T13:40:59Z
+148,none,"Adolph, Karen",5,FALSE,9,2015-06-12T19:13:43Z
+152,none,"Adolph, Karen",5,FALSE,84,2015-06-19T20:14:53Z
+162,full,"Adolph, Karen",5,FALSE,94,2015-08-10T18:19:48Z
+163,full,"Adolph, Karen",5,FALSE,55,2015-09-01T21:23:50Z
+165,full,"Cordes, Sara",798,FALSE,3,2015-09-18T18:33:58Z
+169,none,"Adolph, Karen",5,FALSE,16,2015-10-08T17:30:35Z
+172,none,"Gilmore, Rick O.",6,FALSE,2,2015-10-13T18:33:18Z
+176,none,"Adolph, Karen",5,FALSE,7,2015-10-19T17:06:57Z
+186,none,Staff,308,FALSE,2,2015-11-11T18:06:55Z
+186,none,"Admin, Databrary",3341,FALSE,2,2015-11-11T18:06:55Z
+192,full,"Franchak, John",14,FALSE,52,2015-11-29T16:01:13Z
+192,full,"Adolph, Karen",5,FALSE,52,2015-11-29T16:01:13Z
+193,full,"Adolph, Karen",5,FALSE,3,2015-11-30T19:58:52Z
+194,full,"Adolph, Karen",5,FALSE,3,2015-11-30T21:39:22Z
+198,none,"Brand, Rebecca",1513,FALSE,7,2015-12-21T20:19:55Z
+198,none,"Seisler, Andrea R.",437,FALSE,7,2015-12-21T20:19:55Z
+198,none,"Admin, Databrary",3341,FALSE,7,2015-12-21T20:19:55Z
+198,none,"Gilmore, Rick O.",6,FALSE,7,2015-12-21T20:19:55Z
+200,none,"Shai, Dana",1503,FALSE,2,2016-01-04T19:31:23Z
+200,none,"Gilmore, Rick O.",6,FALSE,2,2016-01-04T19:31:23Z
+200,none,"Admin, Databrary",3341,FALSE,2,2016-01-04T19:31:23Z
+200,none,"Seisler, Andrea R.",437,FALSE,2,2016-01-04T19:31:23Z
 204,restricted,Staff,308,FALSE,1,2016-02-06T04:12:33Z
 204,restricted,"Admin, Databrary",3341,FALSE,1,2016-02-06T04:12:33Z
-209,full,"Horst, Jessica S.",624,TRUE,2,2016-02-29T16:12:30Z
-214,full,"Fawcett, Christine",1719,TRUE,2,2016-03-18T11:16:56Z
-217,full,"Adolph, Karen",5,TRUE,13,2016-03-31T17:10:06Z
-234,full,"Brooker, Rebecca Jo",1280,TRUE,1,2016-05-07T17:07:27Z
-235,full,"Frank, Michael C.",258,TRUE,1,2016-05-11T17:47:02Z
-236,full,"Yu, Chen",120,TRUE,1,2016-05-13T19:19:24Z
-239,full,"Oakes, Lisa",538,TRUE,20,2016-05-26T15:56:10Z
-239,full,"Casasola, Marianella",650,TRUE,20,2016-05-26T15:56:10Z
-239,full,"LoBue, Vanessa",82,TRUE,20,2016-05-26T15:56:10Z
-239,full,International Congress on Infant Studies (ICIS),2127,TRUE,20,2016-05-26T15:56:10Z
-241,full,"Fabricius, William",288,TRUE,4,2016-05-27T22:46:38Z
-241,full,"Gonzales, Christopher",289,TRUE,4,2016-05-27T22:46:38Z
+209,full,"Horst, Jessica S.",624,FALSE,2,2016-02-29T16:12:30Z
+214,full,"Fawcett, Christine",1719,FALSE,2,2016-03-18T11:16:56Z
+215,none,"Gilmore, Rick O.",6,FALSE,0,2016-03-21T15:44:12Z
+217,full,"Adolph, Karen",5,FALSE,13,2016-03-31T17:10:06Z
+218,none,"Gilmore, Rick O.",6,FALSE,35,2016-03-31T19:01:05Z
+220,none,"Wilkinson, Krista",245,FALSE,1,2016-04-01T18:31:37Z
+220,none,"Gilmore, Rick O.",6,FALSE,1,2016-04-01T18:31:37Z
+226,none,"Karasik, Lana",32,FALSE,129,2016-04-07T17:28:50Z
+226,none,"Adolph, Karen",5,FALSE,129,2016-04-07T17:28:50Z
+226,none,"Tamis-LeMonda, Catherine",11,FALSE,129,2016-04-07T17:28:50Z
+231,none,"Admin, Databrary",3341,FALSE,0,2016-05-02T14:05:25Z
+231,none,"Gilmore, Rick O.",6,FALSE,0,2016-05-02T14:05:25Z
+231,none,"Seisler, Andrea R.",437,FALSE,0,2016-05-02T14:05:25Z
+232,none,"Adolph, Karen",5,FALSE,13,2016-05-02T18:46:24Z
+232,none,"Tamis-LeMonda, Catherine",11,FALSE,13,2016-05-02T18:46:24Z
+232,none,"Gilmore, Rick O.",6,FALSE,13,2016-05-02T18:46:24Z
+234,full,"Brooker, Rebecca Jo",1280,FALSE,1,2016-05-07T17:07:27Z
+235,full,"Frank, Michael C.",258,FALSE,1,2016-05-11T17:47:02Z
+236,full,"Yu, Chen",120,FALSE,1,2016-05-13T19:19:24Z
+237,none,Staff,308,FALSE,21,2016-05-16T17:01:41Z
+237,none,"Adolph, Karen",5,FALSE,21,2016-05-16T17:01:41Z
+237,none,"Gilmore, Rick O.",6,FALSE,21,2016-05-16T17:01:41Z
+237,none,"Admin, Databrary",3341,FALSE,21,2016-05-16T17:01:41Z
+237,none,"Spies, Jeffrey",4650,FALSE,21,2016-05-16T17:01:41Z
+239,full,"Oakes, Lisa",538,FALSE,20,2016-05-26T15:56:10Z
+239,full,"Casasola, Marianella",650,FALSE,20,2016-05-26T15:56:10Z
+239,full,"LoBue, Vanessa",82,FALSE,20,2016-05-26T15:56:10Z
+239,full,International Congress on Infant Studies (ICIS),2127,FALSE,20,2016-05-26T15:56:10Z
+241,full,"Fabricius, William",288,FALSE,4,2016-05-27T22:46:38Z
+241,full,"Gonzales, Christopher",289,FALSE,4,2016-05-27T22:46:38Z
 248,restricted,"Cole, Pamela M",3648,FALSE,5,2016-06-21T18:48:43Z
 248,restricted,"Gilmore, Rick O.",6,FALSE,5,2016-06-21T18:48:43Z
 248,restricted,"Scherf, Kathryn Suzanne",252,FALSE,5,2016-06-21T18:48:43Z
 248,restricted,"Perez-Edgar, Koraly",96,FALSE,5,2016-06-21T18:48:43Z
-252,full,"Shirai, Nobu",2219,TRUE,17,2016-07-15T02:19:51Z
-254,full,"Adolph, Karen",5,TRUE,9,2016-07-20T19:47:54Z
-254,full,"Tamis-LeMonda, Catherine",11,TRUE,9,2016-07-20T19:47:54Z
-254,full,"Gilmore, Rick O.",6,TRUE,9,2016-07-20T19:47:54Z
-254,full,"Soska, Kasey",406,TRUE,9,2016-07-20T19:47:54Z
-268,full,"Smith, Linda B.",161,TRUE,2,2016-10-11T17:28:08Z
-270,full,"Shirai, Nobu",2219,TRUE,1,2016-10-18T07:37:32Z
-271,full,"Karasik, Lana",32,TRUE,126,2016-10-19T17:57:10Z
-271,full,"Adolph, Karen",5,TRUE,126,2016-10-19T17:57:10Z
-271,full,"Tamis-LeMonda, Catherine",11,TRUE,126,2016-10-19T17:57:10Z
-272,full,"Motta-Mena, Natalie V.",525,TRUE,5,2016-10-19T19:38:28Z
-272,full,"Scherf, Kathryn Suzanne",252,TRUE,5,2016-10-19T19:38:28Z
-273,full,"Bonawitz, Elizabeth",2173,TRUE,1,2016-10-21T17:14:30Z
-297,full,"Nonaka, Tetsushi",1889,TRUE,14,2016-12-11T15:19:52Z
+252,full,"Shirai, Nobu",2219,FALSE,17,2016-07-15T02:19:51Z
+254,full,"Adolph, Karen",5,FALSE,9,2016-07-20T19:47:54Z
+254,full,"Tamis-LeMonda, Catherine",11,FALSE,9,2016-07-20T19:47:54Z
+254,full,"Gilmore, Rick O.",6,FALSE,9,2016-07-20T19:47:54Z
+254,full,"Soska, Kasey",406,FALSE,9,2016-07-20T19:47:54Z
+268,full,"Smith, Linda B.",161,FALSE,2,2016-10-11T17:28:08Z
+270,full,"Shirai, Nobu",2219,FALSE,1,2016-10-18T07:37:32Z
+271,full,"Karasik, Lana",32,FALSE,126,2016-10-19T17:57:10Z
+271,full,"Adolph, Karen",5,FALSE,126,2016-10-19T17:57:10Z
+271,full,"Tamis-LeMonda, Catherine",11,FALSE,126,2016-10-19T17:57:10Z
+272,full,"Motta-Mena, Natalie V.",525,FALSE,5,2016-10-19T19:38:28Z
+272,full,"Scherf, Kathryn Suzanne",252,FALSE,5,2016-10-19T19:38:28Z
+273,full,"Bonawitz, Elizabeth",2173,FALSE,1,2016-10-21T17:14:30Z
+290,none,"Nonaka, Tetsushi",1889,FALSE,39,2016-11-26T20:44:45Z
+290,none,"Gilmore, Rick O.",6,FALSE,39,2016-11-26T20:44:45Z
+296,none,"Karasik, Lana",32,FALSE,328,2016-12-07T17:07:03Z
+296,none,"Adolph, Karen",5,FALSE,328,2016-12-07T17:07:03Z
+296,none,"Tamis-LeMonda, Catherine",11,FALSE,328,2016-12-07T17:07:03Z
+297,full,"Nonaka, Tetsushi",1889,FALSE,14,2016-12-11T15:19:52Z
+298,none,"Dusing, Stacey",255,FALSE,1,2016-12-16T15:08:24Z
 302,restricted,"Elbich, Daniel",1838,FALSE,1,2016-12-19T16:02:13Z
 302,restricted,"Scherf, Kathryn Suzanne",252,FALSE,1,2016-12-19T16:02:13Z
-303,full,"Bonawitz, Elizabeth",2173,TRUE,4,2016-12-25T21:23:19Z
-324,full,"Norcia, Anthony M.",378,TRUE,17,2017-03-02T12:59:21Z
-324,full,"Gilmore, Rick O.",6,TRUE,17,2017-03-02T12:59:21Z
-324,full,"LIU, YANXI",3043,TRUE,17,2017-03-02T12:59:21Z
-326,full,"Bahrick, Lorraine E.",376,TRUE,1,2017-03-06T23:46:34Z
-330,full,"Bergelson, Elika",61,TRUE,47,2017-03-16T13:19:27Z
-336,full,"Bahrick, Lorraine E.",376,TRUE,1,2017-03-27T22:45:30Z
-338,full,"Bergelson, Elika",61,TRUE,45,2017-04-05T19:48:02Z
-339,full,"Cole, Pamela M",3648,TRUE,32,2017-04-11T14:39:02Z
-339,full,"Gilmore, Rick O.",6,TRUE,32,2017-04-11T14:39:02Z
-339,full,"Perez-Edgar, Koraly",96,TRUE,32,2017-04-11T14:39:02Z
-339,full,"Scherf, Kathryn Suzanne",252,TRUE,32,2017-04-11T14:39:02Z
-351,full,"Kukke, Sahana Nalini",2704,TRUE,19,2017-05-02T15:41:05Z
-357,full,"Kibbe, Melissa",2400,TRUE,3,2017-05-18T14:31:38Z
-357,full,"Kaldy, Zsuzsa",102,TRUE,3,2017-05-18T14:31:38Z
+303,full,"Bonawitz, Elizabeth",2173,FALSE,4,2016-12-25T21:23:19Z
+321,none,"Adolph, Karen",5,FALSE,84,2017-02-09T22:19:00Z
+322,none,"Adolph, Karen",5,FALSE,156,2017-02-23T19:50:52Z
+322,none,"Tamis-LeMonda, Catherine",11,FALSE,156,2017-02-23T19:50:52Z
+323,none,"Adolph, Karen",5,FALSE,10,2017-02-27T22:51:45Z
+324,full,"Norcia, Anthony M.",378,FALSE,17,2017-03-02T12:59:21Z
+324,full,"Gilmore, Rick O.",6,FALSE,17,2017-03-02T12:59:21Z
+324,full,"LIU, YANXI",3043,FALSE,17,2017-03-02T12:59:21Z
+326,full,"Bahrick, Lorraine E.",376,FALSE,1,2017-03-06T23:46:34Z
+330,full,"Bergelson, Elika",61,FALSE,47,2017-03-16T13:19:27Z
+335,none,"Bergelson, Elika",61,FALSE,47,2017-03-24T13:13:11Z
+336,full,"Bahrick, Lorraine E.",376,FALSE,1,2017-03-27T22:45:30Z
+338,full,"Bergelson, Elika",61,FALSE,45,2017-04-05T19:48:02Z
+339,full,"Cole, Pamela M",3648,FALSE,32,2017-04-11T14:39:02Z
+339,full,"Gilmore, Rick O.",6,FALSE,32,2017-04-11T14:39:02Z
+339,full,"Perez-Edgar, Koraly",96,FALSE,32,2017-04-11T14:39:02Z
+339,full,"Scherf, Kathryn Suzanne",252,FALSE,32,2017-04-11T14:39:02Z
+350,none,"Adolph, Karen",5,FALSE,49,2017-05-01T15:49:03Z
+351,full,"Kukke, Sahana Nalini",2704,FALSE,19,2017-05-02T15:41:05Z
+357,full,"Kibbe, Melissa",2400,FALSE,3,2017-05-18T14:31:38Z
+357,full,"Kaldy, Zsuzsa",102,FALSE,3,2017-05-18T14:31:38Z
+359,full,"Weisberg, Deena Skolnick",562,FALSE,216,2017-05-22T15:44:50Z
+359,full,"Sobel, David",111,FALSE,216,2017-05-22T15:44:50Z
 365,restricted,"Seisler, Andrea R.",437,FALSE,5,2017-05-24T13:36:48Z
 365,restricted,"Admin, Databrary",3341,FALSE,5,2017-05-24T13:36:48Z
-390,full,"Bergelson, Elika",61,TRUE,36,2017-06-07T13:31:59Z
-390,full,"Warlaumont, Anne",477,TRUE,36,2017-06-07T13:31:59Z
-390,full,"Cristia, Alejandrina",1034,TRUE,36,2017-06-07T13:31:59Z
-390,full,"Casillas, Marisa",3062,TRUE,36,2017-06-07T13:31:59Z
-390,full,"Rosemberg, Celia",3094,TRUE,36,2017-06-07T13:31:59Z
-390,full,"Soderstrom, Melanie",518,TRUE,36,2017-06-07T13:31:59Z
-390,full,"Rowland, Caroline",3053,TRUE,36,2017-06-07T13:31:59Z
-390,full,"Durrant, Samantha",3046,TRUE,36,2017-06-07T13:31:59Z
-390,full,"Bunce, John",3312,TRUE,36,2017-06-07T13:31:59Z
-443,full,"Adolph, Karen",5,TRUE,20,2017-06-30T18:32:49Z
-445,full,"Soderstrom, Melanie",518,TRUE,118,2017-07-07T16:48:35Z
-445,full,"Klassen, Kelsey",3126,TRUE,118,2017-07-07T16:48:35Z
-452,full,"Adolph, Karen",5,TRUE,28,2017-07-13T15:06:14Z
-458,full,"Adolph, Karen",5,TRUE,3,2017-07-19T17:43:33Z
-459,full,"Adolph, Karen",5,TRUE,8,2017-07-19T17:50:41Z
-465,full,"Arshad, Ahmad",2223,TRUE,1,2017-08-09T14:34:24Z
-468,full,"Shirai, Nobu",2219,TRUE,1,2017-08-12T02:06:00Z
-471,full,"Adolph, Karen",5,TRUE,4,2017-08-17T14:58:10Z
-473,full,"Gilmore, Rick O.",6,TRUE,2,2017-08-18T19:59:26Z
-480,full,"Cook, Susan Wagner",681,TRUE,1,2017-08-31T03:26:01Z
-481,full,"Rhodes, Marjorie",277,TRUE,3,2017-08-31T15:30:22Z
-482,full,"Shirai, Nobu",2219,TRUE,1,2017-09-09T00:42:32Z
-545,full,"Scott, Lisa",2653,TRUE,4,2017-11-20T16:45:09Z
-546,full,"Scott, Lisa",2653,TRUE,3,2017-11-21T14:07:04Z
-554,full,"Trehub, Sandra E",2854,TRUE,2,2017-11-30T14:36:41Z
-554,full,"Cirelli, Laura",2738,TRUE,2,2017-11-30T14:36:41Z
-564,full,"Sullivan, Jessica",2095,TRUE,438,2017-12-13T15:06:49Z
-564,full,"Mei, Michelle",3585,TRUE,438,2017-12-13T15:06:49Z
-564,full,"Perfors, Amy",5748,TRUE,438,2017-12-13T15:06:49Z
-564,full,"Wojcik, Erica",2773,TRUE,438,2017-12-13T15:06:49Z
-564,full,"Frank, Michael C.",258,TRUE,438,2017-12-13T15:06:49Z
-569,full,"Moulson, Margaret",474,TRUE,0,2018-01-09T20:18:22Z
+390,full,"Bergelson, Elika",61,FALSE,36,2017-06-07T13:31:59Z
+390,full,"Warlaumont, Anne",477,FALSE,36,2017-06-07T13:31:59Z
+390,full,"Cristia, Alejandrina",1034,FALSE,36,2017-06-07T13:31:59Z
+390,full,"Casillas, Marisa",3062,FALSE,36,2017-06-07T13:31:59Z
+390,full,"Rosemberg, Celia",3094,FALSE,36,2017-06-07T13:31:59Z
+390,full,"Soderstrom, Melanie",518,FALSE,36,2017-06-07T13:31:59Z
+390,full,"Rowland, Caroline",3053,FALSE,36,2017-06-07T13:31:59Z
+390,full,"Durrant, Samantha",3046,FALSE,36,2017-06-07T13:31:59Z
+390,full,"Bunce, John",3312,FALSE,36,2017-06-07T13:31:59Z
+430,none,"Adolph, Karen",5,FALSE,8,2017-06-14T21:13:55Z
+430,none,"Soska, Kasey",406,FALSE,8,2017-06-14T21:13:55Z
+430,none,"Hasan, Shohan",431,FALSE,8,2017-06-14T21:13:55Z
+433,full,"Scott, Lisa",2653,FALSE,29,2017-06-19T18:44:08Z
+434,none,"Adolph, Karen",5,FALSE,79,2017-06-20T16:19:54Z
+443,full,"Adolph, Karen",5,FALSE,20,2017-06-30T18:32:49Z
+444,none,"Adolph, Karen",5,FALSE,24,2017-06-30T19:11:09Z
+444,none,"Tamis-LeMonda, Catherine",11,FALSE,24,2017-06-30T19:11:09Z
+444,none,"Gilmore, Rick O.",6,FALSE,24,2017-06-30T19:11:09Z
+445,full,"Soderstrom, Melanie",518,FALSE,118,2017-07-07T16:48:35Z
+445,full,"Klassen, Kelsey",3126,FALSE,118,2017-07-07T16:48:35Z
+452,full,"Adolph, Karen",5,FALSE,28,2017-07-13T15:06:14Z
+455,none,"Adolph, Karen",5,FALSE,41,2017-07-14T18:51:43Z
+458,full,"Adolph, Karen",5,FALSE,3,2017-07-19T17:43:33Z
+459,full,"Adolph, Karen",5,FALSE,8,2017-07-19T17:50:41Z
+460,none,"Adolph, Karen",5,FALSE,39,2017-07-21T14:13:35Z
+465,full,"Arshad, Ahmad",2223,FALSE,1,2017-08-09T14:34:24Z
+468,full,"Shirai, Nobu",2219,FALSE,1,2017-08-12T02:06:00Z
+471,full,"Adolph, Karen",5,FALSE,4,2017-08-17T14:58:10Z
+473,full,"Gilmore, Rick O.",6,FALSE,2,2017-08-18T19:59:26Z
+476,none,"Adolph, Karen",5,FALSE,35,2017-08-25T20:07:05Z
+477,none,"Gilmore, Rick O.",6,FALSE,1,2017-08-28T15:30:34Z
+480,full,"Cook, Susan Wagner",681,FALSE,1,2017-08-31T03:26:01Z
+481,full,"Foster-Hanson, Emily",3121,FALSE,3,2017-08-31T15:30:22Z
+481,full,"Leshin, Rachel",3391,FALSE,3,2017-08-31T15:30:22Z
+481,full,"Rhodes, Marjorie",277,FALSE,3,2017-08-31T15:30:22Z
+482,full,"Shirai, Nobu",2219,FALSE,1,2017-09-09T00:42:32Z
+545,full,"Scott, Lisa",2653,FALSE,4,2017-11-20T16:45:09Z
+546,full,"Scott, Lisa",2653,FALSE,3,2017-11-21T14:07:04Z
+554,full,"Trehub, Sandra E",2854,FALSE,2,2017-11-30T14:36:41Z
+554,full,"Cirelli, Laura",2738,FALSE,2,2017-11-30T14:36:41Z
+563,none,"Adolph, Karen",5,FALSE,110,2017-12-12T13:29:26Z
+563,none,"Tamis-LeMonda, Catherine",11,FALSE,110,2017-12-12T13:29:26Z
+564,full,"Sullivan, Jessica",2095,FALSE,455,2017-12-13T15:06:49Z
+564,full,"Mei, Michelle",3585,FALSE,455,2017-12-13T15:06:49Z
+564,full,"Perfors, Amy",5748,FALSE,455,2017-12-13T15:06:49Z
+564,full,"Wojcik, Erica",2773,FALSE,455,2017-12-13T15:06:49Z
+564,full,"Frank, Michael C.",258,FALSE,455,2017-12-13T15:06:49Z
+564,full,"Vong, Wai Keen",5739,FALSE,455,2017-12-13T15:06:49Z
+569,full,"Moulson, Margaret",474,FALSE,0,2018-01-09T20:18:22Z
 573,restricted,"Hauck, Janet",997,FALSE,13,2018-01-22T16:41:01Z
 573,restricted,"Lee, Do Kyeong",384,FALSE,13,2018-01-22T16:41:01Z
 574,restricted,"Hartshorne, Joshua",2521,FALSE,3,2018-01-24T16:28:01Z
-575,restricted,"Needham, Amy",118,FALSE,40,2018-01-29T17:09:56Z
+575,restricted,"Needham, Amy",118,FALSE,50,2018-01-29T17:09:56Z
 577,restricted,"Hartshorne, Joshua",2521,FALSE,4,2018-01-30T17:32:25Z
 578,restricted,"Palmquist, Carolyn",2945,FALSE,34,2018-02-01T20:14:32Z
 586,restricted,"Stefan, Catrinel Alice",3600,FALSE,14,2018-02-12T15:15:05Z
@@ -119,20 +271,20 @@ vol_id,sharing_level,owner.ids.name,owner.ids.id,sessions_shared,n_sessions,crea
 588,restricted,"Chemla, Emmanuel",3701,FALSE,1,2018-02-16T16:47:58Z
 591,restricted,"Hay, Jessica",3299,FALSE,2,2018-02-20T20:35:01Z
 592,restricted,"Weisberg, Deena Skolnick",562,FALSE,34,2018-02-21T15:43:17Z
-593,full,"Scott, Lisa",2653,TRUE,3,2018-02-21T17:42:11Z
-595,full,"Adolph, Karen",5,TRUE,1,2018-02-23T20:34:44Z
-596,full,"Adolph, Karen",5,TRUE,1,2018-02-23T20:49:04Z
-596,full,"Tamis-LeMonda, Catherine",11,TRUE,1,2018-02-23T20:49:04Z
+593,full,"Scott, Lisa",2653,FALSE,3,2018-02-21T17:42:11Z
+595,full,"Adolph, Karen",5,FALSE,1,2018-02-23T20:34:44Z
+596,full,"Adolph, Karen",5,FALSE,1,2018-02-23T20:49:04Z
+596,full,"Tamis-LeMonda, Catherine",11,FALSE,1,2018-02-23T20:49:04Z
 597,restricted,"Tamis-LeMonda, Catherine",11,FALSE,2,2018-02-26T16:26:03Z
 598,restricted,"Rhodes, Marjorie",277,FALSE,0,2018-03-05T14:33:45Z
 599,restricted,"Rhodes, Marjorie",277,FALSE,2,2018-03-05T14:46:21Z
 600,restricted,"Lillard, Angeline",318,FALSE,15,2018-03-05T19:46:14Z
 603,restricted,"Jaswal, Vikram",1117,FALSE,17,2018-03-13T17:38:02Z
-604,restricted,"Needham, Amy",118,FALSE,38,2018-03-15T17:34:33Z
+604,restricted,"Needham, Amy",118,FALSE,49,2018-03-15T17:34:33Z
 605,restricted,"Jaswal, Vikram",1117,FALSE,2,2018-03-15T18:31:56Z
 606,restricted,"Jaswal, Vikram",1117,FALSE,23,2018-03-15T18:37:04Z
 607,restricted,"Weisberg, Deena Skolnick",562,FALSE,60,2018-03-19T14:12:17Z
-608,full,"Scott, Lisa",2653,TRUE,2,2018-03-22T20:32:01Z
+608,full,"Scott, Lisa",2653,FALSE,2,2018-03-22T20:32:01Z
 609,restricted,"Jaswal, Vikram",1117,FALSE,20,2018-03-27T18:39:07Z
 610,restricted,"Jaswal, Vikram",1117,FALSE,39,2018-03-28T13:19:21Z
 612,restricted,"Jaswal, Vikram",1117,FALSE,16,2018-03-29T18:42:15Z
@@ -166,10 +318,11 @@ vol_id,sharing_level,owner.ids.name,owner.ids.id,sessions_shared,n_sessions,crea
 641,restricted,"Jaswal, Vikram",1117,FALSE,6,2018-04-18T16:02:07Z
 642,restricted,"Jaswal, Vikram",1117,FALSE,44,2018-04-18T16:05:36Z
 643,restricted,"Jaswal, Vikram",1117,FALSE,10,2018-04-18T16:10:13Z
-644,full,"Rhodes, Marjorie",277,TRUE,4,2018-04-19T19:31:33Z
+644,full,"Foster-Hanson, Emily",3121,FALSE,4,2018-04-19T19:31:33Z
+644,full,"Rhodes, Marjorie",277,FALSE,4,2018-04-19T19:31:33Z
 645,restricted,"Needham, Amy",118,FALSE,33,2018-04-23T15:16:58Z
 646,restricted,"Rhodes, Marjorie",277,FALSE,0,2018-04-23T16:11:25Z
-647,full,"Braun, Bettina",3830,TRUE,16,2018-04-24T10:40:09Z
+647,full,"Braun, Bettina",3830,FALSE,16,2018-04-24T10:40:09Z
 648,restricted,"Scott, Lisa",2653,FALSE,0,2018-04-24T18:30:48Z
 649,restricted,"Jaswal, Vikram",1117,FALSE,2,2018-04-25T13:03:23Z
 650,restricted,"Jaswal, Vikram",1117,FALSE,8,2018-04-25T13:13:35Z
@@ -192,75 +345,76 @@ vol_id,sharing_level,owner.ids.name,owner.ids.id,sessions_shared,n_sessions,crea
 668,restricted,"Bergelson, Elika",61,FALSE,47,2018-04-30T13:28:34Z
 669,restricted,"Bergelson, Elika",61,FALSE,47,2018-04-30T16:44:22Z
 670,restricted,"Bergelson, Elika",61,FALSE,47,2018-04-30T20:54:01Z
-671,full,"Trehub, Sandra E",2854,TRUE,37,2018-05-01T13:28:26Z
+671,full,"Trehub, Sandra E",2854,FALSE,37,2018-05-01T13:28:26Z
 672,restricted,"Jaswal, Vikram",1117,FALSE,23,2018-05-01T16:35:06Z
 673,restricted,"Jaswal, Vikram",1117,FALSE,17,2018-05-01T16:36:45Z
-686,full,"Admin, Databrary",3341,TRUE,2,2018-05-02T19:28:43Z
-686,full,"Gilmore, Rick O.",6,TRUE,2,2018-05-02T19:28:43Z
-686,full,"Seisler, Andrea R.",437,TRUE,2,2018-05-02T19:28:43Z
-686,full,"Soska, Kasey",406,TRUE,2,2018-05-02T19:28:43Z
+686,full,"Admin, Databrary",3341,FALSE,2,2018-05-02T19:28:43Z
+686,full,"Gilmore, Rick O.",6,FALSE,2,2018-05-02T19:28:43Z
+686,full,"Seisler, Andrea R.",437,FALSE,2,2018-05-02T19:28:43Z
+686,full,"Soska, Kasey",406,FALSE,2,2018-05-02T19:28:43Z
 687,restricted,"Cristia, Alejandrina",1034,FALSE,0,2018-05-04T15:10:05Z
 689,restricted,"Johnson, Scott",93,FALSE,1,2018-05-08T23:57:05Z
 690,restricted,"Scott, Lisa",2653,FALSE,11,2018-05-11T17:42:12Z
-691,full,"Frank, Michael C.",258,TRUE,2,2018-05-14T18:00:59Z
+691,full,"Frank, Michael C.",258,FALSE,2,2018-05-14T18:00:59Z
+692,none,"Admin, Databrary",3341,FALSE,2,2018-05-16T17:02:42Z
+692,none,"Seisler, Andrea R.",437,FALSE,2,2018-05-16T17:02:42Z
 694,restricted,"Bergelson, Elika",61,FALSE,2,2018-05-16T17:18:46Z
 695,restricted,"Bergelson, Elika",61,FALSE,2,2018-05-16T17:22:27Z
 696,restricted,"Bergelson, Elika",61,FALSE,2,2018-05-16T17:31:47Z
-697,full,"Johnson, Scott",93,TRUE,1,2018-05-17T15:37:12Z
+697,full,"Johnson, Scott",93,FALSE,1,2018-05-17T15:37:12Z
 699,restricted,"Raver, Cybele",368,FALSE,9,2018-05-23T18:26:48Z
 699,restricted,"Kyriakou, Lara",1400,FALSE,9,2018-05-23T18:26:48Z
 702,restricted,"Johnson, Scott",93,FALSE,3,2018-05-25T17:58:19Z
 703,restricted,"Lillard, Angeline",318,FALSE,54,2018-05-29T07:45:56Z
 705,restricted,"Smith, Linda B.",161,FALSE,1,2018-06-06T15:23:16Z
 705,restricted,"Yu, Chen",120,FALSE,1,2018-06-06T15:23:16Z
-706,restricted,"Lillard, Angeline",318,FALSE,44,2018-06-06T15:41:37Z
-707,full,"Ossmy, Ori",1526,TRUE,2,2018-06-07T17:07:49Z
-707,full,"Adolph, Karen",5,TRUE,2,2018-06-07T17:07:49Z
+706,restricted,"Lillard, Angeline",318,FALSE,46,2018-06-06T15:41:37Z
+707,full,"Ossmy, Ori",1526,FALSE,2,2018-06-07T17:07:49Z
+707,full,"Adolph, Karen",5,FALSE,2,2018-06-07T17:07:49Z
 708,restricted,"Blair, Clancy",1254,FALSE,2,2018-06-08T15:17:51Z
 708,restricted,"Woudstra, Mi-lan",1322,FALSE,2,2018-06-08T15:17:51Z
-709,full,International Congress on Infant Studies (ICIS),2127,TRUE,12,2018-06-11T15:22:13Z
-709,full,"Hirsh-Pasek, Kathy",546,TRUE,12,2018-06-11T15:22:13Z
-709,full,"Golinkoff, Roberta",296,TRUE,12,2018-06-11T15:22:13Z
-709,full,"Oakes, Lisa",538,TRUE,12,2018-06-11T15:22:13Z
-709,full,"Barr, Rachel",104,TRUE,12,2018-06-11T15:22:13Z
-709,full,"Admin, Databrary",3341,TRUE,12,2018-06-11T15:22:13Z
-709,full,"Saffran, Jenny",274,TRUE,12,2018-06-11T15:22:13Z
-709,full,"Lakusta, Laura",590,TRUE,12,2018-06-11T15:22:13Z
-710,full,"Cordes, Sara",798,TRUE,16,2018-06-12T19:09:31Z
-711,full,"Jirout, Jamie",1197,TRUE,2,2018-06-13T16:04:14Z
-712,restricted,"Lillard, Angeline",318,FALSE,53,2018-06-13T19:28:20Z
+709,full,International Congress on Infant Studies (ICIS),2127,FALSE,12,2018-06-11T15:22:13Z
+709,full,"Hirsh-Pasek, Kathy",546,FALSE,12,2018-06-11T15:22:13Z
+709,full,"Golinkoff, Roberta",296,FALSE,12,2018-06-11T15:22:13Z
+709,full,"Oakes, Lisa",538,FALSE,12,2018-06-11T15:22:13Z
+709,full,"Barr, Rachel",104,FALSE,12,2018-06-11T15:22:13Z
+709,full,"Admin, Databrary",3341,FALSE,12,2018-06-11T15:22:13Z
+709,full,"Saffran, Jenny",274,FALSE,12,2018-06-11T15:22:13Z
+709,full,"Lakusta, Laura",590,FALSE,12,2018-06-11T15:22:13Z
+710,full,"Cordes, Sara",798,FALSE,16,2018-06-12T19:09:31Z
+711,full,"Jirout, Jamie",1197,FALSE,2,2018-06-13T16:04:14Z
+712,restricted,"Lillard, Angeline",318,FALSE,73,2018-06-13T19:28:20Z
 714,restricted,"Johnson, Scott",93,FALSE,1,2018-06-15T17:56:17Z
 714,restricted,"Frank, Michael C.",258,FALSE,1,2018-06-15T17:56:17Z
 714,restricted,"Kline, Melissa",1157,FALSE,1,2018-06-15T17:56:17Z
 714,restricted,"Bergmann, Christina",726,FALSE,1,2018-06-15T17:56:17Z
 715,restricted,"Yurovsky, Daniel",3037,FALSE,28,2018-06-15T18:57:28Z
-717,restricted,"Srinivasan, Mahesh",1515,FALSE,186,2018-06-18T21:37:10Z
-717,restricted,"Foushee, Ruthe",1001,FALSE,186,2018-06-18T21:37:10Z
-718,restricted,"Lillard, Angeline",318,FALSE,83,2018-06-20T09:51:38Z
+717,restricted,"Srinivasan, Mahesh",1515,FALSE,198,2018-06-18T21:37:10Z
+717,restricted,"Foushee, Ruthe",1001,FALSE,198,2018-06-18T21:37:10Z
+718,restricted,"Lillard, Angeline",318,FALSE,92,2018-06-20T09:51:38Z
 719,restricted,"Palmquist, Carolyn",2945,FALSE,32,2018-06-20T13:50:09Z
-720,full,"Scott, Lisa",2653,TRUE,6,2018-06-20T17:36:15Z
-721,full,"Aschersleben, Gisa",2746,TRUE,1,2018-06-21T12:25:00Z
-721,full,"Krieger, Florian",4067,TRUE,1,2018-06-21T12:25:00Z
+721,full,"Aschersleben, Gisa",2746,FALSE,1,2018-06-21T12:25:00Z
+721,full,"Krieger, Florian",4067,FALSE,1,2018-06-21T12:25:00Z
 722,restricted,"Johnson, Scott",93,FALSE,1,2018-06-23T21:44:56Z
 723,restricted,"Kaufman, Jordy",440,FALSE,14,2018-06-26T00:28:20Z
 724,restricted,"Adolph, Karen",5,FALSE,5,2018-06-29T12:43:13Z
 724,restricted,"Tamis-LeMonda, Catherine",11,FALSE,5,2018-06-29T12:43:13Z
 724,restricted,"Gilmore, Rick O.",6,FALSE,5,2018-06-29T12:43:13Z
 724,restricted,"Soska, Kasey",406,FALSE,5,2018-06-29T12:43:13Z
-725,full,"Soley, Gaye",3967,TRUE,1,2018-07-03T07:30:57Z
+725,full,"Soley, Gaye",3967,FALSE,1,2018-07-03T07:30:57Z
 726,restricted,"Goldstein, Thalia R.",531,FALSE,143,2018-07-03T20:18:11Z
 726,restricted,"Thompson, Brittany",3152,FALSE,143,2018-07-03T20:18:11Z
 727,restricted,"Hannon, Erin",3087,FALSE,25,2018-07-05T23:38:16Z
 728,restricted,"Cristia, Alejandrina",1034,FALSE,2,2018-07-06T15:42:18Z
-729,restricted,"Lillard, Angeline",318,FALSE,66,2018-07-06T16:53:00Z
+729,restricted,"Lillard, Angeline",318,FALSE,68,2018-07-06T16:53:00Z
 730,restricted,"Lillard, Angeline",318,FALSE,40,2018-07-11T13:16:32Z
 733,restricted,"Palmquist, Carolyn",2945,FALSE,7,2018-07-17T15:30:28Z
 734,restricted,"Palmquist, Carolyn",2945,FALSE,40,2018-07-17T15:34:36Z
-735,full,"Adolph, Karen",5,TRUE,1,2018-07-26T15:28:14Z
-736,full,"Bonawitz, Elizabeth",2173,TRUE,17,2018-08-02T01:36:06Z
+735,full,"Adolph, Karen",5,FALSE,1,2018-07-26T15:28:14Z
+736,full,"Bonawitz, Elizabeth",2173,FALSE,17,2018-08-02T01:36:06Z
 738,restricted,"Araiza Alba, Paola",2479,FALSE,7,2018-08-09T02:17:57Z
 738,restricted,"Kaufman, Jordy",440,FALSE,7,2018-08-09T02:17:57Z
-739,full,"Robinovitch, Stephen",2693,TRUE,106,2018-08-17T04:32:07Z
+739,full,"Robinovitch, Stephen",2693,FALSE,106,2018-08-17T04:32:07Z
 740,restricted,"Beier, Jonathan",594,FALSE,3,2018-08-21T13:37:29Z
 744,restricted,"Jaswal, Vikram",1117,FALSE,23,2018-08-31T16:14:43Z
 745,restricted,"Jaswal, Vikram",1117,FALSE,16,2018-08-31T16:18:18Z
@@ -276,7 +430,7 @@ vol_id,sharing_level,owner.ids.name,owner.ids.id,sessions_shared,n_sessions,crea
 755,restricted,"Jaswal, Vikram",1117,FALSE,41,2018-09-04T17:27:29Z
 756,restricted,"Beier, Jonathan",594,FALSE,100,2018-09-05T14:30:39Z
 757,restricted,"Jaswal, Vikram",1117,FALSE,270,2018-09-05T19:23:52Z
-758,restricted,"Needham, Amy",118,FALSE,23,2018-09-07T19:09:41Z
+758,restricted,"Needham, Amy",118,FALSE,38,2018-09-07T19:09:41Z
 759,restricted,"Adolph, Karen",5,FALSE,0,2018-09-12T15:40:35Z
 759,restricted,"Soska, Kasey",406,FALSE,0,2018-09-12T15:40:35Z
 760,restricted,"Xu, Melody",2775,FALSE,1,2018-09-12T15:43:08Z
@@ -284,57 +438,62 @@ vol_id,sharing_level,owner.ids.name,owner.ids.id,sessions_shared,n_sessions,crea
 760,restricted,"Soska, Kasey",406,FALSE,1,2018-09-12T15:43:08Z
 761,restricted,"Adolph, Karen",5,FALSE,11,2018-09-12T16:51:57Z
 761,restricted,"Soska, Kasey",406,FALSE,11,2018-09-12T16:51:57Z
-762,full,"McDermott, Catherine",1704,TRUE,2,2018-09-18T17:09:04Z
-762,full,"Noles, Nicholaus",1699,TRUE,2,2018-09-18T17:09:04Z
+762,full,"McDermott, Catherine",1704,FALSE,2,2018-09-18T17:09:04Z
+762,full,"Noles, Nicholaus",1699,FALSE,2,2018-09-18T17:09:04Z
 764,restricted,"Beier, Jonathan",594,FALSE,140,2018-09-18T18:45:29Z
 765,restricted,"Jirout, Jamie",1197,FALSE,2,2018-09-18T19:37:12Z
 766,restricted,"Noles, Nicholaus",1699,FALSE,1,2018-09-20T15:55:47Z
 768,restricted,"Noles, Nicholaus",1699,FALSE,1,2018-09-28T01:36:22Z
 776,restricted,"Iverson, Jana",334,FALSE,10,2018-10-02T22:24:44Z
 777,restricted,"Prado, Elizabeth",4458,FALSE,634,2018-10-02T22:39:36Z
-778,full,"Casasola, Marianella",650,TRUE,42,2018-10-04T11:59:54Z
-778,full,"Tamis-LeMonda, Catherine",11,TRUE,42,2018-10-04T11:59:54Z
-778,full,"Suh, Daniel Daewon",2578,TRUE,42,2018-10-04T11:59:54Z
-778,full,"Ransom, Ashley",4065,TRUE,42,2018-10-04T11:59:54Z
+778,full,"Casasola, Marianella",650,FALSE,42,2018-10-04T11:59:54Z
+778,full,"Tamis-LeMonda, Catherine",11,FALSE,42,2018-10-04T11:59:54Z
+778,full,"Suh, Daniel Daewon",2578,FALSE,42,2018-10-04T11:59:54Z
+778,full,"Ransom, Ashley",4065,FALSE,42,2018-10-04T11:59:54Z
+781,full,"Gilmore, Rick O.",6,FALSE,5,2018-10-16T13:39:31Z
+781,full,"Seisler, Andrea R.",437,FALSE,5,2018-10-16T13:39:31Z
 782,restricted,"Srinivasan, Mahesh",1515,FALSE,0,2018-10-17T18:56:52Z
 784,restricted,"Lee, Do Kyeong",384,FALSE,0,2018-10-24T18:45:00Z
 784,restricted,"Bai, Yu",4603,FALSE,0,2018-10-24T18:45:00Z
-785,full,"Paulus, Markus",959,TRUE,1,2018-10-25T19:04:09Z
+785,full,"Paulus, Markus",959,FALSE,1,2018-10-25T19:04:09Z
 786,restricted,"Palmquist, Carolyn",2945,FALSE,30,2018-10-26T19:41:07Z
 787,restricted,"Palmquist, Carolyn",2945,FALSE,16,2018-10-26T20:19:53Z
 788,restricted,"Palmquist, Carolyn",2945,FALSE,22,2018-10-26T20:51:14Z
-807,full,"Johnson, Scott",93,TRUE,1,2018-10-29T17:59:39Z
+807,full,"Johnson, Scott",93,FALSE,1,2018-10-29T17:59:39Z
 808,restricted,"Vishton, Peter",60,FALSE,136,2018-10-29T18:12:56Z
 809,restricted,"Jirout, Jamie",1197,FALSE,1,2018-10-29T20:38:28Z
 812,restricted,"Vishton, Peter",60,FALSE,9,2018-10-31T17:52:58Z
 813,restricted,"Xu, Fei",2921,FALSE,0,2018-10-31T19:40:49Z
 814,restricted,"Palmquist, Carolyn",2945,FALSE,44,2018-11-02T19:04:10Z
-815,full,"Casasola, Marianella",650,TRUE,3,2018-11-05T21:45:31Z
+815,full,"Casasola, Marianella",650,FALSE,3,2018-11-05T21:45:31Z
 816,restricted,"Casasola, Marianella",650,FALSE,1,2018-11-06T15:49:01Z
 817,restricted,"Vishton, Peter",60,FALSE,13,2018-11-07T13:57:25Z
-819,full,"Nelson, Charles",4577,TRUE,2,2018-11-30T16:57:54Z
-819,full,"Wade, Mark",2027,TRUE,2,2018-11-30T16:57:54Z
+819,full,"Nelson, Charles",4577,FALSE,2,2018-11-30T16:57:54Z
+819,full,"Wade, Mark",2027,FALSE,2,2018-11-30T16:57:54Z
 820,restricted,"Ellwood-Lowe, Monica",3034,FALSE,85,2018-12-02T19:51:33Z
 820,restricted,"Srinivasan, Mahesh",1515,FALSE,85,2018-12-02T19:51:33Z
-821,restricted,"Adolph, Karen",5,FALSE,22,2018-12-06T15:25:12Z
-822,full,"Noles, Nicholaus",1699,TRUE,2,2018-12-10T20:48:06Z
-823,restricted,"Lillard, Angeline",318,FALSE,69,2018-12-11T18:30:03Z
+821,restricted,"Adolph, Karen",5,FALSE,26,2018-12-06T15:25:12Z
+822,full,"Noles, Nicholaus",1699,FALSE,2,2018-12-10T20:48:06Z
+823,restricted,"Lillard, Angeline",318,FALSE,77,2018-12-11T18:30:03Z
 824,restricted,"Admin, Databrary",3341,FALSE,0,2018-12-17T21:29:23Z
 825,restricted,"Miller, Joan",3812,FALSE,1,2019-01-03T18:02:29Z
-826,full,"Adolph, Karen",5,TRUE,1,2019-01-05T13:11:09Z
-827,restricted,"Adolph, Karen",5,FALSE,30,2019-01-07T23:40:18Z
-828,full,"Gredebäck, Gustaf",4546,TRUE,5,2019-01-08T11:18:59Z
-828,full,"Forssman, Linda",4787,TRUE,5,2019-01-08T11:18:59Z
-828,full,"Lindskog, Marcus",4881,TRUE,5,2019-01-08T11:18:59Z
-828,full,"Kenward, Ben",4885,TRUE,5,2019-01-08T11:18:59Z
+826,full,"Adolph, Karen",5,FALSE,1,2019-01-05T13:11:09Z
+827,restricted,"Adolph, Karen",5,FALSE,43,2019-01-07T23:40:18Z
+828,full,"Gredebäck, Gustaf",4546,FALSE,5,2019-01-08T11:18:59Z
+828,full,"Forssman, Linda",4787,FALSE,5,2019-01-08T11:18:59Z
+828,full,"Lindskog, Marcus",4881,FALSE,5,2019-01-08T11:18:59Z
+828,full,"Kenward, Ben",4885,FALSE,5,2019-01-08T11:18:59Z
 829,restricted,"Berger, Sarah E",2382,FALSE,7,2019-01-08T17:47:48Z
 829,restricted,"Harbourne, Regina",2176,FALSE,7,2019-01-08T17:47:48Z
 831,restricted,"Mandalaywala, Tara",357,FALSE,2,2019-01-10T17:27:17Z
 831,restricted,"Rhodes, Marjorie",277,FALSE,2,2019-01-10T17:27:17Z
 831,restricted,"Benitez, Josie",5803,FALSE,2,2019-01-10T17:27:17Z
 833,restricted,"Booth, Amy",1977,FALSE,0,2019-01-17T00:24:10Z
-834,full,"Rhodes, Marjorie",277,TRUE,2,2019-01-17T14:41:25Z
-835,restricted,"Adolph, Karen",5,FALSE,19,2019-01-21T17:20:09Z
+834,full,"Foster-Hanson, Emily",3121,FALSE,2,2019-01-17T14:41:25Z
+834,full,"Rhodes, Marjorie",277,FALSE,2,2019-01-17T14:41:25Z
+834,full,"Moty, Kelsey",405,FALSE,2,2019-01-17T14:41:25Z
+835,restricted,"Adolph, Karen",5,FALSE,38,2019-01-21T17:20:09Z
+836,restricted,"Foster-Hanson, Emily",3121,FALSE,1,2019-01-23T16:41:23Z
 836,restricted,"Rhodes, Marjorie",277,FALSE,1,2019-01-23T16:41:23Z
 837,restricted,"Goldstein, Thalia R.",531,FALSE,8,2019-01-25T21:36:50Z
 837,restricted,"Kanumuru, Pallavi",3989,FALSE,8,2019-01-25T21:36:50Z
@@ -342,76 +501,84 @@ vol_id,sharing_level,owner.ids.name,owner.ids.id,sessions_shared,n_sessions,crea
 839,restricted,"Fabricius, William",288,FALSE,24,2019-01-29T22:21:03Z
 840,restricted,"Srinivasan, Mahesh",1515,FALSE,0,2019-01-30T20:51:38Z
 841,restricted,"Srinivasan, Mahesh",1515,FALSE,81,2019-01-31T19:13:18Z
+841,restricted,"Starr, Ariel",5894,FALSE,81,2019-01-31T19:13:18Z
 843,restricted,"Srinivasan, Mahesh",1515,FALSE,0,2019-02-05T00:08:12Z
 843,restricted,"Foushee, Ruthe",1001,FALSE,0,2019-02-05T00:08:12Z
 845,restricted,"Gladstone, Melissa",4142,FALSE,2,2019-02-09T14:32:52Z
 846,restricted,"Gladstone, Melissa",4142,FALSE,3,2019-02-09T17:30:06Z
 847,restricted,"Langenhoff, Antonia",5025,FALSE,56,2019-02-12T19:21:07Z
 847,restricted,"Srinivasan, Mahesh",1515,FALSE,56,2019-02-12T19:21:07Z
-848,restricted,"Beier, Jonathan",594,FALSE,72,2019-02-12T19:47:43Z
+848,restricted,"Beier, Jonathan",594,FALSE,78,2019-02-12T19:47:43Z
 849,restricted,"Beier, Jonathan",594,FALSE,154,2019-02-13T17:45:02Z
 850,restricted,"Beier, Jonathan",594,FALSE,74,2019-02-13T20:52:09Z
 851,restricted,"Beier, Jonathan",594,FALSE,104,2019-02-14T17:59:04Z
 852,restricted,"Beier, Jonathan",594,FALSE,109,2019-02-14T19:32:13Z
 853,restricted,"Beier, Jonathan",594,FALSE,117,2019-02-14T20:30:38Z
-854,restricted,"Weisberg, Deena Skolnick",562,FALSE,15,2019-02-15T19:01:34Z
+854,restricted,"Weisberg, Deena Skolnick",562,FALSE,56,2019-02-15T19:01:34Z
 855,restricted,"Palmquist, Carolyn",2945,FALSE,17,2019-02-16T00:04:13Z
 856,restricted,"Beier, Jonathan",594,FALSE,73,2019-02-18T17:12:25Z
 857,restricted,"Froemke, Robert",4605,FALSE,1,2019-02-19T14:28:09Z
 859,restricted,"Lombardi, Doug",4945,FALSE,1,2019-02-21T18:07:52Z
-860,restricted,"Nez, Reda",4291,FALSE,35,2019-02-21T21:36:38Z
-860,restricted,"Lombardi, Doug",4945,FALSE,35,2019-02-21T21:36:38Z
+860,restricted,"Nez, Reda",4291,FALSE,49,2019-02-21T21:36:38Z
+860,restricted,"Lombardi, Doug",4945,FALSE,49,2019-02-21T21:36:38Z
 861,restricted,"Beier, Jonathan",594,FALSE,88,2019-02-25T19:42:23Z
-863,restricted,"Beier, Jonathan",594,FALSE,94,2019-02-28T21:04:11Z
+863,restricted,"Beier, Jonathan",594,FALSE,97,2019-02-28T21:04:11Z
 864,restricted,"Gladstone, Melissa",4142,FALSE,1,2019-03-03T19:42:28Z
 865,restricted,"Gladstone, Melissa",4142,FALSE,1,2019-03-03T19:47:14Z
 867,restricted,"Beier, Jonathan",594,FALSE,15,2019-03-05T14:03:38Z
-868,restricted,"Adolph, Karen",5,FALSE,34,2019-03-06T14:18:18Z
-870,restricted,"Berger, Sarah E",2382,FALSE,22,2019-03-20T16:34:03Z
+868,restricted,"Adolph, Karen",5,FALSE,44,2019-03-06T14:18:18Z
+870,restricted,"Berger, Sarah E",2382,FALSE,28,2019-03-20T16:34:03Z
 871,restricted,"Froemke, Robert",4605,FALSE,1,2019-03-24T21:55:25Z
-873,full,"Fausey, Caitlin M.",126,TRUE,4,2019-03-26T16:30:15Z
-874,restricted,"Scherf, Kathryn Suzanne",252,FALSE,17,2019-03-27T14:31:35Z
-874,restricted,"Benda, Margaret Suzanne",5051,FALSE,17,2019-03-27T14:31:35Z
-876,restricted,"Adolph, Karen",5,FALSE,4,2019-04-01T15:48:23Z
-876,restricted,"Gilmore, Rick O.",6,FALSE,4,2019-04-01T15:48:23Z
-876,restricted,"Soska, Kasey",406,FALSE,4,2019-04-01T15:48:23Z
+873,full,"Fausey, Caitlin M.",126,FALSE,4,2019-03-26T16:30:15Z
+874,full,"Scherf, Kathryn Suzanne",252,FALSE,17,2019-03-27T14:31:35Z
+874,full,"Benda, Margaret Suzanne",5051,FALSE,17,2019-03-27T14:31:35Z
+875,none,"Adolph, Karen",5,FALSE,1,2019-03-29T22:22:44Z
+875,none,"Soska, Kasey",406,FALSE,1,2019-03-29T22:22:44Z
+876,restricted,"Adolph, Karen",5,FALSE,5,2019-04-01T15:48:23Z
+876,restricted,"Gilmore, Rick O.",6,FALSE,5,2019-04-01T15:48:23Z
+876,restricted,"Soska, Kasey",406,FALSE,5,2019-04-01T15:48:23Z
 877,restricted,"Vishton, Peter",60,FALSE,12,2019-04-04T12:30:28Z
 878,restricted,"Vishton, Peter",60,FALSE,32,2019-04-04T12:33:07Z
 879,restricted,"Vishton, Peter",60,FALSE,22,2019-04-04T13:45:40Z
 880,restricted,"Gilmore, Rick O.",6,FALSE,3,2019-04-05T17:29:31Z
 880,restricted,"Wilkinson, Krista",245,FALSE,3,2019-04-05T17:29:31Z
+881,none,"Gilmore, Rick O.",6,FALSE,3,2019-04-08T14:22:16Z
+881,none,"Jayaraman, Swapnaa",254,FALSE,3,2019-04-08T14:22:16Z
 882,restricted,"Beier, Jonathan",594,FALSE,76,2019-04-10T15:25:18Z
 883,restricted,"Rhodes, Marjorie",277,FALSE,1,2019-04-10T18:42:14Z
 884,restricted,"Scherf, Kathryn Suzanne",252,FALSE,3,2019-04-10T21:11:58Z
 884,restricted,"Bill, Gordon",5214,FALSE,3,2019-04-10T21:11:58Z
 885,restricted,"Vishton, Peter",60,FALSE,17,2019-04-11T12:58:26Z
-888,restricted,"Berger, Sarah E",2382,FALSE,38,2019-04-14T16:20:09Z
-889,restricted,"Vishton, Peter",60,FALSE,3,2019-04-17T15:19:16Z
+888,restricted,"Berger, Sarah E",2382,FALSE,63,2019-04-14T16:20:09Z
+889,restricted,"Vishton, Peter",60,FALSE,10,2019-04-17T15:19:16Z
 892,restricted,"Lillard, Angeline",318,FALSE,7,2019-04-25T14:45:29Z
-893,full,"Frankenhuis, Willem",5325,TRUE,1,2019-04-30T05:43:41Z
+893,full,"Frankenhuis, Willem",5325,FALSE,1,2019-04-30T05:43:41Z
+894,none,"Nez, Reda",4291,FALSE,347,2019-05-01T00:45:14Z
+894,none,"Adolph, Karen",5,FALSE,347,2019-05-01T00:45:14Z
 895,restricted,"Beier, Jonathan",594,FALSE,59,2019-05-01T16:06:53Z
-896,restricted,"Bergmann, Christina",726,FALSE,10,2019-05-02T10:31:27Z
-896,restricted,"Soderstrom, Melanie",518,FALSE,10,2019-05-02T10:31:27Z
-896,restricted,"Hamlin, Kiley",2525,FALSE,10,2019-05-02T10:31:27Z
-896,restricted,"Frank, Michael C.",258,FALSE,10,2019-05-02T10:31:27Z
-896,restricted,"Kline, Melissa",1157,FALSE,10,2019-05-02T10:31:27Z
-896,restricted,"Byers-Heinlein, Krista",1928,FALSE,10,2019-05-02T10:31:27Z
-896,restricted,"Lew-Williams, Casey",1371,FALSE,10,2019-05-02T10:31:27Z
-897,full,"Adolph, Karen",5,TRUE,116,2019-05-03T17:38:55Z
-897,full,"Tamis-LeMonda, Catherine",11,TRUE,116,2019-05-03T17:38:55Z
-897,full,"Lockman, Jeff",101,TRUE,116,2019-05-03T17:38:55Z
-897,full,"Karasik, Lana",32,TRUE,116,2019-05-03T17:38:55Z
-897,full,"Rachwani, Jaya",506,TRUE,116,2019-05-03T17:38:55Z
+896,restricted,"Bergmann, Christina",726,FALSE,60,2019-05-02T10:31:27Z
+896,restricted,"Soderstrom, Melanie",518,FALSE,60,2019-05-02T10:31:27Z
+896,restricted,"Hamlin, Kiley",2525,FALSE,60,2019-05-02T10:31:27Z
+896,restricted,"Frank, Michael C.",258,FALSE,60,2019-05-02T10:31:27Z
+896,restricted,"Kline, Melissa",1157,FALSE,60,2019-05-02T10:31:27Z
+896,restricted,"Byers-Heinlein, Krista",1928,FALSE,60,2019-05-02T10:31:27Z
+896,restricted,"Lew-Williams, Casey",1371,FALSE,60,2019-05-02T10:31:27Z
+897,full,"Adolph, Karen",5,FALSE,116,2019-05-03T17:38:55Z
+897,full,"Tamis-LeMonda, Catherine",11,FALSE,116,2019-05-03T17:38:55Z
+897,full,"Lockman, Jeff",101,FALSE,116,2019-05-03T17:38:55Z
+897,full,"Karasik, Lana",32,FALSE,116,2019-05-03T17:38:55Z
+897,full,"Rachwani, Jaya",506,FALSE,116,2019-05-03T17:38:55Z
 898,restricted,"Henderson, Annette",4687,FALSE,1,2019-05-05T22:33:03Z
-899,restricted,"Adolph, Karen",5,FALSE,12,2019-05-07T16:43:29Z
-899,restricted,"Tamis-LeMonda, Catherine",11,FALSE,12,2019-05-07T16:43:29Z
+899,restricted,"Adolph, Karen",5,FALSE,22,2019-05-07T16:43:29Z
+899,restricted,"Tamis-LeMonda, Catherine",11,FALSE,22,2019-05-07T16:43:29Z
+899,restricted,"Gilmore, Rick O.",6,FALSE,22,2019-05-07T16:43:29Z
 900,restricted,"Arunachalam, Sudha",4685,FALSE,29,2019-05-07T20:50:17Z
 901,restricted,"Arunachalam, Sudha",4685,FALSE,25,2019-05-09T16:49:10Z
-903,full,"Seisler, Andrea R.",437,TRUE,0,2019-05-10T13:33:45Z
-903,full,"Shahriar, Sarah Shua",3317,TRUE,0,2019-05-10T13:33:45Z
-904,restricted,"Lillard, Angeline",318,FALSE,59,2019-05-14T11:46:28Z
+903,full,"Seisler, Andrea R.",437,FALSE,0,2019-05-10T13:33:45Z
+903,full,"Shahriar, Sarah Shua",3317,FALSE,0,2019-05-10T13:33:45Z
+904,restricted,"Lillard, Angeline",318,FALSE,72,2019-05-14T11:46:28Z
 905,restricted,"Lillard, Angeline",318,FALSE,10,2019-05-14T11:57:39Z
-907,full,"Frog, Kermit",5415,TRUE,2,2019-05-14T17:38:08Z
+907,full,"Frog, Kermit",5415,FALSE,2,2019-05-14T17:38:08Z
 908,restricted,"Frog, Kermit",5415,FALSE,1,2019-05-14T17:44:15Z
 909,restricted,"Casasola, Marianella",650,FALSE,1,2019-05-15T20:35:01Z
 910,restricted,"Raver, Cybele",368,FALSE,4,2019-05-22T19:59:48Z
@@ -429,43 +596,43 @@ vol_id,sharing_level,owner.ids.name,owner.ids.id,sessions_shared,n_sessions,crea
 925,restricted,"Fabricius, William",288,FALSE,1,2019-06-07T20:46:50Z
 926,restricted,"Fabricius, William",288,FALSE,12,2019-06-07T20:51:29Z
 927,restricted,"Goksun, Tilbe",1216,FALSE,1,2019-06-10T08:25:14Z
-928,restricted,"Needham, Amy",118,FALSE,7,2019-06-11T13:17:29Z
+928,restricted,"Needham, Amy",118,FALSE,21,2019-06-11T13:17:29Z
 929,restricted,"Gilmore, Rick O.",6,FALSE,32,2019-06-11T14:31:43Z
-930,full,"Casasola, Marianella",650,TRUE,4,2019-06-11T15:53:05Z
-930,full,"Oakes, Lisa",538,TRUE,4,2019-06-11T15:53:05Z
-930,full,"Beckner, Aaron",2288,TRUE,4,2019-06-11T15:53:05Z
+930,full,"Casasola, Marianella",650,FALSE,4,2019-06-11T15:53:05Z
+930,full,"Oakes, Lisa",538,FALSE,4,2019-06-11T15:53:05Z
+930,full,"Beckner, Aaron",2288,FALSE,4,2019-06-11T15:53:05Z
 931,restricted,"de Marchena, Ashley Brooke",2587,FALSE,7,2019-06-13T15:45:03Z
 932,restricted,"Adolph, Karen",5,FALSE,3,2019-06-13T19:06:46Z
 932,restricted,"Xu, Melody",2775,FALSE,3,2019-06-13T19:06:46Z
 933,restricted,"Palmquist, Carolyn",2945,FALSE,34,2019-06-14T20:33:36Z
 935,restricted,"Palmquist, Carolyn",2945,FALSE,1,2019-06-21T19:49:31Z
-937,full,"Casasola, Marianella",650,TRUE,3,2019-06-27T18:30:44Z
+937,full,"Casasola, Marianella",650,FALSE,3,2019-06-27T18:30:44Z
 938,restricted,"Ellwood-Lowe, Monica",3034,FALSE,36,2019-06-27T20:22:33Z
 938,restricted,"Srinivasan, Mahesh",1515,FALSE,36,2019-06-27T20:22:33Z
 938,restricted,"Bunge, Silvia",491,FALSE,36,2019-06-27T20:22:33Z
 940,restricted,"Goldstein, Thalia R.",531,FALSE,0,2019-07-09T17:49:28Z
 940,restricted,"Chulla, Kaylee Rose",4278,FALSE,0,2019-07-09T17:49:28Z
 941,restricted,"Adolph, Karen",5,FALSE,6,2019-07-11T21:02:49Z
-942,restricted,"Palmquist, Carolyn",2945,FALSE,8,2019-07-12T18:05:36Z
+942,restricted,"Palmquist, Carolyn",2945,FALSE,37,2019-07-12T18:05:36Z
 943,restricted,"Adolph, Karen",5,FALSE,1,2019-07-15T21:45:50Z
 944,restricted,"Shrout, Patrick E.",2936,FALSE,0,2019-07-23T17:35:56Z
 945,restricted,"Adolph, Karen",5,FALSE,0,2019-07-23T19:08:27Z
 945,restricted,"Tamis-LeMonda, Catherine",11,FALSE,0,2019-07-23T19:08:27Z
 947,restricted,"Perez-Edgar, Koraly",96,FALSE,3,2019-07-26T19:47:02Z
-948,restricted,"Palmquist, Carolyn",2945,FALSE,29,2019-07-26T19:58:25Z
+948,restricted,"Palmquist, Carolyn",2945,FALSE,46,2019-07-26T19:58:25Z
 949,restricted,"Tamis-LeMonda, Catherine",11,FALSE,9,2019-07-29T15:54:17Z
 949,restricted,"Hirsh-Pasek, Kathy",546,FALSE,9,2019-07-29T15:54:17Z
-950,restricted,"Weisberg, Deena Skolnick",562,FALSE,23,2019-07-29T17:53:12Z
-951,restricted,"Prado, Elizabeth",4458,FALSE,3,2019-07-30T20:08:40Z
-951,restricted,"Oakes, Lisa",538,FALSE,3,2019-07-30T20:08:40Z
+950,restricted,"Weisberg, Deena Skolnick",562,FALSE,83,2019-07-29T17:53:12Z
+951,restricted,"Prado, Elizabeth",4458,FALSE,16,2019-07-30T20:08:40Z
+951,restricted,"Oakes, Lisa",538,FALSE,16,2019-07-30T20:08:40Z
 952,restricted,"Baldwin, Dare",3746,FALSE,0,2019-07-30T21:53:17Z
 953,restricted,"Baldwin, Dare",3746,FALSE,1,2019-07-30T21:59:13Z
-954,full,"Barr, Rachel",104,TRUE,4,2019-08-01T20:40:40Z
-954,full,"Blanchfield, Olivia",4834,TRUE,4,2019-08-01T20:40:40Z
+954,full,"Barr, Rachel",104,FALSE,10,2019-08-01T20:40:40Z
+954,full,"Blanchfield, Olivia",4834,FALSE,10,2019-08-01T20:40:40Z
 955,restricted,"Adolph, Karen",5,FALSE,14,2019-08-05T13:08:28Z
 955,restricted,"Xu, Melody",2775,FALSE,14,2019-08-05T13:08:28Z
 956,restricted,"Adolph, Karen",5,FALSE,14,2019-08-09T17:53:58Z
-957,restricted,"Adolph, Karen",5,FALSE,9,2019-08-09T17:57:55Z
+957,restricted,"Adolph, Karen",5,FALSE,27,2019-08-09T17:57:55Z
 959,restricted,"Frank, Jennifer",1256,FALSE,1,2019-08-13T16:05:20Z
 960,restricted,"Kaur, Maninderjit",5709,FALSE,1,2019-08-13T18:17:03Z
 961,restricted,"Insel, Nathan",5292,FALSE,204,2019-08-14T16:40:12Z
@@ -481,17 +648,17 @@ vol_id,sharing_level,owner.ids.name,owner.ids.id,sessions_shared,n_sessions,crea
 965,restricted,"Rhodes, Marjorie",277,FALSE,1,2019-09-05T18:19:11Z
 965,restricted,"Mandalaywala, Tara",357,FALSE,1,2019-09-05T18:19:11Z
 965,restricted,"Benitez, Josie",5803,FALSE,1,2019-09-05T18:19:11Z
-968,restricted,"Hamlin, Kiley",2525,FALSE,9,2019-09-09T22:47:36Z
-969,restricted,"Hamlin, Kiley",2525,FALSE,1,2019-09-09T22:52:43Z
-972,restricted,"Hamlin, Kiley",2525,FALSE,1,2019-09-09T22:58:32Z
-973,restricted,"Hamlin, Kiley",2525,FALSE,0,2019-09-09T22:59:22Z
-974,restricted,"Hamlin, Kiley",2525,FALSE,8,2019-09-09T23:01:24Z
-975,restricted,"Hamlin, Kiley",2525,FALSE,2,2019-09-09T23:04:13Z
+968,restricted,"Hamlin, Kiley",2525,FALSE,12,2019-09-09T22:47:36Z
+969,restricted,"Hamlin, Kiley",2525,FALSE,4,2019-09-09T22:52:43Z
+972,restricted,"Hamlin, Kiley",2525,FALSE,2,2019-09-09T22:58:32Z
+973,restricted,"Hamlin, Kiley",2525,FALSE,1,2019-09-09T22:59:22Z
+974,restricted,"Hamlin, Kiley",2525,FALSE,10,2019-09-09T23:01:24Z
+975,restricted,"Hamlin, Kiley",2525,FALSE,4,2019-09-09T23:04:13Z
 976,restricted,"Hamlin, Kiley",2525,FALSE,16,2019-09-11T17:28:53Z
-977,restricted,"Hamlin, Kiley",2525,FALSE,5,2019-09-11T17:39:47Z
+977,restricted,"Hamlin, Kiley",2525,FALSE,8,2019-09-11T17:39:47Z
 978,restricted,"Hamlin, Kiley",2525,FALSE,1,2019-09-11T22:35:58Z
 979,restricted,"Lew-Williams, Casey",1371,FALSE,0,2019-09-12T23:33:58Z
-982,restricted,"Dusing, Stacey",255,FALSE,1,2019-09-16T18:07:16Z
+982,restricted,"Dusing, Stacey",255,FALSE,2,2019-09-16T18:07:16Z
 983,restricted,"Lillard, Angeline",318,FALSE,1,2019-09-16T22:15:36Z
 987,restricted,"Messinger, Daniel",70,FALSE,0,2019-09-20T16:52:17Z
 988,restricted,"Adolph, Karen",5,FALSE,109,2019-09-23T15:48:30Z
@@ -556,3 +723,5 @@ vol_id,sharing_level,owner.ids.name,owner.ids.id,sessions_shared,n_sessions,crea
 1041,restricted,"Adolph, Karen",5,FALSE,2,2020-01-13T15:25:54Z
 1041,restricted,"Xu, Melody",2775,FALSE,2,2020-01-13T15:25:54Z
 1043,restricted,"Paulus, Markus",959,FALSE,1,2020-01-16T21:18:03Z
+1045,restricted,"Frank, Jennifer",1256,FALSE,15,2020-01-21T16:20:12Z
+1045,restricted,"Deger, Gwendolyn",6162,FALSE,15,2020-01-21T16:20:12Z
