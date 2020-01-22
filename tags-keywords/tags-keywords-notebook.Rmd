@@ -1,0 +1,48 @@
+---
+title: "tags-keywords notebook"
+output: html_notebook
+params:
+  db_login: email@provider.com
+---
+
+```{r set-up}
+```
+
+# Purpose
+
+To explore whether the tags and keywords linked to a volume can be extracted from the HTML since doing so via the API is obscure.
+
+# Log-in
+
+```{r}
+databraryapi::login_db(params$db_login)
+```
+
+# Download HTML from sample volume
+
+The citations workflow downloads the HTML from Google and searches for keywords.
+We'll adapt that here.
+
+```{r}
+# Get citation counts from Google Scholar
+get_keyword <- function(vol_id = 1, keyword = "icis") {
+  assertthat::is.number(vol_id)
+  assertthat::is.string(keyword)
+  
+  url <- paste0("https://nyu.databrary.org/volume/", vol_id)
+  
+  r <- httr::GET(url = url)
+  if (httr::status_code(r) == 200) {
+    content <- httr::content(r, 'text')
+  } else {
+    message(paste0('Download Failed, HTTP status ',
+                   httr::status_code(r)))
+  }
+  
+  stringr::str_detect(content, keyword)
+}
+
+get_keyword()
+```
+
+It doesn't look like this is going to work.
