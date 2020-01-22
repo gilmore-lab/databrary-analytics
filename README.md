@@ -9,9 +9,9 @@ Code to produce and plot analytics about Databrary
 
 ## Weekly report
 
-- To run the report:  
-    - `source('render_weekly_report.R')`  
-    - `render_weekly_report(db_account = "<YOUREMAIL@YOURDOMAIN>")`  
+- To update the report:  
+    - `source('weekly/R/helpers.R')`  
+    - `update_weekly_report(db_account = "<YOUREMAIL@YOURDOMAIN>")`  
         - where `YOUREMAIL@YOURDOMAIN` is replaced by your Databrary account. 
 
 - View the [current report](https://gilmore-lab.github.io/databrary-analytics/weekly/databrary_weekly_report.html).  
