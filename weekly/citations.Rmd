@@ -6,6 +6,20 @@ date:  "`r Sys.time()`"
 
 <!-- # Citation counts -->
 
+```{r}
+if (params$from_gs) {
+  db <- googlesheets::gs_title('Databrary-analytics')  
+
+  old_citations <- db %>%
+    googlesheets::gs_read(ws = 'citations-monthly')
+} else {
+  old_citations <- readr::read_csv("csv/citations-monthly.csv")
+}
+
+old_citations <- old_citations %>%
+  dplyr::mutate(date = lubridate::as_date(date))
+```
+
 ```{r get-new-citations}
 # Get citation counts from Google Scholar
 get_citation_stats <- function(project = 'databrary') {
@@ -34,23 +48,40 @@ get_citation_stats <- function(project = 'databrary') {
 databrary_cites <- get_citation_stats('databrary')
 datavyu_cites <- get_citation_stats('datavyu')
 
-#old_citations <- citations <- read_csv("csv/citations-monthly.csv")
-next_value <- dim(old_citations)[1] + 1
-citations <- old_citations
-citations[next_value,] <- NA
-
-citations$date[next_value] <- Sys.Date()
-citations$databrary_citations[next_value] <- databrary_cites
-citations$datavyu_citations[next_value] <- datavyu_cites
 ```
 
-```{r db-dv-citations-plot}
+```{r}
+# Merge old with new
+citations <- old_citations
+if (as.logical(params$update_stats)) {
+  next_value <- dim(old_citations)[1] + 1
+  citations[next_value, ] <- NA
+  
+  citations$date[next_value] <- lubridate::as_date(Sys.Date())
+  citations$databrary_citations[next_value] <- databrary_cites
+  citations$datavyu_citations[next_value] <- datavyu_cites
+}
+
+# Calculate change
+n_rows <- dim(citations)[1]
+delta_db_cites <- citations$databrary_citations[n_rows] - citations$databrary_citations[n_rows - 1]
+delta_dv_cites <- citations$datavyu_citations[n_rows] - citations$datavyu_citations[n_rows - 1]
+
+# Filter NAs
 citations <- citations %>%
-  gather(., key = "type", value = "count", -date)
+  dplyr::filter(., !is.na(date),
+                !is.na(databrary_citations),
+                !is.na(datavyu_citations))
+```
+
+
+```{r db-dv-citations-plot}
+gathered_citations <- citations %>%
+  tidyr::gather(., key = "type", value = "count", -date)
 
 # Plot
 citations_plot <- 
-  citations %>%
+  gathered_citations %>%
   ggplot(., aes(x = date, y = count, color = type, group = type)) +
   geom_point() + 
   geom_line(size = ln_size) +
@@ -58,28 +89,45 @@ citations_plot <-
   ggtitle(paste("Citations as of ", Sys.Date())) +
   ylab("Citations") +
   databrary_theme +
-  scale_y_continuous(breaks = seq(0, round_any(max(citations$count), 100, ceiling), 100), expand = c(0,0)) +
-  coord_cartesian(ylim = c(0, round_any(max(citations$count), 100, ceiling)))
-  
-  
-ggdraw(citations_plot) + 
-  draw_label(paste0("Datavyu: ",max(old_citations$datavyu_citations), " + ", (datavyu_cites-max(old_citations$datavyu_citations))), colour = color_teal, .86, .3) +
-  draw_label(paste0("Databrary: ",max(old_citations$databrary_citations), " + ", (databrary_cites-max(old_citations$databrary_citations))), colour = color_orange, .7, .7)
+  scale_y_continuous(breaks = seq(0, round_any(max(gathered_citations$count), 
+                                               100, ceiling), 100), 
+                     expand = c(0,0)) +
+  coord_cartesian(ylim = c(0, round_any(max(gathered_citations$count), 100, ceiling)))
+
+ggdraw(citations_plot) +
+  draw_label(paste0(
+    "Datavyu: ",
+    citations$datavyu_citations[n_rows],
+    " (+", delta_dv_cites, ")"), 
+    colour = color_teal, .86, .3) +
+  draw_label(paste0(
+    "Databrary: ",
+    citations$databrary_citations[n_rows],
+    " (+", delta_db_cites, ")"), 
+    colour = color_orange, .7, .7)
 ```
 
 Google Scholar Citations for  [Databrary](https://scholar.google.com/scholar?hl=en&as_sdt=1%2C39&as_vis=1&q=%22databrary%22&btnG=) and [Datavyu](https://scholar.google.com/scholar?hl=en&as_sdt=1%2C39&as_vis=1&q=%22datavyu%22&btnG).
 
-
 ```{r update-citations-gs}
 if (as.logical(params$update_gs)) {
-  new_data <- data_frame(date = Sys.Date(), 
-                         databrary_citations = databrary_cites, 
-                         datavyu_citations = datavyu_cites)
+  new_data <- citations$date[next_value,]
   db <- db %>%
-    gs_add_row(ws = 'citations-monthly', input = new_data)
+    googlesheets::gs_add_row(ws = 'citations-monthly', 
+                             input = new_data)
   message("'update_gs' parameter is 'TRUE', so Google Sheet data will be updated.")
 } else {
   message("'update_gs' parameter is 'FALSE', so Google Sheet data unmodified.")
 }
+```
 
+```{r update-citations-csv}
+if (as.logical(params$update_csv)) {
+  if (!(is_empty(citations))) {
+    readr::write_csv(citations, "csv/citations-monthly.csv")
+    message("Updated 'csv/citations-monthly.csv'.")    
+  } else {
+    message("No new citations data to write.")
+  }
+}
 ```

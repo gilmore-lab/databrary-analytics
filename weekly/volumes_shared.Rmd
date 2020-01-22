@@ -1,15 +1,36 @@
 ---
-title: "volumes-shared"
+title: "Shared volumes"
 author: "Andrea Seisler"
 date:  "`r Sys.time()`"
 ---
 
 
+```{r get-new-db-stats}
+new_stats <- databraryapi::get_db_stats()
+new_stats$date <- lubridate::as_datetime(new_stats$date)
+```
 
-<!-- Now update from information derived from `databraryapi::db_stats()` if `params$update_stats` is TRUE. -->
+```{r, load-volumes-data}
+if (params$from_gs) {
+  db <- googlesheets::gs_title('Databrary-analytics')
+  old_vols <- db %>%
+    googlesheets::gs_read(ws = 'volumes-shared-unshared')
+} else {
+  old_vols <- readr::read_csv("csv/volumes-shared-unshared.csv")
+}
+
+if (purrr::is_empty(old_vols)) {
+  stop("No old data loaded.")
+}
+```
 
 ```{r update-volumes-data}
-updated_vols <- old_vols
+# Filter NAs
+updated_vols <- old_vols %>%
+  dplyr::filter(., !is.na(shared_volumes),
+                !is.na(unshared_volumes),
+                !is.na(date))  
+
 if (as.logical(params$update_stats)) {
   next_entry <- dim(updated_vols)[1] + 1
   updated_vols[next_entry,] = NA
@@ -22,41 +43,72 @@ if (as.logical(params$update_stats)) {
   updated_vols$unshared_volumes[next_entry] <- 
     new_stats$datasets_total - new_stats$datasets_shared
 }
-updated_vols <- updated_vols %>%
-  gather(., key = "type", value = "count", -date)
 
+
+# Calculate change
+n_rows <- dim(updated_vols)[1]
+
+delta_shared <- updated_vols$shared_volumes[n_rows] - updated_vols$shared_volumes[n_rows - 1]
+
+delta_unshared <- updated_vols$unshared_volumes[n_rows] - updated_vols$unshared_volumes[n_rows - 1]
+
+updated_vols <- updated_vols %>%
+  dplyr::filter(., !is.na(shared_volumes),
+                !is.na(unshared_volumes),
+                !is.na(date))
+
+gathered_vols <- updated_vols %>%
+  tidyr::gather(., key = "type", value = "count", -date)
 ```
 
 ```{r db-vols-plot}
 # Plot
-vols_plot <- updated_vols %>%
-  ggplot(., aes(x = date, y = count, color = type, group = type)) +
-  geom_point() + 
-  geom_line(size=ln_size) +
-  scale_colour_manual(values=c(color_orange, color_teal)) + 
+vols_plot <- gathered_vols %>%
+  ggplot(., aes(
+    x = date,
+    y = count,
+    color = type,
+    group = type
+  )) +
+  geom_point() +
+  geom_line(size = ln_size) +
+  scale_colour_manual(values = c(color_orange, color_teal)) +
   ggtitle(paste("Volumes as of ", Sys.Date())) +
   ylab("Volumes") +
   databrary_theme +
-  scale_y_continuous(breaks = seq(0, round_any(max(updated_vols$count), 100, ceiling), 100), expand = c(0,0)) +
-  coord_cartesian(ylim = c(0, round_any(max(updated_vols$count), 100, ceiling)))
+  scale_y_continuous(breaks = seq(0, round_any(max(gathered_vols$count), 
+                                               100, ceiling), 100), 
+                     expand = c(0, 0)) +
+  coord_cartesian(ylim = c(0, round_any(max(gathered_vols$count), 
+                                        100, ceiling)))
 
-
-
-ggdraw(vols_plot) + 
-  draw_label(paste0("Unshared: ",max(old_vols$unshared_volumes), " + ",(new_stats$datasets_total - new_stats$datasets_shared-max(old_vols$unshared_volumes))), colour = color_teal, .75, .85) +
-  draw_label(paste0("Shared: ",max(old_vols$shared_volumes), " + ",(new_stats$datasets_shared-max(old_vols$shared_volumes))), colour = color_orange, .6, .63)
+ggdraw(vols_plot) +
+  draw_label(paste0(
+    "Unshared: ", updated_vols$shared_volumes[n_rows],
+    " (+", delta_unshared, ")"), colour = color_teal, .75, .85) +
+  draw_label(paste0(
+    "Shared: ", updated_vols$shared_volumes[n_rows],
+    " (+", delta_shared, ")"), colour = color_orange, .6, .63)
 ```
-<!-- Next, we update the Google Sheet if `params$update_gs` is TRUE. -->
 
-```{r update-vols-shared-unshared}
+
+```{r update-vols-shared-unshared-gs}
 if (as.logical(params$update_gs)) {
-  new_data <- data_frame(date = Sys.Date(), 
-                         shared_volumes = new_stats$datasets_shared, 
-                         unshared_volumes = new_stats$datasets_total - new_stats$datasets_shared)
   db <- db %>%
-    gs_add_row(ws = 'volumes-shared-unshared', input = new_data)  
+    gs_add_row(ws = 'volumes-shared-unshared', input = updated_vols)
 } else {
   message("'update_gs' parameter is 'false', so Google Sheet data unmodified.")
+}
+```
+
+```{r update-vols-shared-unshared-csv}
+if (as.logical(params$update_csv)) {
+  if (!is_empty(updated_vols)) {
+    readr::write_csv(updated_vols, "csv/volumes-shared-unshared.csv")
+    message("Updated 'csv/volumes-shared-unshared.csv'.")    
+  } else {
+    message("No new volumes data to write.")
+  }
 }
 ```
 
@@ -68,29 +120,33 @@ new_volumes <- databraryapi::get_db_stats(type = "datasets")
 if (is.null(new_volumes)) {
   stop('New volumes data not downloaded.')
 }
-
-unnested_vols <- new_volumes %>%
-  unnest(.)
-  # rename(., owner_name = name1, owner_id = id1) %>%
-
-unnested_vols$owner_name <- unnested_vols$name1
-unnested_vols$owner_id = unnested_vols$name1 
-
-# Change format of owner_name
-char_split <- strsplit(unnested_vols$name1, ", ")
-# mat  <- matrix(unlist(char_split, ncol=2, byrow=TRUE)) #Getting error in this line but it worked previously
-# char_split   <- as.data.frame(mat)
-# colnames(char_split) <- c("last_name", "first_name")
-# char_split %>% unite(col = "full_name", first_name, last_name, sep=" ")
-# char_split -> unnested_vols$owner_name
-
-
-unnested_vols <- unnested_vols %>%
-  mutate(., url = paste0("https://nyu.databrary.org/volume/", id),
-         date_created = lubridate::as_date(creation))
-  
-unnested_vols %>%
-  select(., name, date_created, owner_name, url) %>%
-  knitr::kable(col.names = c("Volume Name", "Date Created", "Owner Name", "Databrary URL"))%>%
-  kable_styling()
 ```
+
+
+```{r}
+unnested_vols <- new_volumes %>%
+  dplyr::rename(vol_id = id, vol_name = name) %>%
+  tidyr::unnest(., cols = c(owners))
+```
+
+```{r}
+unnested_vols <- unnested_vols %>%
+  dplyr::mutate(
+    .,
+    url = paste0("https://nyu.databrary.org/volume/", vol_id),
+    date_created = lubridate::as_date(creation)
+  )
+```
+
+```{r}
+unnested_vols %>%
+  dplyr::select(., vol_name, date_created, name, url) %>%
+  knitr::kable(col.names = c("Volume Name", "Date Created", "Owner Name", "Databrary URL")) %>%
+  kableExtra::kable_styling()
+```
+
+<!-- ## Shared volumes -->
+
+<!-- ### Full volume -->
+
+<!-- ### Overview only -->

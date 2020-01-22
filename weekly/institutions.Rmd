@@ -1,20 +1,18 @@
 ---
-title: "Institutions"
+title: "New institutions"
 author: "Andrea Seisler"
 date:  "`r Sys.time()`"
 ---
-
-<!-- ## New institutions -->
 
 ```{r db-inst-table}
 new_institutions <- databraryapi::get_db_stats(type = "institutions")
 if (!is.null(new_institutions)) {
   new_institutions %>%
-    mutate(db_url = paste0("https://databrary.org/party/", id)) %>%
-    select(., sortname, url, db_url) %>%
-    knitr::kable(col.names = c("Institution Name", 
+    dplyr::mutate(db_url = paste0("https://databrary.org/party/", id)) %>%
+    dplyr::select(., sortname, url, db_url) %>%
+    knitr::kable(col.names = c("Institution Name",
                                "Institution URL", "Databrary URL")) %>%
-    kable_styling() #%>%
+    kableExtra::kable_styling() #%>%
   
 } else {
   cat("No new institutions since last report.")

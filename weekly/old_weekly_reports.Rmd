@@ -5,25 +5,27 @@ date:  "`r Sys.time()`"
 ---
 <!-- # Get List of Reports -->
 
-```{r get-list-old-reports}
-#print(getwd())
-filedir <- file.path("~/R/databrary-analytics/old_weekly_reports")
-#print(dir.exists(filedir))
-old_report_files <- list.files(filedir, pattern = "*.html")
-#print(old_report_files)
+```{r get-list-old-reports, include=FALSE}
+old_report_files <- list.files("archive", pattern = "*.html")
 ```
 
 ```{r create-links}
 # Create list of links
-old_report_files <-  paste0("https://gilmore-lab.github.io/databrary-analytics/old_weekly_reports/", old_report_files)
-
-#Pull out list of report dates
-
-
-
-#Create Table
-
-old_report_files %>% 
-  knitr::kable(old_report_files, format = "html", col.names = ("Report URL")) %>% 
-  kable_styling()
+if (!purrr::is_empty(old_report_files)) {
+  df <-
+    data.frame(
+      url = paste0(
+        "https://gilmore-lab.github.io/databrary-analytics/archive/",
+        old_report_files
+      )
+    )
+  
+  # Create Table
+  df %>%
+    dplyr::arrange(., desc(url)) %>%
+    knitr::kable(., format = "html", col.names = ("Report URL")) %>%
+    kableExtra::kable_styling()
+} else {
+  message("No archival reports to display.")
+}
 ```

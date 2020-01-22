@@ -11,43 +11,19 @@ output:
     toc_depth: 3
     toc_float: yes
 params:
-  db_account: rogilmore@psu.edu
-  update_gs: FALSE
-  update_stats: FALSE
+  db_account: email@provider.com
+  update_gs: False
+  update_stats: False
+  from_gs: False
+  update_csv: False
   vols_to_test: 10
 ---
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE, message = FALSE, warning = FALSE)
 
-# Install packages if needed
-cran_packages <- c('ggplot2', 'tidyverse', 'reshape2', 'cowplot',
-                    'googledrive', 'plyr', 'googlesheets', 'ezknitr')
-not_installed <- cran_packages[!(cran_packages %in% installed.packages()[,"Package"])]
-if(length(not_installed)) {
-  message('Installing packages required for this document.')
-  install.packages(not_installed)
-}
-
-github_packages <- 'PLAY-behaviorome/databraryapi'
-not_installed <- github_packages[!(github_packages %in% installed.packages()[,"Package"])]
-if(length(not_installed)) devtools::install_github(not_installed)
-
-# Load
-
-#library(ezknitr)
-#library(rmarkdown)
-library(databraryapi)
-library(tidyverse)
-library(reshape2)
-library(cowplot)
-#library(googledrive)
-  #drive_auth(use_oob = TRUE)
-library(plyr)
-library(dplyr)
-library(googlesheets) 
-  options(httr_oob_default=TRUE) 
-library(kableExtra)
+source("R/helpers.R")
+install_required_pkgs()
 
 # Log in to Databrary
 if (!databraryapi::login_db(params$db_account)) {
@@ -70,33 +46,6 @@ databrary_theme <-
   theme(plot.title = element_text(hjust = 0.5))
 ```
 
-<!-- # Get Data -->
-
-```{r get-databrary-stats}
-new_stats <- databraryapi::get_db_stats()
-new_stats$date <- lubridate::as_datetime(new_stats$date)
-```
-
-```{r data-from-googlesheets}
-#key <- "1tvlIQzULrMtXo97aJu71ljdTmNXkwwpU9eOOasVer3g"
-db <- gs_title('Databrary-analytics')
-```
-
-```{r load-inst-invest-from-googlesheets}
-old_stats <- db %>%
-  gs_read(ws = 'institutions-investigators')
-```
-
-```{r load-volumes-from-googlesheets}
-old_vols <- db %>%
-  gs_read(ws = 'volumes-shared-unshared')
-```
-
-```{r load-citations-from-googlesheets}
-old_citations <- db %>%
-  gs_read(ws = 'citations-monthly')
-```
-
 # Institutions & Authorized Users 
 
 ```{r child = 'users.Rmd'}
@@ -117,24 +66,12 @@ old_citations <- db %>%
 ```{r child = 'volumes_shared.Rmd'}
 ```
 
-<!-- ## Sharing type and session data -->
-
-<!-- ```{r child = 'shared-volumes-sessions.Rmd'} -->
-<!-- ``` -->
-
 # Citations
 
 ```{r child = 'citations.Rmd'}
 ```
 
-<!-- # Affiliates -->
-
-<!-- ```{r child = 'affiliates.Rmd'} -->
-<!-- ``` -->
-
-
-
-# Old Weekly Reports
+# Archived reports
 
 ```{r child = 'old_weekly_reports.Rmd'}
 ```
