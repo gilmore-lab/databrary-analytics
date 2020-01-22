@@ -28,7 +28,7 @@ update_weekly_report <- function(db_account="yourname@email.com") {
                                   update_gs = FALSE,
                                   update_stats = TRUE,
                                   update_csv = TRUE))
-  copy_move_rpt()  
+  copy_to_archive()  
 }
 
 render_weekly_report <- function(db_account="yourname@email.com") {
