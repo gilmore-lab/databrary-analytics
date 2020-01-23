@@ -114,3 +114,12 @@ vols_sess_data %>%
   dplyr::arrange(shared_type, desc(n_vols)) %>%
   knitr::kable(.)
 ```
+
+
+```{r}
+databraryapi::logout_db()
+if (file.exists(".databrary.RData")) {
+  unlink(".databrary.RData")
+}
+```
+

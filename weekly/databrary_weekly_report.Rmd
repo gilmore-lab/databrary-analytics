@@ -78,3 +78,11 @@ databrary_theme <-
 
 ```{r child = 'old_weekly_reports.Rmd'}
 ```
+
+```{r clean-up, include=FALSE}
+databraryapi::logout_db()
+if (file.exists(".databrary.RData")) {
+  unlink(".databrary.RData")
+}
+```
+
