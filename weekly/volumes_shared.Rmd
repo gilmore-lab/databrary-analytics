@@ -76,19 +76,41 @@ vols_plot <- gathered_vols %>%
   ggtitle(paste("Volumes as of ", Sys.Date())) +
   ylab("Volumes") +
   databrary_theme +
-  scale_y_continuous(breaks = seq(0, round_any(max(gathered_vols$count), 
-                                               100, ceiling), 100), 
-                     expand = c(0, 0)) +
-  coord_cartesian(ylim = c(0, round_any(max(gathered_vols$count), 
-                                        100, ceiling)))
+  scale_y_continuous(breaks = seq(0, plyr::round_any(max(
+    gathered_vols$count
+  ),
+  100, ceiling), 100),
+  expand = c(0, 0)) +
+  coord_cartesian(ylim = c(0, plyr::round_any(max(
+    gathered_vols$count
+  ),
+  100, ceiling)))
 
-ggdraw(vols_plot) +
-  draw_label(paste0(
-    "Unshared: ", updated_vols$shared_volumes[n_rows],
-    " (+", delta_unshared, ")"), colour = color_teal, .75, .85) +
-  draw_label(paste0(
-    "Shared: ", updated_vols$shared_volumes[n_rows],
-    " (+", delta_shared, ")"), colour = color_orange, .6, .63)
+cowplot::ggdraw(vols_plot) +
+  cowplot::draw_label(
+    paste0(
+      "Unshared: ",
+      updated_vols$shared_volumes[n_rows],
+      " (+",
+      delta_unshared,
+      ")"
+    ),
+    colour = color_teal,
+    .75,
+    .85
+  ) +
+  cowplot::draw_label(
+    paste0(
+      "Shared: ",
+      updated_vols$shared_volumes[n_rows],
+      " (+",
+      delta_shared,
+      ")"
+    ),
+    colour = color_orange,
+    .6,
+    .63
+  )
 ```
 
 

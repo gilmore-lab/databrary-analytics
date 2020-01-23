@@ -23,12 +23,15 @@ params:
 knitr::opts_chunk$set(echo = FALSE, message = FALSE, warning = FALSE)
 
 source("R/helpers.R")
-install_required_pkgs()
+#install_required_pkgs()
 
 # Log in to Databrary
 if (!databraryapi::login_db(params$db_account)) {
   message("Log-in failed.")
 }
+
+# Add pipe operator to workspace via tidyverse
+library(tidyverse)
 
 # Graphic theme elements
 ln_size <- 3
@@ -38,12 +41,12 @@ color_teal <- "#4CAE99"
 color_purple <-"#AB00FF"
 
 databrary_theme <- 
-  theme_classic(base_size = base_size) +
-  theme(axis.title.x=element_blank()) +
-  theme(legend.position="none", 
-        axis.text = element_text(size = rel(0.8), colour = "black")) +
-  theme(axis.line = element_blank()) +
-  theme(plot.title = element_text(hjust = 0.5))
+  ggplot2::theme_classic(base_size = base_size) +
+  ggplot2::theme(axis.title.x = ggplot2::element_blank()) +
+  ggplot2::theme(legend.position="none", 
+        axis.text = ggplot2::element_text(size = ggplot2::rel(0.8), colour = "black")) +
+  ggplot2::theme(axis.line = ggplot2::element_blank()) +
+  ggplot2::theme(plot.title = ggplot2::element_text(hjust = 0.5))
 ```
 
 # Institutions & Authorized Users 

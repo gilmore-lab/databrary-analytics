@@ -5,14 +5,14 @@ install_required_pkgs <- function() {
                      'googledrive', 'plyr', 'googlesheets', 'ezknitr',
                      'reshape2', 'kableExtra', 'googledrive', 'openssl', 'purrr')
   not_installed <- cran_packages[!(cran_packages %in% installed.packages()[,"Package"])]
-  if(length(not_installed)) {
+  if (length(not_installed)) {
     message('Installing packages required for this document.')
     install.packages(not_installed)
   }
-  
+
   github_packages <- 'PLAY-behaviorome/databraryapi'
   not_installed <- github_packages[!(github_packages %in% installed.packages()[,"Package"])]
-  if(length(not_installed)) devtools::install_github(not_installed)
+  if (length(not_installed)) devtools::install_github(not_installed)
 }
 
 update_weekly_report <- function(db_account="yourname@email.com") {
@@ -28,7 +28,8 @@ update_weekly_report <- function(db_account="yourname@email.com") {
                                   update_gs = FALSE,
                                   update_stats = TRUE,
                                   update_csv = TRUE))
-  copy_to_archive()  
+  copy_to_archive() 
+  databraryapi::logout_db()
 }
 
 render_weekly_report <- function(db_account="yourname@email.com") {
@@ -44,6 +45,7 @@ render_weekly_report <- function(db_account="yourname@email.com") {
                                   update_gs = FALSE,
                                   update_stats = FALSE,
                                   update_csv = FALSE))
+  databraryapi::logout_db()
 }
 
 copy_to_archive <- function() {
