@@ -84,7 +84,7 @@ vols_plot <- gathered_vols %>%
 
 ggdraw(vols_plot) +
   draw_label(paste0(
-    "Unshared: ", updated_vols$shared_volumes[n_rows],
+    "Unshared: ", updated_vols$unshared_volumes[n_rows],
     " (+", delta_unshared, ")"), colour = color_teal, .75, .85) +
   draw_label(paste0(
     "Shared: ", updated_vols$shared_volumes[n_rows],
