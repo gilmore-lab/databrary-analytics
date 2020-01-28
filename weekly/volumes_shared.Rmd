@@ -163,8 +163,8 @@ unnested_vols <- unnested_vols %>%
 ```{r}
 unnested_vols %>%
   dplyr::select(., vol_name, date_created, name, url) %>%
-  knitr::kable(col.names = c("Volume Name", "Date Created", "Owner Name", "Databrary URL")) %>%
-  kableExtra::kable_styling()
+  knitr::kable(col.names = c("Volume Name", "Date Created", "Owner Name", "Databrary URL"), "html") %>%
+  kableExtra::kable_styling(.)
 ```
 
 <!-- ## Shared volumes -->

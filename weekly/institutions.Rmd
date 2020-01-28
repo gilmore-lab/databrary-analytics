@@ -11,8 +11,8 @@ if (!is.null(new_institutions)) {
     dplyr::mutate(db_url = paste0("https://databrary.org/party/", id)) %>%
     dplyr::select(., sortname, url, db_url) %>%
     knitr::kable(col.names = c("Institution Name",
-                               "Institution URL", "Databrary URL")) %>%
-    kableExtra::kable_styling() #%>%
+                               "Institution URL", "Databrary URL"), "html") %>%
+    kableExtra::kable_styling(.) #%>%
   
 } else {
   cat("No new institutions since last report.")
