@@ -1,0 +1,1564 @@
+vol_id,url,tags,weight
+1,https://nyu.databrary.org/volume/1,icis,1
+1,https://nyu.databrary.org/volume/1,icis nola,1
+1,https://nyu.databrary.org/volume/1,workshops,1
+1,https://nyu.databrary.org/volume/1,meetings,1
+1,https://nyu.databrary.org/volume/1,talk,1
+1,https://nyu.databrary.org/volume/1,presentations,1
+2,https://nyu.databrary.org/volume/2,motion,1
+2,https://nyu.databrary.org/volume/2,adult,1
+3,https://nyu.databrary.org/volume/3,NA,NA
+4,https://nyu.databrary.org/volume/4,locomotion,1
+4,https://nyu.databrary.org/volume/4,infants,1
+4,https://nyu.databrary.org/volume/4,materials,1
+4,https://nyu.databrary.org/volume/4,coding,1
+4,https://nyu.databrary.org/volume/4,manuals,1
+4,https://nyu.databrary.org/volume/4,protocols,1
+5,https://nyu.databrary.org/volume/5,locomotion,1
+5,https://nyu.databrary.org/volume/5,infants,1
+5,https://nyu.databrary.org/volume/5,manuals,1
+5,https://nyu.databrary.org/volume/5,coding,1
+5,https://nyu.databrary.org/volume/5,bridges,1
+6,https://nyu.databrary.org/volume/6,NA,NA
+7,https://nyu.databrary.org/volume/7,locomotion,1
+7,https://nyu.databrary.org/volume/7,perception,1
+7,https://nyu.databrary.org/volume/7,judgments,1
+7,https://nyu.databrary.org/volume/7,adult,1
+7,https://nyu.databrary.org/volume/7,affordances,1
+7,https://nyu.databrary.org/volume/7,apertures,1
+7,https://nyu.databrary.org/volume/7,manuals,1
+7,https://nyu.databrary.org/volume/7,coding,1
+7,https://nyu.databrary.org/volume/7,falling,1
+8,https://nyu.databrary.org/volume/8,cognitive,2
+8,https://nyu.databrary.org/volume/8,infants,2
+8,https://nyu.databrary.org/volume/8,free play,1
+8,https://nyu.databrary.org/volume/8,school readiness,1
+8,https://nyu.databrary.org/volume/8,grocery shopping,1
+8,https://nyu.databrary.org/volume/8,emotional,1
+8,https://nyu.databrary.org/volume/8,longitudinal,1
+8,https://nyu.databrary.org/volume/8,language,1
+8,https://nyu.databrary.org/volume/8,parent-child interaction,1
+8,https://nyu.databrary.org/volume/8,gender,1
+8,https://nyu.databrary.org/volume/8,culture,1
+8,https://nyu.databrary.org/volume/8,social,1
+8,https://nyu.databrary.org/volume/8,play,1
+8,https://nyu.databrary.org/volume/8,children,1
+8,https://nyu.databrary.org/volume/8,cross-cultural research,1
+8,https://nyu.databrary.org/volume/8,book reading,1
+9,https://nyu.databrary.org/volume/9,children,2
+9,https://nyu.databrary.org/volume/9,free play,1
+9,https://nyu.databrary.org/volume/9,social,1
+9,https://nyu.databrary.org/volume/9,motion,1
+10,https://nyu.databrary.org/volume/10,numerical cognition,2
+10,https://nyu.databrary.org/volume/10,adult-child interaction,1
+10,https://nyu.databrary.org/volume/10,infants,1
+10,https://nyu.databrary.org/volume/10,cross-cultural research,1
+10,https://nyu.databrary.org/volume/10,amazon,1
+11,https://nyu.databrary.org/volume/11,NA,NA
+12,https://nyu.databrary.org/volume/12,NA,NA
+13,https://nyu.databrary.org/volume/13,NA,NA
+14,https://nyu.databrary.org/volume/14,NA,NA
+15,https://nyu.databrary.org/volume/15,still-face,2
+15,https://nyu.databrary.org/volume/15,attachment,1
+15,https://nyu.databrary.org/volume/15,coding,1
+15,https://nyu.databrary.org/volume/15,manuals,1
+15,https://nyu.databrary.org/volume/15,expressions,1
+15,https://nyu.databrary.org/volume/15,infants,1
+16,https://nyu.databrary.org/volume/16,adult,1
+16,https://nyu.databrary.org/volume/16,walking,1
+16,https://nyu.databrary.org/volume/16,uner tan syndrome,1
+16,https://nyu.databrary.org/volume/16,quadrupedalism,1
+17,https://nyu.databrary.org/volume/17,NA,NA
+18,https://nyu.databrary.org/volume/18,NA,NA
+19,https://nyu.databrary.org/volume/19,NA,NA
+20,https://nyu.databrary.org/volume/20,NA,NA
+21,https://nyu.databrary.org/volume/21,NA,NA
+22,https://nyu.databrary.org/volume/22,NA,NA
+23,https://nyu.databrary.org/volume/23,locomotion,1
+23,https://nyu.databrary.org/volume/23,adult,1
+23,https://nyu.databrary.org/volume/23,infants,1
+23,https://nyu.databrary.org/volume/23,optic flow,1
+24,https://nyu.databrary.org/volume/24,locomotion,1
+24,https://nyu.databrary.org/volume/24,visual cliff,1
+24,https://nyu.databrary.org/volume/24,infants,1
+24,https://nyu.databrary.org/volume/24,posture,1
+25,https://nyu.databrary.org/volume/25,NA,NA
+26,https://nyu.databrary.org/volume/26,NA,NA
+27,https://nyu.databrary.org/volume/27,eye-tracking technology,3
+27,https://nyu.databrary.org/volume/27,visual scene displays,2
+27,https://nyu.databrary.org/volume/27,visual processing,2
+27,https://nyu.databrary.org/volume/27,stimuli,1
+27,https://nyu.databrary.org/volume/27,materials,1
+27,https://nyu.databrary.org/volume/27,visual attention,1
+28,https://nyu.databrary.org/volume/28,locomotion,1
+28,https://nyu.databrary.org/volume/28,slopes,1
+28,https://nyu.databrary.org/volume/28,infants,1
+29,https://nyu.databrary.org/volume/29,eye-tracking,2
+29,https://nyu.databrary.org/volume/29,visual development,1
+29,https://nyu.databrary.org/volume/29,infants,1
+29,https://nyu.databrary.org/volume/29,perception,1
+30,https://nyu.databrary.org/volume/30,faces,7
+30,https://nyu.databrary.org/volume/30,facial expressions,6
+30,https://nyu.databrary.org/volume/30,emotions,6
+30,https://nyu.databrary.org/volume/30,expressions,5
+30,https://nyu.databrary.org/volume/30,condition,2
+30,https://nyu.databrary.org/volume/30,cafe,2
+30,https://nyu.databrary.org/volume/30,white,2
+30,https://nyu.databrary.org/volume/30,stimuli,2
+30,https://nyu.databrary.org/volume/30,children,1
+31,https://nyu.databrary.org/volume/31,locomotion,1
+31,https://nyu.databrary.org/volume/31,optic flow,1
+31,https://nyu.databrary.org/volume/31,infants,1
+32,https://nyu.databrary.org/volume/32,motion coherence,1
+32,https://nyu.databrary.org/volume/32,visual evoked potentials,1
+32,https://nyu.databrary.org/volume/32,infants,1
+32,https://nyu.databrary.org/volume/32,stimuli,1
+32,https://nyu.databrary.org/volume/32,infant vision,1
+32,https://nyu.databrary.org/volume/32,visual development,1
+33,https://nyu.databrary.org/volume/33,visual cognition,2
+33,https://nyu.databrary.org/volume/33,number,2
+33,https://nyu.databrary.org/volume/33,children,1
+33,https://nyu.databrary.org/volume/33,mental arithmetic,1
+33,https://nyu.databrary.org/volume/33,working memory,1
+33,https://nyu.databrary.org/volume/33,abacus,1
+34,https://nyu.databrary.org/volume/34,social development,2
+34,https://nyu.databrary.org/volume/34,face perception,1
+34,https://nyu.databrary.org/volume/34,eye-tracking,1
+34,https://nyu.databrary.org/volume/34,infants,1
+34,https://nyu.databrary.org/volume/34,materials,1
+35,https://nyu.databrary.org/volume/35,cross-cultural research,2
+35,https://nyu.databrary.org/volume/35,language and thought,1
+35,https://nyu.databrary.org/volume/35,numerical cognition,1
+35,https://nyu.databrary.org/volume/35,indigenous peoples,1
+35,https://nyu.databrary.org/volume/35,number,1
+35,https://nyu.databrary.org/volume/35,language development,1
+36,https://nyu.databrary.org/volume/36,cognitive,2
+36,https://nyu.databrary.org/volume/36,faces,1
+36,https://nyu.databrary.org/volume/36,social attention,1
+36,https://nyu.databrary.org/volume/36,stimuli,1
+36,https://nyu.databrary.org/volume/36,children,1
+36,https://nyu.databrary.org/volume/36,infants,1
+36,https://nyu.databrary.org/volume/36,visual attention,1
+37,https://nyu.databrary.org/volume/37,visual search,2
+37,https://nyu.databrary.org/volume/37,visual attention,2
+37,https://nyu.databrary.org/volume/37,social attention,2
+37,https://nyu.databrary.org/volume/37,face perception,2
+37,https://nyu.databrary.org/volume/37,infants,1
+37,https://nyu.databrary.org/volume/37,stimuli,1
+37,https://nyu.databrary.org/volume/37,eye-tracking,1
+38,https://nyu.databrary.org/volume/38,prosody,2
+38,https://nyu.databrary.org/volume/38,child language,2
+38,https://nyu.databrary.org/volume/38,turn-taking,2
+38,https://nyu.databrary.org/volume/38,timing,2
+38,https://nyu.databrary.org/volume/38,online comprehension,2
+38,https://nyu.databrary.org/volume/38,prediction,2
+38,https://nyu.databrary.org/volume/38,eye-tracking,2
+38,https://nyu.databrary.org/volume/38,language,1
+38,https://nyu.databrary.org/volume/38,children,1
+39,https://nyu.databrary.org/volume/39,NA,NA
+40,https://nyu.databrary.org/volume/40,media,1
+40,https://nyu.databrary.org/volume/40,learning,1
+40,https://nyu.databrary.org/volume/40,materials,1
+40,https://nyu.databrary.org/volume/40,children,1
+41,https://nyu.databrary.org/volume/41,NA,NA
+42,https://nyu.databrary.org/volume/42,infants,1
+42,https://nyu.databrary.org/volume/42,parent-child interaction,1
+42,https://nyu.databrary.org/volume/42,object perception,1
+42,https://nyu.databrary.org/volume/42,materials,1
+43,https://nyu.databrary.org/volume/43,statistical learning,1
+43,https://nyu.databrary.org/volume/43,materials,1
+43,https://nyu.databrary.org/volume/43,language development,1
+43,https://nyu.databrary.org/volume/43,word segmentation,1
+43,https://nyu.databrary.org/volume/43,language acquisition,1
+43,https://nyu.databrary.org/volume/43,infants,1
+43,https://nyu.databrary.org/volume/43,procedures,1
+44,https://nyu.databrary.org/volume/44,verbs,1
+44,https://nyu.databrary.org/volume/44,language acquisition,1
+44,https://nyu.databrary.org/volume/44,stimuli,1
+44,https://nyu.databrary.org/volume/44,children,1
+44,https://nyu.databrary.org/volume/44,syntax,1
+44,https://nyu.databrary.org/volume/44,language development,1
+45,https://nyu.databrary.org/volume/45,conceptual development,3
+45,https://nyu.databrary.org/volume/45,cognitive development,3
+45,https://nyu.databrary.org/volume/45,social categorization,3
+45,https://nyu.databrary.org/volume/45,generic language,2
+45,https://nyu.databrary.org/volume/45,social cognition,2
+45,https://nyu.databrary.org/volume/45,language,1
+45,https://nyu.databrary.org/volume/45,materials,1
+45,https://nyu.databrary.org/volume/45,culture,1
+45,https://nyu.databrary.org/volume/45,parent-child interaction,1
+45,https://nyu.databrary.org/volume/45,essentialism,1
+46,https://nyu.databrary.org/volume/46,reaching,2
+46,https://nyu.databrary.org/volume/46,fitts law,2
+46,https://nyu.databrary.org/volume/46,infants,2
+46,https://nyu.databrary.org/volume/46,action,2
+46,https://nyu.databrary.org/volume/46,perception,2
+46,https://nyu.databrary.org/volume/46,looking,2
+46,https://nyu.databrary.org/volume/46,gestalt,1
+47,https://nyu.databrary.org/volume/47,motion,1
+47,https://nyu.databrary.org/volume/47,grasping,1
+47,https://nyu.databrary.org/volume/47,infants,1
+48,https://nyu.databrary.org/volume/48,NA,NA
+49,https://nyu.databrary.org/volume/49,motion contrast,1
+49,https://nyu.databrary.org/volume/49,ssvep,1
+49,https://nyu.databrary.org/volume/49,materials,1
+49,https://nyu.databrary.org/volume/49,electrophysiology,1
+49,https://nyu.databrary.org/volume/49,optic flow,1
+49,https://nyu.databrary.org/volume/49,motion,1
+50,https://nyu.databrary.org/volume/50,motion,1
+50,https://nyu.databrary.org/volume/50,stimuli,1
+50,https://nyu.databrary.org/volume/50,perception,1
+51,https://nyu.databrary.org/volume/51,prediction,1
+51,https://nyu.databrary.org/volume/51,infants,1
+51,https://nyu.databrary.org/volume/51,object permanence,1
+51,https://nyu.databrary.org/volume/51,kinetic occlusion,1
+51,https://nyu.databrary.org/volume/51,virtual occlusion,1
+52,https://nyu.databrary.org/volume/52,NA,NA
+53,https://nyu.databrary.org/volume/53,pointing,2
+53,https://nyu.databrary.org/volume/53,joint attention,2
+53,https://nyu.databrary.org/volume/53,spatial cueing,1
+53,https://nyu.databrary.org/volume/53,gesturing,1
+53,https://nyu.databrary.org/volume/53,infants,1
+53,https://nyu.databrary.org/volume/53,materials,1
+53,https://nyu.databrary.org/volume/53,referential understanding,1
+54,https://nyu.databrary.org/volume/54,NA,NA
+55,https://nyu.databrary.org/volume/55,NA,NA
+56,https://nyu.databrary.org/volume/56,NA,NA
+57,https://nyu.databrary.org/volume/57,NA,NA
+58,https://nyu.databrary.org/volume/58,NA,NA
+59,https://nyu.databrary.org/volume/59,NA,NA
+60,https://nyu.databrary.org/volume/60,NA,NA
+61,https://nyu.databrary.org/volume/61,inhibitory control,2
+61,https://nyu.databrary.org/volume/61,scale errors,2
+61,https://nyu.databrary.org/volume/61,perception-action,2
+61,https://nyu.databrary.org/volume/61,teaching clips,1
+61,https://nyu.databrary.org/volume/61,children,1
+62,https://nyu.databrary.org/volume/62,visual attention,2
+62,https://nyu.databrary.org/volume/62,faces,1
+62,https://nyu.databrary.org/volume/62,eye-tracking,1
+62,https://nyu.databrary.org/volume/62,materials,1
+63,https://nyu.databrary.org/volume/63,NA,NA
+64,https://nyu.databrary.org/volume/64,sticky mittens,2
+64,https://nyu.databrary.org/volume/64,perception-action,2
+64,https://nyu.databrary.org/volume/64,infant perception,2
+64,https://nyu.databrary.org/volume/64,motor development,2
+64,https://nyu.databrary.org/volume/64,infants,1
+64,https://nyu.databrary.org/volume/64,reaching,1
+64,https://nyu.databrary.org/volume/64,parent-child interaction,1
+64,https://nyu.databrary.org/volume/64,teaching clips,1
+65,https://nyu.databrary.org/volume/65,cognitive development,2
+65,https://nyu.databrary.org/volume/65,numerical cognition,2
+65,https://nyu.databrary.org/volume/65,number discrimination,1
+65,https://nyu.databrary.org/volume/65,infants,1
+65,https://nyu.databrary.org/volume/65,infant development,1
+65,https://nyu.databrary.org/volume/65,mathematical ability,1
+65,https://nyu.databrary.org/volume/65,individual differences,1
+66,https://nyu.databrary.org/volume/66,NA,NA
+67,https://nyu.databrary.org/volume/67,NA,NA
+68,https://nyu.databrary.org/volume/68,motion,1
+68,https://nyu.databrary.org/volume/68,optic flow,1
+68,https://nyu.databrary.org/volume/68,infants,1
+69,https://nyu.databrary.org/volume/69,NA,NA
+70,https://nyu.databrary.org/volume/70,teaching,2
+70,https://nyu.databrary.org/volume/70,motor development,1
+70,https://nyu.databrary.org/volume/70,historical,1
+70,https://nyu.databrary.org/volume/70,children,1
+70,https://nyu.databrary.org/volume/70,stages,1
+70,https://nyu.databrary.org/volume/70,infants,1
+71,https://nyu.databrary.org/volume/71,NA,NA
+72,https://nyu.databrary.org/volume/72,NA,NA
+73,https://nyu.databrary.org/volume/73,motion coherence,1
+73,https://nyu.databrary.org/volume/73,coding,1
+73,https://nyu.databrary.org/volume/73,optic flow,1
+73,https://nyu.databrary.org/volume/73,motion,1
+73,https://nyu.databrary.org/volume/73,psychophysics,1
+73,https://nyu.databrary.org/volume/73,adult,1
+74,https://nyu.databrary.org/volume/74,NA,NA
+75,https://nyu.databrary.org/volume/75,motion,1
+75,https://nyu.databrary.org/volume/75,visual perception,1
+75,https://nyu.databrary.org/volume/75,optic flow,1
+75,https://nyu.databrary.org/volume/75,children,1
+76,https://nyu.databrary.org/volume/76,NA,NA
+77,https://nyu.databrary.org/volume/77,adult,1
+77,https://nyu.databrary.org/volume/77,replication,1
+77,https://nyu.databrary.org/volume/77,stimuli,1
+77,https://nyu.databrary.org/volume/77,pattern perception,1
+78,https://nyu.databrary.org/volume/78,NA,NA
+79,https://nyu.databrary.org/volume/79,attention,1
+79,https://nyu.databrary.org/volume/79,cognitive,1
+79,https://nyu.databrary.org/volume/79,memory,1
+79,https://nyu.databrary.org/volume/79,materials,1
+80,https://nyu.databrary.org/volume/80,NA,NA
+81,https://nyu.databrary.org/volume/81,culture,3
+81,https://nyu.databrary.org/volume/81,infants,2
+81,https://nyu.databrary.org/volume/81,visual development,2
+81,https://nyu.databrary.org/volume/81,cross-cultural research,1
+81,https://nyu.databrary.org/volume/81,icis,1
+81,https://nyu.databrary.org/volume/81,optic flow,1
+81,https://nyu.databrary.org/volume/81,icis nola,1
+81,https://nyu.databrary.org/volume/81,motion,1
+82,https://nyu.databrary.org/volume/82,NA,NA
+83,https://nyu.databrary.org/volume/83,NA,NA
+84,https://nyu.databrary.org/volume/84,NA,NA
+85,https://nyu.databrary.org/volume/85,NA,NA
+86,https://nyu.databrary.org/volume/86,motor development,1
+86,https://nyu.databrary.org/volume/86,infants,1
+86,https://nyu.databrary.org/volume/86,procedures,1
+86,https://nyu.databrary.org/volume/86,materials,1
+87,https://nyu.databrary.org/volume/87,NA,NA
+88,https://nyu.databrary.org/volume/88,NA,NA
+89,https://nyu.databrary.org/volume/89,NA,NA
+90,https://nyu.databrary.org/volume/90,morphological development,1
+90,https://nyu.databrary.org/volume/90,english,1
+90,https://nyu.databrary.org/volume/90,longitudinal home recordings,1
+90,https://nyu.databrary.org/volume/90,language development,1
+90,https://nyu.databrary.org/volume/90,transcripts,1
+90,https://nyu.databrary.org/volume/90,prosodic licensing,1
+90,https://nyu.databrary.org/volume/90,epenthesis,1
+90,https://nyu.databrary.org/volume/90,longitudinal,1
+90,https://nyu.databrary.org/volume/90,phonological development,1
+90,https://nyu.databrary.org/volume/90,home recordings,1
+90,https://nyu.databrary.org/volume/90,parent-child interaction,1
+90,https://nyu.databrary.org/volume/90,codas,1
+90,https://nyu.databrary.org/volume/90,talkbank,1
+90,https://nyu.databrary.org/volume/90,minimal words,1
+91,https://nyu.databrary.org/volume/91,NA,NA
+92,https://nyu.databrary.org/volume/92,NA,NA
+93,https://nyu.databrary.org/volume/93,NA,NA
+94,https://nyu.databrary.org/volume/94,NA,NA
+95,https://nyu.databrary.org/volume/95,nonhuman primates,2
+95,https://nyu.databrary.org/volume/95,distance effect,1
+95,https://nyu.databrary.org/volume/95,mathematical ability,1
+95,https://nyu.databrary.org/volume/95,analog magnitude,1
+95,https://nyu.databrary.org/volume/95,numerical cognition,1
+95,https://nyu.databrary.org/volume/95,visual,1
+96,https://nyu.databrary.org/volume/96,number comprehension,1
+96,https://nyu.databrary.org/volume/96,stimuli,1
+96,https://nyu.databrary.org/volume/96,mathematical ability,1
+97,https://nyu.databrary.org/volume/97,NA,NA
+98,https://nyu.databrary.org/volume/98,infants,2
+98,https://nyu.databrary.org/volume/98,perception,2
+98,https://nyu.databrary.org/volume/98,false belief,2
+98,https://nyu.databrary.org/volume/98,procedures,1
+98,https://nyu.databrary.org/volume/98,manuals,1
+98,https://nyu.databrary.org/volume/98,coding,1
+98,https://nyu.databrary.org/volume/98,cognitive,1
+98,https://nyu.databrary.org/volume/98,replication,1
+98,https://nyu.databrary.org/volume/98,validity,1
+98,https://nyu.databrary.org/volume/98,children,1
+98,https://nyu.databrary.org/volume/98,theory of mind,1
+99,https://nyu.databrary.org/volume/99,faces,1
+99,https://nyu.databrary.org/volume/99,coding,1
+99,https://nyu.databrary.org/volume/99,infants,1
+100,https://nyu.databrary.org/volume/100,NA,NA
+101,https://nyu.databrary.org/volume/101,NA,NA
+102,https://nyu.databrary.org/volume/102,NA,NA
+103,https://nyu.databrary.org/volume/103,NA,NA
+104,https://nyu.databrary.org/volume/104,behavior genetics,1
+104,https://nyu.databrary.org/volume/104,twins,1
+105,https://nyu.databrary.org/volume/105,NA,NA
+106,https://nyu.databrary.org/volume/106,NA,NA
+107,https://nyu.databrary.org/volume/107,NA,NA
+108,https://nyu.databrary.org/volume/108,attachment,2
+108,https://nyu.databrary.org/volume/108,infants,2
+108,https://nyu.databrary.org/volume/108,parent-child interaction,1
+108,https://nyu.databrary.org/volume/108,social referencing,1
+108,https://nyu.databrary.org/volume/108,play,1
+108,https://nyu.databrary.org/volume/108,teaching,1
+109,https://nyu.databrary.org/volume/109,discourse,1
+109,https://nyu.databrary.org/volume/109,stem,1
+109,https://nyu.databrary.org/volume/109,classroom,1
+109,https://nyu.databrary.org/volume/109,children,1
+110,https://nyu.databrary.org/volume/110,NA,NA
+111,https://nyu.databrary.org/volume/111,NA,NA
+112,https://nyu.databrary.org/volume/112,faces,1
+112,https://nyu.databrary.org/volume/112,head camera,1
+112,https://nyu.databrary.org/volume/112,infancy,1
+112,https://nyu.databrary.org/volume/112,egocentric vision,1
+112,https://nyu.databrary.org/volume/112,materials,1
+112,https://nyu.databrary.org/volume/112,visual perception,1
+112,https://nyu.databrary.org/volume/112,scene statistics,1
+112,https://nyu.databrary.org/volume/112,hands,1
+113,https://nyu.databrary.org/volume/113,NA,NA
+114,https://nyu.databrary.org/volume/114,NA,NA
+115,https://nyu.databrary.org/volume/115,NA,NA
+116,https://nyu.databrary.org/volume/116,NA,NA
+117,https://nyu.databrary.org/volume/117,NA,NA
+118,https://nyu.databrary.org/volume/118,NA,NA
+119,https://nyu.databrary.org/volume/119,lab-tab,1
+119,https://nyu.databrary.org/volume/119,infants,1
+119,https://nyu.databrary.org/volume/119,eye-tracking,1
+120,https://nyu.databrary.org/volume/120,NA,NA
+121,https://nyu.databrary.org/volume/121,NA,NA
+122,https://nyu.databrary.org/volume/122,NA,NA
+123,https://nyu.databrary.org/volume/123,motion,1
+123,https://nyu.databrary.org/volume/123,visual exploration,1
+123,https://nyu.databrary.org/volume/123,adult,1
+123,https://nyu.databrary.org/volume/123,infants,1
+124,https://nyu.databrary.org/volume/124,head camera,1
+124,https://nyu.databrary.org/volume/124,headcams,1
+124,https://nyu.databrary.org/volume/124,eye-tracking,1
+124,https://nyu.databrary.org/volume/124,eye-tracking technology,1
+124,https://nyu.databrary.org/volume/124,eye tracking,1
+124,https://nyu.databrary.org/volume/124,head-mounted eye tracking,1
+125,https://nyu.databrary.org/volume/125,NA,NA
+126,https://nyu.databrary.org/volume/126,NA,NA
+127,https://nyu.databrary.org/volume/127,NA,NA
+128,https://nyu.databrary.org/volume/128,NA,NA
+129,https://nyu.databrary.org/volume/129,NA,NA
+130,https://nyu.databrary.org/volume/130,NA,NA
+131,https://nyu.databrary.org/volume/131,NA,NA
+132,https://nyu.databrary.org/volume/132,NA,NA
+133,https://nyu.databrary.org/volume/133,NA,NA
+134,https://nyu.databrary.org/volume/134,NA,NA
+135,https://nyu.databrary.org/volume/135,eye-tracking,1
+135,https://nyu.databrary.org/volume/135,social interaction,1
+135,https://nyu.databrary.org/volume/135,eye tracking,1
+135,https://nyu.databrary.org/volume/135,head-mounted eye tracking,1
+136,https://nyu.databrary.org/volume/136,motor development,1
+136,https://nyu.databrary.org/volume/136,walking,1
+136,https://nyu.databrary.org/volume/136,perception-action,1
+136,https://nyu.databrary.org/volume/136,gait modification,1
+136,https://nyu.databrary.org/volume/136,apertures,1
+136,https://nyu.databrary.org/volume/136,decision making,1
+136,https://nyu.databrary.org/volume/136,infants,1
+137,https://nyu.databrary.org/volume/137,NA,NA
+138,https://nyu.databrary.org/volume/138,NA,NA
+139,https://nyu.databrary.org/volume/139,NA,NA
+140,https://nyu.databrary.org/volume/140,NA,NA
+141,https://nyu.databrary.org/volume/141,NA,NA
+142,https://nyu.databrary.org/volume/142,NA,NA
+143,https://nyu.databrary.org/volume/143,NA,NA
+144,https://nyu.databrary.org/volume/144,children,1
+144,https://nyu.databrary.org/volume/144,eeg,1
+144,https://nyu.databrary.org/volume/144,ssvep,1
+145,https://nyu.databrary.org/volume/145,NA,NA
+146,https://nyu.databrary.org/volume/146,NA,NA
+147,https://nyu.databrary.org/volume/147,NA,NA
+148,https://nyu.databrary.org/volume/148,NA,NA
+149,https://nyu.databrary.org/volume/149,NA,NA
+150,https://nyu.databrary.org/volume/150,NA,NA
+151,https://nyu.databrary.org/volume/151,NA,NA
+152,https://nyu.databrary.org/volume/152,NA,NA
+153,https://nyu.databrary.org/volume/153,NA,NA
+154,https://nyu.databrary.org/volume/154,NA,NA
+155,https://nyu.databrary.org/volume/155,NA,NA
+156,https://nyu.databrary.org/volume/156,NA,NA
+157,https://nyu.databrary.org/volume/157,NA,NA
+158,https://nyu.databrary.org/volume/158,NA,NA
+159,https://nyu.databrary.org/volume/159,NA,NA
+160,https://nyu.databrary.org/volume/160,NA,NA
+161,https://nyu.databrary.org/volume/161,NA,NA
+162,https://nyu.databrary.org/volume/162,perception-action,1
+162,https://nyu.databrary.org/volume/162,reaching,1
+162,https://nyu.databrary.org/volume/162,eye-tracking,1
+163,https://nyu.databrary.org/volume/163,NA,NA
+164,https://nyu.databrary.org/volume/164,NA,NA
+165,https://nyu.databrary.org/volume/165,children,1
+165,https://nyu.databrary.org/volume/165,stimuli,1
+165,https://nyu.databrary.org/volume/165,number,1
+165,https://nyu.databrary.org/volume/165,data,1
+165,https://nyu.databrary.org/volume/165,dictator game,1
+165,https://nyu.databrary.org/volume/165,prosocial development,1
+165,https://nyu.databrary.org/volume/165,altruism,1
+165,https://nyu.databrary.org/volume/165,cooperation,1
+165,https://nyu.databrary.org/volume/165,numerical cognition,1
+165,https://nyu.databrary.org/volume/165,cognitive development,1
+165,https://nyu.databrary.org/volume/165,proportional reasoning,1
+166,https://nyu.databrary.org/volume/166,NA,NA
+167,https://nyu.databrary.org/volume/167,NA,NA
+168,https://nyu.databrary.org/volume/168,NA,NA
+169,https://nyu.databrary.org/volume/169,NA,NA
+170,https://nyu.databrary.org/volume/170,NA,NA
+171,https://nyu.databrary.org/volume/171,NA,NA
+172,https://nyu.databrary.org/volume/172,NA,NA
+173,https://nyu.databrary.org/volume/173,NA,NA
+174,https://nyu.databrary.org/volume/174,NA,NA
+175,https://nyu.databrary.org/volume/175,NA,NA
+176,https://nyu.databrary.org/volume/176,NA,NA
+177,https://nyu.databrary.org/volume/177,NA,NA
+178,https://nyu.databrary.org/volume/178,NA,NA
+179,https://nyu.databrary.org/volume/179,NA,NA
+180,https://nyu.databrary.org/volume/180,NA,NA
+181,https://nyu.databrary.org/volume/181,NA,NA
+182,https://nyu.databrary.org/volume/182,NA,NA
+183,https://nyu.databrary.org/volume/183,NA,NA
+184,https://nyu.databrary.org/volume/184,NA,NA
+185,https://nyu.databrary.org/volume/185,NA,NA
+186,https://nyu.databrary.org/volume/186,NA,NA
+187,https://nyu.databrary.org/volume/187,NA,NA
+188,https://nyu.databrary.org/volume/188,NA,NA
+189,https://nyu.databrary.org/volume/189,NA,NA
+190,https://nyu.databrary.org/volume/190,NA,NA
+191,https://nyu.databrary.org/volume/191,NA,NA
+192,https://nyu.databrary.org/volume/192,infants,1
+192,https://nyu.databrary.org/volume/192,eye-tracking,1
+192,https://nyu.databrary.org/volume/192,free-viewing,1
+192,https://nyu.databrary.org/volume/192,saliency,1
+192,https://nyu.databrary.org/volume/192,gaze,1
+193,https://nyu.databrary.org/volume/193,locomotion,1
+193,https://nyu.databrary.org/volume/193,teaching,1
+193,https://nyu.databrary.org/volume/193,infants,1
+193,https://nyu.databrary.org/volume/193,social referencing,1
+194,https://nyu.databrary.org/volume/194,NA,NA
+195,https://nyu.databrary.org/volume/195,NA,NA
+196,https://nyu.databrary.org/volume/196,NA,NA
+197,https://nyu.databrary.org/volume/197,NA,NA
+198,https://nyu.databrary.org/volume/198,NA,NA
+199,https://nyu.databrary.org/volume/199,NA,NA
+200,https://nyu.databrary.org/volume/200,NA,NA
+201,https://nyu.databrary.org/volume/201,NA,NA
+202,https://nyu.databrary.org/volume/202,NA,NA
+203,https://nyu.databrary.org/volume/203,NA,NA
+204,https://nyu.databrary.org/volume/204,NA,NA
+205,https://nyu.databrary.org/volume/205,NA,NA
+206,https://nyu.databrary.org/volume/206,NA,NA
+207,https://nyu.databrary.org/volume/207,NA,NA
+208,https://nyu.databrary.org/volume/208,NA,NA
+209,https://nyu.databrary.org/volume/209,word learning,1
+209,https://nyu.databrary.org/volume/209,stimuli,1
+209,https://nyu.databrary.org/volume/209,perception,1
+209,https://nyu.databrary.org/volume/209,novelty ratings,1
+209,https://nyu.databrary.org/volume/209,novel objects,1
+209,https://nyu.databrary.org/volume/209,language development,1
+209,https://nyu.databrary.org/volume/209,unnameable stimuli,1
+209,https://nyu.databrary.org/volume/209,visual memory,1
+209,https://nyu.databrary.org/volume/209,picture database,1
+209,https://nyu.databrary.org/volume/209,categorization,1
+209,https://nyu.databrary.org/volume/209,language,1
+210,https://nyu.databrary.org/volume/210,NA,NA
+211,https://nyu.databrary.org/volume/211,NA,NA
+212,https://nyu.databrary.org/volume/212,NA,NA
+213,https://nyu.databrary.org/volume/213,NA,NA
+214,https://nyu.databrary.org/volume/214,stimuli,1
+214,https://nyu.databrary.org/volume/214,materials,1
+214,https://nyu.databrary.org/volume/214,infants,1
+215,https://nyu.databrary.org/volume/215,NA,NA
+216,https://nyu.databrary.org/volume/216,NA,NA
+217,https://nyu.databrary.org/volume/217,NA,NA
+218,https://nyu.databrary.org/volume/218,psychophysics,1
+218,https://nyu.databrary.org/volume/218,child,1
+218,https://nyu.databrary.org/volume/218,visual processing,1
+219,https://nyu.databrary.org/volume/219,NA,NA
+220,https://nyu.databrary.org/volume/220,down syndrome,1
+220,https://nyu.databrary.org/volume/220,eye-tracking,1
+221,https://nyu.databrary.org/volume/221,NA,NA
+222,https://nyu.databrary.org/volume/222,NA,NA
+223,https://nyu.databrary.org/volume/223,NA,NA
+224,https://nyu.databrary.org/volume/224,NA,NA
+225,https://nyu.databrary.org/volume/225,NA,NA
+226,https://nyu.databrary.org/volume/226,NA,NA
+227,https://nyu.databrary.org/volume/227,NA,NA
+228,https://nyu.databrary.org/volume/228,NA,NA
+229,https://nyu.databrary.org/volume/229,NA,NA
+230,https://nyu.databrary.org/volume/230,NA,NA
+231,https://nyu.databrary.org/volume/231,NA,NA
+232,https://nyu.databrary.org/volume/232,NA,NA
+233,https://nyu.databrary.org/volume/233,NA,NA
+234,https://nyu.databrary.org/volume/234,data,1
+234,https://nyu.databrary.org/volume/234,preschool,1
+234,https://nyu.databrary.org/volume/234,neuroimaging,1
+235,https://nyu.databrary.org/volume/235,infants,1
+235,https://nyu.databrary.org/volume/235,play,1
+236,https://nyu.databrary.org/volume/236,attention,1
+236,https://nyu.databrary.org/volume/236,infants,1
+236,https://nyu.databrary.org/volume/236,play,1
+236,https://nyu.databrary.org/volume/236,social referencing,1
+237,https://nyu.databrary.org/volume/237,NA,NA
+238,https://nyu.databrary.org/volume/238,NA,NA
+239,https://nyu.databrary.org/volume/239,icis,1
+239,https://nyu.databrary.org/volume/239,icis nola,1
+239,https://nyu.databrary.org/volume/239,talk,1
+239,https://nyu.databrary.org/volume/239,lecture,1
+239,https://nyu.databrary.org/volume/239,presentations,1
+240,https://nyu.databrary.org/volume/240,NA,NA
+241,https://nyu.databrary.org/volume/241,script,1
+241,https://nyu.databrary.org/volume/241,false belief,1
+241,https://nyu.databrary.org/volume/241,children,1
+241,https://nyu.databrary.org/volume/241,theory of mind,1
+241,https://nyu.databrary.org/volume/241,perceptual access reasoning,1
+242,https://nyu.databrary.org/volume/242,NA,NA
+243,https://nyu.databrary.org/volume/243,NA,NA
+244,https://nyu.databrary.org/volume/244,NA,NA
+245,https://nyu.databrary.org/volume/245,NA,NA
+246,https://nyu.databrary.org/volume/246,NA,NA
+247,https://nyu.databrary.org/volume/247,NA,NA
+248,https://nyu.databrary.org/volume/248,emotions,1
+248,https://nyu.databrary.org/volume/248,prosody,1
+249,https://nyu.databrary.org/volume/249,NA,NA
+250,https://nyu.databrary.org/volume/250,NA,NA
+251,https://nyu.databrary.org/volume/251,NA,NA
+252,https://nyu.databrary.org/volume/252,infants,1
+252,https://nyu.databrary.org/volume/252,eye-tracking,1
+252,https://nyu.databrary.org/volume/252,perception,1
+252,https://nyu.databrary.org/volume/252,optic flow,1
+252,https://nyu.databrary.org/volume/252,motion,1
+252,https://nyu.databrary.org/volume/252,adult,1
+253,https://nyu.databrary.org/volume/253,NA,NA
+254,https://nyu.databrary.org/volume/254,play,1
+255,https://nyu.databrary.org/volume/255,NA,NA
+256,https://nyu.databrary.org/volume/256,NA,NA
+257,https://nyu.databrary.org/volume/257,NA,NA
+258,https://nyu.databrary.org/volume/258,NA,NA
+259,https://nyu.databrary.org/volume/259,NA,NA
+260,https://nyu.databrary.org/volume/260,NA,NA
+261,https://nyu.databrary.org/volume/261,NA,NA
+262,https://nyu.databrary.org/volume/262,NA,NA
+263,https://nyu.databrary.org/volume/263,NA,NA
+264,https://nyu.databrary.org/volume/264,NA,NA
+265,https://nyu.databrary.org/volume/265,NA,NA
+266,https://nyu.databrary.org/volume/266,NA,NA
+267,https://nyu.databrary.org/volume/267,NA,NA
+268,https://nyu.databrary.org/volume/268,NA,NA
+269,https://nyu.databrary.org/volume/269,NA,NA
+270,https://nyu.databrary.org/volume/270,infants,1
+270,https://nyu.databrary.org/volume/270,infant development,1
+270,https://nyu.databrary.org/volume/270,infant perception,1
+270,https://nyu.databrary.org/volume/270,perception,1
+270,https://nyu.databrary.org/volume/270,motion,1
+270,https://nyu.databrary.org/volume/270,data,1
+271,https://nyu.databrary.org/volume/271,NA,NA
+272,https://nyu.databrary.org/volume/272,faces,1
+272,https://nyu.databrary.org/volume/272,stimuli,1
+272,https://nyu.databrary.org/volume/272,adolescence,1
+272,https://nyu.databrary.org/volume/272,perception,1
+272,https://nyu.databrary.org/volume/272,psychophysics,1
+272,https://nyu.databrary.org/volume/272,expressions,1
+272,https://nyu.databrary.org/volume/272,puberty,1
+273,https://nyu.databrary.org/volume/273,learning,1
+273,https://nyu.databrary.org/volume/273,workshop talk active learning,1
+273,https://nyu.databrary.org/volume/273,talk,1
+273,https://nyu.databrary.org/volume/273,presentations,1
+273,https://nyu.databrary.org/volume/273,lecture,1
+273,https://nyu.databrary.org/volume/273,css,1
+273,https://nyu.databrary.org/volume/273,workshop,1
+274,https://nyu.databrary.org/volume/274,NA,NA
+275,https://nyu.databrary.org/volume/275,NA,NA
+276,https://nyu.databrary.org/volume/276,NA,NA
+277,https://nyu.databrary.org/volume/277,NA,NA
+278,https://nyu.databrary.org/volume/278,NA,NA
+279,https://nyu.databrary.org/volume/279,NA,NA
+280,https://nyu.databrary.org/volume/280,NA,NA
+281,https://nyu.databrary.org/volume/281,NA,NA
+282,https://nyu.databrary.org/volume/282,NA,NA
+283,https://nyu.databrary.org/volume/283,NA,NA
+284,https://nyu.databrary.org/volume/284,NA,NA
+285,https://nyu.databrary.org/volume/285,NA,NA
+286,https://nyu.databrary.org/volume/286,NA,NA
+287,https://nyu.databrary.org/volume/287,NA,NA
+288,https://nyu.databrary.org/volume/288,NA,NA
+289,https://nyu.databrary.org/volume/289,NA,NA
+290,https://nyu.databrary.org/volume/290,feeding,1
+290,https://nyu.databrary.org/volume/290,tool use,1
+290,https://nyu.databrary.org/volume/290,joint action,1
+291,https://nyu.databrary.org/volume/291,NA,NA
+292,https://nyu.databrary.org/volume/292,NA,NA
+293,https://nyu.databrary.org/volume/293,NA,NA
+294,https://nyu.databrary.org/volume/294,NA,NA
+295,https://nyu.databrary.org/volume/295,NA,NA
+296,https://nyu.databrary.org/volume/296,NA,NA
+297,https://nyu.databrary.org/volume/297,preschool,1
+297,https://nyu.databrary.org/volume/297,children,1
+297,https://nyu.databrary.org/volume/297,play,1
+297,https://nyu.databrary.org/volume/297,clay,1
+297,https://nyu.databrary.org/volume/297,culture,1
+297,https://nyu.databrary.org/volume/297,free play,1
+297,https://nyu.databrary.org/volume/297,affordances,1
+298,https://nyu.databrary.org/volume/298,NA,NA
+299,https://nyu.databrary.org/volume/299,NA,NA
+300,https://nyu.databrary.org/volume/300,NA,NA
+301,https://nyu.databrary.org/volume/301,NA,NA
+302,https://nyu.databrary.org/volume/302,faces,1
+302,https://nyu.databrary.org/volume/302,face processing,1
+302,https://nyu.databrary.org/volume/302,fmri,1
+302,https://nyu.databrary.org/volume/302,ffa,1
+302,https://nyu.databrary.org/volume/302,visual perception,1
+303,https://nyu.databrary.org/volume/303,computational models,1
+303,https://nyu.databrary.org/volume/303,workshop,1
+303,https://nyu.databrary.org/volume/303,cds,1
+303,https://nyu.databrary.org/volume/303,talk,1
+303,https://nyu.databrary.org/volume/303,presentations,1
+303,https://nyu.databrary.org/volume/303,lecture,1
+304,https://nyu.databrary.org/volume/304,NA,NA
+305,https://nyu.databrary.org/volume/305,NA,NA
+306,https://nyu.databrary.org/volume/306,NA,NA
+307,https://nyu.databrary.org/volume/307,NA,NA
+308,https://nyu.databrary.org/volume/308,NA,NA
+309,https://nyu.databrary.org/volume/309,NA,NA
+310,https://nyu.databrary.org/volume/310,NA,NA
+311,https://nyu.databrary.org/volume/311,NA,NA
+312,https://nyu.databrary.org/volume/312,NA,NA
+313,https://nyu.databrary.org/volume/313,NA,NA
+314,https://nyu.databrary.org/volume/314,NA,NA
+315,https://nyu.databrary.org/volume/315,NA,NA
+316,https://nyu.databrary.org/volume/316,NA,NA
+317,https://nyu.databrary.org/volume/317,NA,NA
+318,https://nyu.databrary.org/volume/318,NA,NA
+319,https://nyu.databrary.org/volume/319,NA,NA
+320,https://nyu.databrary.org/volume/320,NA,NA
+321,https://nyu.databrary.org/volume/321,NA,NA
+322,https://nyu.databrary.org/volume/322,NA,NA
+323,https://nyu.databrary.org/volume/323,NA,NA
+324,https://nyu.databrary.org/volume/324,texture,1
+324,https://nyu.databrary.org/volume/324,display,1
+325,https://nyu.databrary.org/volume/325,NA,NA
+326,https://nyu.databrary.org/volume/326,attention,1
+326,https://nyu.databrary.org/volume/326,intersensory,1
+327,https://nyu.databrary.org/volume/327,NA,NA
+328,https://nyu.databrary.org/volume/328,NA,NA
+329,https://nyu.databrary.org/volume/329,NA,NA
+330,https://nyu.databrary.org/volume/330,lexicon,1
+330,https://nyu.databrary.org/volume/330,cognitive development,1
+330,https://nyu.databrary.org/volume/330,word learning,1
+330,https://nyu.databrary.org/volume/330,language acquisition,1
+330,https://nyu.databrary.org/volume/330,environmental effects,1
+331,https://nyu.databrary.org/volume/331,NA,NA
+332,https://nyu.databrary.org/volume/332,NA,NA
+333,https://nyu.databrary.org/volume/333,NA,NA
+334,https://nyu.databrary.org/volume/334,NA,NA
+335,https://nyu.databrary.org/volume/335,NA,NA
+336,https://nyu.databrary.org/volume/336,intersensory,1
+336,https://nyu.databrary.org/volume/336,attention,1
+336,https://nyu.databrary.org/volume/336,eye-tracking,1
+337,https://nyu.databrary.org/volume/337,NA,NA
+338,https://nyu.databrary.org/volume/338,NA,NA
+339,https://nyu.databrary.org/volume/339,emotion,1
+339,https://nyu.databrary.org/volume/339,prosody,1
+339,https://nyu.databrary.org/volume/339,speech,1
+340,https://nyu.databrary.org/volume/340,NA,NA
+341,https://nyu.databrary.org/volume/341,NA,NA
+342,https://nyu.databrary.org/volume/342,NA,NA
+343,https://nyu.databrary.org/volume/343,NA,NA
+344,https://nyu.databrary.org/volume/344,NA,NA
+345,https://nyu.databrary.org/volume/345,NA,NA
+346,https://nyu.databrary.org/volume/346,NA,NA
+347,https://nyu.databrary.org/volume/347,NA,NA
+348,https://nyu.databrary.org/volume/348,NA,NA
+349,https://nyu.databrary.org/volume/349,NA,NA
+350,https://nyu.databrary.org/volume/350,NA,NA
+351,https://nyu.databrary.org/volume/351,NA,NA
+352,https://nyu.databrary.org/volume/352,NA,NA
+353,https://nyu.databrary.org/volume/353,NA,NA
+354,https://nyu.databrary.org/volume/354,NA,NA
+355,https://nyu.databrary.org/volume/355,NA,NA
+356,https://nyu.databrary.org/volume/356,NA,NA
+357,https://nyu.databrary.org/volume/357,NA,NA
+358,https://nyu.databrary.org/volume/358,NA,NA
+359,https://nyu.databrary.org/volume/359,NA,NA
+360,https://nyu.databrary.org/volume/360,NA,NA
+361,https://nyu.databrary.org/volume/361,NA,NA
+362,https://nyu.databrary.org/volume/362,NA,NA
+363,https://nyu.databrary.org/volume/363,NA,NA
+364,https://nyu.databrary.org/volume/364,NA,NA
+365,https://nyu.databrary.org/volume/365,NA,NA
+366,https://nyu.databrary.org/volume/366,NA,NA
+367,https://nyu.databrary.org/volume/367,NA,NA
+368,https://nyu.databrary.org/volume/368,NA,NA
+369,https://nyu.databrary.org/volume/369,NA,NA
+370,https://nyu.databrary.org/volume/370,NA,NA
+371,https://nyu.databrary.org/volume/371,NA,NA
+372,https://nyu.databrary.org/volume/372,NA,NA
+373,https://nyu.databrary.org/volume/373,NA,NA
+374,https://nyu.databrary.org/volume/374,NA,NA
+375,https://nyu.databrary.org/volume/375,NA,NA
+376,https://nyu.databrary.org/volume/376,NA,NA
+377,https://nyu.databrary.org/volume/377,NA,NA
+378,https://nyu.databrary.org/volume/378,NA,NA
+379,https://nyu.databrary.org/volume/379,NA,NA
+380,https://nyu.databrary.org/volume/380,NA,NA
+381,https://nyu.databrary.org/volume/381,NA,NA
+382,https://nyu.databrary.org/volume/382,NA,NA
+383,https://nyu.databrary.org/volume/383,NA,NA
+384,https://nyu.databrary.org/volume/384,NA,NA
+385,https://nyu.databrary.org/volume/385,NA,NA
+386,https://nyu.databrary.org/volume/386,NA,NA
+387,https://nyu.databrary.org/volume/387,NA,NA
+388,https://nyu.databrary.org/volume/388,NA,NA
+389,https://nyu.databrary.org/volume/389,NA,NA
+390,https://nyu.databrary.org/volume/390,NA,NA
+391,https://nyu.databrary.org/volume/391,NA,NA
+392,https://nyu.databrary.org/volume/392,NA,NA
+393,https://nyu.databrary.org/volume/393,NA,NA
+394,https://nyu.databrary.org/volume/394,NA,NA
+395,https://nyu.databrary.org/volume/395,NA,NA
+396,https://nyu.databrary.org/volume/396,NA,NA
+397,https://nyu.databrary.org/volume/397,NA,NA
+398,https://nyu.databrary.org/volume/398,NA,NA
+399,https://nyu.databrary.org/volume/399,NA,NA
+400,https://nyu.databrary.org/volume/400,NA,NA
+401,https://nyu.databrary.org/volume/401,NA,NA
+402,https://nyu.databrary.org/volume/402,NA,NA
+403,https://nyu.databrary.org/volume/403,NA,NA
+404,https://nyu.databrary.org/volume/404,NA,NA
+405,https://nyu.databrary.org/volume/405,NA,NA
+406,https://nyu.databrary.org/volume/406,NA,NA
+407,https://nyu.databrary.org/volume/407,NA,NA
+408,https://nyu.databrary.org/volume/408,NA,NA
+409,https://nyu.databrary.org/volume/409,NA,NA
+410,https://nyu.databrary.org/volume/410,NA,NA
+411,https://nyu.databrary.org/volume/411,NA,NA
+412,https://nyu.databrary.org/volume/412,NA,NA
+413,https://nyu.databrary.org/volume/413,NA,NA
+414,https://nyu.databrary.org/volume/414,NA,NA
+415,https://nyu.databrary.org/volume/415,NA,NA
+416,https://nyu.databrary.org/volume/416,NA,NA
+417,https://nyu.databrary.org/volume/417,NA,NA
+418,https://nyu.databrary.org/volume/418,NA,NA
+419,https://nyu.databrary.org/volume/419,NA,NA
+420,https://nyu.databrary.org/volume/420,NA,NA
+421,https://nyu.databrary.org/volume/421,NA,NA
+422,https://nyu.databrary.org/volume/422,NA,NA
+423,https://nyu.databrary.org/volume/423,NA,NA
+424,https://nyu.databrary.org/volume/424,NA,NA
+425,https://nyu.databrary.org/volume/425,NA,NA
+426,https://nyu.databrary.org/volume/426,NA,NA
+427,https://nyu.databrary.org/volume/427,NA,NA
+428,https://nyu.databrary.org/volume/428,NA,NA
+429,https://nyu.databrary.org/volume/429,NA,NA
+430,https://nyu.databrary.org/volume/430,NA,NA
+431,https://nyu.databrary.org/volume/431,NA,NA
+432,https://nyu.databrary.org/volume/432,NA,NA
+433,https://nyu.databrary.org/volume/433,adult female,1
+433,https://nyu.databrary.org/volume/433,luminance matched,1
+433,https://nyu.databrary.org/volume/433,black and white,1
+433,https://nyu.databrary.org/volume/433,luminance varied,1
+433,https://nyu.databrary.org/volume/433,color,1
+434,https://nyu.databrary.org/volume/434,NA,NA
+435,https://nyu.databrary.org/volume/435,NA,NA
+436,https://nyu.databrary.org/volume/436,NA,NA
+437,https://nyu.databrary.org/volume/437,NA,NA
+438,https://nyu.databrary.org/volume/438,NA,NA
+439,https://nyu.databrary.org/volume/439,NA,NA
+440,https://nyu.databrary.org/volume/440,NA,NA
+441,https://nyu.databrary.org/volume/441,NA,NA
+442,https://nyu.databrary.org/volume/442,NA,NA
+443,https://nyu.databrary.org/volume/443,NA,NA
+444,https://nyu.databrary.org/volume/444,NA,NA
+445,https://nyu.databrary.org/volume/445,NA,NA
+446,https://nyu.databrary.org/volume/446,NA,NA
+447,https://nyu.databrary.org/volume/447,NA,NA
+448,https://nyu.databrary.org/volume/448,NA,NA
+449,https://nyu.databrary.org/volume/449,NA,NA
+450,https://nyu.databrary.org/volume/450,NA,NA
+451,https://nyu.databrary.org/volume/451,NA,NA
+452,https://nyu.databrary.org/volume/452,NA,NA
+453,https://nyu.databrary.org/volume/453,NA,NA
+454,https://nyu.databrary.org/volume/454,NA,NA
+455,https://nyu.databrary.org/volume/455,NA,NA
+456,https://nyu.databrary.org/volume/456,NA,NA
+457,https://nyu.databrary.org/volume/457,NA,NA
+458,https://nyu.databrary.org/volume/458,NA,NA
+459,https://nyu.databrary.org/volume/459,NA,NA
+460,https://nyu.databrary.org/volume/460,NA,NA
+461,https://nyu.databrary.org/volume/461,NA,NA
+462,https://nyu.databrary.org/volume/462,NA,NA
+463,https://nyu.databrary.org/volume/463,NA,NA
+464,https://nyu.databrary.org/volume/464,NA,NA
+465,https://nyu.databrary.org/volume/465,NA,NA
+466,https://nyu.databrary.org/volume/466,NA,NA
+467,https://nyu.databrary.org/volume/467,NA,NA
+468,https://nyu.databrary.org/volume/468,NA,NA
+469,https://nyu.databrary.org/volume/469,NA,NA
+470,https://nyu.databrary.org/volume/470,NA,NA
+471,https://nyu.databrary.org/volume/471,motor development,1
+471,https://nyu.databrary.org/volume/471,infant locomotion,1
+471,https://nyu.databrary.org/volume/471,strategy choice,1
+471,https://nyu.databrary.org/volume/471,overlapping waves,1
+471,https://nyu.databrary.org/volume/471,end-state comfort,1
+472,https://nyu.databrary.org/volume/472,NA,NA
+473,https://nyu.databrary.org/volume/473,NA,NA
+474,https://nyu.databrary.org/volume/474,NA,NA
+475,https://nyu.databrary.org/volume/475,NA,NA
+476,https://nyu.databrary.org/volume/476,NA,NA
+477,https://nyu.databrary.org/volume/477,NA,NA
+478,https://nyu.databrary.org/volume/478,NA,NA
+479,https://nyu.databrary.org/volume/479,NA,NA
+480,https://nyu.databrary.org/volume/480,gesture,1
+480,https://nyu.databrary.org/volume/480,mathematical equivalence,1
+480,https://nyu.databrary.org/volume/480,instruction,1
+480,https://nyu.databrary.org/volume/480,learning,1
+481,https://nyu.databrary.org/volume/481,NA,NA
+482,https://nyu.databrary.org/volume/482,NA,NA
+483,https://nyu.databrary.org/volume/483,NA,NA
+484,https://nyu.databrary.org/volume/484,NA,NA
+485,https://nyu.databrary.org/volume/485,NA,NA
+486,https://nyu.databrary.org/volume/486,NA,NA
+487,https://nyu.databrary.org/volume/487,NA,NA
+488,https://nyu.databrary.org/volume/488,NA,NA
+489,https://nyu.databrary.org/volume/489,NA,NA
+490,https://nyu.databrary.org/volume/490,NA,NA
+491,https://nyu.databrary.org/volume/491,NA,NA
+492,https://nyu.databrary.org/volume/492,NA,NA
+493,https://nyu.databrary.org/volume/493,NA,NA
+494,https://nyu.databrary.org/volume/494,NA,NA
+495,https://nyu.databrary.org/volume/495,NA,NA
+496,https://nyu.databrary.org/volume/496,NA,NA
+497,https://nyu.databrary.org/volume/497,NA,NA
+498,https://nyu.databrary.org/volume/498,NA,NA
+499,https://nyu.databrary.org/volume/499,NA,NA
+500,https://nyu.databrary.org/volume/500,NA,NA
+501,https://nyu.databrary.org/volume/501,NA,NA
+502,https://nyu.databrary.org/volume/502,NA,NA
+503,https://nyu.databrary.org/volume/503,NA,NA
+504,https://nyu.databrary.org/volume/504,NA,NA
+505,https://nyu.databrary.org/volume/505,NA,NA
+506,https://nyu.databrary.org/volume/506,NA,NA
+507,https://nyu.databrary.org/volume/507,NA,NA
+508,https://nyu.databrary.org/volume/508,NA,NA
+509,https://nyu.databrary.org/volume/509,NA,NA
+510,https://nyu.databrary.org/volume/510,NA,NA
+511,https://nyu.databrary.org/volume/511,NA,NA
+512,https://nyu.databrary.org/volume/512,NA,NA
+513,https://nyu.databrary.org/volume/513,NA,NA
+514,https://nyu.databrary.org/volume/514,NA,NA
+515,https://nyu.databrary.org/volume/515,NA,NA
+516,https://nyu.databrary.org/volume/516,NA,NA
+517,https://nyu.databrary.org/volume/517,NA,NA
+518,https://nyu.databrary.org/volume/518,NA,NA
+519,https://nyu.databrary.org/volume/519,NA,NA
+520,https://nyu.databrary.org/volume/520,NA,NA
+521,https://nyu.databrary.org/volume/521,NA,NA
+522,https://nyu.databrary.org/volume/522,NA,NA
+523,https://nyu.databrary.org/volume/523,NA,NA
+524,https://nyu.databrary.org/volume/524,NA,NA
+525,https://nyu.databrary.org/volume/525,NA,NA
+526,https://nyu.databrary.org/volume/526,NA,NA
+527,https://nyu.databrary.org/volume/527,NA,NA
+528,https://nyu.databrary.org/volume/528,NA,NA
+529,https://nyu.databrary.org/volume/529,NA,NA
+530,https://nyu.databrary.org/volume/530,NA,NA
+531,https://nyu.databrary.org/volume/531,NA,NA
+532,https://nyu.databrary.org/volume/532,NA,NA
+533,https://nyu.databrary.org/volume/533,NA,NA
+534,https://nyu.databrary.org/volume/534,NA,NA
+535,https://nyu.databrary.org/volume/535,NA,NA
+536,https://nyu.databrary.org/volume/536,NA,NA
+537,https://nyu.databrary.org/volume/537,NA,NA
+538,https://nyu.databrary.org/volume/538,NA,NA
+539,https://nyu.databrary.org/volume/539,NA,NA
+540,https://nyu.databrary.org/volume/540,NA,NA
+541,https://nyu.databrary.org/volume/541,NA,NA
+542,https://nyu.databrary.org/volume/542,NA,NA
+543,https://nyu.databrary.org/volume/543,NA,NA
+544,https://nyu.databrary.org/volume/544,NA,NA
+545,https://nyu.databrary.org/volume/545,face processing,1
+545,https://nyu.databrary.org/volume/545,data processing,1
+545,https://nyu.databrary.org/volume/545,signal to noise ratio,1
+545,https://nyu.databrary.org/volume/545,infant perception,1
+545,https://nyu.databrary.org/volume/545,trial data,1
+545,https://nyu.databrary.org/volume/545,snr,1
+545,https://nyu.databrary.org/volume/545,channel data,1
+545,https://nyu.databrary.org/volume/545,data,1
+545,https://nyu.databrary.org/volume/545,eeg,1
+545,https://nyu.databrary.org/volume/545,ssvep,1
+545,https://nyu.databrary.org/volume/545,snr data,1
+546,https://nyu.databrary.org/volume/546,infant attention,1
+546,https://nyu.databrary.org/volume/546,infant erp,1
+546,https://nyu.databrary.org/volume/546,eye-tracking,1
+546,https://nyu.databrary.org/volume/546,erp,1
+547,https://nyu.databrary.org/volume/547,NA,NA
+548,https://nyu.databrary.org/volume/548,NA,NA
+549,https://nyu.databrary.org/volume/549,NA,NA
+550,https://nyu.databrary.org/volume/550,NA,NA
+551,https://nyu.databrary.org/volume/551,NA,NA
+552,https://nyu.databrary.org/volume/552,NA,NA
+553,https://nyu.databrary.org/volume/553,NA,NA
+554,https://nyu.databrary.org/volume/554,NA,NA
+555,https://nyu.databrary.org/volume/555,NA,NA
+556,https://nyu.databrary.org/volume/556,NA,NA
+557,https://nyu.databrary.org/volume/557,NA,NA
+558,https://nyu.databrary.org/volume/558,NA,NA
+559,https://nyu.databrary.org/volume/559,NA,NA
+560,https://nyu.databrary.org/volume/560,NA,NA
+561,https://nyu.databrary.org/volume/561,NA,NA
+562,https://nyu.databrary.org/volume/562,NA,NA
+563,https://nyu.databrary.org/volume/563,NA,NA
+564,https://nyu.databrary.org/volume/564,NA,NA
+565,https://nyu.databrary.org/volume/565,NA,NA
+566,https://nyu.databrary.org/volume/566,NA,NA
+567,https://nyu.databrary.org/volume/567,NA,NA
+568,https://nyu.databrary.org/volume/568,NA,NA
+569,https://nyu.databrary.org/volume/569,NA,NA
+570,https://nyu.databrary.org/volume/570,NA,NA
+571,https://nyu.databrary.org/volume/571,NA,NA
+572,https://nyu.databrary.org/volume/572,NA,NA
+573,https://nyu.databrary.org/volume/573,NA,NA
+574,https://nyu.databrary.org/volume/574,NA,NA
+575,https://nyu.databrary.org/volume/575,NA,NA
+576,https://nyu.databrary.org/volume/576,NA,NA
+577,https://nyu.databrary.org/volume/577,NA,NA
+578,https://nyu.databrary.org/volume/578,NA,NA
+579,https://nyu.databrary.org/volume/579,NA,NA
+580,https://nyu.databrary.org/volume/580,NA,NA
+581,https://nyu.databrary.org/volume/581,NA,NA
+582,https://nyu.databrary.org/volume/582,NA,NA
+583,https://nyu.databrary.org/volume/583,NA,NA
+584,https://nyu.databrary.org/volume/584,NA,NA
+585,https://nyu.databrary.org/volume/585,NA,NA
+586,https://nyu.databrary.org/volume/586,NA,NA
+587,https://nyu.databrary.org/volume/587,NA,NA
+588,https://nyu.databrary.org/volume/588,NA,NA
+589,https://nyu.databrary.org/volume/589,NA,NA
+590,https://nyu.databrary.org/volume/590,NA,NA
+591,https://nyu.databrary.org/volume/591,NA,NA
+592,https://nyu.databrary.org/volume/592,NA,NA
+593,https://nyu.databrary.org/volume/593,NA,NA
+594,https://nyu.databrary.org/volume/594,NA,NA
+595,https://nyu.databrary.org/volume/595,NA,NA
+596,https://nyu.databrary.org/volume/596,NA,NA
+597,https://nyu.databrary.org/volume/597,NA,NA
+598,https://nyu.databrary.org/volume/598,NA,NA
+599,https://nyu.databrary.org/volume/599,NA,NA
+600,https://nyu.databrary.org/volume/600,NA,NA
+601,https://nyu.databrary.org/volume/601,NA,NA
+602,https://nyu.databrary.org/volume/602,NA,NA
+603,https://nyu.databrary.org/volume/603,NA,NA
+604,https://nyu.databrary.org/volume/604,NA,NA
+605,https://nyu.databrary.org/volume/605,NA,NA
+606,https://nyu.databrary.org/volume/606,NA,NA
+607,https://nyu.databrary.org/volume/607,NA,NA
+608,https://nyu.databrary.org/volume/608,face processing,1
+608,https://nyu.databrary.org/volume/608,data processing,1
+608,https://nyu.databrary.org/volume/608,infant eeg,1
+608,https://nyu.databrary.org/volume/608,erp,1
+608,https://nyu.databrary.org/volume/608,infant perception,1
+608,https://nyu.databrary.org/volume/608,electrophysiology,1
+608,https://nyu.databrary.org/volume/608,eeg,1
+608,https://nyu.databrary.org/volume/608,erp components,1
+608,https://nyu.databrary.org/volume/608,latency data,1
+608,https://nyu.databrary.org/volume/608,amplitude data,1
+609,https://nyu.databrary.org/volume/609,NA,NA
+610,https://nyu.databrary.org/volume/610,NA,NA
+611,https://nyu.databrary.org/volume/611,NA,NA
+612,https://nyu.databrary.org/volume/612,NA,NA
+613,https://nyu.databrary.org/volume/613,NA,NA
+614,https://nyu.databrary.org/volume/614,NA,NA
+615,https://nyu.databrary.org/volume/615,NA,NA
+616,https://nyu.databrary.org/volume/616,NA,NA
+617,https://nyu.databrary.org/volume/617,NA,NA
+618,https://nyu.databrary.org/volume/618,NA,NA
+619,https://nyu.databrary.org/volume/619,NA,NA
+620,https://nyu.databrary.org/volume/620,NA,NA
+621,https://nyu.databrary.org/volume/621,NA,NA
+622,https://nyu.databrary.org/volume/622,NA,NA
+623,https://nyu.databrary.org/volume/623,NA,NA
+624,https://nyu.databrary.org/volume/624,NA,NA
+625,https://nyu.databrary.org/volume/625,NA,NA
+626,https://nyu.databrary.org/volume/626,NA,NA
+627,https://nyu.databrary.org/volume/627,NA,NA
+628,https://nyu.databrary.org/volume/628,NA,NA
+629,https://nyu.databrary.org/volume/629,NA,NA
+630,https://nyu.databrary.org/volume/630,NA,NA
+631,https://nyu.databrary.org/volume/631,NA,NA
+632,https://nyu.databrary.org/volume/632,NA,NA
+633,https://nyu.databrary.org/volume/633,NA,NA
+634,https://nyu.databrary.org/volume/634,NA,NA
+635,https://nyu.databrary.org/volume/635,NA,NA
+636,https://nyu.databrary.org/volume/636,NA,NA
+637,https://nyu.databrary.org/volume/637,NA,NA
+638,https://nyu.databrary.org/volume/638,NA,NA
+639,https://nyu.databrary.org/volume/639,NA,NA
+640,https://nyu.databrary.org/volume/640,NA,NA
+641,https://nyu.databrary.org/volume/641,NA,NA
+642,https://nyu.databrary.org/volume/642,NA,NA
+643,https://nyu.databrary.org/volume/643,NA,NA
+644,https://nyu.databrary.org/volume/644,NA,NA
+645,https://nyu.databrary.org/volume/645,NA,NA
+646,https://nyu.databrary.org/volume/646,NA,NA
+647,https://nyu.databrary.org/volume/647,NA,NA
+648,https://nyu.databrary.org/volume/648,NA,NA
+649,https://nyu.databrary.org/volume/649,NA,NA
+650,https://nyu.databrary.org/volume/650,NA,NA
+651,https://nyu.databrary.org/volume/651,NA,NA
+652,https://nyu.databrary.org/volume/652,NA,NA
+653,https://nyu.databrary.org/volume/653,NA,NA
+654,https://nyu.databrary.org/volume/654,NA,NA
+655,https://nyu.databrary.org/volume/655,NA,NA
+656,https://nyu.databrary.org/volume/656,NA,NA
+657,https://nyu.databrary.org/volume/657,NA,NA
+658,https://nyu.databrary.org/volume/658,NA,NA
+659,https://nyu.databrary.org/volume/659,NA,NA
+660,https://nyu.databrary.org/volume/660,NA,NA
+661,https://nyu.databrary.org/volume/661,NA,NA
+662,https://nyu.databrary.org/volume/662,NA,NA
+663,https://nyu.databrary.org/volume/663,NA,NA
+664,https://nyu.databrary.org/volume/664,NA,NA
+665,https://nyu.databrary.org/volume/665,NA,NA
+666,https://nyu.databrary.org/volume/666,NA,NA
+667,https://nyu.databrary.org/volume/667,NA,NA
+668,https://nyu.databrary.org/volume/668,NA,NA
+669,https://nyu.databrary.org/volume/669,NA,NA
+670,https://nyu.databrary.org/volume/670,NA,NA
+671,https://nyu.databrary.org/volume/671,NA,NA
+672,https://nyu.databrary.org/volume/672,NA,NA
+673,https://nyu.databrary.org/volume/673,NA,NA
+674,https://nyu.databrary.org/volume/674,NA,NA
+675,https://nyu.databrary.org/volume/675,NA,NA
+676,https://nyu.databrary.org/volume/676,NA,NA
+677,https://nyu.databrary.org/volume/677,NA,NA
+678,https://nyu.databrary.org/volume/678,NA,NA
+679,https://nyu.databrary.org/volume/679,NA,NA
+680,https://nyu.databrary.org/volume/680,NA,NA
+681,https://nyu.databrary.org/volume/681,NA,NA
+682,https://nyu.databrary.org/volume/682,NA,NA
+683,https://nyu.databrary.org/volume/683,NA,NA
+684,https://nyu.databrary.org/volume/684,NA,NA
+685,https://nyu.databrary.org/volume/685,NA,NA
+686,https://nyu.databrary.org/volume/686,NA,NA
+687,https://nyu.databrary.org/volume/687,NA,NA
+688,https://nyu.databrary.org/volume/688,NA,NA
+689,https://nyu.databrary.org/volume/689,NA,NA
+690,https://nyu.databrary.org/volume/690,NA,NA
+691,https://nyu.databrary.org/volume/691,NA,NA
+692,https://nyu.databrary.org/volume/692,NA,NA
+693,https://nyu.databrary.org/volume/693,NA,NA
+694,https://nyu.databrary.org/volume/694,NA,NA
+695,https://nyu.databrary.org/volume/695,NA,NA
+696,https://nyu.databrary.org/volume/696,NA,NA
+697,https://nyu.databrary.org/volume/697,NA,NA
+698,https://nyu.databrary.org/volume/698,NA,NA
+699,https://nyu.databrary.org/volume/699,NA,NA
+700,https://nyu.databrary.org/volume/700,NA,NA
+701,https://nyu.databrary.org/volume/701,NA,NA
+702,https://nyu.databrary.org/volume/702,infant attention,1
+702,https://nyu.databrary.org/volume/702,stimuli,1
+702,https://nyu.databrary.org/volume/702,eye-tracking,1
+703,https://nyu.databrary.org/volume/703,NA,NA
+704,https://nyu.databrary.org/volume/704,NA,NA
+705,https://nyu.databrary.org/volume/705,NA,NA
+706,https://nyu.databrary.org/volume/706,NA,NA
+707,https://nyu.databrary.org/volume/707,eeg,1
+707,https://nyu.databrary.org/volume/707,eye-tracking technology,1
+707,https://nyu.databrary.org/volume/707,motion-tracking technology,1
+708,https://nyu.databrary.org/volume/708,NA,NA
+709,https://nyu.databrary.org/volume/709,icis philadelphia,1
+709,https://nyu.databrary.org/volume/709,icis,1
+710,https://nyu.databrary.org/volume/710,NA,NA
+711,https://nyu.databrary.org/volume/711,NA,NA
+712,https://nyu.databrary.org/volume/712,NA,NA
+713,https://nyu.databrary.org/volume/713,NA,NA
+714,https://nyu.databrary.org/volume/714,NA,NA
+715,https://nyu.databrary.org/volume/715,NA,NA
+716,https://nyu.databrary.org/volume/716,NA,NA
+717,https://nyu.databrary.org/volume/717,NA,NA
+718,https://nyu.databrary.org/volume/718,NA,NA
+719,https://nyu.databrary.org/volume/719,NA,NA
+720,https://nyu.databrary.org/volume/720,NA,NA
+721,https://nyu.databrary.org/volume/721,NA,NA
+722,https://nyu.databrary.org/volume/722,NA,NA
+723,https://nyu.databrary.org/volume/723,NA,NA
+724,https://nyu.databrary.org/volume/724,NA,NA
+725,https://nyu.databrary.org/volume/725,NA,NA
+726,https://nyu.databrary.org/volume/726,NA,NA
+727,https://nyu.databrary.org/volume/727,NA,NA
+728,https://nyu.databrary.org/volume/728,NA,NA
+729,https://nyu.databrary.org/volume/729,NA,NA
+730,https://nyu.databrary.org/volume/730,NA,NA
+731,https://nyu.databrary.org/volume/731,NA,NA
+732,https://nyu.databrary.org/volume/732,NA,NA
+733,https://nyu.databrary.org/volume/733,NA,NA
+734,https://nyu.databrary.org/volume/734,NA,NA
+735,https://nyu.databrary.org/volume/735,NA,NA
+736,https://nyu.databrary.org/volume/736,explore,1
+736,https://nyu.databrary.org/volume/736,cognitive,1
+736,https://nyu.databrary.org/volume/736,exploit,1
+736,https://nyu.databrary.org/volume/736,workshop,1
+736,https://nyu.databrary.org/volume/736,science,1
+736,https://nyu.databrary.org/volume/736,conference,1
+737,https://nyu.databrary.org/volume/737,NA,NA
+738,https://nyu.databrary.org/volume/738,NA,NA
+739,https://nyu.databrary.org/volume/739,locomotion,1
+739,https://nyu.databrary.org/volume/739,motor development,1
+739,https://nyu.databrary.org/volume/739,older adults,1
+739,https://nyu.databrary.org/volume/739,walking,1
+739,https://nyu.databrary.org/volume/739,falling,1
+739,https://nyu.databrary.org/volume/739,falls,1
+740,https://nyu.databrary.org/volume/740,NA,NA
+741,https://nyu.databrary.org/volume/741,NA,NA
+742,https://nyu.databrary.org/volume/742,NA,NA
+743,https://nyu.databrary.org/volume/743,NA,NA
+744,https://nyu.databrary.org/volume/744,NA,NA
+745,https://nyu.databrary.org/volume/745,NA,NA
+746,https://nyu.databrary.org/volume/746,NA,NA
+747,https://nyu.databrary.org/volume/747,NA,NA
+748,https://nyu.databrary.org/volume/748,NA,NA
+749,https://nyu.databrary.org/volume/749,NA,NA
+750,https://nyu.databrary.org/volume/750,NA,NA
+751,https://nyu.databrary.org/volume/751,NA,NA
+752,https://nyu.databrary.org/volume/752,NA,NA
+753,https://nyu.databrary.org/volume/753,NA,NA
+754,https://nyu.databrary.org/volume/754,NA,NA
+755,https://nyu.databrary.org/volume/755,NA,NA
+756,https://nyu.databrary.org/volume/756,NA,NA
+757,https://nyu.databrary.org/volume/757,NA,NA
+758,https://nyu.databrary.org/volume/758,NA,NA
+759,https://nyu.databrary.org/volume/759,NA,NA
+760,https://nyu.databrary.org/volume/760,NA,NA
+761,https://nyu.databrary.org/volume/761,pilot,1
+762,https://nyu.databrary.org/volume/762,theory of mind,1
+762,https://nyu.databrary.org/volume/762,ownership,1
+763,https://nyu.databrary.org/volume/763,NA,NA
+764,https://nyu.databrary.org/volume/764,NA,NA
+765,https://nyu.databrary.org/volume/765,NA,NA
+766,https://nyu.databrary.org/volume/766,NA,NA
+767,https://nyu.databrary.org/volume/767,NA,NA
+768,https://nyu.databrary.org/volume/768,NA,NA
+769,https://nyu.databrary.org/volume/769,NA,NA
+770,https://nyu.databrary.org/volume/770,NA,NA
+771,https://nyu.databrary.org/volume/771,NA,NA
+772,https://nyu.databrary.org/volume/772,NA,NA
+773,https://nyu.databrary.org/volume/773,NA,NA
+774,https://nyu.databrary.org/volume/774,NA,NA
+775,https://nyu.databrary.org/volume/775,NA,NA
+776,https://nyu.databrary.org/volume/776,NA,NA
+777,https://nyu.databrary.org/volume/777,NA,NA
+778,https://nyu.databrary.org/volume/778,NA,NA
+779,https://nyu.databrary.org/volume/779,NA,NA
+780,https://nyu.databrary.org/volume/780,NA,NA
+781,https://nyu.databrary.org/volume/781,NA,NA
+782,https://nyu.databrary.org/volume/782,NA,NA
+783,https://nyu.databrary.org/volume/783,NA,NA
+784,https://nyu.databrary.org/volume/784,NA,NA
+785,https://nyu.databrary.org/volume/785,NA,NA
+786,https://nyu.databrary.org/volume/786,NA,NA
+787,https://nyu.databrary.org/volume/787,NA,NA
+788,https://nyu.databrary.org/volume/788,NA,NA
+789,https://nyu.databrary.org/volume/789,NA,NA
+790,https://nyu.databrary.org/volume/790,NA,NA
+791,https://nyu.databrary.org/volume/791,NA,NA
+792,https://nyu.databrary.org/volume/792,NA,NA
+793,https://nyu.databrary.org/volume/793,NA,NA
+794,https://nyu.databrary.org/volume/794,NA,NA
+795,https://nyu.databrary.org/volume/795,NA,NA
+796,https://nyu.databrary.org/volume/796,NA,NA
+797,https://nyu.databrary.org/volume/797,NA,NA
+798,https://nyu.databrary.org/volume/798,NA,NA
+799,https://nyu.databrary.org/volume/799,NA,NA
+800,https://nyu.databrary.org/volume/800,NA,NA
+801,https://nyu.databrary.org/volume/801,NA,NA
+802,https://nyu.databrary.org/volume/802,NA,NA
+803,https://nyu.databrary.org/volume/803,NA,NA
+804,https://nyu.databrary.org/volume/804,NA,NA
+805,https://nyu.databrary.org/volume/805,NA,NA
+806,https://nyu.databrary.org/volume/806,NA,NA
+807,https://nyu.databrary.org/volume/807,NA,NA
+808,https://nyu.databrary.org/volume/808,NA,NA
+809,https://nyu.databrary.org/volume/809,NA,NA
+810,https://nyu.databrary.org/volume/810,NA,NA
+811,https://nyu.databrary.org/volume/811,NA,NA
+812,https://nyu.databrary.org/volume/812,NA,NA
+813,https://nyu.databrary.org/volume/813,NA,NA
+814,https://nyu.databrary.org/volume/814,NA,NA
+815,https://nyu.databrary.org/volume/815,NA,NA
+816,https://nyu.databrary.org/volume/816,NA,NA
+817,https://nyu.databrary.org/volume/817,NA,NA
+818,https://nyu.databrary.org/volume/818,NA,NA
+819,https://nyu.databrary.org/volume/819,NA,NA
+820,https://nyu.databrary.org/volume/820,NA,NA
+821,https://nyu.databrary.org/volume/821,NA,NA
+822,https://nyu.databrary.org/volume/822,NA,NA
+823,https://nyu.databrary.org/volume/823,NA,NA
+824,https://nyu.databrary.org/volume/824,NA,NA
+825,https://nyu.databrary.org/volume/825,NA,NA
+826,https://nyu.databrary.org/volume/826,NA,NA
+827,https://nyu.databrary.org/volume/827,NA,NA
+828,https://nyu.databrary.org/volume/828,NA,NA
+829,https://nyu.databrary.org/volume/829,NA,NA
+830,https://nyu.databrary.org/volume/830,NA,NA
+831,https://nyu.databrary.org/volume/831,NA,NA
+832,https://nyu.databrary.org/volume/832,NA,NA
+833,https://nyu.databrary.org/volume/833,NA,NA
+834,https://nyu.databrary.org/volume/834,NA,NA
+835,https://nyu.databrary.org/volume/835,NA,NA
+836,https://nyu.databrary.org/volume/836,NA,NA
+837,https://nyu.databrary.org/volume/837,NA,NA
+838,https://nyu.databrary.org/volume/838,NA,NA
+839,https://nyu.databrary.org/volume/839,NA,NA
+840,https://nyu.databrary.org/volume/840,NA,NA
+841,https://nyu.databrary.org/volume/841,NA,NA
+842,https://nyu.databrary.org/volume/842,NA,NA
+843,https://nyu.databrary.org/volume/843,NA,NA
+844,https://nyu.databrary.org/volume/844,NA,NA
+845,https://nyu.databrary.org/volume/845,NA,NA
+846,https://nyu.databrary.org/volume/846,NA,NA
+847,https://nyu.databrary.org/volume/847,NA,NA
+848,https://nyu.databrary.org/volume/848,NA,NA
+849,https://nyu.databrary.org/volume/849,NA,NA
+850,https://nyu.databrary.org/volume/850,NA,NA
+851,https://nyu.databrary.org/volume/851,NA,NA
+852,https://nyu.databrary.org/volume/852,NA,NA
+853,https://nyu.databrary.org/volume/853,NA,NA
+854,https://nyu.databrary.org/volume/854,NA,NA
+855,https://nyu.databrary.org/volume/855,NA,NA
+856,https://nyu.databrary.org/volume/856,NA,NA
+857,https://nyu.databrary.org/volume/857,NA,NA
+858,https://nyu.databrary.org/volume/858,NA,NA
+859,https://nyu.databrary.org/volume/859,NA,NA
+860,https://nyu.databrary.org/volume/860,NA,NA
+861,https://nyu.databrary.org/volume/861,NA,NA
+862,https://nyu.databrary.org/volume/862,NA,NA
+863,https://nyu.databrary.org/volume/863,NA,NA
+864,https://nyu.databrary.org/volume/864,NA,NA
+865,https://nyu.databrary.org/volume/865,NA,NA
+866,https://nyu.databrary.org/volume/866,NA,NA
+867,https://nyu.databrary.org/volume/867,NA,NA
+868,https://nyu.databrary.org/volume/868,NA,NA
+869,https://nyu.databrary.org/volume/869,NA,NA
+870,https://nyu.databrary.org/volume/870,NA,NA
+871,https://nyu.databrary.org/volume/871,NA,NA
+872,https://nyu.databrary.org/volume/872,NA,NA
+873,https://nyu.databrary.org/volume/873,NA,NA
+874,https://nyu.databrary.org/volume/874,NA,NA
+875,https://nyu.databrary.org/volume/875,NA,NA
+876,https://nyu.databrary.org/volume/876,NA,NA
+877,https://nyu.databrary.org/volume/877,NA,NA
+878,https://nyu.databrary.org/volume/878,NA,NA
+879,https://nyu.databrary.org/volume/879,NA,NA
+880,https://nyu.databrary.org/volume/880,NA,NA
+881,https://nyu.databrary.org/volume/881,bird,1
+881,https://nyu.databrary.org/volume/881,test,1
+881,https://nyu.databrary.org/volume/881,children,1
+881,https://nyu.databrary.org/volume/881,bear,1
+882,https://nyu.databrary.org/volume/882,NA,NA
+883,https://nyu.databrary.org/volume/883,NA,NA
+884,https://nyu.databrary.org/volume/884,joint attention,1
+884,https://nyu.databrary.org/volume/884,visual attention,1
+884,https://nyu.databrary.org/volume/884,gaze following,1
+884,https://nyu.databrary.org/volume/884,autism,1
+884,https://nyu.databrary.org/volume/884,video,1
+884,https://nyu.databrary.org/volume/884,gaze,1
+884,https://nyu.databrary.org/volume/884,eye tracking,1
+884,https://nyu.databrary.org/volume/884,gaze perception,1
+884,https://nyu.databrary.org/volume/884,social attention,1
+884,https://nyu.databrary.org/volume/884,naturalistic,1
+884,https://nyu.databrary.org/volume/884,images,1
+884,https://nyu.databrary.org/volume/884,database,1
+884,https://nyu.databrary.org/volume/884,stimuli,1
+885,https://nyu.databrary.org/volume/885,NA,NA
+886,https://nyu.databrary.org/volume/886,NA,NA
+887,https://nyu.databrary.org/volume/887,NA,NA
+888,https://nyu.databrary.org/volume/888,NA,NA
+889,https://nyu.databrary.org/volume/889,NA,NA
+890,https://nyu.databrary.org/volume/890,NA,NA
+891,https://nyu.databrary.org/volume/891,NA,NA
+892,https://nyu.databrary.org/volume/892,NA,NA
+893,https://nyu.databrary.org/volume/893,NA,NA
+894,https://nyu.databrary.org/volume/894,NA,NA
+895,https://nyu.databrary.org/volume/895,NA,NA
+896,https://nyu.databrary.org/volume/896,manybabies,1
+896,https://nyu.databrary.org/volume/896,manybabies-idspref,1
+896,https://nyu.databrary.org/volume/896,idspreference,1
+897,https://nyu.databrary.org/volume/897,affordances,1
+897,https://nyu.databrary.org/volume/897,problem solving,1
+897,https://nyu.databrary.org/volume/897,manual action,1
+897,https://nyu.databrary.org/volume/897,manual exploration,1
+897,https://nyu.databrary.org/volume/897,perceptual-motor development,1
+898,https://nyu.databrary.org/volume/898,NA,NA
+899,https://nyu.databrary.org/volume/899,NA,NA
+900,https://nyu.databrary.org/volume/900,NA,NA
+901,https://nyu.databrary.org/volume/901,NA,NA
+902,https://nyu.databrary.org/volume/902,NA,NA
+903,https://nyu.databrary.org/volume/903,NA,NA
+904,https://nyu.databrary.org/volume/904,NA,NA
+905,https://nyu.databrary.org/volume/905,NA,NA
+906,https://nyu.databrary.org/volume/906,NA,NA
+907,https://nyu.databrary.org/volume/907,NA,NA
+908,https://nyu.databrary.org/volume/908,NA,NA
+909,https://nyu.databrary.org/volume/909,NA,NA
+910,https://nyu.databrary.org/volume/910,NA,NA
+911,https://nyu.databrary.org/volume/911,NA,NA
+912,https://nyu.databrary.org/volume/912,NA,NA
+913,https://nyu.databrary.org/volume/913,NA,NA
+914,https://nyu.databrary.org/volume/914,NA,NA
+915,https://nyu.databrary.org/volume/915,NA,NA
+916,https://nyu.databrary.org/volume/916,NA,NA
+917,https://nyu.databrary.org/volume/917,NA,NA
+918,https://nyu.databrary.org/volume/918,NA,NA
+919,https://nyu.databrary.org/volume/919,NA,NA
+920,https://nyu.databrary.org/volume/920,NA,NA
+921,https://nyu.databrary.org/volume/921,NA,NA
+922,https://nyu.databrary.org/volume/922,NA,NA
+923,https://nyu.databrary.org/volume/923,NA,NA
+924,https://nyu.databrary.org/volume/924,NA,NA
+925,https://nyu.databrary.org/volume/925,NA,NA
+926,https://nyu.databrary.org/volume/926,NA,NA
+927,https://nyu.databrary.org/volume/927,preterm,1
+927,https://nyu.databrary.org/volume/927,language development,1
+927,https://nyu.databrary.org/volume/927,event representation,1
+928,https://nyu.databrary.org/volume/928,NA,NA
+929,https://nyu.databrary.org/volume/929,NA,NA
+930,https://nyu.databrary.org/volume/930,NA,NA
+931,https://nyu.databrary.org/volume/931,NA,NA
+932,https://nyu.databrary.org/volume/932,NA,NA
+933,https://nyu.databrary.org/volume/933,NA,NA
+934,https://nyu.databrary.org/volume/934,NA,NA
+935,https://nyu.databrary.org/volume/935,NA,NA
+936,https://nyu.databrary.org/volume/936,NA,NA
+937,https://nyu.databrary.org/volume/937,NA,NA
+938,https://nyu.databrary.org/volume/938,NA,NA
+939,https://nyu.databrary.org/volume/939,NA,NA
+940,https://nyu.databrary.org/volume/940,NA,NA
+941,https://nyu.databrary.org/volume/941,NA,NA
+942,https://nyu.databrary.org/volume/942,NA,NA
+943,https://nyu.databrary.org/volume/943,NA,NA
+944,https://nyu.databrary.org/volume/944,NA,NA
+945,https://nyu.databrary.org/volume/945,NA,NA
+946,https://nyu.databrary.org/volume/946,NA,NA
+947,https://nyu.databrary.org/volume/947,NA,NA
+948,https://nyu.databrary.org/volume/948,NA,NA
+949,https://nyu.databrary.org/volume/949,NA,NA
+950,https://nyu.databrary.org/volume/950,NA,NA
+951,https://nyu.databrary.org/volume/951,NA,NA
+952,https://nyu.databrary.org/volume/952,NA,NA
+953,https://nyu.databrary.org/volume/953,NA,NA
+954,https://nyu.databrary.org/volume/954,NA,NA
+955,https://nyu.databrary.org/volume/955,NA,NA
+956,https://nyu.databrary.org/volume/956,NA,NA
+957,https://nyu.databrary.org/volume/957,NA,NA
+958,https://nyu.databrary.org/volume/958,NA,NA
+959,https://nyu.databrary.org/volume/959,NA,NA
+960,https://nyu.databrary.org/volume/960,NA,NA
+961,https://nyu.databrary.org/volume/961,NA,NA
+962,https://nyu.databrary.org/volume/962,NA,NA
+963,https://nyu.databrary.org/volume/963,NA,NA
+964,https://nyu.databrary.org/volume/964,NA,NA
+965,https://nyu.databrary.org/volume/965,NA,NA
+966,https://nyu.databrary.org/volume/966,NA,NA
+967,https://nyu.databrary.org/volume/967,NA,NA
+968,https://nyu.databrary.org/volume/968,NA,NA
+969,https://nyu.databrary.org/volume/969,NA,NA
+970,https://nyu.databrary.org/volume/970,NA,NA
+971,https://nyu.databrary.org/volume/971,NA,NA
+972,https://nyu.databrary.org/volume/972,NA,NA
+973,https://nyu.databrary.org/volume/973,NA,NA
+974,https://nyu.databrary.org/volume/974,NA,NA
+975,https://nyu.databrary.org/volume/975,NA,NA
+976,https://nyu.databrary.org/volume/976,NA,NA
+977,https://nyu.databrary.org/volume/977,NA,NA
+978,https://nyu.databrary.org/volume/978,NA,NA
+979,https://nyu.databrary.org/volume/979,NA,NA
+980,https://nyu.databrary.org/volume/980,NA,NA
+981,https://nyu.databrary.org/volume/981,NA,NA
+982,https://nyu.databrary.org/volume/982,NA,NA
+983,https://nyu.databrary.org/volume/983,NA,NA
+984,https://nyu.databrary.org/volume/984,NA,NA
+985,https://nyu.databrary.org/volume/985,NA,NA
+986,https://nyu.databrary.org/volume/986,NA,NA
+987,https://nyu.databrary.org/volume/987,NA,NA
+988,https://nyu.databrary.org/volume/988,NA,NA
+989,https://nyu.databrary.org/volume/989,NA,NA
+990,https://nyu.databrary.org/volume/990,NA,NA
+991,https://nyu.databrary.org/volume/991,NA,NA
+992,https://nyu.databrary.org/volume/992,NA,NA
+993,https://nyu.databrary.org/volume/993,NA,NA
+994,https://nyu.databrary.org/volume/994,NA,NA
+995,https://nyu.databrary.org/volume/995,NA,NA
+996,https://nyu.databrary.org/volume/996,NA,NA
+997,https://nyu.databrary.org/volume/997,NA,NA
+998,https://nyu.databrary.org/volume/998,NA,NA
+999,https://nyu.databrary.org/volume/999,pilot study,1
+999,https://nyu.databrary.org/volume/999,usability,1
+999,https://nyu.databrary.org/volume/999,dyslexia,1
+999,https://nyu.databrary.org/volume/999,children,1
+999,https://nyu.databrary.org/volume/999,mobile app,1
+1000,https://nyu.databrary.org/volume/1000,NA,NA
+1001,https://nyu.databrary.org/volume/1001,NA,NA
+1002,https://nyu.databrary.org/volume/1002,NA,NA
+1003,https://nyu.databrary.org/volume/1003,NA,NA
+1004,https://nyu.databrary.org/volume/1004,NA,NA
+1005,https://nyu.databrary.org/volume/1005,NA,NA
+1006,https://nyu.databrary.org/volume/1006,NA,NA
+1007,https://nyu.databrary.org/volume/1007,NA,NA
+1008,https://nyu.databrary.org/volume/1008,NA,NA
+1009,https://nyu.databrary.org/volume/1009,NA,NA
+1010,https://nyu.databrary.org/volume/1010,NA,NA
+1011,https://nyu.databrary.org/volume/1011,NA,NA
+1012,https://nyu.databrary.org/volume/1012,NA,NA
+1013,https://nyu.databrary.org/volume/1013,NA,NA
+1014,https://nyu.databrary.org/volume/1014,NA,NA
+1015,https://nyu.databrary.org/volume/1015,NA,NA
+1016,https://nyu.databrary.org/volume/1016,NA,NA
+1017,https://nyu.databrary.org/volume/1017,NA,NA
+1018,https://nyu.databrary.org/volume/1018,NA,NA
+1019,https://nyu.databrary.org/volume/1019,NA,NA
+1020,https://nyu.databrary.org/volume/1020,NA,NA
+1021,https://nyu.databrary.org/volume/1021,NA,NA
+1022,https://nyu.databrary.org/volume/1022,NA,NA
+1023,https://nyu.databrary.org/volume/1023,NA,NA
+1024,https://nyu.databrary.org/volume/1024,NA,NA
+1025,https://nyu.databrary.org/volume/1025,NA,NA
+1026,https://nyu.databrary.org/volume/1026,NA,NA
+1027,https://nyu.databrary.org/volume/1027,NA,NA
+1028,https://nyu.databrary.org/volume/1028,NA,NA
+1029,https://nyu.databrary.org/volume/1029,NA,NA
+1030,https://nyu.databrary.org/volume/1030,NA,NA
+1031,https://nyu.databrary.org/volume/1031,NA,NA
+1032,https://nyu.databrary.org/volume/1032,NA,NA
+1033,https://nyu.databrary.org/volume/1033,NA,NA
+1034,https://nyu.databrary.org/volume/1034,NA,NA
+1035,https://nyu.databrary.org/volume/1035,NA,NA
+1036,https://nyu.databrary.org/volume/1036,NA,NA
+1037,https://nyu.databrary.org/volume/1037,NA,NA
+1038,https://nyu.databrary.org/volume/1038,NA,NA
+1039,https://nyu.databrary.org/volume/1039,NA,NA
+1040,https://nyu.databrary.org/volume/1040,NA,NA
+1041,https://nyu.databrary.org/volume/1041,NA,NA
+1042,https://nyu.databrary.org/volume/1042,NA,NA
+1043,https://nyu.databrary.org/volume/1043,NA,NA
+1044,https://nyu.databrary.org/volume/1044,NA,NA
+1045,https://nyu.databrary.org/volume/1045,NA,NA
+1046,https://nyu.databrary.org/volume/1046,NA,NA
+1047,https://nyu.databrary.org/volume/1047,NA,NA
+1048,https://nyu.databrary.org/volume/1048,NA,NA
+1049,https://nyu.databrary.org/volume/1049,NA,NA
+1050,https://nyu.databrary.org/volume/1050,NA,NA
+1051,https://nyu.databrary.org/volume/1051,NA,NA
+1052,https://nyu.databrary.org/volume/1052,NA,NA
+1053,https://nyu.databrary.org/volume/1053,NA,NA
+1054,https://nyu.databrary.org/volume/1054,NA,NA
+1055,https://nyu.databrary.org/volume/1055,NA,NA
+1056,https://nyu.databrary.org/volume/1056,NA,NA
+1057,https://nyu.databrary.org/volume/1057,NA,NA
+1058,https://nyu.databrary.org/volume/1058,NA,NA
+1059,https://nyu.databrary.org/volume/1059,NA,NA
+1060,https://nyu.databrary.org/volume/1060,NA,NA
+1061,https://nyu.databrary.org/volume/1061,NA,NA
+1062,https://nyu.databrary.org/volume/1062,NA,NA
+1063,https://nyu.databrary.org/volume/1063,NA,NA
+1064,https://nyu.databrary.org/volume/1064,NA,NA
+1065,https://nyu.databrary.org/volume/1065,NA,NA
+1066,https://nyu.databrary.org/volume/1066,NA,NA
+1067,https://nyu.databrary.org/volume/1067,NA,NA
+1068,https://nyu.databrary.org/volume/1068,NA,NA
+1069,https://nyu.databrary.org/volume/1069,NA,NA
+1070,https://nyu.databrary.org/volume/1070,NA,NA
+1071,https://nyu.databrary.org/volume/1071,NA,NA
+1072,https://nyu.databrary.org/volume/1072,NA,NA
+1073,https://nyu.databrary.org/volume/1073,NA,NA
+1074,https://nyu.databrary.org/volume/1074,NA,NA
+1075,https://nyu.databrary.org/volume/1075,NA,NA
+1076,https://nyu.databrary.org/volume/1076,NA,NA
+1077,https://nyu.databrary.org/volume/1077,NA,NA
+1078,https://nyu.databrary.org/volume/1078,NA,NA
+1079,https://nyu.databrary.org/volume/1079,NA,NA
+1080,https://nyu.databrary.org/volume/1080,NA,NA
+1081,https://nyu.databrary.org/volume/1081,NA,NA
+1082,https://nyu.databrary.org/volume/1082,NA,NA
+1083,https://nyu.databrary.org/volume/1083,NA,NA
+1084,https://nyu.databrary.org/volume/1084,NA,NA
+1085,https://nyu.databrary.org/volume/1085,NA,NA
+1086,https://nyu.databrary.org/volume/1086,NA,NA
+1087,https://nyu.databrary.org/volume/1087,NA,NA
+1088,https://nyu.databrary.org/volume/1088,NA,NA
+1089,https://nyu.databrary.org/volume/1089,NA,NA
+1090,https://nyu.databrary.org/volume/1090,NA,NA
+1091,https://nyu.databrary.org/volume/1091,NA,NA
+1092,https://nyu.databrary.org/volume/1092,NA,NA
+1093,https://nyu.databrary.org/volume/1093,NA,NA
+1094,https://nyu.databrary.org/volume/1094,NA,NA
+1095,https://nyu.databrary.org/volume/1095,NA,NA
+1096,https://nyu.databrary.org/volume/1096,NA,NA
+1097,https://nyu.databrary.org/volume/1097,NA,NA
+1098,https://nyu.databrary.org/volume/1098,NA,NA
+1099,https://nyu.databrary.org/volume/1099,NA,NA
+1100,https://nyu.databrary.org/volume/1100,NA,NA
