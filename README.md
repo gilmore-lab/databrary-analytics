@@ -29,5 +29,11 @@ Code to produce and plot analytics about Databrary
 
 - [Report](https://gilmore-lab.github.io/databrary-analytics/shared-volumes-sessions/shared-volumes-sessions.html) about full shared volumes and volume overviews only with session statistics.* 
     - To run this report run  
-        -`rmarkdown::render("shared-volumes-sessions/shared-volumes-sessions.Rmd", params = list(db_login = <YOURDATABRARYLOGIN))`
+        -`rmarkdown::render("shared-volumes-sessions/shared-volumes-sessions.Rmd", params = list(db_login = <YOURDATABRARYLOGIN>))`
         - replacing `<YOURDATABRARYLOGIN>` with your actual Databrary login (email).
+        
+# Tags and keywords report
+
+- [Report](https://gilmore-lab.github.io/databrary-analytics/shared-volumes-sessions/tags-keywords-report.html) on the tags and keywords linked to Databrary volumes.
+    - To run this report, run `source("tags-keywords/R/helpers.R")` from the R console.
+    - Then run `render_tags_keywords_report("<YOURDATABRARYLOGIN>"), replacing `<YOURDATABRARYLOGIN>` with your actual Databrary login (email).

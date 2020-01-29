@@ -12,8 +12,8 @@ if (!is.null(new_people)) {
     dplyr::select(., sortname, prename, affiliation, db_url) %>%
     tidyr::unite(col = "Investigator Name", prename, sortname, sep=" ") %>%
     knitr::kable(col.names = c("Full Name", "Affiliation", 
-                               "Databrary URL")) %>%
-    kableExtra::kable_styling() #%>%
+                               "Databrary URL"), "html") %>%
+    kableExtra::kable_styling(.) #%>%
 } else {
   cat("No new investigators since last report.")
 }

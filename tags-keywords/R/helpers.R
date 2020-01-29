@@ -1,0 +1,38 @@
+# helpers for tags-keywords-report
+
+make_volume_tags_df <- function(vol_id) {
+  these_tags <- databraryapi::list_volume_tags(vol_id)
+  if (is_empty(these_tags)) {
+    df <- data.frame(vol_id = vol_id, 
+                     url = paste0("https://nyu.databrary.org/volume/",
+                                  vol_id),
+                     tags = NA, weight = NA)    
+  } else {
+    these_tags <- these_tags %>%
+      dplyr::select(., id, weight) %>%
+      dplyr::rename(., tags = id)
+    df <- these_tags
+    df$vol_id = vol_id
+    df$url <- paste0("https://nyu.databrary.org/volume/", vol_id)
+  }
+  dplyr::select(df, vol_id, url, tags, weight) 
+}
+
+render_tags_keywords_report <- function(db_login) {
+  rmarkdown::render("tags-keywords/tags-keywords-report.Rmd", 
+                    params = list(db_login = db_login, 
+                                  read_saved = TRUE))
+  clean_up()
+}
+
+update_tags_keywords_report <- function(db_login) {
+  rmarkdown::render("tags-keywords/tags-keywords-report.Rmd", 
+                    params = list(db_login = db_login, 
+                                  read_saved = FALSE))
+  clean_up()
+}
+
+clean_up <- function() {
+  databraryapi::logout_db()
+  if (file.exists("tags-keywords/.databrary.RData")) unlink("tags-keywords/.databrary.RData")
+}

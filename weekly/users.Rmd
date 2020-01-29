@@ -86,18 +86,18 @@ users_plot <- gathered_stats %>%
   ggtitle(paste("Authorizations as of ", Sys.Date())) +
   ylab("Authorizations") +
   databrary_theme +
-  scale_y_continuous(breaks = seq(0, round_any(max(
+  scale_y_continuous(breaks = seq(0, plyr::round_any(max(
     gathered_stats$count
   ), 100, ceiling), 100), expand = c(0, 0)) +
-  coord_cartesian(ylim = c(0, round_any(max(
+  coord_cartesian(ylim = c(0, plyr::round_any(max(
     gathered_stats$count
   ), 100, ceiling)))
 
-ggdraw(users_plot) +
-  draw_label(paste0(
+cowplot::ggdraw(users_plot) +
+  cowplot::draw_label(paste0(
     "Investigators: ", updated_stats$investigators[n_rows],
     " (+ ", delta_investigators, ")"), colour = color_teal, .65, .8) +
-  draw_label(paste0(
+  cowplot::draw_label(paste0(
     "Institutions: ", updated_stats$institutions[n_rows],
     " (+ ", delta_investigators, ")"), colour = color_orange, .7, .45)
 ```

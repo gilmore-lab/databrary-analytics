@@ -46,3 +46,130 @@ get_keyword()
 ```
 
 It doesn't look like this is going to work.
+
+# New attempt with specific API calls
+
+Here are the tags for volume 1.
+
+```{r}
+databraryapi::list_volume_tags(vol_id = 1)
+```
+
+Now, we gather tags for a set of volumes with IDs < 100.
+
+```{r}
+library(tidyverse)
+
+vol_ids <- 1:40
+
+make_volume_tags_df <- function(vol_id) {
+  these_tags <- databraryapi::list_volume_tags(vol_id)
+  if (is_empty(these_tags)) {
+    df <- data.frame(vol_id = vol_id, 
+                     url = paste0("https://nyu.databrary.org/volume/",
+                                  vol_id),
+                     tags = NA, weight = NA)    
+  } else {
+    these_tags <- these_tags %>%
+      dplyr::select(., id, weight) %>%
+      dplyr::rename(., tags = id)
+    df <- these_tags
+    df$vol_id = vol_id
+    df$url <- paste0("https://nyu.databrary.org/volume/", vol_id)
+  }
+  dplyr::select(df, vol_id, url, tags, weight) 
+}
+
+tags <- purrr::map_dfr(.x = vol_ids, .f = make_volume_tags_df)
+
+tags %>% 
+  dplyr::arrange(., vol_id, weight) %>%
+  knitr::kable(., "html") %>%
+  kableExtra::kable_styling()
+```
+
+Ok, that works for the first 40.
+Let's continue.
+
+```{r}
+tags <- purrr::map_dfr(.x = 41:100, .f = make_volume_tags_df)
+
+tags %>% 
+  dplyr::arrange(., vol_id, weight) %>%
+  knitr::kable(., "html") %>%
+  kableExtra::kable_styling()
+```
+This fails because there is a list in one of the tags.
+
+```{r}
+for (v in 41:100) {
+  message(paste0("Volume ", v))
+  make_volume_tags_df(v)
+}
+```
+It looks like volume 84 is the culprit.
+I fixed `make_volume_tags_df()` to handle the case when `list_volume_tags()` returns a list.
+
+Let's try 101:201.
+
+```{r}
+tags <- purrr::map_dfr(.x = 101:200, .f = make_volume_tags_df)
+
+tags %>% 
+  dplyr::arrange(., vol_id, weight) %>%
+  knitr::kable(., "html") %>%
+  kableExtra::kable_styling()
+```
+
+Ok, that works. Let's go for the full 1100.
+
+```{r}
+tags <- purrr::map_dfr(.x = 1:1100, .f = make_volume_tags_df)
+
+tags %>% 
+  dplyr::arrange(., vol_id, weight) %>%
+  knitr::kable(., "html") %>%
+  kableExtra::kable_styling()
+```
+
+Now, let's do some filtering on this.
+
+```{r}
+vols_without_tags <- tags %>%
+  dplyr::filter(., is.na(tags))
+
+vols_with_tags <- tags %>%
+  dplyr::filter(., !is.na(tags)) %>%
+  dplyr::group_by(., vol_id) %>%
+  dplyr::summarise(., n_tags = n())
+
+dim(vols_without_tags)
+dim(vols_with_tags)
+```
+
+```{r}
+vols_with_tags %>%
+  ggplot2::ggplot(.) +
+  aes(n_tags) +
+  geom_histogram(bins = 12)
+```
+
+```{r}
+unique_tags <- tags %>%
+  dplyr::select(., tags, weight) %>%
+  dplyr::filter(., !is.na(tags)) %>%
+  dplyr::group_by(., tags) %>%
+  dplyr::summarise(., n_vols_using = n(), weight_sum = sum(weight)) %>%
+  dplyr::arrange(., desc(n_vols_using))
+
+unique_tags %>%
+  knitr::kable(., "html") %>%
+  kableExtra::kable_styling()
+```
+
+# Make a word cloud
+
+```{r}
+wordcloud::wordcloud(words = unique_tags$tags, freq = unique_tags$n_vols_using)
+```
+

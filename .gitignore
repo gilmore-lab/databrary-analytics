@@ -4,3 +4,4 @@
 .Ruserdata
 .databrary.RData
 .httr-oauth
+packrat/lib*/

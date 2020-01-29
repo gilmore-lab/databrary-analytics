@@ -1,0 +1,107 @@
+---
+title: "Tags & Keywords Report"
+author: "Rick Gilmore"
+date: "`r Sys.time()`"
+output: 
+  html_document:
+    self_contained: True
+    toc: True
+    toc_float: True
+    toc_depth: 2
+params:
+  db_login: email@provider.com
+  max_vol_id: 1100
+  save_tags: True
+  read_saved: True
+  tags_fn: "csv/databrary-tags.csv"
+
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE,
+                      warning = FALSE,
+                      message = FALSE)
+
+library(tidyverse)
+
+source("R/helpers.R")
+databraryapi::login_db(params$db_login)
+```
+
+```{r acquire-tags}
+# Acquire tags data
+vol_ids <- 1:params$max_vol_id
+message(paste0("Acquiring tags from Databrary for ", length(vol_ids), " volumes."))
+
+if (params$read_saved) {
+  tags <- readr::read_csv(params$tags_fn)
+} else {
+  tags <- purrr::map_dfr(.x = vol_ids, .f = make_volume_tags_df)
+}
+
+if (params$save_tags) {
+  message(paste0("Saving tags data to ", params$tags_fn, "."))
+  readr::write_csv(tags, params$tags_fn)
+}
+```
+
+# Tag stats
+
+```{r tag-stats}
+vols_without_tags <- tags %>%
+  dplyr::filter(., is.na(tags))
+
+vols_with_tags <- tags %>%
+  dplyr::filter(., !is.na(tags)) %>%
+  dplyr::group_by(., vol_id) %>%
+  dplyr::summarise(., n_tags = n())
+```
+There are `r dim(vols_with_tags)[1]` volumes with tags and `r dim(vols_without_tags)[1]` volumes without tags.
+Some, probably most of the volumes without tags have not been shared yet.
+The maximum volume id with tags is `r max(vols_with_tags$vol_id)`.
+
+## Histogram of tags/volume
+
+```{r tags-per-volume-histogram}
+vols_with_tags %>%
+  ggplot2::ggplot(.) +
+  aes(n_tags) +
+  geom_histogram(bins = 12)
+```
+
+## Unique tags
+
+```{r unique-tags}
+unique_tags <- tags %>%
+  dplyr::select(., tags, weight) %>%
+  dplyr::filter(., !is.na(tags)) %>%
+  dplyr::group_by(., tags) %>%
+  dplyr::summarise(., n_vols_using = n(), weight_sum = sum(weight)) %>%
+  dplyr::arrange(., desc(n_vols_using))
+```
+
+There are `r dim(unique_tags)[1]` unique tags.
+
+```{r unique-tags-table}
+unique_tags %>%
+  knitr::kable(., "html") %>%
+  kableExtra::kable_styling()
+```
+
+## Word cloud
+
+```{r word-cloud}
+wordcloud::wordcloud(words = unique_tags$tags, 
+                     freq = unique_tags$n_vols_using)
+```
+
+
+
+# Tags by volume
+
+```{r tags-by-volume}
+tags %>% 
+  dplyr::arrange(., vol_id, weight) %>%
+  knitr::kable(., "html") %>%
+  kableExtra::kable_styling()
+```

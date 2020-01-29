@@ -98,6 +98,8 @@ if (params$save_file) {
 }
 ```
 
+## All by `shared_type`, sorted by `n_vols`
+
 ```{r make-table, results = TRUE}
 vols_sess_data %>%
   # change variable names, create full_volume vs. overview_only
@@ -105,12 +107,43 @@ vols_sess_data %>%
   dplyr::rename(investigator = owner.ids.name, party_id = owner.ids.id) %>%
   dplyr::mutate(shared_type = ifelse(sharing_level == "full", "full_volume", "overview_only")) %>%
   dplyr::select(investigator, party_id, vol_id, created_date, shared_type, n_sessions) %>%
-  dplyr::group_by(investigator, shared_type) %>%
+  dplyr::mutate(url = paste0("https://nyu.databrary.org/party/", party_id)) %>%
+  dplyr::group_by(investigator, url, shared_type) %>%
   # summarise by total shared volumes by type with session stats
   dplyr::summarise(n_vols = n(), 
                    tot_sess = sum(n_sessions),
             min_n_sess = min(n_sessions),  
             max_n_sess = max(n_sessions)) %>%
   dplyr::arrange(shared_type, desc(n_vols)) %>%
-  knitr::kable(.)
+  knitr::kable(., "html") %>%
+  kableExtra::kable_styling(.)
 ```
+
+## All by `shared_type`, sorted by `tot_sessions`
+
+```{r}
+vols_sess_data %>%
+  # change variable names, create full_volume vs. overview_only
+  dplyr::group_by(owner.ids.name, owner.ids.id) %>%
+  dplyr::rename(investigator = owner.ids.name, party_id = owner.ids.id) %>%
+  dplyr::mutate(shared_type = ifelse(sharing_level == "full", "full_volume", "overview_only")) %>%
+  dplyr::select(investigator, party_id, vol_id, created_date, shared_type, n_sessions) %>%
+  dplyr::mutate(url = paste0("https://nyu.databrary.org/party/", party_id)) %>%
+  dplyr::group_by(investigator, url, shared_type) %>%
+  # summarise by total shared volumes by type with session stats
+  dplyr::summarise(n_vols = n(), 
+                   tot_sess = sum(n_sessions),
+            min_n_sess = min(n_sessions),  
+            max_n_sess = max(n_sessions)) %>%
+  dplyr::arrange(shared_type, desc(tot_sess)) %>%
+  knitr::kable(., "html") %>%
+  kableExtra::kable_styling(.)
+```
+
+```{r}
+databraryapi::logout_db()
+if (file.exists(".databrary.RData")) {
+  unlink(".databrary.RData")
+}
+```
+
