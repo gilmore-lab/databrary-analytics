@@ -37,3 +37,9 @@ Code to produce and plot analytics about Databrary
 - [Report](https://gilmore-lab.github.io/databrary-analytics/tags-keywords/tags-keywords-report.html) on the tags and keywords linked to Databrary volumes.
     - To run this report, run `source("tags-keywords/R/helpers.R")` from the R console.
     - Then run `render_tags_keywords_report("<YOURDATABRARYLOGIN>"), replacing `<YOURDATABRARYLOGIN>` with your actual Databrary login (email).
+
+# Institutions and investigators report
+
+- [Report](https://gilmore-lab.github.io/databrary-analytics/institutions-investigators/institutions-investigators.html) on number of investigators at each authorizing institution.
+    - To run this report, run `source("institutions-investigators/R/helpers.R")` from the R console.
+    - Then run `render_institutions_investigators_report("<YOURDATABRARYLOGIN>"), replacing `<YOURDATABRARYLOGIN>` with your actual Databrary login (email).

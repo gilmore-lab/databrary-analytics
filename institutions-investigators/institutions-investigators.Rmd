@@ -1,0 +1,66 @@
+---
+title: "Institutions and Investigators report"
+date: "`r Sys.time()`"
+output: 
+  html_document:
+    self_contained: True
+    toc: True
+    toc_float: True
+    toc_depth: 2
+params:
+  db_login: email@provider.com
+  max_party_id: 100
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE,
+                      warning = FALSE,
+                      message = FALSE)
+
+library(tidyverse)
+
+source("R/helpers.R")
+databraryapi::login_db(params$db_login)
+```
+
+```{r acquire-data}
+inst_invest <- get_institution_party_df(params$max_party_id)
+
+inst_invest <- inst_invest %>%
+  dplyr::filter(., !is.na(inst_id), !is.na(party_id))
+```
+
+# Data summaries
+
+```{r}
+inv_per_inst <- inst_invest %>%
+  dplyr::group_by(., inst_id) %>%
+  dplyr::mutate(., n_auth_inv = n()) %>%
+  dplyr::arrange(., desc(n_auth_inv))
+```
+
+## Histogram of investigators/institution
+
+```{r}
+inv_per_inst %>%
+  ggplot2::ggplot(.) +
+  aes(n_auth_inv) +
+  geom_histogram(bins = 15)
+```
+
+## Summary measures
+
+```{r}
+ai_stats <- fivenum(inv_per_inst$n_auth_inv)
+```
+
+The number of authorized investigators/institution is in the range of [`r ai_stats[1]`, `r ai_stats[5]`], with a median of `r ai_stats[3]` and a mean of `r mean(inv_per_inst$n_auth_inv)`.
+
+# Table of all institutions and investigators
+
+```{r}
+inst_invest %>%
+  knitr::kable(., "html") %>%
+  kableExtra::kable_styling()
+```
+
