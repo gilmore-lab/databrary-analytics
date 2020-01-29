@@ -8,7 +8,7 @@ output:
     toc_float: True
     toc_depth: 2
 params:
-  db_login: rogilmore@psu.edu
+  db_login: email@provider.com
   max_party_id: 100
 ---
 
@@ -35,7 +35,8 @@ inst_invest <- inst_invest %>%
 ```{r}
 inv_per_inst <- inst_invest %>%
   dplyr::group_by(., inst_id) %>%
-  dplyr::mutate(., n_auth_inv = n())
+  dplyr::mutate(., n_auth_inv = n()) %>%
+  dplyr::arrange(., desc(n_auth_inv))
 ```
 
 ## Histogram of investigators/institution
