@@ -1,0 +1,225 @@
+---
+title: "Participant demographics report"
+author: "Rick Gilmore"
+date: "`r Sys.time()`"
+output: html_document
+params:
+    db_login: rogilmore@psu.edu
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+
+library(tidyverse) # Mostly for pipe '%>%' operator
+```
+
+# Purpose
+
+To summarize the demographic characteristics of participants in shared volumes on Databrary.
+
+# Preliminary
+
+There seem to be two possible approaches:
+
+1. Download the spreadsheet CSVs using the `databraryapi::download_session_csv()` function, then aggregate.
+
+2. Download the `records` field from each volume, then aggregate.
+
+# Aggregating CSVs approach
+
+```{r login_db}
+databraryapi::login_db(params$db_login)
+```
+
+What the heck, let's try it out of the box.
+```{r}
+purrr::map(1:100, databraryapi::download_session_csv)
+```
+
+The `databraryapi::download_session_csv()` does not handle blank or NULL values well.
+I've now updated it to handle these more effectively.
+But for now, let's use this local function.
+
+```{r}
+#' Downloads session spreadsheet as a CSV.
+#'
+#' @param vol_id Target volume number.
+#' @param to_df A boolean value.
+#' @param return_response A boolean value.
+#' @param vb A boolean value.
+#' @return List of assets.
+#' @examples
+#' download_csv()
+#' @export
+download_session_csv <- function(vol_id = 1, to_df = TRUE,
+                         return_response = FALSE, vb = FALSE) {
+
+  # Error handling
+  if (length(vol_id) > 1) {
+    stop("vol_id must have length 1.")
+  }
+  if ((!is.numeric(vol_id)) || (vol_id <= 0)) {
+    stop("vol_id must be an integer > 0.")
+  }
+
+  if (vb) message(paste0("Downloading spreadsheet from volume ", vol_id))
+  r <- httr::content(httr::GET(paste0("https://nyu.databrary.org/volume/",
+                                      vol_id, "/csv")), 'text', encoding='UTF-8')
+
+  if (is.null(r) | !stringr::str_detect(r, "session-id")) {
+      if (vb) message(paste0("No CSV data returned from volume ", vol_id))
+      NULL
+  } else if (to_df == TRUE) {
+      if (vb) message(paste0("Converting response to data frame."))
+      r_df <- read.csv(text = r, stringsAsFactors = FALSE)
+      if (class(r_df)=="data.frame") {
+        if (vb) message(paste0("Imported data frame. Cleaning up."))
+        r_df <- dplyr::mutate(r_df, vol_id = vol_id)
+        r_df <- dplyr::rename(r_df,
+                              session_id = session.id,
+                              session_name = session.name,
+                              session_date = session.date,
+                              session_release = session.release)
+        r_df
+      } else {
+        if (vb) message("Can't coerce to data frame. Skipping.\n")
+        NULL
+      }
+  } else {
+    if (vb) message(paste0("Returning raw data from volume ", vol_id))
+    r
+  }
+}
+```
+
+```{r first-20}
+v1_to_20 <- purrr::map(1:20, download_session_csv)
+```
+
+Ok, we're going to have to loop to see what's going on.
+
+```{r}
+for (v in 1:20) {
+  message(paste0("Volume ", v))
+  download_session_csv(v)
+}
+```
+
+The problem appears to be in merging these into a common data frame.
+I'm going to filter the variables to focus on `participant.race`, `participant.ethnicity`, `participant.gender`, and `participant.birthdate`.
+
+```{r}
+get_volume_demog <- function(vol_id) {
+  v_ss <- download_session_csv(vol_id)
+  if ("participant.birthdate" %in% names(v_ss)) {
+      dplyr::select(v_ss, vol_id, participant.birthdate, participant.race, 
+                participant.ethnicity, participant.gender, participant.birthdate)
+  } else {
+    NULL
+  }
+}
+```
+
+So, let's try this more limited approach on a bunch of volumes.
+
+```{r}
+v1_to_10 <- purrr::map_dfr(1:10, get_volume_demog)
+```
+
+```{r}
+v1_to_10$participant.birthdate
+xtabs(formula = ~ participant.ethnicity, data = v1_to_10)
+xtabs(formula = ~ participant.race, data = v1_to_10)
+xtabs(formula = ~ participant.gender, data = v1_to_10)
+```
+
+This looks good, let's go long: volumes 1 to 100.
+
+```{r}
+v1_to_100 <- purrr::map_dfr(1:100, get_volume_demog)
+```
+
+So, we'll need to create a table column by column.
+
+```{r}
+get_volume_birthdate <- function(vol_id) {
+  v_ss <- download_session_csv(vol_id)
+  if ("participant.birthdate" %in% names(v_ss)) {
+      dplyr::select(v_ss, vol_id, session_id, participant.birthdate)
+  } else {
+    data.frame(vol_id = vol_id, session_id = NA,  participant.birthdate = NA)
+  }
+}
+
+get_volume_gender <- function(vol_id) {
+  v_ss <- download_session_csv(vol_id)
+  if ("participant.gender" %in% names(v_ss)) {
+      dplyr::select(v_ss, vol_id, session_id, participant.gender)
+  } else {
+    data.frame(vol_id = vol_id, session_id = NA,  participant.gender = NA)
+  }
+}
+
+get_volume_race <- function(vol_id) {
+  v_ss <- download_session_csv(vol_id)
+  if ("participant.race" %in% names(v_ss)) {
+      dplyr::select(v_ss, vol_id, session_id, participant.race)
+  } else {
+    data.frame(vol_id = vol_id, session_id = NA, participant.race = NA)
+  }
+}
+
+get_volume_ethnicity <- function(vol_id) {
+  v_ss <- download_session_csv(vol_id)
+  if ("participant.race" %in% names(v_ss)) {
+      dplyr::select(v_ss, vol_id, session_id, participant.ethnicity)
+  } else {
+    data.frame(vol_id = vol_id, session_id = NA, participant.ethnicity = NA)
+  }
+}
+```
+
+```{r}
+get_volume_birthdate(4)
+```
+
+```{r}
+bdts <- purrr::map_dfr(1:20, get_volume_birthdate)
+races <- purrr::map_dfr(1:20, get_volume_race)
+ethn <- purrr::map_dfr(1:20, get_volume_ethnicity)
+gend <- purrr::map_dfr(1:20, get_volume_gender)
+```
+
+```{r}
+m <- dplyr::left_join(bdts, races, by = c("vol_id", "session_id"))
+m <- dplyr::left_join(m, ethn, by = c("vol_id", "session_id"))
+m <- dplyr::left_join(m, gend, by = c("vol_id", "session_id"))
+```
+
+```{r}
+m <- dplyr::left_join(bdts, races, by = c("vol_id", "session_id")) %>%
+  dplyr::left_join(., ethn, by = c("vol_id", "session_id")) %>%
+  dplyr::left_join(., gend, by = c("vol_id", "session_id"))
+```
+
+Wow. Very exciting.
+
+```{r}
+get_volumes_demo <- function(max_vol_id) {
+  bdts <- purrr::map_dfr(1:max_vol_id, get_volume_birthdate)
+  races <- purrr::map_dfr(1:max_vol_id, get_volume_race)
+  ethn <- purrr::map_dfr(1:max_vol_id, get_volume_ethnicity)
+  gend <- purrr::map_dfr(1:max_vol_id, get_volume_gender)
+  
+  m <- dplyr::left_join(bdts, races, by = c("vol_id", "session_id"))
+  m <- dplyr::left_join(m, ethn, by = c("vol_id", "session_id"))
+  m <- dplyr::left_join(m, gend, by = c("vol_id", "session_id"))
+  m
+}
+```
+
+```{r}
+v50 <- get_volumes_demo(50)
+head(v50)
+```
+
