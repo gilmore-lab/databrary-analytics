@@ -43,3 +43,9 @@ Code to produce and plot analytics about Databrary
 - [Report](https://gilmore-lab.github.io/databrary-analytics/institutions-investigators/institutions-investigators.html) on number of investigators at each authorizing institution.
     - To run this report, run `source("institutions-investigators/R/helpers.R")` from the R console.
     - Then run `render_institutions_investigators_report("<YOURDATABRARYLOGIN>"), replacing `<YOURDATABRARYLOGIN>` with your actual Databrary login (email).
+
+# Participant demographics report
+
+- [Report](https://gilmore-lab.github.io/databrary-analytics/participant-demographics/participant-demog-report.html) on the site-wide reported participant demographics.
+    - To run this report, run `source("participant-demographics/R/helpers.R")` from the R console.
+    - Then run `rmarkdown::render("participant-demographics/participant-demog-report.Rmd", params = list(db_login="<YOURDATABRARYLOGIN>")), replacing `<YOURDATABRARYLOGIN>` with your actual Databrary login (email).

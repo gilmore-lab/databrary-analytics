@@ -1,0 +1,158 @@
+---
+title: "Participant demographics report"
+author: "Rick Gilmore"
+date: "`r Sys.time()`"
+output: html_document
+params:
+    db_login: rogilmore@psu.edu
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+
+library(tidyverse) # Mostly for pipe '%>%' operator
+
+source("R/helpers.R")
+```
+
+# Purpose
+
+To summarize the demographic characteristics of participants in shared volumes on Databrary.
+
+# Preliminary
+
+This report adopts the following approach:
+
+- Download the spreadsheet CSVs using the `databraryapi::download_session_csv()` function, then aggregate.
+- Because the API calls are time and resource-consuming, the code below "chunks" the calls into group of 10 volumes each.
+The outputs are saved in separate CSVs, and then reimported.
+
+# Updating spreadsheet CSVs
+
+## Log-in to Databrary
+
+The user must be logged in to access the full spreadsheet data.
+
+```{r login_db}
+databraryapi::login_db(params$db_login)
+```
+
+## Gather demographic data
+
+The following code will not run when this report is rendered for the sake of efficiency.
+Change the chunk option `eval=TRUE` to re-run the chunk and regenerate the data.
+
+```{r acquire-demo-data, eval=FALSE}
+lo <- seq(from = 1, to = 1201, by = 10)
+hi <- seq(from = 10, to = 1210, by = 10)
+
+# Rick really loves functional programming
+purrr::map2(.x = lo, .y = hi, get_save_volumes_demo)
+```
+
+# Load demographic data
+
+This chunk loads the set of CSVs into a common data frame.
+It *will* run when this report is rendered if the data exist in the proper directory.
+
+```{r import-saved, message=FALSE, warning=FALSE}
+if (dir.exists("csv")) {
+demo_df <- load_demog_csvs("csv")  
+} else {
+ message("Data directory empty.")
+ demo_df = NULL
+}
+```
+
+# Print summary tables
+
+## Gender
+
+### Volumes and sessions
+
+```{r gender-volumes}
+gender_df <- demo_df %>%
+  dplyr::filter(., !is.na(participant.gender)) %>%
+  dplyr::group_by(., vol_id) %>%
+  dplyr::summarize(., n_sessions = n()) %>%
+  dplyr::ungroup(.) %>%
+  dplyr::mutate(., n_vols_w_demo = n())
+
+gender_df %>%
+  dplyr::select(., vol_id, n_sessions) %>%
+  knitr::kable(., "html") %>%
+  kableExtra::kable_styling(.)
+```
+
+There are `r unique(gender_df$n_vols_w_demo)` volumes reporting `participant.gender`.
+
+### Number of participants
+
+```{r gender-table}
+xtabs(formula = ~ participant.gender, data = demo_df) %>%
+  knitr::kable(., "html") %>%
+  kableExtra::kable_styling(.)
+```
+
+## Race
+
+### Volumes and sessions
+
+```{r race-volumes}
+race_df <- demo_df %>%
+  dplyr::filter(., !is.na(participant.race)) %>%
+  dplyr::group_by(., vol_id) %>%
+  dplyr::summarize(., n_sessions = n()) %>%
+  dplyr::ungroup(.) %>%
+  dplyr::mutate(., n_vols_w_demo = n())
+
+race_df %>%
+  dplyr::select(., vol_id, n_sessions) %>%
+  knitr::kable(., "html") %>%
+  kableExtra::kable_styling(.)
+```
+
+There are `r unique(race_df$n_vols_w_demo)` volumes reporting `participant.race`.
+
+### Number of participants
+
+```{r race-table}
+xtabs(formula = ~ participant.race, data = demo_df) %>%
+  knitr::kable(., "html") %>%
+  kableExtra::kable_styling(.)
+```
+
+## Ethnicity
+
+### Volumes and sessions
+
+```{r ethnicity-volumes}
+ethnicity_df <- demo_df %>%
+  dplyr::filter(., !is.na(participant.ethnicity)) %>%
+  dplyr::group_by(., vol_id) %>%
+  dplyr::summarize(., n_sessions = n()) %>%
+  dplyr::ungroup(.) %>%
+  dplyr::mutate(., n_vols_w_demo = n())
+
+ethnicity_df %>%
+  dplyr::select(., vol_id, n_sessions) %>%
+  knitr::kable(., "html") %>%
+  kableExtra::kable_styling(.)
+```
+
+There are `r unique(ethnicity_df$n_vols_w_demo)` volumes reporting `participant.ethnicity`.
+
+### Number of participants
+
+```{r ethnicity-table}
+xtabs(formula = ~ participant.ethnicity, data = demo_df) %>%
+  knitr::kable(., "html") %>%
+  kableExtra::kable_styling(.)
+```
+
+# Clean-up
+
+```{r}
+databraryapi::logout_db()
+```
+
