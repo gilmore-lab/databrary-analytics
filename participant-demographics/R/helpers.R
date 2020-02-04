@@ -127,10 +127,50 @@ load_demog_csvs <- function(dir = "participant-demographics/csv") {
     stop("'dir' does not exist.")
   }
   
-  fl <- list.files(dir, "\\.csv", full.names = TRUE)
+  fl <- list.files(dir, "-demog\\.csv$", full.names = TRUE)
   if (is.null(fl)) {
     stop(paste0("No csv files in ", dir, "."))
   }
   purrr::map_dfr(fl, readr::read_csv)
 }
 
+get_volumes_owners <- function(min_vol_id = 1, max_vol_id = 10) {
+  vols_range <- min_vol_id:max_vol_id
+  message("Gathering volume owners")
+  purrr::map_dfr(.x = vols_range, .f = databraryapi::list_volume_owners)
+}
+
+save_volumes_owners <- function(df, min_vol_id, max_vol_id, 
+                                dir = "participant-demographics/csv") {
+  fn <- paste0(dir, "/", stringr::str_pad(min_vol_id, 4, pad = "0"), "-", 
+               stringr::str_pad(max_vol_id, 4, pad = "0"), "-owners.csv")
+  readr::write_csv(df, fn)
+}
+
+get_save_volumes_owners <- function(min_vol_id = 1, max_vol_id = 10) {
+  message(paste0("Getting owner data for volumes ", min_vol_id, "-", max_vol_id))
+  df <- get_volumes_owners(min_vol_id, max_vol_id)
+  message(paste0("Saving owner data for volumes ", min_vol_id, "-", max_vol_id))
+  save_volumes_owners(df, min_vol_id, max_vol_id)
+}
+
+load_owner_csvs <- function(dir = "participant-demographics/csv") {
+  if (!is.character(dir)) {
+    stop("'dir' must be a string")
+  }
+  if (!dir.exists(dir)) {
+    stop("'dir' does not exist.")
+  }
+  
+  fl <- list.files(dir, "-owners\\.csv$", full.names = TRUE)
+  if (is.null(fl)) {
+    stop(paste0("No csv files in ", dir, "."))
+  }
+  purrr::map_dfr(fl, readr::read_csv)
+}
+
+render_participant_demog_report <- function(db_login) {
+  rmarkdown::render("participant-demographics/participant-demog-report.Rmd",
+                    params = list(db_login = db_login))
+  databraryapi::logout_db()
+}

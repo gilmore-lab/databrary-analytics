@@ -55,7 +55,16 @@ hi <- seq(from = 10, to = 1210, by = 10)
 purrr::map2(.x = lo, .y = hi, get_save_volumes_demo)
 ```
 
-# Load demographic data
+This chunk regenerates data for the volume owners.
+It is not run by default, but can be run like the previous chunk.
+
+```{r acquire-owner-data, eval=FALSE}
+purrr::map2(.x = lo, .y = hi, get_save_volumes_owners)
+```
+
+# Load data
+
+## Demographic data 
 
 This chunk loads the set of CSVs into a common data frame.
 It *will* run when this report is rendered if the data exist in the proper directory.
@@ -68,6 +77,20 @@ demo_df <- load_demog_csvs("csv")
  demo_df = NULL
 }
 ```
+
+## Owner data
+
+```{r import-saved-owners, message=FALSE, warning=FALSE}
+if (dir.exists("csv")) {
+  owner_df <- load_owner_csvs("csv")  
+} else {
+ message("Data directory empty.")
+ owner_df = NULL
+}
+```
+
+**NOTE**: The CSV data are stored in a directory that is not synched with GitHub.
+To generate the report, one must generate and save the data locally.
 
 # Summary results
 
@@ -157,6 +180,48 @@ There are `r unique(ethnicity_df$n_vols_w_demo)` volumes reporting `participant.
 xtabs(formula = ~ participant.ethnicity, data = demo_df) %>%
   knitr::kable(., "html") %>%
   kableExtra::kable_styling(.)
+```
+
+## Owners contributing...
+
+**NOTE** There is double-counting of sessions if a volume is owned by more than one investigator.
+
+### Gender data
+
+```{r}
+demog_owners <- dplyr::left_join(demo_df, owner_df, by = "vol_id")
+
+demog_owners %>%
+  dplyr::filter(., !is.na(participant.gender)) %>%
+  dplyr::group_by(., person_id, sortname) %>%
+  dplyr::summarize(., sess_per_pi = n()) %>%
+  dplyr::arrange(., desc(sess_per_pi)) %>%
+    knitr::kable(., "html") %>%
+    kableExtra::kable_styling()
+```
+
+### Race data
+
+```{r}
+demog_owners %>%
+  dplyr::filter(., !is.na(participant.race)) %>%
+  dplyr::group_by(., person_id, sortname) %>%
+  dplyr::summarize(., sess_per_pi = n()) %>%
+  dplyr::arrange(., desc(sess_per_pi)) %>%
+    knitr::kable(., "html") %>%
+    kableExtra::kable_styling()
+```
+
+### Ethnicity data
+
+```{r}
+demog_owners %>%
+  dplyr::filter(., !is.na(participant.ethnicity)) %>%
+  dplyr::group_by(., person_id, sortname) %>%
+  dplyr::summarize(., sess_per_pi = n()) %>%
+  dplyr::arrange(., desc(sess_per_pi)) %>%
+    knitr::kable(., "html") %>%
+    kableExtra::kable_styling()
 ```
 
 # Clean-up
