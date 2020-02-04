@@ -69,7 +69,11 @@ demo_df <- load_demog_csvs("csv")
 }
 ```
 
-# Print summary tables
+# Summary results
+
+## Overall
+
+Databrary has demographic data for $n=$ `r sum(!is.na(demo_df$session_id))` individual sessions.
 
 ## Gender
 
