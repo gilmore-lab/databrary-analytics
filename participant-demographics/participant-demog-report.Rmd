@@ -52,14 +52,20 @@ lo <- seq(from = 1, to = 1201, by = 10)
 hi <- seq(from = 10, to = 1210, by = 10)
 
 # Rick really loves functional programming
-purrr::map2(.x = lo, .y = hi, get_save_volumes_demo)
+purrr::map2(.x = lo, .y = hi, get_save_volumes_demo, , dir = "csv")
 ```
 
 This chunk regenerates data for the volume owners.
 It is not run by default, but can be run like the previous chunk.
 
 ```{r acquire-owner-data, eval=FALSE}
-purrr::map2(.x = lo, .y = hi, get_save_volumes_owners)
+purrr::map2(.x = lo, .y = hi, get_save_volumes_owners, dir = "csv")
+```
+
+This chunk regenerates just the first volume owner data.
+
+```{r, eval = FALSE}
+purrr::map2(.x = lo, .y = hi, get_save_volumes_first_owners, dir = "csv")
 ```
 
 # Load data
@@ -80,13 +86,31 @@ demo_df <- load_demog_csvs("csv")
 
 ## Owner data
 
+All owners.
+
 ```{r import-saved-owners, message=FALSE, warning=FALSE}
 if (dir.exists("csv")) {
-  owner_df <- load_owner_csvs("csv")  
+  owner_df <- load_owner_csvs("csv", fn_suffix = "-owners")  
 } else {
  message("Data directory empty.")
  owner_df = NULL
 }
+```
+
+One owner (the first) per volume.
+
+```{r import-saved-first-owners, message=FALSE, warning=FALSE}
+if (dir.exists("csv")) {
+  first_owner_df <- load_owner_csvs("csv", fn_suffix = "-first-owners")  
+} else {
+ message("Data directory empty.")
+ first_owner_df = NULL
+}
+
+# Filter NAs
+first_owner_df <- first_owner_df %>%
+  dplyr::filter(., !is.na(person_id),
+                !is.na(sortname))
 ```
 
 **NOTE**: The CSV data are stored in a directory that is not synched with GitHub.
@@ -186,15 +210,46 @@ xtabs(formula = ~ participant.ethnicity, data = demo_df) %>%
 
 **NOTE** There is double-counting of sessions if a volume is owned by more than one investigator.
 
+### First owners only
+
+We'll filter the owners to include just one per volume, selecting the first author/owner.
+This provides a more precise estimate of which (first) volume owners are providing demographic data.
+
+### Volumes (with or without demographic data) by first owner
+
+```{r}
+first_owner_vols_df <- first_owner_df %>%
+  dplyr::group_by(., person_id, sortname) %>%
+  dplyr::mutate(., vols_per_pi = n()) %>%
+  dplyr::filter(., !is.na(person_id),
+                !is.na(sortname)) %>%
+  dplyr::ungroup(.)
+
+first_owner_vols_df %>%
+  dplyr::select(., -vol_id) %>%
+  dplyr::group_by(., person_id, sortname, vols_per_pi) %>%
+  dplyr::summarize(., n_vols_shared = mean(vols_per_pi)) %>%
+  dplyr::select(., -vols_per_pi) %>%
+  dplyr::arrange(., desc(n_vols_shared)) %>%
+  knitr::kable(., "html") %>%
+  kableExtra::kable_styling()
+```
+
+Now, combine with demographic data to determine sessions with such data for each of the first owners.
+
+```{r}
+demog_owners <- dplyr::left_join(demo_df, first_owner_vols_df, by = "vol_id")
+```
+
 ### Gender data
 
 ```{r}
-demog_owners <- dplyr::left_join(demo_df, owner_df, by = "vol_id")
-
 demog_owners %>%
   dplyr::filter(., !is.na(participant.gender)) %>%
-  dplyr::group_by(., person_id, sortname) %>%
+  dplyr::group_by(., person_id, sortname, vols_per_pi) %>%
   dplyr::summarize(., sess_per_pi = n()) %>%
+  dplyr::filter(., !is.na(person_id),
+                !is.na(sortname)) %>%
   dplyr::arrange(., desc(sess_per_pi)) %>%
     knitr::kable(., "html") %>%
     kableExtra::kable_styling()
@@ -207,6 +262,8 @@ demog_owners %>%
   dplyr::filter(., !is.na(participant.race)) %>%
   dplyr::group_by(., person_id, sortname) %>%
   dplyr::summarize(., sess_per_pi = n()) %>%
+  dplyr::filter(., !is.na(person_id),
+                !is.na(sortname)) %>%
   dplyr::arrange(., desc(sess_per_pi)) %>%
     knitr::kable(., "html") %>%
     kableExtra::kable_styling()
@@ -219,6 +276,8 @@ demog_owners %>%
   dplyr::filter(., !is.na(participant.ethnicity)) %>%
   dplyr::group_by(., person_id, sortname) %>%
   dplyr::summarize(., sess_per_pi = n()) %>%
+  dplyr::filter(., !is.na(person_id),
+                !is.na(sortname)) %>%
   dplyr::arrange(., desc(sess_per_pi)) %>%
     knitr::kable(., "html") %>%
     kableExtra::kable_styling()
