@@ -136,25 +136,52 @@ load_demog_csvs <- function(dir = "participant-demographics/csv") {
 
 get_volumes_owners <- function(min_vol_id = 1, max_vol_id = 10) {
   vols_range <- min_vol_id:max_vol_id
-  message("Gathering volume owners")
+  message(".Gathering volume owners")
   purrr::map_dfr(.x = vols_range, .f = databraryapi::list_volume_owners)
 }
 
+get_volume_first_owner <- function(vol_id) {
+  df <- databraryapi::list_volume_owners(vol_id)
+  if (purrr::is_empty(df)) {
+    NULL
+  } else {
+    df[1,]
+  }
+}
+
+get_volumes_first_owners <- function(min_vol_id = 1, max_vol_id = 10) {
+  vols_range <- min_vol_id:max_vol_id
+  message(".Gathering volume first owners")
+  purrr::map_dfr(.x = vols_range, .f = get_volume_first_owner)
+}
+
 save_volumes_owners <- function(df, min_vol_id, max_vol_id, 
-                                dir = "participant-demographics/csv") {
+                                dir = "participant-demographics/csv",
+                                fn_suffix = "-owners.csv") {
   fn <- paste0(dir, "/", stringr::str_pad(min_vol_id, 4, pad = "0"), "-", 
-               stringr::str_pad(max_vol_id, 4, pad = "0"), "-owners.csv")
+               stringr::str_pad(max_vol_id, 4, pad = "0"), fn_suffix)
+  message(paste0(".Saving volume owner data to ", fn, "."))
   readr::write_csv(df, fn)
 }
 
-get_save_volumes_owners <- function(min_vol_id = 1, max_vol_id = 10) {
+get_save_volumes_owners <- function(min_vol_id = 1, max_vol_id = 10, 
+                                    dir = "participant-demographics/csv") {
   message(paste0("Getting owner data for volumes ", min_vol_id, "-", max_vol_id))
   df <- get_volumes_owners(min_vol_id, max_vol_id)
   message(paste0("Saving owner data for volumes ", min_vol_id, "-", max_vol_id))
-  save_volumes_owners(df, min_vol_id, max_vol_id)
+  save_volumes_owners(df, min_vol_id, max_vol_id, dir, fn_suffix = "-owners.csv")
 }
 
-load_owner_csvs <- function(dir = "participant-demographics/csv") {
+get_save_volumes_first_owners <- function(min_vol_id = 1, max_vol_id = 10,
+                                          dir = "participant-demographics/csv") {
+  message(paste0("Getting first owner data for volumes ", min_vol_id, "-", max_vol_id))
+  df <- get_volumes_first_owners(min_vol_id, max_vol_id)
+  message(paste0("Saving first owner data for volumes ", min_vol_id, "-", max_vol_id))
+  save_volumes_owners(df, min_vol_id, max_vol_id, dir, fn_suffix = "-first-owners.csv")
+}
+
+load_owner_csvs <- function(dir = "participant-demographics/csv", 
+                            fn_suffix = "-owners") {
   if (!is.character(dir)) {
     stop("'dir' must be a string")
   }
@@ -162,7 +189,7 @@ load_owner_csvs <- function(dir = "participant-demographics/csv") {
     stop("'dir' does not exist.")
   }
   
-  fl <- list.files(dir, "-owners\\.csv$", full.names = TRUE)
+  fl <- list.files(dir, paste0(fn_suffix, "\\.csv$"), full.names = TRUE)
   if (is.null(fl)) {
     stop(paste0("No csv files in ", dir, "."))
   }

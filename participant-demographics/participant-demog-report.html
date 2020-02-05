@@ -1520,7 +1520,7 @@ div.tocify {
 
 <h1 class="title toc-ignore">Participant demographics report</h1>
 <h4 class="author">Rick Gilmore</h4>
-<h4 class="date">2020-02-04 13:26:15</h4>
+<h4 class="date">2020-02-05 11:09:27</h4>
 
 </div>
 
@@ -1553,9 +1553,11 @@ div.tocify {
 hi &lt;- seq(from = 10, to = 1210, by = 10)
 
 # Rick really loves functional programming
-purrr::map2(.x = lo, .y = hi, get_save_volumes_demo)</code></pre>
+purrr::map2(.x = lo, .y = hi, get_save_volumes_demo, , dir = &quot;csv&quot;)</code></pre>
 <p>This chunk regenerates data for the volume owners. It is not run by default, but can be run like the previous chunk.</p>
-<pre class="r"><code>purrr::map2(.x = lo, .y = hi, get_save_volumes_owners)</code></pre>
+<pre class="r"><code>purrr::map2(.x = lo, .y = hi, get_save_volumes_owners, dir = &quot;csv&quot;)</code></pre>
+<p>This chunk regenerates just the first volume owner data.</p>
+<pre class="r"><code>purrr::map2(.x = lo, .y = hi, get_save_volumes_first_owners, dir = &quot;csv&quot;)</code></pre>
 </div>
 </div>
 <div id="load-data" class="section level1">
@@ -1572,12 +1574,25 @@ demo_df &lt;- load_demog_csvs(&quot;csv&quot;)
 </div>
 <div id="owner-data" class="section level2">
 <h2>Owner data</h2>
+<p>All owners.</p>
 <pre class="r"><code>if (dir.exists(&quot;csv&quot;)) {
-  owner_df &lt;- load_owner_csvs(&quot;csv&quot;)  
+  owner_df &lt;- load_owner_csvs(&quot;csv&quot;, fn_suffix = &quot;-owners&quot;)  
 } else {
  message(&quot;Data directory empty.&quot;)
  owner_df = NULL
 }</code></pre>
+<p>One owner (the first) per volume.</p>
+<pre class="r"><code>if (dir.exists(&quot;csv&quot;)) {
+  first_owner_df &lt;- load_owner_csvs(&quot;csv&quot;, fn_suffix = &quot;-first-owners&quot;)  
+} else {
+ message(&quot;Data directory empty.&quot;)
+ first_owner_df = NULL
+}
+
+# Filter NAs
+first_owner_df &lt;- first_owner_df %&gt;%
+  dplyr::filter(., !is.na(person_id),
+                !is.na(sortname))</code></pre>
 <p><strong>NOTE</strong>: The CSV data are stored in a directory that is not synched with GitHub. To generate the report, one must generate and save the data locally.</p>
 </div>
 </div>
@@ -3890,14 +3905,1386 @@ Unknown or not reported
 <div id="owners-contributing" class="section level2">
 <h2>Owners contributing…</h2>
 <p><strong>NOTE</strong> There is double-counting of sessions if a volume is owned by more than one investigator.</p>
+<div id="first-owners-only" class="section level3">
+<h3>First owners only</h3>
+<p>We’ll filter the owners to include just one per volume, selecting the first author/owner. This provides a more precise estimate of which (first) volume owners are providing demographic data.</p>
+</div>
+<div id="volumes-with-or-without-demographic-data-by-first-owner" class="section level3">
+<h3>Volumes (with or without demographic data) by first owner</h3>
+<pre class="r"><code>first_owner_vols_df &lt;- first_owner_df %&gt;%
+  dplyr::group_by(., person_id, sortname) %&gt;%
+  dplyr::mutate(., vols_per_pi = n()) %&gt;%
+  dplyr::filter(., !is.na(person_id),
+                !is.na(sortname)) %&gt;%
+  dplyr::ungroup(.)
+
+first_owner_vols_df %&gt;%
+  dplyr::select(., -vol_id) %&gt;%
+  dplyr::group_by(., person_id, sortname, vols_per_pi) %&gt;%
+  dplyr::summarize(., n_vols_shared = mean(vols_per_pi)) %&gt;%
+  dplyr::select(., -vols_per_pi) %&gt;%
+  dplyr::arrange(., desc(n_vols_shared)) %&gt;%
+  knitr::kable(., &quot;html&quot;) %&gt;%
+  kableExtra::kable_styling()</code></pre>
+<table class="table" style="margin-left: auto; margin-right: auto;">
+<thead>
+<tr>
+<th style="text-align:right;">
+person_id
+</th>
+<th style="text-align:left;">
+sortname
+</th>
+<th style="text-align:right;">
+n_vols_shared
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right;">
+5
+</td>
+<td style="text-align:left;">
+Adolph
+</td>
+<td style="text-align:right;">
+63
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1117
+</td>
+<td style="text-align:left;">
+Jaswal
+</td>
+<td style="text-align:right;">
+61
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+6
+</td>
+<td style="text-align:left;">
+Gilmore
+</td>
+<td style="text-align:right;">
+19
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+2945
+</td>
+<td style="text-align:left;">
+Palmquist
+</td>
+<td style="text-align:right;">
+16
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+318
+</td>
+<td style="text-align:left;">
+Lillard
+</td>
+<td style="text-align:right;">
+15
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+594
+</td>
+<td style="text-align:left;">
+Beier
+</td>
+<td style="text-align:right;">
+15
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+60
+</td>
+<td style="text-align:left;">
+Vishton
+</td>
+<td style="text-align:right;">
+12
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+61
+</td>
+<td style="text-align:left;">
+Bergelson
+</td>
+<td style="text-align:right;">
+12
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+277
+</td>
+<td style="text-align:left;">
+Rhodes
+</td>
+<td style="text-align:right;">
+12
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+2525
+</td>
+<td style="text-align:left;">
+Hamlin
+</td>
+<td style="text-align:right;">
+12
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+258
+</td>
+<td style="text-align:left;">
+Frank
+</td>
+<td style="text-align:right;">
+11
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+288
+</td>
+<td style="text-align:left;">
+Fabricius
+</td>
+<td style="text-align:right;">
+10
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+5539
+</td>
+<td style="text-align:left;">
+Bauer
+</td>
+<td style="text-align:right;">
+9
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+2653
+</td>
+<td style="text-align:left;">
+Scott
+</td>
+<td style="text-align:right;">
+8
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+93
+</td>
+<td style="text-align:left;">
+Johnson
+</td>
+<td style="text-align:right;">
+7
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+118
+</td>
+<td style="text-align:left;">
+Needham
+</td>
+<td style="text-align:right;">
+7
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+650
+</td>
+<td style="text-align:left;">
+Casasola
+</td>
+<td style="text-align:right;">
+5
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1515
+</td>
+<td style="text-align:left;">
+Srinivasan
+</td>
+<td style="text-align:right;">
+5
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+2219
+</td>
+<td style="text-align:left;">
+Shirai
+</td>
+<td style="text-align:right;">
+5
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+11
+</td>
+<td style="text-align:left;">
+Tamis-LeMonda
+</td>
+<td style="text-align:right;">
+4
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+70
+</td>
+<td style="text-align:left;">
+Messinger
+</td>
+<td style="text-align:right;">
+4
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+161
+</td>
+<td style="text-align:left;">
+Smith
+</td>
+<td style="text-align:right;">
+4
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+252
+</td>
+<td style="text-align:left;">
+Scherf
+</td>
+<td style="text-align:right;">
+4
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+562
+</td>
+<td style="text-align:left;">
+Weisberg
+</td>
+<td style="text-align:right;">
+4
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1197
+</td>
+<td style="text-align:left;">
+Jirout
+</td>
+<td style="text-align:right;">
+4
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1699
+</td>
+<td style="text-align:left;">
+Noles
+</td>
+<td style="text-align:right;">
+4
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+2587
+</td>
+<td style="text-align:left;">
+de Marchena
+</td>
+<td style="text-align:right;">
+4
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+4142
+</td>
+<td style="text-align:left;">
+Gladstone
+</td>
+<td style="text-align:right;">
+4
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+5415
+</td>
+<td style="text-align:left;">
+Frog
+</td>
+<td style="text-align:right;">
+4
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+104
+</td>
+<td style="text-align:left;">
+Barr
+</td>
+<td style="text-align:right;">
+3
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+126
+</td>
+<td style="text-align:left;">
+Fausey
+</td>
+<td style="text-align:right;">
+3
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+294
+</td>
+<td style="text-align:left;">
+Bertenthal
+</td>
+<td style="text-align:right;">
+3
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+313
+</td>
+<td style="text-align:left;">
+Brannon
+</td>
+<td style="text-align:right;">
+3
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+376
+</td>
+<td style="text-align:left;">
+Bahrick
+</td>
+<td style="text-align:right;">
+3
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+531
+</td>
+<td style="text-align:left;">
+Goldstein
+</td>
+<td style="text-align:right;">
+3
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+959
+</td>
+<td style="text-align:left;">
+Paulus
+</td>
+<td style="text-align:right;">
+3
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1001
+</td>
+<td style="text-align:left;">
+Foushee
+</td>
+<td style="text-align:right;">
+3
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+2173
+</td>
+<td style="text-align:left;">
+Bonawitz
+</td>
+<td style="text-align:right;">
+3
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+2382
+</td>
+<td style="text-align:left;">
+Berger
+</td>
+<td style="text-align:right;">
+3
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+5475
+</td>
+<td style="text-align:left;">
+Gweon
+</td>
+<td style="text-align:right;">
+3
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+82
+</td>
+<td style="text-align:left;">
+LoBue
+</td>
+<td style="text-align:right;">
+2
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+96
+</td>
+<td style="text-align:left;">
+Perez-Edgar
+</td>
+<td style="text-align:right;">
+2
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+111
+</td>
+<td style="text-align:left;">
+Sobel
+</td>
+<td style="text-align:right;">
+2
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+120
+</td>
+<td style="text-align:left;">
+Yu
+</td>
+<td style="text-align:right;">
+2
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+368
+</td>
+<td style="text-align:left;">
+Raver
+</td>
+<td style="text-align:right;">
+2
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+384
+</td>
+<td style="text-align:left;">
+Lee
+</td>
+<td style="text-align:right;">
+2
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+437
+</td>
+<td style="text-align:left;">
+Seisler
+</td>
+<td style="text-align:right;">
+2
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+440
+</td>
+<td style="text-align:left;">
+Kaufman
+</td>
+<td style="text-align:right;">
+2
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+518
+</td>
+<td style="text-align:left;">
+Soderstrom
+</td>
+<td style="text-align:right;">
+2
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+538
+</td>
+<td style="text-align:left;">
+Oakes
+</td>
+<td style="text-align:right;">
+2
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+798
+</td>
+<td style="text-align:left;">
+Cordes
+</td>
+<td style="text-align:right;">
+2
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1034
+</td>
+<td style="text-align:left;">
+Cristia
+</td>
+<td style="text-align:right;">
+2
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1256
+</td>
+<td style="text-align:left;">
+Frank
+</td>
+<td style="text-align:right;">
+2
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1889
+</td>
+<td style="text-align:left;">
+Nonaka
+</td>
+<td style="text-align:right;">
+2
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+2521
+</td>
+<td style="text-align:left;">
+Hartshorne
+</td>
+<td style="text-align:right;">
+2
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+3341
+</td>
+<td style="text-align:left;">
+Admin
+</td>
+<td style="text-align:right;">
+2
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+3701
+</td>
+<td style="text-align:left;">
+Chemla
+</td>
+<td style="text-align:right;">
+2
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+3746
+</td>
+<td style="text-align:left;">
+Baldwin
+</td>
+<td style="text-align:right;">
+2
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+4291
+</td>
+<td style="text-align:left;">
+Nez
+</td>
+<td style="text-align:right;">
+2
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+4605
+</td>
+<td style="text-align:left;">
+Froemke
+</td>
+<td style="text-align:right;">
+2
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+4685
+</td>
+<td style="text-align:left;">
+Arunachalam
+</td>
+<td style="text-align:right;">
+2
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+4945
+</td>
+<td style="text-align:left;">
+Lombardi
+</td>
+<td style="text-align:right;">
+2
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+14
+</td>
+<td style="text-align:left;">
+Franchak
+</td>
+<td style="text-align:right;">
+1
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+20
+</td>
+<td style="text-align:left;">
+Gordon
+</td>
+<td style="text-align:right;">
+1
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+32
+</td>
+<td style="text-align:left;">
+Karasik
+</td>
+<td style="text-align:right;">
+1
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+102
+</td>
+<td style="text-align:left;">
+Kaldy
+</td>
+<td style="text-align:right;">
+1
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+245
+</td>
+<td style="text-align:left;">
+Wilkinson
+</td>
+<td style="text-align:right;">
+1
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+254
+</td>
+<td style="text-align:left;">
+Jayaraman
+</td>
+<td style="text-align:right;">
+1
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+255
+</td>
+<td style="text-align:left;">
+Dusing
+</td>
+<td style="text-align:right;">
+1
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+264
+</td>
+<td style="text-align:left;">
+DeLoache
+</td>
+<td style="text-align:right;">
+1
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+273
+</td>
+<td style="text-align:left;">
+Wyble
+</td>
+<td style="text-align:right;">
+1
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+274
+</td>
+<td style="text-align:left;">
+Saffran
+</td>
+<td style="text-align:right;">
+1
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+279
+</td>
+<td style="text-align:left;">
+Naigles
+</td>
+<td style="text-align:right;">
+1
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+297
+</td>
+<td style="text-align:left;">
+Amso
+</td>
+<td style="text-align:right;">
+1
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+325
+</td>
+<td style="text-align:left;">
+Carlsen
+</td>
+<td style="text-align:right;">
+1
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+332
+</td>
+<td style="text-align:left;">
+Baker
+</td>
+<td style="text-align:right;">
+1
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+334
+</td>
+<td style="text-align:left;">
+Iverson
+</td>
+<td style="text-align:right;">
+1
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+474
+</td>
+<td style="text-align:left;">
+Moulson
+</td>
+<td style="text-align:right;">
+1
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+491
+</td>
+<td style="text-align:left;">
+Bunge
+</td>
+<td style="text-align:right;">
+1
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+537
+</td>
+<td style="text-align:left;">
+Demuth
+</td>
+<td style="text-align:right;">
+1
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+610
+</td>
+<td style="text-align:left;">
+Gill
+</td>
+<td style="text-align:right;">
+1
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+624
+</td>
+<td style="text-align:left;">
+Horst
+</td>
+<td style="text-align:right;">
+1
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+681
+</td>
+<td style="text-align:left;">
+Cook
+</td>
+<td style="text-align:right;">
+1
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+988
+</td>
+<td style="text-align:left;">
+Heiman
+</td>
+<td style="text-align:right;">
+1
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1216
+</td>
+<td style="text-align:left;">
+Goksun
+</td>
+<td style="text-align:right;">
+1
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1254
+</td>
+<td style="text-align:left;">
+Blair
+</td>
+<td style="text-align:right;">
+1
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1280
+</td>
+<td style="text-align:left;">
+Brooker
+</td>
+<td style="text-align:right;">
+1
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1371
+</td>
+<td style="text-align:left;">
+Lew-Williams
+</td>
+<td style="text-align:right;">
+1
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1719
+</td>
+<td style="text-align:left;">
+Fawcett
+</td>
+<td style="text-align:right;">
+1
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1977
+</td>
+<td style="text-align:left;">
+Booth
+</td>
+<td style="text-align:right;">
+1
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+2027
+</td>
+<td style="text-align:left;">
+Wade
+</td>
+<td style="text-align:right;">
+1
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+2176
+</td>
+<td style="text-align:left;">
+Harbourne
+</td>
+<td style="text-align:right;">
+1
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+2223
+</td>
+<td style="text-align:left;">
+Arshad
+</td>
+<td style="text-align:right;">
+1
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+2693
+</td>
+<td style="text-align:left;">
+Robinovitch
+</td>
+<td style="text-align:right;">
+1
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+2704
+</td>
+<td style="text-align:left;">
+Kukke
+</td>
+<td style="text-align:right;">
+1
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+2738
+</td>
+<td style="text-align:left;">
+Cirelli
+</td>
+<td style="text-align:right;">
+1
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+2746
+</td>
+<td style="text-align:left;">
+Aschersleben
+</td>
+<td style="text-align:right;">
+1
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+2854
+</td>
+<td style="text-align:left;">
+Trehub
+</td>
+<td style="text-align:right;">
+1
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+2921
+</td>
+<td style="text-align:left;">
+Xu
+</td>
+<td style="text-align:right;">
+1
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+2936
+</td>
+<td style="text-align:left;">
+Shrout
+</td>
+<td style="text-align:right;">
+1
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+2993
+</td>
+<td style="text-align:left;">
+Stout
+</td>
+<td style="text-align:right;">
+1
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+3037
+</td>
+<td style="text-align:left;">
+Yurovsky
+</td>
+<td style="text-align:right;">
+1
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+3087
+</td>
+<td style="text-align:left;">
+Hannon
+</td>
+<td style="text-align:right;">
+1
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+3299
+</td>
+<td style="text-align:left;">
+Hay
+</td>
+<td style="text-align:right;">
+1
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+3519
+</td>
+<td style="text-align:left;">
+Admodisastro
+</td>
+<td style="text-align:right;">
+1
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+3600
+</td>
+<td style="text-align:left;">
+Stefan
+</td>
+<td style="text-align:right;">
+1
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+3812
+</td>
+<td style="text-align:left;">
+Miller
+</td>
+<td style="text-align:right;">
+1
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+3830
+</td>
+<td style="text-align:left;">
+Braun
+</td>
+<td style="text-align:right;">
+1
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+3854
+</td>
+<td style="text-align:left;">
+Merry
+</td>
+<td style="text-align:right;">
+1
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+3967
+</td>
+<td style="text-align:left;">
+Soley
+</td>
+<td style="text-align:right;">
+1
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+4458
+</td>
+<td style="text-align:left;">
+Prado
+</td>
+<td style="text-align:right;">
+1
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+4546
+</td>
+<td style="text-align:left;">
+Gredebäck
+</td>
+<td style="text-align:right;">
+1
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+4577
+</td>
+<td style="text-align:left;">
+Nelson
+</td>
+<td style="text-align:right;">
+1
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+4687
+</td>
+<td style="text-align:left;">
+Henderson
+</td>
+<td style="text-align:right;">
+1
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+5259
+</td>
+<td style="text-align:left;">
+Swiggum
+</td>
+<td style="text-align:right;">
+1
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+5278
+</td>
+<td style="text-align:left;">
+Strong
+</td>
+<td style="text-align:right;">
+1
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+5292
+</td>
+<td style="text-align:left;">
+Insel
+</td>
+<td style="text-align:right;">
+1
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+5325
+</td>
+<td style="text-align:left;">
+Frankenhuis
+</td>
+<td style="text-align:right;">
+1
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+5351
+</td>
+<td style="text-align:left;">
+Rushton
+</td>
+<td style="text-align:right;">
+1
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+5709
+</td>
+<td style="text-align:left;">
+Kaur
+</td>
+<td style="text-align:right;">
+1
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+5894
+</td>
+<td style="text-align:left;">
+Starr
+</td>
+<td style="text-align:right;">
+1
+</td>
+</tr>
+</tbody>
+</table>
+<p>Now, combine with demographic data to determine sessions with such data for each of the first owners.</p>
+<pre class="r"><code>demog_owners &lt;- dplyr::left_join(demo_df, first_owner_vols_df, by = &quot;vol_id&quot;)</code></pre>
+</div>
 <div id="gender-data" class="section level3">
 <h3>Gender data</h3>
-<pre class="r"><code>demog_owners &lt;- dplyr::left_join(demo_df, owner_df, by = &quot;vol_id&quot;)
-
-demog_owners %&gt;%
+<pre class="r"><code>demog_owners %&gt;%
   dplyr::filter(., !is.na(participant.gender)) %&gt;%
-  dplyr::group_by(., person_id, sortname) %&gt;%
+  dplyr::group_by(., person_id, sortname, vols_per_pi) %&gt;%
   dplyr::summarize(., sess_per_pi = n()) %&gt;%
+  dplyr::filter(., !is.na(person_id),
+                !is.na(sortname)) %&gt;%
   dplyr::arrange(., desc(sess_per_pi)) %&gt;%
     knitr::kable(., &quot;html&quot;) %&gt;%
     kableExtra::kable_styling()</code></pre>
@@ -3909,6 +5296,9 @@ person_id
 </th>
 <th style="text-align:left;">
 sortname
+</th>
+<th style="text-align:right;">
+vols_per_pi
 </th>
 <th style="text-align:right;">
 sess_per_pi
@@ -3924,7 +5314,10 @@ sess_per_pi
 Adolph
 </td>
 <td style="text-align:right;">
-3643
+63
+</td>
+<td style="text-align:right;">
+1776
 </td>
 </tr>
 <tr>
@@ -3935,29 +5328,10 @@ Adolph
 Tamis-LeMonda
 </td>
 <td style="text-align:right;">
-2591
-</td>
-</tr>
-<tr>
-<td style="text-align:right;">
-32
-</td>
-<td style="text-align:left;">
-Karasik
+4
 </td>
 <td style="text-align:right;">
-929
-</td>
-</tr>
-<tr>
-<td style="text-align:right;">
-4291
-</td>
-<td style="text-align:left;">
-Nez
-</td>
-<td style="text-align:right;">
-810
+1344
 </td>
 </tr>
 <tr>
@@ -3968,59 +5342,7 @@ Nez
 Frank
 </td>
 <td style="text-align:right;">
-461
-</td>
-</tr>
-<tr>
-<td style="text-align:right;">
-2095
-</td>
-<td style="text-align:left;">
-Sullivan
-</td>
-<td style="text-align:right;">
-461
-</td>
-</tr>
-<tr>
-<td style="text-align:right;">
-2773
-</td>
-<td style="text-align:left;">
-Wojcik
-</td>
-<td style="text-align:right;">
-461
-</td>
-</tr>
-<tr>
-<td style="text-align:right;">
-3585
-</td>
-<td style="text-align:left;">
-Mei
-</td>
-<td style="text-align:right;">
-461
-</td>
-</tr>
-<tr>
-<td style="text-align:right;">
-5739
-</td>
-<td style="text-align:left;">
-Vong
-</td>
-<td style="text-align:right;">
-461
-</td>
-</tr>
-<tr>
-<td style="text-align:right;">
-5748
-</td>
-<td style="text-align:left;">
-Perfors
+11
 </td>
 <td style="text-align:right;">
 461
@@ -4034,7 +5356,10 @@ Perfors
 Bergelson
 </td>
 <td style="text-align:right;">
-447
+12
+</td>
+<td style="text-align:right;">
+402
 </td>
 </tr>
 <tr>
@@ -4045,15 +5370,7 @@ Bergelson
 Sobel
 </td>
 <td style="text-align:right;">
-358
-</td>
-</tr>
-<tr>
-<td style="text-align:right;">
-562
-</td>
-<td style="text-align:left;">
-Weisberg
+2
 </td>
 <td style="text-align:right;">
 358
@@ -4067,29 +5384,10 @@ Weisberg
 Demuth
 </td>
 <td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
 314
-</td>
-</tr>
-<tr>
-<td style="text-align:right;">
-6
-</td>
-<td style="text-align:left;">
-Gilmore
-</td>
-<td style="text-align:right;">
-309
-</td>
-</tr>
-<tr>
-<td style="text-align:right;">
-4650
-</td>
-<td style="text-align:left;">
-Spies
-</td>
-<td style="text-align:right;">
-231
 </td>
 </tr>
 <tr>
@@ -4100,15 +5398,7 @@ Spies
 LoBue
 </td>
 <td style="text-align:right;">
-157
-</td>
-</tr>
-<tr>
-<td style="text-align:right;">
-346
-</td>
-<td style="text-align:left;">
-Thrasher
+2
 </td>
 <td style="text-align:right;">
 157
@@ -4116,24 +5406,16 @@ Thrasher
 </tr>
 <tr>
 <td style="text-align:right;">
-101
+6
 </td>
 <td style="text-align:left;">
-Lockman
+Gilmore
 </td>
 <td style="text-align:right;">
-115
-</td>
-</tr>
-<tr>
-<td style="text-align:right;">
-506
-</td>
-<td style="text-align:left;">
-Rachwani
+19
 </td>
 <td style="text-align:right;">
-115
+133
 </td>
 </tr>
 <tr>
@@ -4144,51 +5426,10 @@ Rachwani
 Robinovitch
 </td>
 <td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
 105
-</td>
-</tr>
-<tr>
-<td style="text-align:right;">
-14
-</td>
-<td style="text-align:left;">
-Franchak
-</td>
-<td style="text-align:right;">
-77
-</td>
-</tr>
-<tr>
-<td style="text-align:right;">
-254
-</td>
-<td style="text-align:left;">
-Jayaraman
-</td>
-<td style="text-align:right;">
-72
-</td>
-</tr>
-<tr>
-<td style="text-align:right;">
-160
-</td>
-<td style="text-align:left;">
-Raudies
-</td>
-<td style="text-align:right;">
-69
-</td>
-</tr>
-<tr>
-<td style="text-align:right;">
-161
-</td>
-<td style="text-align:left;">
-Smith
-</td>
-<td style="text-align:right;">
-69
 </td>
 </tr>
 <tr>
@@ -4197,6 +5438,9 @@ Smith
 </td>
 <td style="text-align:left;">
 Messinger
+</td>
+<td style="text-align:right;">
+4
 </td>
 <td style="text-align:right;">
 42
@@ -4210,106 +5454,10 @@ Messinger
 Fabricius
 </td>
 <td style="text-align:right;">
-36
-</td>
-</tr>
-<tr>
-<td style="text-align:right;">
-477
-</td>
-<td style="text-align:left;">
-Warlaumont
+10
 </td>
 <td style="text-align:right;">
 36
-</td>
-</tr>
-<tr>
-<td style="text-align:right;">
-518
-</td>
-<td style="text-align:left;">
-Soderstrom
-</td>
-<td style="text-align:right;">
-36
-</td>
-</tr>
-<tr>
-<td style="text-align:right;">
-1034
-</td>
-<td style="text-align:left;">
-Cristia
-</td>
-<td style="text-align:right;">
-36
-</td>
-</tr>
-<tr>
-<td style="text-align:right;">
-3046
-</td>
-<td style="text-align:left;">
-Durrant
-</td>
-<td style="text-align:right;">
-36
-</td>
-</tr>
-<tr>
-<td style="text-align:right;">
-3053
-</td>
-<td style="text-align:left;">
-Rowland
-</td>
-<td style="text-align:right;">
-36
-</td>
-</tr>
-<tr>
-<td style="text-align:right;">
-3062
-</td>
-<td style="text-align:left;">
-Casillas
-</td>
-<td style="text-align:right;">
-36
-</td>
-</tr>
-<tr>
-<td style="text-align:right;">
-3094
-</td>
-<td style="text-align:left;">
-Rosemberg
-</td>
-<td style="text-align:right;">
-36
-</td>
-</tr>
-<tr>
-<td style="text-align:right;">
-3312
-</td>
-<td style="text-align:left;">
-Bunce
-</td>
-<td style="text-align:right;">
-36
-</td>
-</tr>
-<tr>
-<td style="text-align:right;">
-437
-</td>
-<td style="text-align:left;">
-Seisler
-</td>
-<td style="text-align:right;">
-31
 </td>
 </tr>
 <tr>
@@ -4320,18 +5468,10 @@ Seisler
 Cordes
 </td>
 <td style="text-align:right;">
+2
+</td>
+<td style="text-align:right;">
 16
-</td>
-</tr>
-<tr>
-<td style="text-align:right;">
-406
-</td>
-<td style="text-align:left;">
-Soska
-</td>
-<td style="text-align:right;">
-15
 </td>
 </tr>
 <tr>
@@ -4342,29 +5482,10 @@ Soska
 Barr
 </td>
 <td style="text-align:right;">
-11
-</td>
-</tr>
-<tr>
-<td style="text-align:right;">
-4834
-</td>
-<td style="text-align:left;">
-Blanchfield
-</td>
-<td style="text-align:right;">
-11
-</td>
-</tr>
-<tr>
-<td style="text-align:right;">
-289
-</td>
-<td style="text-align:left;">
-Gonzales
-</td>
-<td style="text-align:right;">
 3
+</td>
+<td style="text-align:right;">
+11
 </td>
 </tr>
 <tr>
@@ -4373,6 +5494,9 @@ Gonzales
 </td>
 <td style="text-align:left;">
 Dusing
+</td>
+<td style="text-align:right;">
+1
 </td>
 <td style="text-align:right;">
 1
@@ -4387,6 +5511,8 @@ Dusing
   dplyr::filter(., !is.na(participant.race)) %&gt;%
   dplyr::group_by(., person_id, sortname) %&gt;%
   dplyr::summarize(., sess_per_pi = n()) %&gt;%
+  dplyr::filter(., !is.na(person_id),
+                !is.na(sortname)) %&gt;%
   dplyr::arrange(., desc(sess_per_pi)) %&gt;%
     knitr::kable(., &quot;html&quot;) %&gt;%
     kableExtra::kable_styling()</code></pre>
@@ -4413,7 +5539,7 @@ sess_per_pi
 Adolph
 </td>
 <td style="text-align:right;">
-3635
+1770
 </td>
 </tr>
 <tr>
@@ -4424,29 +5550,7 @@ Adolph
 Tamis-LeMonda
 </td>
 <td style="text-align:right;">
-2589
-</td>
-</tr>
-<tr>
-<td style="text-align:right;">
-32
-</td>
-<td style="text-align:left;">
-Karasik
-</td>
-<td style="text-align:right;">
-927
-</td>
-</tr>
-<tr>
-<td style="text-align:right;">
-4291
-</td>
-<td style="text-align:left;">
-Nez
-</td>
-<td style="text-align:right;">
-810
+1344
 </td>
 </tr>
 <tr>
@@ -4462,68 +5566,13 @@ Frank
 </tr>
 <tr>
 <td style="text-align:right;">
-2095
-</td>
-<td style="text-align:left;">
-Sullivan
-</td>
-<td style="text-align:right;">
-461
-</td>
-</tr>
-<tr>
-<td style="text-align:right;">
-2773
-</td>
-<td style="text-align:left;">
-Wojcik
-</td>
-<td style="text-align:right;">
-461
-</td>
-</tr>
-<tr>
-<td style="text-align:right;">
-3585
-</td>
-<td style="text-align:left;">
-Mei
-</td>
-<td style="text-align:right;">
-461
-</td>
-</tr>
-<tr>
-<td style="text-align:right;">
-5739
-</td>
-<td style="text-align:left;">
-Vong
-</td>
-<td style="text-align:right;">
-461
-</td>
-</tr>
-<tr>
-<td style="text-align:right;">
-5748
-</td>
-<td style="text-align:left;">
-Perfors
-</td>
-<td style="text-align:right;">
-461
-</td>
-</tr>
-<tr>
-<td style="text-align:right;">
 61
 </td>
 <td style="text-align:left;">
 Bergelson
 </td>
 <td style="text-align:right;">
-447
+402
 </td>
 </tr>
 <tr>
@@ -4539,39 +5588,6 @@ Sobel
 </tr>
 <tr>
 <td style="text-align:right;">
-562
-</td>
-<td style="text-align:left;">
-Weisberg
-</td>
-<td style="text-align:right;">
-357
-</td>
-</tr>
-<tr>
-<td style="text-align:right;">
-4650
-</td>
-<td style="text-align:left;">
-Spies
-</td>
-<td style="text-align:right;">
-231
-</td>
-</tr>
-<tr>
-<td style="text-align:right;">
-6
-</td>
-<td style="text-align:left;">
-Gilmore
-</td>
-<td style="text-align:right;">
-156
-</td>
-</tr>
-<tr>
-<td style="text-align:right;">
 82
 </td>
 <td style="text-align:left;">
@@ -4579,50 +5595,6 @@ LoBue
 </td>
 <td style="text-align:right;">
 134
-</td>
-</tr>
-<tr>
-<td style="text-align:right;">
-346
-</td>
-<td style="text-align:left;">
-Thrasher
-</td>
-<td style="text-align:right;">
-134
-</td>
-</tr>
-<tr>
-<td style="text-align:right;">
-101
-</td>
-<td style="text-align:left;">
-Lockman
-</td>
-<td style="text-align:right;">
-115
-</td>
-</tr>
-<tr>
-<td style="text-align:right;">
-506
-</td>
-<td style="text-align:left;">
-Rachwani
-</td>
-<td style="text-align:right;">
-115
-</td>
-</tr>
-<tr>
-<td style="text-align:right;">
-14
-</td>
-<td style="text-align:left;">
-Franchak
-</td>
-<td style="text-align:right;">
-77
 </td>
 </tr>
 <tr>
@@ -4638,112 +5610,13 @@ Messinger
 </tr>
 <tr>
 <td style="text-align:right;">
-477
+6
 </td>
 <td style="text-align:left;">
-Warlaumont
-</td>
-<td style="text-align:right;">
-36
-</td>
-</tr>
-<tr>
-<td style="text-align:right;">
-518
-</td>
-<td style="text-align:left;">
-Soderstrom
-</td>
-<td style="text-align:right;">
-36
-</td>
-</tr>
-<tr>
-<td style="text-align:right;">
-1034
-</td>
-<td style="text-align:left;">
-Cristia
-</td>
-<td style="text-align:right;">
-36
-</td>
-</tr>
-<tr>
-<td style="text-align:right;">
-3046
-</td>
-<td style="text-align:left;">
-Durrant
-</td>
-<td style="text-align:right;">
-36
-</td>
-</tr>
-<tr>
-<td style="text-align:right;">
-3053
-</td>
-<td style="text-align:left;">
-Rowland
-</td>
-<td style="text-align:right;">
-36
-</td>
-</tr>
-<tr>
-<td style="text-align:right;">
-3062
-</td>
-<td style="text-align:left;">
-Casillas
-</td>
-<td style="text-align:right;">
-36
-</td>
-</tr>
-<tr>
-<td style="text-align:right;">
-3094
-</td>
-<td style="text-align:left;">
-Rosemberg
-</td>
-<td style="text-align:right;">
-36
-</td>
-</tr>
-<tr>
-<td style="text-align:right;">
-3312
-</td>
-<td style="text-align:left;">
-Bunce
-</td>
-<td style="text-align:right;">
-36
-</td>
-</tr>
-<tr>
-<td style="text-align:right;">
-437
-</td>
-<td style="text-align:left;">
-Seisler
+Gilmore
 </td>
 <td style="text-align:right;">
 31
-</td>
-</tr>
-<tr>
-<td style="text-align:right;">
-406
-</td>
-<td style="text-align:left;">
-Soska
-</td>
-<td style="text-align:right;">
-15
 </td>
 </tr>
 <tr>
@@ -4759,43 +5632,10 @@ Barr
 </tr>
 <tr>
 <td style="text-align:right;">
-4834
-</td>
-<td style="text-align:left;">
-Blanchfield
-</td>
-<td style="text-align:right;">
-11
-</td>
-</tr>
-<tr>
-<td style="text-align:right;">
-254
-</td>
-<td style="text-align:left;">
-Jayaraman
-</td>
-<td style="text-align:right;">
-3
-</td>
-</tr>
-<tr>
-<td style="text-align:right;">
 288
 </td>
 <td style="text-align:left;">
 Fabricius
-</td>
-<td style="text-align:right;">
-3
-</td>
-</tr>
-<tr>
-<td style="text-align:right;">
-289
-</td>
-<td style="text-align:left;">
-Gonzales
 </td>
 <td style="text-align:right;">
 3
@@ -4821,6 +5661,8 @@ Dusing
   dplyr::filter(., !is.na(participant.ethnicity)) %&gt;%
   dplyr::group_by(., person_id, sortname) %&gt;%
   dplyr::summarize(., sess_per_pi = n()) %&gt;%
+  dplyr::filter(., !is.na(person_id),
+                !is.na(sortname)) %&gt;%
   dplyr::arrange(., desc(sess_per_pi)) %&gt;%
     knitr::kable(., &quot;html&quot;) %&gt;%
     kableExtra::kable_styling()</code></pre>
@@ -4847,7 +5689,7 @@ sess_per_pi
 Adolph
 </td>
 <td style="text-align:right;">
-3612
+1757
 </td>
 </tr>
 <tr>
@@ -4858,29 +5700,7 @@ Adolph
 Tamis-LeMonda
 </td>
 <td style="text-align:right;">
-2586
-</td>
-</tr>
-<tr>
-<td style="text-align:right;">
-32
-</td>
-<td style="text-align:left;">
-Karasik
-</td>
-<td style="text-align:right;">
-924
-</td>
-</tr>
-<tr>
-<td style="text-align:right;">
-4291
-</td>
-<td style="text-align:left;">
-Nez
-</td>
-<td style="text-align:right;">
-790
+1344
 </td>
 </tr>
 <tr>
@@ -4896,68 +5716,13 @@ Frank
 </tr>
 <tr>
 <td style="text-align:right;">
-2095
-</td>
-<td style="text-align:left;">
-Sullivan
-</td>
-<td style="text-align:right;">
-461
-</td>
-</tr>
-<tr>
-<td style="text-align:right;">
-2773
-</td>
-<td style="text-align:left;">
-Wojcik
-</td>
-<td style="text-align:right;">
-461
-</td>
-</tr>
-<tr>
-<td style="text-align:right;">
-3585
-</td>
-<td style="text-align:left;">
-Mei
-</td>
-<td style="text-align:right;">
-461
-</td>
-</tr>
-<tr>
-<td style="text-align:right;">
-5739
-</td>
-<td style="text-align:left;">
-Vong
-</td>
-<td style="text-align:right;">
-461
-</td>
-</tr>
-<tr>
-<td style="text-align:right;">
-5748
-</td>
-<td style="text-align:left;">
-Perfors
-</td>
-<td style="text-align:right;">
-461
-</td>
-</tr>
-<tr>
-<td style="text-align:right;">
 61
 </td>
 <td style="text-align:left;">
 Bergelson
 </td>
 <td style="text-align:right;">
-447
+402
 </td>
 </tr>
 <tr>
@@ -4973,72 +5738,6 @@ Sobel
 </tr>
 <tr>
 <td style="text-align:right;">
-562
-</td>
-<td style="text-align:left;">
-Weisberg
-</td>
-<td style="text-align:right;">
-358
-</td>
-</tr>
-<tr>
-<td style="text-align:right;">
-4650
-</td>
-<td style="text-align:left;">
-Spies
-</td>
-<td style="text-align:right;">
-231
-</td>
-</tr>
-<tr>
-<td style="text-align:right;">
-6
-</td>
-<td style="text-align:left;">
-Gilmore
-</td>
-<td style="text-align:right;">
-156
-</td>
-</tr>
-<tr>
-<td style="text-align:right;">
-101
-</td>
-<td style="text-align:left;">
-Lockman
-</td>
-<td style="text-align:right;">
-114
-</td>
-</tr>
-<tr>
-<td style="text-align:right;">
-506
-</td>
-<td style="text-align:left;">
-Rachwani
-</td>
-<td style="text-align:right;">
-114
-</td>
-</tr>
-<tr>
-<td style="text-align:right;">
-14
-</td>
-<td style="text-align:left;">
-Franchak
-</td>
-<td style="text-align:right;">
-77
-</td>
-</tr>
-<tr>
-<td style="text-align:right;">
 70
 </td>
 <td style="text-align:left;">
@@ -5050,98 +5749,10 @@ Messinger
 </tr>
 <tr>
 <td style="text-align:right;">
-477
+6
 </td>
 <td style="text-align:left;">
-Warlaumont
-</td>
-<td style="text-align:right;">
-36
-</td>
-</tr>
-<tr>
-<td style="text-align:right;">
-518
-</td>
-<td style="text-align:left;">
-Soderstrom
-</td>
-<td style="text-align:right;">
-36
-</td>
-</tr>
-<tr>
-<td style="text-align:right;">
-1034
-</td>
-<td style="text-align:left;">
-Cristia
-</td>
-<td style="text-align:right;">
-36
-</td>
-</tr>
-<tr>
-<td style="text-align:right;">
-3046
-</td>
-<td style="text-align:left;">
-Durrant
-</td>
-<td style="text-align:right;">
-36
-</td>
-</tr>
-<tr>
-<td style="text-align:right;">
-3053
-</td>
-<td style="text-align:left;">
-Rowland
-</td>
-<td style="text-align:right;">
-36
-</td>
-</tr>
-<tr>
-<td style="text-align:right;">
-3062
-</td>
-<td style="text-align:left;">
-Casillas
-</td>
-<td style="text-align:right;">
-36
-</td>
-</tr>
-<tr>
-<td style="text-align:right;">
-3094
-</td>
-<td style="text-align:left;">
-Rosemberg
-</td>
-<td style="text-align:right;">
-36
-</td>
-</tr>
-<tr>
-<td style="text-align:right;">
-3312
-</td>
-<td style="text-align:left;">
-Bunce
-</td>
-<td style="text-align:right;">
-36
-</td>
-</tr>
-<tr>
-<td style="text-align:right;">
-437
-</td>
-<td style="text-align:left;">
-Seisler
+Gilmore
 </td>
 <td style="text-align:right;">
 31
@@ -5160,28 +5771,6 @@ LoBue
 </tr>
 <tr>
 <td style="text-align:right;">
-346
-</td>
-<td style="text-align:left;">
-Thrasher
-</td>
-<td style="text-align:right;">
-23
-</td>
-</tr>
-<tr>
-<td style="text-align:right;">
-406
-</td>
-<td style="text-align:left;">
-Soska
-</td>
-<td style="text-align:right;">
-15
-</td>
-</tr>
-<tr>
-<td style="text-align:right;">
 104
 </td>
 <td style="text-align:left;">
@@ -5193,43 +5782,10 @@ Barr
 </tr>
 <tr>
 <td style="text-align:right;">
-4834
-</td>
-<td style="text-align:left;">
-Blanchfield
-</td>
-<td style="text-align:right;">
-11
-</td>
-</tr>
-<tr>
-<td style="text-align:right;">
-254
-</td>
-<td style="text-align:left;">
-Jayaraman
-</td>
-<td style="text-align:right;">
-3
-</td>
-</tr>
-<tr>
-<td style="text-align:right;">
 288
 </td>
 <td style="text-align:left;">
 Fabricius
-</td>
-<td style="text-align:right;">
-3
-</td>
-</tr>
-<tr>
-<td style="text-align:right;">
-289
-</td>
-<td style="text-align:left;">
-Gonzales
 </td>
 <td style="text-align:right;">
 3
