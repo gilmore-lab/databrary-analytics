@@ -90,7 +90,7 @@ cowplot::ggdraw(vols_plot) +
   cowplot::draw_label(
     paste0(
       "Unshared: ",
-      updated_vols$shared_volumes[n_rows],
+      updated_vols$unshared_volumes[n_rows],
       " (+",
       delta_unshared,
       ")"
