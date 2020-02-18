@@ -25,10 +25,10 @@ old_citations <- old_citations %>%
 get_citation_stats <- function(project = 'databrary') {
   if (project %in% c('databrary', 'Databrary')) {
     url <-
-      'https://scholar.google.com/scholar?hl=en&as_sdt=1%2C39&as_vis=1&q=%22databrary%22&btnG='
+      'https://scholar.google.com/scholar?hl=en&as_sdt=1%2C39&as_vis=1&q=%22databrary%22+%22Databrary%22&btnG='
   } else if (project %in% c('datavyu', 'Datavyu')) {
     url <-
-      'https://scholar.google.com/scholar?hl=en&as_sdt=1%2C39&as_vis=1&q=%22datavyu%22&btnG='
+      'https://scholar.google.com/scholar?hl=en&as_sdt=1%2C39&as_vis=1&q=%22Datavyu%22+%22datavyu%22&btnG='
   }
   
   r <- httr::GET(url = url)
@@ -134,7 +134,7 @@ cowplot::ggdraw(citations_plot) +
   )
 ```
 
-Google Scholar Citations for  [Databrary](https://scholar.google.com/scholar?hl=en&as_sdt=1%2C39&as_vis=1&q=%22databrary%22&btnG=) and [Datavyu](https://scholar.google.com/scholar?hl=en&as_sdt=1%2C39&as_vis=1&q=%22datavyu%22&btnG).
+Google Scholar Citations for  [Databrary](https://scholar.google.com/scholar?hl=en&as_sdt=0%2C39&q=%22databrary%22+%22Databrary%22&oq=) and [Datavyu](https://scholar.google.com/scholar?hl=en&as_sdt=1%2C39&as_vis=1&q=%22Datavyu%22+%22datavyu%22&btnG=).
 
 ```{r update-citations-gs}
 if (as.logical(params$update_gs)) {
