@@ -29,7 +29,7 @@ Code to produce and plot analytics about Databrary
 
 - [Report](https://gilmore-lab.github.io/databrary-analytics/shared-volumes-sessions/shared-volumes-sessions.html) about full shared volumes and volume overviews only with session statistics.* 
     - To run this report run  
-        -`rmarkdown::render("shared-volumes-sessions/shared-volumes-sessions.Rmd", params = list(db_login = <YOURDATABRARYLOGIN>))`
+        -`rmarkdown::render("shared-volumes-sessions/shared-volumes-sessions.Rmd", params = list(db_login = '<YOURDATABRARYLOGIN>'))`
         - replacing `<YOURDATABRARYLOGIN>` with your actual Databrary login (email).
         
 # Tags and keywords report
