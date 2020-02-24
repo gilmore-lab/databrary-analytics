@@ -1,5 +1,18 @@
 # helpers for tags-keywords-report
 
+install_required_pkgs <- function() {
+  cran_packages <- c('wordcloud', 'plyr')
+  not_installed <- cran_packages[!(cran_packages %in% installed.packages()[,"Package"])]
+  if (length(not_installed)) {
+    message('Installing packages required for this document.')
+    install.packages(not_installed)
+  }
+  
+  github_packages <- 'PLAY-behaviorome/databraryapi'
+  not_installed <- github_packages[!(github_packages %in% installed.packages()[,"Package"])]
+  if (length(not_installed)) devtools::install_github(not_installed)
+}
+
 make_volume_tags_df <- function(vol_id) {
   these_tags <- databraryapi::list_volume_tags(vol_id)
   if (is_empty(these_tags)) {

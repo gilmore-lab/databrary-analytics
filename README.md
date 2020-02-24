@@ -16,7 +16,7 @@ Code to produce and plot analytics about Databrary
 
 - To run the report without updating:
     - `source('weekly/R/helpers.R')`  
-    - `xxx_weekly_report(db_account = "<YOUREMAIL@YOURDOMAIN>")`  
+    - `render_weekly_report(db_account = "<YOUREMAIL@YOURDOMAIN>")`  
         - where `YOUREMAIL@YOURDOMAIN` is replaced by your Databrary account. 
 
 - View the [current report](https://gilmore-lab.github.io/databrary-analytics/weekly/databrary_weekly_report.html).  
@@ -34,23 +34,23 @@ Code to produce and plot analytics about Databrary
 
 - [Report](https://gilmore-lab.github.io/databrary-analytics/shared-volumes-sessions/shared-volumes-sessions.html) about full shared volumes and volume overviews only with session statistics.* 
     - To run this report run  
-        -`rmarkdown::render("shared-volumes-sessions/shared-volumes-sessions.Rmd", params = list(db_login = '<YOURDATABRARYLOGIN>'))`
-        - replacing `<YOURDATABRARYLOGIN>` with your actual Databrary login (email).
+        -`rmarkdown::render("shared-volumes-sessions/shared-volumes-sessions.Rmd", params = list(db_login = "<YOUREMAIL@YOURDOMAIN>"))`
+        - replacing `<YOUREMAIL@YOURDOMAIN>` with your actual Databrary login (email).
         
 # Tags and keywords report
 
 - [Report](https://gilmore-lab.github.io/databrary-analytics/tags-keywords/tags-keywords-report.html) on the tags and keywords linked to Databrary volumes.
     - To run this report, run `source("tags-keywords/R/helpers.R")` from the R console.
-    - Then run `render_tags_keywords_report("<YOURDATABRARYLOGIN>"), replacing `<YOURDATABRARYLOGIN>` with your actual Databrary login (email).
+    - Then run `render_tags_keywords_report("<YOUREMAIL@YOURDOMAIN>")`, replacing `<YOUREMAIL@YOURDOMAIN>` with your actual Databrary login (email).
 
 # Institutions and investigators report
 
 - [Report](https://gilmore-lab.github.io/databrary-analytics/institutions-investigators/institutions-investigators.html) on number of investigators at each authorizing institution.
     - To run this report, run `source("institutions-investigators/R/helpers.R")` from the R console.
-    - Then run `render_institutions_investigators_report("<YOURDATABRARYLOGIN>"), replacing `<YOURDATABRARYLOGIN>` with your actual Databrary login (email).
+    - Then run `render_institutions_investigators_report("<YOUREMAIL@YOURDOMAIN>"), replacing `<YOUREMAIL@YOURDOMAIN>` with your actual Databrary login (email).
 
 # Participant demographics report
 
 - [Report](https://gilmore-lab.github.io/databrary-analytics/participant-demographics/participant-demog-report.html) on the site-wide reported participant demographics.
     - To run this report, run `source("participant-demographics/R/helpers.R")` from the R console.
-    - Then run `rmarkdown::render("participant-demographics/participant-demog-report.Rmd", params = list(db_login="<YOURDATABRARYLOGIN>")), replacing `<YOURDATABRARYLOGIN>` with your actual Databrary login (email).
+    - Then run `rmarkdown::render("participant-demographics/participant-demog-report.Rmd", params = list(db_login="<YOUREMAIL@YOURDOMAIN>"))`, replacing `<YOUREMAIL@YOURDOMAIN>` with your actual Databrary login (email).
