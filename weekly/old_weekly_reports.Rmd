@@ -15,7 +15,7 @@ if (!purrr::is_empty(old_report_files)) {
   df <-
     data.frame(
       url = paste0(
-        "https://gilmore-lab.github.io/databrary-analytics/archive/",
+        "https://gilmore-lab.github.io/databrary-analytics/weekly/archive/",
         old_report_files
       )
     )
