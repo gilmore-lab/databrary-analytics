@@ -108,8 +108,8 @@ cowplot::ggdraw(vols_plot) +
       ")"
     ),
     colour = color_orange,
-    .6,
-    .63
+    .75,
+    .50
   )
 ```
 
