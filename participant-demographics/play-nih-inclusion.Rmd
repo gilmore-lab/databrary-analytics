@@ -119,10 +119,14 @@ get_volume_demog <- function(vol_id) {
   if ("participant.birthdate" %in% names(v_ss)) {
     v_ss <- dplyr::filter(v_ss,
                           session_date != "materials")
+    v_ss <- dplyr::filter(v_ss, session_date != "")
     dplyr::select(
       v_ss,
       vol_id,
+      session_id,
       session_date,
+      session_release,
+      group.name,
       participant.birthdate,
       participant.race,
       participant.ethnicity,
@@ -141,7 +145,7 @@ We collect specific demographic data recorded in the Databrary spreadsheet for e
 
 ```{r}
 # Selected a couple of sample volumes
-vols_to_gather <- c(444, 894)
+vols_to_gather <- c(899, 954, 979, 982, 966, 1008, 1023, 1066, 1103)
 
 demog_data <- purrr::map_dfr(vols_to_gather, get_volume_demog)
 ```
@@ -149,11 +153,11 @@ demog_data <- purrr::map_dfr(vols_to_gather, get_volume_demog)
 Filter based on the `session_date` since this is a report covering a specific time period.
 
 ```{r}
-start_date <- "2015-01-01"
-end_date <- "2015-12-31"
+start_date <- "2019-04-01"
+end_date <- "2020-04-01"
 
 # Consider `session_date` as a date.
-demog_2015 <- demog_data %>%
+demog_2019 <- demog_data %>%
   dplyr::filter(., lubridate::as_date(session_date) > start_date,
                 lubridate::as_date(session_date) < end_date)
 ```
@@ -161,24 +165,24 @@ demog_2015 <- demog_data %>%
 Now, summarize in a table combining across `participant.gender`:
 
 ```{r}
-xtabs(formula = ~ participant.race + participant.ethnicity, data = demog_2015) %>%
+xtabs(formula = ~ participant.race + participant.ethnicity, data = demog_2019) %>%
   knitr::kable(.)
 ```
 
 Or, we can create separate tables for males...
 
 ```{r}
-demog_2015_males <- demog_2015 %>%
+demog_2019_males <- demog_2019 %>%
   dplyr::filter(., participant.gender == "Male")
 xtabs(formula = ~ participant.race + participant.ethnicity, 
-      data = demog_2015_males) %>%
+      data = demog_2019_males) %>%
   knitr::kable(.)
 ```
 
 and females...
 
 ```{r}
-demog_2015_females <- demog_2015 %>%
+demog_2019_females <- demog_2019 %>%
   dplyr::filter(., participant.gender == "Female")
 xtabs(formula = ~ participant.race + participant.ethnicity, 
       data = demog_2015_females) %>%
@@ -188,10 +192,10 @@ xtabs(formula = ~ participant.race + participant.ethnicity,
 Alternatively, the `table()` function does both in one call.
 
 ```{r}
-demog_2015_selected <- demog_2015 %>%
+demog_2019_selected <- demog_2019 %>%
   dplyr::select(., participant.race, participant.ethnicity,
                 participant.gender)
-table(demog_2015_selected)
+table(demog_2019_selected)
 ```
 
 ## Clean-up

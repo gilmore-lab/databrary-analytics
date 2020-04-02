@@ -1,0 +1,134 @@
+---
+title: "PLAY Recruiting Report"
+output: 
+  html_document:
+    code_folding: hide
+params:
+  db_login: "email@yours.com"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Purpose
+
+This document provides a report on PLAY Project recruiting.
+
+# Set-up
+
+## Install R package dependencies
+
+To run the following chunk(s), set `eval=TRUE` in the chunk headers.
+
+```{r, eval=FALSE}
+install.packages("tidyverse")
+install.packages("purrr")
+install.packages("lubridate")
+install.packages("devtools")
+```
+
+## Set-up authentication to Databrary
+
+Download and install the `databraryapi` package from GitHub:.
+
+```{r, eval=FALSE}
+devtools::install_github('PLAY-behaviorome/databraryapi')
+```
+
+Configure your R environment so you can log-in to Databrary: `databraryapi::config_passwd()`.
+
+```{r, eval=FALSE}
+databraryapi::config_passwd()
+```
+
+Confirm that you can connect to Databrary:
+
+```{r db-login}
+databraryapi::login_db(params$db_login)
+```
+
+If the latter command returns `TRUE` with a message `Login successful`, you are ready to proceed.
+
+## Load required helper function(s) into workspace
+
+```{r}
+library(tidyverse) # for pipe operator
+
+get_volume_demog <- function(vol_id) {
+  v_ss <- databraryapi::download_session_csv(vol_id)
+  if ("participant.birthdate" %in% names(v_ss)) {
+    v_ss <- dplyr::filter(v_ss,
+                          session_date != "materials")
+    v_ss <- dplyr::filter(v_ss, session_date != "")
+    dplyr::select(
+      v_ss,
+      vol_id,
+      session_id,
+      session_date,
+      session_release,
+      group.name,
+      participant.birthdate,
+      participant.race,
+      participant.ethnicity,
+      participant.gender,
+      participant.birthdate
+    )
+  } else {
+    NULL
+  }
+}
+
+generate_session_url <- function(session_id) {
+  paste0("https://nyu.databrary.org/slot/", session_id)
+}
+
+generate_volume_url <- function(vol_id) {
+  paste0("https://nyu.databrary.org/volume/", vol_id)
+}
+```
+
+# Gather data from PLAY volumes
+
+The following code specifies the Databrary volume numbers to query:
+
+```{r}
+vols_to_gather <- c(899, 954, 979, 982, 966, 1008, 1023, 1066, 1103)
+```
+
+This chunk then gathers the data from these volumes.
+
+```{r}
+demog_data <- purrr::map_dfr(vols_to_gather, get_volume_demog)
+```
+
+Add links to the volume and session.
+
+```{r}
+demog_data <- demog_data %>%
+  dplyr::mutate(., vol_url = generate_volume_url(demog_data$vol_id),
+                session_url = generate_session_url(demog_data$session_id))
+```
+
+Rename columns.
+
+```{r}
+demog_data <- demog_data %>%
+  dplyr::rename(., 
+                PLAY_group = group.name,
+                race = participant.race,
+                ethnicity = participant.ethnicity,
+                sex = participant.gender)
+```
+
+# Print results
+
+There are $n=$ `r dim(demog_data)[1]` sessions from $n=$ `r length(unique(demog_data$vol_id))` contributing sites.
+
+```{r}
+demog_data %>%
+  knitr::kable(., format = 'html') %>%
+  kableExtra::kable_styling(bootstrap_options = c("striped", "hover", "condensed", "responsive")) %>%
+  kableExtra::scroll_box(width = "100%", height = "400px")
+```
+

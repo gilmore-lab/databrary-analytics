@@ -1,0 +1,37 @@
+---
+title: "Authorization workflow requirements"
+author: "Rick Gilmore & Andrea Seisler"
+date: "`r Sys.time()`"
+output: 
+  html_document:
+    toc: true
+    toc_depth: 3
+    toc_float: true
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Purpose
+
+This document describes the requirements for the Databrary authorization workflow.
+The goal is to determine how to use the Databrary API to assist staff in managing the processing of registration and authorization requests.
+
+# Background
+
+- It's possible to query Databrary for information about newly registered users.
+For example, the commands in `users/R/get_user_list.R` show how this can be done.
+- Using `get_save_user_sponsors_list()`, Rick generated a list of current users and saved it in `users/csv`.
+The file is not version-controlled via git to protect participant information.
+- We could use a workflow similar to the weekly report (e.g., `weekly/citations.Rmd`, `weekly/people.Rmd`, and `weekly/volumes_shared.Rmd`) to query the CSV and update it.
+
+# Requirements
+
+- Command to list *all* people with accounts on Databrary and their sponsor(s) if any.
+  - Date account created: **Only available via admin account**.
+  - User email.
+- nyu.databrary.org/api/notification returns requests for authorization from users requesting authorization from an existing institution.
+This call only works for a Databrary user with admin privileges.
+- A report that lists all newly registered people.
+  - Information about whether they requested authorization, and if so, from what source (existing institution or other).
