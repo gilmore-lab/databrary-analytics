@@ -52,7 +52,7 @@ lo <- seq(from = 1, to = 1201, by = 10)
 hi <- seq(from = 10, to = 1210, by = 10)
 
 # Rick really loves functional programming
-purrr::map2(.x = lo, .y = hi, get_save_volumes_demo, , dir = "csv")
+purrr::map2(.x = lo, .y = hi, get_save_volumes_demo, dir = "csv")
 ```
 
 This chunk regenerates data for the volume owners.

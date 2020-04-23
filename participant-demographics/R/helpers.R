@@ -89,13 +89,14 @@ get_volume_ethnicity <- function(vol_id) {
 
 get_volumes_demo <- function(min_vol_id = 1, max_vol_id = 10) {
   vols_range <- min_vol_id:max_vol_id
-  message("Gathering birthdates")
+  message(paste0("Getting demographic data for volumes ", min_vol_id, "-", max_vol_id, "\n"))
+  message("...Gathering birthdates")
   bdts <- purrr::map_dfr(vols_range, get_volume_birthdate)
-  message("Gathering race")
+  message("...Gathering race")
   races <- purrr::map_dfr(vols_range, get_volume_race)
-  message("Gathering ethnicity")
+  message("...Gathering ethnicity")
   ethn <- purrr::map_dfr(vols_range, get_volume_ethnicity)
-  message("Gathering gender")
+  message("...Gathering gender")
   gend <- purrr::map_dfr(vols_range, get_volume_gender)
   
   m <- dplyr::left_join(bdts, races, by = c("vol_id", "session_id"))
@@ -106,6 +107,7 @@ get_volumes_demo <- function(min_vol_id = 1, max_vol_id = 10) {
 
 save_volumes_demo <- function(df, min_vol_id, max_vol_id, 
                               dir = "participant-demographics/csv") {
+  message(paste0("Saving demographic data for volumes ", min_vol_id, "-", max_vol_id, "\n"))
   fn <- paste0(dir, "/", stringr::str_pad(min_vol_id, 4, pad = "0"), "-", 
                stringr::str_pad(max_vol_id, 4, pad = "0"), "-demog.csv")
   fn
@@ -113,9 +115,7 @@ save_volumes_demo <- function(df, min_vol_id, max_vol_id,
 }
 
 get_save_volumes_demo <- function(min_vol_id = 1, max_vol_id = 10) {
-  message(paste0("Getting demographic data for volumes ", min_vol_id, "-", max_vol_id))
   df <- get_volumes_demo(min_vol_id, max_vol_id)
-  message(paste0("Saving demographic data for volumes ", min_vol_id, "-", max_vol_id))
   save_volumes_demo(df, min_vol_id, max_vol_id)
 }
 
@@ -200,4 +200,7 @@ render_participant_demog_report <- function(db_login) {
   rmarkdown::render("participant-demographics/participant-demog-report.Rmd",
                     params = list(db_login = db_login))
   databraryapi::logout_db()
+  if(file.exists("participant-demographics/.databrary.RData")) {
+    file.remove("participant-demographics/.databrary.RData")
+  }
 }
