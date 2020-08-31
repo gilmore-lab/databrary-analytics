@@ -10,12 +10,24 @@ params:
   db_login: email@provider.com
 ---
 
+# Purpose
+
+This report queries the Databrary API to determine how many volumes are shared and how many shared sessions are associated with these volumes.
+
+# Set-up
+
+This file takes as a parameter a valid Databrary user ID because the function calls require authenticated access.
+
+Load the `tidyverse` library and login to Databrary.
+
 ```{r set-up, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE, message = FALSE, warning = FALSE)
 library(tidyverse)
 
 databraryapi::login_db(params$db_login)
 ```
+
+Create a helper function to gather the necessary data.
 
 ```{r helper-functions}
 get_volume_data <- function(vol_id = 1) {
@@ -60,6 +72,12 @@ get_volumes_data <- function(min_vol = 1, max_vol = 10) {
 }
 ```
 
+# Gather data
+
+There is currently no way to determine the highest assigned volume ID, so this code gets volume data for chunks of 100, then concatenates the outputs. 
+The `use_save_file` parameter (default is TRUE) pulls the previous data from a saved CSV file.
+This speeds things up considerably at the cost of not capturing 'old' volumes whose sharing status has changed since the CSV was generated.
+
 ```{r, get-new-data}
 if (params$use_saved_file) {
   if (file.exists(params$save_fn)) {
@@ -85,10 +103,11 @@ if (params$use_saved_file) {
   v_801_900 <- get_volumes_data(801, 900)
   v_901_1000 <- get_volumes_data(901, 1000)
   v_1001_1100 <- get_volumes_data(1001, 1100)
+  v_1101_1200 <- get_volumes_data(1101, 1200)
   vols_sess_data <- data.table::rbindlist(list(v_001_100, v_101_200, v_201_300, v_301_400,
                                                v_401_500, v_501_600, v_601_700,
                                                v_701_800, v_801_900, v_901_1000,
-                                               v_1001_1100))
+                                               v_1001_1100, v_1101_1200))
   
 }
 
@@ -97,6 +116,8 @@ if (params$save_file) {
   readr::write_csv(vols_sess_data, path = params$save_fn)
 }
 ```
+
+# Filter and process
 
 ## All by `shared_type`, sorted by `n_vols`
 
@@ -139,6 +160,8 @@ vols_sess_data %>%
   knitr::kable(., "html") %>%
   kableExtra::kable_styling(.)
 ```
+
+## Logout
 
 ```{r}
 databraryapi::logout_db()
