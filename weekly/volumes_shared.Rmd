@@ -96,7 +96,7 @@ cowplot::ggdraw(vols_plot) +
       ")"
     ),
     colour = color_teal,
-    .75,
+    .6,
     .85
   ) +
   cowplot::draw_label(
