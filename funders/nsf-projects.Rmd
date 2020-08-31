@@ -1,0 +1,95 @@
+---
+title: "Funders"
+output: html_notebook
+---
+
+# Purpose
+
+This document describes Rick Gilmore's explorations of a workflow to generate a list of funders on Databrary projects.
+
+# Preparation
+
+Log in to Databrary
+
+```{r}
+databraryapi::login_db()
+```
+
+Test `list_volume_funding()` function.
+
+```{r}
+databraryapi::list_volume_funding()
+```
+
+Update 2020-08-31:
+
+The bug mentioned appears to have been fixed, so the following bits are not accurate.
+I have struck them out to indicate that.
+
+~~So this command does not quite properly unpack the award IDs. That's a bug in the `list_volume_funding()` command.~~
+
+~~Let's fix that bug locally before we proceed.~~
+
+```{r, eval=FALSE}
+# No longer needed
+get_vol_funding <- function(vol_id) {
+  f <- databraryapi::list_volume_funding(vol_id)
+  out_df <- f$funder_name
+  out_df$awards <- unlist(f$award)
+  out_df
+}
+get_vol_funding(1)
+```
+
+Now, we should be able to run this over a list of volume ids.
+
+```{r}
+purrr::map_df(1:20, databraryapi::list_volume_funding)
+```
+
+~~Ok, so the relationship between funders and awards is not exactly one to one. 
+For now, let's just get the funders for each volume and not worry about that.~~
+
+```{r, eval=FALSE}
+# No longer needed 2020-08-31
+get_vol_funding_no_id <- function(vol_id) {
+  f <- databraryapi::list_volume_funding(vol_id)
+  if (!is.null(f) & is.data.frame(f)) {
+    out_df <- tibble::tibble(f$funder)
+    out_df$vol_id <- vol_id
+  } else {
+    out_df <- tibble::tibble(id = NA, name = NA, vol_id = vol_id)
+  }
+  out_df
+}
+f1 <- get_vol_funding_no_id(1)
+```
+
+Now let's try a list of volumes.
+
+```{r, eval=FALSE}
+# No longer needed 2020-08-31
+purrr::map_df(1:20, get_vol_funding_no_id)
+```
+
+~~What is going on?~~
+
+~~Fixed function to handle various edge cases.~~
+
+```{r}
+max_vol_id <- 1180
+f1180 <- purrr::map_df(1:1180, databraryapi::list_volume_funding)
+```
+
+Now, let's filter and count.
+
+```{r}
+library(tidyverse)
+funders_filtered <- f1180 %>%
+  dplyr::filter(., !is.na(funder_id), !is.na(funder_name)) %>%
+  dplyr::group_by(., funder_name) %>%
+  dplyr::summarize(., n_vols = n()) %>%
+  dplyr::arrange(., desc(n_vols))
+funders_filtered
+```
+
