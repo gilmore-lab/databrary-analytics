@@ -1,0 +1,82 @@
+---
+title: "Funders"
+output: html_document
+params:
+  max_vol_id: 1180
+  save_fn: "csv/funders.csv"
+  save_file: True
+  use_saved_file: True
+  db_login: email@provider.com
+
+---
+
+# Purpose
+
+This document describes Rick Gilmore's explorations of a workflow to generate a list of funders on Databrary projects.
+
+# Preparation
+
+```{r set-up, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, message = FALSE, warning = FALSE)
+library(tidyverse)
+```
+
+Log in to Databrary
+
+```{r login}
+databraryapi::login_db(params$db_login)
+```
+
+# Gather data
+
+There is no easy way to determine the largest volume ID to query, so Rick tests various values that are higher than the last one used.
+
+```{r get-funder-data, eval=FALSE}
+# max_vol_id <- 1180
+# funders_df <- purrr::map_df(1:1180, databraryapi::list_volume_funding)
+if (params$use_saved_file) {
+  if (file.exists(params$save_fn)) {
+    message("Reading from saved file.")
+    funders_df <- read_csv(params$save_fn)
+    # From current max(vol_id), get next 200 vols
+    # max_vol_id <- max(vols_funder_data$vol_id)
+    # next_200 <- purrr::map_df(max_vol_id + 1:max_vol_id + 200, databraryapi::list_volume_funding)
+    # funders_df <- data.table::rbindlist(list(vols_funder_data, next_200))
+  } else {
+    message("File not found.")
+    message(" Regenerating data from all volumes.")
+    funders_df <- purrr::map_df(1:params$max_vol_id, databraryapi::list_volume_funding)
+  }
+}
+```
+
+Save report.
+
+```{r save-data}
+if (params$save_file) {
+  message(paste0("Saving file: ", params$save_fn))
+  readr::write_csv(funders_df, path = params$save_fn)
+}
+```
+
+## Volumes by funder
+
+Filter empty rows, count the number of volumes per funder, and print.
+
+```{r filter-print}
+funders_filtered <- funders_df %>%
+  dplyr::filter(., !is.na(funder_id), !is.na(funder_name)) %>%
+  dplyr::group_by(., funder_name) %>%
+  dplyr::summarize(., n_vols = n()) %>%
+  dplyr::arrange(., desc(n_vols))
+funders_filtered
+```
+
+## Logout
+
+```{r logout}
+databraryapi::logout_db()
+if (file.exists(".databrary.RData")) {
+  unlink(".databrary.RData")
+}
+```

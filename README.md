@@ -55,4 +55,10 @@ Code to produce and plot analytics about Databrary
 - [Report](https://gilmore-lab.github.io/databrary-analytics/participant-demographics/participant-demog-report.html) on the site-wide reported participant demographics.
     - To run this report, run `source("participant-demographics/R/helpers.R")` from the R console.
     - Then run `rmarkdown::render("participant-demographics/participant-demog-report.Rmd", params = list(db_login="<YOUREMAIL@YOURDOMAIN>"))`  
-        - replacing `<YOUREMAIL@YOURDOMAIN>` with your actual Databrary login (email). 
+        - replacing `<YOUREMAIL@YOURDOMAIN>` with your actual Databrary login (email).
+        
+# Funders
+
+- [Report](https://gilmore-lab.github.io/databrary-analytics/funders/funder-report.html) on the number of shared volumes by funding source.
+    - Then run `rmarkdown::render("funders/funder-report.Rmd", params = list(db_login="<YOUREMAIL@YOURDOMAIN>"))`  
+        - replacing `<YOUREMAIL@YOURDOMAIN>` with your actual Databrary login (email).
