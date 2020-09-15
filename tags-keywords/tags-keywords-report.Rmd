@@ -10,11 +10,19 @@ output:
     toc_depth: 2
 params:
   db_login: email@provider.com
-  max_vol_id: 1100
+  max_vol_id: 1200
   save_tags: True
   read_saved: True
   tags_fn: "csv/databrary-tags.csv"
 ---
+
+# Purpose
+
+This report downloads searchable tags from Databrary and reports on them.
+
+To render the report, run `rmarkdown::render("tags-keywords-report.Rmd", params=list(db_login='<email@provider.com>')), substituting your Databrary login email for '<email@provider.com>'.
+
+# Set-up
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE,
@@ -27,14 +35,18 @@ source("R/helpers.R")
 databraryapi::login_db(params$db_login)
 ```
 
+# Acquire tags
+
 ```{r acquire-tags}
 # Acquire tags data
 vol_ids <- 1:params$max_vol_id
-message(paste0("Acquiring tags from Databrary for ", length(vol_ids), " volumes."))
+message(paste0("Acquiring tags from Databrary for n=", length(vol_ids), " volumes."))
 
 if (params$read_saved) {
+  message('Reading froms saved file.')
   tags <- readr::read_csv(params$tags_fn)
 } else {
+  message('Reading tags from all volumes. Please be patient')
   tags <- purrr::map_dfr(.x = vol_ids, .f = make_volume_tags_df)
 }
 
@@ -105,3 +117,45 @@ tags %>%
   knitr::kable(., "html") %>%
   kableExtra::kable_styling()
 ```
+
+# Selecting STEM-relevant tags
+
+```{r stem-relevant-tags}
+select_tags <- c('numerical cognition', 'mathematical ability', 'number', 'teaching', 'teaching clips', 'abacus', 'classroom', 'mathematical equivalence', 'mental arithmetic', 'number comprehension', 'number discrimination', 'science', 'stem', 'statistical learning', 'school readiness')
+
+# Filter tags
+stem_tags <- tags %>%
+  dplyr::filter(., tags %in% select_tags) %>%
+  dplyr::arrange(., vol_id, tags)
+
+# Unique vol ids to get volume metadata, esp title
+stem_vol_ids <- unique(stem_tags$vol_id)
+
+# Pull titles
+stem_vols_df <- purrr::map_dfr(.x = stem_vol_ids, 
+                               .f = databraryapi::list_volume_metadata)
+
+stem_vols_df <- dplyr::left_join(stem_vols_df, stem_tags)
+
+stem_vols_df <- stem_vols_df %>%
+  dplyr::filter(., vol_id != 109) %>% # Empty volume
+  dplyr::select(., -owners, -permission, -doi)
+  
+stem_vols_df %>%
+  knitr::kable(., "html") %>%
+  kableExtra::kable_styling() 
+```
+
+Save as CSV.
+
+```{r}
+readr::write_csv(x = stem_vols_df, path = 'csv/stem-keywords-2020-09-15.csv')
+```
+
+
+# Clean-up
+
+```{r}
+databraryapi::logout_db()
+```
+
