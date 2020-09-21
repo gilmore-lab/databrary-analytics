@@ -9,8 +9,23 @@ output:
     toc_depth: 2
 params:
   db_login: email@provider.com
-  max_party_id: 100
+  max_party_id: 7400
+  save_fn: "csv/institutions-investigators.csv"
+  save_file: True
+  use_saved_file: True
 ---
+
+# Purpose
+
+This document creates a report of all investigators by institution.
+
+## How to generate
+
+1. Source the helper functions (`source("R/helpers.R")`) from the R console, and then execute `render_institutions_investigators_report(db_login)`, substituting your own Databrary login (email) for `db_login`.
+
+2. Execute `rmarkdown::render('institutions-investigators.Rmd', params=list(db_login="your_login"))`, substituting your own Databrary login (email) for `your_login`.
+
+# Set-up
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE,
@@ -23,11 +38,33 @@ source("R/helpers.R")
 databraryapi::login_db(params$db_login)
 ```
 
-```{r acquire-data}
-inst_invest <- get_institution_party_df(params$max_party_id)
+# Acquire data
 
+```{r acquire-data}
+
+if (params$use_saved_file) {
+  if (file.exists(params$save_fn)) {
+    message("Reading from saved file.")
+    inst_invest <- read_csv(params$save_fn)
+  } else {
+    message("File not found.")
+    message(" Regenerating data from all volumes.")
+    inst_invest <- get_institution_party_df(params$max_party_id)
+  }
+}
+
+# Filter if inst_id or party_id == NA
 inst_invest <- inst_invest %>%
   dplyr::filter(., !is.na(inst_id), !is.na(party_id))
+```
+
+## Save
+
+```{r save-data}
+if (params$save_file) {
+  message(paste0("Saving file: ", params$save_fn))
+  readr::write_csv(inst_invest, path = params$save_fn)
+}
 ```
 
 # Data summaries

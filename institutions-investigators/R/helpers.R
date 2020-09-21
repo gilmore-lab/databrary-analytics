@@ -1,6 +1,6 @@
 make_institutional_party_df <- function(inst_id) {
   if (databraryapi::is_institution(inst_id)) {
-    these_affiliates <- databraryapi::get_affiliates(inst_id)
+    these_affiliates <- databraryapi::list_affiliates(inst_id)
     if (purrr::is_empty(these_affiliates) | is.null(these_affiliates)) {
       df <- data.frame(inst_id = inst_id,
                        affiliation = NA,
@@ -29,7 +29,7 @@ get_institution_party_df <- function(max_inst_id = 20) {
 render_institutions_investigators_report <- function(db_login) {
   rmarkdown::render("institutions-investigators/institutions-investigators.Rmd",
                     params = list(db_login = db_login, 
-                    max_party_id = 1600))
+                    max_party_id = 7400))
   clean_up()
 }
 
