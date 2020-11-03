@@ -1,0 +1,44 @@
+---
+title: "User contact info"
+date: "`r Sys.time()`"
+output: html_notebook
+---
+
+# Purpose
+
+- Gather user emails by user type.
+
+# Plan
+
+- Use API commands.
+
+# Set-up
+
+```{r}
+databraryapi::login_db()
+
+library(tidyverse)
+```
+
+```{r}
+user_list <- function(ids, save_file = TRUE, file_path = 'csv'){
+  df <- databraryapi::list_people(ids)
+  if (!is.na(df)) {
+    if (save_file) {
+      write_csv(df, paste0(here::here(), '/contact-info/', 
+                           file_path, '/', 
+                           min(ids), '_', max(ids), '.csv'))
+    }
+    df
+  } else {
+    NULL
+  }
+}
+```
+
+
+```{r}
+p001_100 <- databraryapi::list_people(1:100)
+drop_ids <- c(1, 3, 4, 7, 13, 14, 15, 16, 20)
+```
+

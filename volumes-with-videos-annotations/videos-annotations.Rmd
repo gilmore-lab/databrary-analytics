@@ -51,11 +51,12 @@ We'll start with volume 8
 ```{r assets-in-vol}
 this_vol_id <- 1
 
-assets_in_vol <- function(vol_id) {
-  message(paste0("Extracting assets from volume ", vol_id))
+assets_in_vol <- function(vol_id, vb = FALSE) {
+  if (vb) message(paste0("Extracting assets from volume ", vol_id))
   vol_data <- databraryapi::list_assets_in_volume(vol_id)
   
   if (is.null(vol_data)) {
+    if (vb) paste0(" No available assets.")
     NULL
   } else {
     vol_data <- vol_data %>%
@@ -88,9 +89,37 @@ calculate_vol_asset_stats <- function(vol_id, save_file = FALSE,
 
 ## Let's try several
 
-```{r many-vols}
+```{r many-vols, eval = FALSE}
 these_vols <- 1:5
 
 these_stats <- purrr::map_df(these_vols, calculate_vol_asset_stats, save_file = TRUE)
+```
+
+That seems to work, so I am extracting and saving a bunch of these.
+
+# Import and summarize
+
+```{r}
+csv_fns <- list.files('csv', '\\.csv', full.names = TRUE)
+assets_df <- purrr::map_df(csv_fns, read_csv)
+```
+
+Summarize number of volumes with different data types.
+
+```{r}
+assets_df %>%
+  group_by(asset_type) %>%
+  count(asset_type) %>%
+  knitr::kable(.)
+```
+
+Total assets by type:
+
+```{r}
+assets_df %>%
+  group_by(asset_type) %>%
+  summarise(total_files = sum(n)) %>%
+  select(asset_type, total_files) %>%
+  knitr::kable(.)
 ```
 
