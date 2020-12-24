@@ -1,0 +1,127 @@
+---
+title: "Institution report"
+date: "`r Sys.time()`"
+output: 
+  html_document:
+    self_contained: True
+    toc: True
+    toc_float: True
+    toc_depth: 2
+    code_folding: hide
+params:
+  db_login: email@provider.com
+  max_party_id: 9000
+  save_fn: "csv/institutions.csv"
+  save_file: True
+  use_saved_file: True
+---
+
+# Purpose
+
+This document creates a report of all of institutions affiliated in some way with Databrary.
+
+## How to generate
+
+1. Source the helper functions (`source("R/helpers.R")`) from the R console.
+
+2. Execute `render_institutions_report(db_login, max_party_id)`, substituting your own Databrary login (email) for `db_login` and the maximum party_id value you want to use to update the institutions database.
+
+# Set-up
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(warning = FALSE,
+                      message = FALSE)
+
+options(knitr.table.format = "html") 
+
+library(tidyverse)
+
+source("R/helpers.R")
+databraryapi::login_db(params$db_login)
+```
+
+# Update institutions
+
+By default, this report updates the local institutions database.
+If you are running the report for the first time, the update may take awhile.
+It may be necessary for you to increase the value for the report's `max_party_id` parameter from time to time.
+
+```{r}
+update_inst_csv(max_id = params$max_party_id)
+```
+
+# Import data
+
+For efficiency reasons, we save a copy of the list of institutions in a CSV.
+
+```{r}
+if (params$use_saved_file) {
+  if (file.exists(params$save_fn)) {
+    inst_df <- read_csv(params$save_fn)
+  } else {
+    message("File not found.")
+  }
+}
+```
+
+# Visualize and summarize {.tabset .tabset-fade .tabset-pills}
+
+## With AIs
+
+```{r}
+with_ais <- inst_df %>%
+  dplyr::filter(., n_auth_invest > 0)
+```
+
+Most institutions have one Authorized Investigator.
+
+```{r}
+ggplot(with_ais) +
+  aes(n_auth_invest) +
+  geom_histogram()
+```
+
+```{r}
+gte5_ais <- with_ais %>%
+  dplyr::filter(., n_auth_invest >= 5) %>%
+  dplyr::mutate(., db_url = paste0("https://nyu.databrary.org/party/", inst_id))
+```
+
+There are `r dim(gte5_ais)[1]` institutions with more than five AIs.
+They are as follows:
+
+```{r}
+gte5_ais %>%
+  dplyr::arrange(., desc(n_auth_invest)) %>%
+  dplyr::select(., inst_id, inst_name, db_url, n_auth_invest) %>%
+  kableExtra::kbl(.) %>%
+  kableExtra::kable_styling()
+```
+
+
+## Without AIs
+
+```{r}
+no_ais <- inst_df %>%
+  dplyr::filter(., n_auth_invest == 0) %>%
+  dplyr::mutate(., db_url = paste0("https://nyu.databrary.org/party/", inst_id))
+```
+
+The following institutions do not have authorized investigators:
+
+```{r}
+no_ais %>%
+  dplyr::select(., inst_id, inst_name, db_url, n_auth_invest, daa) %>%
+  kableExtra::kbl(.) %>%
+  kableExtra::kable_styling()
+```
+
+Of these, the following appear to have an active authorization from Databrary, meaning an active Databrary Access Agreement (DAA):
+
+```{r}
+no_ais %>%
+  dplyr::filter(., daa == TRUE) %>%
+  dplyr::select(., inst_id, inst_name, db_url, n_auth_invest, daa) %>%
+  kableExtra::kbl(.) %>%
+  kableExtra::kable_styling()
+```

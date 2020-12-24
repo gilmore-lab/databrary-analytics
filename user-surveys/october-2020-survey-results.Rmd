@@ -1,0 +1,203 @@
+---
+title: "October 2020 User Survey"
+author: "Rick Gilmore"
+date: "`r Sys.time()`"
+output: 
+  html_document:
+    toc: true
+    toc_float: true
+    toc_levels: 3
+params:
+  google_acct: email@provider.com
+---
+
+# Purpose
+
+The Databrary team sent a [survey](https://docs.google.com/forms/d/1rgQ-eBXEopn_EU2CYHv9P5ao_R2PIFCqKT3nwiIHiFM/edit) built in Google Forms out in October 2020.
+The survey went live on October 9, and was sent to the ICIS, CDS listservs, to various faculty lists at Penn State and NYU, and to the Databrary Authorized Investigators.
+
+# Setup
+
+We use the `tidyverse` package.
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+
+# Add tidyverse for pipe operator
+library(tidyverse)
+```
+
+# Import
+
+## Download and save
+
+Authenticate to Google Drive outside of this document using `googledrive::drive_auth()`.
+
+```{r}
+survey_fn <- 'Databrary 2.0 Community Survey Questions (Responses)'
+```
+
+```{r}
+# Overwrite old
+googledrive::drive_download(file = survey_fn, type = 'csv', 
+                            path = 'csv/survey-2020-oct.csv',
+                            overwrite = TRUE)
+```
+
+## Import
+
+```{r}
+survey_df <- read_csv(file = 'csv/survey-2020-oct.csv')
+str(survey_df)
+```
+
+# Visualize
+
+## Response time series
+
+```{r}
+response_ts <- survey_df %>%
+  dplyr::mutate(., Timestamp = lubridate::parse_date_time(Timestamp, 
+                                                          "%m/%d/%y %h:%m:%s")) %>%
+  dplyr::arrange(., Timestamp) %>%
+  dplyr::mutate(., resp_index = 1:length(Timestamp))
+
+response_ts %>%
+  ggplot(.) +
+  aes(Timestamp, resp_index) +
+  geom_point()
+```
+
+## Respondent characteristics
+
+```{r}
+pos_field <- survey_df %>%
+  dplyr::select(., `What is your position at your institution?`, 
+                `What is your field (e.g., Developmental Psychology, Cultural Anthropology)?`) %>%
+  dplyr::rename(., position = `What is your position at your institution?`,
+                field = `What is your field (e.g., Developmental Psychology, Cultural Anthropology)?`)
+
+# helper functions for cleaning
+pos_field <- pos_field %>%
+  dplyr::filter(.,!is.na(position)) %>%
+  dplyr::mutate(., position = factor(
+    position,
+    levels = unique(position),
+    labels = c(
+      'Staff',
+      'Fac Res',
+      'Postdoc',
+      'Grad',
+      'Fac Teach',
+      'RA',
+      'Res Admin',
+      'Undergrad',
+      'Fac Res',
+      'Fac Res',
+      'Other',
+      'Fac Res'
+    )
+  ))
+
+
+is_dev_sci <- function(df) {
+  stringr::str_detect(df, "[D|d]evelop|[D|d]ev")
+}
+
+is_cog_sci <- function(df) {
+  stringr::str_detect(df, "[Cc]og")
+}
+
+
+is_ed_sci <- function(df) {
+  stringr::str_detect(df, "[Ee]duc")
+}
+
+is_cs <- function(df) {
+  stringr::str_detect(df, "[Cc]omp")
+}
+
+is_social <- function(df) {
+  stringr::str_detect(df, "[Ss]ocial")
+}
+
+is_clinical <- function(df) {
+  stringr::str_detect(df, "[Cc]linic")
+}
+
+is_pt <- function(df) {
+  stringr::str_detect(df, "PT|[Tt]herapy")
+}
+
+pos_field <- pos_field %>%
+  dplyr::mutate(.,
+                new_field = ifelse(
+                  is_dev_sci(field),
+                  'Dev Sci',
+                  ifelse(
+                    is_cog_sci(field),
+                    'Cog Sci',
+                    ifelse(is_ed_sci(field), 'Ed Sci',
+                           ifelse(
+                             is_cs(field),
+                             'Comp Sci',
+                             ifelse(
+                               is_social(field),
+                               'Social Psy',
+                               ifelse(is_clinical(field), 'Clin Psy', ifelse(is_pt(field), 'PT', 'Oth'))))))))
+
+```
+
+```{r}
+xtabs(~ new_field + position, data = pos_field)
+```
+
+## Requirements to share
+
+```{r}
+sharing_req <- survey_df %>%
+  dplyr::select(., `Are you required to share data for any of your active research projects?`) %>%
+  dplyr::rename(., sharing_reqd = `Are you required to share data for any of your active research projects?`)
+
+required_yn <- function(x) {
+  ifelse(stringr::str_detect(x, "Not required"), FALSE, TRUE)
+}
+
+journal_requires <- function(x) {
+  ifelse(stringr::str_detect(x, "Yes, required to share with journal"), TRUE, FALSE)
+}
+
+funder_requires <- function(x) {
+  ifelse(stringr::str_detect(x, "Yes, required to share with grant"), TRUE, FALSE)
+}
+
+sharing_req <- sharing_req %>%
+  dplyr::mutate(., sharing_req_yn = required_yn(sharing_reqd)) %>%
+  dplyr::mutate(., journal_req = journal_requires(sharing_reqd)) %>%
+  dplyr::mutate(., funder_req = funder_requires(sharing_reqd))
+```
+
+```{r}
+xtabs(~ sharing_req_yn, sharing_req)
+```
+
+```{r}
+xtabs(~ journal_req, sharing_req)
+```
+
+```{r}
+xtabs(~ funder_req, sharing_req)
+```
+
+## AI tool usefulness
+
+```{r}
+ai_tools <- survey_df %>%
+  dplyr::rename(., face_detection = `If available through Databrary, how useful would these tools be to your research? [Face detection]`,
+         emotion_rating = `If available through Databrary, how useful would these tools be to your research? [Emotion rating]`,
+         face_blurring = `If available through Databrary, how useful would these tools be to your research? [Face blurring]`,
+         voice_alter = `If available through Databrary, how useful would these tools be to your research? [Voice alteration]`,
+         speech_trans = `If available through Databrary, how useful would these tools be to your research? [Speech transcription]`,
+         action_recog = `If available through Databrary, how useful would these tools be to your research? [Action recognition]`)
+```
+
