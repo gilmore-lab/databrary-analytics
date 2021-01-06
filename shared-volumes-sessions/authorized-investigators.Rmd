@@ -62,7 +62,6 @@ make_save_inst_list <- function(p_ids) {
   df <- purrr::map_df(p_ids, add_institution)
   readr::write_csv(df, paste0('csv/inst_', min(p_ids), '_', max(p_ids), '.csv'))
 }
-
 make_save_inst_list(3001:3500)
 ```
 
@@ -72,6 +71,7 @@ make_save_inst_list(4001:5000)
 make_save_inst_list(5001:6000)
 make_save_inst_list(6001:7000)
 make_save_inst_list(7001:7500)
+make_save_inst_list(7501:8000)
 ```
 
 Merge and re-export
@@ -95,13 +95,12 @@ list_inst_auth_parties <- function(inst_id) {
     NULL
   }
 }
-
 ```
 
 Now generate frame of all parties.
 
 ```{r}
-all_parties <- purrr::map_df(these_inst$party_id, inst_auth_parties)
+all_parties <- purrr::map_df(these_inst$party_id, list_inst_auth_parties)
 ```
 
 ## Filter shared volumes by authorized investigators
