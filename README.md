@@ -18,7 +18,7 @@ Code to produce and plot analytics about Databrary
 
 # Citation Data
 
-- These numbers are from the Databrary Actitity site https://nyu.databrary.org/api/activity  
+- These numbers are from the Databrary Activity site https://nyu.databrary.org/api/activity  
 
 - "Databrary" and "Datavyu" (with quotes) are used to reduce bad hits in [Google Scholar](https://scholar.google.com)      
     - choose the 'anytime' option for Citations Monthly  
@@ -41,9 +41,13 @@ Code to produce and plot analytics about Databrary
 
 # Institutions and investigators report
 
-- [Report](https://gilmore-lab.github.io/databrary-analytics/institutions-investigators/institutions-investigators.html) on number of investigators at each authorizing institution.
+- [Institutions report](https://gilmore-lab.github.io/databrary-analytics/institutions-investigators/institutions.html) on number of investigators at each authorizing institution.
     - To run this report, run `source("institutions-investigators/R/helpers.R")` from the R console.
-    - Then run `render_institutions_investigators_report("<YOUREMAIL@YOURDOMAIN>")  
+    - Then run `render_institutions_report("<YOUREMAIL@YOURDOMAIN>")`  
+        - replacing `<YOUREMAIL@YOURDOMAIN>` with your actual Databrary login (email). 
+- [Investigators report](https://gilmore-lab.github.io/databrary-analytics/institutions-investigators/investigators.html) on the number of affiliates each investigator has created.
+    - To run this report, run `source("institutions-investigators/R/helpers.R")` from the R console.
+    - Then run `render_investigator_report("<YOUREMAIL@YOURDOMAIN>")`  
         - replacing `<YOUREMAIL@YOURDOMAIN>` with your actual Databrary login (email). 
 
 # Participant demographics report

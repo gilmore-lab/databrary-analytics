@@ -10,7 +10,7 @@ output:
     code_folding: hide
 params:
   db_login: email@provider.com
-  max_party_id: 9000
+  max_party_id: 8000
   save_fn: "csv/investigators.csv"
   save_file: True
   use_saved_file: True
@@ -25,7 +25,7 @@ This document creates a report of all of investigators affiliated in some way wi
 
 1. Source the helper functions (`source("R/helpers.R")`) from the R console.
 
-2. Execute `render_institutions_report(db_login, max_party_id)`, substituting your own Databrary login (email) for `db_login` and the maximum party_id value you want to use to update the institutions database.
+2. Execute `render_investigators_report(db_login, max_party_id)`, substituting your own Databrary login (email) for `db_login` and the maximum party_id value you want to use to update the institutions database.
 
 # Set-up
 
@@ -50,9 +50,14 @@ Or, if you *do not* want to update the investigator CSV, set the `update_invest_
 
 ```{r}
 if (params$update_invest_csv) {
+  message("Updating CSV investigator database.")
   update_invest_csv(update_inst = FALSE, return_df = FALSE)  
 } else {
   message("Investigator CSV not updated.")
+}
+
+if (params$use_saved_file) {
+  message("Using saved CSV file.")
 }
 ```
 
@@ -86,9 +91,15 @@ no_affils <- invest_df %>%
   dplyr::filter(., n_affils < 1)
 ```
 
-Note that there are `r dim(gte2_affils)[1]` Authorized Investigators with 2 or more affiliates; `r dim(gte5_affils)[1]` with 5 or more; `r dim(gte10_affils)[1]` with 10 or more; and `r dim(no_affils)[1]` with no affilates.
+Note that there are `r dim(gte10_affils)[1]` Authorized Investigators with 10 or more affiliates; `r dim(gte5_affils)[1]` with 5 or more; `r dim(gte2_affils)[1]` with 2 or more affiliates; and `r dim(no_affils)[1]` with no affilates.
 
 ## 10+ affiliates
+
+```{r}
+ggplot(gte10_affils) +
+  aes(n_affils) +
+  geom_histogram(bins = 10)
+```
 
 ```{r}
 gte10_affils %>%
@@ -101,6 +112,12 @@ gte10_affils %>%
 ## 5+ affiliates
 
 ```{r}
+ggplot(gte5_affils) +
+  aes(n_affils) +
+  geom_histogram(bins = 10)
+```
+
+```{r}
 gte5_affils %>%
   dplyr::arrange(., desc(n_affils)) %>%
   dplyr::select(., ai_id, ai_last, ai_first, affiliation, ai_db_url, n_affils) %>%
@@ -109,6 +126,12 @@ gte5_affils %>%
 ```
 
 ## 2+ affiliates
+
+```{r}
+ggplot(gte2_affils) +
+  aes(n_affils) +
+  geom_histogram(bins = 15)
+```
 
 ```{r}
 gte2_affils %>%
@@ -121,9 +144,16 @@ gte2_affils %>%
 ## All
 
 ```{r}
+ggplot(invest_df) +
+  aes(n_affils) +
+  geom_histogram(bins = 20)
+```
+
+```{r}
 invest_df %>%
   dplyr::arrange(., desc(n_affils)) %>%
   dplyr::select(., ai_id, ai_last, ai_first, affiliation, ai_db_url, n_affils) %>%
   kableExtra::kbl(.) %>%
   kableExtra::kable_styling()
 ```
+

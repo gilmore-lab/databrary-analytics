@@ -114,9 +114,20 @@ save_volumes_demo <- function(df, min_vol_id, max_vol_id,
   readr::write_csv(df, fn)
 }
 
-get_save_volumes_demo <- function(min_vol_id = 1, max_vol_id = 10) {
+get_save_volumes_demo <- function(min_vol_id = 1, max_vol_id = 10, 
+                                  dir = "participant-demographics/csv") {
   df <- get_volumes_demo(min_vol_id, max_vol_id)
-  save_volumes_demo(df, min_vol_id, max_vol_id)
+  save_volumes_demo(df, min_vol_id, max_vol_id, dir)
+}
+
+regenerate_vol_demo_csvs <- function(new_vol_rg_min = 1261, 
+                                     new_vol_rg_max = 1270,
+                                     dir = "participant-demographics/csv") {
+  lo <- seq(from = 1, to = new_vol_rg_min, by = 10)
+  hi <- seq(from = 10, to = new_vol_rg_max, by = 10)
+  
+  # Rick really loves functional programming
+  purrr::map2(.x = lo, .y = hi, get_save_volumes_demo, dir)
 }
 
 load_demog_csvs <- function(dir = "participant-demographics/csv") {

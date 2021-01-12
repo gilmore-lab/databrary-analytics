@@ -381,7 +381,7 @@ summary {
 
 <div id="purpose" class="section level1">
 <h1>Purpose</h1>
-<p>This document describes Rick Gilmore’s explorations of a workflow to generate a list of funders on Databrary projects.</p>
+<p>This document describes generates a list of funders on Databrary projects.</p>
 </div>
 <div id="preparation" class="section level1">
 <h1>Preparation</h1>
@@ -395,27 +395,164 @@ summary {
 <div id="volumes-by-funder" class="section level2">
 <h2>Volumes by funder</h2>
 <p>Filter empty rows, count the number of volumes per funder, and print.</p>
-<pre><code>## # A tibble: 18 x 2
-##    funder_name                                             n_vols
-##    &lt;chr&gt;                                                    &lt;int&gt;
-##  1 National Institute of Child Health and Human Developme…     56
-##  2 National Science Foundation (NSF)                           53
-##  3 National Institutes of Health (NIH)                         13
-##  4 National Institute of Mental Health (NIMH)                  12
-##  5 James S. McDonnell Foundation (JSMF)                         6
-##  6 Defense Sciences Office, DARPA (DARPA Defense Science …      2
-##  7 LEGO Foundation (LEGO)                                       2
-##  8 Autism Speaks                                                1
-##  9 Bill &amp; Melinda Gates Foundation (BMGF)                       1
-## 10 European Research Council (ERC), Belgium                     1
-## 11 John Templeton Foundation                                    1
-## 12 National Institute of General Medical Sciences (NIGMS)       1
-## 13 National Institute on Deafness and Other Communication…      1
-## 14 New York University (NYU)                                    1
-## 15 Office of Behavioral and Social Sciences Research (OBS…      1
-## 16 Social Science Research Institute, Penn State Universi…      1
-## 17 Society for Research in Child Development (SRCD)             1
-## 18 William T. Grant Foundation                                  1</code></pre>
+<table>
+<thead>
+<tr>
+<th style="text-align:left;">
+funder_name
+</th>
+<th style="text-align:right;">
+n_vols
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+National Institute of Child Health and Human Development (NICHD)
+</td>
+<td style="text-align:right;">
+56
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+National Science Foundation (NSF)
+</td>
+<td style="text-align:right;">
+53
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+National Institutes of Health (NIH)
+</td>
+<td style="text-align:right;">
+13
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+National Institute of Mental Health (NIMH)
+</td>
+<td style="text-align:right;">
+12
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+James S. McDonnell Foundation (JSMF)
+</td>
+<td style="text-align:right;">
+6
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Defense Sciences Office, DARPA (DARPA Defense Science Office, DSO, DARPA)
+</td>
+<td style="text-align:right;">
+2
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+LEGO Foundation (LEGO)
+</td>
+<td style="text-align:right;">
+2
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Autism Speaks
+</td>
+<td style="text-align:right;">
+1
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Bill &amp; Melinda Gates Foundation (BMGF)
+</td>
+<td style="text-align:right;">
+1
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+European Research Council (ERC), Belgium
+</td>
+<td style="text-align:right;">
+1
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+John Templeton Foundation
+</td>
+<td style="text-align:right;">
+1
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+National Institute of General Medical Sciences (NIGMS)
+</td>
+<td style="text-align:right;">
+1
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+National Institute on Deafness and Other Communication Disorders (NIDCD)
+</td>
+<td style="text-align:right;">
+1
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+New York University (NYU)
+</td>
+<td style="text-align:right;">
+1
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Office of Behavioral and Social Sciences Research (OBSSR)
+</td>
+<td style="text-align:right;">
+1
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Social Science Research Institute, Penn State University (Penn State Social Science Research Institute, SSRI, PSU)
+</td>
+<td style="text-align:right;">
+1
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Society for Research in Child Development (SRCD)
+</td>
+<td style="text-align:right;">
+1
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+William T. Grant Foundation
+</td>
+<td style="text-align:right;">
+1
+</td>
+</tr>
+</tbody>
+</table>
 </div>
 <div id="logout" class="section level2">
 <h2>Logout</h2>

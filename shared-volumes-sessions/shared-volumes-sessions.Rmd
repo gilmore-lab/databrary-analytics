@@ -1,11 +1,16 @@
 ---
-title: "shared-volumes-sessions"
+title: "Shared volumes with sessions report"
 author: "Rick Gilmore"
 date: "`r Sys.time()`"
-output: html_document
+output: 
+  html_document:
+    self_contained: True
+    toc: True
+    toc_float: True
+    toc_depth: 2
 params:
   save_fn: "csv/shared_volumes_sessions.csv"
-  save_file: True
+  save_file: False
   use_saved_file: True
   db_login: email@provider.com
 ---
@@ -72,7 +77,7 @@ get_volumes_data <- function(min_vol = 1, max_vol = 10) {
 }
 ```
 
-# Gather data
+# Gather & clean data
 
 There is currently no way to determine the highest assigned volume ID, so this code gets volume data for chunks of 100, then concatenates the outputs. 
 The `use_save_file` parameter (default is TRUE) pulls the previous data from a saved CSV file.
@@ -104,10 +109,12 @@ if (params$use_saved_file) {
   v_901_1000 <- get_volumes_data(901, 1000)
   v_1001_1100 <- get_volumes_data(1001, 1100)
   v_1101_1200 <- get_volumes_data(1101, 1200)
+  v_1201_1300 <- get_volumes_data(1201, 1300)
   vols_sess_data <- data.table::rbindlist(list(v_001_100, v_101_200, v_201_300, v_301_400,
                                                v_401_500, v_501_600, v_601_700,
                                                v_701_800, v_801_900, v_901_1000,
-                                               v_1001_1100, v_1101_1200))
+                                               v_1001_1100, v_1101_1200,
+                                               v_1201_1300))
   
 }
 
@@ -117,12 +124,8 @@ if (params$save_file) {
 }
 ```
 
-# Filter and process
-
-## All by `shared_type`, sorted by `n_vols`
-
-```{r make-table, results = TRUE}
-vols_sess_data %>%
+```{r clean-df}
+vols_dat <- vols_sess_data %>%
   # change variable names, create full_volume vs. overview_only
   dplyr::group_by(owner.ids.name, owner.ids.id) %>%
   dplyr::rename(investigator = owner.ids.name, party_id = owner.ids.id) %>%
@@ -135,33 +138,56 @@ vols_sess_data %>%
                    tot_sess = sum(n_sessions),
             min_n_sess = min(n_sessions),  
             max_n_sess = max(n_sessions)) %>%
-  dplyr::arrange(shared_type, desc(n_vols)) %>%
-  knitr::kable(., "html") %>%
-  kableExtra::kable_styling(.)
+  dplyr::arrange(shared_type, desc(tot_sess))
 ```
 
-## All by `shared_type`, sorted by `tot_sessions`
+# How shared by investigator
+
+Sorted by `tot_sess`, the total number of sessions from this Authorized Investigator.
+
+## Full volume {.tabset}
+
+### Full volume (>100 sessions)
 
 ```{r}
-vols_sess_data %>%
-  # change variable names, create full_volume vs. overview_only
-  dplyr::group_by(owner.ids.name, owner.ids.id) %>%
-  dplyr::rename(investigator = owner.ids.name, party_id = owner.ids.id) %>%
-  dplyr::mutate(shared_type = ifelse(sharing_level == "full", "full_volume", "overview_only")) %>%
-  dplyr::select(investigator, party_id, vol_id, created_date, shared_type, n_sessions) %>%
-  dplyr::mutate(url = paste0("https://nyu.databrary.org/party/", party_id)) %>%
-  dplyr::group_by(investigator, url, shared_type) %>%
-  # summarise by total shared volumes by type with session stats
-  dplyr::summarise(n_vols = n(), 
-                   tot_sess = sum(n_sessions),
-            min_n_sess = min(n_sessions),  
-            max_n_sess = max(n_sessions)) %>%
-  dplyr::arrange(shared_type, desc(tot_sess)) %>%
+vols_dat %>%
+  dplyr::filter(., shared_type == "full_volume",
+                tot_sess >= 100) %>%
   knitr::kable(., "html") %>%
   kableExtra::kable_styling(.)
 ```
 
-## Logout
+### Full volume (all)
+
+```{r}
+vols_dat %>%
+  dplyr::filter(., shared_type == "full_volume") %>%
+  knitr::kable(., "html") %>%
+  kableExtra::kable_styling(.)
+```
+
+## Overview only {.tabset}
+
+### Overview only (>100 sessions)
+
+```{r}
+vols_dat %>%
+  dplyr::filter(., shared_type == "overview_only",
+                tot_sess >= 100) %>%
+  knitr::kable(., "html") %>%
+  kableExtra::kable_styling(.)
+```
+
+### Overview only (all)
+
+```{r}
+vols_dat %>%
+  dplyr::filter(., shared_type == "overview_only") %>%
+  knitr::kable(., "html") %>%
+  kableExtra::kable_styling(.)
+```
+
+# Logout
 
 ```{r}
 databraryapi::logout_db()

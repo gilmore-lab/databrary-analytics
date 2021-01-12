@@ -39,10 +39,13 @@ render_tags_keywords_report <- function(db_login) {
 }
 
 update_tags_keywords_report <- function(db_login) {
+  start_time <- Sys.time()
   rmarkdown::render("tags-keywords/tags-keywords-report.Rmd", 
                     params = list(db_login = db_login, 
                                   read_saved = FALSE))
   clean_up()
+  end_time <- Sys.time()
+  message(paste0("Generating the report took ", end_time - start_time))
 }
 
 clean_up <- function() {

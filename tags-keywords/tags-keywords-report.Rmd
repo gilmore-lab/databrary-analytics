@@ -10,7 +10,7 @@ output:
     toc_depth: 2
 params:
   db_login: email@provider.com
-  max_vol_id: 1200
+  max_vol_id: 1270
   save_tags: True
   read_saved: True
   tags_fn: "csv/databrary-tags.csv"
@@ -20,7 +20,7 @@ params:
 
 This report downloads searchable tags from Databrary and reports on them.
 
-To render the report, run `rmarkdown::render("tags-keywords-report.Rmd", params=list(db_login='<email@provider.com>')), substituting your Databrary login email for '<email@provider.com>'.
+To render the report, run `update_tags_keywords_report <- function(db_login)`, substituting your Databrary login email for `db_login`.
 
 # Set-up
 
@@ -46,7 +46,7 @@ if (params$read_saved) {
   message('Reading froms saved file.')
   tags <- readr::read_csv(params$tags_fn)
 } else {
-  message('Reading tags from all volumes. Please be patient')
+  message('Reading tags from all volumes. Please be patient.')
   tags <- purrr::map_dfr(.x = vol_ids, .f = make_volume_tags_df)
 }
 

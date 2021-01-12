@@ -10,7 +10,7 @@ output:
     code_folding: hide
 params:
   db_login: email@provider.com
-  max_party_id: 9000
+  max_party_id: 8000
   save_fn: "csv/institutions.csv"
   save_file: True
   use_saved_file: True
@@ -22,7 +22,7 @@ This document creates a report of all of institutions affiliated in some way wit
 
 ## How to generate
 
-1. Source the helper functions (`source("R/helpers.R")`) from the R console.
+1. Source the helper functions (`source("institutions-investigators/R/helpers.R")`) from the R console.
 
 2. Execute `render_institutions_report(db_login, max_party_id)`, substituting your own Databrary login (email) for `db_login` and the maximum party_id value you want to use to update the institutions database.
 

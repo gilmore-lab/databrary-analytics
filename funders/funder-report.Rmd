@@ -2,17 +2,16 @@
 title: "Funders"
 output: html_document
 params:
-  max_vol_id: 1180
+  max_vol_id: 1270
+  use_saved_file: False
   save_fn: "csv/funders.csv"
   save_file: True
-  use_saved_file: True
   db_login: email@provider.com
-
 ---
 
 # Purpose
 
-This document describes Rick Gilmore's explorations of a workflow to generate a list of funders on Databrary projects.
+This document describes generates a list of funders on Databrary projects.
 
 # Preparation
 
@@ -69,7 +68,9 @@ funders_filtered <- funders_df %>%
   dplyr::group_by(., funder_name) %>%
   dplyr::summarize(., n_vols = n()) %>%
   dplyr::arrange(., desc(n_vols))
-funders_filtered
+
+funders_filtered %>%
+  kableExtra::kable()
 ```
 
 ## Logout

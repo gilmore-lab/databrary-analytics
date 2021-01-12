@@ -10,6 +10,9 @@ output:
     toc_depth: 2
 params:
     db_login: email@provider.com
+    new_vol_rg_min: 1261
+    new_vol_rg_max: 1270
+    update_demo_csvs: False
 ---
 
 ```{r setup, include=FALSE}
@@ -48,12 +51,28 @@ The following code will not run when this report is rendered for the sake of eff
 Change the chunk option `eval=TRUE` to re-run the chunk and regenerate the data.
 
 ```{r acquire-demo-data, eval=FALSE}
-lo <- seq(from = 1, to = 1201, by = 10)
-hi <- seq(from = 10, to = 1210, by = 10)
+lo <- seq(from = 1, to = params$new_vol_rg_min, by = 10)
+hi <- seq(from = 10, to = params$new_vol_rg_max, by = 10)
 
 # Rick really loves functional programming
 purrr::map2(.x = lo, .y = hi, get_save_volumes_demo, dir = "csv")
 ```
+
+Alternatively, there is now a function `regenerate_vol_demo_csvs()` that can be used to regenerate all of the volume-level demographic data CSVs.
+To run it, execute `regenerate_vol_demo_csvs(params$new_vol_rg_min, params$new_vol_rg_max)`.
+**Note:**This command takes a long time to run, so be patient.
+
+```{r update-demo-csvs}
+if (params$update_demo_csvs == TRUE) {
+  message(paste0("Updating CSVs for volume-level demographic data for volumes ",
+                 params$new_vol_rg_min, " to ", params$new_vol_rg_max))
+  regenerate_vol_demo_csvs(params$new_vol_rg_min, params$new_vol_rg_max)
+} else {
+  message("Using local volume-level demographic data.")
+}
+```
+
+## Gather volume owner data
 
 This chunk regenerates data for the volume owners.
 It is not run by default, but can be run like the previous chunk.
