@@ -49,6 +49,13 @@ Code to produce and plot analytics about Databrary
     - To run this report, run `source("institutions-investigators/R/helpers.R")` from the R console.
     - Then run `render_investigator_report("<YOUREMAIL@YOURDOMAIN>")`  
         - replacing `<YOUREMAIL@YOURDOMAIN>` with your actual Databrary login (email). 
+        
+# Shared assets and types
+
+- [Report]((https://gilmore-lab.github.io/databrary-analytics/volumes-with-videos-annotations/assets-stats.html) on the number of shared file types by volume and overall.
+    - To run this report, run `source("volumes-with-videos-annotations/R/helpers.R")` from the R console.
+    - Then run `render_asset_stats_report("<YOUREMAIL@YOURDOMAIN>")`  
+        - replacing `<YOUREMAIL@YOURDOMAIN>` with your actual Databrary login (email).
 
 # Participant demographics report
 

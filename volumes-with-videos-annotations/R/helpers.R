@@ -96,6 +96,10 @@ update_all_vol_stats <- function(max_vol_id,
               save_file = save_file, save_path = save_path, vb = vb)
 }
 
+render_asset_stats_report <- function(db_account) {
+  rmarkdown::render("volumes-with-videos-annotations/assets-stats.Rmd", params = list(db_login = db_account))
+}
+
 ms_to_secs <- function(ms) {
   ms/1000
 }
