@@ -21,7 +21,10 @@ This document queries the Databrary API to calculate statistics about the files 
 # Set-up
 
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
+knitr::opts_chunk$set(echo = TRUE,
+                      warning = FALSE,
+                      error = FALSE,
+                      message = FALSE)
 
 library(tidyverse) # For pipe `%>%` operator
 
