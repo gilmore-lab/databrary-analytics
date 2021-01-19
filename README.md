@@ -52,7 +52,7 @@ Code to produce and plot analytics about Databrary
         
 # Shared assets and types
 
-- [Report]((https://gilmore-lab.github.io/databrary-analytics/volumes-with-videos-annotations/assets-stats.html) on the number of shared file types by volume and overall.
+- [Report](https://gilmore-lab.github.io/databrary-analytics/volumes-with-videos-annotations/assets-stats.html) on the number of shared file types by volume and overall.
     - To run this report, run `source("volumes-with-videos-annotations/R/helpers.R")` from the R console.
     - Then run `render_asset_stats_report("<YOUREMAIL@YOURDOMAIN>")`  
         - replacing `<YOUREMAIL@YOURDOMAIN>` with your actual Databrary login (email).
