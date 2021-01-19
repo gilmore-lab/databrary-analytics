@@ -1,5 +1,5 @@
-vol_id,asset_type,n
-822,Portable document,1
-822,Microsoft Word document,2
-822,Microsoft Word (Office Open XML) document,1
-822,Microsoft Excel (Office Open XML) workbook,1
+vol_id,mimetype,extension,asset_type,n_files,tot_size,tot_dur,duration
+822,application/pdf,pdf,Portable document,1,4220693,0,NA
+822,application/msword,doc,Microsoft Word document,2,140288,0,NA
+822,application/vnd.openxmlformats-officedocument.wordprocessingml.document,docx,Microsoft Word (Office Open XML) document,1,24427,0,NA
+822,application/vnd.openxmlformats-officedocument.spreadsheetml.sheet,xlsx,Microsoft Excel (Office Open XML) workbook,1,14224,0,NA

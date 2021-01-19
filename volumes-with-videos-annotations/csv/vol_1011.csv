@@ -1,4 +1,4 @@
-vol_id,asset_type,n
-1011,MPEG-4 video,48
-1011,Portable document,1
-1011,Datavyu,48
+vol_id,mimetype,extension,asset_type,n_files,tot_size,tot_dur,duration
+1011,video/mp4,mp4,MPEG-4 video,48,1053627116,3801184,NA
+1011,application/pdf,pdf,Portable document,1,385748,0,NA
+1011,application/vnd.datavyu,opf,Datavyu,48,113669,0,NA

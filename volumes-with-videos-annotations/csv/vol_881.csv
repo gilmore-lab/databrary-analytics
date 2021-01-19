@@ -1,4 +1,4 @@
-vol_id,asset_type,n
-881,Plain text,8
-881,Comma-separated values,1
-881,Portable document,1
+vol_id,mimetype,extension,asset_type,n_files,tot_size,tot_dur,duration
+881,text/plain,txt,Plain text,8,1168,0,NA
+881,text/csv,csv,Comma-separated values,1,101,0,NA
+881,application/pdf,pdf,Portable document,1,228806,0,NA

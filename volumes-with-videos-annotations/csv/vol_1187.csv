@@ -1,2 +1,2 @@
-vol_id,asset_type,n
-1187,Microsoft Excel (Office Open XML) workbook,2
+vol_id,mimetype,extension,asset_type,n_files,tot_size,tot_dur,duration
+1187,application/vnd.openxmlformats-officedocument.spreadsheetml.sheet,xlsx,Microsoft Excel (Office Open XML) workbook,2,197930,0,NA

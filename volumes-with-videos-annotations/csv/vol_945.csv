@@ -1,3 +1,3 @@
-vol_id,asset_type,n
-945,Plain text,30
-945,Microsoft Word (Office Open XML) document,1
+vol_id,mimetype,extension,asset_type,n_files,tot_size,tot_dur,duration
+945,text/plain,txt,Plain text,30,93635,0,NA
+945,application/vnd.openxmlformats-officedocument.wordprocessingml.document,docx,Microsoft Word (Office Open XML) document,1,114536832,0,NA

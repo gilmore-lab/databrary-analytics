@@ -1,4 +1,4 @@
-vol_id,asset_type,n
-73,MPEG-4 video,4
-73,Comma-separated values,48
-73,Portable document,1
+vol_id,mimetype,extension,asset_type,n_files,tot_size,tot_dur,duration
+73,video/mp4,mp4,MPEG-4 video,4,6644814,10556,NA
+73,text/csv,csv,Comma-separated values,48,776051,0,NA
+73,application/pdf,pdf,Portable document,1,1946087,0,NA

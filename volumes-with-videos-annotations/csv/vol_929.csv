@@ -1,5 +1,5 @@
-vol_id,asset_type,n
-929,JPEG image,1
-929,Portable network graphics,1
-929,Portable document,4
-929,Microsoft PowerPoint (Office Open XML) presentation,7
+vol_id,mimetype,extension,asset_type,n_files,tot_size,tot_dur,duration
+929,image/jpeg,jpg,JPEG image,1,3271088,0,NA
+929,image/png,png,Portable network graphics,1,27248,0,NA
+929,application/pdf,pdf,Portable document,4,2010464,0,NA
+929,application/vnd.openxmlformats-officedocument.presentationml.presentation,pptx,Microsoft PowerPoint (Office Open XML) presentation,7,40481112,0,NA

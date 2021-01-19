@@ -1,2 +1,2 @@
-vol_id,asset_type,n
-40,Microsoft PowerPoint (Office Open XML) presentation,1
+vol_id,mimetype,extension,asset_type,n_files,tot_size,tot_dur,duration
+40,application/vnd.openxmlformats-officedocument.presentationml.presentation,pptx,Microsoft PowerPoint (Office Open XML) presentation,1,3547676,0,NA

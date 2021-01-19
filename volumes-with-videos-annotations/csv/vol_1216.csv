@@ -1,0 +1,4 @@
+vol_id,mimetype,extension,asset_type,n_files,tot_size,tot_dur,duration
+1216,text/plain,txt,Plain text,1,3468,0,NA
+1216,text/csv,csv,Comma-separated values,1,19918,0,NA
+1216,application/vnd.datavyu,opf,Datavyu,17,767775,0,NA

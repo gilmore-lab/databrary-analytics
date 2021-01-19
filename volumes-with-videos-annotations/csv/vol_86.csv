@@ -1,4 +1,4 @@
-vol_id,asset_type,n
-86,MPEG-4 video,9
-86,Portable document,2
-86,Microsoft Word document,1
+vol_id,mimetype,extension,asset_type,n_files,tot_size,tot_dur,duration
+86,video/mp4,mp4,MPEG-4 video,9,3743276126,4750828,NA
+86,application/pdf,pdf,Portable document,2,2444867,0,NA
+86,application/msword,doc,Microsoft Word document,1,46592,0,NA

@@ -1,7 +1,7 @@
-vol_id,asset_type,n
-1108,MPEG-4 video,46
-1108,Plain text,18
-1108,Comma-separated values,5
-1108,Portable document,1
-1108,Microsoft Excel (Office Open XML) workbook,1
-1108,Datavyu,44
+vol_id,mimetype,extension,asset_type,n_files,tot_size,tot_dur,duration
+1108,video/mp4,mp4,MPEG-4 video,46,407290943,1555214,NA
+1108,text/plain,txt,Plain text,18,62283,0,NA
+1108,text/csv,csv,Comma-separated values,5,1244380,0,NA
+1108,application/pdf,pdf,Portable document,1,210656,0,NA
+1108,application/vnd.openxmlformats-officedocument.spreadsheetml.sheet,xlsx,Microsoft Excel (Office Open XML) workbook,1,11058,0,NA
+1108,application/vnd.datavyu,opf,Datavyu,44,189806,0,NA

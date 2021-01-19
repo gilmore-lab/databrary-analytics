@@ -1,3 +1,3 @@
-vol_id,asset_type,n
-592,MPEG-4 video,36
-592,MPEG-1 or MPEG-2 audio layer III,1
+vol_id,mimetype,extension,asset_type,n_files,tot_size,tot_dur,duration
+592,video/mp4,mp4,MPEG-4 video,36,0,49505572,NA
+592,audio/mpeg,mp3,MPEG-1 or MPEG-2 audio layer III,1,0,517488,NA

@@ -1,8 +1,8 @@
-vol_id,asset_type,n
-232,MPEG-4 video,6
-232,MPEG-1 or MPEG-2 audio layer III,5
-232,Portable network graphics,2
-232,Portable document,15
-232,Microsoft Word document,3
-232,Microsoft Word (Office Open XML) document,1
-232,Datavyu,1
+vol_id,mimetype,extension,asset_type,n_files,tot_size,tot_dur,duration
+232,video/mp4,mp4,MPEG-4 video,6,2945823305,18344176,NA
+232,audio/mpeg,mp3,MPEG-1 or MPEG-2 audio layer III,5,458820984,24820659,NA
+232,image/png,png,Portable network graphics,2,1092855,0,NA
+232,application/pdf,pdf,Portable document,15,2867880,0,NA
+232,application/msword,doc,Microsoft Word document,3,191488,0,NA
+232,application/vnd.openxmlformats-officedocument.wordprocessingml.document,docx,Microsoft Word (Office Open XML) document,1,9529,0,NA
+232,application/vnd.datavyu,opf,Datavyu,1,3460,0,NA

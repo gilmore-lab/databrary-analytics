@@ -1,4 +1,4 @@
-vol_id,asset_type,n
-724,MPEG-4 video,1
-724,Portable network graphics,1
-724,Portable document,11
+vol_id,mimetype,extension,asset_type,n_files,tot_size,tot_dur,duration
+724,video/mp4,mp4,MPEG-4 video,1,7227946243,14849460,NA
+724,image/png,png,Portable network graphics,1,191204,0,NA
+724,application/pdf,pdf,Portable document,11,25723452,0,NA

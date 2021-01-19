@@ -1,2 +1,2 @@
-vol_id,asset_type,n
-1153,Portable document,2
+vol_id,mimetype,extension,asset_type,n_files,tot_size,tot_dur,duration
+1153,application/pdf,pdf,Portable document,2,524905,0,NA

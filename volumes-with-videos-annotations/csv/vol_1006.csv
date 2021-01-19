@@ -1,2 +1,2 @@
-vol_id,asset_type,n
-1006,Comma-separated values,3
+vol_id,mimetype,extension,asset_type,n_files,tot_size,tot_dur,duration
+1006,text/csv,csv,Comma-separated values,3,35376,0,NA

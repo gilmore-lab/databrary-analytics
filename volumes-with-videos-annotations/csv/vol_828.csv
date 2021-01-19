@@ -1,4 +1,4 @@
-vol_id,asset_type,n
-828,MPEG-4 video,5
-828,Portable document,5
-828,Microsoft Word (Office Open XML) document,5
+vol_id,mimetype,extension,asset_type,n_files,tot_size,tot_dur,duration
+828,video/mp4,mp4,MPEG-4 video,5,1538553694,11453872,NA
+828,application/pdf,pdf,Portable document,5,0,0,NA
+828,application/vnd.openxmlformats-officedocument.wordprocessingml.document,docx,Microsoft Word (Office Open XML) document,5,0,0,NA

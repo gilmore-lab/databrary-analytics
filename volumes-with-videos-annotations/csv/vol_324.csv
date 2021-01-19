@@ -1,2 +1,2 @@
-vol_id,asset_type,n
-324,Portable network graphics,680
+vol_id,mimetype,extension,asset_type,n_files,tot_size,tot_dur,duration
+324,image/png,png,Portable network graphics,680,25901291,0,NA

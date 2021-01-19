@@ -1,5 +1,5 @@
-vol_id,asset_type,n
-5,MPEG-4 video,138
-5,JPEG image,4
-5,Microsoft Word document,4
-5,Datavyu,85
+vol_id,mimetype,extension,asset_type,n_files,tot_size,tot_dur
+5,video/mp4,mp4,MPEG-4 video,138,0,389867142
+5,image/jpeg,jpg,JPEG image,4,0,0
+5,application/msword,doc,Microsoft Word document,4,11114496,0
+5,application/vnd.datavyu,opf,Datavyu,85,1073,0

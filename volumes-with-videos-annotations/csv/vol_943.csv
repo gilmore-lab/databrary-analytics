@@ -1,6 +1,6 @@
-vol_id,asset_type,n
-943,MPEG-4 video,34
-943,Rich text format,1
-943,Microsoft Word (Office Open XML) document,2
-943,Microsoft Excel (Office Open XML) workbook,1
-943,Datavyu,30
+vol_id,mimetype,extension,asset_type,n_files,tot_size,tot_dur,duration
+943,video/mp4,mp4,MPEG-4 video,34,31899808215,86279821,NA
+943,text/rtf,rtf,Rich text format,1,17189,0,NA
+943,application/vnd.openxmlformats-officedocument.wordprocessingml.document,docx,Microsoft Word (Office Open XML) document,2,66912,0,NA
+943,application/vnd.openxmlformats-officedocument.spreadsheetml.sheet,xlsx,Microsoft Excel (Office Open XML) workbook,1,23155,0,NA
+943,application/vnd.datavyu,opf,Datavyu,30,605115,0,NA

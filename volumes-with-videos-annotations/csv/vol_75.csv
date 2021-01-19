@@ -1,3 +1,3 @@
-vol_id,asset_type,n
-75,MPEG-4 video,9
-75,JPEG image,1
+vol_id,mimetype,extension,asset_type,n_files,tot_size,tot_dur,duration
+75,video/mp4,mp4,MPEG-4 video,9,15279330,23751,NA
+75,image/jpeg,jpg,JPEG image,1,100455,0,NA

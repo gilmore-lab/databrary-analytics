@@ -1,3 +1,3 @@
-vol_id,asset_type,n
-174,MPEG-4 video,15
-174,Microsoft Excel (Office Open XML) workbook,33
+vol_id,mimetype,extension,asset_type,n_files,tot_size,tot_dur,duration
+174,video/mp4,mp4,MPEG-4 video,15,7327663900,44412937,NA
+174,application/vnd.openxmlformats-officedocument.spreadsheetml.sheet,xlsx,Microsoft Excel (Office Open XML) workbook,33,452911,0,NA

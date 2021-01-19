@@ -1,4 +1,4 @@
-vol_id,asset_type,n
-880,MPEG-4 video,4
-880,Plain text,4
-880,Microsoft PowerPoint (Office Open XML) presentation,1
+vol_id,mimetype,extension,asset_type,n_files,tot_size,tot_dur,duration
+880,video/mp4,mp4,MPEG-4 video,4,832750,20640,NA
+880,text/plain,txt,Plain text,4,5346,0,NA
+880,application/vnd.openxmlformats-officedocument.presentationml.presentation,pptx,Microsoft PowerPoint (Office Open XML) presentation,1,2319485,0,NA

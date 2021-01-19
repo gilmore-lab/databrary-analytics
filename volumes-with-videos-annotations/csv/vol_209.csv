@@ -1,4 +1,4 @@
-vol_id,asset_type,n
-209,JPEG image,90
-209,Portable document,1
-209,Microsoft Excel (Office Open XML) workbook,1
+vol_id,mimetype,extension,asset_type,n_files,tot_size,tot_dur,duration
+209,image/jpeg,jpg,JPEG image,90,56435169,0,NA
+209,application/pdf,pdf,Portable document,1,7591558,0,NA
+209,application/vnd.openxmlformats-officedocument.spreadsheetml.sheet,xlsx,Microsoft Excel (Office Open XML) workbook,1,94606,0,NA

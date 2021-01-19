@@ -1,5 +1,5 @@
-vol_id,asset_type,n
-897,MPEG-4 video,116
-897,Plain text,3
-897,Comma-separated values,2
-897,Datavyu,115
+vol_id,mimetype,extension,asset_type,n_files,tot_size,tot_dur,duration
+897,video/mp4,mp4,MPEG-4 video,116,59785979928,213439252,NA
+897,text/plain,txt,Plain text,3,44001,0,NA
+897,text/csv,csv,Comma-separated values,2,513716,0,NA
+897,application/vnd.datavyu,opf,Datavyu,115,177333,0,NA

@@ -1,5 +1,5 @@
-vol_id,asset_type,n
-444,MPEG-4 video,233
-444,Comma-separated values,31
-444,Portable network graphics,1
-444,Datavyu,1
+vol_id,mimetype,extension,asset_type,n_files,tot_size,tot_dur,duration
+444,video/mp4,mp4,MPEG-4 video,233,227194710301,328650459,NA
+444,text/csv,csv,Comma-separated values,31,13844325,0,NA
+444,image/png,png,Portable network graphics,1,191204,0,NA
+444,application/vnd.datavyu,opf,Datavyu,1,58538,0,NA

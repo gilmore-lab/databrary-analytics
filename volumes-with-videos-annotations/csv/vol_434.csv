@@ -1,5 +1,5 @@
-vol_id,asset_type,n
-434,MPEG-4 video,153
-434,Comma-separated values,198
-434,Microsoft Word (Office Open XML) document,1
-434,Datavyu,79
+vol_id,mimetype,extension,asset_type,n_files,tot_size,tot_dur,duration
+434,video/mp4,mp4,MPEG-4 video,153,111454387193,401212013,NA
+434,text/csv,csv,Comma-separated values,198,3013599,0,NA
+434,application/vnd.openxmlformats-officedocument.wordprocessingml.document,docx,Microsoft Word (Office Open XML) document,1,121749,0,NA
+434,application/vnd.datavyu,opf,Datavyu,79,500590,0,NA

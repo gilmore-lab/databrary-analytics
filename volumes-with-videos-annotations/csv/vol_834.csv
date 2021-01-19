@@ -1,3 +1,3 @@
-vol_id,asset_type,n
-834,MPEG-4 video,2
-834,Portable document,2
+vol_id,mimetype,extension,asset_type,n_files,tot_size,tot_dur,duration
+834,video/mp4,mp4,MPEG-4 video,2,170010004,1258458,NA
+834,application/pdf,pdf,Portable document,2,19213714,0,NA
