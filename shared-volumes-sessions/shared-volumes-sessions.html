@@ -1719,7 +1719,7 @@ div.tocify {
 
 <h1 class="title toc-ignore">Shared volumes with sessions report</h1>
 <h4 class="author">Rick Gilmore</h4>
-<h4 class="date">2021-01-12 11:45:22</h4>
+<h4 class="date">2021-01-25 12:02:08</h4>
 
 </div>
 
@@ -1738,10 +1738,22 @@ div.tocify {
 <h1>Gather &amp; clean data</h1>
 <p>There is currently no way to determine the highest assigned volume ID, so this code gets volume data for chunks of 100, then concatenates the outputs. The <code>use_save_file</code> parameter (default is TRUE) pulls the previous data from a saved CSV file. This speeds things up considerably at the cost of not capturing ‘old’ volumes whose sharing status has changed since the CSV was generated.</p>
 </div>
+<div id="how-shared-by-unique-volume" class="section level1">
+<h1>How shared by unique volume</h1>
+<p>There are <span class="math inline">\(n=\)</span> 988 total shared volumes on Databrary.</p>
+<div id="full-volume" class="section level2">
+<h2>Full volume</h2>
+<p>There are <span class="math inline">\(n=\)</span> 285 volumes fully shared on Databrary.</p>
+</div>
+<div id="overview-only" class="section level2">
+<h2>Overview only</h2>
+<p>There are <span class="math inline">\(n=\)</span> 703 volume overviews shared on Databrary.</p>
+</div>
+</div>
 <div id="how-shared-by-investigator" class="section level1">
 <h1>How shared by investigator</h1>
 <p>Sorted by <code>tot_sess</code>, the total number of sessions from this Authorized Investigator.</p>
-<div id="full-volume" class="section level2 tabset">
+<div id="full-volume-1" class="section level2 tabset">
 <h2 class="tabset">Full volume</h2>
 <div id="full-volume-100-sessions" class="section level3">
 <h3>Full volume (&gt;100 sessions)</h3>
@@ -5189,7 +5201,10 @@ full_volume
 </table>
 </div>
 </div>
-<div id="overview-only" class="section level2 tabset">
+</div>
+<div id="how-shared-by-unique-volume-1" class="section level1">
+<h1>How shared by unique volume</h1>
+<div id="overview-only-1" class="section level2 tabset">
 <h2 class="tabset">Overview only</h2>
 <div id="overview-only-100-sessions" class="section level3">
 <h3>Overview only (&gt;100 sessions)</h3>
@@ -5231,10 +5246,10 @@ Adolph, Karen
 overview_only
 </td>
 <td style="text-align:right;">
-63
+64
 </td>
 <td style="text-align:right;">
-3030
+3031
 </td>
 <td style="text-align:right;">
 0
@@ -5622,10 +5637,10 @@ Weisberg, Deena Skolnick
 overview_only
 </td>
 <td style="text-align:right;">
-6
+7
 </td>
 <td style="text-align:right;">
-239
+243
 </td>
 <td style="text-align:right;">
 0
@@ -5953,10 +5968,10 @@ Adolph, Karen
 overview_only
 </td>
 <td style="text-align:right;">
-63
+64
 </td>
 <td style="text-align:right;">
-3030
+3031
 </td>
 <td style="text-align:right;">
 0
@@ -6344,10 +6359,10 @@ Weisberg, Deena Skolnick
 overview_only
 </td>
 <td style="text-align:right;">
-6
+7
 </td>
 <td style="text-align:right;">
-239
+243
 </td>
 <td style="text-align:right;">
 0

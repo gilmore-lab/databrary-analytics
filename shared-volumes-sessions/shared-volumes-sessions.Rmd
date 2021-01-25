@@ -141,6 +141,36 @@ vols_dat <- vols_sess_data %>%
   dplyr::arrange(shared_type, desc(tot_sess))
 ```
 
+# How shared by unique volume
+
+```{r}
+unique_vols <- vols_sess_data %>%
+  dplyr::rename(investigator = owner.ids.name, party_id = owner.ids.id) %>%
+  dplyr::mutate(shared_type = ifelse(sharing_level == "full", "full_volume", "overview_only")) %>%
+  dplyr::select(investigator, party_id, vol_id, created_date, shared_type, n_sessions) %>%
+  dplyr::mutate(url = paste0("https://nyu.databrary.org/party/", party_id))
+```
+
+There are $n=$ `r dim(unique_vols)[1]` total shared volumes on Databrary.
+
+## Full volume
+
+```{r}
+unique_vols_full <- unique_vols %>%
+  dplyr::filter(., shared_type == "full_volume")
+```
+
+There are $n=$ `r dim(unique_vols_full)[1]` volumes fully shared on Databrary.
+
+## Overview only
+
+```{r}
+unique_vols_overview <- unique_vols %>%
+  dplyr::filter(., shared_type == "overview_only")
+```
+
+There are $n=$ `r dim(unique_vols_overview)[1]` volume overviews shared on Databrary.
+
 # How shared by investigator
 
 Sorted by `tot_sess`, the total number of sessions from this Authorized Investigator.
@@ -165,6 +195,8 @@ vols_dat %>%
   knitr::kable(., "html") %>%
   kableExtra::kable_styling(.)
 ```
+
+# How shared by unique volume
 
 ## Overview only {.tabset}
 
