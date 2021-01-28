@@ -2,28 +2,28 @@ inst_id,inst_name,inst_url,n_auth_invest,daa,lat,lon
 2,Staff,NA,0,FALSE,NA,NA
 8,New York University (NYU),http://www.nyu.edu/,31,TRUE,40.72951339999999,-73.99646089999999
 9,National Science Foundation (NSF),NA,0,FALSE,38.8016276,-77.0704465
-10,National Institutes of Health (NIH),https://www.nih.gov/,0,FALSE,35.66065820000001,-97.4965672
-12,"Pennsylvania State University, University Park",http://www.psu.edu,20,TRUE,40.8147955,-77.86531260000001
-15,National Institute of Child Health and Human Development (NICHD),NA,0,FALSE,39.0292164,-77.13551009999999
-43,"University of Wisconsin, Madison",https://www.wisc.edu/,10,TRUE,43.076592,-89.4124875
+10,National Institutes of Health (NIH),https://www.nih.gov/,0,FALSE,NA,NA
+12,"Pennsylvania State University, University Park",http://www.psu.edu,20,TRUE,NA,NA
+15,National Institute of Child Health and Human Development (NICHD),NA,0,FALSE,NA,NA
+43,"University of Wisconsin, Madison",https://www.wisc.edu/,10,TRUE,NA,NA
 44,University of Michigan,https://umich.edu/,9,TRUE,42.2780436,-83.73822410000002
 45,University of Rochester,https://www.rochester.edu/,4,TRUE,43.1305531,-77.62600329999998
 46,Georgia State University,http://www.gsu.edu/,3,TRUE,33.753068,-84.3852819
-47,Okinawa Institute of Science and Technology (OIST),NA,0,FALSE,26.4643027,127.8301869
+47,Okinawa Institute of Science and Technology (OIST),NA,0,FALSE,NA,NA
 49,University of Southern California,https://www.usc.edu/,2,TRUE,34.0223519,-118.28511700000001
-50,Carnegie Mellon University (CMU),https://www.cmu.edu/,5,TRUE,40.4427314,-79.9429552
-51,"Rutgers University, Newark",https://www.newark.rutgers.edu/,7,TRUE,40.741078,-74.1732736
-52,"Rutgers University, New Brunswick",https://newbrunswick.rutgers.edu/,5,TRUE,40.5008186,-74.44739910000001
+50,Carnegie Mellon University (CMU),https://www.cmu.edu/,5,TRUE,NA,NA
+51,"Rutgers University, Newark",https://www.newark.rutgers.edu/,7,TRUE,NA,NA
+52,"Rutgers University, New Brunswick",https://newbrunswick.rutgers.edu/,5,TRUE,NA,NA
 53,University of Miami,https://welcome.miami.edu/,3,TRUE,25.7904064,-80.21199279999996
 54,University of Virginia,http://www.virginia.edu/,9,TRUE,38.0335529,-78.50797720000003
 55,Indiana University,https://www.indiana.edu/,7,TRUE,39.1745704,-86.51294580000001
 56,College of William & Mary,https://www.wm.edu/,1,TRUE,37.271674,-76.71337799999998
-57,University of Texas at Austin,https://www.utexas.edu/,8,TRUE,30.2849185,-97.7340567
+57,University of Texas at Austin,https://www.utexas.edu/,8,TRUE,NA,NA
 58,McMaster University,http://www.mcmaster.ca/,3,TRUE,43.260879,-79.91922540000002
 59,University of Chicago,https://www.uchicago.edu/,7,TRUE,41.7886079,-87.59871329999999
 112,Brown University,https://www.brown.edu/,4,TRUE,41.8267718,-71.40254820000001
 113,Tulane University,https://tulane.edu/,5,TRUE,29.9403477,-90.12072790000002
-114,"University of Massachusetts, Boston",https://www.umb.edu/,3,TRUE,42.3144915,-71.0373279
+114,"University of Massachusetts, Boston",https://www.umb.edu/,3,TRUE,NA,NA
 115,Virginia Tech,https://vt.edu/,4,TRUE,37.22838429999999,-80.42341669999996
 116,University of Georgia,https://www.uga.edu/,1,TRUE,33.9480053,-83.37732210000001
 119,Vanderbilt University,https://www.vanderbilt.edu/,6,TRUE,36.1447034,-86.80265509999998
@@ -32,17 +32,17 @@ inst_id,inst_name,inst_url,n_auth_invest,daa,lat,lon
 134,Yale University,https://www.yale.edu/,4,TRUE,41.3163244,-72.92234309999998
 135,Brigham Young University,https://www.byu.edu/,3,TRUE,40.2518435,-111.64931560000002
 136,Georgetown University,https://www.georgetown.edu/,3,TRUE,38.9076089,-77.07225849999998
-137,"University of Maryland, College Park",https://www.umd.edu/,18,TRUE,38.9869183,-76.9425543
+137,"University of Maryland, College Park",https://www.umd.edu/,18,TRUE,NA,NA
 139,University of Sheffield,NA,0,FALSE,53.3809409,-1.4879468999999972
 140,University of Reading,http://www.reading.ac.uk/,2,TRUE,51.4414205,-0.9418157000000065
-141,"University of California, Berkeley",http://www.berkeley.edu/,3,TRUE,37.8718992,-122.2585399
-142,"University of California, Riverside",http://www.ucr.edu/,5,TRUE,33.9737055,-117.3280644
-143,University of Padua,NA,4,TRUE,45.406766,11.8774462
+141,"University of California, Berkeley",http://www.berkeley.edu/,3,TRUE,NA,NA
+142,"University of California, Riverside",http://www.ucr.edu/,5,TRUE,NA,NA
+143,University of Padua,NA,4,TRUE,NA,NA
 144,Ludwig Maximilian University of Munich,https://www.en.uni-muenchen.de/index.html,2,TRUE,48.150806,11.580429999999978
 146,Temple University,https://www.temple.edu/,7,TRUE,39.9811935,-75.15535119999998
 156,University of Hartford,NA,0,FALSE,41.7985989,-72.71400019999999
 157,University of Pittsburgh,https://www.pitt.edu/,4,TRUE,40.4443533,-79.96083499999997
-159,"Birkbeck, University of London",http://www.bbk.ac.uk/,3,TRUE,51.5218563,-0.1303146
+159,"Birkbeck, University of London",http://www.bbk.ac.uk/,3,TRUE,NA,NA
 164,Georgia Institute of Technology,https://www.gatech.edu/,4,TRUE,33.7756178,-84.39628499999998
 165,Ryerson University,http://www.ryerson.ca/,4,TRUE,43.6576585,-79.3788017
 166,University of Oregon,https://www.uoregon.edu/,6,TRUE,44.0448302,-123.07260550000001
@@ -51,8 +51,8 @@ inst_id,inst_name,inst_url,n_auth_invest,daa,lat,lon
 169,University of Redlands,NA,0,FALSE,34.0630404,-117.16324259999999
 170,Duke University,https://www.duke.edu/,2,TRUE,36.0014258,-78.9382286
 171,Stanford University,https://www.stanford.edu/,8,TRUE,37.4274745,-122.16971899999999
-172,"College of Staten Island, CUNY",https://www.csi.cuny.edu/,5,TRUE,40.6021388,-74.1503817
-173,"University of California, San Diego",https://ucsd.edu/,3,TRUE,32.8800604,-117.2340135
+172,"College of Staten Island, CUNY",https://www.csi.cuny.edu/,5,TRUE,NA,NA
+173,"University of California, San Diego",https://ucsd.edu/,3,TRUE,NA,NA
 174,Gallaudet University,https://my.gallaudet.edu/,3,TRUE,38.908422,-76.9923875
 175,Albert Einstein College of Medicine,http://www.einstein.yu.edu/,0,TRUE,40.8521451,-73.84439380000003
 176,Arizona State University,https://www.asu.edu/,7,TRUE,33.4242399,-111.92805269999997
@@ -62,7 +62,7 @@ inst_id,inst_name,inst_url,n_auth_invest,daa,lat,lon
 180,Bucknell University,http://www.bucknell.edu/,0,FALSE,40.9546869,-76.88355139999999
 181,Columbia University,https://www.columbia.edu/,1,TRUE,40.8075355,-73.96257270000001
 182,Cornell University,https://www.cornell.edu/,5,TRUE,42.4534492,-76.47350269999998
-183,Dartmouth College,https://home.dartmouth.edu/,0,FALSE,43.7044406,-72.2886935
+183,Dartmouth College,https://home.dartmouth.edu/,0,FALSE,NA,NA
 184,East Carolina University,https://www.ecu.edu/,1,TRUE,35.6055108,-77.36456529999998
 185,East Tennessee State University,http://www.etsu.edu/ehome/,2,TRUE,36.3025374,-82.37019329999998
 186,Emory University,http://www.emory.edu/home/index.html,5,TRUE,33.7925195,-84.32399889999999
@@ -79,35 +79,35 @@ inst_id,inst_name,inst_url,n_auth_invest,daa,lat,lon
 201,Northwestern University,http://www.northwestern.edu/,11,TRUE,42.0564594,-87.67526699999996
 203,Ohio State University,https://www.osu.edu/,9,TRUE,40.0141905,-83.0309143
 204,Ramapo College,NA,0,FALSE,41.0815079,-74.17462339999997
-205,University of Rennes 2,https://www.univ-rennes2.fr/en,0,FALSE,48.1179154,-1.7028658
+205,University of Rennes 2,https://www.univ-rennes2.fr/en,0,FALSE,NA,NA
 206,Sapienza University of Rome,http://en.uniroma1.it/,2,TRUE,41.9037626,12.514438400000017
 207,Seton Hall University,https://www.shu.edu/,2,TRUE,40.743011,-74.24710010000001
 208,Smith-Kettlewell Eye Research Institute,http://www.ski.org/,0,FALSE,37.7912559,-122.43418309999998
 209,Southern Illinois University,NA,0,FALSE,37.7090577,-89.22491339999999
-210,St Francis Xavier University,NA,0,FALSE,45.6177357,-61.99539410000001
-211,"Teachers College, Columbia University",http://www.tc.columbia.edu/,2,TRUE,40.8101571,-73.9604571
+210,St Francis Xavier University,NA,0,FALSE,NA,NA
+211,"Teachers College, Columbia University",http://www.tc.columbia.edu/,2,TRUE,NA,NA
 212,Tufts University,https://www.tufts.edu/,1,TRUE,42.4074843,-71.11902320000002
 213,University of Arizona,https://www.arizona.edu/,4,TRUE,32.2318851,-110.95010939999997
-214,University of Bristol,NA,0,FALSE,51.4584172,-2.6029792
-215,University of British Columbia,https://www.ubc.ca/,10,TRUE,49.26060520000001,-123.2459938
-216,"University of California, Davis",https://www.ucdavis.edu/,8,TRUE,38.5382322,-121.7617125
-217,"University of California, Los Angeles",http://www.ucla.edu/,6,TRUE,34.068921,-118.4451811
-218,"University of California, Santa Cruz",https://www.ucsc.edu/,4,TRUE,36.9880503,-122.0582093
+214,University of Bristol,NA,0,FALSE,NA,NA
+215,University of British Columbia,https://www.ubc.ca/,10,TRUE,NA,NA
+216,"University of California, Davis",https://www.ucdavis.edu/,8,TRUE,NA,NA
+217,"University of California, Los Angeles",http://www.ucla.edu/,6,TRUE,NA,NA
+218,"University of California, Santa Cruz",https://www.ucsc.edu/,4,TRUE,NA,NA
 219,University of Cleveland,NA,0,FALSE,41.50249729999999,-81.67471849999998
 220,University of Connecticut,https://uconn.edu/,6,TRUE,41.8077414,-72.25398050000001
 221,University of Denver,https://www.du.edu/,3,TRUE,39.6766174,-104.96189649999997
 222,University of Houston,http://www.uh.edu/,4,TRUE,29.7199489,-95.3422334
-223,University of Illinois,NA,0,FALSE,40.1019523,-88.2271615
+223,University of Illinois,NA,0,FALSE,NA,NA
 224,University of Illinois at Chicago,NA,1,TRUE,41.87044969999999,-87.66748539999998
 225,University of Iowa,https://uiowa.edu/,13,TRUE,41.6626963,-91.55489979999999
 226,University of Louisville,http://louisville.edu/,3,TRUE,38.2122761,-85.75850229999998
-227,"University of Massachusetts, Amherst",https://www.umass.edu/,7,TRUE,42.3867598,-72.5300515
+227,"University of Massachusetts, Amherst",https://www.umass.edu/,7,TRUE,NA,NA
 228,University of Minnesota,https://twin-cities.umn.edu/,5,TRUE,44.97399,-93.22772850000001
-229,"University of Missouri, Kansas City",https://www.umkc.edu/,1,TRUE,39.0346733,-94.5785312
-230,University of Nebraska,NA,0,FALSE,40.8201966,-96.70047629999999
-231,University of North Carolina,https://www.unc.edu/,0,FALSE,35.9049122,-79.0469134
+229,"University of Missouri, Kansas City",https://www.umkc.edu/,1,TRUE,NA,NA
+230,University of Nebraska,NA,0,FALSE,NA,NA
+231,University of North Carolina,https://www.unc.edu/,0,FALSE,NA,NA
 232,University of Otago,http://www.otago.ac.nz/,2,TRUE,-45.8646835,170.51442270000007
-233,University of Queensland,NA,1,TRUE,-27.4975028,153.0136905
+233,University of Queensland,NA,1,TRUE,NA,NA
 234,University of South Carolina,https://www.sc.edu/,2,TRUE,33.996112,-81.02742760000001
 235,University of Tennessee,https://www.utk.edu/,3,TRUE,35.9544013,-83.92945639999999
 236,University of Toronto,https://www.utoronto.ca/,20,TRUE,43.6628917,-79.39565640000001
@@ -115,30 +115,30 @@ inst_id,inst_name,inst_url,n_auth_invest,daa,lat,lon
 238,University of Western Sydney,NA,0,FALSE,-33.8757124,151.20920360000002
 239,Uppsala University,https://www.uu.se/en/,4,TRUE,59.85090049999999,17.630009299999983
 240,Virginia Commonwealth University,https://www.vcu.edu/,5,TRUE,37.5488396,-77.45272720000003
-241,"Washington University, St Louis",https://wustl.edu/,3,TRUE,38.6487895,-90.31079620000001
+241,"Washington University, St Louis",https://wustl.edu/,3,TRUE,NA,NA
 242,Whitman College,https://www.whitman.edu/,1,TRUE,46.07057990000001,-118.3306351
-243,Université de Bretagne Sud,NA,0,FALSE,47.64532639999999,-2.7471199
+243,Université de Bretagne Sud,NA,0,FALSE,NA,NA
 281,Utrecht University,https://www.uu.nl/en,5,TRUE,52.0901527,5.122601799999984
-295,Liverpool University,NA,0,FALSE,53.40478239999999,-2.965299
+295,Liverpool University,NA,0,FALSE,NA,NA
 308,Staff,NA,4,TRUE,NA,NA
-312,National Institute on Deafness and Communication Disorders,NA,0,FALSE,39.0027771,-77.10445969999999
-317,"University of Colorado, Boulder",https://www.colorado.edu/,4,TRUE,40.00758099999999,-105.2659417
+312,National Institute on Deafness and Communication Disorders,NA,0,FALSE,NA,NA
+317,"University of Colorado, Boulder",https://www.colorado.edu/,4,TRUE,NA,NA
 356,Binghamton University,https://www.binghamton.edu/,1,TRUE,42.0893553,-75.96970490000001
 358,Lehigh University,https://www1.lehigh.edu/,3,TRUE,40.6069087,-75.3782832
 359,University of Akron,https://www.uakron.edu/,1,TRUE,41.076655,-81.51133859999999
 363,Syracuse University,https://www.syracuse.edu/,1,TRUE,43.039153399999996,-76.1351158
-382,New York State Psychiatric Institute,NA,0,FALSE,40.8425117,-73.94441429999999
+382,New York State Psychiatric Institute,NA,0,FALSE,NA,NA
 391,Michigan State University,https://msu.edu/,6,TRUE,42.701848,-84.48217190000003
 402,University of São Paulo,http://www5.usp.br/english/?lang=en,2,TRUE,-23.5613991,-46.73078910000004
-419,"Lehman College, CUNY",http://www.lehman.cuny.edu/,1,TRUE,40.8713962,-73.8963454
+419,"Lehman College, CUNY",http://www.lehman.cuny.edu/,1,TRUE,NA,NA
 428,Rosalind Franklin University of Medicine and Science,https://www.rosalindfranklin.edu/,1,TRUE,42.300356,-87.8586267
 471,Swinburne University of Technology,http://www.swinburne.edu.au/,2,TRUE,-37.8221504,145.0389546
 502,Trinity College,https://www.trincoll.edu/,2,TRUE,41.7479332,-72.6903345
-553,Cincinnati Children’s Hospital Medical Center,https://www.cincinnatichildrens.org/,1,TRUE,39.1404751,-84.5015397
+553,Cincinnati Children’s Hospital Medical Center,https://www.cincinnatichildrens.org/,1,TRUE,NA,NA
 554,Macquarie University,http://mq.edu.au,1,TRUE,-33.77382370000001,151.11264979999999
 560,Bard College,http://www.bard.edu/,1,TRUE,42.0203897,-73.91005439999998
 794,Oberlin College,https://www.oberlin.edu/,2,TRUE,41.29348299999999,-82.2236001
-797,University of Hawaii at Manoa,https://manoa.hawaii.edu/,2,TRUE,21.296939,-157.8171118
+797,University of Hawaii at Manoa,https://manoa.hawaii.edu/,2,TRUE,NA,NA
 826,University of Manitoba,http://umanitoba.ca/,1,TRUE,49.8075008,-97.13662590000001
 919,Alexandru Ioan Cuza University,http://www.uaic.ro/en/,1,TRUE,47.1739612,27.572106299999973
 931,Radboud University,http://www.ru.nl/english/,7,TRUE,51.8193148,5.856887700000016
@@ -153,16 +153,16 @@ inst_id,inst_name,inst_url,n_auth_invest,daa,lat,lon
 963,Baylor College of Medicine,https://www.bcm.edu/,1,TRUE,29.71052899999999,-95.39624099999997
 976,ISCTE - University Institute of Lisbon (IUL),https://www.iscte-iul.pt/,2,TRUE,38.7478406,-9.153442799999993
 977,University of Pennsylvania,https://www.upenn.edu/,4,TRUE,39.9522188,-75.1932137
-991,University of Winchester,https://www.winchester.ac.uk/,1,TRUE,51.0597004,-1.3282476
+991,University of Winchester,https://www.winchester.ac.uk/,1,TRUE,NA,NA
 996,Canisius College,https://www.canisius.edu/,1,TRUE,42.9248338,-78.85148479999998
 999,University of Central Florida,https://www.ucf.edu/,2,TRUE,28.6024274,-81.20005989999999
 1013,Grinnell College,https://www.grinnell.edu/,2,TRUE,41.74905709999999,-92.72013019999997
 1014,Max Planck Institute for Human Development,https://www.mpib-berlin.mpg.de/en,3,TRUE,52.468554,13.303832000000057
 1043,Rochester Institute of Technology,http://www.rit.edu/,6,TRUE,43.0861017,-77.67051429999998
-1050,University of Trier,https://www.uni-trier.de/,1,TRUE,49.74578169999999,6.6884495
+1050,University of Trier,https://www.uni-trier.de/,1,TRUE,NA,NA
 1053,Middlesex University,http://www.mdx.ac.uk/,2,TRUE,51.589755,-0.2282989999999927
 1055,Oregon State University,https://oregonstate.edu/,6,TRUE,44.5637806,-123.27944430000002
-1058,South Carolina,NA,0,FALSE,33.836081,-81.1637245
+1058,South Carolina,NA,0,FALSE,NA,NA
 1063,Claude Bernard University Lyon 1,https://www.univ-lyon1.fr/en/home-759942.kjsp,1,TRUE,45.7788727,4.867961100000002
 1065,Bilkent University,http://w3.bilkent.edu.tr/bilkent/,1,TRUE,39.8746147,32.747596199999975
 1067,Pace University,http://www.pace.edu/,2,TRUE,40.7111197,-74.0048567
@@ -170,13 +170,13 @@ inst_id,inst_name,inst_url,n_auth_invest,daa,lat,lon
 1071,University of Erlangen-Nuremberg,https://www.fau.de/,1,TRUE,49.5978804,11.004550699999982
 1080,Newcastle University,http://www.ncl.ac.uk/,1,TRUE,54.9791871,-1.6146608000000242
 1089,Williams College,https://www.williams.edu/,3,TRUE,42.7128038,-73.20302140000001
-1092,"University of Missouri, St. Louis",https://www.umsl.edu/,1,TRUE,38.7092187,-90.3083223
+1092,"University of Missouri, St. Louis",https://www.umsl.edu/,1,TRUE,NA,NA
 1100,Gettysburg College,http://www.gettysburg.edu/,2,TRUE,39.8362073,-77.2375078
 1111,Hofstra University,https://www.hofstra.edu/,1,TRUE,40.716792,-73.59940410000002
 1131,Loyola University Chicago,http://www.luc.edu/,4,TRUE,41.998997,-87.65819210000001
-1179,"University of Louisiana, Lafayette",https://louisiana.edu/,2,TRUE,30.2114404,-92.0204121
-1186,"University of Nevada, Las Vegas",https://www.unlv.edu/,4,TRUE,36.1072396,-115.1425003
-1187,"University of North Carolina, Greensboro",https://www.uncg.edu/,6,TRUE,36.0689296,-79.8101976
+1179,"University of Louisiana, Lafayette",https://louisiana.edu/,2,TRUE,NA,NA
+1186,"University of Nevada, Las Vegas",https://www.unlv.edu/,4,TRUE,NA,NA
+1187,"University of North Carolina, Greensboro",https://www.uncg.edu/,6,TRUE,NA,NA
 1235,Miami University,http://miamioh.edu/index.html,4,TRUE,39.5105334,-84.73087679999998
 1255,Christopher Newport University,http://cnu.edu/,1,TRUE,37.0646188,-76.49443839999998
 1260,Millersville University,https://www.millersville.edu/,1,TRUE,39.9976889,-76.3544283
@@ -187,10 +187,10 @@ inst_id,inst_name,inst_url,n_auth_invest,daa,lat,lon
 1314,Wesleyan University,https://www.wesleyan.edu/,2,TRUE,41.5566104,-72.65690410000002
 1318,Northern Illinois University,https://www.niu.edu/,2,TRUE,41.934233,-88.774069
 1333,University of the Sciences,https://www.usciences.edu/,2,TRUE,39.9468299,-75.20709790000001
-1336,Swarthmore College,https://www.swarthmore.edu/,1,TRUE,39.9038329,-75.3526559
+1336,Swarthmore College,https://www.swarthmore.edu/,1,TRUE,NA,NA
 1337,IE University,https://www.ie.edu/,1,TRUE,40.9528125,-4.118795699999964
 1346,Ozyegin University,https://www.ozyegin.edu.tr/en,2,TRUE,41.0313315,29.25871559999996
-1353,"University of Nebraska, Lincoln",https://www.unl.edu/,3,TRUE,40.8201966,-96.70047629999999
+1353,"University of Nebraska, Lincoln",https://www.unl.edu/,3,TRUE,NA,NA
 1354,Montana State University,http://www.montana.edu/,0,TRUE,45.6667557,-111.04980999999998
 1362,Earlham College,http://earlham.edu/,1,TRUE,39.8208853,-84.913052
 1364,Princeton University,https://www.princeton.edu/,5,TRUE,40.3439888,-74.65144809999998
@@ -200,7 +200,7 @@ inst_id,inst_name,inst_url,n_auth_invest,daa,lat,lon
 1389,University of Arkansas at Little Rock,http://ualr.edu/,1,TRUE,34.7240568,-92.33888719999999
 1407,University of Montana,https://www.umt.edu/,4,TRUE,46.8600672,-113.98520810000002
 1420,University of Stirling,https://www.stir.ac.uk/,1,TRUE,56.1459171,-3.918879000000061
-1421,"National Institute of Astrophysics, Optics and Electronics (INAOE)",http://inaoep.mx/,1,TRUE,19.0323107,-98.31537019999999
+1421,"National Institute of Astrophysics, Optics and Electronics (INAOE)",http://inaoep.mx/,1,TRUE,NA,NA
 1427,IRCCS Stella Maris Foundation,http://www.fsm.unipi.it/,0,FALSE,43.6077483,10.292125899999974
 1428,Memorial University,https://www.mun.ca/,1,TRUE,47.5737975,-52.73290529999997
 1453,University of Tampere,http://www2.uta.fi/en,2,TRUE,61.49374479999999,23.77873539999996
@@ -209,34 +209,34 @@ inst_id,inst_name,inst_url,n_auth_invest,daa,lat,lon
 1471,Davidson College,https://www.davidson.edu/,1,TRUE,35.5017318,-80.84677929999998
 1480,University of Geneva,https://www.unige.ch/en/university/presentation/,1,TRUE,40.7713156,-80.32184719999998
 1482,University of North Georgia,https://ung.edu/,1,TRUE,34.5278618,-83.98444159999997
-1486,"Barnard College, Columbia University",https://barnard.edu/,2,TRUE,40.8090248,-73.9638131
-1489,Free University of Brussels,http://www.ulb.ac.be/ulb/presentation/uk.html,1,TRUE,50.8218963,4.3949396
-1490,"Paul Valéry University,  Montpellier 3",https://www.univ-montp3.fr/,1,TRUE,43.632442,3.8702447
+1486,"Barnard College, Columbia University",https://barnard.edu/,2,TRUE,NA,NA
+1489,Free University of Brussels,http://www.ulb.ac.be/ulb/presentation/uk.html,1,TRUE,NA,NA
+1490,"Paul Valéry University,  Montpellier 3",https://www.univ-montp3.fr/,1,TRUE,NA,NA
 1504,Jagiellonian University,http://www.en.uj.edu.pl/en,2,TRUE,50.0609623,19.934107400000016
-1505,"New York University, School of Medicine",https://med.nyu.edu/,7,TRUE,40.742133,-73.97385109999999
+1505,"New York University, School of Medicine",https://med.nyu.edu/,7,TRUE,NA,NA
 1511,Teesside University,https://www.tees.ac.uk/,1,TRUE,54.5706735,-1.235274200000049
-1512,Oregon Health & Science University,https://www.ohsu.edu/xd/,1,TRUE,44.9410233,-123.0302858
-1529,Weill Cornell Medicine,http://weill.cornell.edu/,1,TRUE,40.7655258,-73.95500179999999
+1512,Oregon Health & Science University,https://www.ohsu.edu/xd/,1,TRUE,NA,NA
+1529,Weill Cornell Medicine,http://weill.cornell.edu/,1,TRUE,NA,NA
 1530,University at Buffalo,https://www.buffalo.edu/,1,TRUE,43.0008093,-78.7889697
 1543,Interdisciplinary Center Herzliya,https://www.idc.ac.il/he/pages/home.aspx,2,TRUE,32.176113,34.83623399999999
 1548,St. Lawrence University,https://www.stlawu.edu/,1,TRUE,44.5892119,-75.1608814
 1557,University Paris 8,http://www.univ-paris8.fr/en/,1,TRUE,48.9449361,2.363562199999933
 1561,University of the Basque Country,http://www.ehu.eus/en/en-home,2,TRUE,43.3309433,-2.967892099999972
-1570,"University of California, Merced",https://www.ucmerced.edu/,2,TRUE,37.3660652,-120.4224179
+1570,"University of California, Merced",https://www.ucmerced.edu/,2,TRUE,NA,NA
 1598,Villanova University,http://www1.villanova.edu/main.html,2,TRUE,40.037056,-75.34357999999997
 1603,Texas Christian University,http://www.tcu.edu/,2,TRUE,32.70953,-97.362795
 1608,University of New South Wales,https://www.unsw.edu.au/,2,TRUE,-33.917347,151.23126750000006
-1609,University of Quebec at Trois-Rivieres,http://www.uqtr.ca/,1,TRUE,46.3472006,-72.57709369999999
+1609,University of Quebec at Trois-Rivieres,http://www.uqtr.ca/,1,TRUE,NA,NA
 1625,Liverpool Hope University,https://www.hope.ac.uk/,2,TRUE,53.3908007,-2.892298799999935
-1626,"California State University, Northridge",https://www.csun.edu/,3,TRUE,34.2410366,-118.5276745
+1626,"California State University, Northridge",https://www.csun.edu/,3,TRUE,NA,NA
 1654,University of Oklahoma,http://www.ou.edu/,3,TRUE,35.2058936,-97.4457137
-1678,"University of North Carolina, Asheville",https://www.unca.edu/,1,TRUE,35.6164875,-82.56650820000002
-1683,Federal University of Parana,http://www.ufpr.br/portalufpr/,1,TRUE,-25.4269081,-49.2617658
-1692,"University of Wisconsin, Whitewater",http://www.uww.edu/,1,TRUE,42.8411746,-88.7452813
-1707,"Queens College, CUNY",https://www.qc.cuny.edu/,2,TRUE,40.73664369999999,-73.8200894
+1678,"University of North Carolina, Asheville",https://www.unca.edu/,1,TRUE,NA,NA
+1683,Federal University of Parana,http://www.ufpr.br/portalufpr/,1,TRUE,NA,NA
+1692,"University of Wisconsin, Whitewater",http://www.uww.edu/,1,TRUE,NA,NA
+1707,"Queens College, CUNY",https://www.qc.cuny.edu/,2,TRUE,NA,NA
 1711,Italian Hospital of Buenos Aires,https://www.hospitalitaliano.org.ar/,1,TRUE,-34.6072209,-58.42627700000003
 1717,University of South Florida,https://www.usf.edu/,4,TRUE,28.0587031,-82.41385389999999
-1720,Aix-Marseille University,https://www.univ-amu.fr/en,2,TRUE,43.2922073,5.359122699999999
+1720,Aix-Marseille University,https://www.univ-amu.fr/en,2,TRUE,NA,NA
 1750,Omsk State Pedagogical University,http://www.omgpu.ru/en/,1,TRUE,54.99007959999999,73.35769959999993
 1760,University of Angers,http://www.univ-angers.fr/en/university.html,1,TRUE,47.47709099999999,-0.5499306000000388
 1773,San Francisco State University,http://www.sfsu.edu/,2,TRUE,37.721897,-122.47820939999997
@@ -244,24 +244,24 @@ inst_id,inst_name,inst_url,n_auth_invest,daa,lat,lon
 1776,St. John's University,https://www.stjohns.edu/,3,TRUE,40.7215967,-73.79468989999998
 1779,Connecticut College,https://www.conncoll.edu/,1,TRUE,41.3786877,-72.10458690000002
 1786,University of Lisbon,https://www.ulisboa.pt/,2,TRUE,38.7526578,-9.158244999999965
-1787,"California State University, Stanislaus",https://www.csustan.edu/,2,TRUE,37.525248,-120.8553931
-1801,Humboldt University of Berlin,https://www.hu-berlin.de/en/,1,TRUE,52.517883,13.3936551
+1787,"California State University, Stanislaus",https://www.csustan.edu/,2,TRUE,NA,NA
+1801,Humboldt University of Berlin,https://www.hu-berlin.de/en/,1,TRUE,NA,NA
 1802,Albright College,https://www.albright.edu/,2,TRUE,40.3615027,-75.91062899999997
 1816,Hangzhou Normal University,http://english.hznu.edu.cn/,1,TRUE,30.289532,120.00988600000005
 1817,Leiden University,https://www.universiteitleiden.nl/en,9,TRUE,52.1571485,4.485208999999941
 1833,Gustavus Adolphus College,https://gustavus.edu/,1,TRUE,44.3221619,-93.96877710000001
-1840,"California State University, Long Beach",http://www.csulb.edu/,2,TRUE,33.7838235,-118.1140904
+1840,"California State University, Long Beach",http://www.csulb.edu/,2,TRUE,NA,NA
 1852,Providence College,https://www.providence.edu/,3,TRUE,41.8440925,-71.43816529999998
-1853,University of Greifswald,https://www.uni-greifswald.de/en/,2,TRUE,54.0949653,13.374584
-1890,Free University of Berlin,https://www.fu-berlin.de/en/index.html,2,TRUE,52.4543245,13.2934768
+1853,University of Greifswald,https://www.uni-greifswald.de/en/,2,TRUE,NA,NA
+1890,Free University of Berlin,https://www.fu-berlin.de/en/index.html,2,TRUE,NA,NA
 1893,Hong Kong University of Science and Technology,http://www.ust.hk/,1,TRUE,22.3363998,114.2654655
 1908,Old Dominion University,https://www.odu.edu/,1,TRUE,36.8856104,-76.3067777
 1923,University of Canterbury,http://www.canterbury.ac.nz/,1,TRUE,-43.5235375,172.58392330000004
-1932,University of Texas at Dallas,http://www.utdallas.edu/,3,TRUE,32.9857619,-96.7500993
+1932,University of Texas at Dallas,http://www.utdallas.edu/,3,TRUE,NA,NA
 1938,University of Sussex,http://www.sussex.ac.uk/,1,TRUE,50.86708950000001,-0.0879139999999552
 1950,University of Verona,http://www.univr.it/jsp/index.jsp?lang=en,1,TRUE,45.43739799999999,11.003376000000003
 1955,University of Liverpool,https://www.liverpool.ac.uk/,2,TRUE,53.405936,-2.965572199999997
-1958,Laboratory of Cognitive and Psycholinguistic Sciences,http://www.lscp.net/index.php?lang=en,2,TRUE,42.3398226,-71.1097814
+1958,Laboratory of Cognitive and Psycholinguistic Sciences,http://www.lscp.net/index.php?lang=en,2,TRUE,NA,NA
 1963,Tokyo Metropolitan University,http://www.tmu.ac.jp/english/index.html,1,TRUE,35.617166,139.37703299999998
 1964,Florida State University,https://www.fsu.edu/,3,TRUE,30.4418778,-84.2984889
 1966,National University of Córdoba,https://www.unc.edu.ar/,1,TRUE,-31.4354855,-64.18557020000003
@@ -269,7 +269,7 @@ inst_id,inst_name,inst_url,n_auth_invest,daa,lat,lon
 1981,Lancaster University,http://www.lancaster.ac.uk/,6,TRUE,54.0103942,-2.7877293999999893
 2093,National Scientific and Technical Research Council (CONICET),http://www.conicet.gov.ar/?lan=en,3,TRUE,-34.5826428,-58.4290725
 2113,Widener University,http://www.widener.edu/,3,TRUE,39.8633562,-75.3566753
-2114,"California State Polytechnic University, Pomona",http://www.cpp.edu/,3,TRUE,34.0588862,-117.8193781
+2114,"California State Polytechnic University, Pomona",http://www.cpp.edu/,3,TRUE,NA,NA
 2123,University of Alberta,https://www.ualberta.ca/,3,TRUE,53.5232189,-113.52631859999997
 2127,International Congress on Infant Studies (ICIS),http://www.infantstudies.org/,4,FALSE,NA,NA
 2130,Max Planck Institute for Evolutionary Anthropology,http://www.eva.mpg.de/index.html,1,TRUE,51.3211759,12.395021400000019
@@ -279,36 +279,36 @@ inst_id,inst_name,inst_url,n_auth_invest,daa,lat,lon
 2195,Clemson University,http://www.clemson.edu/,1,TRUE,34.6760942,-82.8364148
 2196,National Autonomous University of Mexico,https://www.unam.mx/,1,TRUE,19.3188895,-99.18436759999997
 2197,Stockholm University,http://www.su.se/english/,1,TRUE,59.36276469999999,18.059267699999964
-2199,University of Los Andes,https://uniandes.edu.co/,1,TRUE,4.601458099999999,-74.0661334
+2199,University of Los Andes,https://uniandes.edu.co/,1,TRUE,NA,NA
 2208,Concordia University,https://www.concordia.ca/,2,TRUE,45.5701912,-122.63688739999998
 2211,Duquesne University,https://www.duq.edu/,1,TRUE,40.4372949,-79.99017279999998
-2212,University of Tuebingen,http://www.uni-tuebingen.de/,1,TRUE,48.5294782,9.043773999999999
+2212,University of Tuebingen,http://www.uni-tuebingen.de/,1,TRUE,NA,NA
 2215,University of the Incarnate Word,http://www.uiw.edu/,1,TRUE,29.4675939,-98.4676217
 2224,San Jose State University,http://www.sjsu.edu/,2,TRUE,37.3351874,-121.88107150000002
 2229,Boston Medical Center,https://www.bmc.org/,1,TRUE,42.3355155,-71.07285430000002
 2235,Niigata University,https://www.niigata-u.ac.jp/en/,1,TRUE,37.86701,138.942539
-2236,"University of California, Santa Barbara",https://www.ucsb.edu/,2,TRUE,34.4139629,-119.848947
+2236,"University of California, Santa Barbara",https://www.ucsb.edu/,2,TRUE,NA,NA
 2255,University of Waterloo,https://uwaterloo.ca/,6,TRUE,43.4722854,-80.5448576
 2259,Franklin and Marshall College,https://www.fandm.edu/,3,TRUE,40.0475258,-76.31790160000003
 2267,Chatham University,https://www.chatham.edu/,1,TRUE,40.4482193,-79.9242625
 2272,Association Italian Teachers Method Feldenkrais (AIIMF),http://www.feldenkrais.it/,1,TRUE,43.7677075,11.2757787
 2273,Kutztown University of Pennsylvania,https://www.kutztown.edu/,1,TRUE,40.5100878,-75.78342250000003
 2275,Kobe University,http://www.kobe-u.ac.jp/en/,1,TRUE,34.7256185,135.23539529999994
-2276,University of Western Australia,https://www.uwa.edu.au/,2,TRUE,-31.9800186,115.8189709
-2282,"University of North Carolina, Chapel Hill",https://www.unc.edu/,4,TRUE,35.9049122,-79.0469134
-2287,University of Goettingen,http://www.uni-goettingen.de/en/1.html,1,TRUE,51.5408116,9.9374005
-2318,University of Quebec in Outaouais,https://uqo.ca/,1,TRUE,45.422466,-75.7387016
+2276,University of Western Australia,https://www.uwa.edu.au/,2,TRUE,NA,NA
+2282,"University of North Carolina, Chapel Hill",https://www.unc.edu/,4,TRUE,NA,NA
+2287,University of Goettingen,http://www.uni-goettingen.de/en/1.html,1,TRUE,NA,NA
+2318,University of Quebec in Outaouais,https://uqo.ca/,1,TRUE,NA,NA
 2334,Oklahoma State University,https://go.okstate.edu/,4,TRUE,36.1270236,-97.07372220000002
-2352,"Institute of Psychology, Chinese Academy of Sciences",http://english.psych.cas.cn/,2,TRUE,40.0020034,116.3731217
+2352,"Institute of Psychology, Chinese Academy of Sciences",http://english.psych.cas.cn/,2,TRUE,NA,NA
 2371,University of New Hampshire,http://www.unh.edu/,2,TRUE,43.138948,-70.9370252
-2376,"University of California, Irvine",https://uci.edu/,6,TRUE,33.6404952,-117.8442962
+2376,"University of California, Irvine",https://uci.edu/,6,TRUE,NA,NA
 2395,Lynchburg College,https://www.lynchburg.edu/,1,TRUE,37.4006,-79.183153
 2398,Charité - University Medicine Berlin,https://www.charite.de/forschung/,2,TRUE,52.5264618,13.376624499999934
-2402,"University of Wisconsin, Oshkosh",http://www.uwosh.edu/,0,TRUE,44.0262095,-88.55081559999999
+2402,"University of Wisconsin, Oshkosh",http://www.uwosh.edu/,0,TRUE,NA,NA
 2418,Children's Hospital of Philadelphia (CHOP),http://www.chop.edu/,1,TRUE,39.9489145,-75.1939595
-2451,University of Illinois at Urbana-Champaign,http://illinois.edu/,7,TRUE,40.1019523,-88.2271615
+2451,University of Illinois at Urbana-Champaign,http://illinois.edu/,7,TRUE,NA,NA
 2452,Cardiff University,https://www.cardiff.ac.uk/,6,TRUE,51.48662710000001,-3.1788641000000553
-2477,"Brooklyn College, CUNY",http://www.brooklyn.cuny.edu/web/home.php,2,TRUE,40.6304648,-73.952113
+2477,"Brooklyn College, CUNY",http://www.brooklyn.cuny.edu/web/home.php,2,TRUE,NA,NA
 2478,Ulster University,https://www.ulster.ac.uk/,3,TRUE,55.00643840000001,-7.324364400000036
 2493,Carleton University,http://carleton.ca/,1,TRUE,45.3875812,-75.69602020000002
 2553,INSERM,http://english.inserm.fr/,1,TRUE,45.740361,4.893118700000059
@@ -321,21 +321,21 @@ inst_id,inst_name,inst_url,n_auth_invest,daa,lat,lon
 2634,Ulm University,http://www.uni-ulm.de/en/,1,TRUE,48.4222305,9.95558200000005
 2639,Farmingdale State College,https://www.farmingdale.edu/,1,TRUE,40.752182,-73.42244599999998
 2645,Michigan Technological University,https://www.mtu.edu/,1,TRUE,47.1149065,-88.54530729999999
-2650,"California State University, Fullerton",https://www.fullerton.edu/,2,TRUE,33.8823476,-117.8851033
-2673,Pontifical Catholic University of Chile,http://www.uc.cl/,1,TRUE,-33.44180680000001,-70.6399544
-2681,"California Polytechnic State University, San Luis Obispo",https://www.calpoly.edu/,1,TRUE,35.3050053,-120.6624942
+2650,"California State University, Fullerton",https://www.fullerton.edu/,2,TRUE,NA,NA
+2673,Pontifical Catholic University of Chile,http://www.uc.cl/,1,TRUE,NA,NA
+2681,"California Polytechnic State University, San Luis Obispo",https://www.calpoly.edu/,1,TRUE,NA,NA
 2683,University of South Dakota,http://www.usd.edu/,1,TRUE,42.7883015,-96.92533809999998
 2703,Virginia Military Institute,http://www.vmi.edu/,1,TRUE,37.788981,-79.43946
 2716,Humboldt State University,https://www.humboldt.edu/,1,TRUE,40.8752748,-124.07782099999997
-2718,Catholic University of America,https://www.catholic.edu/index.html,1,TRUE,38.9368811,-76.99869199999999
+2718,Catholic University of America,https://www.catholic.edu/index.html,1,TRUE,NA,NA
 2732,Marshall University,http://www.marshall.edu/home/index.html,1,TRUE,38.4235332,-82.4263138
 2748,Pomona College,https://www.pomona.edu/,1,TRUE,34.097743,-117.71180300000003
-2751,"California State University, San Bernardino",https://www.csusb.edu/,1,TRUE,34.1813584,-117.3231875
-2753,"California State University, Sacramento",https://www.csus.edu/,1,TRUE,38.5581553,-121.4214301
+2751,"California State University, San Bernardino",https://www.csusb.edu/,1,TRUE,NA,NA
+2753,"California State University, Sacramento",https://www.csus.edu/,1,TRUE,NA,NA
 2754,Australian Catholic University,http://www.acu.edu.au/,1,TRUE,-27.3778982,153.08932170000003
 2766,University of Haifa,http://www.haifa.ac.il/index.php/en/home-eng,3,TRUE,32.7614296,35.01951840000004
 2777,University of Cambridge,https://www.cam.ac.uk/,1,TRUE,52.2042666,0.1149084999999559
-2778,Catholic University of Portugal,http://www.porto.ucp.pt/,1,TRUE,41.1541027,-8.6724797
+2778,Catholic University of Portugal,http://www.porto.ucp.pt/,1,TRUE,NA,NA
 2779,University of Lincoln,http://www.lincoln.ac.uk/home/,2,TRUE,53.2279107,-0.5501933000000463
 2781,University of Ottawa,https://www.uottawa.ca/en,1,TRUE,45.42310639999999,-75.68313289999998
 2795,Edogawa University,http://www.edogawa-u.ac.jp/en/,1,TRUE,35.8765371,139.93873929999995
@@ -348,9 +348,9 @@ inst_id,inst_name,inst_url,n_auth_invest,daa,lat,lon
 2860,Saarland University,http://www.uni-saarland.de/nc/en/home.html,1,TRUE,49.2550284,7.040975000000003
 2861,Oxford Brookes University,https://www.brookes.ac.uk/,2,TRUE,51.755011,-1.224224999999933
 2862,Technion – Israel Institute of Technology,https://www.technion.ac.il/en/,2,TRUE,32.7767783,35.02312710000001
-2873,"Carlos Albizu University, San Juan",http://www.albizu.edu/,0,TRUE,18.4666383,-66.11383169999999
+2873,"Carlos Albizu University, San Juan",http://www.albizu.edu/,0,TRUE,NA,NA
 2875,SWPS University of Social Sciences and Humanities,http://english.swps.pl/,2,TRUE,52.2484404,21.065015500000072
-2877,University of Scranton,http://www.scranton.edu/,2,TRUE,41.40666299999999,-75.6586032
+2877,University of Scranton,http://www.scranton.edu/,2,TRUE,NA,NA
 2881,Indraprastha Institute of Information Technology Delhi,https://www.iiitd.ac.in/,2,TRUE,28.5456282,77.27315049999993
 2888,University of Leeds,https://www.leeds.ac.uk/,1,TRUE,53.8066815,-1.5550327999999354
 2905,Eastern Michigan University,http://www.emich.edu/,1,TRUE,42.2506803,-83.62408900000003
@@ -358,7 +358,7 @@ inst_id,inst_name,inst_url,n_auth_invest,daa,lat,lon
 2928,University of Hull,http://www.hull.ac.uk/Home.aspx,2,TRUE,53.7737034,-0.3680781000000479
 2939,Lock Haven University,https://www.lockhaven.edu/,1,TRUE,41.1423205,-77.46214750000001
 2952,Koc University,https://www.ku.edu.tr/en,1,TRUE,41.19779640000001,29.067383500000005
-2959,"University of California, San Francisco",https://www.ucsf.edu/,1,TRUE,37.7627248,-122.4578922
+2959,"University of California, San Francisco",https://www.ucsf.edu/,1,TRUE,NA,NA
 2978,London School of Economics and Political Science,http://www.lse.ac.uk/,1,TRUE,51.5144077,-0.11737659999994321
 2997,Simon Fraser University,https://www.sfu.ca/,2,TRUE,49.2780937,-122.91988329999998
 3000,Adam Mickiewicz University,http://international.amu.edu.pl/,1,TRUE,52.4083974,16.915402099999937
@@ -368,14 +368,14 @@ inst_id,inst_name,inst_url,n_auth_invest,daa,lat,lon
 3072,Copenhagen Business School,https://www.cbs.dk/en,1,TRUE,55.681611,12.529678999999987
 3073,Texas Woman's University,https://twu.edu/,2,TRUE,33.2262879,-97.12710340000001
 3084,Max Planck Institute for Psycholinguistics,http://www.mpi.nl/,2,TRUE,51.81799340000001,5.85709339999994
-3130,"University of North Carolina, Wilmington",https://uncw.edu/,2,TRUE,34.223874,-77.8696036
+3130,"University of North Carolina, Wilmington",https://uncw.edu/,2,TRUE,NA,NA
 3190,Sam Houston State University,http://www.shsu.edu/,1,TRUE,30.7131978,-95.55035659999999
 3197,University of Notre Dame,https://www.nd.edu/,1,TRUE,41.7055716,-86.23533880000002
 3265,State University of New York at Fredonia,http://home.fredonia.edu/,1,TRUE,42.4538665,-79.34036329999998
 3282,Thompson Rivers University,http://www.tru.ca/,1,TRUE,50.672496,-120.37061599999998
 3283,Aalto University,http://www.aalto.fi/en/,1,TRUE,60.1866693,24.82768199999998
 3292,University of Salford,http://www.salford.ac.uk/,1,TRUE,53.48458600000001,-2.2707550000000083
-3325,University Saint Anne,https://www.usainteanne.ca/en/,1,TRUE,44.3326798,-66.1168753
+3325,University Saint Anne,https://www.usainteanne.ca/en/,1,TRUE,NA,NA
 3335,West Virginia University,https://www.wvu.edu/,1,TRUE,39.6361396,-79.95593580000002
 3336,Curtin University,http://www.curtin.edu.au/,1,TRUE,-32.0061951,115.89441820000002
 3337,Banja Luka University,http://www.unibl.org/en/,1,TRUE,44.7745476,17.211192600000004
@@ -383,7 +383,7 @@ inst_id,inst_name,inst_url,n_auth_invest,daa,lat,lon
 3389,New College of Florida,https://www.ncf.edu/,1,TRUE,27.384828,-82.55870299999998
 3421,Adelphi University,http://www.adelphi.edu/,1,TRUE,40.719728,-73.6517116
 3436,General Hospital of Mexico,http://www.hgm.salud.gob.mx/,1,TRUE,39.1725348,-91.8773415
-3444,"University of Wisconsin, Milwaukee",http://uwm.edu/,1,TRUE,43.078263,-87.8819686
+3444,"University of Wisconsin, Milwaukee",http://uwm.edu/,1,TRUE,NA,NA
 3445,Academic Medical Center,https://www.amc.nl/web/Zorg.htm,1,TRUE,52.294629,4.957973000000038
 3455,University of East London,https://www.uel.ac.uk/,3,TRUE,51.5076024,0.06508089999999811
 3460,University of Campinas,http://www.unicamp.br/unicamp/,1,TRUE,-22.8184393,-47.06472059999999
@@ -394,263 +394,259 @@ inst_id,inst_name,inst_url,n_auth_invest,daa,lat,lon
 3496,Colorado State University,https://www.colostate.edu/,2,TRUE,40.573436,-105.0865473
 3497,University of Toledo,http://www.utoledo.edu/,1,TRUE,41.6580307,-83.61407009999999
 3507,Santa Clara University,https://www.scu.edu/,2,TRUE,37.3496418,-121.9389875
-3528,University of Muenster,http://www.uni-muenster.de/en/,1,TRUE,51.963581,7.6132548
-3568,"Hunter College, CUNY",http://www.hunter.cuny.edu/main/,3,TRUE,40.7678398,-73.9645291
+3528,University of Muenster,http://www.uni-muenster.de/en/,1,TRUE,NA,NA
+3568,"Hunter College, CUNY",http://www.hunter.cuny.edu/main/,3,TRUE,NA,NA
 3569,Kyushu University,https://www.kyushu-u.ac.jp/en/,1,TRUE,33.6266584,130.4250445
 3573,Kumamoto University,http://ewww.kumamoto-u.ac.jp/en/,1,TRUE,32.8140382,130.7278725
 3577,Worcester Polytechnic Institute,https://www.wpi.edu/,1,TRUE,42.27463729999999,-71.80633899999998
 3578,University of East Anglia,https://www.uea.ac.uk/,3,TRUE,52.6219215,1.2391761000000088
 3587,University of Nantes,http://www.univ-nantes.fr/english-version/welcome-to-universite-de-nantes-714591.kjsp,1,TRUE,47.2095499,-1.555971799999952
 3588,Osaka University,http://www.osaka-u.ac.jp/en,1,TRUE,34.8220139,135.52446759999998
-3594,University Putra Malaysia,http://www.upm.edu.my/,1,TRUE,2.99932,101.707939
+3594,University Putra Malaysia,http://www.upm.edu.my/,1,TRUE,NA,NA
 3608,Istanbul Technical University,http://www.itu.edu.tr/en,2,TRUE,41.1055941,29.025340099999994
 3615,National University of La Plata,https://unlp.edu.ar/,1,TRUE,-34.9128319,-57.951162899999986
 3619,Clark University,http://www.clarku.edu/,2,TRUE,42.2523452,-71.82467029999998
 3634,Trinity College Dublin,https://www.tcd.ie/,1,TRUE,53.3437935,-6.254571599999963
-3641,"Baruch College, CUNY",http://www.baruch.cuny.edu/,2,TRUE,40.7403892,-73.98322859999999
-3649,"Graduate Center, CUNY",https://www.gc.cuny.edu/Home,2,TRUE,40.7486484,-73.98400699999999
-3665,Bethel College,https://www.bethelks.edu/,1,TRUE,38.0736885,-97.3433008
+3641,"Baruch College, CUNY",http://www.baruch.cuny.edu/,2,TRUE,NA,NA
+3649,"Graduate Center, CUNY",https://www.gc.cuny.edu/Home,2,TRUE,NA,NA
+3665,Bethel College,https://www.bethelks.edu/,1,TRUE,NA,NA
 3675,University of St Andrews,https://www.st-andrews.ac.uk/,2,TRUE,56.3416934,-2.7927521999999954
 3692,Randolph-Macon College,http://www.rmc.edu/,1,TRUE,37.7603794,-77.47835179999998
 3702,Wilfrid Laurier University,https://www.wlu.ca/,1,TRUE,43.4723532,-80.52633989999998
 3708,San Diego State University,https://www.sdsu.edu/,1,TRUE,32.77572170000001,-117.07188930000001
 3710,York University,http://www.yorku.ca,2,TRUE,43.7734535,-79.50186839999998
-3722,King's University College at the University of Western Ontario,https://www.kings.uwo.ca/,1,TRUE,43.0124722,-81.2571159
-3729,University of San Francisco,https://www.usfca.edu/,1,TRUE,37.7765643,-122.4507187
+3722,King's University College at the University of Western Ontario,https://www.kings.uwo.ca/,1,TRUE,NA,NA
+3729,University of San Francisco,https://www.usfca.edu/,1,TRUE,NA,NA
 3730,Mercy College,https://www.mercy.edu/,1,TRUE,41.0221144,-73.87453909999999
 3740,Nationwide Children's Hospital,http://www.nationwidechildrens.org/,1,TRUE,39.9531241,-82.97957429999997
-3771,Hartwick College,https://www.hartwick.edu/,1,TRUE,42.4586674,-75.0718461
-3793,Macalester College,https://www.macalester.edu/,1,TRUE,44.9379012,-93.1691353
-3797,Victoria University of Wellington,https://www.victoria.ac.nz/,2,TRUE,-36.848322,174.7677
+3771,Hartwick College,https://www.hartwick.edu/,1,TRUE,NA,NA
+3793,Macalester College,https://www.macalester.edu/,1,TRUE,NA,NA
+3797,Victoria University of Wellington,https://www.victoria.ac.nz/,2,TRUE,NA,NA
 3805,University of Regina,https://www.uregina.ca/,1,TRUE,50.41701339999999,-104.58848999999998
-3821,University of Magdeburg,https://www.ovgu.de/en/University.html,1,TRUE,52.1397303,11.6473719
+3821,University of Magdeburg,https://www.ovgu.de/en/University.html,1,TRUE,NA,NA
 3840,National University of Singapore,http://www.nus.edu.sg/,3,TRUE,1.2966426,103.77639390000002
-3843,William Paterson University,https://www.wpunj.edu/,2,TRUE,40.9473619,-74.1967319
-3857,Pontifical Catholic University of Rio Grande do Sul,http://www.pucrs.br/en/,1,TRUE,-30.058925,-51.1730197
-3865,University of Turku,http://www.utu.fi/en/Pages/home.aspx,1,TRUE,60.4562974,22.2851138
-3892,University of Konstanz,https://www.uni-konstanz.de/en/,1,TRUE,47.689426,9.1868777
-3893,Metropolitan State University of Denver,https://www.msudenver.edu/,1,TRUE,39.7431729,-105.0062626
-3933,New School University,https://www.newschool.edu/,1,TRUE,40.7353426,-73.9938319
+3843,William Paterson University,https://www.wpunj.edu/,2,TRUE,NA,NA
+3857,Pontifical Catholic University of Rio Grande do Sul,http://www.pucrs.br/en/,1,TRUE,NA,NA
+3865,University of Turku,http://www.utu.fi/en/Pages/home.aspx,1,TRUE,NA,NA
+3892,University of Konstanz,https://www.uni-konstanz.de/en/,1,TRUE,NA,NA
+3893,Metropolitan State University of Denver,https://www.msudenver.edu/,1,TRUE,NA,NA
+3933,New School University,https://www.newschool.edu/,1,TRUE,NA,NA
 3944,University of York,https://www.york.ac.uk/,1,TRUE,53.9455334,-1.0561666999999488
-3948,University of Guadalajara,http://www.udg.mx/en/welcome-university-guadalajara,1,TRUE,20.675220499999998,-103.3590317
-3949,Chinese University of Hong Kong,http://www.cuhk.edu.hk/english/index.html,2,TRUE,22.419625,114.2067606
-3950,Federal University of Minas Gerais,https://ufmg.br/international-visitors,1,TRUE,-19.870682,-43.9677359
-3960,University of Potsdam,http://www.uni-potsdam.de/en/university-of-potsdam.html,1,TRUE,52.4010314,13.0119098
-4008,Bogazici University,http://www.boun.edu.tr/en_US,4,TRUE,41.0847571,29.0510399
+3948,University of Guadalajara,http://www.udg.mx/en/welcome-university-guadalajara,1,TRUE,NA,NA
+3949,Chinese University of Hong Kong,http://www.cuhk.edu.hk/english/index.html,2,TRUE,NA,NA
+3950,Federal University of Minas Gerais,https://ufmg.br/international-visitors,1,TRUE,NA,NA
+3960,University of Potsdam,http://www.uni-potsdam.de/en/university-of-potsdam.html,1,TRUE,NA,NA
+4008,Bogazici University,http://www.boun.edu.tr/en_US,4,TRUE,NA,NA
 4017,University of Memphis,http://www.memphis.edu/,1,TRUE,35.118741,-89.937141
-4028,College of Idaho,https://www.collegeofidaho.edu/,1,TRUE,43.6536737,-116.6767711
+4028,College of Idaho,https://www.collegeofidaho.edu/,1,TRUE,NA,NA
 4029,University of Auckland,https://www.auckland.ac.nz/en.html,2,TRUE,-36.8523378,174.76910729999997
-4074,University of L'Aquila,http://www.univaq.it/en/index.php,1,TRUE,42.3514296,13.397299
+4074,University of L'Aquila,http://www.univaq.it/en/index.php,1,TRUE,NA,NA
 4271,Kansas State University,http://www.k-state.edu/,1,TRUE,39.1974437,-96.58472489999997
-4305,Nanyang Technological University,http://www.ntu.edu.sg/,6,TRUE,1.3483099,103.6831347
-4315,University of Belgrade,http://www.bg.ac.rs/en/,1,TRUE,44.8184518,20.4575913
-4316,The University of Hong Kong,https://www.hku.hk/,1,TRUE,22.2829989,114.1370848
+4305,Nanyang Technological University,http://www.ntu.edu.sg/,6,TRUE,NA,NA
+4315,University of Belgrade,http://www.bg.ac.rs/en/,1,TRUE,NA,NA
+4316,The University of Hong Kong,https://www.hku.hk/,1,TRUE,NA,NA
 4391,University of North Florida,http://www.unf.edu/,1,TRUE,30.2661204,-81.50723140000002
-4443,Medical University of South Carolina,https://www.musc.edu/,1,TRUE,32.7847341,-79.9508927
-4461,National Acoustic Laboratories,https://www.nal.gov.au/,1,TRUE,40.13646250000001,-105.1261458
-4462,Ruhr University Bochum,https://www.ruhr-uni-bochum.de/,2,TRUE,51.44566589999999,7.261609300000001
-4498,Gordon College,https://www.gordon.edu/,1,TRUE,33.0469347,-84.1550987
-4502,University of Hamburg,https://www.uni-hamburg.de/en.html,2,TRUE,53.5665641,9.984619499999999
-4504,Bundeswehr University Munich,https://www.unibw.de/home,1,TRUE,48.08029639999999,11.6382008
-4524,University of Neuchatel,https://www.unine.ch/,1,TRUE,46.9938549,6.9387031
-4531,Texas State University,https://www.txstate.edu/,2,TRUE,29.888411,-97.938351
-4536,Wingate University,https://www.wingate.edu/,3,TRUE,34.9858972,-80.4430557
-4551,Trinity University,https://new.trinity.edu/,1,TRUE,29.4618396,-98.48331209999999
-4562,Hunter New England Health,http://www.hnehealth.nsw.gov.au/,1,TRUE,42.1017374,-72.5909404
-4570,Federal University of Paraiba,http://www.ufpb.br/,1,TRUE,-7.1377579,-34.8458995
-4608,"College at Brockport, SUNY",https://www.brockport.edu/,1,TRUE,43.210018,-77.9507327
-4625,Politehnica University of Bucharest,https://upb.ro/en/,1,TRUE,44.4386064,26.0494925
-4631,University of Campania Luigi Vanvitelli,http://www.unicampania.it/,1,TRUE,41.0667114,14.3305346
+4443,Medical University of South Carolina,https://www.musc.edu/,1,TRUE,NA,NA
+4461,National Acoustic Laboratories,https://www.nal.gov.au/,1,TRUE,NA,NA
+4462,Ruhr University Bochum,https://www.ruhr-uni-bochum.de/,2,TRUE,NA,NA
+4498,Gordon College,https://www.gordon.edu/,1,TRUE,NA,NA
+4502,University of Hamburg,https://www.uni-hamburg.de/en.html,2,TRUE,NA,NA
+4504,Bundeswehr University Munich,https://www.unibw.de/home,1,TRUE,NA,NA
+4524,University of Neuchatel,https://www.unine.ch/,1,TRUE,NA,NA
+4531,Texas State University,https://www.txstate.edu/,2,TRUE,NA,NA
+4536,Wingate University,https://www.wingate.edu/,3,TRUE,NA,NA
+4551,Trinity University,https://new.trinity.edu/,1,TRUE,NA,NA
+4562,Hunter New England Health,http://www.hnehealth.nsw.gov.au/,1,TRUE,NA,NA
+4570,Federal University of Paraiba,http://www.ufpb.br/,1,TRUE,NA,NA
+4608,"College at Brockport, SUNY",https://www.brockport.edu/,1,TRUE,NA,NA
+4625,Politehnica University of Bucharest,https://upb.ro/en/,1,TRUE,NA,NA
+4631,University of Campania Luigi Vanvitelli,http://www.unicampania.it/,1,TRUE,NA,NA
 4659,University of Kentucky,http://www.uky.edu/,3,TRUE,38.0306511,-84.50396969999997
-4681,Amsterdam University College,http://www.auc.nl/,1,TRUE,52.3549395,4.9511709
-4684,Hampshire College,https://www.hampshire.edu/,1,TRUE,42.3256097,-72.5312799
-4709,Reed College,https://www.reed.edu/,1,TRUE,45.4810848,-122.6308086
-4710,Emirates College for Advanced Education,http://www.ecae.ac.ae/,1,TRUE,24.420397,54.5964621
-4734,Yeshiva University,https://www.yu.edu/,1,TRUE,43.7697024,-79.4675413
+4681,Amsterdam University College,http://www.auc.nl/,1,TRUE,NA,NA
+4684,Hampshire College,https://www.hampshire.edu/,1,TRUE,NA,NA
+4709,Reed College,https://www.reed.edu/,1,TRUE,NA,NA
+4710,Emirates College for Advanced Education,http://www.ecae.ac.ae/,1,TRUE,NA,NA
+4734,Yeshiva University,https://www.yu.edu/,1,TRUE,NA,NA
 4735,University of Oslo,https://www.uio.no/,1,TRUE,59.9399586,10.721749600000066
-4761,University of Alabama,https://www.ua.edu/,2,TRUE,33.2140233,-87.5391418
-4768,Illinois State University,https://illinoisstate.edu/,3,TRUE,40.5120479,-88.9931683
-4803,Central Michigan University,https://www.cmich.edu,1,TRUE,43.5819086,-84.7756364
+4761,University of Alabama,https://www.ua.edu/,2,TRUE,NA,NA
+4768,Illinois State University,https://illinoisstate.edu/,3,TRUE,NA,NA
+4803,Central Michigan University,https://www.cmich.edu,1,TRUE,NA,NA
 4808,University College London,https://www.ucl.ac.uk/,1,TRUE,51.52455920000001,-0.1340400999999929
-4831,Ben-Gurion University of the Negev,http://in.bgu.ac.il/en,2,TRUE,31.262218,34.801461
-4890,Australian National University,http://www.anu.edu.au/,1,TRUE,-35.2776999,149.118527
-4891,Okayama University,http://www.okayama-u.ac.jp/index_e.html,1,TRUE,34.687057,133.9222083
-4896,Denison University,https://denison.edu/,2,TRUE,40.0734008,-82.52290479999999
-4897,Missouri State University,https://www.missouristate.edu/,1,TRUE,37.2005546,-93.2806806
-4920,Saint Vincent College,http://www.stvincent.edu/,1,TRUE,40.2989057,-79.3994929
-4932,Truman State University,https://www.truman.edu/,1,TRUE,40.1831629,-92.5809621
-4940,Bradley University,https://www.bradley.edu/,2,TRUE,40.6977743,-89.6153484
-4953,Dickinson College,https://www.dickinson.edu/,1,TRUE,40.2027462,-77.2008334
-4961,Duke Kunshan University,https://dukekunshan.edu.cn/en,1,TRUE,31.415978,120.9014167
-4965,Anna Maria College,https://www.annamaria.edu/,1,TRUE,42.3292694,-71.9207763
-4968,Misericordia University,https://www.misericordia.edu,1,TRUE,41.345197,-75.9707268
-4987,Carthage College,https://www.carthage.edu/,2,TRUE,42.6221706,-87.82203679999999
-4990,Augsburg University,http://www.augsburg.edu/,1,TRUE,44.9659238,-93.24068400000002
-4993,Strategic Education Research Partnership (SERP) Institute,https://serpinstitute.org/,1,TRUE,38.90397249999999,-77.0405507
-4997,Georgia College & State University,http://www.gcsu.edu/,1,TRUE,33.0804485,-83.2319298
-5022,Indiana Wesleyan University,https://www.indwes.edu/,2,TRUE,40.5169946,-85.6626462
-5042,Loyola University Maryland,https://www.loyola.edu/,1,TRUE,39.3463882,-76.6210078
-5069,University of Brest,https://www.univ-brest.fr/GB,1,TRUE,48.3980356,-4.5076415
-5070,"University of Wisconsin, Stout",https://www.uwstout.edu/,1,TRUE,44.8716186,-91.9267041
-5086,Central New Mexico College,https://www.cnm.edu/,1,TRUE,35.0713551,-106.6289378
-5101,Spokane Community College,http://scc.spokane.edu/,1,TRUE,47.6745591,-117.3596741
-5102,The University of Edinburgh,https://www.ed.ac.uk/home,3,TRUE,55.9445158,-3.1892413
-5103,Union College,https://www.union.edu/,1,TRUE,42.81771250000001,-73.9295987
-5129,Colombian School of Engineering Julio Garavito,https://www.escuelaing.edu.co/es/,1,TRUE,4.7827153,-74.0426112
-5156,"University of Wisconsin, Parkside",https://www.uwp.edu/,1,TRUE,42.6450059,-87.85174099999999
-5159,Longwood University,http://www.longwood.edu/,1,TRUE,37.29717979999999,-78.3961973
-5175,Florida Atlantic University,https://www.fau.edu/,2,TRUE,26.3749876,-80.10106329999999
-5176,Drew University,https://www.drew.edu/,1,TRUE,40.7607334,-74.4273592
-5208,Sidra Medicine,https://www.sidra.org/,1,TRUE,40.707382,-73.698131
-5211,"Pablo de Olavide University, Seville",https://www.upo.es,1,TRUE,37.3552405,-5.937404099999999
-5235,College of Southern Nevada,https://www.csn.edu/,0,TRUE,36.0081705,-114.9653903
-5236,James Madison University,https://www.jmu.edu/,1,TRUE,38.435092,-78.8697548
-5237,PES University,http://pesitsouth.pes.edu/,1,TRUE,12.93538,77.5358251
-5257,Maryville University,https://www.maryville.edu/,1,TRUE,38.6449452,-90.50457279999999
-5258,University of Baltimore,http://www.ubalt.edu,1,TRUE,39.3059125,-76.61746339999999
-5262,University of Nottingham,https://www.nottingham.ac.uk/,2,TRUE,52.93978269999999,-1.1929996
-5269,University of Mississippi,https://olemiss.edu/,2,TRUE,34.3647349,-89.5383818
-5274,University of Zurich,http://www.uzh.ch/en.html,2,TRUE,47.3743221,8.550981199999999
-5280,Utah State University,https://www.usu.edu/,1,TRUE,41.745161,-111.8097425
-5286,"Indiana University, South Bend",https://www.iusb.edu/,1,TRUE,41.6622956,-86.21971830000001
-5297,Mercer University,https://www.mercer.edu/,1,TRUE,33.8729073,-84.2631681
-5300,MedStar Health Research Institute,https://www.medstarhealth.org/mhri/,1,TRUE,38.969569,-76.95315599999999
+4831,Ben-Gurion University of the Negev,http://in.bgu.ac.il/en,2,TRUE,NA,NA
+4890,Australian National University,http://www.anu.edu.au/,1,TRUE,NA,NA
+4891,Okayama University,http://www.okayama-u.ac.jp/index_e.html,1,TRUE,NA,NA
+4896,Denison University,https://denison.edu/,2,TRUE,NA,NA
+4897,Missouri State University,https://www.missouristate.edu/,1,TRUE,NA,NA
+4920,Saint Vincent College,http://www.stvincent.edu/,1,TRUE,NA,NA
+4932,Truman State University,https://www.truman.edu/,1,TRUE,NA,NA
+4940,Bradley University,https://www.bradley.edu/,2,TRUE,NA,NA
+4953,Dickinson College,https://www.dickinson.edu/,1,TRUE,NA,NA
+4961,Duke Kunshan University,https://dukekunshan.edu.cn/en,1,TRUE,NA,NA
+4965,Anna Maria College,https://www.annamaria.edu/,1,TRUE,NA,NA
+4968,Misericordia University,https://www.misericordia.edu,1,TRUE,NA,NA
+4987,Carthage College,https://www.carthage.edu/,2,TRUE,NA,NA
+4990,Augsburg University,http://www.augsburg.edu/,1,TRUE,NA,NA
+4993,Strategic Education Research Partnership (SERP) Institute,https://serpinstitute.org/,1,TRUE,NA,NA
+4997,Georgia College & State University,http://www.gcsu.edu/,1,TRUE,NA,NA
+5022,Indiana Wesleyan University,https://www.indwes.edu/,2,TRUE,NA,NA
+5042,Loyola University Maryland,https://www.loyola.edu/,1,TRUE,NA,NA
+5069,University of Brest,https://www.univ-brest.fr/GB,1,TRUE,NA,NA
+5070,"University of Wisconsin, Stout",https://www.uwstout.edu/,1,TRUE,NA,NA
+5086,Central New Mexico College,https://www.cnm.edu/,1,TRUE,NA,NA
+5101,Spokane Community College,http://scc.spokane.edu/,1,TRUE,NA,NA
+5102,The University of Edinburgh,https://www.ed.ac.uk/home,3,TRUE,NA,NA
+5103,Union College,https://www.union.edu/,1,TRUE,NA,NA
+5129,Colombian School of Engineering Julio Garavito,https://www.escuelaing.edu.co/es/,1,TRUE,NA,NA
+5156,"University of Wisconsin, Parkside",https://www.uwp.edu/,1,TRUE,NA,NA
+5159,Longwood University,http://www.longwood.edu/,1,TRUE,NA,NA
+5175,Florida Atlantic University,https://www.fau.edu/,2,TRUE,NA,NA
+5176,Drew University,https://www.drew.edu/,1,TRUE,NA,NA
+5208,Sidra Medicine,https://www.sidra.org/,1,TRUE,NA,NA
+5211,"Pablo de Olavide University, Seville",https://www.upo.es,1,TRUE,NA,NA
+5235,College of Southern Nevada,https://www.csn.edu/,0,TRUE,NA,NA
+5236,James Madison University,https://www.jmu.edu/,1,TRUE,NA,NA
+5237,PES University,http://pesitsouth.pes.edu/,1,TRUE,NA,NA
+5257,Maryville University,https://www.maryville.edu/,1,TRUE,NA,NA
+5258,University of Baltimore,http://www.ubalt.edu,1,TRUE,NA,NA
+5262,University of Nottingham,https://www.nottingham.ac.uk/,2,TRUE,NA,NA
+5269,University of Mississippi,https://olemiss.edu/,2,TRUE,NA,NA
+5274,University of Zurich,http://www.uzh.ch/en.html,2,TRUE,NA,NA
+5280,Utah State University,https://www.usu.edu/,1,TRUE,NA,NA
+5286,"Indiana University, South Bend",https://www.iusb.edu/,1,TRUE,NA,NA
+5297,Mercer University,https://www.mercer.edu/,1,TRUE,NA,NA
+5300,MedStar Health Research Institute,https://www.medstarhealth.org/mhri/,1,TRUE,NA,NA
 5315,Saint Joseph's University,https://www.sju.edu/,1,TRUE,39.9946832,-75.24164050000002
-5327,Viterbo University,https://www4.viterbo.edu/,0,TRUE,43.80212179999999,-91.2451143
-5331,Drexel University,https://drexel.edu/,1,TRUE,39.9566127,-75.18994409999999
-5359,Columbus State University,https://www.columbusstate.edu/,1,TRUE,32.5026472,-84.9404306
-5393,Methodist University,http://www.methodist.edu/,1,TRUE,35.1357662,-90.01952960000001
-5398,High Point University,http://www.highpoint.edu/,1,TRUE,35.9721829,-79.99517000000002
-5399,Brevard College,https://brevard.edu/,1,TRUE,35.2367409,-82.72949589999999
-5401,King's College London,https://www.kcl.ac.uk/,1,TRUE,51.5114864,-0.115997
-5402,University of Granada,https://www.ugr.es/,1,TRUE,37.183816,-3.600710099999999
-5407,Texas Tech University,https://www.ttu.edu/,2,TRUE,33.5842591,-101.8782822
-5408,Pacific Lutheran University,https://www.plu.edu/,1,TRUE,47.14519310000001,-122.4436669
-5410,Federal University of Santa Catarina,https://ufsc.br/,1,TRUE,-27.5999666,-48.5194152
+5327,Viterbo University,https://www4.viterbo.edu/,0,TRUE,NA,NA
+5331,Drexel University,https://drexel.edu/,1,TRUE,NA,NA
+5359,Columbus State University,https://www.columbusstate.edu/,1,TRUE,NA,NA
+5393,Methodist University,http://www.methodist.edu/,1,TRUE,NA,NA
+5398,High Point University,http://www.highpoint.edu/,1,TRUE,NA,NA
+5399,Brevard College,https://brevard.edu/,1,TRUE,NA,NA
+5401,King's College London,https://www.kcl.ac.uk/,1,TRUE,NA,NA
+5402,University of Granada,https://www.ugr.es/,1,TRUE,NA,NA
+5407,Texas Tech University,https://www.ttu.edu/,2,TRUE,NA,NA
+5408,Pacific Lutheran University,https://www.plu.edu/,1,TRUE,NA,NA
+5410,Federal University of Santa Catarina,https://ufsc.br/,1,TRUE,NA,NA
 5417,Muppets University,NA,0,FALSE,NA,NA
-5420,Massachusetts General Hospital,https://www.massgeneral.org/,1,TRUE,42.3626109,-71.067566
-5423,California Institute of Integral Studies,https://www.ciis.edu/,1,TRUE,37.7746792,-122.4164229
-5458,"University of Missouri, Columbia",https://missouri.edu/,0,TRUE,38.9403808,-92.32773750000001
-5468,Keimyung University,http://www.kmu.ac.kr/english/,1,TRUE,35.8534841,128.4799488
-5469,SRI International,https://www.sri.com/,2,TRUE,38.894563,-77.070168
-5535,University of Newcastle,https://www.newcastle.edu.au/,1,TRUE,42.5121517,-92.46464689999999
-5540,SickKids,https://www.sickkids.ca/,1,TRUE,43.6573229,-79.38730389999999
-5543,Keil University,https://www.uni-kiel.de/en/,1,TRUE,54.3460549,10.1147022
-5544,Pamukkale University,http://www.pau.edu.tr/pau/en,1,TRUE,37.7381573,29.1039378
-5550,Portland State University,https://www.pdx.edu/,1,TRUE,45.5111471,-122.6834235
-5562,New University of Lisbon,https://www.unl.pt/en,0,TRUE,38.7337239,-9.1606714
-5571,University Health Network,https://www.uhn.ca/TorontoRehab/,2,TRUE,43.6598777,-79.38761810000001
-5578,Muhlenberg College,https://www.muhlenberg.edu/,1,TRUE,40.597544,-75.5101316
-5582,Dominican College,https://www.dc.edu/,1,TRUE,41.0471959,-73.9505947
-5586,Dalton State College,https://www.daltonstate.edu/,1,TRUE,34.7734119,-85.003057
-5588,Spring Hill College,https://www.shc.edu/,1,TRUE,30.6919256,-88.13573439999999
-5589,Spelman College,http://www.spelman.edu/,1,TRUE,33.7451953,-84.41143749999999
-5595,"University of Massachusetts, Dartmouth",https://www.umassd.edu/,1,TRUE,41.62816,-71.0046292
-5672,SUNY College at Old Westbury,https://www.oldwestbury.edu/,1,TRUE,40.7993025,-73.5739715
-5673,Middle Tennessee State University,https://www.mtsu.edu/,1,TRUE,35.8486105,-86.3648813
-5674,"Osaka City University, Graduate School of Medicine",http://www.med.osaka-u.ac.jp/eng/,1,TRUE,34.5906472,135.5050869
-5703,"Ohio State University, Lima",https://lima.osu.edu/,1,TRUE,40.7372754,-84.0283463
-5705,"Pennsylvania State University, Worthington-Scranton",https://scranton.psu.edu/,0,TRUE,41.4402189,-75.6204728
-5706,"Pennsylvania State University, Brandywine",https://brandywine.psu.edu/,3,TRUE,39.9263837,-75.4470628
-5707,"Pennsylvania State University, Applied Research Laboratory",https://arl.psu.edu/,1,TRUE,40.7929105,-77.866039
-5708,"Pennsylvania State University, Abington",https://abington.psu.edu/,1,TRUE,40.1152664,-75.1106259
-5711,Kwantlen Polytechnic University,https://www.kpu.ca/,2,TRUE,49.1326553,-122.8714821
-5720,Assumption College,https://www.assumption.edu/,1,TRUE,42.2927383,-71.8289664
-5722,Haverford College,https://www.haverford.edu/,1,TRUE,40.00932419999999,-75.3076619
-5731,MGH Institute of Health Professions,https://www.mghihp.edu/,1,TRUE,42.374754,-71.054238
-5734,Carroll University,https://www.carrollu.edu/,1,TRUE,43.0043632,-88.2284088
+5420,Massachusetts General Hospital,https://www.massgeneral.org/,1,TRUE,NA,NA
+5423,California Institute of Integral Studies,https://www.ciis.edu/,1,TRUE,NA,NA
+5458,"University of Missouri, Columbia",https://missouri.edu/,0,TRUE,NA,NA
+5468,Keimyung University,http://www.kmu.ac.kr/english/,1,TRUE,NA,NA
+5469,SRI International,https://www.sri.com/,2,TRUE,NA,NA
+5535,University of Newcastle,https://www.newcastle.edu.au/,1,TRUE,NA,NA
+5540,SickKids,https://www.sickkids.ca/,1,TRUE,NA,NA
+5543,Keil University,https://www.uni-kiel.de/en/,1,TRUE,NA,NA
+5544,Pamukkale University,http://www.pau.edu.tr/pau/en,1,TRUE,NA,NA
+5550,Portland State University,https://www.pdx.edu/,1,TRUE,NA,NA
+5562,New University of Lisbon,https://www.unl.pt/en,0,TRUE,NA,NA
+5571,University Health Network,https://www.uhn.ca/TorontoRehab/,2,TRUE,NA,NA
+5578,Muhlenberg College,https://www.muhlenberg.edu/,1,TRUE,NA,NA
+5582,Dominican College,https://www.dc.edu/,1,TRUE,NA,NA
+5586,Dalton State College,https://www.daltonstate.edu/,1,TRUE,NA,NA
+5588,Spring Hill College,https://www.shc.edu/,1,TRUE,NA,NA
+5589,Spelman College,http://www.spelman.edu/,1,TRUE,NA,NA
+5595,"University of Massachusetts, Dartmouth",https://www.umassd.edu/,1,TRUE,NA,NA
+5672,SUNY College at Old Westbury,https://www.oldwestbury.edu/,1,TRUE,NA,NA
+5673,Middle Tennessee State University,https://www.mtsu.edu/,1,TRUE,NA,NA
+5674,"Osaka City University, Graduate School of Medicine",http://www.med.osaka-u.ac.jp/eng/,1,TRUE,NA,NA
+5703,"Ohio State University, Lima",https://lima.osu.edu/,1,TRUE,NA,NA
+5705,"Pennsylvania State University, Worthington-Scranton",https://scranton.psu.edu/,0,TRUE,NA,NA
+5706,"Pennsylvania State University, Brandywine",https://brandywine.psu.edu/,3,TRUE,NA,NA
+5707,"Pennsylvania State University, Applied Research Laboratory",https://arl.psu.edu/,1,TRUE,NA,NA
+5708,"Pennsylvania State University, Abington",https://abington.psu.edu/,1,TRUE,NA,NA
+5711,Kwantlen Polytechnic University,https://www.kpu.ca/,2,TRUE,NA,NA
+5720,Assumption College,https://www.assumption.edu/,1,TRUE,NA,NA
+5722,Haverford College,https://www.haverford.edu/,1,TRUE,NA,NA
+5731,MGH Institute of Health Professions,https://www.mghihp.edu/,1,TRUE,NA,NA
+5734,Carroll University,https://www.carrollu.edu/,1,TRUE,NA,NA
 5737,The University of Sydney,http://sydney.edu.au/,1,TRUE,-33.888584,151.18734730000006
-5763,Robert Bosch Hospital,https://www.rbk.de/,1,TRUE,48.8147672,9.1872014
-5764,Western Oregon University,https://www.wou.edu/,1,TRUE,44.8536352,-123.238847
+5763,Robert Bosch Hospital,https://www.rbk.de/,1,TRUE,NA,NA
+5764,Western Oregon University,https://www.wou.edu/,1,TRUE,NA,NA
 5774,University of Kent,https://www.kent.ac.uk/,2,TRUE,51.29846690000001,1.0709944000000178
-5775,"University of North Carolina, Charlotte",https://www.uncc.edu/,1,TRUE,35.3070929,-80.735164
-5787,Presbyterian College,https://www.presby.edu/,1,TRUE,34.465182,-81.87755899999999
-5788,"University of Colorado, Denver",http://www.ucdenver.edu/,1,TRUE,39.7463596,-105.002342
-5829,Marywood University,http://www.marywood.edu/,1,TRUE,41.43513189999999,-75.6324234
-5848,Rowan University,https://www.rowan.edu/,1,TRUE,39.7089194,-75.11827339999999
-5852,The Hebrew University of Jerusalem,https://new.huji.ac.il/en,1,TRUE,31.7945578,35.2414009
-5855,Emerson College,https://www.emerson.edu/,1,TRUE,42.35218769999999,-71.0656359
-5924,Tilburg University,https://www.tilburguniversity.edu/,1,TRUE,51.5639249,5.0434446
-5972,University of Plymouth,https://www.plymouth.ac.uk,1,TRUE,50.3761866,-4.139491899999999
-6027,Augustana College,https://www.augustana.edu/,1,TRUE,41.5030042,-90.5513921
-6065,University of Osnabrueck,https://www.uni-osnabrueck.de/en/home.html,0,FALSE,52.2713446,8.044226799999999
-6066,University of Osnabrueck,https://www.uni-osnabrueck.de/en/home.html,1,TRUE,52.2713446,8.044226799999999
-6142,Brock University,https://brocku.ca/,2,TRUE,43.1175731,-79.2476925
-6149,University of North Texas,https://www.unt.edu/,2,TRUE,33.207488,-97.1525862
-6165,"Rutgers University, Camden",https://www.camden.rutgers.edu/,1,TRUE,39.9475395,-75.1232038
-6166,University of Pecs,https://international.pte.hu/,1,TRUE,46.0741828,18.237722
-6179,Meritorious Autonomous University of Puebla,https://www.buap.mx/,1,TRUE,19.0386715,-98.2147555
-6190,Karolinska Institute,https://ki.se/en,1,TRUE,59.34814839999999,18.0236579
-6202,Saint Anselm College,https://www.anselm.edu/,1,TRUE,42.9837988,-71.507218
-6211,Chapman University,https://www.chapman.edu/index.aspx,2,TRUE,33.7931305,-117.8521395
-6238,Bielefeld University,https://www.uni-bielefeld.de/(en)/,1,TRUE,52.0367238,8.4952413
-6280,"University of Colorado, Colorado Springs",https://www.uccs.edu/,1,TRUE,38.8965518,-104.8048874
-6290,Baylor University,https://www.baylor.edu/,2,TRUE,31.5488923,-97.1130573
-6291,South China University of Technology,https://www.scut.edu.cn/en/,1,TRUE,23.151326,113.344683
-6318,Belmont University,http://www.belmont.edu/,1,TRUE,36.1329081,-86.7941702
-6341,Queen Mary University of London,https://www.qmul.ac.uk/,1,TRUE,51.5240671,-0.0403745
-6395,"University of Louisiana, Monroe",https://www.ulm.edu/,1,TRUE,32.5267122,-92.07317909999999
-6492,Elon University,https://www.elon.edu/,1,TRUE,36.1026877,-79.5023313
-6540,University of Zaragoza,http://www.unizar.es/,1,TRUE,41.6420639,-0.9015065
+5775,"University of North Carolina, Charlotte",https://www.uncc.edu/,1,TRUE,NA,NA
+5787,Presbyterian College,https://www.presby.edu/,1,TRUE,NA,NA
+5788,"University of Colorado, Denver",http://www.ucdenver.edu/,1,TRUE,NA,NA
+5829,Marywood University,http://www.marywood.edu/,1,TRUE,NA,NA
+5848,Rowan University,https://www.rowan.edu/,1,TRUE,NA,NA
+5852,The Hebrew University of Jerusalem,https://new.huji.ac.il/en,1,TRUE,NA,NA
+5855,Emerson College,https://www.emerson.edu/,1,TRUE,NA,NA
+5924,Tilburg University,https://www.tilburguniversity.edu/,1,TRUE,NA,NA
+5972,University of Plymouth,https://www.plymouth.ac.uk,1,TRUE,NA,NA
+6027,Augustana College,https://www.augustana.edu/,1,TRUE,NA,NA
+6065,University of Osnabrueck,https://www.uni-osnabrueck.de/en/home.html,0,FALSE,NA,NA
+6066,University of Osnabrueck,https://www.uni-osnabrueck.de/en/home.html,1,TRUE,NA,NA
+6142,Brock University,https://brocku.ca/,2,TRUE,NA,NA
+6149,University of North Texas,https://www.unt.edu/,2,TRUE,NA,NA
+6165,"Rutgers University, Camden",https://www.camden.rutgers.edu/,1,TRUE,NA,NA
+6166,University of Pecs,https://international.pte.hu/,1,TRUE,NA,NA
+6179,Meritorious Autonomous University of Puebla,https://www.buap.mx/,1,TRUE,NA,NA
+6190,Karolinska Institute,https://ki.se/en,1,TRUE,NA,NA
+6202,Saint Anselm College,https://www.anselm.edu/,1,TRUE,NA,NA
+6211,Chapman University,https://www.chapman.edu/index.aspx,2,TRUE,NA,NA
+6238,Bielefeld University,https://www.uni-bielefeld.de/(en)/,1,TRUE,NA,NA
+6280,"University of Colorado, Colorado Springs",https://www.uccs.edu/,1,TRUE,NA,NA
+6290,Baylor University,https://www.baylor.edu/,2,TRUE,NA,NA
+6291,South China University of Technology,https://www.scut.edu.cn/en/,1,TRUE,NA,NA
+6318,Belmont University,http://www.belmont.edu/,1,TRUE,NA,NA
+6341,Queen Mary University of London,https://www.qmul.ac.uk/,1,TRUE,NA,NA
+6395,"University of Louisiana, Monroe",https://www.ulm.edu/,1,TRUE,NA,NA
+6492,Elon University,https://www.elon.edu/,1,TRUE,NA,NA
+6540,University of Zaragoza,http://www.unizar.es/,1,TRUE,NA,NA
 6553,Tel Aviv University,https://english.tau.ac.il/,2,TRUE,32.1133141,34.80438770000001
-6679,Birmingham-Southern College,https://www.bsc.edu/index.html,1,TRUE,33.5159411,-86.8510103
-6740,"University of Applied Sciences, Potsdam",https://www.potsdam.de/node/276355,1,TRUE,52.41261600000001,13.0508167
-6750,Western University,https://www.uwo.ca/,1,TRUE,43.0095971,-81.2737336
-6760,Amrita Vishwa Vidyapeetham,https://www.amrita.edu/,1,TRUE,10.9026791,76.9006279
-6801,"Indiana University, Purdue University Indianapolis",https://www.iupui.edu/,1,TRUE,39.7743174,-86.1764194
-6822,National School of Engineers of Carthage (ENICarthage),http://www.enicarthage.rnu.tn/,1,TRUE,36.851767,10.2111483
-6861,University of Milano-Bicocca,https://www.unimib.it/,1,TRUE,45.51844639999999,9.2131057
-6865,Athens State University,https://www.athens.edu/,1,TRUE,34.8055801,-86.9645309
-6934,"Borough of Manhattan Community College, CUNY",https://www.bmcc.cuny.edu/,1,TRUE,40.7188813,-74.0117595
-6945,Avila University,https://www.avila.edu/,1,TRUE,38.9123643,-94.59146989999999
+6679,Birmingham-Southern College,https://www.bsc.edu/index.html,1,TRUE,NA,NA
+6740,"University of Applied Sciences, Potsdam",https://www.potsdam.de/node/276355,1,TRUE,NA,NA
+6750,Western University,https://www.uwo.ca/,1,TRUE,NA,NA
+6760,Amrita Vishwa Vidyapeetham,https://www.amrita.edu/,1,TRUE,NA,NA
+6801,"Indiana University, Purdue University Indianapolis",https://www.iupui.edu/,1,TRUE,NA,NA
+6822,National School of Engineers of Carthage (ENICarthage),http://www.enicarthage.rnu.tn/,1,TRUE,NA,NA
+6861,University of Milano-Bicocca,https://www.unimib.it/,1,TRUE,NA,NA
+6865,Athens State University,https://www.athens.edu/,1,TRUE,NA,NA
+6934,"Borough of Manhattan Community College, CUNY",https://www.bmcc.cuny.edu/,1,TRUE,NA,NA
+6945,Avila University,https://www.avila.edu/,1,TRUE,NA,NA
 6946,Kyoto University,http://www.kyoto-u.ac.jp/en,1,TRUE,35.0262444,135.7808218
-6952,University of Bologna,https://www.unibo.it/it,1,TRUE,44.4962318,11.354157
-6959,Taif University,https://www.tu.edu.sa/En/,1,TRUE,21.4327735,40.491909
-6969,University of Strathclyde,https://www.strath.ac.uk/,1,TRUE,55.862111,-4.2423927
-7054,Mount Holyoke College,https://www.mtholyoke.edu/,1,TRUE,42.25536150000001,-72.5722406
-7059,American University,https://www.american.edu/,1,TRUE,38.9374948,-77.08880289999999
-7061,University of Antwerp,https://www.uantwerpen.be/en/,1,TRUE,51.2228097,4.4102318
-7062,Auburn University,https://www.auburn.edu/,1,TRUE,32.5933574,-85.4951663
-7068,"University of Nebraska, Omaha",https://www.unomaha.edu/,1,TRUE,41.2580268,-96.010696
-7087,Iowa State University,https://www.iastate.edu/,1,TRUE,42.0266573,-93.64645159999999
-7089,"University of Maryland, Baltimore County",https://www.umbc.edu/,1,TRUE,39.2556759,-76.7109674
-7108,Ohio Dominican University,https://www.ohiodominican.edu/,1,TRUE,39.9922327,-82.94160889999999
-7121,"Queen's University, Belfast",https://www.qub.ac.uk/,1,TRUE,54.5844087,-5.9340493
-7143,Open University,http://www.open.ac.uk/,1,TRUE,52.0252055,-0.7090257999999999
-7144,St. Olaf College,https://wp.stolaf.edu/,1,TRUE,44.4616634,-93.1826784
-7158,University of Montreal,https://www.umontreal.ca/en/,1,TRUE,45.5056156,-73.61375919999999
-7197,Anglia Ruskin University,https://aru.ac.uk/,1,TRUE,52.2032672,0.1345112
-7199,Arctic University of Norway,https://en.uit.no/startsida,1,TRUE,69.6798027,18.9712161
-7356,National Taiwan University,https://www.ntu.edu.tw/english/,1,TRUE,25.0173405,121.5397518
-7357,University of Chester,https://www1.chester.ac.uk/,1,TRUE,53.20027049999999,-2.8991292
-7371,University of Girona,https://www.udg.edu/en/,1,TRUE,41.9857028,2.8272011
-7373,National Institute for Basic Biology,https://www.nibb.ac.jp/en/,1,TRUE,34.9494383,137.1651934
-7378,Palo Alto University,https://www.paloaltou.edu/,1,TRUE,37.382454,-122.1874271
-7387,Jissen Women's University,https://www.jissen.ac.jp/en/,1,TRUE,35.6716143,139.3897934
-7390,University of Texas at Tyler,https://www.uttyler.edu/,1,TRUE,32.315745,-95.25423099999999
+6952,University of Bologna,https://www.unibo.it/it,1,TRUE,NA,NA
+6959,Taif University,https://www.tu.edu.sa/En/,1,TRUE,NA,NA
+6969,University of Strathclyde,https://www.strath.ac.uk/,1,TRUE,NA,NA
+7054,Mount Holyoke College,https://www.mtholyoke.edu/,1,TRUE,NA,NA
+7059,American University,https://www.american.edu/,1,TRUE,NA,NA
+7061,University of Antwerp,https://www.uantwerpen.be/en/,1,TRUE,NA,NA
+7062,Auburn University,https://www.auburn.edu/,1,TRUE,NA,NA
+7068,"University of Nebraska, Omaha",https://www.unomaha.edu/,1,TRUE,NA,NA
+7087,Iowa State University,https://www.iastate.edu/,1,TRUE,NA,NA
+7089,"University of Maryland, Baltimore County",https://www.umbc.edu/,1,TRUE,NA,NA
+7108,Ohio Dominican University,https://www.ohiodominican.edu/,1,TRUE,NA,NA
+7121,"Queen's University, Belfast",https://www.qub.ac.uk/,1,TRUE,NA,NA
+7143,Open University,http://www.open.ac.uk/,1,TRUE,NA,NA
+7144,St. Olaf College,https://wp.stolaf.edu/,1,TRUE,NA,NA
+7158,University of Montreal,https://www.umontreal.ca/en/,1,TRUE,NA,NA
+7197,Anglia Ruskin University,https://aru.ac.uk/,1,TRUE,NA,NA
+7199,Arctic University of Norway,https://en.uit.no/startsida,1,TRUE,NA,NA
+7356,National Taiwan University,https://www.ntu.edu.tw/english/,1,TRUE,NA,NA
+7357,University of Chester,https://www1.chester.ac.uk/,1,TRUE,NA,NA
+7371,University of Girona,https://www.udg.edu/en/,1,TRUE,NA,NA
+7373,National Institute for Basic Biology,https://www.nibb.ac.jp/en/,1,TRUE,NA,NA
+7378,Palo Alto University,https://www.paloaltou.edu/,1,TRUE,NA,NA
+7387,Jissen Women's University,https://www.jissen.ac.jp/en/,1,TRUE,NA,NA
+7390,University of Texas at Tyler,https://www.uttyler.edu/,1,TRUE,NA,NA
 7421,Kingston University London,http://www.kingston.ac.uk/,1,TRUE,51.4032431,-0.30348819999994703
-7428,MEF University,https://www.mef.edu.tr/en,1,TRUE,41.1088445,29.0085964
-7595,American University of Beirut,https://www.aub.edu.lb/,1,TRUE,33.9008359,35.480744
-7600,Bar-Ilan University,https://www1.biu.ac.il/indexE.php,1,TRUE,32.0691989,34.8430876
-7601,East China Normal University,http://english.ecnu.edu.cn/,1,TRUE,31.227667,121.406829
-7602,University of Tehran,https://ut.ac.ir/en,1,TRUE,35.7022192,51.39573069999999
-7615,"Brigham Young University, Idaho",https://www.byui.edu/,1,TRUE,43.8144101,-111.783255
-7642,"University of Nevada, Reno",https://www.unr.edu/,1,TRUE,39.5453298,-119.8161541
-7646,Sri Lanka Institute of Information Technology,https://www.sliit.lk/,1,TRUE,6.914677500000001,79.9729445
-7649,Clarkson University,https://www.clarkson.edu/,1,TRUE,44.6636819,-74.9977112
+7428,MEF University,https://www.mef.edu.tr/en,1,TRUE,NA,NA
+7595,American University of Beirut,https://www.aub.edu.lb/,1,TRUE,NA,NA
+7600,Bar-Ilan University,https://www1.biu.ac.il/indexE.php,1,TRUE,NA,NA
+7601,East China Normal University,http://english.ecnu.edu.cn/,1,TRUE,NA,NA
+7602,University of Tehran,https://ut.ac.ir/en,1,TRUE,NA,NA
+7615,"Brigham Young University, Idaho",https://www.byui.edu/,1,TRUE,NA,NA
+7642,"University of Nevada, Reno",https://www.unr.edu/,1,TRUE,NA,NA
+7646,Sri Lanka Institute of Information Technology,https://www.sliit.lk/,1,TRUE,NA,NA
+7649,Clarkson University,https://www.clarkson.edu/,1,TRUE,NA,NA
 7654,University of Manchester,https://www.manchester.ac.uk/,1,TRUE,53.4668498,-2.2338836999999785
-7658,Brunel University London,https://www.brunel.ac.uk/,2,TRUE,51.5324044,-0.4729931
-7660,Pontifical Catholic University of Rio de Janeiro,http://www.puc-rio.br/english/,1,TRUE,-22.9795428,-43.2329454
-7673,Worcester State University,https://www.worcester.edu/,1,TRUE,42.26781889999999,-71.84412139999999
-7674,"University of Applied Sciences, Jena",https://www.eah-jena.de/de-de,1,TRUE,50.91829,11.56868
-7692,Wofford College,https://www.wofford.edu/,1,TRUE,34.9611666,-81.93456599999999
-7723,University of Northern Colorado,https://www.unco.edu/,1,TRUE,40.4032798,-104.7002313
-7734,Leiden University Medical Center,https://www.lumc.nl/,1,TRUE,52.1660315,4.4785036
+7658,Brunel University London,https://www.brunel.ac.uk/,2,TRUE,NA,NA
+7660,Pontifical Catholic University of Rio de Janeiro,http://www.puc-rio.br/english/,1,TRUE,NA,NA
+7673,Worcester State University,https://www.worcester.edu/,1,TRUE,NA,NA
+7674,"University of Applied Sciences, Jena",https://www.eah-jena.de/de-de,1,TRUE,NA,NA
+7692,Wofford College,https://www.wofford.edu/,1,TRUE,NA,NA
+7723,University of Northern Colorado,https://www.unco.edu/,1,TRUE,NA,NA
+7734,Leiden University Medical Center,https://www.lumc.nl/,1,TRUE,NA,NA
 7799,Wheaton College,https://www.wheaton.edu/,1,TRUE,41.86833,-88.09962200000001
-7811,Weber State University,https://www.weber.edu/,1,TRUE,41.1916133,-111.9440945
-7812,California Lutheran University,https://www.callutheran.edu/,1,TRUE,34.2248993,-118.878853
-7835,"University of British Columbia, Okanagan",https://ok.ubc.ca/,1,TRUE,49.9422639,-119.3959973
-7855,Northeastern Illinois University,https://www.neiu.edu/,1,TRUE,41.9804343,-87.718705
-7869,Rollins College,https://www.rollins.edu/,1,TRUE,28.5928297,-81.3508174
-7879,Ripon College,https://www.ripon.edu/,1,TRUE,43.84319319999999,-88.840764
-7911,Maastricht University,https://www.maastrichtuniversity.nl/,1,TRUE,50.83929680000001,5.708785900000001
+7811,Weber State University,https://www.weber.edu/,1,TRUE,NA,NA
+7812,California Lutheran University,https://www.callutheran.edu/,1,TRUE,NA,NA
+7835,"University of British Columbia, Okanagan",https://ok.ubc.ca/,1,TRUE,NA,NA

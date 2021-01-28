@@ -48,6 +48,9 @@ get_inst_info <- function(inst_id = 8) {
       } else {
         df$daa <- FALSE
       }
+      # Get lat and lon
+      df <- update_inst_lat_lon(df)
+      
       df
     } else {
       NULL
@@ -243,6 +246,59 @@ write_invest_csv <- function(min_id = 1, max_id = 25,
   } else {
     message("`min_inst_id` must be less than `max_inst_id")
   }
+}
+
+# Map-related functions
+
+
+
+lookup_lat_lon <- function(df_row, df, 
+                           force_update = FALSE) {
+  require(ggmap)
+  
+  if (!is.numeric(df_row)) {
+    stop('`df_row` must be a number.')
+  }
+  if (df_row < 0) {
+    stop('`df_row must be > 0.')
+  }
+  if (!is.data.frame(df)) {
+    stop('`df` must be a data frame.')
+  }
+  if (df_row > dim(df)[1]) {
+    stop('Row index `', df_row, '` is greater than number of rows in `df`.')
+  }
+  
+  this_site <- df[df_row,]
+  
+  if (is.na(this_site$lat) || force_update) {
+    # Skip odd institution names
+    if (!(this_site$inst_name == "Staff" || 
+          this_site$inst_name == "Muppets University")) {
+      ll <- ggmap::geocode(df$inst_name[df_row])
+      
+      this_site$lat <- ll$lat
+      this_site$lon <- ll$lon
+    }    
+  }
+  this_site
+}
+
+update_inst_lat_lon <- function(df) {
+  if (!is.data.frame(df)) {
+    stop('`df` must be a data frame.')
+  }
+  ll <- ggmap::geocode(as.character(df$inst_name))
+  df$lat<- ll$lat
+  df$lon<- ll$lon
+  
+  df
+}
+
+update_all_lat_lons <- function(df, force_update = FALSE) {
+  row_indices <- 1:dim(df)[1]
+  
+  purrr::map_df(row_indices, lookup_lat_lon, df, force_update)
 }
 
 # Rendering Rmarkdown reports

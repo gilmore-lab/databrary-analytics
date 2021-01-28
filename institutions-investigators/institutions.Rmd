@@ -66,6 +66,14 @@ if (params$use_saved_file) {
 
 # Visualize and summarize {.tabset .tabset-fade .tabset-pills}
 
+## World map
+
+```{r site-map, fig.align='center', out.width='80%'}
+ggmap::qmplot(lon, lat, 
+              data = inst_df, 
+              geom = "point")
+```
+
 ## With AIs
 
 ```{r}
