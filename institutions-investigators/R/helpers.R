@@ -250,8 +250,6 @@ write_invest_csv <- function(min_id = 1, max_id = 25,
 
 # Map-related functions
 
-
-
 lookup_lat_lon <- function(df_row, df, 
                            force_update = FALSE) {
   require(ggmap)
@@ -301,6 +299,100 @@ update_all_lat_lons <- function(df, force_update = FALSE) {
   purrr::map_df(row_indices, lookup_lat_lon, df, force_update)
 }
 
+export_inst_to_json <- function(df) {
+  if (!is.data.frame(df)) {
+    stop('`df` must be a data frame.')
+  }
+  require(tidyverse)
+  trim_df <- df %>%
+    dplyr::filter(., daa == TRUE) %>%
+    dplyr::filter(., inst_name != "Staff") %>%
+    dplyr::select(., inst_name, lat, lon)
+  
+  jsonlite::toJSON(trim_df)
+}
+
+clean_inst_json_for_leaflet <- function(json, 
+                                        write_out = TRUE, 
+                                        file_path = file.path(here::here(),
+                                                              'institutions-investigators/js')) {
+  json <- stringr::str_remove_all(json, '\"inst_name\"\\:')
+  json <- stringr::str_remove_all(json, '\"lat\"\\:')
+  json <- stringr::str_remove_all(json, '\"lon\"\\:')
+  json <- stringr::str_replace_all(json, ',\\{', ',[')
+  json <- stringr::str_replace_all(json, '\\},', '],')
+  json <- stringr::str_replace_all(json, '\\}\\]', ']}')
+  json <- stringr::str_replace_all(json, '\\[\\{', '{[')
+  
+  if (write_out) {
+    if (!dir.exists(file_path)) {
+      message('Output directory not found; creating `', file_path, '`.')
+      dir.create(file_path)
+    }
+    writeLines(json, file.path(file_path, 'institutions.json'))
+    message(paste0('Saved json to `', file.path(file_path, 'institutions.json'), '`.'))
+  } else {
+    json
+  }
+}
+
+create_markers_array_js <- function(json_fn = 'institutions.json', 
+                                    write_out = TRUE, 
+                                    file_path = file.path(here::here(),
+                                                          'institutions-investigators/js'),
+                                    js_fn = 'institutions.js') {
+  if (!is.character(json_fn)) {
+    stop('`json_fn` must be a character string.')
+  }
+  if (!file.exists(file.path(file_path, json_fn))) {
+    stop('Institution file not found: `', file.path(file_path, json_fn), '`.')
+  }
+  if (!is.logical(write_out)) {
+    stop('`write_out` must be a logical value.')
+  }
+  if (!is.character(file_path)) {
+    stop('`file_path` must be a character string.')
+  }
+  if (!is.character(js_fn)) {
+    stop('`js_fn` must be a character string.')
+  }
+  
+  this_con <- file(file.path(file_path, json_fn))
+  inst_file <- readLines(this_con)
+  inst_file <- stringr::str_replace(inst_file, '\\{\\[', 'var markers = [[')
+  inst_file <- stringr::str_replace(inst_file, '\\]\\}', ']];')
+  
+  if (write_out) {
+    if (!dir.exists(file_path)) {
+      message('Output directory not found; creating `', file_path, '`.')
+      dir.create(file_path)
+    }
+    writeLines(inst_file, file.path(file_path, js_fn))
+    message(paste0('Saved to `', file.path(file_path, js_fn), '`.'))
+  } else {
+    inst_file
+  }
+  close(this_con)
+}
+
+export_cleaned_inst_json_from_csv <- function(csv_fn = 'institutions-investigators/csv/institutions.csv') {
+  
+  if (!is.character(csv_fn)) {
+    stop(paste0('`csv_fn` must be character.'))
+  }
+  if (!file.exists(csv_fn)) {
+    stop(paste0('File not found: `', csv_fn, '`.'))
+  }
+  
+  df <- readr::read_csv(csv_fn)
+  message('Exporting json.')
+  json <- export_inst_to_json(df)
+  message('Cleaning json.')
+  clean_inst_json_for_leaflet(json)
+  message('Creating `institutions.js` file.')
+  create_markers_array_js()
+}
+
 # Rendering Rmarkdown reports
 
 render_institutions_investigators_report <- function(db_login) {
@@ -311,6 +403,16 @@ render_institutions_investigators_report <- function(db_login) {
 }
 
 render_institutions_report <- function(db_login, max_party_id = 9000) {
+  if (!is.character(db_login)) {
+    stop('`db_login` must be a character string.')
+  }
+  if (!is.numeric(max_party_id)) {
+    stop('`max_party_id` must be numeric.')
+  }
+  if (max_party_id < 1) {
+    stop('`max_party_id` must be >= 1.')
+  }
+  
   rmarkdown::render("institutions-investigators/institutions.Rmd",
                     params = list(db_login = db_login, 
                                   max_party_id = max_party_id))

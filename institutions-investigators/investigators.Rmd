@@ -15,6 +15,7 @@ params:
   save_file: True
   use_saved_file: True
   update_invest_csv: True
+  update_invest_json: True
 ---
 
 # Purpose
@@ -51,7 +52,10 @@ Or, if you *do not* want to update the investigator CSV, set the `update_invest_
 ```{r}
 if (params$update_invest_csv) {
   message("Updating CSV investigator database.")
-  update_invest_csv(update_inst = FALSE, return_df = FALSE)  
+  update_invest_csv(update_inst = FALSE, return_df = FALSE)
+  if (params$update_invest_json) {
+  export_cleaned_inst_json_from_csv()    
+  }
 } else {
   message("Investigator CSV not updated.")
 }
