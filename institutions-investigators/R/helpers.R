@@ -1,7 +1,21 @@
 # make_institutional_party_df
 # 
 # Creates a data frame of an institution that has authorized investigators
+require(here)
+require(databraryapi)
+require(tidyverse)
+
 make_institutional_party_df <- function(inst_id) {
+  if (!is.numeric(inst_id)) {
+    stop('`inst_id` must be a number.')
+  }
+  if (inst_id <= 0) {
+    stop('`inst_id` must be >= 0')
+  }
+  
+  require(databraryapi)
+  require(purrr)
+  
   if (databraryapi::is_institution(inst_id)) {
     these_affiliates <- databraryapi::list_affiliates(inst_id)
     if (purrr::is_empty(these_affiliates) | is.null(these_affiliates)) {
@@ -31,7 +45,12 @@ make_institutional_party_df <- function(inst_id) {
 }
 
 get_inst_info <- function(inst_id = 8) {
+  if (is.numeric(inst_id)) {
+    stop('`inst_id` must be a number.')
+  }
+
   require(databraryapi)
+  
   if (inst_id > 0) {
     if (databraryapi::is_institution(inst_id)) {
       inst_df <- list_party(inst_id)
@@ -63,11 +82,29 @@ get_inst_info <- function(inst_id = 8) {
 write_inst_csv <- function(min_inst_id = 1, max_inst_id = 25, 
                            csv_fn = paste0(here::here(), 
                                                     "/institutions-investigators/csv/institutions.csv")) {
+  if (!is.numeric(min_inst_id)) {
+    stop('`min_inst_id` must be a number.')
+  }
+  if (!is.numeric(max_inst_id)) {
+    stop('`min_inst_id` must be a number.')
+  }
+  if (!is.character(csv_fn)) {
+    stop('`csv_fn` must be a character string.')
+  }
+  if (!dir.exists(csv_fn)) {
+    stop(paste0('Directory not found: `', csv_fn, '`.' ))
+  }
+  
   if (min_inst_id <= max_inst_id) {
     message("Retrieving data from inst_id ", min_inst_id, ":", max_inst_id)
     df <- purrr::map_df(min_inst_id:max_inst_id, get_inst_info)
-    message(paste0("Writing new file: ", csv_fn))
-    write_csv(df, csv_fn)
+    if (!is.null(df)) {
+      message(paste0("Writing new file: ", csv_fn))
+      write_csv(df, csv_fn)      
+    } else {
+      message('Unable to generate data frame.')
+      NULL
+    }
   } else {
     message("`min_inst_id` must be less than `max_inst_id")
   }

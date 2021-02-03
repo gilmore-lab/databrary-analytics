@@ -6,7 +6,7 @@ output:
     toc: True
     toc_float: True
     toc_depth: 2
-    code_folding: hide
+    code_folding: show
 params:
   max_vol_id: 1273
   use_saved_file: False
@@ -24,10 +24,6 @@ This document describes generates a list of funders on Databrary projects.
 ```{r set-up, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE, message = FALSE, warning = FALSE)
 library(tidyverse)
-```
-
-```{r login}
-databraryapi::login_db(params$db_login)
 ```
 
 # Gather data

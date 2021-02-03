@@ -1,4 +1,4 @@
-vol_id,mimetype,extension,asset_type,n_files,tot_size,tot_dur
-2,video/mp4,mp4,MPEG-4 video,14,3572349471,4780783
-2,text/csv,csv,Comma-separated values,1,1022,0
-2,application/pdf,pdf,Portable document,1,74400,0
+vol_id,mimetype,extension,asset_type,n_files,tot_size,tot_dur,duration
+2,video/mp4,mp4,MPEG-4 video,14,3572349471,4780783,NA
+2,text/csv,csv,Comma-separated values,1,1022,0,NA
+2,application/pdf,pdf,Portable document,1,74400,0,NA

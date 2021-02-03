@@ -1276,6 +1276,66 @@ window.buildTabsets = function(tocID) {
 };
 
 </script>
+<script>
+window.initializeCodeFolding = function(show) {
+
+  // handlers for show-all and hide all
+  $("#rmd-show-all-code").click(function() {
+    $('div.r-code-collapse').each(function() {
+      $(this).collapse('show');
+    });
+  });
+  $("#rmd-hide-all-code").click(function() {
+    $('div.r-code-collapse').each(function() {
+      $(this).collapse('hide');
+    });
+  });
+
+  // index for unique code element ids
+  var currentIndex = 1;
+
+  // select all R code blocks
+  var rCodeBlocks = $('pre.r, pre.python, pre.bash, pre.sql, pre.cpp, pre.stan, pre.julia, pre.foldable');
+  rCodeBlocks.each(function() {
+
+    // create a collapsable div to wrap the code in
+    var div = $('<div class="collapse r-code-collapse"></div>');
+    show = (show || $(this).hasClass('fold-show')) && !$(this).hasClass('fold-hide');
+    if (show) div.addClass('in');
+    var id = 'rcode-643E0F36' + currentIndex++;
+    div.attr('id', id);
+    $(this).before(div);
+    $(this).detach().appendTo(div);
+
+    // add a show code button right above
+    var showCodeText = $('<span>' + (show ? 'Hide' : 'Code') + '</span>');
+    var showCodeButton = $('<button type="button" class="btn btn-default btn-xs code-folding-btn pull-right"></button>');
+    showCodeButton.append(showCodeText);
+    showCodeButton
+        .attr('data-toggle', 'collapse')
+        .attr('data-target', '#' + id)
+        .attr('aria-expanded', show)
+        .attr('aria-controls', id);
+
+    var buttonRow = $('<div class="row"></div>');
+    var buttonCol = $('<div class="col-md-12"></div>');
+
+    buttonCol.append(showCodeButton);
+    buttonRow.append(buttonCol);
+
+    div.before(buttonRow);
+
+    // update state of button on show/hide
+    div.on('hidden.bs.collapse', function () {
+      showCodeText.text('Code');
+    });
+    div.on('show.bs.collapse', function () {
+      showCodeText.text('Hide');
+    });
+  });
+
+}
+</script>
 <style type="text/css">.hljs-literal {
 color: #990073;
 }
@@ -1626,6 +1686,9 @@ summary {
 </style>
 
 <!-- code folding -->
+<style type="text/css">
+.code-folding-btn { margin-bottom: 4px; }
+</style>
 
 
 
@@ -1715,11 +1778,19 @@ div.tocify {
 
 <div class="fluid-row" id="header">
 
+<div class="btn-group pull-right">
+<button type="button" class="btn btn-default btn-xs dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span>Code</span> <span class="caret"></span></button>
+<ul class="dropdown-menu" style="min-width: 50px;">
+<li><a id="rmd-show-all-code" href="#">Show All Code</a></li>
+<li><a id="rmd-hide-all-code" href="#">Hide All Code</a></li>
+</ul>
+</div>
+
 
 
 <h1 class="title toc-ignore">Asset statistics report</h1>
 <h4 class="author">Rick Gilmore</h4>
-<h4 class="date">2021-01-19 14:06:06</h4>
+<h4 class="date">2021-02-03 18:27:21</h4>
 
 </div>
 
@@ -1758,7 +1829,7 @@ if (dir.exists(params$csv_path)) {
 <h1>Analyze</h1>
 <div id="volumes-with-shared-assets" class="section level2">
 <h2>Volumes with shared assets</h2>
-<p>There are 271 shared volumes with assets.</p>
+<p>There are 274 shared volumes with assets.</p>
 <p>The following shows the number of shared volumes with a given asset type.</p>
 <pre class="r"><code>assets_df %&gt;%
   dplyr::group_by(asset_type) %&gt;%
@@ -1783,7 +1854,7 @@ n
 MPEG-4 video
 </td>
 <td style="text-align:right;">
-228
+231
 </td>
 </tr>
 <tr>
@@ -1791,7 +1862,7 @@ MPEG-4 video
 Portable document
 </td>
 <td style="text-align:right;">
-45
+46
 </td>
 </tr>
 <tr>
@@ -1807,7 +1878,7 @@ Microsoft Excel (Office Open XML) workbook
 Comma-separated values
 </td>
 <td style="text-align:right;">
-31
+30
 </td>
 </tr>
 <tr>
@@ -1828,7 +1899,7 @@ MPEG-1 or MPEG-2 audio layer III
 </tr>
 <tr>
 <td style="text-align:left;">
-Portable network graphics
+Microsoft Word (Office Open XML) document
 </td>
 <td style="text-align:right;">
 23
@@ -1836,10 +1907,10 @@ Portable network graphics
 </tr>
 <tr>
 <td style="text-align:left;">
-Microsoft Word (Office Open XML) document
+Portable network graphics
 </td>
 <td style="text-align:right;">
-22
+23
 </td>
 </tr>
 <tr>
@@ -1860,15 +1931,15 @@ Plain text
 </tr>
 <tr>
 <td style="text-align:left;">
-Microsoft Word document
+SPSS System File
 </td>
 <td style="text-align:right;">
-7
+8
 </td>
 </tr>
 <tr>
 <td style="text-align:left;">
-SPSS System File
+Microsoft Word document
 </td>
 <td style="text-align:right;">
 7
@@ -1952,13 +2023,13 @@ total_dur
 MPEG-4 video
 </td>
 <td style="text-align:right;">
-22903
+22936
 </td>
 <td style="text-align:right;">
-9.307328e+12
+9.415183e+12
 </td>
 <td style="text-align:right;">
-8203.310
+8220.660
 </td>
 </tr>
 <tr>
@@ -1969,7 +2040,7 @@ JPEG image
 2483
 </td>
 <td style="text-align:right;">
-4.918191e+09
+4.939636e+09
 </td>
 <td style="text-align:right;">
 0.000
@@ -1983,7 +2054,7 @@ Datavyu
 2346
 </td>
 <td style="text-align:right;">
-6.381934e+06
+7.100271e+06
 </td>
 <td style="text-align:right;">
 0.000
@@ -1994,10 +2065,10 @@ Datavyu
 Comma-separated values
 </td>
 <td style="text-align:right;">
-1770
+1767
 </td>
 <td style="text-align:right;">
-2.942720e+09
+2.936329e+09
 </td>
 <td style="text-align:right;">
 0.000
@@ -2036,7 +2107,7 @@ Portable network graphics
 Plain text
 </td>
 <td style="text-align:right;">
-380
+379
 </td>
 <td style="text-align:right;">
 2.065826e+10
@@ -2078,10 +2149,10 @@ Codes for the Human Analysis of Transcripts
 Portable document
 </td>
 <td style="text-align:right;">
-252
+258
 </td>
 <td style="text-align:right;">
-1.399617e+09
+1.402729e+09
 </td>
 <td style="text-align:right;">
 0.000
@@ -2092,10 +2163,10 @@ Portable document
 Microsoft Word (Office Open XML) document
 </td>
 <td style="text-align:right;">
-88
+109
 </td>
 <td style="text-align:right;">
-1.221525e+08
+1.376399e+08
 </td>
 <td style="text-align:right;">
 0.000
@@ -2134,10 +2205,10 @@ ELAN - Linguistic Annotator
 SPSS System File
 </td>
 <td style="text-align:right;">
-16
+18
 </td>
 <td style="text-align:right;">
-8.902386e+06
+1.440225e+07
 </td>
 <td style="text-align:right;">
 0.000
@@ -2230,6 +2301,11 @@ $(document).ready(function () {
 </script>
 
 <!-- code folding -->
+<script>
+$(document).ready(function () {
+  window.initializeCodeFolding("hide" === "show");
+});
+</script>
 
 <script>
 $(document).ready(function ()  {

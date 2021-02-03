@@ -1,6 +1,6 @@
 vol_id,mimetype,extension,asset_type,n_files,tot_size,tot_dur,duration
-1118,video/mp4,mp4,MPEG-4 video,5,391071490,1161843,NA
-1118,text/plain,txt,Plain text,5,169589,0,NA
-1118,text/csv,csv,Comma-separated values,3,6391395,0,NA
+1118,video/mp4,mp4,MPEG-4 video,6,281638682,890841,NA
+1118,text/plain,txt,Plain text,4,169282,0,NA
 1118,application/pdf,pdf,Portable document,1,207852,0,NA
 1118,application/vnd.datavyu,opf,Datavyu,80,460135,0,NA
+1118,application/x-spss-sav,sav,SPSS System File,2,5499866,0,NA

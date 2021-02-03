@@ -1,5 +1,5 @@
-vol_id,mimetype,extension,asset_type,n_files,tot_size,tot_dur
-5,video/mp4,mp4,MPEG-4 video,138,0,389867142
-5,image/jpeg,jpg,JPEG image,4,0,0
-5,application/msword,doc,Microsoft Word document,4,11114496,0
-5,application/vnd.datavyu,opf,Datavyu,85,1073,0
+vol_id,mimetype,extension,asset_type,n_files,tot_size,tot_dur,duration
+5,video/mp4,mp4,MPEG-4 video,138,65623474222,389867142,NA
+5,image/jpeg,jpg,JPEG image,4,9472131,0,NA
+5,application/msword,doc,Microsoft Word document,4,11114496,0,NA
+5,application/vnd.datavyu,opf,Datavyu,85,268208,0,NA

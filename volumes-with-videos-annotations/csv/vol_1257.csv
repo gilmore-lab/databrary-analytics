@@ -1,0 +1,4 @@
+vol_id,mimetype,extension,asset_type,n_files,tot_size,tot_dur,duration
+1257,video/mp4,mp4,MPEG-4 video,25,7511355710,55740954,NA
+1257,application/pdf,pdf,Portable document,6,3111190,0,NA
+1257,application/vnd.openxmlformats-officedocument.wordprocessingml.document,docx,Microsoft Word (Office Open XML) document,21,15487345,0,NA
