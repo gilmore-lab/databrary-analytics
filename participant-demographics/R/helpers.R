@@ -122,12 +122,36 @@ get_save_volumes_demo <- function(min_vol_id = 1, max_vol_id = 10,
 
 regenerate_vol_demo_csvs <- function(new_vol_rg_min = 1261, 
                                      new_vol_rg_max = 1270,
-                                     dir = "participant-demographics/csv") {
+                                     csv_dir = "participant-demographics/csv") {
+  require(purrr)
+  
+  if (!is.numeric(new_vol_rg_min)) {
+    stop('`new_vol_rg_min` must be a number.')
+  }
+  if (new_vol_rg_min < 1) {
+    stop('`new_vol_rg_min` must > 0.')
+  }
+  if (!is.numeric(new_vol_rg_max)) {
+    stop('`new_vol_rg_max` must be a number.')    
+  }
+  if (new_vol_rg_max < 1) {
+    stop('`new_vol_rg_max` must > 0.')
+  }
+  if (new_vol_rg_min > new_vol_rg_max) {
+    stop('`new_vol_rg_min` must < `new_vol_rg_max.')    
+  }
+  if (!is_character(csv_dir)) {
+    stop('`csv_dir` must be a character string.')     
+  }
+  if (!dir.exists(csv_dir)) {
+    stop('Directory not found: `', csv_dir, '`.')       
+  }
+  
   lo <- seq(from = 1, to = new_vol_rg_min, by = 10)
   hi <- seq(from = 10, to = new_vol_rg_max, by = 10)
   
   # Rick really loves functional programming
-  purrr::map2(.x = lo, .y = hi, get_save_volumes_demo, dir)
+  purrr::map2(.x = lo, .y = hi, get_save_volumes_demo, csv_dir)
 }
 
 load_demog_csvs <- function(dir = "participant-demographics/csv") {
@@ -208,6 +232,10 @@ load_owner_csvs <- function(dir = "participant-demographics/csv",
 }
 
 render_participant_demog_report <- function(db_login) {
+  if (!is.character(db_login)) {
+    stop('`db_login` must be a character string.')
+  }
+  
   rmarkdown::render("participant-demographics/participant-demog-report.Rmd",
                     params = list(db_login = db_login))
   databraryapi::logout_db()

@@ -10,8 +10,8 @@ output:
     toc_depth: 2
 params:
     db_login: email@provider.com
-    new_vol_rg_min: 1261
-    new_vol_rg_max: 1270
+    new_vol_rg_min: 1271
+    new_vol_rg_max: 1280
     update_demo_csvs: False
 ---
 
@@ -47,20 +47,9 @@ databraryapi::login_db(params$db_login)
 
 ## Gather demographic data
 
-The following code will not run when this report is rendered for the sake of efficiency.
-Change the chunk option `eval=TRUE` to re-run the chunk and regenerate the data.
-
-```{r acquire-demo-data, eval=FALSE}
-lo <- seq(from = 1, to = params$new_vol_rg_min, by = 10)
-hi <- seq(from = 10, to = params$new_vol_rg_max, by = 10)
-
-# Rick really loves functional programming
-purrr::map2(.x = lo, .y = hi, get_save_volumes_demo, dir = "csv")
-```
-
-Alternatively, there is now a function `regenerate_vol_demo_csvs()` that can be used to regenerate all of the volume-level demographic data CSVs.
-To run it, execute `regenerate_vol_demo_csvs(params$new_vol_rg_min, params$new_vol_rg_max)`.
+if `params$update_demo_csvs` is TRUE, the next chunk will query all of Databrary's volumes and update the demographic data.
 **Note:**This command takes a long time to run, so be patient.
+The default is *not* to update all of the CSVs, but use the locally saved copies instead.
 
 ```{r update-demo-csvs}
 if (params$update_demo_csvs == TRUE) {
@@ -68,7 +57,7 @@ if (params$update_demo_csvs == TRUE) {
                  params$new_vol_rg_min, " to ", params$new_vol_rg_max))
   regenerate_vol_demo_csvs(params$new_vol_rg_min, params$new_vol_rg_max)
 } else {
-  message("Using local volume-level demographic data.")
+  message("Using saved volume-level demographic data.")
 }
 ```
 
@@ -141,6 +130,13 @@ To generate the report, one must generate and save the data locally.
 
 Databrary has demographic data for $n=$ `r sum(!is.na(demo_df$session_id))` individual sessions.
 
+Add a clickable URL to the volume.
+
+```{r}
+demo_df <- demo_df %>%
+  dplyr::mutate(., vol_url = paste0("https://nyu.databrary.org/volume/", vol_id))
+```
+
 ## Gender
 
 ### Volumes and sessions
@@ -148,13 +144,14 @@ Databrary has demographic data for $n=$ `r sum(!is.na(demo_df$session_id))` indi
 ```{r gender-volumes}
 gender_df <- demo_df %>%
   dplyr::filter(., !is.na(participant.gender)) %>%
-  dplyr::group_by(., vol_id) %>%
+  dplyr::group_by(., vol_id, vol_url) %>%
   dplyr::summarize(., n_sessions = n()) %>%
   dplyr::ungroup(.) %>%
   dplyr::mutate(., n_vols_w_demo = n())
 
 gender_df %>%
-  dplyr::select(., vol_id, n_sessions) %>%
+  dplyr::select(., vol_id, vol_url, n_sessions) %>%
+  dplyr::arrange(., desc(n_sessions)) %>%
   knitr::kable(., "html") %>%
   kableExtra::kable_styling(.)
 ```
@@ -176,13 +173,14 @@ xtabs(formula = ~ participant.gender, data = demo_df) %>%
 ```{r race-volumes}
 race_df <- demo_df %>%
   dplyr::filter(., !is.na(participant.race)) %>%
-  dplyr::group_by(., vol_id) %>%
+  dplyr::group_by(., vol_id, vol_url) %>%
   dplyr::summarize(., n_sessions = n()) %>%
   dplyr::ungroup(.) %>%
   dplyr::mutate(., n_vols_w_demo = n())
 
 race_df %>%
-  dplyr::select(., vol_id, n_sessions) %>%
+  dplyr::select(., vol_id, vol_url, n_sessions) %>%
+  dplyr::arrange(., desc(n_sessions)) %>%
   knitr::kable(., "html") %>%
   kableExtra::kable_styling(.)
 ```
@@ -204,13 +202,14 @@ xtabs(formula = ~ participant.race, data = demo_df) %>%
 ```{r ethnicity-volumes}
 ethnicity_df <- demo_df %>%
   dplyr::filter(., !is.na(participant.ethnicity)) %>%
-  dplyr::group_by(., vol_id) %>%
+  dplyr::group_by(., vol_id, vol_url) %>%
   dplyr::summarize(., n_sessions = n()) %>%
   dplyr::ungroup(.) %>%
   dplyr::mutate(., n_vols_w_demo = n())
 
 ethnicity_df %>%
-  dplyr::select(., vol_id, n_sessions) %>%
+  dplyr::select(., vol_id, vol_url, n_sessions) %>%
+  dplyr::arrange(., desc(n_sessions)) %>%
   knitr::kable(., "html") %>%
   kableExtra::kable_styling(.)
 ```
@@ -227,7 +226,7 @@ xtabs(formula = ~ participant.ethnicity, data = demo_df) %>%
 
 ## Owners contributing...
 
-**NOTE** There is double-counting of sessions if a volume is owned by more than one investigator.
+**NOTE**: There could be double-counting of sessions if a volume is owned by more than one investigator.
 
 ### First owners only
 
@@ -238,6 +237,7 @@ This provides a more precise estimate of which (first) volume owners are providi
 
 ```{r}
 first_owner_vols_df <- first_owner_df %>%
+  dplyr::mutate(., person_url = paste0("https://nyu.databrary.org/party/", person_id)) %>%
   dplyr::group_by(., person_id, sortname) %>%
   dplyr::mutate(., vols_per_pi = n()) %>%
   dplyr::filter(., !is.na(person_id),
@@ -246,7 +246,7 @@ first_owner_vols_df <- first_owner_df %>%
 
 first_owner_vols_df %>%
   dplyr::select(., -vol_id) %>%
-  dplyr::group_by(., person_id, sortname, vols_per_pi) %>%
+  dplyr::group_by(., person_id, sortname, person_url, vols_per_pi) %>%
   dplyr::summarize(., n_vols_shared = mean(vols_per_pi)) %>%
   dplyr::select(., -vols_per_pi) %>%
   dplyr::arrange(., desc(n_vols_shared)) %>%
@@ -265,7 +265,7 @@ demog_owners <- dplyr::left_join(demo_df, first_owner_vols_df, by = "vol_id")
 ```{r}
 demog_owners %>%
   dplyr::filter(., !is.na(participant.gender)) %>%
-  dplyr::group_by(., person_id, sortname, vols_per_pi) %>%
+  dplyr::group_by(., person_id, sortname, person_url) %>%
   dplyr::summarize(., sess_per_pi = n()) %>%
   dplyr::filter(., !is.na(person_id),
                 !is.na(sortname)) %>%
@@ -279,7 +279,7 @@ demog_owners %>%
 ```{r}
 demog_owners %>%
   dplyr::filter(., !is.na(participant.race)) %>%
-  dplyr::group_by(., person_id, sortname) %>%
+  dplyr::group_by(., person_id, sortname, person_url) %>%
   dplyr::summarize(., sess_per_pi = n()) %>%
   dplyr::filter(., !is.na(person_id),
                 !is.na(sortname)) %>%
@@ -293,7 +293,7 @@ demog_owners %>%
 ```{r}
 demog_owners %>%
   dplyr::filter(., !is.na(participant.ethnicity)) %>%
-  dplyr::group_by(., person_id, sortname) %>%
+  dplyr::group_by(., person_id, sortname, person_url) %>%
   dplyr::summarize(., sess_per_pi = n()) %>%
   dplyr::filter(., !is.na(person_id),
                 !is.na(sortname)) %>%

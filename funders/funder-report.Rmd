@@ -1,8 +1,14 @@
 ---
 title: "Funders"
-output: html_document
+output: 
+  html_document:
+    self_contained: True
+    toc: True
+    toc_float: True
+    toc_depth: 2
+    code_folding: hide
 params:
-  max_vol_id: 1270
+  max_vol_id: 1273
   use_saved_file: False
   save_fn: "csv/funders.csv"
   save_file: True
@@ -20,17 +26,15 @@ knitr::opts_chunk$set(echo = FALSE, message = FALSE, warning = FALSE)
 library(tidyverse)
 ```
 
-Log in to Databrary
-
 ```{r login}
 databraryapi::login_db(params$db_login)
 ```
 
 # Gather data
 
-There is no easy way to determine the largest volume ID to query, so Rick tests various values that are higher than the last one used.
+There is no easy way to determine the largest volume ID to query via the API, so this tests various values that are higher than the last one used as specified in `params$use_saved_file`.
 
-```{r get-funder-data, eval=FALSE}
+```{r get-funder-data}
 # max_vol_id <- 1180
 # funders_df <- purrr::map_df(1:1180, databraryapi::list_volume_funding)
 if (params$use_saved_file) {
@@ -46,10 +50,11 @@ if (params$use_saved_file) {
     message(" Regenerating data from all volumes.")
     funders_df <- purrr::map_df(1:params$max_vol_id, databraryapi::list_volume_funding)
   }
+} else {
+  message(" Regenerating data from all volumes.")
+  funders_df <- purrr::map_df(1:params$max_vol_id, databraryapi::list_volume_funding)
 }
 ```
-
-Save report.
 
 ```{r save-data}
 if (params$save_file) {
@@ -60,8 +65,6 @@ if (params$save_file) {
 
 ## Volumes by funder
 
-Filter empty rows, count the number of volumes per funder, and print.
-
 ```{r filter-print}
 funders_filtered <- funders_df %>%
   dplyr::filter(., !is.na(funder_id), !is.na(funder_name)) %>%
@@ -70,7 +73,8 @@ funders_filtered <- funders_df %>%
   dplyr::arrange(., desc(n_vols))
 
 funders_filtered %>%
-  kableExtra::kable()
+  kableExtra::kable(.) %>%
+  kableExtra::kable_styling(.)
 ```
 
 ## Logout
