@@ -47,7 +47,7 @@ Code to produce and plot analytics about Databrary
         - replacing `<YOUREMAIL@YOURDOMAIN>` with your actual Databrary login (email). 
 - [Investigators report](https://gilmore-lab.github.io/databrary-analytics/institutions-investigators/investigators.html) on the number of affiliates each investigator has created.
     - To run this report, run `source("institutions-investigators/R/helpers.R")` from the R console.
-    - Then run `render_investigator_report("<YOUREMAIL@YOURDOMAIN>")`  
+    - Then run `render_investigators_report("<YOUREMAIL@YOURDOMAIN>")`  
         - replacing `<YOUREMAIL@YOURDOMAIN>` with your actual Databrary login (email). 
         
 # Shared assets and types
