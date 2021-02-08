@@ -9,7 +9,7 @@ output:
     toc_depth: 2
 params:
   db_login: email@provider.com
-  max_party_id: 7400
+  max_party_id: 10000
   save_fn: "csv/institutions-investigators.csv"
   save_file: True
   use_saved_file: True
