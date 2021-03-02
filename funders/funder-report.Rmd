@@ -8,7 +8,7 @@ output:
     toc_depth: 2
     code_folding: show
 params:
-  max_vol_id: 1273
+  max_vol_id: 1300
   use_saved_file: False
   save_fn: "csv/funders.csv"
   save_file: True
@@ -18,6 +18,12 @@ params:
 # Purpose
 
 This document describes generates a list of funders on Databrary projects.
+
+In typical use, run the following command from the repo's root directory:
+
+```
+rmarkdown::render("funders/funder-report.Rmd", params = list(use_saved_file = "True", db_login="<YOURDBEMAIL@INST.EDU>"))
+```
 
 # Preparation
 
@@ -55,7 +61,7 @@ if (params$use_saved_file) {
 ```{r save-data}
 if (params$save_file) {
   message(paste0("Saving file: ", params$save_fn))
-  readr::write_csv(funders_df, path = params$save_fn)
+  readr::write_csv(funders_df, file = params$save_fn)
 }
 ```
 
