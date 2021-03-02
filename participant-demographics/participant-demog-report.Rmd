@@ -10,8 +10,8 @@ output:
     toc_depth: 2
 params:
     db_login: email@provider.com
-    new_vol_rg_min: 1271
-    new_vol_rg_max: 1280
+    new_vol_rg_min: 1281
+    new_vol_rg_max: 1290
     update_demo_csvs: False
 ---
 

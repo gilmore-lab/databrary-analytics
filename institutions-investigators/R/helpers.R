@@ -44,9 +44,10 @@ make_institutional_party_df <- function(inst_id) {
   }
 }
 
-get_inst_info <- function(inst_id = 8) {
+get_inst_info <- function(inst_id = 8, update_geo = FALSE) {
   if (is.numeric(inst_id)) {
-    stop('`inst_id` must be a number.')
+    warning('`inst_id` must be a number.')
+    inst_id <- as.numeric(inst_id)
   }
 
   require(databraryapi)
@@ -68,8 +69,12 @@ get_inst_info <- function(inst_id = 8) {
         df$daa <- FALSE
       }
       # Get lat and lon
-      df <- update_inst_lat_lon(df)
-      
+      if (update_geo == TRUE) {
+        df <- update_inst_lat_lon(df)        
+      } else {
+        df$lat = NA
+        df$lon = NA
+      }
       df
     } else {
       NULL
@@ -124,7 +129,8 @@ get_max_institutional_id <- function(csv_fn = paste0(here::here(),
 update_inst_csv <- function(csv_fn = paste0(here::here(), 
                                                    "/institutions-investigators/csv/institutions.csv"),
                                    max_id = 9000,
-                                   save_new = TRUE) {
+                                   save_new = TRUE,
+                            update_geo = FALSE) {
 
   if (file.exists(csv_fn)) {
     message("Reading from saved file.")
@@ -132,7 +138,7 @@ update_inst_csv <- function(csv_fn = paste0(here::here(),
     max_old_inst_id <- unique(max(old_inst$inst_id))
     if (max_old_inst_id < max_id) {
       message("Retrieving data from `party_id` ", max_old_inst_id + 1, ":", max_id)
-      new_inst <- purrr::map_df((max_old_inst_id + 1):max_id, get_inst_info)
+      new_inst <- purrr::map_df((max_old_inst_id + 1):max_id, get_inst_info, update_geo)
       message(paste0(dim(new_inst)[1], " new institutions added."))
       df <- rbind(old_inst, new_inst)
       if (save_new) {
@@ -412,23 +418,24 @@ create_markers_array_js <- function(json_fn = 'institutions.json',
   close(this_con)
 }
 
-export_cleaned_inst_json_from_csv <- function(csv_fn = 'institutions-investigators/csv/institutions.csv') {
-  
-  if (!is.character(csv_fn)) {
-    stop(paste0('`csv_fn` must be character.'))
+export_cleaned_inst_json_from_csv <-
+  function(csv_fn = file.path(here::here(),
+                              'institutions-investigators/csv/institutions.csv')) {
+    if (!is.character(csv_fn)) {
+      stop(paste0('`csv_fn` must be character.'))
+    }
+    if (!file.exists(csv_fn)) {
+      stop(paste0('File not found: `', csv_fn, '`.'))
+    }
+    
+    df <- readr::read_csv(csv_fn)
+    message('Exporting json.')
+    json <- export_inst_to_json(df)
+    message('Cleaning json.')
+    clean_inst_json_for_leaflet(json)
+    message('Creating `institutions.js` file.')
+    create_markers_array_js()
   }
-  if (!file.exists(csv_fn)) {
-    stop(paste0('File not found: `', csv_fn, '`.'))
-  }
-  
-  df <- readr::read_csv(csv_fn)
-  message('Exporting json.')
-  json <- export_inst_to_json(df)
-  message('Cleaning json.')
-  clean_inst_json_for_leaflet(json)
-  message('Creating `institutions.js` file.')
-  create_markers_array_js()
-}
 
 # Rendering Rmarkdown reports
 
@@ -439,7 +446,7 @@ render_institutions_investigators_report <- function(db_login) {
   clean_up()
 }
 
-render_institutions_report <- function(db_login, max_party_id = 9000) {
+render_institutions_report <- function(db_login, max_party_id = 8150) {
   if (!is.character(db_login)) {
     stop('`db_login` must be a character string.')
   }

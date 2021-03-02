@@ -147,8 +147,8 @@ regenerate_vol_demo_csvs <- function(new_vol_rg_min = 1261,
     stop('Directory not found: `', csv_dir, '`.')       
   }
   
-  lo <- seq(from = 1, to = new_vol_rg_min, by = 10)
-  hi <- seq(from = 10, to = new_vol_rg_max, by = 10)
+  lo <- seq(from = new_vol_rg_min, to = new_vol_rg_max, by = 10)
+  hi <- seq(from = new_vol_rg_min + 9, to = new_vol_rg_max, by = 10)
   
   # Rick really loves functional programming
   purrr::map2(.x = lo, .y = hi, get_save_volumes_demo, csv_dir)

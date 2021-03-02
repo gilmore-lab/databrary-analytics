@@ -20,7 +20,7 @@ params:
 
 This report downloads searchable tags from Databrary and reports on them.
 
-To render the report, run `update_tags_keywords_report <- function(db_login)`, substituting your Databrary login email for `db_login`.
+To render the report, run `update_tags_keywords_report(db_login)`, substituting your Databrary login email for `db_login`.
 
 # Set-up
 

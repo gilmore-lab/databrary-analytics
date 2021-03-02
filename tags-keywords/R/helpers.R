@@ -14,6 +14,7 @@ install_required_pkgs <- function() {
 }
 
 make_volume_tags_df <- function(vol_id) {
+  message(paste0("Gathering tags from volume ", vol_id))
   these_tags <- databraryapi::list_volume_tags(vol_id)
   if (is_empty(these_tags)) {
     df <- data.frame(vol_id = vol_id, 

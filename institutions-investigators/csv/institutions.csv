@@ -654,3 +654,5 @@ inst_id,inst_name,inst_url,n_auth_invest,daa,lat,lon
 7869,Rollins College,https://www.rollins.edu/,1,TRUE,28.5928297,-81.3508174
 7879,Ripon College,https://www.ripon.edu/,1,TRUE,43.84319319999999,-88.840764
 7911,Maastricht University,https://www.maastrichtuniversity.nl/,1,TRUE,50.83929680000001,5.708785900000001
+8087,"California State University, Fresno",https://www.csufresno.edu/,1,TRUE,NA,NA
+8094,Kessler Foundation,https://kesslerfoundation.org/,1,TRUE,NA,NA
