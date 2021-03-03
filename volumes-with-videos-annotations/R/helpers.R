@@ -55,7 +55,7 @@ calculate_vol_asset_stats <- function(vol_id, save_file = FALSE,
   
   options(dplyr.summarise.inform = FALSE)
   
-  if (vb) message(paste0('Retrieving asset data for volume ', vol_id))
+  message(paste0('Retrieving asset data for volume ', vol_id))
   vol_assets <- get_assets_in_vol(vol_id, vb)
   if (is.null(vol_assets)) {
     if (vb) message(paste0(" No shared data in volume ", vol_id))
@@ -80,7 +80,7 @@ calculate_vol_asset_stats <- function(vol_id, save_file = FALSE,
     
     if (save_file) {
       if (vb) message(paste0(" Saving data from volume ", vol_id))
-      write_csv(vol_summary, path = paste0(save_path, '/vol_', vol_id, '.csv'))
+      write_csv(vol_summary, file = paste0(save_path, '/vol_', vol_id, '.csv'))
     }
     vol_summary
   }
@@ -108,7 +108,7 @@ update_vol_asset_stats <- function(start_vol_id, end_vol_id, save_file = TRUE,
 update_all_vol_stats <- function(max_vol_id, 
                                  vols_per_pass = 50,
                                  save_file = TRUE,
-                                 save_path = 'volumes-with-videos-annotations/csv',
+                                 save_path = 'csv',
                                  vb = TRUE) {
   
   if (!is.numeric(max_vol_id)) {

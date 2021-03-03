@@ -13,6 +13,7 @@ params:
     db_login: email@provider.com
     use_saved_csvs: True
     csv_path: 'csv'
+    max_vol_id: 1350
 ---
 
 # Purpose
@@ -42,9 +43,9 @@ databraryapi::login_db(params$db_login)
 
 ## Update all or import
 
-```{r}
+```{r, message=FALSE}
 if (!params$use_saved_csvs) {
-  update_all_vol_stats()
+  update_all_vol_stats(max_vol_id = params$max_vol_id)
 }
 
 #quietly_read_csv <- safely(readr::read_csv)

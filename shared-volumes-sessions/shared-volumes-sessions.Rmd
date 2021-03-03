@@ -92,6 +92,7 @@ if (params$use_saved_file) {
     vols_sess_data <- read_csv(params$save_fn)
     # From current max(vol_id), get next 200 vols
     max_vol_id <- max(vols_sess_data$vol_id)
+    message("Retrieving possibly new volumes data.")
     next_200 <- get_volumes_data(max_vol_id + 1, max_vol_id + 200)
     vols_sess_data <- data.table::rbindlist(list(vols_sess_data, next_200))
   } else {
@@ -147,10 +148,11 @@ vols_dat <- vols_sess_data %>%
 
 ```{r}
 unique_vols <- vols_sess_data %>%
-  dplyr::rename(investigator = owner.ids.name, party_id = owner.ids.id) %>%
-  dplyr::mutate(shared_type = ifelse(sharing_level == "full", "full_volume", "overview_only")) %>%
-  dplyr::select(investigator, party_id, vol_id, created_date, shared_type, n_sessions) %>%
-  dplyr::mutate(url = paste0("https://nyu.databrary.org/party/", party_id))
+  dplyr::rename(., investigator = owner.ids.name, party_id = owner.ids.id) %>%
+  dplyr::mutate(., shared_type = ifelse(sharing_level == "full", "full_volume", "overview_only")) %>%
+  dplyr::mutate(., vol_url = paste0("https://nyu.databrary.org/volume/", vol_id)) %>%
+  dplyr::group_by(., vol_id, vol_url, created_date, shared_type, n_sessions) %>%
+  dplyr::summarise(., n_owners = n())
 ```
 
 There are $n=$ `r dim(unique_vols)[1]` total shared volumes on Databrary.
@@ -164,6 +166,13 @@ unique_vols_full <- unique_vols %>%
 
 There are $n=$ `r dim(unique_vols_full)[1]` volumes fully shared on Databrary.
 
+```{r}
+unique_vols_full %>%
+  dplyr::arrange(., desc(n_sessions)) %>%
+  knitr::kable(., "html") %>%
+  kableExtra::kable_styling(.)
+```
+
 ## Overview only
 
 ```{r}
@@ -173,11 +182,18 @@ unique_vols_overview <- unique_vols %>%
 
 There are $n=$ `r dim(unique_vols_overview)[1]` volume overviews shared on Databrary.
 
+```{r}
+unique_vols_overview %>%
+  dplyr::arrange(., desc(n_sessions)) %>%
+  knitr::kable(., "html") %>%
+  kableExtra::kable_styling(.)
+```
+
 # How shared by investigator
 
 Sorted by `tot_sess`, the total number of sessions from this Authorized Investigator.
 
-## Full volume {.tabset}
+## Full volume
 
 ### Full volume (>100 sessions)
 
@@ -198,35 +214,12 @@ vols_dat %>%
   kableExtra::kable_styling(.)
 ```
 
-# How shared by unique volume
-
-## Overview only {.tabset}
-
-### Overview only (>100 sessions)
-
-```{r}
-vols_dat %>%
-  dplyr::filter(., shared_type == "overview_only",
-                tot_sess >= 100) %>%
-  knitr::kable(., "html") %>%
-  kableExtra::kable_styling(.)
-```
-
-### Overview only (all)
-
-```{r}
-vols_dat %>%
-  dplyr::filter(., shared_type == "overview_only") %>%
-  knitr::kable(., "html") %>%
-  kableExtra::kable_styling(.)
-```
-
 # Logout
 
 ```{r}
-databraryapi::logout_db()
-if (file.exists(".databrary.RData")) {
-  unlink(".databrary.RData")
-}
+# databraryapi::logout_db()
+# if (file.exists(".databrary.RData")) {
+#   unlink(".databrary.RData")
+# }
 ```
 

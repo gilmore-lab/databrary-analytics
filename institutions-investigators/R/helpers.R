@@ -198,6 +198,7 @@ get_auth_inst_list <- function(update_inst = FALSE,
 }
 
 get_ais_from_inst <- function(inst_id=8) {
+  message("Getting AIs from institution ", inst_id)
   inst_df <- databraryapi::list_party(inst_id)
   
   if (!is.null(dim(inst_df$children))) {
@@ -248,8 +249,10 @@ update_invest_csv <- function(csv_fn = paste0(here::here(),
                             update_inst = FALSE,
                             return_df = FALSE) {
   
+  message("Updating list of authorizing institutions.")
   inst_ids <- get_auth_inst_list(update_inst = update_inst)
   
+  message("Retrieving authorized investigators from institutions.")
   df <- purrr::map_df(inst_ids, get_ais_from_inst)
   
   if (file.exists(csv_fn)) {
@@ -446,10 +449,7 @@ render_institutions_investigators_report <- function(db_login) {
   clean_up()
 }
 
-render_institutions_report <- function(db_login, max_party_id = 8150) {
-  if (!is.character(db_login)) {
-    stop('`db_login` must be a character string.')
-  }
+render_institutions_report <- function(max_party_id = 8150) {
   if (!is.numeric(max_party_id)) {
     stop('`max_party_id` must be numeric.')
   }
@@ -457,20 +457,30 @@ render_institutions_report <- function(db_login, max_party_id = 8150) {
     stop('`max_party_id` must be >= 1.')
   }
   
+  if (!db_credentials_valid()) databraryapi::login_db()
+  
   rmarkdown::render("institutions-investigators/institutions.Rmd",
-                    params = list(db_login = db_login, 
-                                  max_party_id = max_party_id))
+                    params = list(max_party_id = max_party_id))
   clean_up()
 }
 
-render_investigators_report <- function(db_login, update_invest_csv = 'True') {
+render_investigators_report <- function(update_invest_csv = 'True') {
+  if (!db_credentials_valid()) databraryapi::login_db()
+  
   rmarkdown::render("institutions-investigators/investigators.Rmd",
-                    params = list(db_login = db_login, 
-                                  update_invest_csv = update_invest_csv))
+                    params = list(update_invest_csv = update_invest_csv))
   clean_up()
 }
 
 clean_up <- function() {
-  databraryapi::logout_db()
+  #databraryapi::logout_db()
   if (file.exists("institutions-investigators/.databrary.RData")) unlink("institutions-investigators/.databrary.RData")
+}
+
+db_credentials_valid <- function() {
+  if (file.exists('.databrary.RData')) {
+    TRUE
+  } else {
+    FALSE
+  }
 }

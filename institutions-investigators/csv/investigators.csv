@@ -209,8 +209,8 @@ ai_id,ai_last,ai_first,affiliation,url,email,inst_id,inst_name,inst_db_url,ai_db
 2468,Lichtenfeld,Stephanie,University of Munich,NA,lichtenfeld@psy.lmu.de,144,Ludwig Maximilian University of Munich,https://nyu.databrary.org/party/144,https://nyu.databrary.org/party/2468,0,NA,NA,NA
 546,Hirsh-Pasek,Kathy,Temple University,NA,khirshpa@temple.edu,146,Temple University,https://nyu.databrary.org/party/146,https://nyu.databrary.org/party/546,5,NA,NA,NA
 725,Gunderson,Elizabeth,Temple University,NA,liz.gunderson@temple.edu,146,Temple University,https://nyu.databrary.org/party/146,https://nyu.databrary.org/party/725,2,NA,NA,NA
+1228,Marshall,Peter,Temple University,NA,peter.marshall@temple.edu,146,Temple University,https://nyu.databrary.org/party/146,https://nyu.databrary.org/party/1228,2,NA,NA,NA
 259,Newcombe,Nora S.,Temple University,NA,newcombe@temple.edu,146,Temple University,https://nyu.databrary.org/party/146,https://nyu.databrary.org/party/259,2,NA,NA,NA
-1228,Marshall,Peter,Temple University,NA,peter.marshall@temple.edu,146,Temple University,https://nyu.databrary.org/party/146,https://nyu.databrary.org/party/1228,1,NA,NA,NA
 1766,Alper,Rebecca Mae,Temple University,NA,tug34246@temple.edu,146,Temple University,https://nyu.databrary.org/party/146,https://nyu.databrary.org/party/1766,0,NA,NA,NA
 5168,Bailey,Janelle,Temple University,NA,janelle.bailey@temple.edu,146,Temple University,https://nyu.databrary.org/party/146,https://nyu.databrary.org/party/5168,0,NA,NA,NA
 1897,Tucker,Carole,Temple University,NA,tuckerc@temple.edu,146,Temple University,https://nyu.databrary.org/party/146,https://nyu.databrary.org/party/1897,0,NA,NA,NA
@@ -258,9 +258,9 @@ ai_id,ai_last,ai_first,affiliation,url,email,inst_id,inst_name,inst_db_url,ai_db
 729,Brooks,Patricia,"College of Staten Island and the Graduate Center, CUNY",NA,patricia.brooks@csi.cuny.edu,172,"College of Staten Island, CUNY",https://nyu.databrary.org/party/172,https://nyu.databrary.org/party/729,3,NA,NA,NA
 3039,Gillespie-Lynch,Kristen,CUNY,NA,kristen.gillespie@csi.cuny.edu,172,"College of Staten Island, CUNY",https://nyu.databrary.org/party/172,https://nyu.databrary.org/party/3039,0,NA,NA,NA
 5181,Wagner,Jennifer,"City University of New York, College of Staten Island",NA,jennifer.wagner@csi.cuny.edu,172,"College of Staten Island, CUNY",https://nyu.databrary.org/party/172,https://nyu.databrary.org/party/5181,0,NA,NA,NA
+1637,Schachner,Adena,"University of California, San Diego",NA,schachner@ucsd.edu,173,"University of California, San Diego",https://nyu.databrary.org/party/173,https://nyu.databrary.org/party/1637,2,NA,NA,NA
 320,Deák,Gedeon O.,"University of California, San Diego",NA,gdeak@ucsd.edu,173,"University of California, San Diego",https://nyu.databrary.org/party/173,https://nyu.databrary.org/party/320,1,NA,NA,NA
 6528,Powell,Lindsey,UC San Diego,NA,ljpowell@ucsd.edu,173,"University of California, San Diego",https://nyu.databrary.org/party/173,https://nyu.databrary.org/party/6528,0,NA,NA,NA
-1637,Schachner,Adena,"University of California, San Diego",NA,schachner@ucsd.edu,173,"University of California, San Diego",https://nyu.databrary.org/party/173,https://nyu.databrary.org/party/1637,0,NA,NA,NA
 4420,Berteletti,Ilaria,Gallaudet University,NA,ilaria.berteletti@gallaudet.edu,174,Gallaudet University,https://nyu.databrary.org/party/174,https://nyu.databrary.org/party/4420,0,NA,NA,NA
 287,Langdon,Clifton,Gallaudet University,NA,clifton.langdon@gallaudet.edu,174,Gallaudet University,https://nyu.databrary.org/party/174,https://nyu.databrary.org/party/287,0,NA,NA,NA
 286,Petitto,Laura Ann,Gallaudet University,NA,laura-ann.petitto@gallaudet.edu,174,Gallaudet University,https://nyu.databrary.org/party/174,https://nyu.databrary.org/party/286,0,NA,NA,NA

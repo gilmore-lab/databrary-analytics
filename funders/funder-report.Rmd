@@ -1,5 +1,5 @@
 ---
-title: "Funders"
+title: "Databrary Funders"
 output: 
   html_document:
     self_contained: True
@@ -19,7 +19,17 @@ params:
 
 This document describes generates a list of funders on Databrary projects.
 
+## How to generate
+
 In typical use, run the following command from the repo's root directory:
+
+```
+rmarkdown::render("funders/funder-report.Rmd", params = list(use_saved_file = "True", db_login="<YOURDBEMAIL@INST.EDU>"))
+```
+
+Substitute your Databrary login for `<YOURDBEMAIL@INST.EDU>`.
+
+To regenerate the list of funders from scratch, run the following:
 
 ```
 rmarkdown::render("funders/funder-report.Rmd", params = list(use_saved_file = "True", db_login="<YOURDBEMAIL@INST.EDU>"))
@@ -36,25 +46,27 @@ library(tidyverse)
 
 There is no easy way to determine the largest volume ID to query via the API, so this tests various values that are higher than the last one used as specified in `params$use_saved_file`.
 
+```{r, message=FALSE}
+# wrapper function so we get information at the console
+get_volume_funding <- function(vol_id) {
+  message('Getting funders for volume ', vol_id)
+  databraryapi::list_volume_funding(vol_id)
+}
+```
+
 ```{r get-funder-data}
-# max_vol_id <- 1180
-# funders_df <- purrr::map_df(1:1180, databraryapi::list_volume_funding)
 if (params$use_saved_file) {
   if (file.exists(params$save_fn)) {
     message("Reading from saved file.")
     funders_df <- read_csv(params$save_fn)
-    # From current max(vol_id), get next 200 vols
-    # max_vol_id <- max(vols_funder_data$vol_id)
-    # next_200 <- purrr::map_df(max_vol_id + 1:max_vol_id + 200, databraryapi::list_volume_funding)
-    # funders_df <- data.table::rbindlist(list(vols_funder_data, next_200))
   } else {
     message("File not found.")
     message(" Regenerating data from all volumes.")
-    funders_df <- purrr::map_df(1:params$max_vol_id, databraryapi::list_volume_funding)
+    funders_df <- purrr::map_df(1:params$max_vol_id, get_volume_funding)
   }
 } else {
   message(" Regenerating data from all volumes.")
-  funders_df <- purrr::map_df(1:params$max_vol_id, databraryapi::list_volume_funding)
+  funders_df <- purrr::map_df(1:params$max_vol_id, get_volume_funding)
 }
 ```
 
@@ -66,6 +78,18 @@ if (params$save_file) {
 ```
 
 ## Volumes by funder
+
+### Number of volumes listing funders
+
+```{r}
+vols_w_funders <- funders_df %>%
+  dplyr::filter(., !is.na(funder_id), !is.na(funder_name)) %>%
+  dplyr::group_by(., vol_id)
+```
+
+There are $n=$ `r length(unique(vols_w_funders$vol_id))` volumes that list funders.
+
+### Number of volumes crediting funder
 
 ```{r filter-print}
 funders_filtered <- funders_df %>%
