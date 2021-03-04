@@ -8,6 +8,7 @@ output:
     toc: True
     toc_float: True
     toc_depth: 2
+    code_folding: hide
 params:
     db_login: email@provider.com
     new_vol_rg_min: 1281
@@ -16,7 +17,8 @@ params:
 ---
 
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
+knitr::opts_chunk$set(warning = FALSE,
+                      message = FALSE)
 
 library(tidyverse) # Mostly for pipe '%>%' operator
 

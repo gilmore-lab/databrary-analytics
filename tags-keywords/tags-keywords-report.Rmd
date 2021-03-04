@@ -8,6 +8,7 @@ output:
     toc: True
     toc_float: True
     toc_depth: 2
+    code_folding: hide
 params:
   db_login: email@provider.com
   max_vol_id: 1400
@@ -25,8 +26,7 @@ To render the report, run `update_tags_keywords_report(db_login)`, substituting 
 # Set-up
 
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = FALSE,
-                      warning = FALSE,
+knitr::opts_chunk$set(warning = FALSE,
                       message = FALSE)
 
 library(tidyverse)
