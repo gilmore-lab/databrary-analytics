@@ -54,6 +54,8 @@ get_inst_info <- function(inst_id = 8, update_geo = FALSE) {
   
   if (inst_id > 0) {
     if (databraryapi::is_institution(inst_id)) {
+      message("Getting information for institution ", inst_id)
+      
       inst_df <- list_party(inst_id)
       df <- data.frame(inst_id = inst_df$id,
                        inst_name = inst_df$sortname,

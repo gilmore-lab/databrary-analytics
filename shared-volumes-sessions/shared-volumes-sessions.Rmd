@@ -8,6 +8,7 @@ output:
     toc: True
     toc_float: True
     toc_depth: 2
+    code_folding: hide
 params:
   save_fn: "csv/shared_volumes_sessions.csv"
   save_file: False
@@ -26,7 +27,9 @@ This file takes as a parameter a valid Databrary user ID because the function ca
 Load the `tidyverse` library and login to Databrary.
 
 ```{r set-up, include=FALSE}
-knitr::opts_chunk$set(echo = FALSE, message = FALSE, warning = FALSE)
+knitr::opts_chunk$set(warning = FALSE,
+                      message = FALSE)
+
 library(tidyverse)
 
 databraryapi::login_db(params$db_login)
@@ -47,8 +50,9 @@ get_volume_data <- function(vol_id = 1, skip_vols = c(1276, 1277)) {
     message(paste0("Gathering data from volume ", vol_id))
     data.frame(
       vol_id = vol_data$id,
+      vol_name = vol_data$name,
       sharing_level = vol_data$publicaccess,
-      owner.ids = vol_data$owners,
+      owner_ids = vol_data$owners,
       sessions_shared = ifelse(
         is.null(vol_data$publicsharefull),
         FALSE,
@@ -76,6 +80,17 @@ get_volumes_data <- function(min_vol = 1, max_vol = 10) {
   
   # Merge data frames
   data.table::rbindlist(vols_data)
+}
+
+get_volume_name <- function(vol_id) {
+  message("Getting name for volume ", vol_id)
+  vol_metadata <- databraryapi::list_volume_metadata(vol_id)
+  if (!is.null(vol_metadata)) {
+    tibble::tibble(vol_id = vol_id,
+                   vol_name = as.character(vol_metadata$name))
+  } else {
+    tibble::tibble(vol_id = vol_id, vol_name = NA)
+  }
 }
 ```
 
@@ -113,34 +128,56 @@ if (params$use_saved_file) {
   v_1001_1100 <- get_volumes_data(1001, 1100)
   v_1101_1200 <- get_volumes_data(1101, 1200)
   v_1201_1300 <- get_volumes_data(1201, 1300)
-  vols_sess_data <- data.table::rbindlist(list(v_001_100, v_101_200, v_201_300, v_301_400,
+  v_1301_1400 <- get_volumes_data(1301, 1400)
+  vols_sess_data <- data.table::rbindlist(list(v_001_100, v_101_200, 
+                                               v_201_300, v_301_400,
                                                v_401_500, v_501_600, v_601_700,
                                                v_701_800, v_801_900, v_901_1000,
                                                v_1001_1100, v_1101_1200,
-                                               v_1201_1300))
+                                               v_1201_1300,
+                                               v_1301_1400))
   
 }
 
 if (params$save_file) {
   message(paste0("Saving file: ", params$save_fn))
-  readr::write_csv(vols_sess_data, path = params$save_fn)
+  readr::write_csv(vols_sess_data, file = params$save_fn)
 }
+```
+
+```{r}
+get_volume_name <- function(vol_id) {
+  vol_metadata <- databraryapi::list_volume_metadata(vol_id)
+  if (!is.null(vol_metadata)) {
+    as.character(vol_metadata$name)
+  } else {
+    NULL
+  }
+}
+
 ```
 
 ```{r clean-df}
 vols_dat <- vols_sess_data %>%
   # change variable names, create full_volume vs. overview_only
-  dplyr::group_by(owner.ids.name, owner.ids.id) %>%
-  dplyr::rename(investigator = owner.ids.name, party_id = owner.ids.id) %>%
+  dplyr::group_by(owner_ids.name, owner_ids.id) %>%
+  dplyr::rename(investigator = owner_ids.name, party_id = owner_ids.id) %>%
   dplyr::mutate(shared_type = ifelse(sharing_level == "full", "full_volume", "overview_only")) %>%
-  dplyr::select(investigator, party_id, vol_id, created_date, shared_type, n_sessions) %>%
+  dplyr::select(investigator,
+                party_id,
+                vol_id,
+                created_date,
+                shared_type,
+                n_sessions) %>%
   dplyr::mutate(url = paste0("https://nyu.databrary.org/party/", party_id)) %>%
   dplyr::group_by(investigator, url, shared_type) %>%
   # summarise by total shared volumes by type with session stats
-  dplyr::summarise(n_vols = n(), 
-                   tot_sess = sum(n_sessions),
-            min_n_sess = min(n_sessions),  
-            max_n_sess = max(n_sessions)) %>%
+  dplyr::summarise(
+    n_vols = n(),
+    tot_sess = sum(n_sessions),
+    min_n_sess = min(n_sessions),
+    max_n_sess = max(n_sessions)
+  ) %>%
   dplyr::arrange(shared_type, desc(tot_sess))
 ```
 
@@ -148,10 +185,12 @@ vols_dat <- vols_sess_data %>%
 
 ```{r}
 unique_vols <- vols_sess_data %>%
-  dplyr::rename(., investigator = owner.ids.name, party_id = owner.ids.id) %>%
-  dplyr::mutate(., shared_type = ifelse(sharing_level == "full", "full_volume", "overview_only")) %>%
+  dplyr::rename(., investigator = owner_ids.name, party_id = owner_ids.id) %>%
+  dplyr::mutate(.,
+                shared_type = ifelse(sharing_level == "full", 
+                                     "full_volume", "overview_only")) %>%
   dplyr::mutate(., vol_url = paste0("https://nyu.databrary.org/volume/", vol_id)) %>%
-  dplyr::group_by(., vol_id, vol_url, created_date, shared_type, n_sessions) %>%
+  dplyr::group_by(., vol_id, vol_name, vol_url, created_date, shared_type, n_sessions) %>%
   dplyr::summarise(., n_owners = n())
 ```
 
@@ -195,17 +234,14 @@ Sorted by `tot_sess`, the total number of sessions from this Authorized Investig
 
 ## Full volume
 
-### Full volume (>100 sessions)
-
 ```{r}
 vols_dat %>%
-  dplyr::filter(., shared_type == "full_volume",
-                tot_sess >= 100) %>%
+  dplyr::filter(., shared_type == "full_volume") %>%
   knitr::kable(., "html") %>%
   kableExtra::kable_styling(.)
 ```
 
-### Full volume (all)
+## Overview only
 
 ```{r}
 vols_dat %>%
@@ -217,9 +253,9 @@ vols_dat %>%
 # Logout
 
 ```{r}
-# databraryapi::logout_db()
-# if (file.exists(".databrary.RData")) {
-#   unlink(".databrary.RData")
-# }
+databraryapi::logout_db()
+if (file.exists(".databrary.RData")) {
+  unlink(".databrary.RData")
+}
 ```
 
