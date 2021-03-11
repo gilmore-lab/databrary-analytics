@@ -10,13 +10,20 @@ make_institutional_party_df <- function(inst_id) {
     stop('`inst_id` must be a number.')
   }
   if (inst_id <= 0) {
-    stop('`inst_id` must be >= 0')
+    warning('`inst_id` must be >= 0')
+    return(NULL)
   }
   
   require(databraryapi)
   require(purrr)
   
+  if (!db_credentials_valid()){
+    warning("Not logged in to Databrary. Run `databraryapi::login_db()`.")
+    return(NULL)
+  }
+  
   if (databraryapi::is_institution(inst_id)) {
+    message("Retrieving investigators at institution ", inst_id, '.')
     these_affiliates <- databraryapi::list_affiliates(inst_id)
     if (purrr::is_empty(these_affiliates) | is.null(these_affiliates)) {
       df <- data.frame(inst_id = inst_id,
@@ -35,8 +42,7 @@ make_institutional_party_df <- function(inst_id) {
       df <- dplyr::mutate(df, inst_url = paste0("https://nyu.databrary.org/party/", inst_id),
                           party_url = paste0("https://nyu.databrary.org/party/", party_id))
       df <- dplyr::select(df, 
-                          inst_id, affiliation, inst_url, party_id, sortname, prename, party_url,
-                          url, email)
+                          inst_id, affiliation, inst_url, party_id, sortname, prename, party_url, email)
     } 
     df
   } else {
@@ -45,12 +51,17 @@ make_institutional_party_df <- function(inst_id) {
 }
 
 get_inst_info <- function(inst_id = 8, update_geo = FALSE) {
-  if (is.numeric(inst_id)) {
+  if (!is.numeric(inst_id)) {
     warning('`inst_id` must be a number.')
     inst_id <- as.numeric(inst_id)
   }
 
   require(databraryapi)
+  
+  if (!db_credentials_valid()){
+    warning("Not logged in to Databrary. Run `databraryapi::login_db()`.")
+    return(NULL)
+  }
   
   if (inst_id > 0) {
     if (databraryapi::is_institution(inst_id)) {
@@ -59,7 +70,8 @@ get_inst_info <- function(inst_id = 8, update_geo = FALSE) {
       inst_df <- list_party(inst_id)
       df <- data.frame(inst_id = inst_df$id,
                        inst_name = inst_df$sortname,
-                       inst_url = ifelse('url' %in% names(inst_df), inst_df$url, NA))
+                       inst_url = ifelse('url' %in% names(inst_df), inst_df$url, NA),
+                       databrary_url = paste0("https://nyu.databrary.org/party/", inst_id))
       if (!is.null(dim(inst_df$children))) {
         df$n_auth_invest <- dim(inst_df$children)[1]
       } else {
@@ -485,4 +497,315 @@ db_credentials_valid <- function() {
   } else {
     FALSE
   }
+}
+
+render_by_institution_report <- function(party_id) {
+  if (!db_credentials_valid()) databraryapi::login_db()
+  
+  this_inst <- get_inst_info(params$party_id)
+  
+  rmarkdown::render("institutions-investigators/by-institution-report.Rmd")
+  
+  clean_up()
+}
+
+get_volume_data <- function(vol_id = 1, skip_vols = c(1276, 1277)) {
+  require(databraryapi)
+  require(tidyverse)
+  
+  if (vol_id %in% skip_vols) return(NULL)
+  
+  vol_data <- databraryapi::download_containers_records(vol_id)
+  if (is.null(vol_data)) {
+    message(paste0("No data in volume ", vol_id))
+    NULL
+  } else {
+    message(paste0("Gathering data from volume ", vol_id))
+    data.frame(
+      vol_id = vol_data$id,
+      vol_name = vol_data$name,
+      sharing_level = vol_data$publicaccess,
+      owner_ids = vol_data$owners,
+      sessions_shared = ifelse(
+        is.null(vol_data$publicsharefull),
+        FALSE,
+        vol_data$publicsharefull
+      ),
+      n_sessions = dim(vol_data$containers)[1] - 1,
+      created_date = lubridate::as_datetime(vol_data$creation)
+    )
+  }
+}
+
+get_ai_vols <- function(party_id) {
+  message("Getting data for party ", party_id)
+  ai_df <- databraryapi::list_party(party_id)
+  if (!is.null(ai_df)) {
+    new_df <- ai_df$access$volume
+    # new_df$party_id <- party_id
+    # new_df$last_name <- ai_df$sortname
+    # new_df$first_name <- ai_df$prename
+    # new_df$affiliation <- ai_df$affiliation
+    # new_df$person_id <- ai_df$id
+    # new_df %>%
+    #   dplyr::rename(., vol_id = id, vol_name = name, vol_desc = body, vol_creation = creation, vol_owners = owners,
+    #                 ) %>%
+    #   dplyr::select(., person_id, last_name, first_name, affiliation, vol_id, vol_name, vol_desc, vol_creation,
+    #                 vol_owners)
+    new_df
+  } else {
+   NULL 
+  }
+}
+
+trim_ai_vols <- function(df) {
+  # Extract first owner from data.frame nested in df
+  first_owners <- purrr::map_df(lapply(df$owners, '['), function(x) {x[1,]})
+  first_owners <- first_owners %>%
+    dplyr::rename(., first_owner_name = name,
+                  first_owner_id = id)
+  
+  new_df <- df %>%
+    dplyr::select(., id, name, creation, permission) %>%
+    dplyr::rename(., vol_id = id, vol_name = name)
+  
+  cbind(new_df, first_owners)
+}
+
+get_clean_ai_vols <- function(party_id) {
+  if (is.na(party_id)) {
+    message("Invalid party_id `", party_id, '`.')
+    return(NULL)
+  } else {
+    message("Getting volume data for party ", party_id)
+    
+    ai_df <- databraryapi::list_party(party_id)
+    if (is.null(dim(ai_df$access))) {
+      warning("No volumes found for party ", party_id, '.')
+      return(NULL)
+    } else {
+      raw_vols_df <- trim_ai_vols(ai_df$access$volume)
+      n_vols <- dim(raw_vols_df)[1]
+      
+      df <- tibble(person_id = rep(ai_df$id, n_vols),
+                   last_name = rep(ai_df$sortname, n_vols),
+                   first_name = rep(ai_df$prename, n_vols),
+                   affiliation = rep(ai_df$affiliation, n_vols),
+                   vol_id = raw_vols_df$vol_id,
+                   vol_name = raw_vols_df$vol_name,
+                   vol_creation = raw_vols_df$creation,
+                   vol_permission = raw_vols_df$permission,
+                   vol_1st_owner_name = raw_vols_df$first_owner_name,
+                   vol_1st_owner_id = raw_vols_df$first_owner_id)
+      df
+    }
+  }
+}
+
+#---------------------------------------------------------------------------------------
+# Saves a CSV of the data frame providing data about an Authorized Investigator's volumes
+save_ai_vols_csv <- function(df, csv_path = "csv") {
+  fn <- file.path(csv_path, paste0(stringi::stri_pad(df$person_id[1], 4, pad="0"), "-",
+                                   tolower(df$last_name[1]), "-", 
+                                   tolower(df$first_name[1]), "-vols-", 
+                                           Sys.Date(), ".csv"))
+  message("Saving file: `", fn, '`.')
+  readr::write_csv(df, fn)
+}
+
+#---------------------------------------------------------------------------------------
+# Creates, cleans, and saves as a CSV a data frame providing data about an Authorized 
+# Investigator's volumes
+get_clean_save_ai_vols_csv <- function(party_id, csv_path = "csv") {
+  ai_vols <- get_clean_ai_vols(party_id)
+  if(!is.null(ai_vols)) {
+    save_ai_vols_csv(ai_vols, csv_path)    
+  }
+}
+
+#---------------------------------------------------------------------------------------
+# Generates data frames and CSVs for all of an institution's investigators
+get_clean_save_inst_ais_csvs <- function(inst_id = 8, csv_path = "csv") {
+  these_ais <- make_institutional_party_df(inst_id)
+  
+  if (is.null(these_ais)) {
+    warning("Unable to retrieve investigator data for institution ", inst_id, '.')
+    return(NULL)
+  }
+  purrr::map(these_ais$party_id, get_clean_save_ai_vols_csv, csv_path)
+}
+  
+#---------------------------------------------------------------------------------------
+# Generates a data frame containing summary statistics about a volume's assets
+calculate_vol_asset_stats <- function(vol_id) {
+  if ((as.numeric(vol_id) <= 0)) {
+    stop('`vol_id` must be > 0.')
+  }
+
+  require(tidyverse)
+  
+  options(dplyr.summarise.inform = FALSE)
+  
+  message(paste0('Retrieving asset data for volume ', vol_id))
+  vol_assets <- get_assets_in_vol(vol_id)
+  if (is.null(vol_assets)) {
+    message(paste0(" No shared data in volume ", vol_id))
+    NULL
+  } else {
+    
+    vol_summary <- vol_assets %>%
+      # dplyr::mutate(., vol_id = vol_id, mimetype = mimetype, extension = extension) %>%
+      dplyr::group_by(., vol_id, mimetype, extension, asset_type) %>%
+      dplyr::summarise(., n_files = n(),
+                       tot_size = sum(size, na.rm = TRUE),
+                       tot_dur_hrs = ms_to_hrs(sum(duration, na.rm = TRUE)))
+    
+    # if(!('duration' %in% names(vol_summary))) {
+    #   vol_summary <- dplyr::mutate(vol_summary, duration = NA)
+    # }
+    vol_summary
+  }
+}
+
+#---------------------------------------------------------------------------------------
+# Generates a data frame containing information about a volume's assets
+get_assets_in_vol <- function(vol_id, vb = FALSE) {
+  if ((as.numeric(vol_id) <= 0)) {
+    stop('`vol_id` must be > 0.')
+  }
+  if (!is.logical(vb)) {
+    stop('`vb` must be a logical value.')
+  }
+  
+  require(tidyverse)
+  require(databraryapi)
+  
+  message(paste0(" Extracting assets from volume ", vol_id))
+  vol_data <- databraryapi::list_assets_in_volume(vol_id)
+  
+  if (is.null(vol_data)) {
+    if (vb) message(" No available assets.")
+    NULL
+  } else {
+    # some volumes have no assets with duration or size attribute
+    if (!('duration' %in% names(vol_data))) {
+      vol_data <- dplyr::mutate(vol_data, duration = NA)
+    }
+    if (!('size' %in% names(vol_data))) {
+      vol_data <- dplyr::mutate(vol_data, size = NA)
+    }
+    vol_data <- vol_data %>%
+      dplyr::mutate(vol_id = vol_id) %>%
+      dplyr::select(vol_id, size, duration, mimetype, extension, asset_type)
+    vol_data    
+  }
+}
+
+#---------------------------------------------------------------------------------------
+# Generates a data frame containing information about an authorized investigator's
+# volumes and assets
+get_ai_vols_assets <- function(party_id) {
+  if (!is.numeric(party_id)) {
+    warning('`party_id` must be numeric. Converting.')
+    party_id <- as.numeric(party_id)
+  }
+  if (party_id < 1) {
+    warning('`party_id` must be > 0')
+    return(NULL)
+  }
+  
+  require(dplyr)
+  
+  ais_vols <- get_clean_ai_vols(party_id)
+  if (is.null(ais_vols)) {
+    warning("No volumes found for party `", party_id, '`.')
+    return(NULL)
+  }
+  
+  ais_vols_stats <- purrr::map_df(ais_vols$vol_id, get_assets_in_vol)
+  if (is.null(ais_vols_stats)) {
+    warning('Unable to retrieve volume-level data for party `', party_id, '`.')
+    return(NULL)
+  }
+  
+  dplyr::left_join(ais_vols, ais_vols_stats, by='vol_id')
+}
+
+#---------------------------------------------------------------------------------------
+# Open a CSV with volume data, generate asset-level statistics, return an augmented
+# data frame
+merge_asset_stats_for_ai_vols <- function(fn) {
+  this_vol_df <- readr::read_csv(fn)
+  asset_stats_df <- purrr::map_df(this_vol_df$vol_id, calculate_vol_asset_stats)
+  if (dim(asset_stats_df)[1] == 0) {
+    warning("No asset data available for volumes in `", fn, '`.')
+    return(NULL)
+  } else {
+    df <- dplyr::left_join(this_vol_df, asset_stats_df, by = 'vol_id')
+    df %>%
+      dplyr::arrange(., vol_id, asset_type)    
+  }
+}
+
+#---------------------------------------------------------------------------------------
+# Export CSV with volume and asset-level statistics for a given researcher
+export_vol_asset_csv <- function(in_fn, csv_path = "csv") {
+  df <- merge_asset_stats_for_ai_vols(in_fn)
+  if (is.null(df)) {
+    warning("No asset data to be merged for `", in_fn, '`.')
+    return(NULL)
+  } else {
+    out_fn <- file.path(csv_path, paste0(stringi::stri_pad(df$person_id[1], 4, pad="0"), "-",
+                                         tolower(df$last_name[1]), "-", 
+                                         tolower(df$first_name[1]), "-assets-", 
+                                         Sys.Date(), ".csv"))
+    
+    message("Saving file: `", out_fn, '`.')
+    readr::write_csv(df, out_fn)    
+  }
+}
+
+#---------------------------------------------------------------------------------------
+
+bytes_to_gb <- function(b) {
+  b/(1.024e9)
+}
+
+bytes_to_mb <- function(m) {
+  m/(1.024e6)
+}
+
+ms_to_secs <- function(ms) {
+  if (!is.numeric(ms)) {
+    stop('`ms` must be a number.')
+  }
+  ms/1000
+}
+
+secs_to_mins <- function(s) {
+  if (!is.numeric(s)) {
+    stop('`s` must be a number.')
+  }
+  s/60
+}
+
+mins_to_hrs <- function(m) {
+  if (!is.numeric(m)) {
+    stop('`m` must be a number.')
+  }  
+  m/60
+}
+
+ms_to_mins <- function(ms) {
+  if (!is.numeric(ms)) {
+    stop('`ms` must be a number.')
+  }
+  ms_to_secs(ms) %>% secs_to_mins(.)
+}
+
+ms_to_hrs <- function(ms) {
+  if (!is.numeric(ms)) {
+    stop('`ms` must be a number.')
+  }  
+  ms_to_secs(ms) %>% secs_to_mins(.) %>% mins_to_hrs(.)
 }

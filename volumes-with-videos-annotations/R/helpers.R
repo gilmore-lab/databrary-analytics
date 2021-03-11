@@ -11,11 +11,11 @@ get_assets_in_vol <- function(vol_id, vb = FALSE) {
   require(tidyverse)
   require(databraryapi)
   
-  if (vb) message(paste0(" Extracting assets from volume ", vol_id))
+  message(paste0(" Extracting assets from volume ", vol_id))
   vol_data <- databraryapi::list_assets_in_volume(vol_id)
   
   if (is.null(vol_data)) {
-    if (vb) paste0(" No available assets.")
+    if (vb) message(" No available assets.")
     NULL
   } else {
     # some volumes have no assets with duration or size attribute
@@ -45,7 +45,7 @@ calculate_vol_asset_stats <- function(vol_id, save_file = FALSE,
     stop('`save_path` must be a character string.')
   }
   if (!dir.exists(save_path)) {
-    stop('Directory not found: `', save_path, '`.')
+    warning('Directory not found: `', save_path, '`.')
   }
   if (!is.logical(vb)) {
     stop('`vb` must be a logical value.')
@@ -66,17 +66,12 @@ calculate_vol_asset_stats <- function(vol_id, save_file = FALSE,
       # dplyr::mutate(., vol_id = vol_id, mimetype = mimetype, extension = extension) %>%
       dplyr::group_by(., vol_id, mimetype, extension, asset_type) %>%
       dplyr::summarise(., n_files = n(),
-                       tot_size = sum(size, na.rm = TRUE),
-                       tot_dur = sum(duration, na.rm = TRUE))
+                       tot_size_gb = bytes_to_gb(sum(size, na.rm = TRUE)),
+                       tot_dur_hrs = ms_to_hrs(sum(duration, na.rm = TRUE)))
     
-    if(!('duration' %in% names(vol_summary))) {
-      vol_summary <- dplyr::mutate(vol_summary, duration = NA)
-    }
-
-    # vol_summary <- vol_summary %>%
-    #   dplyr::count(asset_type) %>%
-    #   dplyr::mutate(vol_id = vol_id) # %>%
-    #   #dplyr::select(vol_id, asset_type, n, tot_size, tot_dur)  
+    # if(!('duration' %in% names(vol_summary))) {
+    #   vol_summary <- dplyr::mutate(vol_summary, duration = NA)
+    # }
     
     if (save_file) {
       if (vb) message(paste0(" Saving data from volume ", vol_id))
@@ -156,6 +151,10 @@ render_asset_stats_report <- function(db_login) {
   databraryapi::login_db(db_login)
   rmarkdown::render("volumes-with-videos-annotations/assets-stats.Rmd", params = list(db_login = db_login))
   clean_up()
+}
+
+bytes_to_gb <- function(b) {
+  b/(1.024e9)
 }
 
 ms_to_secs <- function(ms) {
