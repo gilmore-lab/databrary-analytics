@@ -57,3 +57,8 @@ if (update_demog_data) {
   
 }
 
+## Tags and keywords
+
+message("----- Generating volume-level demographics report -----")
+source("tags-keywords/R/helpers.R")
+rmarkdown::render("tags-keywords/tags-keywords-report.Rmd")

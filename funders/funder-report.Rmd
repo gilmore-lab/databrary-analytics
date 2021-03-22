@@ -6,7 +6,7 @@ output:
     toc: True
     toc_float: True
     toc_depth: 2
-    code_folding: show
+    code_folding: hide
 params:
   max_vol_id: 1300
   use_saved_file: False
@@ -38,7 +38,8 @@ rmarkdown::render("funders/funder-report.Rmd", params = list(use_saved_file = "T
 # Preparation
 
 ```{r set-up, include=FALSE}
-knitr::opts_chunk$set(echo = FALSE, message = FALSE, warning = FALSE)
+knitr::opts_chunk$set(message = FALSE, 
+                      warning = FALSE)
 library(tidyverse)
 ```
 

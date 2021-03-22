@@ -1,1042 +1,1045 @@
-vol_id,sharing_level,owner.ids.name,owner.ids.id,sessions_shared,n_sessions,created_date
-1,full,"Adolph, Karen",5,FALSE,25,2013-01-11T10:26:40Z
-1,full,"Gilmore, Rick O.",6,FALSE,25,2013-01-11T10:26:40Z
-1,full,Staff,308,FALSE,25,2013-01-11T10:26:40Z
-1,full,"Admin, Databrary",3341,FALSE,25,2013-01-11T10:26:40Z
-2,full,"Gilmore, Rick O.",6,FALSE,4,2013-10-02T11:33:36Z
-4,full,"Adolph, Karen",5,FALSE,69,2013-10-10T15:29:38Z
-5,full,"Adolph, Karen",5,FALSE,135,2013-10-10T16:35:22Z
-7,full,"Adolph, Karen",5,FALSE,57,2013-10-10T17:40:23Z
-8,full,"Tamis-LeMonda, Catherine",11,FALSE,1351,2013-10-14T15:54:05Z
-9,full,"Adolph, Karen",5,FALSE,1,2014-03-13T00:58:48Z
-10,full,"Gordon, Peter",20,FALSE,6,2014-03-18T17:54:30Z
-11,none,"Karasik, Lana",32,FALSE,234,2014-03-25T02:04:43Z
-11,none,"Tamis-LeMonda, Catherine",11,FALSE,234,2014-03-25T02:04:43Z
-11,none,"Adolph, Karen",5,FALSE,234,2014-03-25T02:04:43Z
-15,full,"Messinger, Daniel",70,FALSE,13,2014-04-24T19:30:13Z
-16,full,"Adolph, Karen",5,FALSE,11,2014-05-16T19:28:22Z
-16,full,"Shapiro, Liza",80,FALSE,11,2014-05-16T19:28:22Z
-23,full,"Gilmore, Rick O.",6,FALSE,1,2014-07-07T15:19:52Z
-24,full,"Adolph, Karen",5,FALSE,1,2014-07-08T22:29:33Z
-27,full,"Wilkinson, Krista",245,FALSE,4,2014-07-15T15:02:27Z
-28,full,"Adolph, Karen",5,FALSE,1,2014-07-18T14:28:57Z
-29,full,"Johnson, Scott",93,FALSE,1,2014-07-22T13:08:39Z
-30,full,"LoBue, Vanessa",82,FALSE,158,2014-07-23T15:57:05Z
-30,full,"Thrasher, Cat",346,FALSE,158,2014-07-23T15:57:05Z
-31,full,"Gilmore, Rick O.",6,FALSE,1,2014-07-23T16:32:41Z
-32,full,"Gilmore, Rick O.",6,FALSE,1,2014-07-23T16:52:20Z
-33,full,"Frank, Michael C.",258,FALSE,1,2014-07-28T17:21:21Z
-34,full,"Frank, Michael C.",258,FALSE,1,2014-07-28T17:32:23Z
-35,full,"Frank, Michael C.",258,FALSE,1,2014-07-28T17:48:26Z
-36,full,"Frank, Michael C.",258,FALSE,1,2014-07-28T18:18:46Z
-37,full,"Frank, Michael C.",258,FALSE,1,2014-07-28T19:12:00Z
-38,full,"Frank, Michael C.",258,FALSE,1,2014-07-28T20:21:58Z
-40,full,"Barr, Rachel",104,FALSE,1,2014-08-04T14:10:46Z
-42,full,"Smith, Linda B.",161,FALSE,11,2014-08-05T18:05:45Z
-43,full,"Saffran, Jenny",274,FALSE,1,2014-08-07T19:38:45Z
-44,full,"Naigles, Letitia",279,FALSE,1,2014-08-13T00:38:29Z
-45,full,"Rhodes, Marjorie",277,FALSE,1,2014-08-14T18:29:51Z
-46,full,"Vishton, Peter",60,FALSE,1,2014-08-21T21:10:04Z
-47,full,"Fabricius, William",288,FALSE,1,2014-08-25T20:28:44Z
-49,full,"Gilmore, Rick O.",6,FALSE,1,2014-09-01T23:57:43Z
-50,full,"Bertenthal, Bennett I.",294,FALSE,1,2014-09-04T18:51:27Z
-51,full,"Bertenthal, Bennett I.",294,FALSE,1,2014-09-04T19:50:35Z
-53,full,"Bertenthal, Bennett I.",294,FALSE,1,2014-09-04T20:05:53Z
-61,full,"DeLoache, Judy",264,FALSE,1,2014-09-25T21:26:54Z
-62,full,"Amso, Dima",297,FALSE,1,2014-09-26T15:15:43Z
-64,full,"Needham, Amy",118,FALSE,1,2014-09-27T01:13:48Z
-65,full,"Brannon, Elizabeth M",313,FALSE,1,2014-09-27T12:55:40Z
-68,full,"Gilmore, Rick O.",6,FALSE,0,2014-10-14T18:54:59Z
-70,full,"Baker, David",332,FALSE,308,2014-10-17T00:10:02Z
-73,full,"Gilmore, Rick O.",6,FALSE,32,2014-10-20T15:51:34Z
-73,full,"Seisler, Andrea R.",437,FALSE,32,2014-10-20T15:51:34Z
-73,full,"Qian, Yiming",4210,FALSE,32,2014-10-20T15:51:34Z
-75,full,"Gilmore, Rick O.",6,FALSE,34,2014-10-20T16:23:14Z
-77,full,"Gilmore, Rick O.",6,FALSE,6,2014-10-22T19:55:38Z
-77,full,"Norcia, Anthony M.",378,FALSE,6,2014-10-22T19:55:38Z
-79,full,"Wyble, Brad",273,FALSE,1,2014-10-23T13:44:10Z
-81,full,"Jayaraman, Swapnaa",254,FALSE,84,2014-10-27T17:32:43Z
-81,full,"Smith, Linda B.",161,FALSE,84,2014-10-27T17:32:43Z
-81,full,"Raudies, Florian",160,FALSE,84,2014-10-27T17:32:43Z
-81,full,"Gilmore, Rick O.",6,FALSE,84,2014-10-27T17:32:43Z
-83,restricted,"Adolph, Karen",5,FALSE,110,2014-10-29T17:37:08Z
-84,full,"Adolph, Karen",5,FALSE,104,2014-11-03T22:57:47Z
-86,full,"Adolph, Karen",5,FALSE,2,2014-11-07T21:05:09Z
-87,none,"Karasik, Lana",32,FALSE,233,2014-11-17T16:29:25Z
-87,none,"Adolph, Karen",5,FALSE,233,2014-11-17T16:29:25Z
-87,none,"Tamis-LeMonda, Catherine",11,FALSE,233,2014-11-17T16:29:25Z
-87,none,"Spies, Jeffrey",4650,FALSE,233,2014-11-17T16:29:25Z
-87,none,"Nez, Reda",4291,FALSE,233,2014-11-17T16:29:25Z
-88,none,"Adolph, Karen",5,FALSE,132,2014-11-17T19:08:27Z
-89,full,"Adolph, Karen",5,FALSE,114,2014-11-19T20:05:35Z
-90,full,"Demuth, Katherine",537,FALSE,314,2014-11-20T17:48:20Z
-95,full,"Brannon, Elizabeth M",313,FALSE,0,2014-12-05T15:56:51Z
-96,full,"Brannon, Elizabeth M",313,FALSE,1,2014-12-05T16:03:15Z
-98,full,"Fabricius, William",288,FALSE,34,2014-12-08T19:43:59Z
-99,full,"Fausey, Caitlin M.",126,FALSE,2,2014-12-17T02:36:55Z
-99,full,"Smith, Linda B.",161,FALSE,2,2014-12-17T02:36:55Z
-99,full,"Jayaraman, Swapnaa",254,FALSE,2,2014-12-17T02:36:55Z
-101,restricted,"Frank, Michael C.",258,FALSE,29,2015-01-09T20:47:22Z
-104,none,"Neiderhiser, Jenae",330,FALSE,2,2015-01-29T14:40:51Z
-106,none,"Gilmore, Rick O.",6,FALSE,12,2015-02-02T14:35:56Z
-106,none,"Admin, Databrary",3341,FALSE,12,2015-02-02T14:35:56Z
-106,none,"Seisler, Andrea R.",437,FALSE,12,2015-02-02T14:35:56Z
-108,full,"Messinger, Daniel",70,FALSE,43,2015-02-12T21:28:59Z
-109,full,"Carlsen, William",325,FALSE,0,2015-02-25T15:59:21Z
-112,full,"Fausey, Caitlin M.",126,FALSE,2,2015-03-09T22:20:03Z
-112,full,"Smith, Linda B.",161,FALSE,2,2015-03-09T22:20:03Z
-112,full,"Jayaraman, Swapnaa",254,FALSE,2,2015-03-09T22:20:03Z
-114,full,"Adolph, Karen",5,FALSE,106,2015-03-13T17:49:55Z
-116,full,"Gilmore, Rick O.",6,FALSE,6,2015-03-16T20:49:39Z
-116,full,"Raudies, Florian",160,FALSE,6,2015-03-16T20:49:39Z
-116,full,"Franchak, John",14,FALSE,6,2015-03-16T20:49:39Z
-116,full,"Adolph, Karen",5,FALSE,6,2015-03-16T20:49:39Z
-119,restricted,"Perez-Edgar, Koraly",96,FALSE,302,2015-04-16T20:13:10Z
-121,full,"Adolph, Karen",5,FALSE,1,2015-04-21T19:46:11Z
-123,full,"Adolph, Karen",5,FALSE,37,2015-04-28T20:03:00Z
-124,full,"Adolph, Karen",5,FALSE,14,2015-04-28T20:32:07Z
-132,none,"Adolph, Karen",5,FALSE,19,2015-05-04T18:44:06Z
-135,full,"Adolph, Karen",5,FALSE,27,2015-05-06T15:20:28Z
-135,full,"Franchak, John",14,FALSE,27,2015-05-06T15:20:28Z
-136,full,"Adolph, Karen",5,FALSE,63,2015-05-06T19:29:17Z
-139,full,"Weisberg, Deena Skolnick",562,FALSE,142,2015-06-01T13:42:07Z
-139,full,"Sobel, David",111,FALSE,142,2015-06-01T13:42:07Z
-140,full,"Hoch, Justine",412,FALSE,98,2015-06-02T23:01:46Z
-140,full,"Adolph, Karen",5,FALSE,98,2015-06-02T23:01:46Z
-142,none,"Adolph, Karen",5,FALSE,1,2015-06-09T17:26:40Z
-143,none,"Adolph, Karen",5,FALSE,11,2015-06-09T17:27:48Z
-144,none,"Gilmore, Rick O.",6,FALSE,53,2015-06-10T14:32:12Z
-145,none,"Adolph, Karen",5,FALSE,12,2015-06-10T14:50:25Z
-146,none,"Gilmore, Rick O.",6,FALSE,39,2015-06-11T13:40:59Z
-148,none,"Adolph, Karen",5,FALSE,9,2015-06-12T19:13:43Z
-150,full,"Weisberg, Deena Skolnick",562,FALSE,111,2015-06-15T16:00:28Z
-152,none,"Adolph, Karen",5,FALSE,84,2015-06-19T20:14:53Z
-162,full,"Adolph, Karen",5,FALSE,94,2015-08-10T18:19:48Z
-163,full,"Adolph, Karen",5,FALSE,55,2015-09-01T21:23:50Z
-165,full,"Cordes, Sara",798,FALSE,3,2015-09-18T18:33:58Z
-169,none,"Adolph, Karen",5,FALSE,16,2015-10-08T17:30:35Z
-172,none,"Gilmore, Rick O.",6,FALSE,3,2015-10-13T18:33:18Z
-174,full,"Blumberg, Mark",314,FALSE,33,2015-10-14T13:45:39Z
-174,full,"Sokoloff, Greta",1317,FALSE,33,2015-10-14T13:45:39Z
-176,none,"Adolph, Karen",5,FALSE,7,2015-10-19T17:06:57Z
-184,full,"Weisberg, Deena Skolnick",562,FALSE,161,2015-11-09T19:01:20Z
-186,none,Staff,308,FALSE,2,2015-11-11T18:06:55Z
-186,none,"Admin, Databrary",3341,FALSE,2,2015-11-11T18:06:55Z
-192,full,"Franchak, John",14,FALSE,52,2015-11-29T16:01:13Z
-192,full,"Adolph, Karen",5,FALSE,52,2015-11-29T16:01:13Z
-193,full,"Adolph, Karen",5,FALSE,3,2015-11-30T19:58:52Z
-194,full,"Adolph, Karen",5,FALSE,3,2015-11-30T21:39:22Z
-198,none,"Brand, Rebecca",1513,FALSE,7,2015-12-21T20:19:55Z
-198,none,"Seisler, Andrea R.",437,FALSE,7,2015-12-21T20:19:55Z
-198,none,"Admin, Databrary",3341,FALSE,7,2015-12-21T20:19:55Z
-198,none,"Gilmore, Rick O.",6,FALSE,7,2015-12-21T20:19:55Z
-200,none,"Shai, Dana",1503,FALSE,2,2016-01-04T19:31:23Z
-200,none,"Gilmore, Rick O.",6,FALSE,2,2016-01-04T19:31:23Z
-200,none,"Admin, Databrary",3341,FALSE,2,2016-01-04T19:31:23Z
-200,none,"Seisler, Andrea R.",437,FALSE,2,2016-01-04T19:31:23Z
-204,restricted,Staff,308,FALSE,1,2016-02-06T04:12:33Z
-204,restricted,"Admin, Databrary",3341,FALSE,1,2016-02-06T04:12:33Z
-207,full,"Weisberg, Deena Skolnick",562,FALSE,118,2016-02-16T14:32:33Z
-209,full,"Horst, Jessica S.",624,FALSE,2,2016-02-29T16:12:30Z
-214,full,"Fawcett, Christine",1719,FALSE,2,2016-03-18T11:16:56Z
-215,none,"Gilmore, Rick O.",6,FALSE,0,2016-03-21T15:44:12Z
-217,full,"Adolph, Karen",5,FALSE,13,2016-03-31T17:10:06Z
-218,full,"Gilmore, Rick O.",6,FALSE,35,2016-03-31T19:01:05Z
-220,none,"Wilkinson, Krista",245,FALSE,1,2016-04-01T18:31:37Z
-220,none,"Gilmore, Rick O.",6,FALSE,1,2016-04-01T18:31:37Z
-226,none,"Karasik, Lana",32,FALSE,129,2016-04-07T17:28:50Z
-226,none,"Adolph, Karen",5,FALSE,129,2016-04-07T17:28:50Z
-226,none,"Tamis-LeMonda, Catherine",11,FALSE,129,2016-04-07T17:28:50Z
-231,none,"Admin, Databrary",3341,FALSE,0,2016-05-02T14:05:25Z
-231,none,"Gilmore, Rick O.",6,FALSE,0,2016-05-02T14:05:25Z
-231,none,"Seisler, Andrea R.",437,FALSE,0,2016-05-02T14:05:25Z
-232,none,"Adolph, Karen",5,FALSE,13,2016-05-02T18:46:24Z
-232,none,"Tamis-LeMonda, Catherine",11,FALSE,13,2016-05-02T18:46:24Z
-232,none,"Gilmore, Rick O.",6,FALSE,13,2016-05-02T18:46:24Z
-234,full,"Brooker, Rebecca Jo",1280,FALSE,1,2016-05-07T17:07:27Z
-235,full,"Frank, Michael C.",258,FALSE,1,2016-05-11T17:47:02Z
-236,full,"Yu, Chen",120,FALSE,1,2016-05-13T19:19:24Z
-237,none,Staff,308,FALSE,21,2016-05-16T17:01:41Z
-237,none,"Adolph, Karen",5,FALSE,21,2016-05-16T17:01:41Z
-237,none,"Gilmore, Rick O.",6,FALSE,21,2016-05-16T17:01:41Z
-237,none,"Admin, Databrary",3341,FALSE,21,2016-05-16T17:01:41Z
-237,none,"Spies, Jeffrey",4650,FALSE,21,2016-05-16T17:01:41Z
-239,full,"Oakes, Lisa",538,FALSE,20,2016-05-26T15:56:10Z
-239,full,"Casasola, Marianella",650,FALSE,20,2016-05-26T15:56:10Z
-239,full,"LoBue, Vanessa",82,FALSE,20,2016-05-26T15:56:10Z
-239,full,International Congress on Infant Studies (ICIS),2127,FALSE,20,2016-05-26T15:56:10Z
-241,full,"Fabricius, William",288,FALSE,4,2016-05-27T22:46:38Z
-241,full,"Gonzales, Christopher",289,FALSE,4,2016-05-27T22:46:38Z
-248,full,"Cole, Pamela M",3648,FALSE,5,2016-06-21T18:48:43Z
-248,full,"Gilmore, Rick O.",6,FALSE,5,2016-06-21T18:48:43Z
-248,full,"Scherf, Kathryn Suzanne",252,FALSE,5,2016-06-21T18:48:43Z
-248,full,"Perez-Edgar, Koraly",96,FALSE,5,2016-06-21T18:48:43Z
-248,full,"Vigeant, Michelle Celine",6688,FALSE,5,2016-06-21T18:48:43Z
-252,full,"Shirai, Nobu",2219,FALSE,17,2016-07-15T02:19:51Z
-253,full,"Weisberg, Deena Skolnick",562,FALSE,115,2016-07-18T17:21:16Z
-253,full,"Sobel, David",111,FALSE,115,2016-07-18T17:21:16Z
-254,full,"Adolph, Karen",5,FALSE,9,2016-07-20T19:47:54Z
-254,full,"Tamis-LeMonda, Catherine",11,FALSE,9,2016-07-20T19:47:54Z
-254,full,"Gilmore, Rick O.",6,FALSE,9,2016-07-20T19:47:54Z
-254,full,"Soska, Kasey",406,FALSE,9,2016-07-20T19:47:54Z
-268,full,"Smith, Linda B.",161,FALSE,2,2016-10-11T17:28:08Z
-269,full,"Weisberg, Deena Skolnick",562,FALSE,105,2016-10-14T13:48:41Z
-269,full,"Sobel, David",111,FALSE,105,2016-10-14T13:48:41Z
-270,full,"Shirai, Nobu",2219,FALSE,1,2016-10-18T07:37:32Z
-271,full,"Karasik, Lana",32,FALSE,126,2016-10-19T17:57:10Z
-271,full,"Adolph, Karen",5,FALSE,126,2016-10-19T17:57:10Z
-271,full,"Tamis-LeMonda, Catherine",11,FALSE,126,2016-10-19T17:57:10Z
-272,full,"Motta-Mena, Natalie V.",525,FALSE,5,2016-10-19T19:38:28Z
-272,full,"Scherf, Kathryn Suzanne",252,FALSE,5,2016-10-19T19:38:28Z
-273,full,"Bonawitz, Elizabeth",2173,FALSE,1,2016-10-21T17:14:30Z
-290,none,"Nonaka, Tetsushi",1889,FALSE,39,2016-11-26T20:44:45Z
-290,none,"Gilmore, Rick O.",6,FALSE,39,2016-11-26T20:44:45Z
-296,none,"Karasik, Lana",32,FALSE,328,2016-12-07T17:07:03Z
-296,none,"Adolph, Karen",5,FALSE,328,2016-12-07T17:07:03Z
-296,none,"Tamis-LeMonda, Catherine",11,FALSE,328,2016-12-07T17:07:03Z
-297,full,"Nonaka, Tetsushi",1889,FALSE,14,2016-12-11T15:19:52Z
-302,restricted,"Elbich, Daniel",1838,FALSE,1,2016-12-19T16:02:13Z
-302,restricted,"Scherf, Kathryn Suzanne",252,FALSE,1,2016-12-19T16:02:13Z
-303,full,"Bonawitz, Elizabeth",2173,FALSE,4,2016-12-25T21:23:19Z
-308,full,"Weisberg, Deena Skolnick",562,FALSE,110,2017-01-30T15:13:19Z
-321,full,"Ossmy, Ori",1526,FALSE,80,2017-02-09T22:19:00Z
-321,full,"Adolph, Karen",5,FALSE,80,2017-02-09T22:19:00Z
-322,none,"Adolph, Karen",5,FALSE,157,2017-02-23T19:50:52Z
-322,none,"Tamis-LeMonda, Catherine",11,FALSE,157,2017-02-23T19:50:52Z
-323,none,"Adolph, Karen",5,FALSE,10,2017-02-27T22:51:45Z
-324,full,"Norcia, Anthony M.",378,FALSE,17,2017-03-02T12:59:21Z
-324,full,"Gilmore, Rick O.",6,FALSE,17,2017-03-02T12:59:21Z
-324,full,"LIU, YANXI",3043,FALSE,17,2017-03-02T12:59:21Z
-326,full,"Bahrick, Lorraine E.",376,FALSE,1,2017-03-06T23:46:34Z
-327,restricted,"Perez-Edgar, Koraly",96,FALSE,13,2017-03-09T18:16:01Z
-327,restricted,"Fu, Xiaoxue",617,FALSE,13,2017-03-09T18:16:01Z
-330,full,"Bergelson, Elika",61,FALSE,47,2017-03-16T13:19:27Z
-335,none,"Bergelson, Elika",61,FALSE,47,2017-03-24T13:13:11Z
-336,full,"Bahrick, Lorraine E.",376,FALSE,1,2017-03-27T22:45:30Z
-338,full,"Bergelson, Elika",61,FALSE,45,2017-04-05T19:48:02Z
-339,full,"Cole, Pamela M",3648,FALSE,32,2017-04-11T14:39:02Z
-339,full,"Gilmore, Rick O.",6,FALSE,32,2017-04-11T14:39:02Z
-339,full,"Scherf, Kathryn Suzanne",252,FALSE,32,2017-04-11T14:39:02Z
-339,full,"Perez-Edgar, Koraly",96,FALSE,32,2017-04-11T14:39:02Z
-339,full,"Vigeant, Michelle Celine",6688,FALSE,32,2017-04-11T14:39:02Z
-350,none,"Adolph, Karen",5,FALSE,51,2017-05-01T15:49:03Z
-351,full,"Kukke, Sahana Nalini",2704,FALSE,19,2017-05-02T15:41:05Z
-357,full,"Kibbe, Melissa",2400,FALSE,3,2017-05-18T14:31:38Z
-357,full,"Kaldy, Zsuzsa",102,FALSE,3,2017-05-18T14:31:38Z
-359,full,"Weisberg, Deena Skolnick",562,FALSE,216,2017-05-22T15:44:50Z
-359,full,"Sobel, David",111,FALSE,216,2017-05-22T15:44:50Z
-365,restricted,"Seisler, Andrea R.",437,FALSE,5,2017-05-24T13:36:48Z
-365,restricted,"Admin, Databrary",3341,FALSE,5,2017-05-24T13:36:48Z
-390,full,"Bergelson, Elika",61,FALSE,36,2017-06-07T13:31:59Z
-390,full,"Warlaumont, Anne",477,FALSE,36,2017-06-07T13:31:59Z
-390,full,"Cristia, Alejandrina",1034,FALSE,36,2017-06-07T13:31:59Z
-390,full,"Casillas, Marisa",3062,FALSE,36,2017-06-07T13:31:59Z
-390,full,"Rosemberg, Celia",3094,FALSE,36,2017-06-07T13:31:59Z
-390,full,"Soderstrom, Melanie",518,FALSE,36,2017-06-07T13:31:59Z
-390,full,"Rowland, Caroline",3053,FALSE,36,2017-06-07T13:31:59Z
-390,full,"Durrant, Samantha",3046,FALSE,36,2017-06-07T13:31:59Z
-390,full,"Bunce, John",3312,FALSE,36,2017-06-07T13:31:59Z
-400,full,"Weisberg, Deena Skolnick",562,FALSE,183,2017-06-14T13:43:08Z
-430,none,"Adolph, Karen",5,FALSE,8,2017-06-14T21:13:55Z
-430,none,"Soska, Kasey",406,FALSE,8,2017-06-14T21:13:55Z
-430,none,"Hasan, Shohan",431,FALSE,8,2017-06-14T21:13:55Z
-433,full,"Scott, Lisa",2653,FALSE,29,2017-06-19T18:44:08Z
-434,full,"Ossmy, Ori",1526,FALSE,83,2017-06-20T16:19:54Z
-434,full,"Adolph, Karen",5,FALSE,83,2017-06-20T16:19:54Z
-443,full,"Adolph, Karen",5,FALSE,20,2017-06-30T18:32:49Z
-444,none,"Adolph, Karen",5,FALSE,36,2017-06-30T19:11:09Z
-444,none,"Tamis-LeMonda, Catherine",11,FALSE,36,2017-06-30T19:11:09Z
-444,none,"Gilmore, Rick O.",6,FALSE,36,2017-06-30T19:11:09Z
-445,full,"Soderstrom, Melanie",518,FALSE,118,2017-07-07T16:48:35Z
-445,full,"Klassen, Kelsey",3126,FALSE,118,2017-07-07T16:48:35Z
-452,full,"Adolph, Karen",5,FALSE,28,2017-07-13T15:06:14Z
-455,none,"Adolph, Karen",5,FALSE,41,2017-07-14T18:51:43Z
-458,full,"Hoch, Justine",412,FALSE,3,2017-07-19T17:43:33Z
-458,full,"Rachwani, Jaya",506,FALSE,3,2017-07-19T17:43:33Z
-458,full,"Adolph, Karen",5,FALSE,3,2017-07-19T17:43:33Z
-459,full,"Adolph, Karen",5,FALSE,8,2017-07-19T17:50:41Z
-460,none,"Adolph, Karen",5,FALSE,39,2017-07-21T14:13:35Z
-465,full,"Arshad, Ahmad",2223,FALSE,1,2017-08-09T14:34:24Z
-468,full,"Shirai, Nobu",2219,FALSE,1,2017-08-12T02:06:00Z
-471,full,"Adolph, Karen",5,FALSE,4,2017-08-17T14:58:10Z
-473,full,"Gilmore, Rick O.",6,FALSE,2,2017-08-18T19:59:26Z
-476,none,"Adolph, Karen",5,FALSE,35,2017-08-25T20:07:05Z
-477,none,"Gilmore, Rick O.",6,FALSE,1,2017-08-28T15:30:34Z
-480,full,"Cook, Susan Wagner",681,FALSE,1,2017-08-31T03:26:01Z
-481,full,"Foster-Hanson, Emily",3121,FALSE,3,2017-08-31T15:30:22Z
-481,full,"Leshin, Rachel",3391,FALSE,3,2017-08-31T15:30:22Z
-481,full,"Rhodes, Marjorie",277,FALSE,3,2017-08-31T15:30:22Z
-482,full,"Shirai, Nobu",2219,FALSE,1,2017-09-09T00:42:32Z
-545,full,"Scott, Lisa",2653,FALSE,4,2017-11-20T16:45:09Z
-546,full,"Scott, Lisa",2653,FALSE,3,2017-11-21T14:07:04Z
-554,full,"Trehub, Sandra E",2854,FALSE,2,2017-11-30T14:36:41Z
-554,full,"Cirelli, Laura",2738,FALSE,2,2017-11-30T14:36:41Z
-563,full,"Tamis-LeMonda, Catherine",11,FALSE,118,2017-12-12T13:29:26Z
-563,full,"Adolph, Karen",5,FALSE,118,2017-12-12T13:29:26Z
-564,full,"Sullivan, Jessica",2095,FALSE,467,2017-12-13T15:06:49Z
-564,full,"Mei, Michelle",3585,FALSE,467,2017-12-13T15:06:49Z
-564,full,"Perfors, Amy",5748,FALSE,467,2017-12-13T15:06:49Z
-564,full,"Wojcik, Erica",2773,FALSE,467,2017-12-13T15:06:49Z
-564,full,"Frank, Michael C.",258,FALSE,467,2017-12-13T15:06:49Z
-569,full,"Moulson, Margaret",474,FALSE,0,2018-01-09T20:18:22Z
-573,restricted,"Hauck, Janet",997,FALSE,13,2018-01-22T16:41:01Z
-573,restricted,"Lee, Do Kyeong",384,FALSE,13,2018-01-22T16:41:01Z
-574,restricted,"Hartshorne, Joshua",2521,FALSE,3,2018-01-24T16:28:01Z
-575,restricted,"Needham, Amy",118,FALSE,50,2018-01-29T17:09:56Z
-577,restricted,"Hartshorne, Joshua",2521,FALSE,4,2018-01-30T17:32:25Z
-578,restricted,"Palmquist, Carolyn",2945,FALSE,34,2018-02-01T20:14:32Z
-586,restricted,"Stefan, Catrinel Alice",3600,FALSE,14,2018-02-12T15:15:05Z
-587,restricted,"Lillard, Angeline",318,FALSE,28,2018-02-15T16:46:33Z
-588,restricted,"Chemla, Emmanuel",3701,FALSE,1,2018-02-16T16:47:58Z
-591,restricted,"Hay, Jessica",3299,FALSE,2,2018-02-20T20:35:01Z
-592,full,"Weisberg, Deena Skolnick",562,FALSE,34,2018-02-21T15:43:17Z
-593,full,"Scott, Lisa",2653,FALSE,3,2018-02-21T17:42:11Z
-595,full,"Adolph, Karen",5,FALSE,1,2018-02-23T20:34:44Z
-596,full,"Adolph, Karen",5,FALSE,1,2018-02-23T20:49:04Z
-596,full,"Tamis-LeMonda, Catherine",11,FALSE,1,2018-02-23T20:49:04Z
-597,restricted,"Tamis-LeMonda, Catherine",11,FALSE,2,2018-02-26T16:26:03Z
-598,restricted,"Rhodes, Marjorie",277,FALSE,0,2018-03-05T14:33:45Z
-599,restricted,"Rhodes, Marjorie",277,FALSE,2,2018-03-05T14:46:21Z
-600,restricted,"Lillard, Angeline",318,FALSE,15,2018-03-05T19:46:14Z
-603,restricted,"Jaswal, Vikram",1117,FALSE,17,2018-03-13T17:38:02Z
-604,restricted,"Needham, Amy",118,FALSE,49,2018-03-15T17:34:33Z
-605,restricted,"Jaswal, Vikram",1117,FALSE,2,2018-03-15T18:31:56Z
-606,restricted,"Jaswal, Vikram",1117,FALSE,23,2018-03-15T18:37:04Z
-608,full,"Scott, Lisa",2653,FALSE,2,2018-03-22T20:32:01Z
-609,restricted,"Jaswal, Vikram",1117,FALSE,20,2018-03-27T18:39:07Z
-610,restricted,"Jaswal, Vikram",1117,FALSE,39,2018-03-28T13:19:21Z
-612,restricted,"Jaswal, Vikram",1117,FALSE,16,2018-03-29T18:42:15Z
-613,restricted,"Jaswal, Vikram",1117,FALSE,17,2018-03-29T19:40:52Z
-614,restricted,"Jaswal, Vikram",1117,FALSE,18,2018-03-29T19:59:24Z
-615,restricted,"Jaswal, Vikram",1117,FALSE,7,2018-03-29T20:19:41Z
-616,restricted,"Jaswal, Vikram",1117,FALSE,34,2018-04-03T19:08:55Z
-617,restricted,"Jaswal, Vikram",1117,FALSE,20,2018-04-04T13:40:48Z
-618,restricted,"Chemla, Emmanuel",3701,FALSE,0,2018-04-05T13:30:18Z
-619,restricted,"Jaswal, Vikram",1117,FALSE,4,2018-04-05T18:07:40Z
-620,restricted,"Jaswal, Vikram",1117,FALSE,5,2018-04-05T18:11:22Z
-621,restricted,"Jaswal, Vikram",1117,FALSE,5,2018-04-05T18:48:04Z
-622,restricted,"Jaswal, Vikram",1117,FALSE,16,2018-04-05T18:58:45Z
-623,restricted,"Jaswal, Vikram",1117,FALSE,14,2018-04-05T19:00:12Z
-624,restricted,"Jaswal, Vikram",1117,FALSE,33,2018-04-05T19:02:57Z
-625,restricted,"Jaswal, Vikram",1117,FALSE,37,2018-04-05T19:11:08Z
-626,restricted,"Jaswal, Vikram",1117,FALSE,37,2018-04-05T19:26:38Z
-627,restricted,"Jaswal, Vikram",1117,FALSE,28,2018-04-05T19:31:20Z
-628,restricted,"Vishton, Peter",60,FALSE,25,2018-04-10T16:10:48Z
-629,restricted,"Vishton, Peter",60,FALSE,18,2018-04-10T16:11:47Z
-631,restricted,"Vishton, Peter",60,FALSE,1,2018-04-17T16:09:22Z
-632,restricted,"Jaswal, Vikram",1117,FALSE,27,2018-04-17T16:52:49Z
-633,restricted,"Jaswal, Vikram",1117,FALSE,6,2018-04-17T17:29:38Z
-634,restricted,"Jaswal, Vikram",1117,FALSE,34,2018-04-17T17:34:21Z
-635,restricted,"Jaswal, Vikram",1117,FALSE,12,2018-04-17T17:47:14Z
-636,restricted,"Jaswal, Vikram",1117,FALSE,25,2018-04-17T17:51:41Z
-637,restricted,"Jaswal, Vikram",1117,FALSE,39,2018-04-17T18:04:35Z
-638,restricted,"Jaswal, Vikram",1117,FALSE,76,2018-04-17T18:22:20Z
-639,restricted,"Jaswal, Vikram",1117,FALSE,32,2018-04-17T18:23:54Z
-640,restricted,"Jaswal, Vikram",1117,FALSE,71,2018-04-18T15:59:34Z
-641,restricted,"Jaswal, Vikram",1117,FALSE,6,2018-04-18T16:02:07Z
-642,restricted,"Jaswal, Vikram",1117,FALSE,44,2018-04-18T16:05:36Z
-643,restricted,"Jaswal, Vikram",1117,FALSE,10,2018-04-18T16:10:13Z
-644,full,"Foster-Hanson, Emily",3121,FALSE,4,2018-04-19T19:31:33Z
-644,full,"Rhodes, Marjorie",277,FALSE,4,2018-04-19T19:31:33Z
-645,restricted,"Needham, Amy",118,FALSE,33,2018-04-23T15:16:58Z
-646,restricted,"Rhodes, Marjorie",277,FALSE,0,2018-04-23T16:11:25Z
-647,full,"Braun, Bettina",3830,FALSE,16,2018-04-24T10:40:09Z
-648,restricted,"Scott, Lisa",2653,FALSE,0,2018-04-24T18:30:48Z
-649,restricted,"Jaswal, Vikram",1117,FALSE,2,2018-04-25T13:03:23Z
-650,restricted,"Jaswal, Vikram",1117,FALSE,8,2018-04-25T13:13:35Z
-651,restricted,"Jaswal, Vikram",1117,FALSE,17,2018-04-25T13:14:43Z
-653,restricted,"Bergelson, Elika",61,FALSE,46,2018-04-26T18:44:25Z
-654,restricted,"Jaswal, Vikram",1117,FALSE,19,2018-04-26T19:01:17Z
-655,restricted,"Jaswal, Vikram",1117,FALSE,9,2018-04-26T19:03:37Z
-656,restricted,"Jaswal, Vikram",1117,FALSE,21,2018-04-26T19:12:23Z
-657,restricted,"Jaswal, Vikram",1117,FALSE,19,2018-04-26T19:17:44Z
-658,restricted,"Jaswal, Vikram",1117,FALSE,8,2018-04-26T19:26:49Z
-659,restricted,"Jaswal, Vikram",1117,FALSE,17,2018-04-26T19:29:49Z
-660,restricted,"Jaswal, Vikram",1117,FALSE,16,2018-04-26T19:33:51Z
-661,restricted,"Jaswal, Vikram",1117,FALSE,19,2018-04-26T19:44:17Z
-662,restricted,"Jaswal, Vikram",1117,FALSE,0,2018-04-26T19:45:16Z
-663,restricted,"Jaswal, Vikram",1117,FALSE,15,2018-04-26T20:24:13Z
-664,restricted,"Jaswal, Vikram",1117,FALSE,12,2018-04-26T20:25:35Z
-665,restricted,"Merry, Sally Engle",3854,FALSE,29,2018-04-27T00:33:14Z
-666,restricted,"Bergelson, Elika",61,FALSE,47,2018-04-27T15:49:16Z
-667,restricted,"Bergelson, Elika",61,FALSE,47,2018-04-27T20:03:24Z
-668,restricted,"Bergelson, Elika",61,FALSE,47,2018-04-30T13:28:34Z
-669,restricted,"Bergelson, Elika",61,FALSE,47,2018-04-30T16:44:22Z
-670,restricted,"Bergelson, Elika",61,FALSE,47,2018-04-30T20:54:01Z
-671,full,"Trehub, Sandra E",2854,FALSE,37,2018-05-01T13:28:26Z
-672,restricted,"Jaswal, Vikram",1117,FALSE,23,2018-05-01T16:35:06Z
-673,restricted,"Jaswal, Vikram",1117,FALSE,17,2018-05-01T16:36:45Z
-686,full,"Admin, Databrary",3341,FALSE,4,2018-05-02T19:28:43Z
-686,full,"Gilmore, Rick O.",6,FALSE,4,2018-05-02T19:28:43Z
-686,full,"Seisler, Andrea R.",437,FALSE,4,2018-05-02T19:28:43Z
-686,full,"Soska, Kasey",406,FALSE,4,2018-05-02T19:28:43Z
-687,restricted,"Cristia, Alejandrina",1034,FALSE,0,2018-05-04T15:10:05Z
-689,restricted,"Johnson, Scott",93,FALSE,1,2018-05-08T23:57:05Z
-690,restricted,"Scott, Lisa",2653,FALSE,11,2018-05-11T17:42:12Z
-691,full,"Frank, Michael C.",258,FALSE,2,2018-05-14T18:00:59Z
-692,none,"Admin, Databrary",3341,FALSE,2,2018-05-16T17:02:42Z
-692,none,"Seisler, Andrea R.",437,FALSE,2,2018-05-16T17:02:42Z
-694,restricted,"Bergelson, Elika",61,FALSE,2,2018-05-16T17:18:46Z
-695,restricted,"Bergelson, Elika",61,FALSE,2,2018-05-16T17:22:27Z
-696,restricted,"Bergelson, Elika",61,FALSE,2,2018-05-16T17:31:47Z
-697,full,"Johnson, Scott",93,FALSE,1,2018-05-17T15:37:12Z
-699,restricted,"Raver, Cybele",368,FALSE,9,2018-05-23T18:26:48Z
-699,restricted,"Kyriakou, Lara",1400,FALSE,9,2018-05-23T18:26:48Z
-702,restricted,"Johnson, Scott",93,FALSE,3,2018-05-25T17:58:19Z
-703,restricted,"Lillard, Angeline",318,FALSE,54,2018-05-29T07:45:56Z
-705,restricted,"Smith, Linda B.",161,FALSE,1,2018-06-06T15:23:16Z
-705,restricted,"Yu, Chen",120,FALSE,1,2018-06-06T15:23:16Z
-706,restricted,"Lillard, Angeline",318,FALSE,46,2018-06-06T15:41:37Z
-707,full,"Ossmy, Ori",1526,FALSE,2,2018-06-07T17:07:49Z
-707,full,"Adolph, Karen",5,FALSE,2,2018-06-07T17:07:49Z
-708,restricted,"Blair, Clancy",1254,FALSE,2,2018-06-08T15:17:51Z
-708,restricted,"Woudstra, Mi-lan",1322,FALSE,2,2018-06-08T15:17:51Z
-709,full,International Congress on Infant Studies (ICIS),2127,FALSE,12,2018-06-11T15:22:13Z
-709,full,"Hirsh-Pasek, Kathy",546,FALSE,12,2018-06-11T15:22:13Z
-709,full,"Golinkoff, Roberta",296,FALSE,12,2018-06-11T15:22:13Z
-709,full,"Oakes, Lisa",538,FALSE,12,2018-06-11T15:22:13Z
-709,full,"Barr, Rachel",104,FALSE,12,2018-06-11T15:22:13Z
-709,full,"Admin, Databrary",3341,FALSE,12,2018-06-11T15:22:13Z
-709,full,"Saffran, Jenny",274,FALSE,12,2018-06-11T15:22:13Z
-709,full,"Lakusta, Laura",590,FALSE,12,2018-06-11T15:22:13Z
-710,full,"Cordes, Sara",798,FALSE,16,2018-06-12T19:09:31Z
-711,full,"Jirout, Jamie",1197,FALSE,2,2018-06-13T16:04:14Z
-712,restricted,"Lillard, Angeline",318,FALSE,73,2018-06-13T19:28:20Z
-714,restricted,"Johnson, Scott",93,FALSE,1,2018-06-15T17:56:17Z
-714,restricted,"Frank, Michael C.",258,FALSE,1,2018-06-15T17:56:17Z
-714,restricted,"Kline, Melissa",1157,FALSE,1,2018-06-15T17:56:17Z
-714,restricted,"Bergmann, Christina",726,FALSE,1,2018-06-15T17:56:17Z
-715,restricted,"Yurovsky, Daniel",3037,FALSE,28,2018-06-15T18:57:28Z
-717,restricted,"Srinivasan, Mahesh",1515,FALSE,198,2018-06-18T21:37:10Z
-717,restricted,"Foushee, Ruthe",1001,FALSE,198,2018-06-18T21:37:10Z
-718,restricted,"Lillard, Angeline",318,FALSE,92,2018-06-20T09:51:38Z
-719,restricted,"Palmquist, Carolyn",2945,FALSE,32,2018-06-20T13:50:09Z
-721,full,"Aschersleben, Gisa",2746,FALSE,1,2018-06-21T12:25:00Z
-721,full,"Krieger, Florian",4067,FALSE,1,2018-06-21T12:25:00Z
-722,restricted,"Johnson, Scott",93,FALSE,1,2018-06-23T21:44:56Z
-723,restricted,"Kaufman, Jordy",440,FALSE,14,2018-06-26T00:28:20Z
-724,restricted,"Adolph, Karen",5,FALSE,5,2018-06-29T12:43:13Z
-724,restricted,"Tamis-LeMonda, Catherine",11,FALSE,5,2018-06-29T12:43:13Z
-724,restricted,"Gilmore, Rick O.",6,FALSE,5,2018-06-29T12:43:13Z
-724,restricted,"Soska, Kasey",406,FALSE,5,2018-06-29T12:43:13Z
-725,full,"Soley, Gaye",3967,FALSE,1,2018-07-03T07:30:57Z
-726,restricted,"Goldstein, Thalia R.",531,FALSE,143,2018-07-03T20:18:11Z
-726,restricted,"Thompson, Brittany",3152,FALSE,143,2018-07-03T20:18:11Z
-726,restricted,"Stutesman, Megan G.",5678,FALSE,143,2018-07-03T20:18:11Z
-727,restricted,"Hannon, Erin",3087,FALSE,25,2018-07-05T23:38:16Z
-728,restricted,"Cristia, Alejandrina",1034,FALSE,2,2018-07-06T15:42:18Z
-729,full,"Lillard, Angeline",318,FALSE,68,2018-07-06T16:53:00Z
-729,full,"Jirout, Jamie",1197,FALSE,68,2018-07-06T16:53:00Z
-730,restricted,"Lillard, Angeline",318,FALSE,40,2018-07-11T13:16:32Z
-733,restricted,"Palmquist, Carolyn",2945,FALSE,7,2018-07-17T15:30:28Z
-734,restricted,"Palmquist, Carolyn",2945,FALSE,40,2018-07-17T15:34:36Z
-735,full,"Adolph, Karen",5,FALSE,1,2018-07-26T15:28:14Z
-736,full,"Bonawitz, Elizabeth",2173,FALSE,17,2018-08-02T01:36:06Z
-738,restricted,"Araiza Alba, Paola",2479,FALSE,7,2018-08-09T02:17:57Z
-738,restricted,"Kaufman, Jordy",440,FALSE,7,2018-08-09T02:17:57Z
-739,full,"Robinovitch, Stephen",2693,FALSE,240,2018-08-17T04:32:07Z
-740,restricted,"Beier, Jonathan",594,FALSE,3,2018-08-21T13:37:29Z
-744,restricted,"Jaswal, Vikram",1117,FALSE,23,2018-08-31T16:14:43Z
-745,restricted,"Jaswal, Vikram",1117,FALSE,16,2018-08-31T16:18:18Z
-746,restricted,"Jaswal, Vikram",1117,FALSE,24,2018-08-31T16:43:35Z
-747,restricted,"Jaswal, Vikram",1117,FALSE,15,2018-09-03T19:49:38Z
-748,restricted,"Jaswal, Vikram",1117,FALSE,16,2018-09-03T19:54:14Z
-749,restricted,"Jaswal, Vikram",1117,FALSE,18,2018-09-03T20:07:25Z
-750,restricted,"Jaswal, Vikram",1117,FALSE,19,2018-09-03T20:24:01Z
-751,restricted,"Jaswal, Vikram",1117,FALSE,25,2018-09-03T20:42:08Z
-752,restricted,"Jaswal, Vikram",1117,FALSE,16,2018-09-04T16:46:55Z
-753,restricted,"Jaswal, Vikram",1117,FALSE,33,2018-09-04T16:57:47Z
-754,restricted,"Jaswal, Vikram",1117,FALSE,17,2018-09-04T17:08:29Z
-755,restricted,"Jaswal, Vikram",1117,FALSE,41,2018-09-04T17:27:29Z
-756,restricted,"Beier, Jonathan",594,FALSE,238,2018-09-05T14:30:39Z
-757,restricted,"Jaswal, Vikram",1117,FALSE,270,2018-09-05T19:23:52Z
-758,restricted,"Needham, Amy",118,FALSE,38,2018-09-07T19:09:41Z
-760,none,"Xu, Melody",2775,FALSE,1,2018-09-12T15:43:08Z
-760,none,"Adolph, Karen",5,FALSE,1,2018-09-12T15:43:08Z
-760,none,"Soska, Kasey",406,FALSE,1,2018-09-12T15:43:08Z
-761,restricted,"Adolph, Karen",5,FALSE,11,2018-09-12T16:51:57Z
-761,restricted,"Soska, Kasey",406,FALSE,11,2018-09-12T16:51:57Z
-762,full,"McDermott, Catherine",1704,FALSE,2,2018-09-18T17:09:04Z
-762,full,"Noles, Nicholaus",1699,FALSE,2,2018-09-18T17:09:04Z
-764,restricted,"Beier, Jonathan",594,FALSE,140,2018-09-18T18:45:29Z
-765,restricted,"Jirout, Jamie",1197,FALSE,2,2018-09-18T19:37:12Z
-766,restricted,"Noles, Nicholaus",1699,FALSE,1,2018-09-20T15:55:47Z
-768,restricted,"Noles, Nicholaus",1699,FALSE,1,2018-09-28T01:36:22Z
-776,restricted,"Iverson, Jana",334,FALSE,10,2018-10-02T22:24:44Z
-777,restricted,"Prado, Elizabeth",4458,FALSE,634,2018-10-02T22:39:36Z
-778,full,"Casasola, Marianella",650,FALSE,43,2018-10-04T11:59:54Z
-778,full,"Tamis-LeMonda, Catherine",11,FALSE,43,2018-10-04T11:59:54Z
-778,full,"Suh, Daniel Daewon",2578,FALSE,43,2018-10-04T11:59:54Z
-778,full,"Ransom, Ashley",4065,FALSE,43,2018-10-04T11:59:54Z
-781,full,"Gilmore, Rick O.",6,FALSE,5,2018-10-16T13:39:31Z
-781,full,"Seisler, Andrea R.",437,FALSE,5,2018-10-16T13:39:31Z
-782,restricted,"Srinivasan, Mahesh",1515,FALSE,0,2018-10-17T18:56:52Z
-784,restricted,"Lee, Do Kyeong",384,FALSE,0,2018-10-24T18:45:00Z
-784,restricted,"Bai, Yu",4603,FALSE,0,2018-10-24T18:45:00Z
-785,full,"Paulus, Markus",959,FALSE,1,2018-10-25T19:04:09Z
-786,restricted,"Palmquist, Carolyn",2945,FALSE,30,2018-10-26T19:41:07Z
-787,restricted,"Palmquist, Carolyn",2945,FALSE,16,2018-10-26T20:19:53Z
-788,restricted,"Palmquist, Carolyn",2945,FALSE,22,2018-10-26T20:51:14Z
-807,full,"Johnson, Scott",93,FALSE,1,2018-10-29T17:59:39Z
-808,restricted,"Vishton, Peter",60,FALSE,136,2018-10-29T18:12:56Z
-809,restricted,"Jirout, Jamie",1197,FALSE,1,2018-10-29T20:38:28Z
-812,restricted,"Vishton, Peter",60,FALSE,9,2018-10-31T17:52:58Z
-813,restricted,"Xu, Fei",2921,FALSE,0,2018-10-31T19:40:49Z
-814,restricted,"Palmquist, Carolyn",2945,FALSE,44,2018-11-02T19:04:10Z
-815,full,"Casasola, Marianella",650,FALSE,3,2018-11-05T21:45:31Z
-816,restricted,"Casasola, Marianella",650,FALSE,1,2018-11-06T15:49:01Z
-817,restricted,"Vishton, Peter",60,FALSE,13,2018-11-07T13:57:25Z
-819,full,"Nelson, Charles",4577,FALSE,2,2018-11-30T16:57:54Z
-819,full,"Wade, Mark",2027,FALSE,2,2018-11-30T16:57:54Z
-820,restricted,"Ellwood-Lowe, Monica",3034,FALSE,85,2018-12-02T19:51:33Z
-820,restricted,"Srinivasan, Mahesh",1515,FALSE,85,2018-12-02T19:51:33Z
-821,restricted,"Adolph, Karen",5,FALSE,26,2018-12-06T15:25:12Z
-822,full,"Noles, Nicholaus",1699,FALSE,2,2018-12-10T20:48:06Z
-823,full,"Lillard, Angeline",318,FALSE,77,2018-12-11T18:30:03Z
-823,full,"Jirout, Jamie",1197,FALSE,77,2018-12-11T18:30:03Z
-824,restricted,"Admin, Databrary",3341,FALSE,0,2018-12-17T21:29:23Z
-825,restricted,"Miller, Joan",3812,FALSE,1,2019-01-03T18:02:29Z
-826,full,"Adolph, Karen",5,FALSE,1,2019-01-05T13:11:09Z
-827,restricted,"Adolph, Karen",5,FALSE,47,2019-01-07T23:40:18Z
-828,full,"Gredebäck, Gustaf",4546,FALSE,5,2019-01-08T11:18:59Z
-828,full,"Forssman, Linda",4787,FALSE,5,2019-01-08T11:18:59Z
-828,full,"Lindskog, Marcus",4881,FALSE,5,2019-01-08T11:18:59Z
-828,full,"Kenward, Ben",4885,FALSE,5,2019-01-08T11:18:59Z
-829,restricted,"Elimaliah, Sapir",5252,FALSE,83,2019-01-08T17:47:48Z
-829,restricted,"Berger, Sarah E",2382,FALSE,83,2019-01-08T17:47:48Z
-829,restricted,"Harbourne, Regina",2176,FALSE,83,2019-01-08T17:47:48Z
-829,restricted,"Maia, Michele",7359,FALSE,83,2019-01-08T17:47:48Z
-831,restricted,"Mandalaywala, Tara",357,FALSE,2,2019-01-10T17:27:17Z
-831,restricted,"Benitez, Josie",5803,FALSE,2,2019-01-10T17:27:17Z
-831,restricted,"Rhodes, Marjorie",277,FALSE,2,2019-01-10T17:27:17Z
-833,restricted,"Booth, Amy",1977,FALSE,158,2019-01-17T00:24:10Z
-834,full,"Foster-Hanson, Emily",3121,FALSE,2,2019-01-17T14:41:25Z
-834,full,"Rhodes, Marjorie",277,FALSE,2,2019-01-17T14:41:25Z
-834,full,"Moty, Kelsey",405,FALSE,2,2019-01-17T14:41:25Z
-835,restricted,"Adolph, Karen",5,FALSE,58,2019-01-21T17:20:09Z
-836,restricted,"Foster-Hanson, Emily",3121,FALSE,1,2019-01-23T16:41:23Z
-836,restricted,"Rhodes, Marjorie",277,FALSE,1,2019-01-23T16:41:23Z
-837,full,"Goldstein, Thalia R.",531,FALSE,59,2019-01-25T21:36:50Z
-837,full,"Kanumuru, Pallavi",3989,FALSE,59,2019-01-25T21:36:50Z
-837,full,"Mills, Candice",6232,FALSE,59,2019-01-25T21:36:50Z
-838,restricted,"Fabricius, William",288,FALSE,2,2019-01-29T21:06:43Z
-839,restricted,"Fabricius, William",288,FALSE,24,2019-01-29T22:21:03Z
-840,restricted,"Srinivasan, Mahesh",1515,FALSE,0,2019-01-30T20:51:38Z
-841,restricted,"Srinivasan, Mahesh",1515,FALSE,81,2019-01-31T19:13:18Z
-841,restricted,"Starr, Ariel",5894,FALSE,81,2019-01-31T19:13:18Z
-843,restricted,"Srinivasan, Mahesh",1515,FALSE,0,2019-02-05T00:08:12Z
-843,restricted,"Foushee, Ruthe",1001,FALSE,0,2019-02-05T00:08:12Z
-845,restricted,"Gladstone, Melissa",4142,FALSE,2,2019-02-09T14:32:52Z
-846,restricted,"Gladstone, Melissa",4142,FALSE,3,2019-02-09T17:30:06Z
-847,restricted,"Langenhoff, Antonia",5025,FALSE,56,2019-02-12T19:21:07Z
-847,restricted,"Srinivasan, Mahesh",1515,FALSE,56,2019-02-12T19:21:07Z
-848,restricted,"Beier, Jonathan",594,FALSE,78,2019-02-12T19:47:43Z
-849,restricted,"Beier, Jonathan",594,FALSE,154,2019-02-13T17:45:02Z
-850,restricted,"Beier, Jonathan",594,FALSE,74,2019-02-13T20:52:09Z
-851,restricted,"Beier, Jonathan",594,FALSE,104,2019-02-14T17:59:04Z
-852,restricted,"Beier, Jonathan",594,FALSE,109,2019-02-14T19:32:13Z
-853,restricted,"Beier, Jonathan",594,FALSE,117,2019-02-14T20:30:38Z
-855,restricted,"Palmquist, Carolyn",2945,FALSE,17,2019-02-16T00:04:13Z
-856,restricted,"Beier, Jonathan",594,FALSE,73,2019-02-18T17:12:25Z
-857,restricted,"Froemke, Robert",4605,FALSE,1,2019-02-19T14:28:09Z
-859,restricted,"Lombardi, Doug",4945,FALSE,1,2019-02-21T18:07:52Z
-860,restricted,"Nez, Reda",4291,FALSE,49,2019-02-21T21:36:38Z
-860,restricted,"Lombardi, Doug",4945,FALSE,49,2019-02-21T21:36:38Z
-861,restricted,"Beier, Jonathan",594,FALSE,88,2019-02-25T19:42:23Z
-863,restricted,"Beier, Jonathan",594,FALSE,97,2019-02-28T21:04:11Z
-864,restricted,"Gladstone, Melissa",4142,FALSE,1,2019-03-03T19:42:28Z
-865,restricted,"Gladstone, Melissa",4142,FALSE,1,2019-03-03T19:47:14Z
-867,restricted,"Beier, Jonathan",594,FALSE,15,2019-03-05T14:03:38Z
-868,restricted,"Adolph, Karen",5,FALSE,64,2019-03-06T14:18:18Z
-868,restricted,"Cole, Whitney Graham",81,FALSE,64,2019-03-06T14:18:18Z
-870,restricted,"Berger, Sarah E",2382,FALSE,137,2019-03-20T16:34:03Z
-870,restricted,"Maia, Michele",7359,FALSE,137,2019-03-20T16:34:03Z
-871,restricted,"Froemke, Robert",4605,FALSE,1,2019-03-24T21:55:25Z
-873,full,"Fausey, Caitlin M.",126,FALSE,4,2019-03-26T16:30:15Z
-874,full,"Scherf, Kathryn Suzanne",252,FALSE,17,2019-03-27T14:31:35Z
-874,full,"Benda, Margaret Suzanne",5051,FALSE,17,2019-03-27T14:31:35Z
-875,none,"Adolph, Karen",5,FALSE,1,2019-03-29T22:22:44Z
-875,none,"Soska, Kasey",406,FALSE,1,2019-03-29T22:22:44Z
-876,restricted,"Adolph, Karen",5,FALSE,6,2019-04-01T15:48:23Z
-876,restricted,"Gilmore, Rick O.",6,FALSE,6,2019-04-01T15:48:23Z
-876,restricted,"Soska, Kasey",406,FALSE,6,2019-04-01T15:48:23Z
-877,restricted,"Vishton, Peter",60,FALSE,12,2019-04-04T12:30:28Z
-878,restricted,"Vishton, Peter",60,FALSE,32,2019-04-04T12:33:07Z
-879,restricted,"Vishton, Peter",60,FALSE,22,2019-04-04T13:45:40Z
-880,restricted,"Gilmore, Rick O.",6,FALSE,3,2019-04-05T17:29:31Z
-880,restricted,"Wilkinson, Krista",245,FALSE,3,2019-04-05T17:29:31Z
-881,none,"Gilmore, Rick O.",6,FALSE,5,2019-04-08T14:22:16Z
-881,none,"Jayaraman, Swapnaa",254,FALSE,5,2019-04-08T14:22:16Z
-882,restricted,"Beier, Jonathan",594,FALSE,76,2019-04-10T15:25:18Z
-883,restricted,"Rhodes, Marjorie",277,FALSE,1,2019-04-10T18:42:14Z
-884,full,"Scherf, Kathryn Suzanne",252,FALSE,3,2019-04-10T21:11:58Z
-884,full,"Bill, Gordon",5214,FALSE,3,2019-04-10T21:11:58Z
-885,restricted,"Vishton, Peter",60,FALSE,17,2019-04-11T12:58:26Z
-888,restricted,"Berger, Sarah E",2382,FALSE,63,2019-04-14T16:20:09Z
-888,restricted,"DeMasi, Aaron",3850,FALSE,63,2019-04-14T16:20:09Z
-889,restricted,"Vishton, Peter",60,FALSE,10,2019-04-17T15:19:16Z
-892,restricted,"Lillard, Angeline",318,FALSE,7,2019-04-25T14:45:29Z
-893,full,"Frankenhuis, Willem",5325,FALSE,1,2019-04-30T05:43:41Z
-895,restricted,"Beier, Jonathan",594,FALSE,59,2019-05-01T16:06:53Z
-896,full,"Bergmann, Christina",726,FALSE,42,2019-05-02T10:31:27Z
-896,full,"Soderstrom, Melanie",518,FALSE,42,2019-05-02T10:31:27Z
-896,full,"Hamlin, Kiley",2525,FALSE,42,2019-05-02T10:31:27Z
-896,full,"Frank, Michael C.",258,FALSE,42,2019-05-02T10:31:27Z
-896,full,"Kline, Melissa",1157,FALSE,42,2019-05-02T10:31:27Z
-896,full,"Byers-Heinlein, Krista",1928,FALSE,42,2019-05-02T10:31:27Z
-896,full,"Lew-Williams, Casey",1371,FALSE,42,2019-05-02T10:31:27Z
-897,full,"Adolph, Karen",5,FALSE,116,2019-05-03T17:38:55Z
-897,full,"Tamis-LeMonda, Catherine",11,FALSE,116,2019-05-03T17:38:55Z
-897,full,"Lockman, Jeff",101,FALSE,116,2019-05-03T17:38:55Z
-897,full,"Karasik, Lana",32,FALSE,116,2019-05-03T17:38:55Z
-897,full,"Rachwani, Jaya",506,FALSE,116,2019-05-03T17:38:55Z
-898,restricted,"Henderson, Annette",4687,FALSE,1,2019-05-05T22:33:03Z
-899,none,"Adolph, Karen",5,FALSE,21,2019-05-07T16:43:29Z
-899,none,"Tamis-LeMonda, Catherine",11,FALSE,21,2019-05-07T16:43:29Z
-899,none,"Gilmore, Rick O.",6,FALSE,21,2019-05-07T16:43:29Z
-900,restricted,"Arunachalam, Sudha",4685,FALSE,29,2019-05-07T20:50:17Z
-901,restricted,"Arunachalam, Sudha",4685,FALSE,25,2019-05-09T16:49:10Z
-903,full,"Seisler, Andrea R.",437,FALSE,2,2019-05-10T13:33:45Z
-903,full,"Shahriar, Sarah Shua",3317,FALSE,2,2019-05-10T13:33:45Z
-904,restricted,"Lillard, Angeline",318,FALSE,72,2019-05-14T11:46:28Z
-905,restricted,"Lillard, Angeline",318,FALSE,10,2019-05-14T11:57:39Z
-907,full,"Frog, Kermit",5415,FALSE,2,2019-05-14T17:38:08Z
-908,restricted,"Frog, Kermit",5415,FALSE,1,2019-05-14T17:44:15Z
-909,restricted,"Casasola, Marianella",650,FALSE,1,2019-05-15T20:35:01Z
-910,restricted,"Raver, Cybele",368,FALSE,4,2019-05-22T19:59:48Z
-912,restricted,"Foushee, Ruthe",1001,FALSE,34,2019-05-23T20:31:03Z
-912,restricted,"Srinivasan, Mahesh",1515,FALSE,34,2019-05-23T20:31:03Z
-913,restricted,"Casasola, Marianella",650,FALSE,1,2019-05-28T18:16:33Z
-915,restricted,"de Marchena, Ashley Brooke",2587,FALSE,1,2019-05-31T19:50:36Z
-916,restricted,"de Marchena, Ashley Brooke",2587,FALSE,0,2019-05-31T20:03:20Z
-917,restricted,"de Marchena, Ashley Brooke",2587,FALSE,1,2019-05-31T20:04:57Z
-919,restricted,"Swiggum, Mary",5259,FALSE,0,2019-06-04T13:09:28Z
-921,restricted,"Fabricius, William",288,FALSE,21,2019-06-05T20:53:35Z
-922,full,"Lillard, Angeline",318,FALSE,2,2019-06-06T17:34:32Z
-922,full,"Jirout, Jamie",1197,FALSE,2,2019-06-06T17:34:32Z
-923,restricted,"Palmquist, Carolyn",2945,FALSE,65,2019-06-07T14:13:33Z
-924,restricted,"Palmquist, Carolyn",2945,FALSE,8,2019-06-07T14:54:22Z
-925,restricted,"Fabricius, William",288,FALSE,6,2019-06-07T20:46:50Z
-926,restricted,"Fabricius, William",288,FALSE,12,2019-06-07T20:51:29Z
-927,restricted,"Goksun, Tilbe",1216,FALSE,1,2019-06-10T08:25:14Z
-928,restricted,"Needham, Amy",118,FALSE,21,2019-06-11T13:17:29Z
-929,restricted,"Gilmore, Rick O.",6,FALSE,32,2019-06-11T14:31:43Z
-931,restricted,"de Marchena, Ashley Brooke",2587,FALSE,43,2019-06-13T15:45:03Z
-932,none,"Adolph, Karen",5,FALSE,3,2019-06-13T19:06:46Z
-932,none,"Xu, Melody",2775,FALSE,3,2019-06-13T19:06:46Z
-933,restricted,"Palmquist, Carolyn",2945,FALSE,34,2019-06-14T20:33:36Z
-935,restricted,"Palmquist, Carolyn",2945,FALSE,1,2019-06-21T19:49:31Z
-937,full,"Casasola, Marianella",650,FALSE,3,2019-06-27T18:30:44Z
-938,restricted,"Ellwood-Lowe, Monica",3034,FALSE,36,2019-06-27T20:22:33Z
-938,restricted,"Srinivasan, Mahesh",1515,FALSE,36,2019-06-27T20:22:33Z
-938,restricted,"Bunge, Silvia",491,FALSE,36,2019-06-27T20:22:33Z
-940,restricted,"Goldstein, Thalia R.",531,FALSE,0,2019-07-09T17:49:28Z
-940,restricted,"Chulla, Kaylee Rose",4278,FALSE,0,2019-07-09T17:49:28Z
-941,restricted,"West, Kelsey Louise",600,FALSE,16,2019-07-11T21:02:49Z
-941,restricted,"Adolph, Karen",5,FALSE,16,2019-07-11T21:02:49Z
-942,restricted,"Palmquist, Carolyn",2945,FALSE,37,2019-07-12T18:05:36Z
-943,full,"Hoch, Justine",412,FALSE,33,2019-07-15T21:45:50Z
-943,full,"Ossmy, Ori",1526,FALSE,33,2019-07-15T21:45:50Z
-943,full,"Adolph, Karen",5,FALSE,33,2019-07-15T21:45:50Z
-944,restricted,"Shrout, Patrick E.",2936,FALSE,0,2019-07-23T17:35:56Z
-945,restricted,"Adolph, Karen",5,FALSE,1,2019-07-23T19:08:27Z
-945,restricted,"Tamis-LeMonda, Catherine",11,FALSE,1,2019-07-23T19:08:27Z
-947,restricted,"Perez-Edgar, Koraly",96,FALSE,3,2019-07-26T19:47:02Z
-948,restricted,"Palmquist, Carolyn",2945,FALSE,52,2019-07-26T19:58:25Z
-949,restricted,"Tamis-LeMonda, Catherine",11,FALSE,9,2019-07-29T15:54:17Z
-949,restricted,"Hirsh-Pasek, Kathy",546,FALSE,9,2019-07-29T15:54:17Z
-950,full,"Weisberg, Deena Skolnick",562,FALSE,96,2019-07-29T17:53:12Z
-952,restricted,"Baldwin, Dare",3746,FALSE,0,2019-07-30T21:53:17Z
-953,restricted,"Baldwin, Dare",3746,FALSE,1,2019-07-30T21:59:13Z
-954,restricted,"Barr, Rachel",104,FALSE,11,2019-08-01T20:40:40Z
-954,restricted,"Blanchfield, Olivia",4834,FALSE,11,2019-08-01T20:40:40Z
-955,full,"Adolph, Karen",5,FALSE,14,2019-08-05T13:08:28Z
-956,restricted,"Adolph, Karen",5,FALSE,14,2019-08-09T17:53:58Z
-957,restricted,"Adolph, Karen",5,FALSE,34,2019-08-09T17:57:55Z
-959,restricted,"Frank, Jennifer",1256,FALSE,1,2019-08-13T16:05:20Z
-960,restricted,"Kaur, Maninderjit",5709,FALSE,1,2019-08-13T18:17:03Z
-961,restricted,"Insel, Nathan",5292,FALSE,205,2019-08-14T16:40:12Z
-962,restricted,"Bauer, Patricia",5539,FALSE,16,2019-08-16T13:19:03Z
-962,restricted,"Hanft, Melanie",5743,FALSE,16,2019-08-16T13:19:03Z
-963,restricted,"Adolph, Karen",5,FALSE,128,2019-08-29T22:40:06Z
-963,restricted,"Ossmy, Ori",1526,FALSE,128,2019-08-29T22:40:06Z
-964,restricted,"Ossmy, Ori",1526,FALSE,100,2019-08-30T16:03:01Z
-964,restricted,"Adolph, Karen",5,FALSE,100,2019-08-30T16:03:01Z
-965,restricted,"Lei, Ryan",5676,FALSE,1,2019-09-05T18:19:11Z
-965,restricted,"Rhodes, Marjorie",277,FALSE,1,2019-09-05T18:19:11Z
-965,restricted,"Mandalaywala, Tara",357,FALSE,1,2019-09-05T18:19:11Z
-965,restricted,"Benitez, Josie",5803,FALSE,1,2019-09-05T18:19:11Z
-966,none,"Franchak, John",14,FALSE,1,2019-09-08T19:26:57Z
-968,restricted,"Hamlin, Kiley",2525,FALSE,20,2019-09-09T22:47:36Z
-969,restricted,"Hamlin, Kiley",2525,FALSE,8,2019-09-09T22:52:43Z
-972,restricted,"Hamlin, Kiley",2525,FALSE,2,2019-09-09T22:58:32Z
-973,restricted,"Hamlin, Kiley",2525,FALSE,1,2019-09-09T22:59:22Z
-974,restricted,"Hamlin, Kiley",2525,FALSE,16,2019-09-09T23:01:24Z
-975,restricted,"Hamlin, Kiley",2525,FALSE,4,2019-09-09T23:04:13Z
-976,restricted,"Hamlin, Kiley",2525,FALSE,17,2019-09-11T17:28:53Z
-977,restricted,"Hamlin, Kiley",2525,FALSE,8,2019-09-11T17:39:47Z
-978,restricted,"Hamlin, Kiley",2525,FALSE,1,2019-09-11T22:35:58Z
-979,restricted,"Lew-Williams, Casey",1371,FALSE,0,2019-09-12T23:33:58Z
-982,restricted,"Dusing, Stacey",255,FALSE,5,2019-09-16T18:07:16Z
-983,restricted,"Lillard, Angeline",318,FALSE,1,2019-09-16T22:15:36Z
-987,restricted,"Messinger, Daniel",70,FALSE,5,2019-09-20T16:52:17Z
-987,restricted,"Fasano, Regina",4314,FALSE,5,2019-09-20T16:52:17Z
-987,restricted,"Gonzalez, Brittney Monique",8104,FALSE,5,2019-09-20T16:52:17Z
-988,restricted,"Adolph, Karen",5,FALSE,114,2019-09-23T15:48:30Z
-988,restricted,"Tamis-LeMonda, Catherine",11,FALSE,114,2019-09-23T15:48:30Z
-988,restricted,"Kaplan, Brianna Erin",2765,FALSE,114,2019-09-23T15:48:30Z
-988,restricted,"Rachwani, Jaya",506,FALSE,114,2019-09-23T15:48:30Z
-989,restricted,"Adolph, Karen",5,FALSE,127,2019-09-23T20:05:27Z
-989,restricted,"Nez, Reda",4291,FALSE,127,2019-09-23T20:05:27Z
-990,restricted,"Bauer, Patricia",5539,FALSE,1,2019-09-23T21:16:29Z
-991,restricted,"Bauer, Patricia",5539,FALSE,2,2019-09-24T17:34:47Z
-992,restricted,"Bauer, Patricia",5539,FALSE,1,2019-09-24T17:52:34Z
-993,restricted,"Bauer, Patricia",5539,FALSE,1,2019-09-24T20:59:45Z
-994,restricted,"Bauer, Patricia",5539,FALSE,1,2019-09-24T21:08:38Z
-995,restricted,"Palmquist, Carolyn",2945,FALSE,6,2019-09-26T21:14:24Z
-996,restricted,"Perry, Lynn",1974,FALSE,0,2019-09-27T17:43:10Z
-996,restricted,"Messinger, Daniel",70,FALSE,0,2019-09-27T17:43:10Z
-996,restricted,"Custode, Stephanie",3981,FALSE,0,2019-09-27T17:43:10Z
-996,restricted,"Morales, Lilian",6270,FALSE,0,2019-09-27T17:43:10Z
-997,restricted,"Nez, Reda",4291,FALSE,0,2019-10-01T20:31:29Z
-998,restricted,"Lillard, Angeline",318,FALSE,3,2019-10-01T21:33:28Z
-999,restricted,"Admodisastro, Novia Indriaty",3519,FALSE,2,2019-10-03T08:44:21Z
-1000,restricted,"Bauer, Patricia",5539,FALSE,3,2019-10-04T14:06:24Z
-1005,full,"Bahrick, Lorraine E.",376,FALSE,3,2019-10-05T16:04:09Z
-1006,full,"Scott, Lisa",2653,FALSE,1,2019-10-14T15:19:28Z
-1007,full,"Franchak, John",14,FALSE,2,2019-10-15T23:01:53Z
-1008,restricted,"Gill, Simone",610,FALSE,0,2019-10-16T19:40:14Z
-1008,restricted,"Keegan, Laura",5994,FALSE,0,2019-10-16T19:40:14Z
-1008,restricted,"Ayoub, Maria",6293,FALSE,0,2019-10-16T19:40:14Z
-1009,restricted,"Bauer, Patricia",5539,FALSE,1,2019-10-17T17:41:11Z
-1010,restricted,"Bauer, Patricia",5539,FALSE,1,2019-10-17T17:43:02Z
-1011,full,"Ossmy, Ori",1526,FALSE,49,2019-10-18T12:25:32Z
-1011,full,"Adolph, Karen",5,FALSE,49,2019-10-18T12:25:32Z
-1012,restricted,"Nelson, Charles",4577,FALSE,1,2019-10-18T23:30:53Z
-1014,full,"Rushton, Gregory",5351,FALSE,0,2019-10-23T19:45:09Z
-1015,full,"Paulus, Markus",959,FALSE,1,2019-10-24T19:38:31Z
-1016,restricted,"Adolph, Karen",5,FALSE,0,2019-10-25T14:52:17Z
-1016,restricted,"Nez, Reda",4291,FALSE,0,2019-10-25T14:52:17Z
-1016,restricted,"Ossmy, Ori",1526,FALSE,0,2019-10-25T14:52:17Z
-1017,restricted,"Frog, Kermit",5415,FALSE,0,2019-10-25T17:24:42Z
-1018,restricted,"Frog, Kermit",5415,FALSE,0,2019-10-25T17:28:20Z
-1019,restricted,"Smith, Linda B.",161,FALSE,0,2019-10-25T18:02:58Z
-1020,restricted,"Adolph, Karen",5,FALSE,3,2019-10-29T13:31:54Z
-1021,restricted,"Gweon, Hyowon",5475,FALSE,0,2019-11-01T22:00:31Z
-1022,restricted,"Berger, Sarah E",2382,FALSE,1,2019-11-02T19:54:06Z
-1023,restricted,"Karasik, Lana",32,FALSE,0,2019-11-07T16:29:20Z
-1023,restricted,"Xu, Melody",2775,FALSE,0,2019-11-07T16:29:20Z
-1023,restricted,"Herzberg, Orit",3137,FALSE,0,2019-11-07T16:29:20Z
-1025,restricted,"Starr, Ariel",5894,FALSE,0,2019-11-15T19:21:50Z
-1026,restricted,"Adolph, Karen",5,FALSE,9,2019-11-18T19:14:40Z
-1027,restricted,"Fabricius, William",288,FALSE,45,2019-11-22T00:16:46Z
-1028,restricted,"Fabricius, William",288,FALSE,0,2019-11-22T00:17:39Z
-1029,restricted,"Stout, Dietrich",2993,FALSE,3,2019-11-22T20:11:11Z
-1030,restricted,"Nonaka, Tetsushi",1889,FALSE,1,2019-11-27T02:26:56Z
-1032,restricted,"Gweon, Hyowon",5475,FALSE,0,2019-12-06T22:04:40Z
-1033,restricted,"Gweon, Hyowon",5475,FALSE,67,2019-12-06T22:17:25Z
-1034,restricted,"Soderstrom, Melanie",518,FALSE,1,2019-12-12T19:21:24Z
-1034,restricted,"Hamlin, Kiley",2525,FALSE,1,2019-12-12T19:21:24Z
-1034,restricted,"Lucca, Kelsey",5783,FALSE,1,2019-12-12T19:21:24Z
-1036,full,"Shirai, Nobu",2219,FALSE,1,2019-12-14T11:04:17Z
-1037,restricted,"Gilmore, Rick O.",6,FALSE,0,2019-12-19T21:28:52Z
-1038,restricted,"Strong, Sasha D",5278,FALSE,14,2020-01-02T19:02:05Z
-1038,restricted,"Hartelius, Glenn",5377,FALSE,14,2020-01-02T19:02:05Z
-1040,restricted,"Needham, Amy",118,FALSE,1,2020-01-08T15:59:41Z
-1041,restricted,"Adolph, Karen",5,FALSE,2,2020-01-13T15:25:54Z
-1041,restricted,"Xu, Melody",2775,FALSE,2,2020-01-13T15:25:54Z
-1042,full,"Adolph, Karen",5,FALSE,169,2020-01-14T15:52:20Z
-1042,full,"Han, Danyang",3201,FALSE,169,2020-01-14T15:52:20Z
-1043,restricted,"Paulus, Markus",959,FALSE,1,2020-01-16T21:18:03Z
-1045,restricted,"Frank, Jennifer",1256,FALSE,56,2020-01-21T16:20:12Z
-1045,restricted,"Deger, Gwendolyn",6162,FALSE,56,2020-01-21T16:20:12Z
-1047,restricted,"Jirout, Jamie",1197,FALSE,9,2020-01-25T16:51:32Z
-1048,restricted,"Hamlin, Kiley",2525,FALSE,15,2020-01-27T20:48:32Z
-1051,restricted,"Hamlin, Kiley",2525,FALSE,17,2020-01-28T17:28:44Z
-1052,restricted,"Hamlin, Kiley",2525,FALSE,18,2020-01-28T17:35:33Z
-1053,restricted,"Lombardi, Doug",4945,FALSE,31,2020-01-28T18:46:04Z
-1055,full,"Rhodes, Marjorie",277,FALSE,1,2020-02-03T14:57:14Z
-1060,restricted,"Srinivasan, Mahesh",1515,FALSE,0,2020-02-07T20:18:32Z
-1061,restricted,"Bauer, Patricia",5539,FALSE,17,2020-02-10T16:23:04Z
-1061,restricted,"Esposito, Alena",5873,FALSE,17,2020-02-10T16:23:04Z
-1062,restricted,"Huenerfauth, Matt",6349,FALSE,23,2020-02-13T02:09:28Z
-1063,restricted,"Bauer, Patricia",5539,FALSE,4,2020-02-13T22:44:14Z
-1065,restricted,"Bauer, Patricia",5539,FALSE,1,2020-02-19T17:47:55Z
-1066,restricted,"Wang, Su-hua",1285,FALSE,0,2020-02-20T21:08:03Z
-1067,restricted,"Palmquist, Carolyn",2945,FALSE,17,2020-02-21T19:41:57Z
-1068,restricted,"Palmquist, Carolyn",2945,FALSE,32,2020-02-21T20:01:00Z
-1069,restricted,"Gweon, Hyowon",5475,FALSE,5,2020-02-22T00:56:49Z
-1070,full,"Jirout, Jamie",1197,FALSE,2,2020-02-25T19:32:03Z
-1071,restricted,"Goldstein, Thalia R.",531,FALSE,0,2020-02-26T15:49:15Z
-1072,restricted,"Bauer, Patricia",5539,FALSE,5,2020-02-27T18:14:37Z
-1073,none,"Adolph, Karen",5,FALSE,2,2020-03-04T16:21:37Z
-1073,none,"Hasan, Shohan",431,FALSE,2,2020-03-04T16:21:37Z
-1073,none,"Lingeman, Jesse",6072,FALSE,2,2020-03-04T16:21:37Z
-1075,none,"Keen, Rachel",2192,FALSE,138,2020-03-06T15:36:28Z
-1075,none,"Adolph, Karen",5,FALSE,138,2020-03-06T15:36:28Z
-1075,none,"Ossmy, Ori",1526,FALSE,138,2020-03-06T15:36:28Z
-1076,restricted,"Arunachalam, Sudha",4685,FALSE,0,2020-03-09T17:31:02Z
-1077,restricted,"Arunachalam, Sudha",4685,FALSE,0,2020-03-09T17:33:57Z
-1078,restricted,"Adolph, Karen",5,FALSE,0,2020-03-11T13:30:01Z
-1081,restricted,"Berger, Sarah E",2382,FALSE,3,2020-03-12T14:59:20Z
-1081,restricted,"Horger, Melissa Noel",2642,FALSE,3,2020-03-12T14:59:20Z
-1082,restricted,"Kushnir, Tamar",5813,FALSE,1,2020-03-13T17:34:19Z
-1082,restricted,"Kocher, Deanna",6533,FALSE,1,2020-03-13T17:34:19Z
-1083,restricted,"Richert, Rebekah",5032,FALSE,220,2020-03-14T23:07:35Z
-1084,restricted,"Richert, Rebekah",5032,FALSE,79,2020-03-15T03:12:09Z
-1086,restricted,"Richert, Rebekah",5032,FALSE,128,2020-03-17T20:31:14Z
-1087,restricted,"Richert, Rebekah",5032,FALSE,152,2020-03-17T20:38:45Z
-1088,restricted,"Richert, Rebekah",5032,FALSE,128,2020-03-17T20:39:07Z
-1089,restricted,"Richert, Rebekah",5032,FALSE,66,2020-03-17T20:39:53Z
-1090,restricted,"Richert, Rebekah",5032,FALSE,129,2020-03-17T20:40:57Z
-1091,restricted,"Richert, Rebekah",5032,FALSE,100,2020-03-17T20:42:18Z
-1092,restricted,"Richert, Rebekah",5032,FALSE,107,2020-03-18T01:33:27Z
-1093,restricted,"Gauvain, Mary",1199,FALSE,0,2020-03-18T02:46:15Z
-1094,restricted,"Bauer, Patricia",5539,FALSE,1,2020-03-18T17:55:38Z
-1099,restricted,"Lockman, Jeff",101,FALSE,3,2020-03-23T17:32:48Z
-1100,restricted,"Richert, Rebekah",5032,FALSE,116,2020-03-24T03:30:06Z
-1101,restricted,"Sobel, David",111,FALSE,1,2020-03-24T13:11:46Z
-1102,restricted,"Raver, Cybele",368,FALSE,2,2020-03-27T18:03:42Z
-1103,restricted,"Heathcock, Jill",596,FALSE,1,2020-03-31T20:17:46Z
-1104,restricted,"Kushnir, Tamar",5813,FALSE,42,2020-04-01T18:00:40Z
-1104,restricted,"Kocher, Deanna",6533,FALSE,42,2020-04-01T18:00:40Z
-1105,restricted,"Adolph, Karen",5,FALSE,0,2020-04-02T16:31:00Z
-1108,full,"Rachwani, Jaya",506,FALSE,48,2020-04-03T00:24:44Z
-1108,full,"Adolph, Karen",5,FALSE,48,2020-04-03T00:24:44Z
-1108,full,"Tamis-LeMonda, Catherine",11,FALSE,48,2020-04-03T00:24:44Z
-1108,full,"Kaplan, Brianna Erin",2765,FALSE,48,2020-04-03T00:24:44Z
-1109,restricted,"Adolph, Karen",5,FALSE,0,2020-04-03T00:44:27Z
-1111,full,"Shirai, Nobu",2219,FALSE,1,2020-04-07T04:55:49Z
-1112,full,"Shirai, Nobu",2219,FALSE,1,2020-04-07T05:08:37Z
-1113,restricted,"Tamis-LeMonda, Catherine",11,FALSE,69,2020-04-13T17:14:36Z
-1113,restricted,"Mendelsohn, Alexandra Kiri",4829,FALSE,69,2020-04-13T17:14:36Z
-1113,restricted,"Libertus, Melissa",2708,FALSE,69,2020-04-13T17:14:36Z
-1113,restricted,"Cabrera, Natasha",3044,FALSE,69,2020-04-13T17:14:36Z
-1113,restricted,"Suh, Daniel",3521,FALSE,69,2020-04-13T17:14:36Z
-1113,restricted,"Ferraro, Jessica",6191,FALSE,69,2020-04-13T17:14:36Z
-1115,restricted,"Oakes, Lisa",538,FALSE,58,2020-04-13T19:29:24Z
-1116,full,"Ossmy, Ori",1526,FALSE,46,2020-04-14T11:17:56Z
-1116,full,"Adolph, Karen",5,FALSE,46,2020-04-14T11:17:56Z
-1117,restricted,"Richert, Rebekah",5032,FALSE,68,2020-04-14T19:01:35Z
-1118,full,"Tamis-LeMonda, Catherine",11,FALSE,4,2020-04-14T20:03:24Z
-1118,full,"Adolph, Karen",5,FALSE,4,2020-04-14T20:03:24Z
-1118,full,"Herzberg, Orit",3137,FALSE,4,2020-04-14T20:03:24Z
-1119,restricted,"Richert, Rebekah",5032,FALSE,68,2020-04-14T23:55:44Z
-1120,restricted,"Gilmore, Rick O.",6,FALSE,1,2020-04-15T14:43:51Z
-1121,restricted,"Goldstein, Thalia R.",531,FALSE,4,2020-04-15T19:18:06Z
-1121,restricted,"Thompson, Brittany",3152,FALSE,4,2020-04-15T19:18:06Z
-1122,restricted,"Weisberg, Deena Skolnick",562,FALSE,2,2020-04-17T13:25:16Z
-1124,restricted,"Ross-Sheehy, Shannon",2073,FALSE,0,2020-04-20T15:45:03Z
-1125,restricted,"Ross-Sheehy, Shannon",2073,FALSE,0,2020-04-20T17:05:14Z
-1126,restricted,"Richert, Rebekah",5032,FALSE,116,2020-04-20T18:37:41Z
-1127,full,"Gweon, Hyowon",5475,FALSE,2,2020-04-23T03:52:40Z
-1128,restricted,"Yurovsky, Daniel",3037,FALSE,41,2020-04-23T16:54:47Z
-1129,restricted,"Cirelli, Laura",2738,FALSE,79,2020-05-04T18:24:58Z
-1130,restricted,"Bauer, Patricia",5539,FALSE,44,2020-05-06T15:29:52Z
-1132,restricted,"Seisler, Andrea R.",437,FALSE,3,2020-05-11T15:17:26Z
-1133,restricted,"Casasola, Marianella",650,FALSE,0,2020-05-14T17:20:53Z
-1134,restricted,"Lockman, Jeff",101,FALSE,1,2020-05-14T23:22:09Z
-1135,restricted,"Vigeant, Michelle Celine",6688,FALSE,1,2020-05-19T18:42:15Z
-1135,restricted,"Neal, Matthew",6704,FALSE,1,2020-05-19T18:42:15Z
-1136,full,"Suarez Rivera, Catalina",5345,FALSE,3,2020-05-20T20:39:02Z
-1136,full,"Gonzalez, Sandy",5617,FALSE,3,2020-05-20T20:39:02Z
-1136,full,"Herzberg, Orit",3137,FALSE,3,2020-05-20T20:39:02Z
-1136,full,"Tamis-LeMonda, Catherine",11,FALSE,3,2020-05-20T20:39:02Z
-1136,full,"Adolph, Karen",5,FALSE,3,2020-05-20T20:39:02Z
-1137,restricted,"Jayaraman, Swapnaa",254,FALSE,2,2020-05-21T20:31:21Z
-1138,restricted,"Lombardi, Doug",4945,FALSE,2,2020-05-23T14:51:58Z
-1139,restricted,"Hart, Sara",2818,FALSE,0,2020-05-24T14:11:20Z
-1140,restricted,"de Marchena, Ashley Brooke",2587,FALSE,0,2020-05-25T12:58:13Z
-1141,restricted,"Cirelli, Laura",2738,FALSE,88,2020-05-27T14:07:23Z
-1144,restricted,"Adolph, Karen",5,FALSE,3,2020-06-10T19:26:45Z
-1144,restricted,"Tamis-LeMonda, Catherine",11,FALSE,3,2020-06-10T19:26:45Z
-1146,restricted,"Gilmore, Rick O.",6,FALSE,3,2020-06-23T14:34:10Z
-1147,restricted,"Franchak, John",14,FALSE,1,2020-06-29T17:17:52Z
-1148,restricted,"Iverson, Jana",334,FALSE,1,2020-07-01T17:07:19Z
-1149,restricted,"Jayaraman, Swapnaa",254,FALSE,0,2020-07-02T15:23:59Z
-1150,restricted,"Jayaraman, Swapnaa",254,FALSE,0,2020-07-02T15:25:40Z
-1151,restricted,"Gweon, Hyowon",5475,FALSE,1,2020-07-11T01:17:44Z
-1152,full,"Brandone, Amanda",331,FALSE,1,2020-07-16T18:36:23Z
-1152,full,"Stout, Wyntre",943,FALSE,1,2020-07-16T18:36:23Z
-1152,full,"Moty, Kelsey",405,FALSE,1,2020-07-16T18:36:23Z
-1153,full,"Jirout, Jamie",1197,FALSE,2,2020-07-20T18:24:41Z
-1158,full,"Tamis-LeMonda, Catherine",11,FALSE,2,2020-07-22T19:07:46Z
-1158,full,"Mendelsohn, Alexandra Kiri",4829,FALSE,2,2020-07-22T19:07:46Z
-1158,full,"Robelo, Fernanda",3411,FALSE,2,2020-07-22T19:07:46Z
-1159,full,"Rhodes, Marjorie",277,FALSE,2,2020-07-28T22:39:09Z
-1162,restricted,"Bauer, Patricia",5539,FALSE,4,2020-08-10T19:00:55Z
-1163,full,"Barr, Rachel",104,FALSE,1,2020-08-10T20:34:39Z
-1163,full,"Blanchfield, Olivia",4834,FALSE,1,2020-08-10T20:34:39Z
-1164,full,"Barr, Rachel",104,FALSE,0,2020-08-10T20:42:02Z
-1164,full,"Blanchfield, Olivia",4834,FALSE,0,2020-08-10T20:42:02Z
-1165,full,"Barr, Rachel",104,FALSE,0,2020-08-10T21:17:54Z
-1165,full,"Blanchfield, Olivia",4834,FALSE,0,2020-08-10T21:17:54Z
-1165,full,"Rocha-Hidalgo, Joscelin",6608,FALSE,0,2020-08-10T21:17:54Z
-1166,full,"Barr, Rachel",104,FALSE,0,2020-08-10T21:20:18Z
-1166,full,"Blanchfield, Olivia",4834,FALSE,0,2020-08-10T21:20:18Z
-1168,restricted,"Gonzalez, Sandy",5617,FALSE,3,2020-08-12T20:20:07Z
-1168,restricted,"Tamis-LeMonda, Catherine",11,FALSE,3,2020-08-12T20:20:07Z
-1168,restricted,"Adolph, Karen",5,FALSE,3,2020-08-12T20:20:07Z
-1170,full,"LoBue, Vanessa",82,FALSE,1,2020-08-16T19:05:18Z
-1170,full,"Yang, Yang",7132,FALSE,1,2020-08-16T19:05:18Z
-1171,restricted,"Tay, Louis",6982,FALSE,129,2020-08-20T14:24:45Z
-1172,restricted,"Bauer, Patricia",5539,FALSE,1,2020-08-20T20:28:42Z
-1173,restricted,"Hopkins, Emily",530,FALSE,9,2020-08-20T22:18:51Z
-1174,full,"Camparo Avila, Daniel",2581,FALSE,16,2020-08-22T01:59:32Z
-1174,full,"Hontou, Cecilia",7265,FALSE,16,2020-08-22T01:59:32Z
-1175,restricted,"Schneider, Joshua",416,FALSE,2,2020-08-24T18:22:53Z
-1175,restricted,"Iverson, Jana",334,FALSE,2,2020-08-24T18:22:53Z
-1176,restricted,"Jaswal, Vikram",1117,FALSE,0,2020-08-24T22:14:38Z
-1178,restricted,"Suarez Rivera, Catalina",5345,FALSE,8,2020-08-27T20:28:20Z
-1178,restricted,"Schatz, Jacob Lev",3315,FALSE,8,2020-08-27T20:28:20Z
-1178,restricted,"Herzberg, Orit",3137,FALSE,8,2020-08-27T20:28:20Z
-1178,restricted,"Tamis-LeMonda, Catherine",11,FALSE,8,2020-08-27T20:28:20Z
-1180,restricted,"Wang, Jenny",6754,FALSE,23,2020-09-02T13:04:39Z
-1181,restricted,"Casasola, Marianella",650,FALSE,101,2020-09-03T19:40:54Z
-1182,restricted,"Lewandowsky, Stephan",7411,FALSE,1,2020-09-22T16:51:03Z
-1182,restricted,"Cook, John",7410,FALSE,1,2020-09-22T16:51:03Z
-1182,restricted,"Lombardi, Doug",4945,FALSE,1,2020-09-22T16:51:03Z
-1183,restricted,"Cordes, Sara",798,FALSE,0,2020-09-22T21:01:03Z
-1184,restricted,"Raver, Cybele",368,FALSE,0,2020-09-24T13:59:01Z
-1185,restricted,"Adolph, Karen",5,FALSE,20,2020-09-24T14:19:39Z
-1186,restricted,"Goldstein, Thalia R.",531,FALSE,0,2020-09-25T15:09:44Z
-1186,restricted,"Felsman, Peter",6464,FALSE,0,2020-09-25T15:09:44Z
-1187,full,"Johnson, Scott",93,FALSE,2,2020-09-28T18:01:59Z
-1188,restricted,"Goldstein, Thalia R.",531,FALSE,17,2020-10-05T18:56:09Z
-1188,restricted,"Stutesman, Megan G.",5678,FALSE,17,2020-10-05T18:56:09Z
-1189,restricted,"Bauer, Patricia",5539,FALSE,1,2020-10-05T20:35:03Z
-1191,restricted,"Wang, Jenny",6754,FALSE,1,2020-10-08T17:04:46Z
-1193,restricted,"Bauer, Patricia",5539,FALSE,1,2020-10-13T16:24:34Z
-1194,restricted,"Stepp, Stephanie",7115,FALSE,55,2020-10-14T01:32:29Z
-1194,restricted,"Frigoletto, Olivia",7922,FALSE,55,2020-10-14T01:32:29Z
-1194,restricted,"Shah, Raj R.",7916,FALSE,55,2020-10-14T01:32:29Z
-1194,restricted,"Celo, James",7951,FALSE,55,2020-10-14T01:32:29Z
-1194,restricted,"Wilson, Maddie W",7953,FALSE,55,2020-10-14T01:32:29Z
-1195,restricted,"Bauer, Patricia",5539,FALSE,256,2020-10-14T19:01:34Z
-1196,restricted,"Yeniad, Nihal",7395,FALSE,2,2020-10-15T09:47:29Z
-1197,restricted,"Lombardi, Doug",4945,FALSE,3,2020-10-15T21:06:37Z
-1197,restricted,"Bock, Kellyann Maureen",7386,FALSE,3,2020-10-15T21:06:37Z
-1197,restricted,"Cecil, Tara",7497,FALSE,3,2020-10-15T21:06:37Z
-1198,restricted,"Bauer, Patricia",5539,FALSE,84,2020-10-19T17:15:35Z
-1199,restricted,"Bauer, Patricia",5539,FALSE,8,2020-10-21T20:10:54Z
-1200,restricted,"Bauer, Patricia",5539,FALSE,61,2020-10-21T20:22:34Z
-1201,restricted,"Bauer, Patricia",5539,FALSE,3,2020-10-22T20:47:22Z
-1202,restricted,"Bauer, Patricia",5539,FALSE,1,2020-10-23T14:24:51Z
-1203,restricted,"Bauer, Patricia",5539,FALSE,58,2020-10-23T14:27:18Z
-1204,restricted,"Bauer, Patricia",5539,FALSE,48,2020-10-23T16:03:13Z
-1206,full,"MacWhinney, Brian",315,FALSE,7,2020-10-27T00:54:56Z
-1206,full,"Adolph, Karen",5,FALSE,7,2020-10-27T00:54:56Z
-1206,full,"Xu, Melody",2775,FALSE,7,2020-10-27T00:54:56Z
-1207,restricted,"Bauer, Patricia",5539,FALSE,16,2020-10-27T19:55:29Z
-1208,restricted,"Bauer, Patricia",5539,FALSE,11,2020-10-27T20:10:01Z
-1209,restricted,"LoBue, Vanessa",82,FALSE,40,2020-10-27T20:18:08Z
-1209,restricted,"Reider, Lori",4313,FALSE,40,2020-10-27T20:18:08Z
-1210,restricted,"Frick, Janet",99,FALSE,0,2020-10-28T18:17:15Z
-1210,restricted,"Tracy, Quinn Brinton",153,FALSE,0,2020-10-28T18:17:15Z
-1211,restricted,"Bauer, Patricia",5539,FALSE,61,2020-10-28T18:42:10Z
-1212,restricted,"Bauer, Patricia",5539,FALSE,16,2020-10-28T20:07:13Z
-1213,restricted,"Bauer, Patricia",5539,FALSE,43,2020-10-28T20:25:09Z
-1214,restricted,"Bauer, Patricia",5539,FALSE,12,2020-10-28T22:17:36Z
-1215,restricted,"Bauer, Patricia",5539,FALSE,45,2020-10-28T22:28:19Z
-1216,full,"Franchak, John",14,FALSE,1,2020-10-28T23:04:00Z
-1217,restricted,"Bauer, Patricia",5539,FALSE,23,2020-10-30T18:00:13Z
-1218,restricted,"Bauer, Patricia",5539,FALSE,10,2020-10-30T18:28:26Z
-1219,restricted,"Bauer, Patricia",5539,FALSE,10,2020-10-30T18:38:53Z
-1220,restricted,"Bauer, Patricia",5539,FALSE,8,2020-10-30T18:45:59Z
-1221,restricted,"Bauer, Patricia",5539,FALSE,122,2020-10-30T18:53:05Z
-1222,restricted,"Jirout, Jamie",1197,FALSE,62,2020-10-30T19:44:04Z
-1222,restricted,"Eisen, Sierra",2891,FALSE,62,2020-10-30T19:44:04Z
-1223,restricted,"Tamis-LeMonda, Catherine",11,FALSE,4,2020-11-02T18:15:03Z
-1223,restricted,"Schatz, Jacob Lev",3315,FALSE,4,2020-11-02T18:15:03Z
-1223,restricted,"Suarez Rivera, Catalina",5345,FALSE,4,2020-11-02T18:15:03Z
-1223,restricted,"Kaplan, Brianna Erin",2765,FALSE,4,2020-11-02T18:15:03Z
-1224,restricted,"Bauer, Patricia",5539,FALSE,34,2020-11-02T22:37:47Z
-1225,restricted,"LoBue, Vanessa",82,FALSE,3,2020-11-04T17:34:56Z
-1225,restricted,"Leotti, Lauren",5001,FALSE,3,2020-11-04T17:34:56Z
-1225,restricted,"Bonawitz, Elizabeth",2173,FALSE,3,2020-11-04T17:34:56Z
-1226,restricted,"Bauer, Patricia",5539,FALSE,10,2020-11-04T20:23:38Z
-1227,restricted,"Bauer, Patricia",5539,FALSE,11,2020-11-04T20:30:27Z
-1228,restricted,"Bauer, Patricia",5539,FALSE,107,2020-11-04T20:38:57Z
-1229,restricted,"Bauer, Patricia",5539,FALSE,16,2020-11-05T20:57:40Z
-1230,restricted,"Bauer, Patricia",5539,FALSE,15,2020-11-05T21:20:45Z
-1232,restricted,"Bauer, Patricia",5539,FALSE,10,2020-11-09T22:52:22Z
-1233,restricted,"Bauer, Patricia",5539,FALSE,10,2020-11-09T23:06:49Z
-1234,restricted,"Bauer, Patricia",5539,FALSE,85,2020-11-10T17:45:11Z
-1235,restricted,"Bauer, Patricia",5539,FALSE,60,2020-11-10T20:18:26Z
-1236,restricted,"Bauer, Patricia",5539,FALSE,19,2020-11-10T21:08:32Z
-1237,restricted,"Bauer, Patricia",5539,FALSE,1,2020-11-11T20:11:26Z
-1238,restricted,"Bauer, Patricia",5539,FALSE,6,2020-11-11T20:13:35Z
-1239,restricted,"Bauer, Patricia",5539,FALSE,43,2020-11-11T20:20:42Z
-1240,restricted,"Bauer, Patricia",5539,FALSE,23,2020-11-11T21:39:06Z
-1241,restricted,"Tamis-LeMonda, Catherine",11,FALSE,33,2020-11-12T17:09:30Z
-1241,restricted,"Swirbul, Mackenzie",7148,FALSE,33,2020-11-12T17:09:30Z
-1241,restricted,"Libertus, Melissa",2708,FALSE,33,2020-11-12T17:09:30Z
-1241,restricted,"Suh, Daniel",3521,FALSE,33,2020-11-12T17:09:30Z
-1241,restricted,"Cabrera, Natasha",3044,FALSE,33,2020-11-12T17:09:30Z
-1241,restricted,"Silver, Alex",4325,FALSE,33,2020-11-12T17:09:30Z
-1241,restricted,"Mendelsohn, Alexandra Kiri",4829,FALSE,33,2020-11-12T17:09:30Z
-1241,restricted,"Ferraro, Jessica",6191,FALSE,33,2020-11-12T17:09:30Z
-1241,restricted,"Mejia, Valerie",5584,FALSE,33,2020-11-12T17:09:30Z
-1242,restricted,"Stepp, Stephanie",7115,FALSE,1,2020-11-15T20:02:49Z
-1243,restricted,"Bauer, Patricia",5539,FALSE,18,2020-11-17T20:42:18Z
-1245,restricted,"Bauer, Patricia",5539,FALSE,73,2020-11-17T21:04:37Z
-1246,restricted,"Goldstein, Thalia R.",531,FALSE,67,2020-11-18T14:59:07Z
-1246,restricted,"Stutesman, Megan G.",5678,FALSE,67,2020-11-18T14:59:07Z
-1247,restricted,"Richert, Rebekah",5032,FALSE,6,2020-11-18T20:50:57Z
-1247,restricted,"Corriveau, Kathleen",1612,FALSE,6,2020-11-18T20:50:57Z
-1247,restricted,"Ghossainy, Maliki E.",7156,FALSE,6,2020-11-18T20:50:57Z
-1247,restricted,"Lesage, Kirsten A.",1501,FALSE,6,2020-11-18T20:50:57Z
-1247,restricted,"Meyer-Rieth, Carole",6448,FALSE,6,2020-11-18T20:50:57Z
-1247,restricted,"Reyes Jaquez, Boli",7503,FALSE,6,2020-11-18T20:50:57Z
-1247,restricted,"Weisman, Kara",7540,FALSE,6,2020-11-18T20:50:57Z
-1250,restricted,"Saxe, Rebecca",7159,FALSE,1,2020-11-24T15:27:13Z
-1251,restricted,"Saxe, Rebecca",7159,FALSE,0,2020-11-24T18:00:49Z
-1252,restricted,"Casasola, Marianella",650,FALSE,0,2020-11-24T19:08:26Z
-1252,restricted,"Bambha, Valerie",5500,FALSE,0,2020-11-24T19:08:26Z
-1252,restricted,"Simpson, Mary",7096,FALSE,0,2020-11-24T19:08:26Z
-1252,restricted,"Hwang, Marie",5864,FALSE,0,2020-11-24T19:08:26Z
-1252,restricted,"Lee-Genzel, Kira",5499,FALSE,0,2020-11-24T19:08:26Z
-1252,restricted,"Murthy, Naina",5875,FALSE,0,2020-11-24T19:08:26Z
-1252,restricted,"Lepez, Isabella Ann",6904,FALSE,0,2020-11-24T19:08:26Z
-1252,restricted,"Yang, Michelle",6585,FALSE,0,2020-11-24T19:08:26Z
-1252,restricted,"Zhou, Kelly",5871,FALSE,0,2020-11-24T19:08:26Z
-1253,restricted,"Saxe, Rebecca",7159,FALSE,2,2020-11-25T14:08:29Z
-1254,restricted,"Saxe, Rebecca",7159,FALSE,0,2020-11-25T14:34:44Z
-1255,restricted,"Mills, Candice",6232,FALSE,11,2020-12-02T22:37:57Z
-1255,restricted,"Sands, Kaitlin",4035,FALSE,11,2020-12-02T22:37:57Z
-1256,restricted,"Needham, Amy",118,FALSE,1,2020-12-06T20:25:35Z
-1257,full,"Novak, Jodie",7624,FALSE,7,2020-12-09T19:53:11Z
-1258,restricted,"Saxe, Rebecca",7159,FALSE,0,2020-12-10T13:22:18Z
-1259,restricted,"Lockman, Jeff",101,FALSE,30,2020-12-10T16:48:13Z
-1260,restricted,"Bauer, Patricia",5539,FALSE,73,2020-12-14T16:28:55Z
-1261,restricted,"Palmquist, Carolyn",2945,FALSE,39,2020-12-14T20:01:08Z
-1262,restricted,"Palmquist, Carolyn",2945,FALSE,0,2020-12-15T16:13:49Z
-1263,restricted,"Bauer, Patricia",5539,FALSE,1,2020-12-15T20:48:46Z
-1264,restricted,"Bauer, Patricia",5539,FALSE,20,2020-12-15T20:50:10Z
-1265,restricted,"Bauer, Patricia",5539,FALSE,19,2020-12-15T21:10:31Z
-1266,restricted,"Bauer, Patricia",5539,FALSE,834,2020-12-15T21:44:44Z
-1267,restricted,"Sen, Hilal",7217,FALSE,0,2020-12-16T11:27:14Z
-1268,restricted,"Corriveau, Kathleen",1612,FALSE,0,2021-01-05T15:59:05Z
-1269,restricted,"Cameron, Leslie",4957,FALSE,6,2021-01-05T17:36:49Z
-1270,restricted,"Lei, Ryan",5676,FALSE,3,2021-01-07T17:38:43Z
-1270,restricted,"Rhodes, Marjorie",277,FALSE,3,2021-01-07T17:38:43Z
-1272,restricted,"Weisberg, Deena Skolnick",562,FALSE,10,2021-01-18T15:04:20Z
-1273,restricted,"Adolph, Karen",5,FALSE,83,2021-01-21T19:56:46Z
-1275,restricted,"Corriveau, Kathleen",1612,FALSE,1,2021-02-02T01:58:10Z
-1278,restricted,"Nez, Reda",4291,FALSE,75,2021-02-03T21:36:00Z
-1278,restricted,"Ossmy, Ori",1526,FALSE,75,2021-02-03T21:36:00Z
-1278,restricted,"Adolph, Karen",5,FALSE,75,2021-02-03T21:36:00Z
-1280,none,"Adolph, Karen",5,FALSE,1,2021-02-09T16:41:55Z
-1280,none,"Soska, Kasey",406,FALSE,1,2021-02-09T16:41:55Z
-1280,none,"Tamis-LeMonda, Catherine",11,FALSE,1,2021-02-09T16:41:55Z
-1280,none,"Gilmore, Rick O.",6,FALSE,1,2021-02-09T16:41:55Z
-1282,restricted,"Ritter, Frank",7133,FALSE,3,2021-02-16T21:15:07Z
-1282,restricted,"Oury, Jacob",7147,FALSE,3,2021-02-16T21:15:07Z
-1283,restricted,"Pardoe, Heath",7644,FALSE,6,2021-02-17T23:51:51Z
-1285,restricted,"LoBue, Vanessa",82,FALSE,0,2021-02-23T19:46:05Z
-1285,restricted,"Kim, Emily",3545,FALSE,0,2021-02-23T19:46:05Z
-1286,none,"Adolph, Karen",5,FALSE,13,2021-02-25T21:26:43Z
-1286,none,"Cole, Whitney Graham",81,FALSE,13,2021-02-25T21:26:43Z
-1288,full,"LoBue, Vanessa",82,FALSE,3,2021-02-26T18:30:42Z
-1288,full,"Perez-Edgar, Koraly",96,FALSE,3,2021-02-26T18:30:42Z
-1288,full,"Buss, Kristin A",249,FALSE,3,2021-02-26T18:30:42Z
+vol_id,vol_name,sharing_level,owner_ids.name,owner_ids.id,sessions_shared,n_sessions,created_date
+1,Databrary sponsored workshops and events,full,"Adolph, Karen",5,FALSE,25,2013-01-11T10:26:40Z
+1,Databrary sponsored workshops and events,full,"Gilmore, Rick O.",6,FALSE,25,2013-01-11T10:26:40Z
+1,Databrary sponsored workshops and events,full,Staff,308,FALSE,25,2013-01-11T10:26:40Z
+1,Databrary sponsored workshops and events,full,"Admin, Databrary",3341,FALSE,25,2013-01-11T10:26:40Z
+2,Head-mounted camera views of adults in natural environments,full,"Gilmore, Rick O.",6,FALSE,4,2013-10-02T11:33:36Z
+4,Crawling and walking infants see the world differently,full,"Adolph, Karen",5,FALSE,69,2013-10-10T15:29:38Z
+5,No bridge too high: Infants decide whether to cross based on the probability of falling not the severity of the potential fall,full,"Adolph, Karen",5,FALSE,135,2013-10-10T16:35:22Z
+7,Ledge and wedge: Younger and older adults' perception of action possibilities,full,"Adolph, Karen",5,FALSE,57,2013-10-10T17:40:23Z
+8,"Language, cognitive, and socio-emotional skills from 9 months until their transition to first grade in U.S. children from African-American, Dominican, Mexican, and Chinese backgrounds",full,"Tamis-LeMonda, Catherine",11,FALSE,1351,2013-10-14T15:54:05Z
+9,Children's social and motor play on a playground,full,"Adolph, Karen",5,FALSE,1,2014-03-13T00:58:48Z
+10,Numerical Cognition Without Words: Evidence from Amazonia,full,"Gordon, Peter",20,FALSE,6,2014-03-18T17:54:30Z
+11,"Caregivers and infants using a traditional ""gahvora"" cradling practice in Tajikistan",none,"Karasik, Lana",32,FALSE,234,2014-03-25T02:04:43Z
+11,"Caregivers and infants using a traditional ""gahvora"" cradling practice in Tajikistan",none,"Tamis-LeMonda, Catherine",11,FALSE,234,2014-03-25T02:04:43Z
+11,"Caregivers and infants using a traditional ""gahvora"" cradling practice in Tajikistan",none,"Adolph, Karen",5,FALSE,234,2014-03-25T02:04:43Z
+15,Facial expressions in 6-month old infants and their parents in the still face paradigm and attachment at 15 months in the Strange Situation,full,"Messinger, Daniel",70,FALSE,13,2014-04-24T19:30:13Z
+16,"Excerpt volume: Human quadrupeds, primate quadrupedalism, and Uner Tan Syndrome",full,"Adolph, Karen",5,FALSE,11,2014-05-16T19:28:22Z
+16,"Excerpt volume: Human quadrupeds, primate quadrupedalism, and Uner Tan Syndrome",full,"Shapiro, Liza",80,FALSE,11,2014-05-16T19:28:22Z
+23,An analysis of optic flow observed by infants during natural activities,full,"Gilmore, Rick O.",6,FALSE,1,2014-07-07T15:19:52Z
+24,Excerpt volume: Specificity of learning: Why infants fall over a veritable cliff,full,"Adolph, Karen",5,FALSE,1,2014-07-08T22:29:33Z
+27,Preliminary investigation of visual attention to human figures in photographs: Potential considerations for the design of aided AAC visual scene displays,full,"Wilkinson, Krista",245,FALSE,4,2014-07-15T15:02:27Z
+28,Excerpt volume: Learning in the development of infant locomotion,full,"Adolph, Karen",5,FALSE,1,2014-07-18T14:28:57Z
+29,Where infants look determines how they see: eye movements and object perception performance in 3-month-olds,full,"Johnson, Scott",93,FALSE,1,2014-07-22T13:08:39Z
+30,The Child Affective Facial Expression (CAFE) set,full,"LoBue, Vanessa",82,FALSE,158,2014-07-23T15:57:05Z
+30,The Child Affective Facial Expression (CAFE) set,full,"Thrasher, Cat",346,FALSE,158,2014-07-23T15:57:05Z
+31,Four-month-olds' discrimination of optic flow patterns depicting different directions of observer motion,full,"Gilmore, Rick O.",6,FALSE,1,2014-07-23T16:32:41Z
+32,Spatio-temporal tuning of coherent motion evoked responses in 4–6 month old infants and adults,full,"Gilmore, Rick O.",6,FALSE,1,2014-07-23T16:52:20Z
+33,Representing exact number visually using mental abacus,full,"Frank, Michael C.",258,FALSE,1,2014-07-28T17:21:21Z
+34,Development of infants’ attention to faces during the first year,full,"Frank, Michael C.",258,FALSE,1,2014-07-28T17:32:23Z
+35,Number as a cognitive technology: Evidence from Pirahã language and cognition,full,"Frank, Michael C.",258,FALSE,1,2014-07-28T17:48:26Z
+36,Measuring the development of social attention using free-viewing,full,"Frank, Michael C.",258,FALSE,1,2014-07-28T18:18:46Z
+37,Visual search and attention to faces during early infancy,full,"Frank, Michael C.",258,FALSE,1,2014-07-28T19:12:00Z
+38,The development of predictive processes in children’s discourse understanding,full,"Frank, Michael C.",258,FALSE,1,2014-07-28T20:21:58Z
+40,Magnet imitation task demonstration,full,"Barr, Rachel",104,FALSE,1,2014-08-04T14:10:46Z
+42,Head camera clips: parent infant object play at 36 to 57 weeks of age,full,"Smith, Linda B.",161,FALSE,11,2014-08-05T18:05:45Z
+43,Statistical learning by 8-month-old infants,full,"Saffran, Jenny",274,FALSE,1,2014-08-07T19:38:45Z
+44,Children use syntax to learn verb meanings,full,"Naigles, Letitia",279,FALSE,1,2014-08-13T00:38:29Z
+45,Cultural transmission of social essentialism,full,"Rhodes, Marjorie",277,FALSE,1,2014-08-14T18:29:51Z
+46,Different Gestalt processing for different actions? Comparing object-directed reaching and looking time measures,full,"Vishton, Peter",60,FALSE,1,2014-08-21T21:10:04Z
+47,Examples of rhythmical stereotypical behaviors at 4 and 7 months,full,"Fabricius, William",288,FALSE,1,2014-08-25T20:28:44Z
+49,Cortical responses to optic flow and motion contrast across patterns and speeds,full,"Gilmore, Rick O.",6,FALSE,1,2014-09-01T23:57:43Z
+50,Biological Motions,full,"Bertenthal, Bennett I.",294,FALSE,1,2014-09-04T18:51:27Z
+51,Phenomenal permanence and the development of predictive tracking in infancy,full,"Bertenthal, Bennett I.",294,FALSE,1,2014-09-04T19:50:35Z
+53,When do infants begin to follow a point?,full,"Bertenthal, Bennett I.",294,FALSE,1,2014-09-04T20:05:53Z
+61,Scale errors offer evidence for a perception-action dissociation early in life,full,"DeLoache, Judy",264,FALSE,1,2014-09-25T21:26:54Z
+62,An eye tracking investigation of developmental change in bottom-up attention orienting to faces in cluttered natural scenes,full,"Amso, Dima",297,FALSE,1,2014-09-26T15:15:43Z
+64,Teach to reach: The effects of active vs. passive reaching experiences on action and perception,full,"Needham, Amy",118,FALSE,1,2014-09-27T01:13:48Z
+65,Stable individual differences in number discrimination in infancy,full,"Brannon, Elizabeth M",313,FALSE,1,2014-09-27T12:55:40Z
+68,Visual Motion Priors Differ for Infants and Mothers,full,"Gilmore, Rick O.",6,FALSE,0,2014-10-14T18:54:59Z
+70,Arnold Gesell’s Films of Infant and Child Development,full,"Baker, David",332,FALSE,308,2014-10-17T00:10:02Z
+73,Motion Coherence Thresholds for Adult Participants Viewing Different Patterns of Optic Flow,full,"Gilmore, Rick O.",6,FALSE,32,2014-10-20T15:51:34Z
+73,Motion Coherence Thresholds for Adult Participants Viewing Different Patterns of Optic Flow,full,"Seisler, Andrea R.",437,FALSE,32,2014-10-20T15:51:34Z
+73,Motion Coherence Thresholds for Adult Participants Viewing Different Patterns of Optic Flow,full,"Qian, Yiming",4210,FALSE,32,2014-10-20T15:51:34Z
+75,Children's Brain Responses to Optic Flow Vary by Pattern Type and Motion Speed,full,"Gilmore, Rick O.",6,FALSE,34,2014-10-20T16:23:14Z
+77,"The Salience of Lower-Order, Localized Features in Highly Self-Similar Wallpaper Groups",full,"Gilmore, Rick O.",6,FALSE,6,2014-10-22T19:55:38Z
+77,"The Salience of Lower-Order, Localized Features in Highly Self-Similar Wallpaper Groups",full,"Norcia, Anthony M.",378,FALSE,6,2014-10-22T19:55:38Z
+79,Amnesia for object attributes: Failure to report attended information that had just reached conscious awareness,full,"Wyble, Brad",273,FALSE,1,2014-10-23T13:44:10Z
+81,Natural scene statistics of visual experience across development and culture,full,"Jayaraman, Swapnaa",254,FALSE,84,2014-10-27T17:32:43Z
+81,Natural scene statistics of visual experience across development and culture,full,"Smith, Linda B.",161,FALSE,84,2014-10-27T17:32:43Z
+81,Natural scene statistics of visual experience across development and culture,full,"Raudies, Florian",160,FALSE,84,2014-10-27T17:32:43Z
+81,Natural scene statistics of visual experience across development and culture,full,"Gilmore, Rick O.",6,FALSE,84,2014-10-27T17:32:43Z
+83,"Infant and mother natural locomotion and gait: Spanish-speaking, low income families",restricted,"Adolph, Karen",5,FALSE,110,2014-10-29T17:37:08Z
+84,Motor decisions are not black and white: Selecting actions in the “gray zone”,full,"Adolph, Karen",5,FALSE,104,2014-11-03T22:57:47Z
+86,Excerpt volume: Crawling procedure & locomotor history,full,"Adolph, Karen",5,FALSE,2,2014-11-07T21:05:09Z
+87,Learning about the hidden affordances of containers,none,"Karasik, Lana",32,FALSE,233,2014-11-17T16:29:25Z
+87,Learning about the hidden affordances of containers,none,"Adolph, Karen",5,FALSE,233,2014-11-17T16:29:25Z
+87,Learning about the hidden affordances of containers,none,"Tamis-LeMonda, Catherine",11,FALSE,233,2014-11-17T16:29:25Z
+87,Learning about the hidden affordances of containers,none,"Spies, Jeffrey",4650,FALSE,233,2014-11-17T16:29:25Z
+87,Learning about the hidden affordances of containers,none,"Nez, Reda",4291,FALSE,233,2014-11-17T16:29:25Z
+88,Flexibility in action: How infants and adults go under a barrier,none,"Adolph, Karen",5,FALSE,132,2014-11-17T19:08:27Z
+89,The cost of simplifying complex developmental phenomena: A new perspective on learning to walk,full,"Adolph, Karen",5,FALSE,114,2014-11-19T20:05:35Z
+90,"Word-minimality, Epenthesis and Coda Licensing in the Early Acquisition of English",full,"Demuth, Katherine",537,FALSE,314,2014-11-20T17:48:20Z
+95,Semantic congruity affects numerical judgments similarly in monkeys and humans,full,"Brannon, Elizabeth M",313,FALSE,0,2014-12-05T15:56:51Z
+96,Training the Approximate Number System Improves Math Proficiency,full,"Brannon, Elizabeth M",313,FALSE,1,2014-12-05T16:03:15Z
+98,Absence of Construct Validity in Standard False Belief Tasks,full,"Fabricius, William",288,FALSE,34,2014-12-08T19:43:59Z
+99,Faces in early visual environments of infants,full,"Fausey, Caitlin M.",126,FALSE,2,2014-12-17T02:36:55Z
+99,Faces in early visual environments of infants,full,"Smith, Linda B.",161,FALSE,2,2014-12-17T02:36:55Z
+99,Faces in early visual environments of infants,full,"Jayaraman, Swapnaa",254,FALSE,2,2014-12-17T02:36:55Z
+101,"Head-camera study of novel word learning with 8-, 12-, and 16-month olds",restricted,"Frank, Michael C.",258,FALSE,29,2015-01-09T20:47:22Z
+104,The Nonshared Environment in Adolescent Development (NEAD) Project: A Longitudinal Family Study of Twins and Siblings from Adolescence to Young Adulthood,none,"Neiderhiser, Jenae",330,FALSE,2,2015-01-29T14:40:51Z
+106,Datavyu Training Workshop,none,"Gilmore, Rick O.",6,FALSE,12,2015-02-02T14:35:56Z
+106,Datavyu Training Workshop,none,"Admin, Databrary",3341,FALSE,12,2015-02-02T14:35:56Z
+106,Datavyu Training Workshop,none,"Seisler, Andrea R.",437,FALSE,12,2015-02-02T14:35:56Z
+108,Facial expressions in 4-month-olds in the still face paradigm and later attachment at 12 months in the Strange Situation,full,"Messinger, Daniel",70,FALSE,43,2015-02-12T21:28:59Z
+109,Classroom discourse in elementary school engineering lessons,full,"Carlsen, William",325,FALSE,0,2015-02-25T15:59:21Z
+112,From faces to hands: Changing visual input in the first two years,full,"Fausey, Caitlin M.",126,FALSE,2,2015-03-09T22:20:03Z
+112,From faces to hands: Changing visual input in the first two years,full,"Smith, Linda B.",161,FALSE,2,2015-03-09T22:20:03Z
+112,From faces to hands: Changing visual input in the first two years,full,"Jayaraman, Swapnaa",254,FALSE,2,2015-03-09T22:20:03Z
+114,The development of tool use: Planning for end-state comfort.,full,"Adolph, Karen",5,FALSE,106,2015-03-13T17:49:55Z
+116,Understanding the development of motion processing by characterizing optic flow experienced by infants and their mothers,full,"Gilmore, Rick O.",6,FALSE,6,2015-03-16T20:49:39Z
+116,Understanding the development of motion processing by characterizing optic flow experienced by infants and their mothers,full,"Raudies, Florian",160,FALSE,6,2015-03-16T20:49:39Z
+116,Understanding the development of motion processing by characterizing optic flow experienced by infants and their mothers,full,"Franchak, John",14,FALSE,6,2015-03-16T20:49:39Z
+116,Understanding the development of motion processing by characterizing optic flow experienced by infants and their mothers,full,"Adolph, Karen",5,FALSE,6,2015-03-16T20:49:39Z
+119,A-n-T: Attention and Temperament in Infancy,restricted,"Perez-Edgar, Koraly",96,FALSE,302,2015-04-16T20:13:10Z
+121,Excerpt volume: Gibson's “visual cliff”,full,"Adolph, Karen",5,FALSE,1,2015-04-21T19:46:11Z
+123,Active vision in passive locomotion: Real-world free viewing in infants and adults,full,"Adolph, Karen",5,FALSE,37,2015-04-28T20:03:00Z
+124,Head-mounted eye tracking: A new method to describe infant looking,full,"Adolph, Karen",5,FALSE,14,2015-04-28T20:32:07Z
+132,Pilot study: Infants perceiving the affordances of walking over gaps and down slopes,none,"Adolph, Karen",5,FALSE,19,2015-05-04T18:44:06Z
+135,See and be seen: Infant-caregiver social looking during locomotor free play,full,"Adolph, Karen",5,FALSE,27,2015-05-06T15:20:28Z
+135,See and be seen: Infant-caregiver social looking during locomotor free play,full,"Franchak, John",14,FALSE,27,2015-05-06T15:20:28Z
+136,What infants know and what they do: Perceiving possibilities for walking through openings.,full,"Adolph, Karen",5,FALSE,63,2015-05-06T19:29:17Z
+139,Fostering Children’s Reasoning about Disagreements through an Inquiry-based Curriculum (time point 1),full,"Weisberg, Deena Skolnick",562,FALSE,142,2015-06-01T13:42:07Z
+139,Fostering Children’s Reasoning about Disagreements through an Inquiry-based Curriculum (time point 1),full,"Sobel, David",111,FALSE,142,2015-06-01T13:42:07Z
+140,"It's the journey, not the destination: Locomotor exploration in infants",full,"Hoch, Justine",412,FALSE,98,2015-06-02T23:01:46Z
+140,"It's the journey, not the destination: Locomotor exploration in infants",full,"Adolph, Karen",5,FALSE,98,2015-06-02T23:01:46Z
+142,Infant Nanny Cam (LK),none,"Adolph, Karen",5,FALSE,1,2015-06-09T17:26:40Z
+143,Infant Nanny Cam (DKL),none,"Adolph, Karen",5,FALSE,11,2015-06-09T17:27:48Z
+144,Children's Brain Responses to Forms Defined by Visual Motion,none,"Gilmore, Rick O.",6,FALSE,53,2015-06-10T14:32:12Z
+145,Pilot study: Infants navigating an obstacle course,none,"Adolph, Karen",5,FALSE,12,2015-06-10T14:50:25Z
+146,Infant's Brain Responses to Laminar and Radial Motion Coherence Profiles,none,"Gilmore, Rick O.",6,FALSE,39,2015-06-11T13:40:59Z
+148,Monthly diary of a typical infant's milestones over the first 9 months of life,none,"Adolph, Karen",5,FALSE,9,2015-06-12T19:13:43Z
+150,Preschoolers' extension and export of information from realistic and fantastical stories (Study 2),full,"Weisberg, Deena Skolnick",562,FALSE,111,2015-06-15T16:00:28Z
+152,Video diaries of six typical infants' locomotor milestones,none,"Adolph, Karen",5,FALSE,84,2015-06-19T20:14:53Z
+162,"Visual, manual, and postural coordination in the development of prehension",full,"Adolph, Karen",5,FALSE,94,2015-08-10T18:19:48Z
+163,What cruising infants understand about support for locomotion,full,"Adolph, Karen",5,FALSE,55,2015-09-01T21:23:50Z
+165,Being Sticker Rich:  Numerical Context Influences Children’s Sharing Behavior,full,"Cordes, Sara",798,FALSE,3,2015-09-18T18:33:58Z
+169,Monthly diary of a typical infant's milestones over the first 18 months of life,none,"Adolph, Karen",5,FALSE,16,2015-10-08T17:30:35Z
+172,test (ARS collaborator),none,"Gilmore, Rick O.",6,FALSE,3,2015-10-13T18:33:18Z
+174,Spatiotemporal organization of myoclonic twitching in sleeping human infants,full,"Blumberg, Mark",314,FALSE,33,2015-10-14T13:45:39Z
+174,Spatiotemporal organization of myoclonic twitching in sleeping human infants,full,"Sokoloff, Greta",1317,FALSE,33,2015-10-14T13:45:39Z
+176,Excerpts for unauthorized colleagues,none,"Adolph, Karen",5,FALSE,7,2015-10-19T17:06:57Z
+184,Investigating the effectiveness of fantasy stories for teaching scientific principles (study 1),full,"Weisberg, Deena Skolnick",562,FALSE,161,2015-11-09T19:01:20Z
+186,Free Play at Home,none,Staff,308,FALSE,2,2015-11-11T18:06:55Z
+186,Free Play at Home,none,"Admin, Databrary",3341,FALSE,2,2015-11-11T18:06:55Z
+192,Free viewing gaze behavior in infants and adults,full,"Franchak, John",14,FALSE,52,2015-11-29T16:01:13Z
+192,Free viewing gaze behavior in infants and adults,full,"Adolph, Karen",5,FALSE,52,2015-11-29T16:01:13Z
+193,Excerpt volume: Infants' use of social information for guiding locomotion over slopes,full,"Adolph, Karen",5,FALSE,3,2015-11-30T19:58:52Z
+194,Science Friday: Babies on the brink,full,"Adolph, Karen",5,FALSE,3,2015-11-30T21:39:22Z
+198,Datavyu Workshop 2016/01/08,none,"Brand, Rebecca",1513,FALSE,7,2015-12-21T20:19:55Z
+198,Datavyu Workshop 2016/01/08,none,"Seisler, Andrea R.",437,FALSE,7,2015-12-21T20:19:55Z
+198,Datavyu Workshop 2016/01/08,none,"Admin, Databrary",3341,FALSE,7,2015-12-21T20:19:55Z
+198,Datavyu Workshop 2016/01/08,none,"Gilmore, Rick O.",6,FALSE,7,2015-12-21T20:19:55Z
+200,Datavyu Workshop 2016/01/19,none,"Shai, Dana",1503,FALSE,2,2016-01-04T19:31:23Z
+200,Datavyu Workshop 2016/01/19,none,"Gilmore, Rick O.",6,FALSE,2,2016-01-04T19:31:23Z
+200,Datavyu Workshop 2016/01/19,none,"Admin, Databrary",3341,FALSE,2,2016-01-04T19:31:23Z
+200,Datavyu Workshop 2016/01/19,none,"Seisler, Andrea R.",437,FALSE,2,2016-01-04T19:31:23Z
+204,Databrary Tutorials,restricted,Staff,308,FALSE,1,2016-02-06T04:12:33Z
+204,Databrary Tutorials,restricted,"Admin, Databrary",3341,FALSE,1,2016-02-06T04:12:33Z
+207,"Of Blickets, Butterflies, and Baby Dinosaurs: Children’s Diagnostic Reasoning Across Domains (Study 1, blicket condition)",full,"Weisberg, Deena Skolnick",562,FALSE,118,2016-02-16T14:32:33Z
+209,The Novel Object and Unusual Name (NOUN) Database: A collection of novel images for use in experimental research,full,"Horst, Jessica S.",624,FALSE,2,2016-02-29T16:12:30Z
+214,Pupillary Contagion in Infancy: Evidence for spontaneous transfer of arousal,full,"Fawcett, Christine",1719,FALSE,2,2016-03-18T11:16:56Z
+215,Children's Brain Responses to Forms Defined by Visual Motion,none,"Gilmore, Rick O.",6,FALSE,0,2016-03-21T15:44:12Z
+217,"Use it or lose it? Effects of age, experience, and disuse on crawling",full,"Adolph, Karen",5,FALSE,13,2016-03-31T17:10:06Z
+218,Motion Coherence Thresholds for Child Participants Viewing Linear and Radial Patterns of Optic Flow,full,"Gilmore, Rick O.",6,FALSE,35,2016-03-31T19:01:05Z
+220,Improving AAC Display Design: Eye-Tracking Analysis of Visual Attention,none,"Wilkinson, Krista",245,FALSE,1,2016-04-01T18:31:37Z
+220,Improving AAC Display Design: Eye-Tracking Analysis of Visual Attention,none,"Gilmore, Rick O.",6,FALSE,1,2016-04-01T18:31:37Z
+226,"Caregivers and infants using a traditional ""gahvora"" cradling practice in Tajikistan Longitudinal",none,"Karasik, Lana",32,FALSE,129,2016-04-07T17:28:50Z
+226,"Caregivers and infants using a traditional ""gahvora"" cradling practice in Tajikistan Longitudinal",none,"Adolph, Karen",5,FALSE,129,2016-04-07T17:28:50Z
+226,"Caregivers and infants using a traditional ""gahvora"" cradling practice in Tajikistan Longitudinal",none,"Tamis-LeMonda, Catherine",11,FALSE,129,2016-04-07T17:28:50Z
+231,Datavyu Workshop 2016-04-09 ​Andrew Gordon,none,"Admin, Databrary",3341,FALSE,0,2016-05-02T14:05:25Z
+231,Datavyu Workshop 2016-04-09 ​Andrew Gordon,none,"Gilmore, Rick O.",6,FALSE,0,2016-05-02T14:05:25Z
+231,Datavyu Workshop 2016-04-09 ​Andrew Gordon,none,"Seisler, Andrea R.",437,FALSE,0,2016-05-02T14:05:25Z
+232,PLAY Project: Webinar discussions on protocol and coding,none,"Adolph, Karen",5,FALSE,13,2016-05-02T18:46:24Z
+232,PLAY Project: Webinar discussions on protocol and coding,none,"Tamis-LeMonda, Catherine",11,FALSE,13,2016-05-02T18:46:24Z
+232,PLAY Project: Webinar discussions on protocol and coding,none,"Gilmore, Rick O.",6,FALSE,13,2016-05-02T18:46:24Z
+234,EEG Asymmetry and ERN:  Behavioral Outcomes in Preschoolers,full,"Brooker, Rebecca Jo",1280,FALSE,1,2016-05-07T17:07:27Z
+235,Sample play session video,full,"Frank, Michael C.",258,FALSE,1,2016-05-11T17:47:02Z
+236,The Social Origins of Sustained Attention in One-Year-Old Human Infants,full,"Yu, Chen",120,FALSE,1,2016-05-13T19:19:24Z
+237,Databrary UX Talk-Alouds,none,Staff,308,FALSE,21,2016-05-16T17:01:41Z
+237,Databrary UX Talk-Alouds,none,"Adolph, Karen",5,FALSE,21,2016-05-16T17:01:41Z
+237,Databrary UX Talk-Alouds,none,"Gilmore, Rick O.",6,FALSE,21,2016-05-16T17:01:41Z
+237,Databrary UX Talk-Alouds,none,"Admin, Databrary",3341,FALSE,21,2016-05-16T17:01:41Z
+237,Databrary UX Talk-Alouds,none,"Spies, Jeffrey",4650,FALSE,21,2016-05-16T17:01:41Z
+239,XX ICIS 2016 New Orleans Invited Program,full,"Oakes, Lisa",538,FALSE,20,2016-05-26T15:56:10Z
+239,XX ICIS 2016 New Orleans Invited Program,full,"Casasola, Marianella",650,FALSE,20,2016-05-26T15:56:10Z
+239,XX ICIS 2016 New Orleans Invited Program,full,"LoBue, Vanessa",82,FALSE,20,2016-05-26T15:56:10Z
+239,XX ICIS 2016 New Orleans Invited Program,full,International Congress on Infant Studies (ICIS),2127,FALSE,20,2016-05-26T15:56:10Z
+241,Examples of True Belief and False Belief Contents tasks with 4-year-olds,full,"Fabricius, William",288,FALSE,4,2016-05-27T22:46:38Z
+241,Examples of True Belief and False Belief Contents tasks with 4-year-olds,full,"Gonzales, Christopher",289,FALSE,4,2016-05-27T22:46:38Z
+248,The Proximal Emotional Environment Project (PEEP),full,"Cole, Pamela M",3648,FALSE,5,2016-06-21T18:48:43Z
+248,The Proximal Emotional Environment Project (PEEP),full,"Gilmore, Rick O.",6,FALSE,5,2016-06-21T18:48:43Z
+248,The Proximal Emotional Environment Project (PEEP),full,"Scherf, Kathryn Suzanne",252,FALSE,5,2016-06-21T18:48:43Z
+248,The Proximal Emotional Environment Project (PEEP),full,"Perez-Edgar, Koraly",96,FALSE,5,2016-06-21T18:48:43Z
+248,The Proximal Emotional Environment Project (PEEP),full,"Vigeant, Michelle Celine",6688,FALSE,5,2016-06-21T18:48:43Z
+252,Infant-specific gaze patterns in response to radial optic flow,full,"Shirai, Nobu",2219,FALSE,17,2016-07-15T02:19:51Z
+253,"Of Blickets, Butterflies, and Baby Dinosaurs: Children’s Diagnostic Reasoning Across Domains (Study 1, butterfly condition)",full,"Weisberg, Deena Skolnick",562,FALSE,115,2016-07-18T17:21:16Z
+253,"Of Blickets, Butterflies, and Baby Dinosaurs: Children’s Diagnostic Reasoning Across Domains (Study 1, butterfly condition)",full,"Sobel, David",111,FALSE,115,2016-07-18T17:21:16Z
+254,PLAY Project: NICHD Workshop (2016-12-16),full,"Adolph, Karen",5,FALSE,9,2016-07-20T19:47:54Z
+254,PLAY Project: NICHD Workshop (2016-12-16),full,"Tamis-LeMonda, Catherine",11,FALSE,9,2016-07-20T19:47:54Z
+254,PLAY Project: NICHD Workshop (2016-12-16),full,"Gilmore, Rick O.",6,FALSE,9,2016-07-20T19:47:54Z
+254,PLAY Project: NICHD Workshop (2016-12-16),full,"Soska, Kasey",406,FALSE,9,2016-07-20T19:47:54Z
+268,Real-world visual statistics and infants’ first-learned object names,full,"Smith, Linda B.",161,FALSE,2,2016-10-11T17:28:08Z
+269,"Of Blickets, Butterflies, and Baby Dinosaurs: Children’s Diagnostic Reasoning Across Domains (Study 2)",full,"Weisberg, Deena Skolnick",562,FALSE,105,2016-10-14T13:48:41Z
+269,"Of Blickets, Butterflies, and Baby Dinosaurs: Children’s Diagnostic Reasoning Across Domains (Study 2)",full,"Sobel, David",111,FALSE,105,2016-10-14T13:48:41Z
+270,Emergence of the ability to perceive dynamic events from still pictures in human infants,full,"Shirai, Nobu",2219,FALSE,1,2016-10-18T07:37:32Z
+271,Transition from crawling to walking and infants’ actions with objects and people,full,"Karasik, Lana",32,FALSE,126,2016-10-19T17:57:10Z
+271,Transition from crawling to walking and infants’ actions with objects and people,full,"Adolph, Karen",5,FALSE,126,2016-10-19T17:57:10Z
+271,Transition from crawling to walking and infants’ actions with objects and people,full,"Tamis-LeMonda, Catherine",11,FALSE,126,2016-10-19T17:57:10Z
+272,Pubertal development shapes perception of complex facial expressions,full,"Motta-Mena, Natalie V.",525,FALSE,5,2016-10-19T19:38:28Z
+272,Pubertal development shapes perception of complex facial expressions,full,"Scherf, Kathryn Suzanne",252,FALSE,5,2016-10-19T19:38:28Z
+273,2016 Cognitive Science Workshop: Active Learning,full,"Bonawitz, Elizabeth",2173,FALSE,1,2016-10-21T17:14:30Z
+290,Infant Self-Feeding,none,"Nonaka, Tetsushi",1889,FALSE,39,2016-11-26T20:44:45Z
+290,Infant Self-Feeding,none,"Gilmore, Rick O.",6,FALSE,39,2016-11-26T20:44:45Z
+296,"Caregivers and infants using a traditional ""gahvora"" cradling practice in Tajikistan: Longitudinal study",none,"Karasik, Lana",32,FALSE,328,2016-12-07T17:07:03Z
+296,"Caregivers and infants using a traditional ""gahvora"" cradling practice in Tajikistan: Longitudinal study",none,"Adolph, Karen",5,FALSE,328,2016-12-07T17:07:03Z
+296,"Caregivers and infants using a traditional ""gahvora"" cradling practice in Tajikistan: Longitudinal study",none,"Tamis-LeMonda, Catherine",11,FALSE,328,2016-12-07T17:07:03Z
+297,Affordances of Clay at the Clay Topos,full,"Nonaka, Tetsushi",1889,FALSE,14,2016-12-11T15:19:52Z
+302,Beyond the FFA: Brain-behavior correspondences in face recognition abilities,restricted,"Elbich, Daniel",1838,FALSE,1,2016-12-19T16:02:13Z
+302,Beyond the FFA: Brain-behavior correspondences in face recognition abilities,restricted,"Scherf, Kathryn Suzanne",252,FALSE,1,2016-12-19T16:02:13Z
+303,CogDevSoc 2013 Workshop: Computational Models of Development,full,"Bonawitz, Elizabeth",2173,FALSE,4,2016-12-25T21:23:19Z
+308,Investigating the effectiveness of fantasy stories for teaching scientific principles (study 2),full,"Weisberg, Deena Skolnick",562,FALSE,110,2017-01-30T15:13:19Z
+321,Looking without seeing: Children do not distinguish efficient from inefficient means to achieve a goal,full,"Ossmy, Ori",1526,FALSE,80,2017-02-09T22:19:00Z
+321,Looking without seeing: Children do not distinguish efficient from inefficient means to achieve a goal,full,"Adolph, Karen",5,FALSE,80,2017-02-09T22:19:00Z
+322,Children learning about the hidden affordances of everyday objects,none,"Adolph, Karen",5,FALSE,157,2017-02-23T19:50:52Z
+322,Children learning about the hidden affordances of everyday objects,none,"Tamis-LeMonda, Catherine",11,FALSE,157,2017-02-23T19:50:52Z
+323,The interplay of posture and vision in infancy,none,"Adolph, Karen",5,FALSE,10,2017-02-27T22:51:45Z
+324,Synthetic contrast- and spatial frequency-normalized grayscale patterns representing 2D wallpaper groups,full,"Norcia, Anthony M.",378,FALSE,17,2017-03-02T12:59:21Z
+324,Synthetic contrast- and spatial frequency-normalized grayscale patterns representing 2D wallpaper groups,full,"Gilmore, Rick O.",6,FALSE,17,2017-03-02T12:59:21Z
+324,Synthetic contrast- and spatial frequency-normalized grayscale patterns representing 2D wallpaper groups,full,"LIU, YANXI",3043,FALSE,17,2017-03-02T12:59:21Z
+326,Multisensory Attention Assessment Protocol (MAAP),full,"Bahrick, Lorraine E.",376,FALSE,1,2017-03-06T23:46:34Z
+327,iTRAC Mobile eye-tracking study,restricted,"Perez-Edgar, Koraly",96,FALSE,13,2017-03-09T18:16:01Z
+327,iTRAC Mobile eye-tracking study,restricted,"Fu, Xiaoxue",617,FALSE,13,2017-03-09T18:16:01Z
+330,SEEDLingS 6 Month,full,"Bergelson, Elika",61,FALSE,47,2017-03-16T13:19:27Z
+335,SEEDLingS 12 Month,none,"Bergelson, Elika",61,FALSE,47,2017-03-24T13:13:11Z
+336,Intersensory Processing Efficiency Protocol (IPEP),full,"Bahrick, Lorraine E.",376,FALSE,1,2017-03-27T22:45:30Z
+338,SEEDLingS 7 Month,full,"Bergelson, Elika",61,FALSE,45,2017-04-05T19:48:02Z
+339,Young children's neural processing of their mother’s voice: An fMRI study,full,"Cole, Pamela M",3648,FALSE,32,2017-04-11T14:39:02Z
+339,Young children's neural processing of their mother’s voice: An fMRI study,full,"Gilmore, Rick O.",6,FALSE,32,2017-04-11T14:39:02Z
+339,Young children's neural processing of their mother’s voice: An fMRI study,full,"Scherf, Kathryn Suzanne",252,FALSE,32,2017-04-11T14:39:02Z
+339,Young children's neural processing of their mother’s voice: An fMRI study,full,"Perez-Edgar, Koraly",96,FALSE,32,2017-04-11T14:39:02Z
+339,Young children's neural processing of their mother’s voice: An fMRI study,full,"Vigeant, Michelle Celine",6688,FALSE,32,2017-04-11T14:39:02Z
+350,14-month old walking infants perceiving the affordances of walking over gaps,none,"Adolph, Karen",5,FALSE,51,2017-05-01T15:49:03Z
+351,infant hand observation,full,"Kukke, Sahana Nalini",2704,FALSE,19,2017-05-02T15:41:05Z
+357,Rules infants look by: Testing the assumption of transitivity in visual salience,full,"Kibbe, Melissa",2400,FALSE,3,2017-05-18T14:31:38Z
+357,Rules infants look by: Testing the assumption of transitivity in visual salience,full,"Kaldy, Zsuzsa",102,FALSE,3,2017-05-18T14:31:38Z
+359,Fostering Children’s Reasoning about Disagreements through an Inquiry-based Curriculum (time point 2),full,"Weisberg, Deena Skolnick",562,FALSE,216,2017-05-22T15:44:50Z
+359,Fostering Children’s Reasoning about Disagreements through an Inquiry-based Curriculum (time point 2),full,"Sobel, David",111,FALSE,216,2017-05-22T15:44:50Z
+365,Databrary User Interviews,restricted,"Seisler, Andrea R.",437,FALSE,5,2017-05-24T13:36:48Z
+365,Databrary User Interviews,restricted,"Admin, Databrary",3341,FALSE,5,2017-05-24T13:36:48Z
+390,Starter-ACLEW,full,"Bergelson, Elika",61,FALSE,36,2017-06-07T13:31:59Z
+390,Starter-ACLEW,full,"Warlaumont, Anne",477,FALSE,36,2017-06-07T13:31:59Z
+390,Starter-ACLEW,full,"Cristia, Alejandrina",1034,FALSE,36,2017-06-07T13:31:59Z
+390,Starter-ACLEW,full,"Casillas, Marisa",3062,FALSE,36,2017-06-07T13:31:59Z
+390,Starter-ACLEW,full,"Rosemberg, Celia",3094,FALSE,36,2017-06-07T13:31:59Z
+390,Starter-ACLEW,full,"Soderstrom, Melanie",518,FALSE,36,2017-06-07T13:31:59Z
+390,Starter-ACLEW,full,"Rowland, Caroline",3053,FALSE,36,2017-06-07T13:31:59Z
+390,Starter-ACLEW,full,"Durrant, Samantha",3046,FALSE,36,2017-06-07T13:31:59Z
+390,Starter-ACLEW,full,"Bunce, John",3312,FALSE,36,2017-06-07T13:31:59Z
+400,Preschoolers' extension and export of information from realistic and fantastical stories (Study 1),full,"Weisberg, Deena Skolnick",562,FALSE,183,2017-06-14T13:43:08Z
+430,TEMPORARY DATAVYU WORKSHOP VOLUME,none,"Adolph, Karen",5,FALSE,8,2017-06-14T21:13:55Z
+430,TEMPORARY DATAVYU WORKSHOP VOLUME,none,"Soska, Kasey",406,FALSE,8,2017-06-14T21:13:55Z
+430,TEMPORARY DATAVYU WORKSHOP VOLUME,none,"Hasan, Shohan",431,FALSE,8,2017-06-14T21:13:55Z
+433,BCD Lab Adult Female Face Database,full,"Scott, Lisa",2653,FALSE,29,2017-06-19T18:44:08Z
+434,Real-time Processes in the Development of Action Planning,full,"Ossmy, Ori",1526,FALSE,83,2017-06-20T16:19:54Z
+434,Real-time Processes in the Development of Action Planning,full,"Adolph, Karen",5,FALSE,83,2017-06-20T16:19:54Z
+443,Perceiving affordances for different motor skills,full,"Adolph, Karen",5,FALSE,20,2017-06-30T18:32:49Z
+444,PLAY Project: Pilot Data Collections,none,"Adolph, Karen",5,FALSE,36,2017-06-30T19:11:09Z
+444,PLAY Project: Pilot Data Collections,none,"Tamis-LeMonda, Catherine",11,FALSE,36,2017-06-30T19:11:09Z
+444,PLAY Project: Pilot Data Collections,none,"Gilmore, Rick O.",6,FALSE,36,2017-06-30T19:11:09Z
+445,ManyBabies 1: bll-umanitoba,full,"Soderstrom, Melanie",518,FALSE,118,2017-07-07T16:48:35Z
+445,ManyBabies 1: bll-umanitoba,full,"Klassen, Kelsey",3126,FALSE,118,2017-07-07T16:48:35Z
+452,Perceiving affordances for different motor skills (other conditions),full,"Adolph, Karen",5,FALSE,28,2017-07-13T15:06:14Z
+455,Pilot study: Crawling over gaps -- performance vs. perception,none,"Adolph, Karen",5,FALSE,41,2017-07-14T18:51:43Z
+458,Where Infants Go: Real‐Time Dynamics of Locomotor Exploration in Crawling and Walking Infants,full,"Hoch, Justine",412,FALSE,3,2017-07-19T17:43:33Z
+458,Where Infants Go: Real‐Time Dynamics of Locomotor Exploration in Crawling and Walking Infants,full,"Rachwani, Jaya",506,FALSE,3,2017-07-19T17:43:33Z
+458,Where Infants Go: Real‐Time Dynamics of Locomotor Exploration in Crawling and Walking Infants,full,"Adolph, Karen",5,FALSE,3,2017-07-19T17:43:33Z
+459,Excerpt volume: Object interaction and walking: Integration of old and new skills in infant development,full,"Adolph, Karen",5,FALSE,8,2017-07-19T17:50:41Z
+460,Pilot study: Longitudinal training study of children learning to brachiate on monkey bars,none,"Adolph, Karen",5,FALSE,39,2017-07-21T14:13:35Z
+465,test,full,"Arshad, Ahmad",2223,FALSE,1,2017-08-09T14:34:24Z
+468,"Individual data of ""Shirai et al. (submitted). Development of asymmetric vection for radial expansion/contraction motion: comparison between school-age children and adults""",full,"Shirai, Nobu",2219,FALSE,1,2017-08-12T02:06:00Z
+471,"Excerpt volume: Illustrations from motor development of Siegler's ""Overlapping Waves Model"" of strategy choice",full,"Adolph, Karen",5,FALSE,4,2017-08-17T14:58:10Z
+473,Penn State Psychology Department 2017 R Bootcamp,full,"Gilmore, Rick O.",6,FALSE,2,2017-08-18T19:59:26Z
+476,Body mass and free play,none,"Adolph, Karen",5,FALSE,35,2017-08-25T20:07:05Z
+477,High resolution movies simulating self-motion through rich environments,none,"Gilmore, Rick O.",6,FALSE,1,2017-08-28T15:30:34Z
+480,"Instructions in Mathematical Equivalence with Gesture and No Gesture Matched for Audio Content, Body Position and Eye Gaze",full,"Cook, Susan Wagner",681,FALSE,1,2017-08-31T03:26:01Z
+481,"Asking children to ""be helpers"" can backfire after setbacks",full,"Foster-Hanson, Emily",3121,FALSE,3,2017-08-31T15:30:22Z
+481,"Asking children to ""be helpers"" can backfire after setbacks",full,"Leshin, Rachel",3391,FALSE,3,2017-08-31T15:30:22Z
+481,"Asking children to ""be helpers"" can backfire after setbacks",full,"Rhodes, Marjorie",277,FALSE,3,2017-08-31T15:30:22Z
+482,"Individual data of ""Shirai et al. (submitted). Differences in the magnitude of representational momentum between school-aged children and adults as a function of experimental task""",full,"Shirai, Nobu",2219,FALSE,1,2017-09-09T00:42:32Z
+545,The developmental time course and topographic distribution of individual-level monkey face discrimination in the infant brain,full,"Scott, Lisa",2653,FALSE,4,2017-11-20T16:45:09Z
+546,Learning to Individuate: The Specificity of Labels Differentially Impacts Infant Visual Attention,full,"Scott, Lisa",2653,FALSE,3,2017-11-21T14:07:04Z
+554,Naturalistic Examples of Infant/Toddler Musical Engagement,full,"Trehub, Sandra E",2854,FALSE,2,2017-11-30T14:36:41Z
+554,Naturalistic Examples of Infant/Toddler Musical Engagement,full,"Cirelli, Laura",2738,FALSE,2,2017-11-30T14:36:41Z
+563,The Science of Everyday Play,full,"Tamis-LeMonda, Catherine",11,FALSE,118,2017-12-12T13:29:26Z
+563,The Science of Everyday Play,full,"Adolph, Karen",5,FALSE,118,2017-12-12T13:29:26Z
+564,Head cameras on children aged 6 months through 31 months (SAYCam),full,"Sullivan, Jessica",2095,FALSE,467,2017-12-13T15:06:49Z
+564,Head cameras on children aged 6 months through 31 months (SAYCam),full,"Mei, Michelle",3585,FALSE,467,2017-12-13T15:06:49Z
+564,Head cameras on children aged 6 months through 31 months (SAYCam),full,"Perfors, Amy",5748,FALSE,467,2017-12-13T15:06:49Z
+564,Head cameras on children aged 6 months through 31 months (SAYCam),full,"Wojcik, Erica",2773,FALSE,467,2017-12-13T15:06:49Z
+564,Head cameras on children aged 6 months through 31 months (SAYCam),full,"Frank, Michael C.",258,FALSE,467,2017-12-13T15:06:49Z
+569,The effect of race-based social categorization on emotion recognition in a multicultural context,full,"Moulson, Margaret",474,FALSE,0,2018-01-09T20:18:22Z
+573,Tummy Time in Home-Environment,restricted,"Hauck, Janet",997,FALSE,13,2018-01-22T16:41:01Z
+573,Tummy Time in Home-Environment,restricted,"Lee, Do Kyeong",384,FALSE,13,2018-01-22T16:41:01Z
+574,2017_6 Pilot,restricted,"Hartshorne, Joshua",2521,FALSE,3,2018-01-24T16:28:01Z
+575,"Learning about Tool Use, Visit 1",restricted,"Needham, Amy",118,FALSE,50,2018-01-29T17:09:56Z
+577,2017_11_sorting,restricted,"Hartshorne, Joshua",2521,FALSE,4,2018-01-30T17:32:25Z
+578,Episodic vs Semantic False Belief,restricted,"Palmquist, Carolyn",2945,FALSE,34,2018-02-01T20:14:32Z
+586,Play in preschoolers exposed to adult models of aggressive behavior,restricted,"Stefan, Catrinel Alice",3600,FALSE,14,2018-02-12T15:15:05Z
+587,Virtuous Characteristics Control,restricted,"Lillard, Angeline",318,FALSE,28,2018-02-15T16:46:33Z
+588,fezzerzef,restricted,"Chemla, Emmanuel",3701,FALSE,1,2018-02-16T16:47:58Z
+591,Many Babies 1,restricted,"Hay, Jessica",3299,FALSE,2,2018-02-20T20:35:01Z
+592,The Development of Substitute Object Pretense: The Differential Importance of Form and Function,full,"Weisberg, Deena Skolnick",562,FALSE,34,2018-02-21T15:43:17Z
+593,Neural and behavioral effects of subordinate-level training of novel objects across manipulations of color and spatial frequency,full,"Scott, Lisa",2653,FALSE,3,2018-02-21T17:42:11Z
+595,Excerpt: The organization of exploratory behaviors in infant locomotor planning.,full,"Adolph, Karen",5,FALSE,1,2018-02-23T20:34:44Z
+596,Excerpt volume: Learning the designed actions of everyday objects,full,"Adolph, Karen",5,FALSE,1,2018-02-23T20:49:04Z
+596,Excerpt volume: Learning the designed actions of everyday objects,full,"Tamis-LeMonda, Catherine",11,FALSE,1,2018-02-23T20:49:04Z
+597,Hong Kong Preschooler Longitudinal Study,restricted,"Tamis-LeMonda, Catherine",11,FALSE,2,2018-02-26T16:26:03Z
+598,Gender and Leadership: Study 2,restricted,"Rhodes, Marjorie",277,FALSE,0,2018-03-05T14:33:45Z
+599,Children's use of race and gender as cues to social status,restricted,"Rhodes, Marjorie",277,FALSE,2,2018-03-05T14:46:21Z
+600,Efficacy,restricted,"Lillard, Angeline",318,FALSE,15,2018-03-05T19:46:14Z
+603,Equal Access Ownership,restricted,"Jaswal, Vikram",1117,FALSE,17,2018-03-13T17:38:02Z
+604,"Learning About Tool Use, Visit 2",restricted,"Needham, Amy",118,FALSE,49,2018-03-15T17:34:33Z
+605,Remember-Know,restricted,"Jaswal, Vikram",1117,FALSE,2,2018-03-15T18:31:56Z
+606,RAMP-Wit-Test,restricted,"Jaswal, Vikram",1117,FALSE,23,2018-03-15T18:37:04Z
+608,Differential neural responses to faces paired with labels versus faces paired with noise at 6- and at 9-months,full,"Scott, Lisa",2653,FALSE,2,2018-03-22T20:32:01Z
+609,Memory Monitor - Expert (5s),restricted,"Jaswal, Vikram",1117,FALSE,20,2018-03-27T18:39:07Z
+610,Memory Monitor - Help (5s),restricted,"Jaswal, Vikram",1117,FALSE,39,2018-03-28T13:19:21Z
+612,Memory Monitor - Shape (5s),restricted,"Jaswal, Vikram",1117,FALSE,16,2018-03-29T18:42:15Z
+613,Memory Monitor - Shape (7s),restricted,"Jaswal, Vikram",1117,FALSE,17,2018-03-29T19:40:52Z
+614,Memory Monitor - Expert (5s WM),restricted,"Jaswal, Vikram",1117,FALSE,18,2018-03-29T19:59:24Z
+615,Memory Monitor - Expert (7s),restricted,"Jaswal, Vikram",1117,FALSE,7,2018-03-29T20:19:41Z
+616,Memory Monitor - Help (7s),restricted,"Jaswal, Vikram",1117,FALSE,34,2018-04-03T19:08:55Z
+617,Memory Monitor - Oops,restricted,"Jaswal, Vikram",1117,FALSE,20,2018-04-04T13:40:48Z
+618,DTRU DFYUD,restricted,"Chemla, Emmanuel",3701,FALSE,0,2018-04-05T13:30:18Z
+619,Memory Monitor - Percept,restricted,"Jaswal, Vikram",1117,FALSE,4,2018-04-05T18:07:40Z
+620,Memory Monitor - Pilot,restricted,"Jaswal, Vikram",1117,FALSE,5,2018-04-05T18:11:22Z
+621,Memory Monitor - Oops (Pilot),restricted,"Jaswal, Vikram",1117,FALSE,5,2018-04-05T18:48:04Z
+622,Error Ignorant Novel - Confirm,restricted,"Jaswal, Vikram",1117,FALSE,16,2018-04-05T18:58:45Z
+623,Error Ignorant Novel - PrimeBaseline,restricted,"Jaswal, Vikram",1117,FALSE,14,2018-04-05T19:00:12Z
+624,Error Ignorant Novel - Rep,restricted,"Jaswal, Vikram",1117,FALSE,33,2018-04-05T19:02:57Z
+625,Error Ignorant Novel - Video,restricted,"Jaswal, Vikram",1117,FALSE,37,2018-04-05T19:11:08Z
+626,Error Ignorant Novel - Video Help,restricted,"Jaswal, Vikram",1117,FALSE,37,2018-04-05T19:26:38Z
+627,Error Ignorant Novel,restricted,"Jaswal, Vikram",1117,FALSE,28,2018-04-05T19:31:20Z
+628,2018 Empathy,restricted,"Vishton, Peter",60,FALSE,25,2018-04-10T16:10:48Z
+629,2018 Bystander,restricted,"Vishton, Peter",60,FALSE,18,2018-04-10T16:11:47Z
+631,2018 Peer Pressure,restricted,"Vishton, Peter",60,FALSE,1,2018-04-17T16:09:22Z
+632,Influencing People - Equal,restricted,"Jaswal, Vikram",1117,FALSE,27,2018-04-17T16:52:49Z
+633,Influencing People - Equal 2.0,restricted,"Jaswal, Vikram",1117,FALSE,6,2018-04-17T17:29:38Z
+634,Influencing People - Equal 3.0,restricted,"Jaswal, Vikram",1117,FALSE,34,2018-04-17T17:34:21Z
+635,Influencing People - Less,restricted,"Jaswal, Vikram",1117,FALSE,12,2018-04-17T17:47:14Z
+636,Influencing People - Less 2.0,restricted,"Jaswal, Vikram",1117,FALSE,25,2018-04-17T17:51:41Z
+637,Influencing People - Needy,restricted,"Jaswal, Vikram",1117,FALSE,39,2018-04-17T18:04:35Z
+638,Influencing People - Reciprocity,restricted,"Jaswal, Vikram",1117,FALSE,76,2018-04-17T18:22:20Z
+639,Influencing People - Zero,restricted,"Jaswal, Vikram",1117,FALSE,32,2018-04-17T18:23:54Z
+640,Self Memory,restricted,"Jaswal, Vikram",1117,FALSE,71,2018-04-18T15:59:34Z
+641,Self Memory - Story,restricted,"Jaswal, Vikram",1117,FALSE,6,2018-04-18T16:02:07Z
+642,Self Memory - Source 2,restricted,"Jaswal, Vikram",1117,FALSE,44,2018-04-18T16:05:36Z
+643,Self Memory - Pilot,restricted,"Jaswal, Vikram",1117,FALSE,10,2018-04-18T16:10:13Z
+644,Is the most representative skunk the average or the stinkiest? Developmental changes in representations of biological categories,full,"Foster-Hanson, Emily",3121,FALSE,4,2018-04-19T19:31:33Z
+644,Is the most representative skunk the average or the stinkiest? Developmental changes in representations of biological categories,full,"Rhodes, Marjorie",277,FALSE,4,2018-04-19T19:31:33Z
+645,Light Sound,restricted,"Needham, Amy",118,FALSE,33,2018-04-23T15:16:58Z
+646,Children's Stereotypes About Social Group Prevalence,restricted,"Rhodes, Marjorie",277,FALSE,0,2018-04-23T16:11:25Z
+647,Quantifying sources of variability in infancy research using the infant-directed speech preference,full,"Braun, Bettina",3830,FALSE,16,2018-04-24T10:40:09Z
+648,Reliable and Robust Infant Brain Responses During Face Learning,restricted,"Scott, Lisa",2653,FALSE,0,2018-04-24T18:30:48Z
+649,Equal Access - Pilot,restricted,"Jaswal, Vikram",1117,FALSE,2,2018-04-25T13:03:23Z
+650,Say Sorry - Immed Apol,restricted,"Jaswal, Vikram",1117,FALSE,8,2018-04-25T13:13:35Z
+651,Say Sorry - Rest,restricted,"Jaswal, Vikram",1117,FALSE,17,2018-04-25T13:14:43Z
+653,SEEDLingS 8 Month,restricted,"Bergelson, Elika",61,FALSE,46,2018-04-26T18:44:25Z
+654,Accuracy - Acc-Acc Compare,restricted,"Jaswal, Vikram",1117,FALSE,19,2018-04-26T19:01:17Z
+655,Accuracy - Point,restricted,"Jaswal, Vikram",1117,FALSE,9,2018-04-26T19:03:37Z
+656,Accuracy - Point-Compare,restricted,"Jaswal, Vikram",1117,FALSE,21,2018-04-26T19:12:23Z
+657,Accuracy - Point-Memory,restricted,"Jaswal, Vikram",1117,FALSE,19,2018-04-26T19:17:44Z
+658,Accuracy - Speech,restricted,"Jaswal, Vikram",1117,FALSE,8,2018-04-26T19:26:49Z
+659,Accuracy - Speech-Compare,restricted,"Jaswal, Vikram",1117,FALSE,17,2018-04-26T19:29:49Z
+660,Accuracy - Speech-Memory,restricted,"Jaswal, Vikram",1117,FALSE,16,2018-04-26T19:33:51Z
+661,Accuracy - Inaccuracy Compare,restricted,"Jaswal, Vikram",1117,FALSE,19,2018-04-26T19:44:17Z
+662,Accuracy - Inaccuracy Stimuli,restricted,"Jaswal, Vikram",1117,FALSE,0,2018-04-26T19:45:16Z
+663,Ambiguity Studies - Amb Pref,restricted,"Jaswal, Vikram",1117,FALSE,15,2018-04-26T20:24:13Z
+664,Ambiguity Studies - Amb Pref Agency,restricted,"Jaswal, Vikram",1117,FALSE,12,2018-04-26T20:25:35Z
+665,AudioFiles of Parents in Child Dependency Court,restricted,"Merry, Sally Engle",3854,FALSE,29,2018-04-27T00:33:14Z
+666,SEEDLingS 9 Month,restricted,"Bergelson, Elika",61,FALSE,47,2018-04-27T15:49:16Z
+667,SEEDLingS 10 Month,restricted,"Bergelson, Elika",61,FALSE,47,2018-04-27T20:03:24Z
+668,SEEDLingS 11 Month,restricted,"Bergelson, Elika",61,FALSE,47,2018-04-30T13:28:34Z
+669,SEEDLingS 13 Month,restricted,"Bergelson, Elika",61,FALSE,47,2018-04-30T16:44:22Z
+670,SEEDLingS 14 Month,restricted,"Bergelson, Elika",61,FALSE,47,2018-04-30T20:54:01Z
+671,ManyBabies 1: musdev-utm,full,"Trehub, Sandra E",2854,FALSE,37,2018-05-01T13:28:26Z
+672,Ambiguity Studies - Amb Pref Baseline,restricted,"Jaswal, Vikram",1117,FALSE,23,2018-05-01T16:35:06Z
+673,Ambiguity Studies - Amb Pref Failure,restricted,"Jaswal, Vikram",1117,FALSE,17,2018-05-01T16:36:45Z
+686,Databrary & Datavyu Help Videos,full,"Admin, Databrary",3341,FALSE,4,2018-05-02T19:28:43Z
+686,Databrary & Datavyu Help Videos,full,"Gilmore, Rick O.",6,FALSE,4,2018-05-02T19:28:43Z
+686,Databrary & Datavyu Help Videos,full,"Seisler, Andrea R.",437,FALSE,4,2018-05-02T19:28:43Z
+686,Databrary & Datavyu Help Videos,full,"Soska, Kasey",406,FALSE,4,2018-05-02T19:28:43Z
+687,SAD and talker role training corpus,restricted,"Cristia, Alejandrina",1034,FALSE,0,2018-05-04T15:10:05Z
+689,PLoS study,restricted,"Johnson, Scott",93,FALSE,1,2018-05-08T23:57:05Z
+690,Changes in Visual Scanning Strategies Accompany the Acquisition of Perceptual Expertise,restricted,"Scott, Lisa",2653,FALSE,11,2018-05-11T17:42:12Z
+691,Ad-hoc pragmatic implicatures among Shipibo-Konibo children in the Peruvian Amazon,full,"Frank, Michael C.",258,FALSE,2,2018-05-14T18:00:59Z
+692,Worldwide Orphans,none,"Admin, Databrary",3341,FALSE,2,2018-05-16T17:02:42Z
+692,Worldwide Orphans,none,"Seisler, Andrea R.",437,FALSE,2,2018-05-16T17:02:42Z
+694,SEEDLingS 15 month,restricted,"Bergelson, Elika",61,FALSE,2,2018-05-16T17:18:46Z
+695,SEEDLingS 16 month,restricted,"Bergelson, Elika",61,FALSE,2,2018-05-16T17:22:27Z
+696,SEEDLingS 17 month,restricted,"Bergelson, Elika",61,FALSE,2,2018-05-16T17:31:47Z
+697,Slone&Johnson_Cognition2018_data,full,"Johnson, Scott",93,FALSE,1,2018-05-17T15:37:12Z
+699,Bezos NewFAMS Comparison Study,restricted,"Raver, Cybele",368,FALSE,9,2018-05-23T18:26:48Z
+699,Bezos NewFAMS Comparison Study,restricted,"Kyriakou, Lara",1400,FALSE,9,2018-05-23T18:26:48Z
+702,Dynamic Calibration Stimuli for Infant Eye-Tracking Experiments,restricted,"Johnson, Scott",93,FALSE,3,2018-05-25T17:58:19Z
+703,Thinking Instructions,restricted,"Lillard, Angeline",318,FALSE,54,2018-05-29T07:45:56Z
+705,Self‐generated variability in object images predicts vocabulary growth,restricted,"Smith, Linda B.",161,FALSE,1,2018-06-06T15:23:16Z
+705,Self‐generated variability in object images predicts vocabulary growth,restricted,"Yu, Chen",120,FALSE,1,2018-06-06T15:23:16Z
+706,Dornröschen 3,restricted,"Lillard, Angeline",318,FALSE,46,2018-06-06T15:41:37Z
+707,"Using EEG, Head-Mounted Eye Tracking, Motion Tracking, and Video to Study Human Development",full,"Ossmy, Ori",1526,FALSE,2,2018-06-07T17:07:49Z
+707,"Using EEG, Head-Mounted Eye Tracking, Motion Tracking, and Video to Study Human Development",full,"Adolph, Karen",5,FALSE,2,2018-06-07T17:07:49Z
+708,Maternal Support To be Coded,restricted,"Blair, Clancy",1254,FALSE,2,2018-06-08T15:17:51Z
+708,Maternal Support To be Coded,restricted,"Woudstra, Mi-lan",1322,FALSE,2,2018-06-08T15:17:51Z
+709,XXI ICIS 2018 Philadelphia Invited Program,full,International Congress on Infant Studies (ICIS),2127,FALSE,12,2018-06-11T15:22:13Z
+709,XXI ICIS 2018 Philadelphia Invited Program,full,"Hirsh-Pasek, Kathy",546,FALSE,12,2018-06-11T15:22:13Z
+709,XXI ICIS 2018 Philadelphia Invited Program,full,"Golinkoff, Roberta",296,FALSE,12,2018-06-11T15:22:13Z
+709,XXI ICIS 2018 Philadelphia Invited Program,full,"Oakes, Lisa",538,FALSE,12,2018-06-11T15:22:13Z
+709,XXI ICIS 2018 Philadelphia Invited Program,full,"Barr, Rachel",104,FALSE,12,2018-06-11T15:22:13Z
+709,XXI ICIS 2018 Philadelphia Invited Program,full,"Admin, Databrary",3341,FALSE,12,2018-06-11T15:22:13Z
+709,XXI ICIS 2018 Philadelphia Invited Program,full,"Saffran, Jenny",274,FALSE,12,2018-06-11T15:22:13Z
+709,XXI ICIS 2018 Philadelphia Invited Program,full,"Lakusta, Laura",590,FALSE,12,2018-06-11T15:22:13Z
+710,ManyBabies1: ICCL-BC,full,"Cordes, Sara",798,FALSE,16,2018-06-12T19:09:31Z
+711,Jirout Lab Measures,full,"Jirout, Jamie",1197,FALSE,2,2018-06-13T16:04:14Z
+712,Montessori Teaching,restricted,"Lillard, Angeline",318,FALSE,73,2018-06-13T19:28:20Z
+714,ManyBabies 1: BabyLab-UCLA_Johnson,restricted,"Johnson, Scott",93,FALSE,1,2018-06-15T17:56:17Z
+714,ManyBabies 1: BabyLab-UCLA_Johnson,restricted,"Frank, Michael C.",258,FALSE,1,2018-06-15T17:56:17Z
+714,ManyBabies 1: BabyLab-UCLA_Johnson,restricted,"Kline, Melissa",1157,FALSE,1,2018-06-15T17:56:17Z
+714,ManyBabies 1: BabyLab-UCLA_Johnson,restricted,"Bergmann, Christina",726,FALSE,1,2018-06-15T17:56:17Z
+715,ManyBabies 1: callab,restricted,"Yurovsky, Daniel",3037,FALSE,28,2018-06-15T18:57:28Z
+717,Self-directed learning by preschoolers in a naturalistic overhearing context,restricted,"Srinivasan, Mahesh",1515,FALSE,198,2018-06-18T21:37:10Z
+717,Self-directed learning by preschoolers in a naturalistic overhearing context,restricted,"Foushee, Ruthe",1001,FALSE,198,2018-06-18T21:37:10Z
+718,Fiction Preferences: Anthropomorphism and Fantasy,restricted,"Lillard, Angeline",318,FALSE,92,2018-06-20T09:51:38Z
+719,Prediction,restricted,"Palmquist, Carolyn",2945,FALSE,32,2018-06-20T13:50:09Z
+721,ManyBabies 1: UdS-DevPsych,full,"Aschersleben, Gisa",2746,FALSE,1,2018-06-21T12:25:00Z
+721,ManyBabies 1: UdS-DevPsych,full,"Krieger, Florian",4067,FALSE,1,2018-06-21T12:25:00Z
+722,Abstract rule learning,restricted,"Johnson, Scott",93,FALSE,1,2018-06-23T21:44:56Z
+723,"Children's Play in the Digital Age: Toys, Children’s Entertainment and the Digital- Material Dialectic",restricted,"Kaufman, Jordy",440,FALSE,14,2018-06-26T00:28:20Z
+724,Play & Learning Across a Year (PLAY) Project Summit (2018-06-29 Philadelphia),restricted,"Adolph, Karen",5,FALSE,5,2018-06-29T12:43:13Z
+724,Play & Learning Across a Year (PLAY) Project Summit (2018-06-29 Philadelphia),restricted,"Tamis-LeMonda, Catherine",11,FALSE,5,2018-06-29T12:43:13Z
+724,Play & Learning Across a Year (PLAY) Project Summit (2018-06-29 Philadelphia),restricted,"Gilmore, Rick O.",6,FALSE,5,2018-06-29T12:43:13Z
+724,Play & Learning Across a Year (PLAY) Project Summit (2018-06-29 Philadelphia),restricted,"Soska, Kasey",406,FALSE,5,2018-06-29T12:43:13Z
+725,Manybabies 1: bounbcl,full,"Soley, Gaye",3967,FALSE,1,2018-07-03T07:30:57Z
+726,Caplan- Corriveau Stories,restricted,"Goldstein, Thalia R.",531,FALSE,143,2018-07-03T20:18:11Z
+726,Caplan- Corriveau Stories,restricted,"Thompson, Brittany",3152,FALSE,143,2018-07-03T20:18:11Z
+726,Caplan- Corriveau Stories,restricted,"Stutesman, Megan G.",5678,FALSE,143,2018-07-03T20:18:11Z
+727,ManyBabies1: unlv-musiclab,restricted,"Hannon, Erin",3087,FALSE,25,2018-07-05T23:38:16Z
+728,ManyBabies 1: lscp-ens,restricted,"Cristia, Alejandrina",1034,FALSE,2,2018-07-06T15:42:18Z
+729,Spatial Apps,full,"Lillard, Angeline",318,FALSE,68,2018-07-06T16:53:00Z
+729,Spatial Apps,full,"Jirout, Jamie",1197,FALSE,68,2018-07-06T16:53:00Z
+730,Romanian Bobo,restricted,"Lillard, Angeline",318,FALSE,40,2018-07-11T13:16:32Z
+733,Prediction V2,restricted,"Palmquist, Carolyn",2945,FALSE,7,2018-07-17T15:30:28Z
+734,Prediction V3,restricted,"Palmquist, Carolyn",2945,FALSE,40,2018-07-17T15:34:36Z
+735,"Excerpt: Postural, Visual, and Manual Coordination in the Development of Prehension",full,"Adolph, Karen",5,FALSE,1,2018-07-26T15:28:14Z
+736,"Understanding Exploration-Exploitation Trade offs, CogSci 2018",full,"Bonawitz, Elizabeth",2173,FALSE,17,2018-08-02T01:36:06Z
+738,Immersive Virtual Reality technology as a Problem-Solving Learning Tool for Children.,restricted,"Araiza Alba, Paola",2479,FALSE,7,2018-08-09T02:17:57Z
+738,Immersive Virtual Reality technology as a Problem-Solving Learning Tool for Children.,restricted,"Kaufman, Jordy",440,FALSE,7,2018-08-09T02:17:57Z
+739,Falls experienced by older adult residents in long-term care homes,full,"Robinovitch, Stephen",2693,FALSE,240,2018-08-17T04:32:07Z
+740,Dominance Looking Time,restricted,"Beier, Jonathan",594,FALSE,3,2018-08-21T13:37:29Z
+744,Ambiguity Studies - Amb Pref Feedback,restricted,"Jaswal, Vikram",1117,FALSE,23,2018-08-31T16:14:43Z
+745,Ambiguity Studies - Amb Pref No Info,restricted,"Jaswal, Vikram",1117,FALSE,16,2018-08-31T16:18:18Z
+746,Ambiguity Studies - Amb Pref Success,restricted,"Jaswal, Vikram",1117,FALSE,24,2018-08-31T16:43:35Z
+747,Amb Pref Feedback,restricted,"Jaswal, Vikram",1117,FALSE,15,2018-09-03T19:49:38Z
+748,Ambiguity Studies - Amb Search,restricted,"Jaswal, Vikram",1117,FALSE,16,2018-09-03T19:54:14Z
+749,Ambiguity Studies - Ambiguity Pilot,restricted,"Jaswal, Vikram",1117,FALSE,18,2018-09-03T20:07:25Z
+750,Ambiguity Studies - Ambiguity Pilot V2,restricted,"Jaswal, Vikram",1117,FALSE,19,2018-09-03T20:24:01Z
+751,True Negatives,restricted,"Jaswal, Vikram",1117,FALSE,25,2018-09-03T20:42:08Z
+752,Heuristics - Confidence,restricted,"Jaswal, Vikram",1117,FALSE,16,2018-09-04T16:46:55Z
+753,Heuristics - Easy Hard NO INDUCTION,restricted,"Jaswal, Vikram",1117,FALSE,33,2018-09-04T16:57:47Z
+754,Heuristics - Easy Hard,restricted,"Jaswal, Vikram",1117,FALSE,17,2018-09-04T17:08:29Z
+755,Trade-Off,restricted,"Jaswal, Vikram",1117,FALSE,41,2018-09-04T17:27:29Z
+756,Play Inclusion and Exclusion,restricted,"Beier, Jonathan",594,FALSE,238,2018-09-05T14:30:39Z
+757,Trade-Off Quality,restricted,"Jaswal, Vikram",1117,FALSE,270,2018-09-05T19:23:52Z
+758,MittPupps Visit 3,restricted,"Needham, Amy",118,FALSE,38,2018-09-07T19:09:41Z
+760,PLAYProject_NYUNI,none,"Xu, Melody",2775,FALSE,1,2018-09-12T15:43:08Z
+760,PLAYProject_NYUNI,none,"Adolph, Karen",5,FALSE,1,2018-09-12T15:43:08Z
+760,PLAYProject_NYUNI,none,"Soska, Kasey",406,FALSE,1,2018-09-12T15:43:08Z
+761,Play Project: Solitary Dyadic Pilots,restricted,"Adolph, Karen",5,FALSE,11,2018-09-12T16:51:57Z
+761,Play Project: Solitary Dyadic Pilots,restricted,"Soska, Kasey",406,FALSE,11,2018-09-12T16:51:57Z
+762,"The Role of Age, Theory of Mind, and Linguistic Ability in Children's Understanding of Ownership",full,"McDermott, Catherine",1704,FALSE,2,2018-09-18T17:09:04Z
+762,"The Role of Age, Theory of Mind, and Linguistic Ability in Children's Understanding of Ownership",full,"Noles, Nicholaus",1699,FALSE,2,2018-09-18T17:09:04Z
+764,Fin Live In Person,restricted,"Beier, Jonathan",594,FALSE,140,2018-09-18T18:45:29Z
+765,UVA Learning Lab at Virginia Discovery Museum-Curiosity,restricted,"Jirout, Jamie",1197,FALSE,2,2018-09-18T19:37:12Z
+766,Property Transfer Stimuli,restricted,"Noles, Nicholaus",1699,FALSE,1,2018-09-20T15:55:47Z
+768,Exploring the first possessor bias in children,restricted,"Noles, Nicholaus",1699,FALSE,1,2018-09-28T01:36:22Z
+776,"Walking, Exploration, and Language in High and Low Risk Infants",restricted,"Iverson, Jana",334,FALSE,10,2018-10-02T22:24:44Z
+777,Mazira Project Developmental Assessments,restricted,"Prado, Elizabeth",4458,FALSE,634,2018-10-02T22:39:36Z
+778,Spatial Learning in Play (SLIP) at Cornell,full,"Casasola, Marianella",650,FALSE,43,2018-10-04T11:59:54Z
+778,Spatial Learning in Play (SLIP) at Cornell,full,"Tamis-LeMonda, Catherine",11,FALSE,43,2018-10-04T11:59:54Z
+778,Spatial Learning in Play (SLIP) at Cornell,full,"Suh, Daniel Daewon",2578,FALSE,43,2018-10-04T11:59:54Z
+778,Spatial Learning in Play (SLIP) at Cornell,full,"Ransom, Ashley",4065,FALSE,43,2018-10-04T11:59:54Z
+781,test (ARS investigator),full,"Gilmore, Rick O.",6,FALSE,5,2018-10-16T13:39:31Z
+781,test (ARS investigator),full,"Seisler, Andrea R.",437,FALSE,5,2018-10-16T13:39:31Z
+782,(Blank),restricted,"Srinivasan, Mahesh",1515,FALSE,0,2018-10-17T18:56:52Z
+784,Spontaneous movement during 1st year of life,restricted,"Lee, Do Kyeong",384,FALSE,0,2018-10-24T18:45:00Z
+784,Spontaneous movement during 1st year of life,restricted,"Bai, Yu",4603,FALSE,0,2018-10-24T18:45:00Z
+785,Young children protest against the incorrect use of novel words: Towards a normative pragmatic account on language acquisition,full,"Paulus, Markus",959,FALSE,1,2018-10-25T19:04:09Z
+786,Chimney Strategy,restricted,"Palmquist, Carolyn",2945,FALSE,30,2018-10-26T19:41:07Z
+787,Chimney Strategy v2,restricted,"Palmquist, Carolyn",2945,FALSE,16,2018-10-26T20:19:53Z
+788,HAB Pilot v2,restricted,"Palmquist, Carolyn",2945,FALSE,22,2018-10-26T20:51:14Z
+807,Moonwalk data,full,"Johnson, Scott",93,FALSE,1,2018-10-29T17:59:39Z
+808,EyePatch Grasping,restricted,"Vishton, Peter",60,FALSE,136,2018-10-29T18:12:56Z
+809,UVA Learning Lab - Spatial Search,restricted,"Jirout, Jamie",1197,FALSE,1,2018-10-29T20:38:28Z
+812,2018 Animal Story Sharing,restricted,"Vishton, Peter",60,FALSE,9,2018-10-31T17:52:58Z
+813,test,restricted,"Xu, Fei",2921,FALSE,0,2018-10-31T19:40:49Z
+814,Trust in Context: Machine,restricted,"Palmquist, Carolyn",2945,FALSE,44,2018-11-02T19:04:10Z
+815,Play at Home Study,full,"Casasola, Marianella",650,FALSE,3,2018-11-05T21:45:31Z
+816,SLIP Ithaca Sample,restricted,"Casasola, Marianella",650,FALSE,1,2018-11-06T15:49:01Z
+817,2018 Change Detection,restricted,"Vishton, Peter",60,FALSE,13,2018-11-07T13:57:25Z
+819,"Long-term effects of institutional rearing, foster care, and brain activity on memory and executive functioning",full,"Nelson, Charles",4577,FALSE,2,2018-11-30T16:57:54Z
+819,"Long-term effects of institutional rearing, foster care, and brain activity on memory and executive functioning",full,"Wade, Mark",2027,FALSE,2,2018-11-30T16:57:54Z
+820,Scarcity and CDS,restricted,"Ellwood-Lowe, Monica",3034,FALSE,85,2018-12-02T19:51:33Z
+820,Scarcity and CDS,restricted,"Srinivasan, Mahesh",1515,FALSE,85,2018-12-02T19:51:33Z
+821,Behavioral Flexibility in Sitting,restricted,"Adolph, Karen",5,FALSE,26,2018-12-06T15:25:12Z
+822,Exploring the first possessor bias in children,full,"Noles, Nicholaus",1699,FALSE,2,2018-12-10T20:48:06Z
+823,Spatial Toys 2,full,"Lillard, Angeline",318,FALSE,77,2018-12-11T18:30:03Z
+823,Spatial Toys 2,full,"Jirout, Jamie",1197,FALSE,77,2018-12-11T18:30:03Z
+824,RedaTest DOI,restricted,"Admin, Databrary",3341,FALSE,0,2018-12-17T21:29:23Z
+825,Sacrifice to Parents among Chinese and European American Emerging Adults,restricted,"Miller, Joan",3812,FALSE,1,2019-01-03T18:02:29Z
+826,"Excerpt volume: Cultural differences in childrearing practices (constraint, exercise, massage)",full,"Adolph, Karen",5,FALSE,1,2019-01-05T13:11:09Z
+827,MomNoMom,restricted,"Adolph, Karen",5,FALSE,47,2019-01-07T23:40:18Z
+828,the BasicChild Project,full,"Gredebäck, Gustaf",4546,FALSE,5,2019-01-08T11:18:59Z
+828,the BasicChild Project,full,"Forssman, Linda",4787,FALSE,5,2019-01-08T11:18:59Z
+828,the BasicChild Project,full,"Lindskog, Marcus",4881,FALSE,5,2019-01-08T11:18:59Z
+828,the BasicChild Project,full,"Kenward, Ben",4885,FALSE,5,2019-01-08T11:18:59Z
+829,ReachingET,restricted,"Elimaliah, Sapir",5252,FALSE,84,2019-01-08T17:47:48Z
+829,ReachingET,restricted,"Berger, Sarah E",2382,FALSE,84,2019-01-08T17:47:48Z
+829,ReachingET,restricted,"Harbourne, Regina",2176,FALSE,84,2019-01-08T17:47:48Z
+829,ReachingET,restricted,"Maia, Michele",7359,FALSE,84,2019-01-08T17:47:48Z
+831,Resource Allocation 2: The role of expectations of reciprocity,restricted,"Mandalaywala, Tara",357,FALSE,2,2019-01-10T17:27:17Z
+831,Resource Allocation 2: The role of expectations of reciprocity,restricted,"Benitez, Josie",5803,FALSE,2,2019-01-10T17:27:17Z
+831,Resource Allocation 2: The role of expectations of reciprocity,restricted,"Rhodes, Marjorie",277,FALSE,2,2019-01-10T17:27:17Z
+833,Exploring the Individual Differences in Preschoolers' Causal Stance,restricted,"Booth, Amy",1977,FALSE,158,2019-01-17T00:24:10Z
+834,Developmental changes in strategies for gathering evidence about biological kinds,full,"Foster-Hanson, Emily",3121,FALSE,2,2019-01-17T14:41:25Z
+834,Developmental changes in strategies for gathering evidence about biological kinds,full,"Rhodes, Marjorie",277,FALSE,2,2019-01-17T14:41:25Z
+834,Developmental changes in strategies for gathering evidence about biological kinds,full,"Moty, Kelsey",405,FALSE,2,2019-01-17T14:41:25Z
+835,Pilot Study: Apparatus Training,restricted,"Adolph, Karen",5,FALSE,58,2019-01-21T17:20:09Z
+836,Speaking of kinds: How generic language shapes the development of category representations,restricted,"Foster-Hanson, Emily",3121,FALSE,1,2019-01-23T16:41:23Z
+836,Speaking of kinds: How generic language shapes the development of category representations,restricted,"Rhodes, Marjorie",277,FALSE,1,2019-01-23T16:41:23Z
+837,Santa Claus Disbelief,full,"Goldstein, Thalia R.",531,FALSE,59,2019-01-25T21:36:50Z
+837,Santa Claus Disbelief,full,"Kanumuru, Pallavi",3989,FALSE,59,2019-01-25T21:36:50Z
+837,Santa Claus Disbelief,full,"Mills, Candice",6232,FALSE,59,2019-01-25T21:36:50Z
+838,Study 5 Reveal-Search Hallway Sanya's Honors Thesis,restricted,"Fabricius, William",288,FALSE,2,2019-01-29T21:06:43Z
+839,"Study 2 Sage's Honors Thesis Hide-2, Reveal-2",restricted,"Fabricius, William",288,FALSE,24,2019-01-29T22:21:03Z
+840,title,restricted,"Srinivasan, Mahesh",1515,FALSE,0,2019-01-30T20:51:38Z
+841,"Polysemy, Knowledge, & Memory",restricted,"Srinivasan, Mahesh",1515,FALSE,81,2019-01-31T19:13:18Z
+841,"Polysemy, Knowledge, & Memory",restricted,"Starr, Ariel",5894,FALSE,81,2019-01-31T19:13:18Z
+843,Contrasting Linguistic Complexity,restricted,"Srinivasan, Mahesh",1515,FALSE,0,2019-02-05T00:08:12Z
+843,Contrasting Linguistic Complexity,restricted,"Foushee, Ruthe",1001,FALSE,0,2019-02-05T00:08:12Z
+845,MDAT Fine Motor items,restricted,"Gladstone, Melissa",4142,FALSE,2,2019-02-09T14:32:52Z
+846,MDAT Fine motor items,restricted,"Gladstone, Melissa",4142,FALSE,3,2019-02-09T17:30:06Z
+847,Linguistic Conventionality,restricted,"Langenhoff, Antonia",5025,FALSE,56,2019-02-12T19:21:07Z
+847,Linguistic Conventionality,restricted,"Srinivasan, Mahesh",1515,FALSE,56,2019-02-12T19:21:07Z
+848,Friend in Need,restricted,"Beier, Jonathan",594,FALSE,78,2019-02-12T19:47:43Z
+849,NoHelp Original,restricted,"Beier, Jonathan",594,FALSE,154,2019-02-13T17:45:02Z
+850,Preserving Reputation in Everyday Social Situations,restricted,"Beier, Jonathan",594,FALSE,74,2019-02-13T20:52:09Z
+851,Social Helping,restricted,"Beier, Jonathan",594,FALSE,104,2019-02-14T17:59:04Z
+852,Physical and Social Dominance - Labeling First,restricted,"Beier, Jonathan",594,FALSE,109,2019-02-14T19:32:13Z
+853,Dominance Out of Reach,restricted,"Beier, Jonathan",594,FALSE,117,2019-02-14T20:30:38Z
+855,Punishment,restricted,"Palmquist, Carolyn",2945,FALSE,17,2019-02-16T00:04:13Z
+856,NoHelp-Dominance,restricted,"Beier, Jonathan",594,FALSE,73,2019-02-18T17:12:25Z
+857,Mouse Home Cage Observations,restricted,"Froemke, Robert",4605,FALSE,1,2019-02-19T14:28:09Z
+859,Test,restricted,"Lombardi, Doug",4945,FALSE,1,2019-02-21T18:07:52Z
+860,MEL2 Project Year 2,restricted,"Nez, Reda",4291,FALSE,49,2019-02-21T21:36:38Z
+860,MEL2 Project Year 2,restricted,"Lombardi, Doug",4945,FALSE,49,2019-02-21T21:36:38Z
+861,Goals and Equality,restricted,"Beier, Jonathan",594,FALSE,88,2019-02-25T19:42:23Z
+863,NoHelp Simple,restricted,"Beier, Jonathan",594,FALSE,97,2019-02-28T21:04:11Z
+864,Mdat data,restricted,"Gladstone, Melissa",4142,FALSE,1,2019-03-03T19:42:28Z
+865,ALL mdat data,restricted,"Gladstone, Melissa",4142,FALSE,1,2019-03-03T19:47:14Z
+867,Eye Gaze Contingency,restricted,"Beier, Jonathan",594,FALSE,15,2019-03-05T14:03:38Z
+868,Keen,restricted,"Adolph, Karen",5,FALSE,64,2019-03-06T14:18:18Z
+868,Keen,restricted,"Cole, Whitney Graham",81,FALSE,64,2019-03-06T14:18:18Z
+870,Nanit,restricted,"Berger, Sarah E",2382,FALSE,140,2019-03-20T16:34:03Z
+870,Nanit,restricted,"Maia, Michele",7359,FALSE,140,2019-03-20T16:34:03Z
+871,Mouse mating behavior,restricted,"Froemke, Robert",4605,FALSE,1,2019-03-24T21:55:25Z
+873,Intentional and Accidental Events (video stimuli),full,"Fausey, Caitlin M.",126,FALSE,4,2019-03-26T16:30:15Z
+874,The Complex Emotion Expression Database: A Validated Stimulus Set of Trained Actors,full,"Scherf, Kathryn Suzanne",252,FALSE,17,2019-03-27T14:31:35Z
+874,The Complex Emotion Expression Database: A Validated Stimulus Set of Trained Actors,full,"Benda, Margaret Suzanne",5051,FALSE,17,2019-03-27T14:31:35Z
+875,NYU Datavyu Workshop Fisher-Price 2019-04-05,none,"Adolph, Karen",5,FALSE,1,2019-03-29T22:22:44Z
+875,NYU Datavyu Workshop Fisher-Price 2019-04-05,none,"Soska, Kasey",406,FALSE,1,2019-03-29T22:22:44Z
+876,Play and Learning Across a Year (PLAY) Project - Protocols & Documentation,restricted,"Adolph, Karen",5,FALSE,6,2019-04-01T15:48:23Z
+876,Play and Learning Across a Year (PLAY) Project - Protocols & Documentation,restricted,"Gilmore, Rick O.",6,FALSE,6,2019-04-01T15:48:23Z
+876,Play and Learning Across a Year (PLAY) Project - Protocols & Documentation,restricted,"Soska, Kasey",406,FALSE,6,2019-04-01T15:48:23Z
+877,"2019 Reasoning about the Self, Other, and Future Preferences",restricted,"Vishton, Peter",60,FALSE,12,2019-04-04T12:30:28Z
+878,2019 Gendered Ads,restricted,"Vishton, Peter",60,FALSE,32,2019-04-04T12:33:07Z
+879,Theory of Mind and Deception,restricted,"Vishton, Peter",60,FALSE,22,2019-04-04T13:45:40Z
+880,The effect of spatial organization in the design of visual supports for adults with communicative disorders,restricted,"Gilmore, Rick O.",6,FALSE,3,2019-04-05T17:29:31Z
+880,The effect of spatial organization in the design of visual supports for adults with communicative disorders,restricted,"Wilkinson, Krista",245,FALSE,3,2019-04-05T17:29:31Z
+881,PLAY-collection-test,none,"Gilmore, Rick O.",6,FALSE,5,2019-04-08T14:22:16Z
+881,PLAY-collection-test,none,"Jayaraman, Swapnaa",254,FALSE,5,2019-04-08T14:22:16Z
+882,NoHelp Fence,restricted,"Beier, Jonathan",594,FALSE,76,2019-04-10T15:25:18Z
+883,The Developmental Roots of Black Female Invisibility,restricted,"Rhodes, Marjorie",277,FALSE,1,2019-04-10T18:42:14Z
+884,Eye-Gaze FoCuS Database,full,"Scherf, Kathryn Suzanne",252,FALSE,3,2019-04-10T21:11:58Z
+884,Eye-Gaze FoCuS Database,full,"Bill, Gordon",5214,FALSE,3,2019-04-10T21:11:58Z
+885,2019 Drawing and Memory,restricted,"Vishton, Peter",60,FALSE,17,2019-04-11T12:58:26Z
+888,Coordination,restricted,"Berger, Sarah E",2382,FALSE,63,2019-04-14T16:20:09Z
+888,Coordination,restricted,"DeMasi, Aaron",3850,FALSE,63,2019-04-14T16:20:09Z
+889,Remote Tool Use and Perception,restricted,"Vishton, Peter",60,FALSE,10,2019-04-17T15:19:16Z
+892,Fantasy Orientation,restricted,"Lillard, Angeline",318,FALSE,7,2019-04-25T14:45:29Z
+893,Hidden Talents,full,"Frankenhuis, Willem",5325,FALSE,1,2019-04-30T05:43:41Z
+895,PETRI,restricted,"Beier, Jonathan",594,FALSE,59,2019-05-01T16:06:53Z
+896,ManyBabies 1: Walkthrough videos,full,"Bergmann, Christina",726,FALSE,42,2019-05-02T10:31:27Z
+896,ManyBabies 1: Walkthrough videos,full,"Soderstrom, Melanie",518,FALSE,42,2019-05-02T10:31:27Z
+896,ManyBabies 1: Walkthrough videos,full,"Hamlin, Kiley",2525,FALSE,42,2019-05-02T10:31:27Z
+896,ManyBabies 1: Walkthrough videos,full,"Frank, Michael C.",258,FALSE,42,2019-05-02T10:31:27Z
+896,ManyBabies 1: Walkthrough videos,full,"Kline, Melissa",1157,FALSE,42,2019-05-02T10:31:27Z
+896,ManyBabies 1: Walkthrough videos,full,"Byers-Heinlein, Krista",1928,FALSE,42,2019-05-02T10:31:27Z
+896,ManyBabies 1: Walkthrough videos,full,"Lew-Williams, Casey",1371,FALSE,42,2019-05-02T10:31:27Z
+897,Learning the Designed Actions of Everyday Objects,full,"Adolph, Karen",5,FALSE,116,2019-05-03T17:38:55Z
+897,Learning the Designed Actions of Everyday Objects,full,"Tamis-LeMonda, Catherine",11,FALSE,116,2019-05-03T17:38:55Z
+897,Learning the Designed Actions of Everyday Objects,full,"Lockman, Jeff",101,FALSE,116,2019-05-03T17:38:55Z
+897,Learning the Designed Actions of Everyday Objects,full,"Karasik, Lana",32,FALSE,116,2019-05-03T17:38:55Z
+897,Learning the Designed Actions of Everyday Objects,full,"Rachwani, Jaya",506,FALSE,116,2019-05-03T17:38:55Z
+898,UoA_ManyBabies,restricted,"Henderson, Annette",4687,FALSE,1,2019-05-05T22:33:03Z
+899,PLAYproject_NYUNI,none,"Adolph, Karen",5,FALSE,21,2019-05-07T16:43:29Z
+899,PLAYproject_NYUNI,none,"Tamis-LeMonda, Catherine",11,FALSE,21,2019-05-07T16:43:29Z
+899,PLAYproject_NYUNI,none,"Gilmore, Rick O.",6,FALSE,21,2019-05-07T16:43:29Z
+900,Novel verb learning in 2- to 3.5-year-olds,restricted,"Arunachalam, Sudha",4685,FALSE,29,2019-05-07T20:50:17Z
+901,Holiday word learning in 12- to 19-month-olds,restricted,"Arunachalam, Sudha",4685,FALSE,25,2019-05-09T16:49:10Z
+903,ars create test,full,"Seisler, Andrea R.",437,FALSE,2,2019-05-10T13:33:45Z
+903,ars create test,full,"Shahriar, Sarah Shua",3317,FALSE,2,2019-05-10T13:33:45Z
+904,Efficacy Judgments,restricted,"Lillard, Angeline",318,FALSE,72,2019-05-14T11:46:28Z
+905,Efficacy Judgments Stimuli Check,restricted,"Lillard, Angeline",318,FALSE,10,2019-05-14T11:57:39Z
+907,test2,full,"Frog, Kermit",5415,FALSE,2,2019-05-14T17:38:08Z
+908,test3,restricted,"Frog, Kermit",5415,FALSE,1,2019-05-14T17:44:15Z
+909,Shape Up: Parent and Child Spatial Play,restricted,"Casasola, Marianella",650,FALSE,1,2019-05-15T20:35:01Z
+910,NewFAMS 18mo,restricted,"Raver, Cybele",368,FALSE,4,2019-05-22T19:59:48Z
+912,Storybook,restricted,"Foushee, Ruthe",1001,FALSE,34,2019-05-23T20:31:03Z
+912,Storybook,restricted,"Srinivasan, Mahesh",1515,FALSE,34,2019-05-23T20:31:03Z
+913,Rocket Labeling and Narration Studies,restricted,"Casasola, Marianella",650,FALSE,1,2019-05-28T18:16:33Z
+915,Practice/Setup,restricted,"de Marchena, Ashley Brooke",2587,FALSE,1,2019-05-31T19:50:36Z
+916,Testing,restricted,"de Marchena, Ashley Brooke",2587,FALSE,0,2019-05-31T20:03:20Z
+917,Practice,restricted,"de Marchena, Ashley Brooke",2587,FALSE,1,2019-05-31T20:04:57Z
+919,Pain and Distress Behaviors in Infants with Torticollis during Physical Therapy Interventions,restricted,"Swiggum, Mary",5259,FALSE,0,2019-06-04T13:09:28Z
+921,Study 6 Reveal-Look Automatic Doors,restricted,"Fabricius, William",288,FALSE,21,2019-06-05T20:53:35Z
+922,Spatial School,full,"Lillard, Angeline",318,FALSE,2,2019-06-06T17:34:32Z
+922,Spatial School,full,"Jirout, Jamie",1197,FALSE,2,2019-06-06T17:34:32Z
+923,Prediction V4,restricted,"Palmquist, Carolyn",2945,FALSE,65,2019-06-07T14:13:33Z
+924,Trust in Context: Rattle,restricted,"Palmquist, Carolyn",2945,FALSE,8,2019-06-07T14:54:22Z
+925,Study 3 (Look-Reveal),restricted,"Fabricius, William",288,FALSE,6,2019-06-07T20:46:50Z
+926,"Study 4 (Reveal-Search, Reveal-Look, Hide-Search)",restricted,"Fabricius, William",288,FALSE,12,2019-06-07T20:51:29Z
+927,Event representation and relational language learning,restricted,"Goksun, Tilbe",1216,FALSE,1,2019-06-10T08:25:14Z
+928,MittPupps Visit 4,restricted,"Needham, Amy",118,FALSE,21,2019-06-11T13:17:29Z
+929,"Language Emergence: Competition, Usage, and Analyses -- Honoring the Impact of Brian MacWhinney on Language Research",restricted,"Gilmore, Rick O.",6,FALSE,32,2019-06-11T14:31:43Z
+931,Social Communication in Children with and without Autism Spectrum Disorder,restricted,"de Marchena, Ashley Brooke",2587,FALSE,43,2019-06-13T15:45:03Z
+932,PLAY Project Videos,none,"Adolph, Karen",5,FALSE,3,2019-06-13T19:06:46Z
+932,PLAY Project Videos,none,"Xu, Melody",2775,FALSE,3,2019-06-13T19:06:46Z
+933,HAB & Trust,restricted,"Palmquist, Carolyn",2945,FALSE,34,2019-06-14T20:33:36Z
+935,Trust in Context: Strategy,restricted,"Palmquist, Carolyn",2945,FALSE,1,2019-06-21T19:49:31Z
+937,Parental Beliefs about Infant and Child Learning,full,"Casasola, Marianella",650,FALSE,3,2019-06-27T18:30:44Z
+938,Adapt,restricted,"Ellwood-Lowe, Monica",3034,FALSE,36,2019-06-27T20:22:33Z
+938,Adapt,restricted,"Srinivasan, Mahesh",1515,FALSE,36,2019-06-27T20:22:33Z
+938,Adapt,restricted,"Bunge, Silvia",491,FALSE,36,2019-06-27T20:22:33Z
+940,Emotion Portrayal Creation,restricted,"Goldstein, Thalia R.",531,FALSE,0,2019-07-09T17:49:28Z
+940,Emotion Portrayal Creation,restricted,"Chulla, Kaylee Rose",4278,FALSE,0,2019-07-09T17:49:28Z
+941,Walking and Talking,restricted,"West, Kelsey Louise",600,FALSE,16,2019-07-11T21:02:49Z
+941,Walking and Talking,restricted,"Adolph, Karen",5,FALSE,16,2019-07-11T21:02:49Z
+942,Trust in Context: Flipped,restricted,"Palmquist, Carolyn",2945,FALSE,37,2019-07-12T18:05:36Z
+943,“Dancing” Together: Infant–Mother Locomotor Synchrony,full,"Hoch, Justine",412,FALSE,33,2019-07-15T21:45:50Z
+943,“Dancing” Together: Infant–Mother Locomotor Synchrony,full,"Ossmy, Ori",1526,FALSE,33,2019-07-15T21:45:50Z
+943,“Dancing” Together: Infant–Mother Locomotor Synchrony,full,"Adolph, Karen",5,FALSE,33,2019-07-15T21:45:50Z
+944,Blank,restricted,"Shrout, Patrick E.",2936,FALSE,0,2019-07-23T17:35:56Z
+945,Perceptual-Motor Challenges in Children’s Toy Play,restricted,"Adolph, Karen",5,FALSE,1,2019-07-23T19:08:27Z
+945,Perceptual-Motor Challenges in Children’s Toy Play,restricted,"Tamis-LeMonda, Catherine",11,FALSE,1,2019-07-23T19:08:27Z
+947,iTRAC Mobile Eye Tracking Complete,restricted,"Perez-Edgar, Koraly",96,FALSE,3,2019-07-26T19:47:02Z
+948,HAB & Trust V2,restricted,"Palmquist, Carolyn",2945,FALSE,52,2019-07-26T19:58:25Z
+949,BioBehavioral Synchrony,restricted,"Tamis-LeMonda, Catherine",11,FALSE,9,2019-07-29T15:54:17Z
+949,BioBehavioral Synchrony,restricted,"Hirsh-Pasek, Kathy",546,FALSE,9,2019-07-29T15:54:17Z
+950,"Of Blickets, Butterflies, and Baby Dinosaurs: Children’s Diagnostic Reasoning Across Domains (Study 3)",full,"Weisberg, Deena Skolnick",562,FALSE,96,2019-07-29T17:53:12Z
+952,Kosie & Baldwin Video Corpus,restricted,"Baldwin, Dare",3746,FALSE,0,2019-07-30T21:53:17Z
+953,Example Videos - Pupillometry as a Window on the Role of Motionese in Infants' Processing of Dynamic Activity,restricted,"Baldwin, Dare",3746,FALSE,1,2019-07-30T21:59:13Z
+954,PLAYproject_GEORG,restricted,"Barr, Rachel",104,FALSE,11,2019-08-01T20:40:40Z
+954,PLAYproject_GEORG,restricted,"Blanchfield, Olivia",4834,FALSE,11,2019-08-01T20:40:40Z
+955,"Oh, Behave!",full,"Adolph, Karen",5,FALSE,14,2019-08-05T13:08:28Z
+956,ESC Modeling,restricted,"Adolph, Karen",5,FALSE,14,2019-08-09T17:53:58Z
+957,ESC Sparkle,restricted,"Adolph, Karen",5,FALSE,34,2019-08-09T17:57:55Z
+959,Test,restricted,"Frank, Jennifer",1256,FALSE,1,2019-08-13T16:05:20Z
+960,Testing,restricted,"Kaur, Maninderjit",5709,FALSE,1,2019-08-13T18:17:03Z
+961,Degu Repeat Reunion,restricted,"Insel, Nathan",5292,FALSE,205,2019-08-14T16:40:12Z
+962,STEM Books,restricted,"Bauer, Patricia",5539,FALSE,16,2019-08-16T13:19:03Z
+962,STEM Books,restricted,"Hanft, Melanie",5743,FALSE,16,2019-08-16T13:19:03Z
+963,DARPA Containers,restricted,"Adolph, Karen",5,FALSE,128,2019-08-29T22:40:06Z
+963,DARPA Containers,restricted,"Ossmy, Ori",1526,FALSE,128,2019-08-29T22:40:06Z
+964,DARPA Duplo,restricted,"Ossmy, Ori",1526,FALSE,100,2019-08-30T16:03:01Z
+964,DARPA Duplo,restricted,"Adolph, Karen",5,FALSE,100,2019-08-30T16:03:01Z
+965,Status essentialism in children,restricted,"Lei, Ryan",5676,FALSE,1,2019-09-05T18:19:11Z
+965,Status essentialism in children,restricted,"Rhodes, Marjorie",277,FALSE,1,2019-09-05T18:19:11Z
+965,Status essentialism in children,restricted,"Mandalaywala, Tara",357,FALSE,1,2019-09-05T18:19:11Z
+965,Status essentialism in children,restricted,"Benitez, Josie",5803,FALSE,1,2019-09-05T18:19:11Z
+966,PLAYproject_UCRIV,none,"Franchak, John",14,FALSE,1,2019-09-08T19:26:57Z
+968,OmissionBlender_13,restricted,"Hamlin, Kiley",2525,FALSE,20,2019-09-09T22:47:36Z
+969,"1 month Visit - Paddles, CryBaby, and Imitation",restricted,"Hamlin, Kiley",2525,FALSE,8,2019-09-09T22:52:43Z
+972,Bullies2_Rep9,restricted,"Hamlin, Kiley",2525,FALSE,2,2019-09-09T22:58:32Z
+973,Bullies2_Rep14,restricted,"Hamlin, Kiley",2525,FALSE,1,2019-09-09T22:59:22Z
+974,Mislabelers_19,restricted,"Hamlin, Kiley",2525,FALSE,16,2019-09-09T23:01:24Z
+975,HappyFace_22,restricted,"Hamlin, Kiley",2525,FALSE,4,2019-09-09T23:04:13Z
+976,Bullies2_P2,restricted,"Hamlin, Kiley",2525,FALSE,17,2019-09-11T17:28:53Z
+977,EndaHill_24,restricted,"Hamlin, Kiley",2525,FALSE,8,2019-09-11T17:39:47Z
+978,MB2_,restricted,"Hamlin, Kiley",2525,FALSE,1,2019-09-11T22:35:58Z
+979,PLAYproject_PRINU,restricted,"Lew-Williams, Casey",1371,FALSE,0,2019-09-12T23:33:58Z
+982,PLAYproject_VCOMU,restricted,"Dusing, Stacey",255,FALSE,5,2019-09-16T18:07:16Z
+983,Learning Choice Check,restricted,"Lillard, Angeline",318,FALSE,1,2019-09-16T22:15:36Z
+987,IBIS- Interactive Behavior in Schools,restricted,"Messinger, Daniel",70,FALSE,5,2019-09-20T16:52:17Z
+987,IBIS- Interactive Behavior in Schools,restricted,"Fasano, Regina",4314,FALSE,5,2019-09-20T16:52:17Z
+987,IBIS- Interactive Behavior in Schools,restricted,"Gonzalez, Brittney Monique",8104,FALSE,5,2019-09-20T16:52:17Z
+988,Perceptual-Motor Challenges in Children’s Toy Play,restricted,"Adolph, Karen",5,FALSE,114,2019-09-23T15:48:30Z
+988,Perceptual-Motor Challenges in Children’s Toy Play,restricted,"Tamis-LeMonda, Catherine",11,FALSE,114,2019-09-23T15:48:30Z
+988,Perceptual-Motor Challenges in Children’s Toy Play,restricted,"Kaplan, Brianna Erin",2765,FALSE,114,2019-09-23T15:48:30Z
+988,Perceptual-Motor Challenges in Children’s Toy Play,restricted,"Rachwani, Jaya",506,FALSE,114,2019-09-23T15:48:30Z
+989,Containers,restricted,"Adolph, Karen",5,FALSE,127,2019-09-23T20:05:27Z
+989,Containers,restricted,"Nez, Reda",4291,FALSE,127,2019-09-23T20:05:27Z
+990,Study 213 Alena,restricted,"Bauer, Patricia",5539,FALSE,1,2019-09-23T21:16:29Z
+991,Study 245,restricted,"Bauer, Patricia",5539,FALSE,2,2019-09-24T17:34:47Z
+992,Study 203 Alena,restricted,"Bauer, Patricia",5539,FALSE,1,2019-09-24T17:52:34Z
+993,Study 211,restricted,"Bauer, Patricia",5539,FALSE,1,2019-09-24T20:59:45Z
+994,Capping Videos,restricted,"Bauer, Patricia",5539,FALSE,1,2019-09-24T21:08:38Z
+995,HAB & Trust V3,restricted,"Palmquist, Carolyn",2945,FALSE,6,2019-09-26T21:14:24Z
+996,Miami PLAY Project,restricted,"Perry, Lynn",1974,FALSE,0,2019-09-27T17:43:10Z
+996,Miami PLAY Project,restricted,"Messinger, Daniel",70,FALSE,0,2019-09-27T17:43:10Z
+996,Miami PLAY Project,restricted,"Custode, Stephanie",3981,FALSE,0,2019-09-27T17:43:10Z
+996,Miami PLAY Project,restricted,"Morales, Lilian",6270,FALSE,0,2019-09-27T17:43:10Z
+997,Empty Room DARPA,restricted,"Nez, Reda",4291,FALSE,0,2019-10-01T20:31:29Z
+998,Fiction Preferences 2019,restricted,"Lillard, Angeline",318,FALSE,3,2019-10-01T21:33:28Z
+999,DisleksiaBelajar - Usability Testing PDM,restricted,"Admodisastro, Novia Indriaty",3519,FALSE,2,2019-10-03T08:44:21Z
+1000,Study 254,restricted,"Bauer, Patricia",5539,FALSE,3,2019-10-04T14:06:24Z
+1005,Multisensory Attention Skills & Communication Foundation Ratings,full,"Bahrick, Lorraine E.",376,FALSE,3,2019-10-05T16:04:09Z
+1006,Attention to faces and races in the infant brain,full,"Scott, Lisa",2653,FALSE,1,2019-10-14T15:19:28Z
+1007,"Freeviewing gaze behavior in infants, children, and adults",full,"Franchak, John",14,FALSE,2,2019-10-15T23:01:53Z
+1008,PLAYproject_BOSTU,restricted,"Gill, Simone",610,FALSE,0,2019-10-16T19:40:14Z
+1008,PLAYproject_BOSTU,restricted,"Keegan, Laura",5994,FALSE,0,2019-10-16T19:40:14Z
+1008,PLAYproject_BOSTU,restricted,"Ayoub, Maria",6293,FALSE,0,2019-10-16T19:40:14Z
+1009,Study 225,restricted,"Bauer, Patricia",5539,FALSE,1,2019-10-17T17:41:11Z
+1010,Study 232,restricted,"Bauer, Patricia",5539,FALSE,1,2019-10-17T17:43:02Z
+1011,Look before you fit: The real-time planning cascade in children and adults,full,"Ossmy, Ori",1526,FALSE,49,2019-10-18T12:25:32Z
+1011,Look before you fit: The real-time planning cascade in children and adults,full,"Adolph, Karen",5,FALSE,49,2019-10-18T12:25:32Z
+1012,Stress sensitization among severely neglected children and protection by social enrichment: Follow-up of a randomized controlled trial,restricted,"Nelson, Charles",4577,FALSE,1,2019-10-18T23:30:53Z
+1014,Delete,full,"Rushton, Gregory",5351,FALSE,0,2019-10-23T19:45:09Z
+1015,Preschool children develop a norm for empathy-based comforting,full,"Paulus, Markus",959,FALSE,1,2019-10-24T19:38:31Z
+1016,Free Play,restricted,"Adolph, Karen",5,FALSE,0,2019-10-25T14:52:17Z
+1016,Free Play,restricted,"Nez, Reda",4291,FALSE,0,2019-10-25T14:52:17Z
+1016,Free Play,restricted,"Ossmy, Ori",1526,FALSE,0,2019-10-25T14:52:17Z
+1017,Test 4,restricted,"Frog, Kermit",5415,FALSE,0,2019-10-25T17:24:42Z
+1018,Test 5 - entire volume shared but no affiliate access,restricted,"Frog, Kermit",5415,FALSE,0,2019-10-25T17:28:20Z
+1019,Test-Oct-25-2019,restricted,"Smith, Linda B.",161,FALSE,0,2019-10-25T18:02:58Z
+1020,Developing Environments,restricted,"Adolph, Karen",5,FALSE,3,2019-10-29T13:31:54Z
+1021,Shared_Videos,restricted,"Gweon, Hyowon",5475,FALSE,0,2019-11-01T22:00:31Z
+1022,Nanit Sound Videos,restricted,"Berger, Sarah E",2382,FALSE,1,2019-11-02T19:54:06Z
+1023,PLAYproject_CUNYS,restricted,"Karasik, Lana",32,FALSE,0,2019-11-07T16:29:20Z
+1023,PLAYproject_CUNYS,restricted,"Xu, Melody",2775,FALSE,0,2019-11-07T16:29:20Z
+1023,PLAYproject_CUNYS,restricted,"Herzberg, Orit",3137,FALSE,0,2019-11-07T16:29:20Z
+1025,Hiding Game,restricted,"Starr, Ariel",5894,FALSE,0,2019-11-15T19:21:50Z
+1026,Big Shoes,restricted,"Adolph, Karen",5,FALSE,9,2019-11-18T19:14:40Z
+1027,"Study 1 (Hide 3, Reveal 3, Reveal 2) N = 45",restricted,"Fabricius, William",288,FALSE,45,2019-11-22T00:16:46Z
+1028,"Study 1A (Reveal-Search, Reveal-Look, Hide-Search)",restricted,"Fabricius, William",288,FALSE,0,2019-11-22T00:17:39Z
+1029,Paleolithic Social Transmission Network Pilot Study,restricted,"Stout, Dietrich",2993,FALSE,3,2019-11-22T20:11:11Z
+1030,Piano,restricted,"Nonaka, Tetsushi",1889,FALSE,1,2019-11-27T02:26:56Z
+1032,TBD,restricted,"Gweon, Hyowon",5475,FALSE,0,2019-12-06T22:04:40Z
+1033,Inferring Competence,restricted,"Gweon, Hyowon",5475,FALSE,67,2019-12-06T22:17:25Z
+1034,ManyBabies4_Videos,restricted,"Soderstrom, Melanie",518,FALSE,1,2019-12-12T19:21:24Z
+1034,ManyBabies4_Videos,restricted,"Hamlin, Kiley",2525,FALSE,1,2019-12-12T19:21:24Z
+1034,ManyBabies4_Videos,restricted,"Lucca, Kelsey",5783,FALSE,1,2019-12-12T19:21:24Z
+1036,Individual data: Effects of body orientation relative to gravity on vection in children and adults,full,"Shirai, Nobu",2219,FALSE,1,2019-12-14T11:04:17Z
+1037,spreadsheet import,restricted,"Gilmore, Rick O.",6,FALSE,0,2019-12-19T21:28:52Z
+1038,Buddhist-Informed Mindfulness Practice in Recovery from Bipolar Disorder: Qualitative Study Data and Analyses,restricted,"Strong, Sasha D",5278,FALSE,14,2020-01-02T19:02:05Z
+1038,Buddhist-Informed Mindfulness Practice in Recovery from Bipolar Disorder: Qualitative Study Data and Analyses,restricted,"Hartelius, Glenn",5377,FALSE,14,2020-01-02T19:02:05Z
+1040,MittPupps Visit 5,restricted,"Needham, Amy",118,FALSE,1,2020-01-08T15:59:41Z
+1041,NYU Datavyu Workshop (2020-01-21),restricted,"Adolph, Karen",5,FALSE,2,2020-01-13T15:25:54Z
+1041,NYU Datavyu Workshop (2020-01-21),restricted,"Xu, Melody",2775,FALSE,2,2020-01-13T15:25:54Z
+1042,The impact factor in infant development: Falling like a baby,full,"Adolph, Karen",5,FALSE,169,2020-01-14T15:52:20Z
+1042,The impact factor in infant development: Falling like a baby,full,"Han, Danyang",3201,FALSE,169,2020-01-14T15:52:20Z
+1043,When do caregivers begin to view their child as a moral agent? Comparing moral and non-moral reactions to young children’s moral transgressions,restricted,"Paulus, Markus",959,FALSE,1,2020-01-16T21:18:03Z
+1045,TeachLivE Papers,restricted,"Frank, Jennifer",1256,FALSE,56,2020-01-21T16:20:12Z
+1045,TeachLivE Papers,restricted,"Deger, Gwendolyn",6162,FALSE,56,2020-01-21T16:20:12Z
+1047,Question asking tasks in 4-8 year olds,restricted,"Jirout, Jamie",1197,FALSE,9,2020-01-25T16:51:32Z
+1048,Bullies2_Rep,restricted,"Hamlin, Kiley",2525,FALSE,15,2020-01-27T20:48:32Z
+1051,3 Month Visit (Hill),restricted,"Hamlin, Kiley",2525,FALSE,17,2020-01-28T17:28:44Z
+1052,"5 Month Visit - Ball, Goals, Emoji, FreePlay",restricted,"Hamlin, Kiley",2525,FALSE,18,2020-01-28T17:35:33Z
+1053,MEL2 Project Year 3,restricted,"Lombardi, Doug",4945,FALSE,31,2020-01-28T18:46:04Z
+1055,How does parental language shape the development of children's beliefs about gender?,full,"Rhodes, Marjorie",277,FALSE,1,2020-02-03T14:57:14Z
+1060,Grounding Faultless Disagreement,restricted,"Srinivasan, Mahesh",1515,FALSE,0,2020-02-07T20:18:32Z
+1061,203 General Folder,restricted,"Bauer, Patricia",5539,FALSE,17,2020-02-10T16:23:04Z
+1061,203 General Folder,restricted,"Esposito, Alena",5873,FALSE,17,2020-02-10T16:23:04Z
+1062,An Isolated-Signing RGBD Dataset of 100 American Sign Language Signs Produced by Fluent ASL Signers,restricted,"Huenerfauth, Matt",6349,FALSE,23,2020-02-13T02:09:28Z
+1063,Study 22,restricted,"Bauer, Patricia",5539,FALSE,4,2020-02-13T22:44:14Z
+1065,Study 236 Videos from Camera Cards,restricted,"Bauer, Patricia",5539,FALSE,1,2020-02-19T17:47:55Z
+1066,PLAYproject_UCSCR,restricted,"Wang, Su-hua",1285,FALSE,0,2020-02-20T21:08:03Z
+1067,Prediction Mechanisms Pilot,restricted,"Palmquist, Carolyn",2945,FALSE,17,2020-02-21T19:41:57Z
+1068,Prediction Mechanisms,restricted,"Palmquist, Carolyn",2945,FALSE,32,2020-02-21T20:01:00Z
+1069,Swist Kids,restricted,"Gweon, Hyowon",5475,FALSE,5,2020-02-22T00:56:49Z
+1070,Children's Academic Orientation Scale,full,"Jirout, Jamie",1197,FALSE,2,2020-02-25T19:32:03Z
+1071,Video Task- Alda Project,restricted,"Goldstein, Thalia R.",531,FALSE,0,2020-02-26T15:49:15Z
+1072,Study 28,restricted,"Bauer, Patricia",5539,FALSE,5,2020-02-27T18:14:37Z
+1073,PLAYproject_TESTY,none,"Adolph, Karen",5,FALSE,2,2020-03-04T16:21:37Z
+1073,PLAYproject_TESTY,none,"Hasan, Shohan",431,FALSE,2,2020-03-04T16:21:37Z
+1073,PLAYproject_TESTY,none,"Lingeman, Jesse",6072,FALSE,2,2020-03-04T16:21:37Z
+1075,Action Planning Study: Longitudinal,none,"Keen, Rachel",2192,FALSE,138,2020-03-06T15:36:28Z
+1075,Action Planning Study: Longitudinal,none,"Adolph, Karen",5,FALSE,138,2020-03-06T15:36:28Z
+1075,Action Planning Study: Longitudinal,none,"Ossmy, Ori",1526,FALSE,138,2020-03-06T15:36:28Z
+1076,Verb learning with special interests,restricted,"Arunachalam, Sudha",4685,FALSE,0,2020-03-09T17:31:02Z
+1077,Verb learning using special interest items in children with and without ASD,restricted,"Arunachalam, Sudha",4685,FALSE,0,2020-03-09T17:33:57Z
+1078,fh,restricted,"Adolph, Karen",5,FALSE,0,2020-03-11T13:30:01Z
+1081,Ultradian cycles and learning,restricted,"Berger, Sarah E",2382,FALSE,3,2020-03-12T14:59:20Z
+1081,Ultradian cycles and learning,restricted,"Horger, Melissa Noel",2642,FALSE,3,2020-03-12T14:59:20Z
+1082,Test volume,restricted,"Kushnir, Tamar",5813,FALSE,1,2020-03-13T17:34:19Z
+1082,Test volume,restricted,"Kocher, Deanna",6533,FALSE,1,2020-03-13T17:34:19Z
+1083,R'GOD - Wave 1 - Child & Parent,restricted,"Richert, Rebekah",5032,FALSE,220,2020-03-14T23:07:35Z
+1084,R'GOD - Wave 6 - Child,restricted,"Richert, Rebekah",5032,FALSE,79,2020-03-15T03:12:09Z
+1086,R'GOD - Wave 2 - Child,restricted,"Richert, Rebekah",5032,FALSE,128,2020-03-17T20:31:14Z
+1087,STEM ID,restricted,"Richert, Rebekah",5032,FALSE,152,2020-03-17T20:38:45Z
+1088,R'GOD - Wave 4 - Child & Parent,restricted,"Richert, Rebekah",5032,FALSE,128,2020-03-17T20:39:07Z
+1089,STEM XP,restricted,"Richert, Rebekah",5032,FALSE,66,2020-03-17T20:39:53Z
+1090,R'GOD - Wave 3 - Child,restricted,"Richert, Rebekah",5032,FALSE,129,2020-03-17T20:40:57Z
+1091,R'GOD - Wave 5 - Child,restricted,"Richert, Rebekah",5032,FALSE,100,2020-03-17T20:42:18Z
+1092,ESBI - Child (Kirsten's Dissertation),restricted,"Richert, Rebekah",5032,FALSE,107,2020-03-18T01:33:27Z
+1093,MAPStudy - Yeram's Dissertation,restricted,"Gauvain, Mary",1199,FALSE,0,2020-03-18T02:46:15Z
+1094,Study 253,restricted,"Bauer, Patricia",5539,FALSE,1,2020-03-18T17:55:38Z
+1099,Bilingual Handwriting Development,restricted,"Lockman, Jeff",101,FALSE,3,2020-03-23T17:32:48Z
+1100,ESBI - Parent (Kirsten's Dissertation),restricted,"Richert, Rebekah",5032,FALSE,116,2020-03-24T03:30:06Z
+1101,Reflection of Exploration,restricted,"Sobel, David",111,FALSE,1,2020-03-24T13:11:46Z
+1102,LENA Data,restricted,"Raver, Cybele",368,FALSE,2,2020-03-27T18:03:42Z
+1103,PLAYproject_OHIOS,restricted,"Heathcock, Jill",596,FALSE,1,2020-03-31T20:17:46Z
+1104,Spatial Language Towards a Robot,restricted,"Kushnir, Tamar",5813,FALSE,42,2020-04-01T18:00:40Z
+1104,Spatial Language Towards a Robot,restricted,"Kocher, Deanna",6533,FALSE,42,2020-04-01T18:00:40Z
+1105,test title,restricted,"Adolph, Karen",5,FALSE,0,2020-04-02T16:31:00Z
+1108,Children’s Use of Everyday Artifacts: Learning the Hidden Affordance of Zipping,full,"Rachwani, Jaya",506,FALSE,48,2020-04-03T00:24:44Z
+1108,Children’s Use of Everyday Artifacts: Learning the Hidden Affordance of Zipping,full,"Adolph, Karen",5,FALSE,48,2020-04-03T00:24:44Z
+1108,Children’s Use of Everyday Artifacts: Learning the Hidden Affordance of Zipping,full,"Tamis-LeMonda, Catherine",11,FALSE,48,2020-04-03T00:24:44Z
+1108,Children’s Use of Everyday Artifacts: Learning the Hidden Affordance of Zipping,full,"Kaplan, Brianna Erin",2765,FALSE,48,2020-04-03T00:24:44Z
+1109,DELETE THIS VOLUME,restricted,"Adolph, Karen",5,FALSE,0,2020-04-03T00:44:27Z
+1111,"Individual data of ""Effects of visual information presented by augmented reality on children’s behavior""",full,"Shirai, Nobu",2219,FALSE,1,2020-04-07T04:55:49Z
+1112,A poster presented at European Conference on Visual Perception 2019,full,"Shirai, Nobu",2219,FALSE,1,2020-04-07T05:08:37Z
+1113,Everyday Learning (Reorganized),restricted,"Tamis-LeMonda, Catherine",11,FALSE,69,2020-04-13T17:14:36Z
+1113,Everyday Learning (Reorganized),restricted,"Mendelsohn, Alexandra Kiri",4829,FALSE,69,2020-04-13T17:14:36Z
+1113,Everyday Learning (Reorganized),restricted,"Libertus, Melissa",2708,FALSE,69,2020-04-13T17:14:36Z
+1113,Everyday Learning (Reorganized),restricted,"Cabrera, Natasha",3044,FALSE,69,2020-04-13T17:14:36Z
+1113,Everyday Learning (Reorganized),restricted,"Suh, Daniel",3521,FALSE,69,2020-04-13T17:14:36Z
+1113,Everyday Learning (Reorganized),restricted,"Ferraro, Jessica",6191,FALSE,69,2020-04-13T17:14:36Z
+1115,Visual short‐term memory for overtly attended objects during infancy,restricted,"Oakes, Lisa",538,FALSE,58,2020-04-13T19:29:24Z
+1116,Real-time Assembly of Coordination Patterns in Infants,full,"Ossmy, Ori",1526,FALSE,46,2020-04-14T11:17:56Z
+1116,Real-time Assembly of Coordination Patterns in Infants,full,"Adolph, Karen",5,FALSE,46,2020-04-14T11:17:56Z
+1117,ESBI - Colombia - Child (Kirsten's Dissertation),restricted,"Richert, Rebekah",5032,FALSE,68,2020-04-14T19:01:35Z
+1118,"Infant exuberant object play at home: Immense amounts of time-distributed, variable practice",full,"Tamis-LeMonda, Catherine",11,FALSE,4,2020-04-14T20:03:24Z
+1118,"Infant exuberant object play at home: Immense amounts of time-distributed, variable practice",full,"Adolph, Karen",5,FALSE,4,2020-04-14T20:03:24Z
+1118,"Infant exuberant object play at home: Immense amounts of time-distributed, variable practice",full,"Herzberg, Orit",3137,FALSE,4,2020-04-14T20:03:24Z
+1119,ESBI – Colombia - Parent (Kirsten's Dissertation),restricted,"Richert, Rebekah",5032,FALSE,68,2020-04-14T23:55:44Z
+1120,BehAV.ai: Computer vision and developmental science,restricted,"Gilmore, Rick O.",6,FALSE,1,2020-04-15T14:43:51Z
+1121,Observing Pretend Behaviors,restricted,"Goldstein, Thalia R.",531,FALSE,4,2020-04-15T19:18:06Z
+1121,Observing Pretend Behaviors,restricted,"Thompson, Brittany",3152,FALSE,4,2020-04-15T19:18:06Z
+1122,Content Analysis,restricted,"Weisberg, Deena Skolnick",562,FALSE,2,2020-04-17T13:25:16Z
+1124,IOWA Videos,restricted,"Ross-Sheehy, Shannon",2073,FALSE,0,2020-04-20T15:45:03Z
+1125,VWM,restricted,"Ross-Sheehy, Shannon",2073,FALSE,0,2020-04-20T17:05:14Z
+1126,SOVVIHP (Sarah Panameno Honor Thesis),restricted,"Richert, Rebekah",5032,FALSE,116,2020-04-20T18:37:41Z
+1127,SLL_Online_Testing,full,"Gweon, Hyowon",5475,FALSE,2,2020-04-23T03:52:40Z
+1128,Parents Fine-tune their Speech to Children's Vocabulary Knowledge,restricted,"Yurovsky, Daniel",3037,FALSE,41,2020-04-23T16:54:47Z
+1129,Preschool Dance Study (3-6 years),restricted,"Cirelli, Laura",2738,FALSE,80,2020-05-04T18:24:58Z
+1130,Study 255,restricted,"Bauer, Patricia",5539,FALSE,44,2020-05-06T15:29:52Z
+1132,delete,restricted,"Seisler, Andrea R.",437,FALSE,3,2020-05-11T15:17:26Z
+1133,Transfer of spatial relations from 2D-3D with varied relational language,restricted,"Casasola, Marianella",650,FALSE,0,2020-05-14T17:20:53Z
+1134,MSR Long,restricted,"Lockman, Jeff",101,FALSE,1,2020-05-14T23:22:09Z
+1135,Concert Hall Acoustics - Spatial Room Impulse Responses & Subjective Attributes,restricted,"Vigeant, Michelle Celine",6688,FALSE,1,2020-05-19T18:42:15Z
+1135,Concert Hall Acoustics - Spatial Room Impulse Responses & Subjective Attributes,restricted,"Neal, Matthew",6704,FALSE,1,2020-05-19T18:42:15Z
+1136,Discovery and Learning through Play at Home,full,"Suarez Rivera, Catalina",5345,FALSE,3,2020-05-20T20:39:02Z
+1136,Discovery and Learning through Play at Home,full,"Gonzalez, Sandy",5617,FALSE,3,2020-05-20T20:39:02Z
+1136,Discovery and Learning through Play at Home,full,"Herzberg, Orit",3137,FALSE,3,2020-05-20T20:39:02Z
+1136,Discovery and Learning through Play at Home,full,"Tamis-LeMonda, Catherine",11,FALSE,3,2020-05-20T20:39:02Z
+1136,Discovery and Learning through Play at Home,full,"Adolph, Karen",5,FALSE,3,2020-05-20T20:39:02Z
+1137,Jayaraman Test,restricted,"Jayaraman, Swapnaa",254,FALSE,2,2020-05-21T20:31:21Z
+1138,MEL2 Teacher Ed Interviews Summer 2020,restricted,"Lombardi, Doug",4945,FALSE,2,2020-05-23T14:51:58Z
+1139,test,restricted,"Hart, Sara",2818,FALSE,0,2020-05-24T14:11:20Z
+1140,Pandemic Qualitative Study,restricted,"de Marchena, Ashley Brooke",2587,FALSE,0,2020-05-25T12:58:13Z
+1141,Toddler Dance Study (1.5-3 years),restricted,"Cirelli, Laura",2738,FALSE,91,2020-05-27T14:07:23Z
+1144,Mothers talk about infants’ actions: Verbs correspond to infants’ real-time behavior,restricted,"Adolph, Karen",5,FALSE,3,2020-06-10T19:26:45Z
+1144,Mothers talk about infants’ actions: Verbs correspond to infants’ real-time behavior,restricted,"Tamis-LeMonda, Catherine",11,FALSE,3,2020-06-10T19:26:45Z
+1146,Face off: Pitting face detection algorithms against one another,restricted,"Gilmore, Rick O.",6,FALSE,3,2020-06-23T14:34:10Z
+1147,Coordination of eyes and head in outdoor walking and search,restricted,"Franchak, John",14,FALSE,1,2020-06-29T17:17:52Z
+1148,Gait trials for Leah,restricted,"Iverson, Jana",334,FALSE,1,2020-07-01T17:07:19Z
+1149,PLAY GOLD test,restricted,"Jayaraman, Swapnaa",254,FALSE,0,2020-07-02T15:23:59Z
+1150,PLAY SILVER test,restricted,"Jayaraman, Swapnaa",254,FALSE,0,2020-07-02T15:25:40Z
+1151,Online Inferring Competence,restricted,"Gweon, Hyowon",5475,FALSE,1,2020-07-11T01:17:44Z
+1152,Intentional action processing across the transition to crawling: Does the experience of self-locomotion impact infants' understanding of intentional actions?,full,"Brandone, Amanda",331,FALSE,1,2020-07-16T18:36:23Z
+1152,Intentional action processing across the transition to crawling: Does the experience of self-locomotion impact infants' understanding of intentional actions?,full,"Stout, Wyntre",943,FALSE,1,2020-07-16T18:36:23Z
+1152,Intentional action processing across the transition to crawling: Does the experience of self-locomotion impact infants' understanding of intentional actions?,full,"Moty, Kelsey",405,FALSE,1,2020-07-16T18:36:23Z
+1153,Curiosity and Character Development Measures,full,"Jirout, Jamie",1197,FALSE,2,2020-07-20T18:24:41Z
+1158,NYU-Langone Sunset Park Parent Outreach Videos and Workshops,full,"Tamis-LeMonda, Catherine",11,FALSE,2,2020-07-22T19:07:46Z
+1158,NYU-Langone Sunset Park Parent Outreach Videos and Workshops,full,"Mendelsohn, Alexandra Kiri",4829,FALSE,2,2020-07-22T19:07:46Z
+1158,NYU-Langone Sunset Park Parent Outreach Videos and Workshops,full,"Robelo, Fernanda",3411,FALSE,2,2020-07-22T19:07:46Z
+1159,"Does It Matter How We Speak About Social Kinds? A Large, Pre-Registered, Online Experimental Study of How Language Shapes the Development of Essentialist Beliefs",full,"Rhodes, Marjorie",277,FALSE,2,2020-07-28T22:39:09Z
+1162,Study 257,restricted,"Bauer, Patricia",5539,FALSE,4,2020-08-10T19:00:55Z
+1163,ELP Puppet coding manual,full,"Barr, Rachel",104,FALSE,1,2020-08-10T20:34:39Z
+1163,ELP Puppet coding manual,full,"Blanchfield, Olivia",4834,FALSE,1,2020-08-10T20:34:39Z
+1164,Cognitive flexiblity data sharing,full,"Barr, Rachel",104,FALSE,0,2020-08-10T20:42:02Z
+1164,Cognitive flexiblity data sharing,full,"Blanchfield, Olivia",4834,FALSE,0,2020-08-10T20:42:02Z
+1165,Cognitive flexiblity data sharing 2,full,"Barr, Rachel",104,FALSE,0,2020-08-10T21:17:54Z
+1165,Cognitive flexiblity data sharing 2,full,"Blanchfield, Olivia",4834,FALSE,0,2020-08-10T21:17:54Z
+1165,Cognitive flexiblity data sharing 2,full,"Rocha-Hidalgo, Joscelin",6608,FALSE,0,2020-08-10T21:17:54Z
+1166,Grandparenting in the Digital age during COVID-19--videochat,full,"Barr, Rachel",104,FALSE,0,2020-08-10T21:20:18Z
+1166,Grandparenting in the Digital age during COVID-19--videochat,full,"Blanchfield, Olivia",4834,FALSE,0,2020-08-10T21:20:18Z
+1168,Comparing apples to manzanas and oranges to naranjas: A new measure of English-Spanish vocabulary in dual language learners,restricted,"Gonzalez, Sandy",5617,FALSE,3,2020-08-12T20:20:07Z
+1168,Comparing apples to manzanas and oranges to naranjas: A new measure of English-Spanish vocabulary in dual language learners,restricted,"Tamis-LeMonda, Catherine",11,FALSE,3,2020-08-12T20:20:07Z
+1168,Comparing apples to manzanas and oranges to naranjas: A new measure of English-Spanish vocabulary in dual language learners,restricted,"Adolph, Karen",5,FALSE,3,2020-08-12T20:20:07Z
+1170,The Child Affective Facial Expression Set Short Versions (CAFE-Ss): Development and Validation of Two Subsets of Children's Emotional Faces with Variability,full,"LoBue, Vanessa",82,FALSE,1,2020-08-16T19:05:18Z
+1170,The Child Affective Facial Expression Set Short Versions (CAFE-Ss): Development and Validation of Two Subsets of Children's Emotional Faces with Variability,full,"Yang, Yang",7132,FALSE,1,2020-08-16T19:05:18Z
+1171,"Automated Video Interview Personality Assessments: Reliability, Validity, and Generalizability Investigations",restricted,"Tay, Louis",6982,FALSE,129,2020-08-20T14:24:45Z
+1172,Eyelink training video,restricted,"Bauer, Patricia",5539,FALSE,1,2020-08-20T20:28:42Z
+1173,Predictors of gender differences in parent-child play styles,restricted,"Hopkins, Emily",530,FALSE,9,2020-08-20T22:18:51Z
+1174,TEA 0 a 3,full,"Camparo Avila, Daniel",2581,FALSE,16,2020-08-22T01:59:32Z
+1174,TEA 0 a 3,full,"Hontou, Cecilia",7265,FALSE,16,2020-08-22T01:59:32Z
+1175,Shaping the communicative landscape: The dynamics of infant locomotion and caregiver communication during everyday interactions,restricted,"Schneider, Joshua",416,FALSE,2,2020-08-24T18:22:53Z
+1175,Shaping the communicative landscape: The dynamics of infant locomotion and caregiver communication during everyday interactions,restricted,"Iverson, Jana",334,FALSE,2,2020-08-24T18:22:53Z
+1176,Perceptions of behavior,restricted,"Jaswal, Vikram",1117,FALSE,0,2020-08-24T22:14:38Z
+1178,"Joint Engagement in the Home Environment is Frequent, Multi-modal, Timely, and Structured",restricted,"Suarez Rivera, Catalina",5345,FALSE,8,2020-08-27T20:28:20Z
+1178,"Joint Engagement in the Home Environment is Frequent, Multi-modal, Timely, and Structured",restricted,"Schatz, Jacob Lev",3315,FALSE,8,2020-08-27T20:28:20Z
+1178,"Joint Engagement in the Home Environment is Frequent, Multi-modal, Timely, and Structured",restricted,"Herzberg, Orit",3137,FALSE,8,2020-08-27T20:28:20Z
+1178,"Joint Engagement in the Home Environment is Frequent, Multi-modal, Timely, and Structured",restricted,"Tamis-LeMonda, Catherine",11,FALSE,8,2020-08-27T20:28:20Z
+1180,Children rationally adjust cognitive effort based on task difficulty and reward probability,restricted,"Wang, Jenny",6754,FALSE,24,2020-09-02T13:04:39Z
+1181,Children’s Exposure to Spatial Language Promotes Their Spatial Thinking,restricted,"Casasola, Marianella",650,FALSE,101,2020-09-03T19:40:54Z
+1182,Debunking Handbook 2020,restricted,"Lewandowsky, Stephan",7411,FALSE,1,2020-09-22T16:51:03Z
+1182,Debunking Handbook 2020,restricted,"Cook, John",7410,FALSE,1,2020-09-22T16:51:03Z
+1182,Debunking Handbook 2020,restricted,"Lombardi, Doug",4945,FALSE,1,2020-09-22T16:51:03Z
+1183,Children’s Gesture use Provides Insight into Proportional Reasoning Strategies,restricted,"Cordes, Sara",798,FALSE,0,2020-09-22T21:01:03Z
+1184,NewFAMS Attention Protocol: Turkey,restricted,"Raver, Cybele",368,FALSE,0,2020-09-24T13:59:01Z
+1185,Learning about squishy surface,restricted,"Adolph, Karen",5,FALSE,20,2020-09-24T14:19:39Z
+1186,Detroit Creativity Project,restricted,"Goldstein, Thalia R.",531,FALSE,0,2020-09-25T15:09:44Z
+1186,Detroit Creativity Project,restricted,"Felsman, Peter",6464,FALSE,0,2020-09-25T15:09:44Z
+1187,Data from Infant Perception of Causal Motion study,full,"Johnson, Scott",93,FALSE,2,2020-09-28T18:01:59Z
+1188,"Dance, Emotion, and Cognition",restricted,"Goldstein, Thalia R.",531,FALSE,17,2020-10-05T18:56:09Z
+1188,"Dance, Emotion, and Cognition",restricted,"Stutesman, Megan G.",5678,FALSE,17,2020-10-05T18:56:09Z
+1189,Study 262 Jelena's Honors,restricted,"Bauer, Patricia",5539,FALSE,1,2020-10-05T20:35:03Z
+1191,Infant numerical matching online study,restricted,"Wang, Jenny",6754,FALSE,1,2020-10-08T17:04:46Z
+1193,Study 29,restricted,"Bauer, Patricia",5539,FALSE,1,2020-10-13T16:24:34Z
+1194,STEADY-A1,restricted,"Stepp, Stephanie",7115,FALSE,55,2020-10-14T01:32:29Z
+1194,STEADY-A1,restricted,"Frigoletto, Olivia",7922,FALSE,55,2020-10-14T01:32:29Z
+1194,STEADY-A1,restricted,"Shah, Raj R.",7916,FALSE,55,2020-10-14T01:32:29Z
+1194,STEADY-A1,restricted,"Celo, James",7951,FALSE,55,2020-10-14T01:32:29Z
+1194,STEADY-A1,restricted,"Wilson, Maddie W",7953,FALSE,55,2020-10-14T01:32:29Z
+1195,Study 105,restricted,"Bauer, Patricia",5539,FALSE,256,2020-10-14T19:01:34Z
+1196,Infants' Attention Skills,restricted,"Yeniad, Nihal",7395,FALSE,2,2020-10-15T09:47:29Z
+1197,Team IPOV,restricted,"Lombardi, Doug",4945,FALSE,3,2020-10-15T21:06:37Z
+1197,Team IPOV,restricted,"Bock, Kellyann Maureen",7386,FALSE,3,2020-10-15T21:06:37Z
+1197,Team IPOV,restricted,"Cecil, Tara",7497,FALSE,3,2020-10-15T21:06:37Z
+1198,Study 113,restricted,"Bauer, Patricia",5539,FALSE,84,2020-10-19T17:15:35Z
+1199,Study 122,restricted,"Bauer, Patricia",5539,FALSE,8,2020-10-21T20:10:54Z
+1200,Study 147,restricted,"Bauer, Patricia",5539,FALSE,61,2020-10-21T20:22:34Z
+1201,Study 148,restricted,"Bauer, Patricia",5539,FALSE,3,2020-10-22T20:47:22Z
+1202,Study 149,restricted,"Bauer, Patricia",5539,FALSE,1,2020-10-23T14:24:51Z
+1203,Study 150,restricted,"Bauer, Patricia",5539,FALSE,58,2020-10-23T14:27:18Z
+1204,Study 151,restricted,"Bauer, Patricia",5539,FALSE,48,2020-10-23T16:03:13Z
+1206,Packer Videos of Kindergarten Playground Free-Play in 1980s,full,"MacWhinney, Brian",315,FALSE,7,2020-10-27T00:54:56Z
+1206,Packer Videos of Kindergarten Playground Free-Play in 1980s,full,"Adolph, Karen",5,FALSE,7,2020-10-27T00:54:56Z
+1206,Packer Videos of Kindergarten Playground Free-Play in 1980s,full,"Xu, Melody",2775,FALSE,7,2020-10-27T00:54:56Z
+1207,Study 153,restricted,"Bauer, Patricia",5539,FALSE,16,2020-10-27T19:55:29Z
+1208,Study 154,restricted,"Bauer, Patricia",5539,FALSE,11,2020-10-27T20:10:01Z
+1209,Reptile Storybook Study 2,restricted,"LoBue, Vanessa",82,FALSE,40,2020-10-27T20:18:08Z
+1209,Reptile Storybook Study 2,restricted,"Reider, Lori",4313,FALSE,40,2020-10-27T20:18:08Z
+1210,VSTM,restricted,"Frick, Janet",99,FALSE,0,2020-10-28T18:17:15Z
+1210,VSTM,restricted,"Tracy, Quinn Brinton",153,FALSE,0,2020-10-28T18:17:15Z
+1211,Study 155,restricted,"Bauer, Patricia",5539,FALSE,61,2020-10-28T18:42:10Z
+1212,Study 156,restricted,"Bauer, Patricia",5539,FALSE,16,2020-10-28T20:07:13Z
+1213,Study 157,restricted,"Bauer, Patricia",5539,FALSE,43,2020-10-28T20:25:09Z
+1214,Study 158,restricted,"Bauer, Patricia",5539,FALSE,12,2020-10-28T22:17:36Z
+1215,Study 159,restricted,"Bauer, Patricia",5539,FALSE,45,2020-10-28T22:28:19Z
+1216,"Head and body structure infants’ visual experiences during mobile, naturalistic play",full,"Franchak, John",14,FALSE,1,2020-10-28T23:04:00Z
+1217,Study 160,restricted,"Bauer, Patricia",5539,FALSE,23,2020-10-30T18:00:13Z
+1218,Study 161,restricted,"Bauer, Patricia",5539,FALSE,10,2020-10-30T18:28:26Z
+1219,Study 162,restricted,"Bauer, Patricia",5539,FALSE,10,2020-10-30T18:38:53Z
+1220,Study 163,restricted,"Bauer, Patricia",5539,FALSE,8,2020-10-30T18:45:59Z
+1221,Study 164,restricted,"Bauer, Patricia",5539,FALSE,122,2020-10-30T18:53:05Z
+1222,Spatial Apps - Session Coding Videos,restricted,"Jirout, Jamie",1197,FALSE,62,2020-10-30T19:44:04Z
+1222,Spatial Apps - Session Coding Videos,restricted,"Eisen, Sierra",2891,FALSE,62,2020-10-30T19:44:04Z
+1223,Better Together: Infants' Object Interactions are Long and Complex During Everyday Joint Engagement,restricted,"Tamis-LeMonda, Catherine",11,FALSE,4,2020-11-02T18:15:03Z
+1223,Better Together: Infants' Object Interactions are Long and Complex During Everyday Joint Engagement,restricted,"Schatz, Jacob Lev",3315,FALSE,4,2020-11-02T18:15:03Z
+1223,Better Together: Infants' Object Interactions are Long and Complex During Everyday Joint Engagement,restricted,"Suarez Rivera, Catalina",5345,FALSE,4,2020-11-02T18:15:03Z
+1223,Better Together: Infants' Object Interactions are Long and Complex During Everyday Joint Engagement,restricted,"Kaplan, Brianna Erin",2765,FALSE,4,2020-11-02T18:15:03Z
+1224,Study 165,restricted,"Bauer, Patricia",5539,FALSE,34,2020-11-02T22:37:47Z
+1225,Learning about Germs in a Global Pandemic,restricted,"LoBue, Vanessa",82,FALSE,3,2020-11-04T17:34:56Z
+1225,Learning about Germs in a Global Pandemic,restricted,"Leotti, Lauren",5001,FALSE,3,2020-11-04T17:34:56Z
+1225,Learning about Germs in a Global Pandemic,restricted,"Bonawitz, Elizabeth",2173,FALSE,3,2020-11-04T17:34:56Z
+1226,Study 166,restricted,"Bauer, Patricia",5539,FALSE,10,2020-11-04T20:23:38Z
+1227,Study 167,restricted,"Bauer, Patricia",5539,FALSE,11,2020-11-04T20:30:27Z
+1228,Study 168,restricted,"Bauer, Patricia",5539,FALSE,107,2020-11-04T20:38:57Z
+1229,Study 169,restricted,"Bauer, Patricia",5539,FALSE,16,2020-11-05T20:57:40Z
+1230,Study 170,restricted,"Bauer, Patricia",5539,FALSE,15,2020-11-05T21:20:45Z
+1232,Study 171,restricted,"Bauer, Patricia",5539,FALSE,10,2020-11-09T22:52:22Z
+1233,Study 172,restricted,"Bauer, Patricia",5539,FALSE,10,2020-11-09T23:06:49Z
+1234,Study 173,restricted,"Bauer, Patricia",5539,FALSE,85,2020-11-10T17:45:11Z
+1235,Study 174,restricted,"Bauer, Patricia",5539,FALSE,60,2020-11-10T20:18:26Z
+1236,Study 175,restricted,"Bauer, Patricia",5539,FALSE,19,2020-11-10T21:08:32Z
+1237,Study 176,restricted,"Bauer, Patricia",5539,FALSE,1,2020-11-11T20:11:26Z
+1238,Study 177,restricted,"Bauer, Patricia",5539,FALSE,6,2020-11-11T20:13:35Z
+1239,Study 178,restricted,"Bauer, Patricia",5539,FALSE,43,2020-11-11T20:20:42Z
+1240,Study 179,restricted,"Bauer, Patricia",5539,FALSE,23,2020-11-11T21:39:06Z
+1241,Everyday Learning Remote Study,restricted,"Tamis-LeMonda, Catherine",11,FALSE,34,2020-11-12T17:09:30Z
+1241,Everyday Learning Remote Study,restricted,"Swirbul, Mackenzie",7148,FALSE,34,2020-11-12T17:09:30Z
+1241,Everyday Learning Remote Study,restricted,"Libertus, Melissa",2708,FALSE,34,2020-11-12T17:09:30Z
+1241,Everyday Learning Remote Study,restricted,"Suh, Daniel",3521,FALSE,34,2020-11-12T17:09:30Z
+1241,Everyday Learning Remote Study,restricted,"Cabrera, Natasha",3044,FALSE,34,2020-11-12T17:09:30Z
+1241,Everyday Learning Remote Study,restricted,"Silver, Alex",4325,FALSE,34,2020-11-12T17:09:30Z
+1241,Everyday Learning Remote Study,restricted,"Mendelsohn, Alexandra Kiri",4829,FALSE,34,2020-11-12T17:09:30Z
+1241,Everyday Learning Remote Study,restricted,"Ferraro, Jessica",6191,FALSE,34,2020-11-12T17:09:30Z
+1241,Everyday Learning Remote Study,restricted,"Mejia, Valerie",5584,FALSE,34,2020-11-12T17:09:30Z
+1242,STEADY A1_11.15.20,restricted,"Stepp, Stephanie",7115,FALSE,1,2020-11-15T20:02:49Z
+1243,Study 180,restricted,"Bauer, Patricia",5539,FALSE,18,2020-11-17T20:42:18Z
+1245,Study 181,restricted,"Bauer, Patricia",5539,FALSE,73,2020-11-17T21:04:37Z
+1246,Mime Videos,restricted,"Goldstein, Thalia R.",531,FALSE,67,2020-11-18T14:59:07Z
+1246,Mime Videos,restricted,"Stutesman, Megan G.",5678,FALSE,67,2020-11-18T14:59:07Z
+1247,Developing Belief Network: Events and Outreach,restricted,"Richert, Rebekah",5032,FALSE,6,2020-11-18T20:50:57Z
+1247,Developing Belief Network: Events and Outreach,restricted,"Corriveau, Kathleen",1612,FALSE,6,2020-11-18T20:50:57Z
+1247,Developing Belief Network: Events and Outreach,restricted,"Ghossainy, Maliki E.",7156,FALSE,6,2020-11-18T20:50:57Z
+1247,Developing Belief Network: Events and Outreach,restricted,"Lesage, Kirsten A.",1501,FALSE,6,2020-11-18T20:50:57Z
+1247,Developing Belief Network: Events and Outreach,restricted,"Meyer-Rieth, Carole",6448,FALSE,6,2020-11-18T20:50:57Z
+1247,Developing Belief Network: Events and Outreach,restricted,"Reyes Jaquez, Boli",7503,FALSE,6,2020-11-18T20:50:57Z
+1247,Developing Belief Network: Events and Outreach,restricted,"Weisman, Kara",7540,FALSE,6,2020-11-18T20:50:57Z
+1250,Test Paper,restricted,"Saxe, Rebecca",7159,FALSE,1,2020-11-24T15:27:13Z
+1251,Test Paper,restricted,"Saxe, Rebecca",7159,FALSE,0,2020-11-24T18:00:49Z
+1252,Training Spatial Skills Through Motor vs. Spatial Language,restricted,"Casasola, Marianella",650,FALSE,0,2020-11-24T19:08:26Z
+1252,Training Spatial Skills Through Motor vs. Spatial Language,restricted,"Bambha, Valerie",5500,FALSE,0,2020-11-24T19:08:26Z
+1252,Training Spatial Skills Through Motor vs. Spatial Language,restricted,"Simpson, Mary",7096,FALSE,0,2020-11-24T19:08:26Z
+1252,Training Spatial Skills Through Motor vs. Spatial Language,restricted,"Hwang, Marie",5864,FALSE,0,2020-11-24T19:08:26Z
+1252,Training Spatial Skills Through Motor vs. Spatial Language,restricted,"Lee-Genzel, Kira",5499,FALSE,0,2020-11-24T19:08:26Z
+1252,Training Spatial Skills Through Motor vs. Spatial Language,restricted,"Murthy, Naina",5875,FALSE,0,2020-11-24T19:08:26Z
+1252,Training Spatial Skills Through Motor vs. Spatial Language,restricted,"Lepez, Isabella Ann",6904,FALSE,0,2020-11-24T19:08:26Z
+1252,Training Spatial Skills Through Motor vs. Spatial Language,restricted,"Yang, Michelle",6585,FALSE,0,2020-11-24T19:08:26Z
+1252,Training Spatial Skills Through Motor vs. Spatial Language,restricted,"Zhou, Kelly",5871,FALSE,0,2020-11-24T19:08:26Z
+1253,Test,restricted,"Saxe, Rebecca",7159,FALSE,2,2020-11-25T14:08:29Z
+1254,Test Paper,restricted,"Saxe, Rebecca",7159,FALSE,0,2020-11-25T14:34:44Z
+1255,Biological Explanation Evaluation Study,restricted,"Mills, Candice",6232,FALSE,11,2020-12-02T22:37:57Z
+1255,Biological Explanation Evaluation Study,restricted,"Sands, Kaitlin",4035,FALSE,11,2020-12-02T22:37:57Z
+1256,Sample Sticky Mittens Training Session,restricted,"Needham, Amy",118,FALSE,1,2020-12-06T20:25:35Z
+1257,INFORMS MKT,full,"Novak, Jodie",7624,FALSE,7,2020-12-09T19:53:11Z
+1258,Test,restricted,"Saxe, Rebecca",7159,FALSE,0,2020-12-10T13:22:18Z
+1259,"Manual action, fitting, and spatial planning: Relating objects by young children",restricted,"Lockman, Jeff",101,FALSE,30,2020-12-10T16:48:13Z
+1260,Study 182,restricted,"Bauer, Patricia",5539,FALSE,73,2020-12-14T16:28:55Z
+1261,TIC Broken Human,restricted,"Palmquist, Carolyn",2945,FALSE,39,2020-12-14T20:01:08Z
+1262,DO NOT USE,restricted,"Palmquist, Carolyn",2945,FALSE,0,2020-12-15T16:13:49Z
+1263,Study 183,restricted,"Bauer, Patricia",5539,FALSE,1,2020-12-15T20:48:46Z
+1264,Study 184,restricted,"Bauer, Patricia",5539,FALSE,20,2020-12-15T20:50:10Z
+1265,Study 185,restricted,"Bauer, Patricia",5539,FALSE,19,2020-12-15T21:10:31Z
+1266,Study 186,restricted,"Bauer, Patricia",5539,FALSE,941,2020-12-15T21:44:44Z
+1267,Exploration--Collab,restricted,"Sen, Hilal",7217,FALSE,0,2020-12-16T11:27:14Z
+1268,DBN - Collaborative Protocols - Wave 1,restricted,"Corriveau, Kathleen",1612,FALSE,0,2021-01-05T15:59:05Z
+1269,Illustrating Concepts and Phenomena in Psychology: A Teacher-Friendly Compendium of Examples,restricted,"Cameron, Leslie",4957,FALSE,6,2021-01-05T17:36:49Z
+1270,Social Prototypes,restricted,"Lei, Ryan",5676,FALSE,3,2021-01-07T17:38:43Z
+1270,Social Prototypes,restricted,"Rhodes, Marjorie",277,FALSE,3,2021-01-07T17:38:43Z
+1272,Arundhati's Frustration Study,restricted,"Weisberg, Deena Skolnick",562,FALSE,10,2021-01-18T15:04:20Z
+1273,Practice and proficiency: Factors that facilitate infant walking skill,restricted,"Adolph, Karen",5,FALSE,83,2021-01-21T19:56:46Z
+1275,Bilingual Learners,restricted,"Corriveau, Kathleen",1612,FALSE,1,2021-02-02T01:58:10Z
+1278,DARPA: Locomotion data for 3D reconstruction,restricted,"Nez, Reda",4291,FALSE,75,2021-02-03T21:36:00Z
+1278,DARPA: Locomotion data for 3D reconstruction,restricted,"Ossmy, Ori",1526,FALSE,75,2021-02-03T21:36:00Z
+1278,DARPA: Locomotion data for 3D reconstruction,restricted,"Adolph, Karen",5,FALSE,75,2021-02-03T21:36:00Z
+1280,Play & Learning Across a Year (PLAY) Project - Data Release,none,"Adolph, Karen",5,FALSE,1,2021-02-09T16:41:55Z
+1280,Play & Learning Across a Year (PLAY) Project - Data Release,none,"Soska, Kasey",406,FALSE,1,2021-02-09T16:41:55Z
+1280,Play & Learning Across a Year (PLAY) Project - Data Release,none,"Tamis-LeMonda, Catherine",11,FALSE,1,2021-02-09T16:41:55Z
+1280,Play & Learning Across a Year (PLAY) Project - Data Release,none,"Gilmore, Rick O.",6,FALSE,1,2021-02-09T16:41:55Z
+1282,Sturgis SD Main St. traffic August 2020,restricted,"Ritter, Frank",7133,FALSE,3,2021-02-16T21:15:07Z
+1282,Sturgis SD Main St. traffic August 2020,restricted,"Oury, Jacob",7147,FALSE,3,2021-02-16T21:15:07Z
+1282,Sturgis SD Main St. traffic August 2020,restricted,"Nez, Reda",4291,FALSE,3,2021-02-16T21:15:07Z
+1283,Estimation of in-scanner head pose changes during structural MRI using a convolutional neural network trained on eye tracker video,restricted,"Pardoe, Heath",7644,FALSE,6,2021-02-17T23:51:51Z
+1285,Effort-Outcome,restricted,"LoBue, Vanessa",82,FALSE,0,2021-02-23T19:46:05Z
+1285,Effort-Outcome,restricted,"Kim, Emily",3545,FALSE,0,2021-02-23T19:46:05Z
+1286,Pilot videos of children sitting and standing for BTB,none,"Adolph, Karen",5,FALSE,13,2021-02-25T21:26:43Z
+1286,Pilot videos of children sitting and standing for BTB,none,"Cole, Whitney Graham",81,FALSE,13,2021-02-25T21:26:43Z
+1288,Publications from the Longitudinal Attention and Temperament Study (LANTS),full,"LoBue, Vanessa",82,FALSE,3,2021-02-26T18:30:42Z
+1288,Publications from the Longitudinal Attention and Temperament Study (LANTS),full,"Perez-Edgar, Koraly",96,FALSE,3,2021-02-26T18:30:42Z
+1288,Publications from the Longitudinal Attention and Temperament Study (LANTS),full,"Buss, Kristin A",249,FALSE,3,2021-02-26T18:30:42Z
+1289,"Expanding the Horizons for Research at the Developmental Interface of Brain, Body, and Behavior",restricted,"Marshall, Peter",1228,FALSE,1,2021-03-03T15:07:42Z
+1289,"Expanding the Horizons for Research at the Developmental Interface of Brain, Body, and Behavior",restricted,"Campbell, Kaitlyn",7105,FALSE,1,2021-03-03T15:07:42Z

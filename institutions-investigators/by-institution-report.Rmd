@@ -1,0 +1,94 @@
+---
+title: "Institution report"
+author: "Rick Gilmore"
+date: "`r Sys.time()`"
+output: 
+  html_document:
+    code_folding: hide
+params:
+  party_id: 8
+  db_login: email@provider.com
+  vols_csv: ../shared-volumes-sessions/csv/shared_volumes_sessions.csv
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+
+library(tidyverse) # For magrittr pipe
+
+source("R/helpers.R")
+
+databraryapi::login_db(params$db_login)
+```
+
+# Investigators
+
+```{r get-inst-invest-info}
+this_inst <- get_inst_info(params$party_id)
+these_ais <- make_institutional_party_df(params$party_id)
+```
+
+Databrary `r ifelse(this_inst$daa == TRUE, "has", "do not have")` an active Databrary Access Agreement with `r this_inst$inst_name`.
+
+There are `r this_inst$n_auth_invest` Authorized Investigators (AIs) at `r this_inst$inst_name`.
+
+Here is a table summarizing them:
+
+```{r invest-table}
+these_ais %>%
+  dplyr::select(., sortname, prename, party_url) %>%
+  dplyr::arrange(., sortname) %>%
+  kableExtra::kbl(.) %>%
+  kableExtra::kable_styling()
+```
+
+# Volumes/Projects
+
+```{r get-project-data, message=FALSE}
+# Read volumes/sessions data from locally saved CSV
+vols_sess_data <- readr::read_csv(params$vols_csv)
+
+this_inst_vols <- vols_sess_data %>%
+  dplyr::filter(., owner_ids.id %in% these_ais$party_id) %>%
+  dplyr::mutate(., invest_url = paste0("https://nyu.databrary.org/party/", owner_ids.id),
+                proj_url = paste0("https://nyu.databrary.org/volume/", vol_id))
+```
+
+Investigators at at `r this_inst$inst_name` have shared $n=$ `r length(unique(this_inst_vols$vol_id))` projects.
+
+The following table summarizes data about these projects:
+
+```{r get-asset-data}
+# Add asset summary data
+get_asset_data_for_vol <- function(vol_id) {
+  source('../volumes-with-videos-annotations/R/helpers.R')
+  
+  vol_stats <- calculate_vol_asset_stats(vol_id)
+  vol_summ <- tibble(vol_id = vol_stats$vol_id[1],
+                     tot_files = sum(vol_stats$n_files),
+                     tot_gb = sum(vol_stats$tot_size_gb),
+                     tot_hrs = sum(vol_stats$tot_dur_hrs))
+  vol_summ
+}
+
+get_asset_data_for_vols <- function(vol_ids) {
+  purrr::map_df(vol_ids, get_asset_data_for_vol)
+}
+
+these_vols_assets <- get_asset_data_for_vols(this_inst_vols$vol_id)
+```
+
+```{r}
+# Merge with inst_vols
+this_inst_vols <- dplyr::left_join(this_inst_vols, these_vols_assets,  by = 'vol_id')
+```
+
+```{r owner-project-asset-table}
+this_inst_vols %>%
+  dplyr::arrange(., owner_ids.name, desc(n_sessions)) %>%
+  dplyr::filter(., n_sessions > 0) %>%
+  dplyr::select(., owner_ids.name, proj_url, n_sessions, created_date) %>%
+  kableExtra::kbl(.) %>%
+  kableExtra::kable_styling()  
+```
+
