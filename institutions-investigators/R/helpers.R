@@ -17,10 +17,10 @@ make_institutional_party_df <- function(inst_id) {
   require(databraryapi)
   require(purrr)
   
-  if (!db_credentials_valid()){
-    warning("Not logged in to Databrary. Run `databraryapi::login_db()`.")
-    return(NULL)
-  }
+  # if (!db_credentials_valid()){
+  #   message("Not logged in to Databrary. Run `databraryapi::login_db()`.")
+  #   return(NULL)
+  # }
   
   if (databraryapi::is_institution(inst_id)) {
     message("Retrieving investigators at institution ", inst_id, '.')
@@ -537,7 +537,7 @@ get_volume_data <- function(vol_id = 1, skip_vols = c(1276, 1277)) {
   }
 }
 
-get_ai_vols <- function(party_id) {
+get_ai_vols <- function(party_id=6) {
   message("Getting data for party ", party_id)
   ai_df <- databraryapi::list_party(party_id)
   if (!is.null(ai_df)) {
@@ -572,16 +572,16 @@ trim_ai_vols <- function(df) {
   cbind(new_df, first_owners)
 }
 
-get_clean_ai_vols <- function(party_id) {
+get_clean_ai_vols <- function(party_id=6) {
   if (is.na(party_id)) {
     message("Invalid party_id `", party_id, '`.')
     return(NULL)
   } else {
-    message("Getting volume data for party ", party_id)
+    message("Getting volume data for party `", party_id, '`.')
     
     ai_df <- databraryapi::list_party(party_id)
     if (is.null(dim(ai_df$access))) {
-      warning("No volumes found for party ", party_id, '.')
+      message(" No volumes found for party `", party_id, '`.')
       return(NULL)
     } else {
       raw_vols_df <- trim_ai_vols(ai_df$access$volume)
@@ -609,7 +609,7 @@ save_ai_vols_csv <- function(df, csv_path = "csv") {
                                    tolower(df$last_name[1]), "-", 
                                    tolower(df$first_name[1]), "-vols-", 
                                            Sys.Date(), ".csv"))
-  message("Saving file: `", fn, '`.')
+  message(" Saving file: `", fn, '`.')
   readr::write_csv(df, fn)
 }
 
@@ -684,7 +684,7 @@ get_assets_in_vol <- function(vol_id, vb = FALSE) {
   vol_data <- databraryapi::list_assets_in_volume(vol_id)
   
   if (is.null(vol_data)) {
-    if (vb) message(" No available assets.")
+    message("   No available assets.")
     NULL
   } else {
     # some volumes have no assets with duration or size attribute
@@ -734,11 +734,11 @@ get_ai_vols_assets <- function(party_id) {
 #---------------------------------------------------------------------------------------
 # Open a CSV with volume data, generate asset-level statistics, return an augmented
 # data frame
-merge_asset_stats_for_ai_vols <- function(fn) {
-  this_vol_df <- readr::read_csv(fn)
+merge_asset_stats_for_ai_vols <- function(vol_csv_fn) {
+  this_vol_df <- readr::read_csv(vol_csv_fn)
   asset_stats_df <- purrr::map_df(this_vol_df$vol_id, calculate_vol_asset_stats)
   if (dim(asset_stats_df)[1] == 0) {
-    warning("No asset data available for volumes in `", fn, '`.')
+    warning("No asset data available for volumes in `", vol_csv_fn, '`.')
     return(NULL)
   } else {
     df <- dplyr::left_join(this_vol_df, asset_stats_df, by = 'vol_id')
@@ -749,10 +749,10 @@ merge_asset_stats_for_ai_vols <- function(fn) {
 
 #---------------------------------------------------------------------------------------
 # Export CSV with volume and asset-level statistics for a given researcher
-export_vol_asset_csv <- function(in_fn, csv_path = "csv") {
-  df <- merge_asset_stats_for_ai_vols(in_fn)
+export_vol_asset_csv <- function(vol_csv_fn, csv_path = "csv") {
+  df <- merge_asset_stats_for_ai_vols(vol_csv_fn)
   if (is.null(df)) {
-    warning("No asset data to be merged for `", in_fn, '`.')
+    warning("  No asset data to be merged for `", vol_csv_fn, '`.')
     return(NULL)
   } else {
     out_fn <- file.path(csv_path, paste0(stringi::stri_pad(df$person_id[1], 4, pad="0"), "-",
@@ -760,9 +760,29 @@ export_vol_asset_csv <- function(in_fn, csv_path = "csv") {
                                          tolower(df$first_name[1]), "-assets-", 
                                          Sys.Date(), ".csv"))
     
-    message("Saving file: `", out_fn, '`.')
+    message("  Saving file: `", out_fn, '`.')
     readr::write_csv(df, out_fn)    
   }
+}
+
+
+get_unique_ai_assets <- function(ai_index, inst_df, csv_dir = "institutions-investigators/csv") {
+  this_party_id <- inst_df$party_id[ai_index]
+  this_party_sortname <- inst_df$sortname[ai_index]
+  this_party_prename <- inst_df$prename[ai_index]
+  
+  this_search_str <- paste0(tolower(this_party_sortname), "\\-", tolower(this_party_prename), "\\-vols")
+  this_vol_fns <- list.files(csv_dir, this_search_str,
+                             full.names = TRUE)
+  
+  if (length(this_vol_fns) > 1) {
+    this_vol_fn <- this_vol_fns[length(this_vol_fns)]
+  } else {
+    message("  No unique volume-level CSV found for party `", this_party_id, '`.')
+    return(NULL)
+  }
+  message("Computing asset-by-volume statistics for party `", this_party_id, '`.')
+  merge_asset_stats_for_ai_vols(this_vol_fn)
 }
 
 #---------------------------------------------------------------------------------------

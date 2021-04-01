@@ -1,5 +1,19 @@
 # Generate reports
 
+## Helper function
+
+copy_to_archive <- function(fpath, fn) {
+  if (file.exists(paste0(fpath, "/", fn))) {
+    current_fn <- paste0(fpath, "/", fn)
+    new_fn <- paste0(fpath, "/archive/", Sys.Date(), '_', fn)
+    if (file.copy(current_fn, new_fn)) {
+      message("Report copied to ", paste0(fpath, "/archive"))
+    }
+  } else {
+    message("No file copied.")
+  }
+}
+
 ## Log in to Databrary
 
 login <- databraryapi::login_db()
@@ -9,29 +23,37 @@ update_demog_data <- FALSE # This is very time consuming, but should be done per
 
 ## Funders report
 
+### Default is to update on each run
+
 message("----- Generating funders report -----")
-rmarkdown::render(rmarkdown::render(input = "funders/funder-report.Rmd",
-                                    output = "funders/funder-report.html",
-                                    params = list(use_saved_file = "False")))
+copy_to_archive("funders", "funder-report.html")
+rmarkdown::render(input = "funders/funder-report.Rmd",
+                  output_file = "funders/funder-report.html",
+                  params = list(use_saved_file = "False"))
 
 ## Institutions
 
 message("----- Generating institutions report -----")
 source("institutions-investigators/R/helpers.R")
+copy_to_archive("institutions-investigators", "institutions.html")
 render_institutions_report(max_party_id = max_party_id)
 
 ## Investigators
 
 message("----- Generating investigators report -----")
+copy_to_archive("institutions-investigators", "investigators.html")
 render_investigators_report()
 
 ## Shared volumes and sessions
+
 message("----- Generating volumes and sessions report -----")
+copy_to_archive("shared-volumes-sessions", "shared-volumes-sessions.html")
 rmarkdown::render("shared-volumes-sessions/shared-volumes-sessions.Rmd")
 
 ## Shared assets
 
 message("----- Generating volume assets report -----")
+copy_to_archive("volumes-with-videos-annotations", "assets-stats.html")
 if (update_asset_data) {
   message("-- Regenerating asset data from all volumes --")
   rmarkdown::render("volumes-with-videos-annotations/assets-stats.Rmd", 
@@ -46,13 +68,16 @@ if (update_asset_data) {
 ## Volume-level demographics
 
 message("----- Generating volume-level demographics report -----")
+
+copy_to_archive("participant-demographics", "participant-demog-report.html")
+
 if (update_demog_data) {
   message("-- Regenerating demog data from all volumes --")
   rmarkdown::render("participant-demographics/participant-demog-report.Rmd", 
                     params=list(update_demo_csvs=TRUE))
 } else {
-  message("-- Using previously saved volume asset data --")
-  rmarkdown::render("volumes-with-videos-annotations/assets-stats.Rmd", 
+  message("-- Using previously saved demog data --")
+  rmarkdown::render("participant-demographics/participant-demog-report.Rmd", 
                     params=list(update_demo_csvs=FALSE))
   
 }
@@ -60,5 +85,9 @@ if (update_demog_data) {
 ## Tags and keywords
 
 message("----- Generating volume-level demographics report -----")
+
 source("tags-keywords/R/helpers.R")
+
+copy_to_archive("tags-keywords", "tags-keywords-report.html")
+
 rmarkdown::render("tags-keywords/tags-keywords-report.Rmd")

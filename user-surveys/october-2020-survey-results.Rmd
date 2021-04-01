@@ -160,26 +160,62 @@ sharing_req <- survey_df %>%
   dplyr::rename(., sharing_reqd = `Are you required to share data for any of your active research projects?`)
 
 required_yn <- function(x) {
-  ifelse(stringr::str_detect(x, "Not required"), FALSE, TRUE)
+  ifelse(stringr::str_detect(x, "Not required|not exactly sure"), FALSE, TRUE)
 }
 
+sometimes_required <- function(x) {
+  ifelse(stringr::str_detect(x, "sometimes|depends"), TRUE, FALSE)
+}
+
+# journal_requires <- function(x) {
+#   ifelse(stringr::str_detect(x, "Yes, required to share with journal"), TRUE, FALSE)
+# }
 journal_requires <- function(x) {
-  ifelse(stringr::str_detect(x, "Yes, required to share with journal"), TRUE, FALSE)
+  ifelse(stringr::str_detect(x, "journal"), TRUE, FALSE)
 }
 
+# funder_requires <- function(x) {
+#   ifelse(stringr::str_detect(x, "Yes, required to share with grant"), TRUE, FALSE)
+# }
 funder_requires <- function(x) {
-  ifelse(stringr::str_detect(x, "Yes, required to share with grant"), TRUE, FALSE)
+  ifelse(stringr::str_detect(x, "grant|internal"), TRUE, FALSE)
+}
+
+willing_to_share <- function(x) {
+  ifelse(stringr::str_detect(x, "willing|do anyway"), TRUE, FALSE)
+}
+
+share_w_collab <- function(x) {
+  ifelse(stringr::str_detect(x, "collaborators"), TRUE, FALSE)
+  
 }
 
 sharing_req <- sharing_req %>%
   dplyr::mutate(., sharing_req_yn = required_yn(sharing_reqd)) %>%
+  dplyr::mutate(., sometimes_req = sometimes_required(sharing_reqd)) %>%
+  dplyr::mutate(., willing_to_share = willing_to_share(sharing_reqd)) %>%
+  dplyr::mutate(., share_w_collab = share_w_collab(sharing_reqd)) %>%
   dplyr::mutate(., journal_req = journal_requires(sharing_reqd)) %>%
   dplyr::mutate(., funder_req = funder_requires(sharing_reqd))
+  
 ```
 
 ```{r}
 xtabs(~ sharing_req_yn, sharing_req)
 ```
+
+```{r}
+xtabs(~ sometimes_req, sharing_req)
+```
+
+```{r}
+xtabs(~ willing_to_share, sharing_req)
+```
+
+```{r}
+xtabs(~ share_w_collab, sharing_req)
+```
+
 
 ```{r}
 xtabs(~ journal_req, sharing_req)
