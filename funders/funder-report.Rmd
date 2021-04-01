@@ -1,5 +1,6 @@
 ---
 title: "Databrary Funders"
+date: "`r Sys.time()`"
 output: 
   html_document:
     self_contained: True
@@ -90,7 +91,7 @@ vols_w_funders <- funders_df %>%
 
 There are $n=$ `r length(unique(vols_w_funders$vol_id))` volumes that list funders.
 
-### Number of volumes crediting funder
+### Funders credited by number of volumes
 
 ```{r filter-print}
 funders_filtered <- funders_df %>%
@@ -106,7 +107,7 @@ funders_filtered %>%
 
 ## Logout
 
-```{r logout}
+```{r logout, echo=FALSE}
 databraryapi::logout_db()
 if (file.exists(".databrary.RData")) {
   unlink(".databrary.RData")

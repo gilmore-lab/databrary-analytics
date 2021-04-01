@@ -9,7 +9,6 @@ ai_id,ai_last,ai_first,affiliation,url,inst_id,inst_name,inst_db_url,ai_db_url,n
 3854,Merry,Sally Engle,New York University,NA,8,New York University (NYU),https://nyu.databrary.org/party/8,https://nyu.databrary.org/party/3854,1,NA,NA
 2289,Schieffelin,Bambi B,New York University,NA,8,New York University (NYU),https://nyu.databrary.org/party/8,https://nyu.databrary.org/party/2289,1,NA,NA
 6869,Trainor,Audrey,New York University,NA,8,New York University (NYU),https://nyu.databrary.org/party/8,https://nyu.databrary.org/party/6869,1,NA,NA
-2810,West,Tessa,NYU,NA,8,New York University (NYU),https://nyu.databrary.org/party/8,https://nyu.databrary.org/party/2810,1,NA,NA
 4685,Arunachalam,Sudha,New York University,NA,8,New York University (NYU),https://nyu.databrary.org/party/8,https://nyu.databrary.org/party/4685,0,NA,NA
 1834,Besser,Howard,NYU,NA,8,New York University (NYU),https://nyu.databrary.org/party/8,https://nyu.databrary.org/party/1834,0,NA,NA
 1254,Blair,Clancy,New York University,NA,8,New York University (NYU),https://nyu.databrary.org/party/8,https://nyu.databrary.org/party/1254,0,NA,NA
@@ -29,14 +28,15 @@ ai_id,ai_last,ai_first,affiliation,url,inst_id,inst_name,inst_db_url,ai_db_url,n
 3890,Sanes,Dan,New York University,NA,8,New York University (NYU),https://nyu.databrary.org/party/8,https://nyu.databrary.org/party/3890,0,NA,NA
 6697,Schneider,David,New York University,NA,8,New York University (NYU),https://nyu.databrary.org/party/8,https://nyu.databrary.org/party/6697,0,NA,NA
 335,Vouloumanos,Athena,NA,http://www.psych.nyu.edu/vouloumanos/,8,New York University (NYU),https://nyu.databrary.org/party/8,https://nyu.databrary.org/party/335,0,NA,NA
+2810,West,Tessa,NYU,NA,8,New York University (NYU),https://nyu.databrary.org/party/8,https://nyu.databrary.org/party/2810,0,NA,NA
 2240,Yoshikawa,Hirokazu,New York University,NA,8,New York University (NYU),https://nyu.databrary.org/party/8,https://nyu.databrary.org/party/2240,0,NA,NA
 249,Buss,Kristin A,The Pennsylvania State University,NA,12,"Pennsylvania State University, University Park",https://nyu.databrary.org/party/12,https://nyu.databrary.org/party/249,13,NA,NA
 96,Perez-Edgar,Koraly,The Pennsylvania State University,http://www.catlabpsu.com/,12,"Pennsylvania State University, University Park",https://nyu.databrary.org/party/12,https://nyu.databrary.org/party/96,9,NA,NA
 1256,Frank,Jennifer,The Pennsylvania State University,NA,12,"Pennsylvania State University, University Park",https://nyu.databrary.org/party/12,https://nyu.databrary.org/party/1256,7,NA,NA
-252,Scherf,Kathryn Suzanne,The Pennsylvania State University,https://www.suzyscherf.com/,12,"Pennsylvania State University, University Park",https://nyu.databrary.org/party/12,https://nyu.databrary.org/party/252,3,NA,NA
 6,Gilmore,Rick O.,The Pennsylvania State University,http://gilmore-lab.github.io,12,"Pennsylvania State University, University Park",https://nyu.databrary.org/party/12,https://nyu.databrary.org/party/6,2,0000-0002-7676-3982,NA
 8047,O'Sullivan,Deirdre,The Pennsylvania State University,NA,12,"Pennsylvania State University, University Park",https://nyu.databrary.org/party/12,https://nyu.databrary.org/party/8047,1,NA,NA
 7133,Ritter,Frank,The Pennsylvania State University,NA,12,"Pennsylvania State University, University Park",https://nyu.databrary.org/party/12,https://nyu.databrary.org/party/7133,1,NA,NA
+252,Scherf,Kathryn Suzanne,The Pennsylvania State University,https://www.suzyscherf.com/,12,"Pennsylvania State University, University Park",https://nyu.databrary.org/party/12,https://nyu.databrary.org/party/252,1,NA,NA
 1807,Berenbaum,Sheri,The Pennsylvania State University,NA,12,"Pennsylvania State University, University Park",https://nyu.databrary.org/party/12,https://nyu.databrary.org/party/1807,0,NA,NA
 4399,Bierman,Karen,The Pennsylvania State University,NA,12,"Pennsylvania State University, University Park",https://nyu.databrary.org/party/12,https://nyu.databrary.org/party/4399,0,NA,NA
 7298,Clair,Kevin,The Pennsylvania State University,NA,12,"Pennsylvania State University, University Park",https://nyu.databrary.org/party/12,https://nyu.databrary.org/party/7298,0,NA,NA
@@ -162,7 +162,7 @@ ai_id,ai_last,ai_first,affiliation,url,inst_id,inst_name,inst_db_url,ai_db_url,n
 1972,Troseth,Georgene Lynn,Vanderbilt University,NA,119,Vanderbilt University,https://nyu.databrary.org/party/119,https://nyu.databrary.org/party/1972,0,NA,NA
 1280,Brooker,Rebecca Jo,Texas A&M University,NA,128,Texas A&M University,https://nyu.databrary.org/party/128,https://nyu.databrary.org/party/1280,1,NA,NA
 7263,Carter-Sowell,Adrienne R.,Texas A&M University,NA,128,Texas A&M University,https://nyu.databrary.org/party/128,https://nyu.databrary.org/party/7263,0,NA,NA
-324,Dunham,Yarrow,Yale University,NA,134,Yale University,https://nyu.databrary.org/party/134,https://nyu.databrary.org/party/324,3,NA,NA
+324,Dunham,Yarrow,Yale University,NA,134,Yale University,https://nyu.databrary.org/party/134,https://nyu.databrary.org/party/324,2,NA,NA
 3899,Bailey,Craig,Yale University,NA,134,Yale University,https://nyu.databrary.org/party/134,https://nyu.databrary.org/party/3899,1,NA,NA
 7628,Deng,Jun,Yale University,https://medicine.yale.edu/profile/jun_deng/,134,Yale University,https://nyu.databrary.org/party/134,https://nyu.databrary.org/party/7628,1,NA,NA
 3169,Gee,Dylan,Yale University,NA,134,Yale University,https://nyu.databrary.org/party/134,https://nyu.databrary.org/party/3169,0,NA,NA
@@ -507,8 +507,8 @@ ai_id,ai_last,ai_first,affiliation,url,inst_id,inst_name,inst_db_url,ai_db_url,n
 4168,Kan,Pui Fong,University of Colorado,NA,317,"University of Colorado, Boulder",https://nyu.databrary.org/party/317,https://nyu.databrary.org/party/4168,0,NA,NA
 4499,Moore,Emily Brooke,University of Colorado Boulder,NA,317,"University of Colorado, Boulder",https://nyu.databrary.org/party/317,https://nyu.databrary.org/party/4499,0,NA,NA
 341,Gibb,Brandon,Binghamton University (SUNY),NA,356,Binghamton University,https://nyu.databrary.org/party/356,https://nyu.databrary.org/party/341,0,NA,NA
-331,Brandone,Amanda,Lehigh University,NA,358,Lehigh University,https://nyu.databrary.org/party/358,https://nyu.databrary.org/party/331,1,NA,NA
 2909,Belkin,Liuba,Lehigh University,NA,358,Lehigh University,https://nyu.databrary.org/party/358,https://nyu.databrary.org/party/2909,0,NA,NA
+331,Brandone,Amanda,Lehigh University,NA,358,Lehigh University,https://nyu.databrary.org/party/358,https://nyu.databrary.org/party/331,0,NA,NA
 2089,Nicolopoulou,Ageliki,Lehigh University,NA,358,Lehigh University,https://nyu.databrary.org/party/358,https://nyu.databrary.org/party/2089,0,NA,NA
 332,Baker,David,"Drs. Nicholas and Dorothy Cummings Center for the History of Psychology, University of Akron",http://www.uakron.edu/chp,359,University of Akron,https://nyu.databrary.org/party/359,https://nyu.databrary.org/party/332,0,NA,NA
 322,Wilkinson,Louise C.,Syracuse University,NA,363,Syracuse University,https://nyu.databrary.org/party/363,https://nyu.databrary.org/party/322,0,NA,NA
@@ -832,8 +832,8 @@ ai_id,ai_last,ai_first,affiliation,url,inst_id,inst_name,inst_db_url,ai_db_url,n
 1345,Friedman,Ori,University of Waterloo,NA,2255,University of Waterloo,https://nyu.databrary.org/party/2255,https://nyu.databrary.org/party/1345,0,NA,NA
 2975,Henderson,Heather,University of Waterloo,NA,2255,University of Waterloo,https://nyu.databrary.org/party/2255,https://nyu.databrary.org/party/2975,0,NA,NA
 5805,Laing,Andrew Charles,University of Waterloo,NA,2255,University of Waterloo,https://nyu.databrary.org/party/2255,https://nyu.databrary.org/party/5805,0,NA,NA
-7504,Leimgruber,Kristin Lyn,Franklin and Marshall College,https://www.fandm.edu/kristi-leimgruber,2259,Franklin and Marshall College,https://nyu.databrary.org/party/2259,https://nyu.databrary.org/party/7504,16,NA,NA
 3001,Howard,Lauren,Franklin & Marshall,NA,2259,Franklin and Marshall College,https://nyu.databrary.org/party/2259,https://nyu.databrary.org/party/3001,0,NA,NA
+7504,Leimgruber,Kristin Lyn,Franklin and Marshall College,https://www.fandm.edu/kristi-leimgruber,2259,Franklin and Marshall College,https://nyu.databrary.org/party/2259,https://nyu.databrary.org/party/7504,0,NA,NA
 2051,Rottman,Joshua,Franklin & Marshall College,NA,2259,Franklin and Marshall College,https://nyu.databrary.org/party/2259,https://nyu.databrary.org/party/2051,0,NA,NA
 2264,Schreiber,Joe,Chatham University,NA,2267,Chatham University,https://nyu.databrary.org/party/2267,https://nyu.databrary.org/party/2264,0,NA,NA
 2210,Pastrovicchio,Sonia,NA,NA,2272,Association Italian Teachers Method Feldenkrais (AIIMF),https://nyu.databrary.org/party/2272,https://nyu.databrary.org/party/2210,0,NA,NA

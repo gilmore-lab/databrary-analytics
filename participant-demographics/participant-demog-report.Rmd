@@ -132,8 +132,6 @@ To generate the report, one must generate and save the data locally.
 
 Databrary has demographic data for $n=$ `r sum(!is.na(demo_df$session_id))` individual sessions.
 
-Add a clickable URL to the volume.
-
 ```{r}
 demo_df <- demo_df %>%
   dplyr::mutate(., vol_url = paste0("https://nyu.databrary.org/volume/", vol_id))

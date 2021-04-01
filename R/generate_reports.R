@@ -1,5 +1,8 @@
 # Generate reports
 
+## Requirements
+require(databraryapi)
+
 ## Helper function
 
 copy_to_archive <- function(fpath, fn) {
@@ -91,3 +94,14 @@ source("tags-keywords/R/helpers.R")
 copy_to_archive("tags-keywords", "tags-keywords-report.html")
 
 rmarkdown::render("tags-keywords/tags-keywords-report.Rmd")
+
+## Clean-up
+
+
+databraryapi::logout_db()
+if (file.exists(".databrary.RData")) unlink(".databrary.RData")
+if (file.exists("funders/.databrary.RData")) unlink("funders/.databrary.RData")
+if (file.exists("institutions-investigators/.databrary.RData")) unlink("institutions-investigators/.databrary.RData")
+if (file.exists("shared-volumes-sessions/.databrary.RData")) unlink("shared-volumes-sessions/.databrary.RData")
+if (file.exists("volumes-with-videos-annotations/.databrary.RData")) unlink("volumes-with-videos-annotations/.databrary.RData")
+if (file.exists("tags-keywords/.databrary.RData")) unlink("tags-keywords/.databrary.RData")
