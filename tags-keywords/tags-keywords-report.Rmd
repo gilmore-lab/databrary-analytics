@@ -152,7 +152,7 @@ Save as CSV.
 
 ```{r}
 stem_csv_fn <- paste0('csv/stem-keywords-', Sys.Date(), '.csv')
-readr::write_csv(x = stem_vols_df, file = stem_csv_fn)
+readr::write_csv(x = stem_vols_df, path = stem_csv_fn)
 ```
 
 # Clean-up

@@ -46,7 +46,7 @@ By default, this report updates the local institutions database.
 If you are running the report for the first time, the update may take awhile.
 It may be necessary for you to increase the value for the report's `max_party_id` parameter from time to time.
 
-```{r}
+```{r, echo=FALSE}
 update_inst_csv(max_id = params$max_party_id)
 ```
 

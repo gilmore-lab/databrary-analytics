@@ -1,5 +1,5 @@
 ---
-title: "Institution report"
+title: "Investigators report"
 date: "`r Sys.time()`"
 output: 
   html_document:
@@ -78,6 +78,14 @@ if (params$use_saved_file) {
   }
 }
 ```
+
+Remove duplicate entries for some AIs.
+
+```{r remove-dup-AIs}
+invest_df <- invest_df %>%
+  dplyr::distinct(ai_id, .keep_all = TRUE)
+```
+
 
 # Visualize and summarize {.tabset .tabset-fade .tabset-pills}
 
