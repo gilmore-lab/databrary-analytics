@@ -10,7 +10,7 @@ copy_to_archive <- function(fpath, fn) {
     current_fn <- paste0(fpath, "/", fn)
     new_fn <- paste0(fpath, "/archive/", Sys.Date(), '_', fn)
     if (file.copy(current_fn, new_fn)) {
-      message("Report copied to ", paste0(fpath, "/archive"))
+      message("Report copied to '", paste0(fpath, "/archive'"))
     }
   } else {
     message("No file copied.")
@@ -19,8 +19,8 @@ copy_to_archive <- function(fpath, fn) {
 
 ## Log in to Databrary
 
-login <- databraryapi::login_db()
-max_party_id <- 8104
+login <- databraryapi::login_db(db_login)
+max_party_id <- 8392
 update_asset_data <- FALSE # This is very time consuming, but should be done periodically, probably quarterly
 update_demog_data <- FALSE # This is very time consuming, but should be done periodically, probably quarterly
 
@@ -31,7 +31,7 @@ update_demog_data <- FALSE # This is very time consuming, but should be done per
 message("----- Generating funders report -----")
 copy_to_archive("funders", "funder-report.html")
 rmarkdown::render(input = "funders/funder-report.Rmd",
-                  output_file = "funders/funder-report.html",
+                  output_file = "funder-report.html",
                   params = list(use_saved_file = "False"))
 
 ## Institutions
@@ -87,7 +87,7 @@ if (update_demog_data) {
 
 ## Tags and keywords
 
-message("----- Generating volume-level demographics report -----")
+message("----- Generating tags and keywords report -----")
 
 source("tags-keywords/R/helpers.R")
 
@@ -96,7 +96,6 @@ copy_to_archive("tags-keywords", "tags-keywords-report.html")
 rmarkdown::render("tags-keywords/tags-keywords-report.Rmd")
 
 ## Clean-up
-
 
 databraryapi::logout_db()
 if (file.exists(".databrary.RData")) unlink(".databrary.RData")

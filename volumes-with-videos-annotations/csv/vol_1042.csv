@@ -1,7 +1,7 @@
-vol_id,mimetype,extension,asset_type,n_files,tot_size,tot_dur,duration
-1042,video/mp4,mp4,MPEG-4 video,713,396025371114,1187277233,NA
-1042,text/plain,txt,Plain text,27,19853720,0,NA
-1042,text/csv,csv,Comma-separated values,25,41653958,0,NA
-1042,application/pdf,pdf,Portable document,2,326576,0,NA
-1042,application/vnd.openxmlformats-officedocument.spreadsheetml.sheet,xlsx,Microsoft Excel (Office Open XML) workbook,2,252368,0,NA
-1042,application/vnd.datavyu,opf,Datavyu,185,1161642,0,NA
+vol_id,mimetype,extension,asset_type,n_files,tot_size_gb,tot_dur_hrs
+1042,video/mp4,mp4,MPEG-4 video,713,386.7435264785156,329.79923138888887
+1042,text/plain,txt,Plain text,27,0.019391955078125,0
+1042,text/csv,csv,Comma-separated values,25,0.040677693359375,0
+1042,application/pdf,pdf,Portable document,2,3.18921875e-4,0
+1042,application/vnd.openxmlformats-officedocument.spreadsheetml.sheet,xlsx,Microsoft Excel (Office Open XML) workbook,2,2.46453125e-4,0
+1042,application/vnd.datavyu,opf,Datavyu,185,0.001134416015625,0

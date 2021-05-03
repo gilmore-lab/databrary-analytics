@@ -256,7 +256,7 @@ div.tocify {
 
 <h1 class="title toc-ignore">Asset statistics report</h1>
 <h4 class="author">Rick Gilmore</h4>
-<h4 class="date">2021-04-01 07:56:58</h4>
+<h4 class="date">2021-05-03 11:31:01</h4>
 
 </div>
 
@@ -285,7 +285,7 @@ div.tocify {
 
 if (dir.exists(params$csv_path)) {
   csv_fns &lt;- list.files(params$csv_path, &#39;\\.csv&#39;, full.names = TRUE)
-  assets_df &lt;- purrr::map_df(csv_fns, read_csv)
+  assets_df &lt;- purrr::map_df(csv_fns, readr::read_csv)
 } else {
   stop(paste0(&#39;CSV directory not found: &#39;, params$csv_path))
 }</code></pre>
@@ -295,7 +295,7 @@ if (dir.exists(params$csv_path)) {
 <h1>Analyze</h1>
 <div id="volumes-with-shared-assets" class="section level2">
 <h2>Volumes with shared assets</h2>
-<p>There are 282 shared volumes with assets.</p>
+<p>There are 293 shared volumes with assets.</p>
 <p>The following shows the number of shared volumes with a given asset type.</p>
 <pre class="r"><code>assets_df %&gt;%
   dplyr::group_by(asset_type) %&gt;%
@@ -320,7 +320,7 @@ n
 MPEG-4 video
 </td>
 <td style="text-align:right;">
-237
+246
 </td>
 </tr>
 <tr>
@@ -328,7 +328,15 @@ MPEG-4 video
 Portable document
 </td>
 <td style="text-align:right;">
-48
+49
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Comma-separated values
+</td>
+<td style="text-align:right;">
+37
 </td>
 </tr>
 <tr>
@@ -341,26 +349,10 @@ Microsoft Excel (Office Open XML) workbook
 </tr>
 <tr>
 <td style="text-align:left;">
-Comma-separated values
-</td>
-<td style="text-align:right;">
-33
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-MPEG-1 or MPEG-2 audio layer III
-</td>
-<td style="text-align:right;">
-26
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
 Datavyu
 </td>
 <td style="text-align:right;">
-25
+27
 </td>
 </tr>
 <tr>
@@ -368,15 +360,7 @@ Datavyu
 Microsoft Word (Office Open XML) document
 </td>
 <td style="text-align:right;">
-24
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-Portable network graphics
-</td>
-<td style="text-align:right;">
-23
+27
 </td>
 </tr>
 <tr>
@@ -389,10 +373,26 @@ JPEG image
 </tr>
 <tr>
 <td style="text-align:left;">
+Portable network graphics
+</td>
+<td style="text-align:right;">
+22
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+MPEG-1 or MPEG-2 audio layer III
+</td>
+<td style="text-align:right;">
+18
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
 Plain text
 </td>
 <td style="text-align:right;">
-13
+17
 </td>
 </tr>
 <tr>
@@ -400,7 +400,7 @@ Plain text
 SPSS System File
 </td>
 <td style="text-align:right;">
-9
+10
 </td>
 </tr>
 <tr>
@@ -424,15 +424,7 @@ Microsoft PowerPoint (Office Open XML) presentation
 Rich text format
 </td>
 <td style="text-align:right;">
-3
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-Codes for the Human Analysis of Transcripts
-</td>
-<td style="text-align:right;">
-1
+4
 </td>
 </tr>
 <tr>
@@ -440,12 +432,20 @@ Codes for the Human Analysis of Transcripts
 ELAN - Linguistic Annotator
 </td>
 <td style="text-align:right;">
-1
+2
 </td>
 </tr>
 <tr>
 <td style="text-align:left;">
 Microsoft Excel spreadsheet
+</td>
+<td style="text-align:right;">
+2
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Codes for the Human Analysis of Transcripts
 </td>
 <td style="text-align:right;">
 1
@@ -460,8 +460,8 @@ Microsoft Excel spreadsheet
 <pre class="r"><code>assets_df %&gt;%
   dplyr::group_by(asset_type) %&gt;%
   dplyr::summarise(total_files = sum(n_files),
-            total_size = sum(tot_size),
-            total_dur = sum(ms_to_hrs(tot_dur))) %&gt;%
+            total_size = sum(tot_size_gb),
+            total_dur = sum(tot_dur_hrs)) %&gt;%
   dplyr::arrange(., desc(total_files)) %&gt;%
   dplyr::select(asset_type, total_files, total_size, total_dur) %&gt;%
   kableExtra::kable(., format = &#39;html&#39;) %&gt;%
@@ -489,13 +489,13 @@ total_dur
 MPEG-4 video
 </td>
 <td style="text-align:right;">
-23461
+24228
 </td>
 <td style="text-align:right;">
-9.500690e+12
+9374.7121513
 </td>
 <td style="text-align:right;">
-8306.463
+8420.058
 </td>
 </tr>
 <tr>
@@ -506,7 +506,7 @@ JPEG image
 2728
 </td>
 <td style="text-align:right;">
-5.072379e+09
+4.9534951
 </td>
 <td style="text-align:right;">
 0.000
@@ -517,10 +517,10 @@ JPEG image
 Datavyu
 </td>
 <td style="text-align:right;">
-2346
+2536
 </td>
 <td style="text-align:right;">
-7.100271e+06
+0.0076666
 </td>
 <td style="text-align:right;">
 0.000
@@ -531,10 +531,24 @@ Datavyu
 Comma-separated values
 </td>
 <td style="text-align:right;">
-1780
+1797
 </td>
 <td style="text-align:right;">
-2.936579e+09
+2.9121509
+</td>
+<td style="text-align:right;">
+0.000
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Portable network graphics
+</td>
+<td style="text-align:right;">
+1438
+</td>
+<td style="text-align:right;">
+0.0708090
 </td>
 <td style="text-align:right;">
 0.000
@@ -545,27 +559,13 @@ Comma-separated values
 MPEG-1 or MPEG-2 audio layer III
 </td>
 <td style="text-align:right;">
-1677
+1322
 </td>
 <td style="text-align:right;">
-1.602505e+11
+52.5855052
 </td>
 <td style="text-align:right;">
-8105.619
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-Portable network graphics
-</td>
-<td style="text-align:right;">
-1439
-</td>
-<td style="text-align:right;">
-6.236578e+07
-</td>
-<td style="text-align:right;">
-0.000
+3121.027
 </td>
 </tr>
 <tr>
@@ -573,10 +573,10 @@ Portable network graphics
 Plain text
 </td>
 <td style="text-align:right;">
-379
+1194
 </td>
 <td style="text-align:right;">
-2.065826e+10
+105.5658859
 </td>
 <td style="text-align:right;">
 0.000
@@ -590,7 +590,7 @@ Microsoft Excel (Office Open XML) workbook
 318
 </td>
 <td style="text-align:right;">
-1.195136e+07
+0.0116713
 </td>
 <td style="text-align:right;">
 0.000
@@ -604,7 +604,7 @@ Codes for the Human Analysis of Transcripts
 314
 </td>
 <td style="text-align:right;">
-6.443897e+07
+0.0629287
 </td>
 <td style="text-align:right;">
 0.000
@@ -615,10 +615,10 @@ Codes for the Human Analysis of Transcripts
 Portable document
 </td>
 <td style="text-align:right;">
-262
+265
 </td>
 <td style="text-align:right;">
-1.403559e+09
+1.3836000
 </td>
 <td style="text-align:right;">
 0.000
@@ -629,10 +629,24 @@ Portable document
 Microsoft Word (Office Open XML) document
 </td>
 <td style="text-align:right;">
-110
+114
 </td>
 <td style="text-align:right;">
-1.376399e+08
+0.1344949
+</td>
+<td style="text-align:right;">
+0.000
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+ELAN - Linguistic Annotator
+</td>
+<td style="text-align:right;">
+65
+</td>
+<td style="text-align:right;">
+0.0048694
 </td>
 <td style="text-align:right;">
 0.000
@@ -646,7 +660,7 @@ Microsoft Word document
 44
 </td>
 <td style="text-align:right;">
-3.002084e+07
+0.0293172
 </td>
 <td style="text-align:right;">
 0.000
@@ -657,24 +671,10 @@ Microsoft Word document
 SPSS System File
 </td>
 <td style="text-align:right;">
-20
+24
 </td>
 <td style="text-align:right;">
-1.440225e+07
-</td>
-<td style="text-align:right;">
-0.000
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-ELAN - Linguistic Annotator
-</td>
-<td style="text-align:right;">
-18
-</td>
-<td style="text-align:right;">
-9.006940e+05
+0.0140647
 </td>
 <td style="text-align:right;">
 0.000
@@ -685,10 +685,10 @@ ELAN - Linguistic Annotator
 Microsoft Excel spreadsheet
 </td>
 <td style="text-align:right;">
-14
+15
 </td>
 <td style="text-align:right;">
-0.000000e+00
+0.0000595
 </td>
 <td style="text-align:right;">
 0.000
@@ -702,7 +702,7 @@ Microsoft PowerPoint (Office Open XML) presentation
 11
 </td>
 <td style="text-align:right;">
-4.634827e+07
+0.0452620
 </td>
 <td style="text-align:right;">
 0.000
@@ -713,10 +713,10 @@ Microsoft PowerPoint (Office Open XML) presentation
 Rich text format
 </td>
 <td style="text-align:right;">
-3
+5
 </td>
 <td style="text-align:right;">
-1.917300e+04
+0.0000353
 </td>
 <td style="text-align:right;">
 0.000

@@ -254,7 +254,7 @@ div.tocify {
 
 
 <h1 class="title toc-ignore">Institution report</h1>
-<h4 class="date">2021-04-01 07:55:05</h4>
+<h4 class="date">2021-05-03 08:16:31</h4>
 
 </div>
 
@@ -276,20 +276,19 @@ div.tocify {
 <div id="update-institutions" class="section level1">
 <h1>Update institutions</h1>
 <p>By default, this report updates the local institutions database. If you are running the report for the first time, the update may take awhile. It may be necessary for you to increase the value for the report’s <code>max_party_id</code> parameter from time to time.</p>
-<pre class="r"><code>update_inst_csv(max_id = params$max_party_id)</code></pre>
 <pre><code>## # A tibble: 657 x 7
-##    inst_id inst_name           inst_url   n_auth_invest daa     lat   lon
-##      &lt;dbl&gt; &lt;chr&gt;               &lt;chr&gt;              &lt;dbl&gt; &lt;lgl&gt; &lt;dbl&gt; &lt;dbl&gt;
-##  1       2 Staff               &lt;NA&gt;                   0 FALSE  NA    NA  
-##  2       8 New York Universit… http://ww…            31 TRUE   40.7 -74.0
-##  3       9 National Science F… &lt;NA&gt;                   0 FALSE  38.8 -77.1
-##  4      10 National Institute… https://w…             0 FALSE  35.7 -97.5
-##  5      12 Pennsylvania State… http://ww…            20 TRUE   40.8 -77.9
-##  6      15 National Institute… &lt;NA&gt;                   0 FALSE  39.0 -77.1
-##  7      43 University of Wisc… https://w…            10 TRUE   43.1 -89.4
-##  8      44 University of Mich… https://u…             9 TRUE   42.3 -83.7
-##  9      45 University of Roch… https://w…             4 TRUE   43.1 -77.6
-## 10      46 Georgia State Univ… http://ww…             3 TRUE   33.8 -84.4
+##    inst_id inst_name                 inst_url      n_auth_invest daa     lat   lon
+##      &lt;dbl&gt; &lt;chr&gt;                     &lt;chr&gt;                 &lt;dbl&gt; &lt;lgl&gt; &lt;dbl&gt; &lt;dbl&gt;
+##  1       2 Staff                     &lt;NA&gt;                      0 FALSE  NA    NA  
+##  2       8 New York University (NYU) http://www.n…            31 TRUE   40.7 -74.0
+##  3       9 National Science Foundat… &lt;NA&gt;                      0 FALSE  38.8 -77.1
+##  4      10 National Institutes of H… https://www.…             0 FALSE  35.7 -97.5
+##  5      12 Pennsylvania State Unive… http://www.p…            20 TRUE   40.8 -77.9
+##  6      15 National Institute of Ch… &lt;NA&gt;                      0 FALSE  39.0 -77.1
+##  7      43 University of Wisconsin,… https://www.…            10 TRUE   43.1 -89.4
+##  8      44 University of Michigan    https://umic…             9 TRUE   42.3 -83.7
+##  9      45 University of Rochester   https://www.…             4 TRUE   43.1 -77.6
+## 10      46 Georgia State University  http://www.g…             3 TRUE   33.8 -84.4
 ## # … with 647 more rows</code></pre>
 </div>
 <div id="import-data" class="section level1">

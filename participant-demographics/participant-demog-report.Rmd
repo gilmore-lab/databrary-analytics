@@ -12,7 +12,7 @@ output:
 params:
     db_login: email@provider.com
     new_vol_rg_min: 1281
-    new_vol_rg_max: 1290
+    new_vol_rg_max: 1310
     update_demo_csvs: False
 ---
 
@@ -57,7 +57,8 @@ The default is *not* to update all of the CSVs, but use the locally saved copies
 if (params$update_demo_csvs == TRUE) {
   message(paste0("Updating CSVs for volume-level demographic data for volumes ",
                  params$new_vol_rg_min, " to ", params$new_vol_rg_max))
-  regenerate_vol_demo_csvs(params$new_vol_rg_min, params$new_vol_rg_max)
+  regenerate_vol_demo_csvs(params$new_vol_rg_min, params$new_vol_rg_max,
+                           csv_dir = "csv")
 } else {
   message("Using saved volume-level demographic data.")
 }

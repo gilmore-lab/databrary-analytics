@@ -1,5 +1,5 @@
-vol_id,mimetype,extension,asset_type,n_files,tot_size,tot_dur,duration
-929,image/jpeg,jpg,JPEG image,1,3271088,0,NA
-929,image/png,png,Portable network graphics,1,27248,0,NA
-929,application/pdf,pdf,Portable document,4,2010464,0,NA
-929,application/vnd.openxmlformats-officedocument.presentationml.presentation,pptx,Microsoft PowerPoint (Office Open XML) presentation,7,40481112,0,NA
+vol_id,mimetype,extension,asset_type,n_files,tot_size_gb,tot_dur_hrs
+929,image/jpeg,jpg,JPEG image,1,0.003194421875,0
+929,image/png,png,Portable network graphics,1,2.6609375e-5,0
+929,application/pdf,pdf,Portable document,4,0.00196334375,0
+929,application/vnd.openxmlformats-officedocument.presentationml.presentation,pptx,Microsoft PowerPoint (Office Open XML) presentation,7,0.0395323359375,0

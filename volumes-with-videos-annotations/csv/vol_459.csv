@@ -1,2 +1,2 @@
-vol_id,mimetype,extension,asset_type,n_files,tot_size,tot_dur,duration
-459,video/mp4,mp4,MPEG-4 video,8,15505812,35691,NA
+vol_id,mimetype,extension,asset_type,n_files,tot_size_gb,tot_dur_hrs
+459,video/mp4,mp4,MPEG-4 video,8,0.01514239453125,0.009914166666666667

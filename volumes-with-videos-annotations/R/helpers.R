@@ -75,7 +75,7 @@ calculate_vol_asset_stats <- function(vol_id, save_file = FALSE,
     
     if (save_file) {
       if (vb) message(paste0(" Saving data from volume ", vol_id))
-      write_csv(vol_summary, file = paste0(save_path, '/vol_', vol_id, '.csv'))
+      readr::write_csv(vol_summary, path = paste0(save_path, '/vol_', vol_id, '.csv'))
     }
     vol_summary
   }

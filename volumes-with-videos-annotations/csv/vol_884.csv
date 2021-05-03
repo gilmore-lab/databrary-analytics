@@ -1,4 +1,4 @@
-vol_id,mimetype,extension,asset_type,n_files,tot_size,tot_dur,duration
-884,video/mp4,mp4,MPEG-4 video,82,149619504,748885,NA
-884,image/jpeg,jpg,JPEG image,245,132742820,0,NA
-884,text/csv,csv,Comma-separated values,3,34705,0,NA
+vol_id,mimetype,extension,asset_type,n_files,tot_size_gb,tot_dur_hrs
+884,video/mp4,mp4,MPEG-4 video,82,0.146112796875,0.2080236111111111
+884,image/jpeg,jpg,JPEG image,245,0.12963166015625,0
+884,text/csv,csv,Comma-separated values,3,3.38916015625e-5,0

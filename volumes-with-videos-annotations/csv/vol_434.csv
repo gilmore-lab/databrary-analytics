@@ -1,5 +1,5 @@
-vol_id,mimetype,extension,asset_type,n_files,tot_size,tot_dur,duration
-434,video/mp4,mp4,MPEG-4 video,156,111460710615,401235438,NA
-434,text/csv,csv,Comma-separated values,198,3013599,0,NA
-434,application/vnd.openxmlformats-officedocument.wordprocessingml.document,docx,Microsoft Word (Office Open XML) document,1,121749,0,NA
-434,application/vnd.datavyu,opf,Datavyu,79,500590,0,NA
+vol_id,mimetype,extension,asset_type,n_files,tot_size_gb,tot_dur_hrs
+434,video/mp4,mp4,MPEG-4 video,156,108.84835020996094,111.45428833333334
+434,text/csv,csv,Comma-separated values,198,0.0029429677734375,0
+434,application/vnd.openxmlformats-officedocument.wordprocessingml.document,docx,Microsoft Word (Office Open XML) document,1,1.188955078125e-4,0
+434,application/vnd.datavyu,opf,Datavyu,79,4.88857421875e-4,0

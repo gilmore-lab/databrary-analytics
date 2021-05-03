@@ -52,7 +52,7 @@ if (!params$use_saved_csvs) {
 
 if (dir.exists(params$csv_path)) {
   csv_fns <- list.files(params$csv_path, '\\.csv', full.names = TRUE)
-  assets_df <- purrr::map_df(csv_fns, read_csv)
+  assets_df <- purrr::map_df(csv_fns, readr::read_csv)
 } else {
   stop(paste0('CSV directory not found: ', params$csv_path))
 }
@@ -83,8 +83,8 @@ Total number of assets, total size, and total duration by type:
 assets_df %>%
   dplyr::group_by(asset_type) %>%
   dplyr::summarise(total_files = sum(n_files),
-            total_size = sum(tot_size),
-            total_dur = sum(ms_to_hrs(tot_dur))) %>%
+            total_size = sum(tot_size_gb),
+            total_dur = sum(tot_dur_hrs)) %>%
   dplyr::arrange(., desc(total_files)) %>%
   dplyr::select(asset_type, total_files, total_size, total_dur) %>%
   kableExtra::kable(., format = 'html') %>%

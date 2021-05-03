@@ -1,3 +1,3 @@
-vol_id,mimetype,extension,asset_type,n_files,tot_size,tot_dur,duration
-761,video/mp4,mp4,MPEG-4 video,20,4197823951,5351367,NA
-761,image/png,png,Portable network graphics,1,4693012,0,NA
+vol_id,mimetype,extension,asset_type,n_files,tot_size_gb,tot_dur_hrs
+761,video/mp4,mp4,MPEG-4 video,20,4.099437452148438,1.4864908333333335
+761,image/png,png,Portable network graphics,1,0.00458301953125,0

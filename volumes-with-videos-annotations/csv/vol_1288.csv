@@ -1,4 +1,4 @@
-vol_id,mimetype,extension,asset_type,n_files,tot_size,tot_dur,duration
-1288,text/csv,csv,Comma-separated values,1,95824,0,NA
-1288,application/pdf,pdf,Portable document,3,829829,0,NA
-1288,application/x-spss-sav,sav,SPSS System File,2,0,0,NA
+vol_id,mimetype,extension,asset_type,n_files,tot_size_gb,tot_dur_hrs
+1288,text/csv,csv,Comma-separated values,1,9.3578125e-5,0
+1288,application/pdf,pdf,Portable document,3,8.103798828125e-4,0
+1288,application/x-spss-sav,sav,SPSS System File,2,0,0

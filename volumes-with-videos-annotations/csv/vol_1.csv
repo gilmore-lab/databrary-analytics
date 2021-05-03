@@ -1,7 +1,7 @@
-vol_id,mimetype,extension,asset_type,n_files,tot_size,tot_dur,duration
-1,video/mp4,mp4,MPEG-4 video,75,94702732615,252528446,NA
-1,audio/mpeg,mp3,MPEG-1 or MPEG-2 audio layer III,2,519192569,30221400,NA
-1,text/csv,csv,Comma-separated values,2,2243,0,NA
-1,image/png,png,Portable network graphics,1,104419,0,NA
-1,application/pdf,pdf,Portable document,47,854194171,0,NA
-1,application/vnd.datavyu,opf,Datavyu,1,1030,0,NA
+vol_id,mimetype,extension,asset_type,n_files,tot_size_gb,tot_dur_hrs
+1,video/mp4,mp4,MPEG-4 video,75,92.48313731933594,70.14679055555555
+1,audio/mpeg,mp3,MPEG-1 or MPEG-2 audio layer III,2,0.5070239931640625,8.394833333333333
+1,text/csv,csv,Comma-separated values,2,2.1904296875e-6,0
+1,image/png,png,Portable network graphics,1,1.019716796875e-4,0
+1,application/pdf,pdf,Portable document,47,0.8341739951171875,0
+1,application/vnd.datavyu,opf,Datavyu,1,1.005859375e-6,0

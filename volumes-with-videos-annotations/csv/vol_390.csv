@@ -1,3 +1,3 @@
-vol_id,mimetype,extension,asset_type,n_files,tot_size,tot_dur,duration
-390,audio/mpeg,mp3,MPEG-1 or MPEG-2 audio layer III,21,34155379,6323530,NA
-390,text/elan,eaf,ELAN - Linguistic Annotator,18,900694,0,NA
+vol_id,mimetype,extension,asset_type,n_files,tot_size_gb,tot_dur_hrs
+390,audio/mpeg,mp3,MPEG-1 or MPEG-2 audio layer III,21,0.0333548623046875,1.756536111111111
+390,text/elan,eaf,ELAN - Linguistic Annotator,18,8.79583984375e-4,0

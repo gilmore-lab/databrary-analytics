@@ -254,7 +254,7 @@ div.tocify {
 
 
 <h1 class="title toc-ignore">Databrary Funders</h1>
-<h4 class="date">2021-04-01 08:28:41</h4>
+<h4 class="date">2021-05-03 08:14:34</h4>
 
 </div>
 
@@ -306,10 +306,10 @@ get_volume_funding &lt;- function(vol_id) {
 <pre class="r"><code>vols_w_funders &lt;- funders_df %&gt;%
   dplyr::filter(., !is.na(funder_id), !is.na(funder_name)) %&gt;%
   dplyr::group_by(., vol_id)</code></pre>
-<p>There are <span class="math inline">\(n=\)</span> 111 volumes that list funders.</p>
+<p>There are <span class="math inline">\(n=\)</span> 125 volumes that list funders.</p>
 </div>
-<div id="number-of-volumes-crediting-funder" class="section level3">
-<h3>Number of volumes crediting funder</h3>
+<div id="funders-credited-by-number-of-volumes" class="section level3">
+<h3>Funders credited by number of volumes</h3>
 <pre class="r"><code>funders_filtered &lt;- funders_df %&gt;%
   dplyr::filter(., !is.na(funder_id), !is.na(funder_name)) %&gt;%
   dplyr::group_by(., funder_name) %&gt;%
@@ -333,18 +333,18 @@ n_vols
 <tbody>
 <tr>
 <td style="text-align:left;">
-National Science Foundation (NSF)
+National Institute of Child Health and Human Development (NICHD)
 </td>
 <td style="text-align:right;">
-51
+59
 </td>
 </tr>
 <tr>
 <td style="text-align:left;">
-National Institute of Child Health and Human Development (NICHD)
+National Science Foundation (NSF)
 </td>
 <td style="text-align:right;">
-49
+57
 </td>
 </tr>
 <tr>
@@ -352,7 +352,7 @@ National Institute of Child Health and Human Development (NICHD)
 National Institutes of Health (NIH)
 </td>
 <td style="text-align:right;">
-29
+30
 </td>
 </tr>
 <tr>
@@ -360,7 +360,7 @@ National Institutes of Health (NIH)
 National Institute of Mental Health (NIMH)
 </td>
 <td style="text-align:right;">
-9
+12
 </td>
 </tr>
 <tr>
@@ -475,17 +475,21 @@ Society for Research in Child Development (SRCD)
 1
 </td>
 </tr>
+<tr>
+<td style="text-align:left;">
+William T. Grant Foundation
+</td>
+<td style="text-align:right;">
+1
+</td>
+</tr>
 </tbody>
 </table>
 </div>
 </div>
 <div id="logout" class="section level2">
 <h2>Logout</h2>
-<pre class="r"><code>databraryapi::logout_db()</code></pre>
 <pre><code>## [1] TRUE</code></pre>
-<pre class="r"><code>if (file.exists(&quot;.databrary.RData&quot;)) {
-  unlink(&quot;.databrary.RData&quot;)
-}</code></pre>
 </div>
 </div>
 

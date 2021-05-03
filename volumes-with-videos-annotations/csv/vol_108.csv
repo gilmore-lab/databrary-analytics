@@ -1,3 +1,3 @@
-vol_id,mimetype,extension,asset_type,n_files,tot_size,tot_dur,duration
-108,video/mp4,mp4,MPEG-4 video,61,4711207188,54220856,NA
-108,application/x-spss-sav,sav,SPSS System File,1,5451,0,NA
+vol_id,mimetype,extension,asset_type,n_files,tot_size_gb,tot_dur_hrs
+108,video/mp4,mp4,MPEG-4 video,61,4.60078826953125,15.061348888888888
+108,application/x-spss-sav,sav,SPSS System File,1,5.3232421875e-6,0

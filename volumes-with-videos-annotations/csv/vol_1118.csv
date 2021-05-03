@@ -1,6 +1,6 @@
-vol_id,mimetype,extension,asset_type,n_files,tot_size,tot_dur,duration
-1118,video/mp4,mp4,MPEG-4 video,6,281638682,890841,NA
-1118,text/plain,txt,Plain text,4,169282,0,NA
-1118,application/pdf,pdf,Portable document,1,207852,0,NA
-1118,application/vnd.datavyu,opf,Datavyu,80,460135,0,NA
-1118,application/x-spss-sav,sav,SPSS System File,2,5499866,0,NA
+vol_id,mimetype,extension,asset_type,n_files,tot_size_gb,tot_dur_hrs
+1118,video/mp4,mp4,MPEG-4 video,6,0.275037775390625,0.24745583333333335
+1118,text/plain,txt,Plain text,4,1.65314453125e-4,0
+1118,application/pdf,pdf,Portable document,1,2.0298046875e-4,0
+1118,application/vnd.datavyu,opf,Datavyu,80,4.493505859375e-4,0
+1118,application/x-spss-sav,sav,SPSS System File,2,0.005370962890625,0

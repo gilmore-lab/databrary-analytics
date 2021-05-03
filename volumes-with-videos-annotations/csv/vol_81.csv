@@ -1,5 +1,5 @@
-vol_id,mimetype,extension,asset_type,n_files,tot_size,tot_dur,duration
-81,video/mp4,mp4,MPEG-4 video,1422,294410308550,1182080432,NA
-81,text/csv,csv,Comma-separated values,1119,1294811,0,NA
-81,application/pdf,pdf,Portable document,1,957664,0,NA
-81,application/vnd.datavyu,opf,Datavyu,1126,963981,0,NA
+vol_id,mimetype,extension,asset_type,n_files,tot_size_gb,tot_dur_hrs
+81,video/mp4,mp4,MPEG-4 video,1422,287.5100669433594,328.35567555555554
+81,text/csv,csv,Comma-separated values,1119,0.0012644638671875,0
+81,application/pdf,pdf,Portable document,1,9.3521875e-4,0
+81,application/vnd.datavyu,opf,Datavyu,1126,9.413876953125e-4,0

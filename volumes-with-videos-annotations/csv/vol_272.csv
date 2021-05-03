@@ -1,2 +1,2 @@
-vol_id,mimetype,extension,asset_type,n_files,tot_size,tot_dur,duration
-272,image/jpeg,jpg,JPEG image,57,1300394,0,NA
+vol_id,mimetype,extension,asset_type,n_files,tot_size_gb,tot_dur_hrs
+272,image/jpeg,jpg,JPEG image,57,0.001269916015625,0

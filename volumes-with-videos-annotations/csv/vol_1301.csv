@@ -1,0 +1,4 @@
+vol_id,mimetype,extension,asset_type,n_files,tot_size_gb,tot_dur_hrs
+1301,text/plain,txt,Plain text,3,5.8369140625e-6,0
+1301,text/csv,csv,Comma-separated values,5,0.01900415625,0
+1301,image/png,png,Portable network graphics,1,0.0105188701171875,0

@@ -1,0 +1,6 @@
+vol_id,mimetype,extension,asset_type,n_files,tot_size_gb,tot_dur_hrs
+988,video/mp4,mp4,MPEG-4 video,117,5.635998864257813,6.299698611111111
+988,text/plain,txt,Plain text,32,2.35876953125e-4,0
+988,text/csv,csv,Comma-separated values,10,0.0253435107421875,0
+988,application/vnd.openxmlformats-officedocument.wordprocessingml.document,docx,Microsoft Word (Office Open XML) document,1,0,0
+988,application/vnd.datavyu,opf,Datavyu,108,1.505849609375e-4,0
