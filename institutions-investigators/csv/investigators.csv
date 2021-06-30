@@ -1,14 +1,14 @@
 ai_id,ai_last,ai_first,affiliation,url,email,inst_id,inst_name,inst_db_url,ai_db_url,n_affils,orcid,permission,institution
-5,Adolph,Karen,New York University,http://www.psych.nyu.edu/adolph/,karen.adolph@nyu.edu,8,New York University (NYU),https://nyu.databrary.org/party/8,https://nyu.databrary.org/party/5,31,NA,NA,NA
+5,Adolph,Karen,New York University,http://www.psych.nyu.edu/adolph/,karen.adolph@nyu.edu,8,New York University (NYU),https://nyu.databrary.org/party/8,https://nyu.databrary.org/party/5,32,NA,NA,NA
 11,Tamis-LeMonda,Catherine,New York University,NA,catherine.tamis-lemonda@nyu.edu,8,New York University (NYU),https://nyu.databrary.org/party/8,https://nyu.databrary.org/party/11,11,NA,NA,NA
-277,Rhodes,Marjorie,New York University,NA,marjorie.rhodes@nyu.edu,8,New York University (NYU),https://nyu.databrary.org/party/8,https://nyu.databrary.org/party/277,5,NA,NA,NA
-2936,Shrout,Patrick E.,New York University,NA,pat.shrout@nyu.edu,8,New York University (NYU),https://nyu.databrary.org/party/8,https://nyu.databrary.org/party/2936,5,NA,NA,NA
+277,Rhodes,Marjorie,New York University,NA,marjorie.rhodes@nyu.edu,8,New York University (NYU),https://nyu.databrary.org/party/8,https://nyu.databrary.org/party/277,6,NA,NA,NA
 368,Raver,Cybele,New York University,NA,ccr4@nyu.edu,8,New York University (NYU),https://nyu.databrary.org/party/8,https://nyu.databrary.org/party/368,4,NA,NA,NA
-6499,Amodio,David,New York University,NA,david.amodio@nyu.edu,8,New York University (NYU),https://nyu.databrary.org/party/8,https://nyu.databrary.org/party/6499,2,NA,NA,NA
+2936,Shrout,Patrick E.,New York University,NA,pat.shrout@nyu.edu,8,New York University (NYU),https://nyu.databrary.org/party/8,https://nyu.databrary.org/party/2936,4,NA,NA,NA
+6499,Amodio,David,New York University,NA,david.amodio@nyu.edu,8,New York University (NYU),https://nyu.databrary.org/party/8,https://nyu.databrary.org/party/6499,1,NA,NA,NA
+4685,Arunachalam,Sudha,New York University,NA,sudha@nyu.edu,8,New York University (NYU),https://nyu.databrary.org/party/8,https://nyu.databrary.org/party/4685,1,NA,NA,NA
 2953,Lake,Brenden,New York University,NA,brenden@nyu.edu,8,New York University (NYU),https://nyu.databrary.org/party/8,https://nyu.databrary.org/party/2953,1,NA,NA,NA
 2289,Schieffelin,Bambi B,New York University,NA,bs4@nyu.edu,8,New York University (NYU),https://nyu.databrary.org/party/8,https://nyu.databrary.org/party/2289,1,NA,NA,NA
 6869,Trainor,Audrey,New York University,NA,aat8@nyu.edu,8,New York University (NYU),https://nyu.databrary.org/party/8,https://nyu.databrary.org/party/6869,1,NA,NA,NA
-4685,Arunachalam,Sudha,New York University,NA,sudha@nyu.edu,8,New York University (NYU),https://nyu.databrary.org/party/8,https://nyu.databrary.org/party/4685,0,NA,NA,NA
 1834,Besser,Howard,NYU,NA,howard@nyu.edu,8,New York University (NYU),https://nyu.databrary.org/party/8,https://nyu.databrary.org/party/1834,0,NA,NA,NA
 1254,Blair,Clancy,New York University,NA,clancy.blair@nyu.edu,8,New York University (NYU),https://nyu.databrary.org/party/8,https://nyu.databrary.org/party/1254,0,NA,NA,NA
 4790,Bloom,Stacie,New York University,NA,staciebloom@nyu.edu,8,New York University (NYU),https://nyu.databrary.org/party/8,https://nyu.databrary.org/party/4790,0,NA,NA,NA
@@ -32,7 +32,7 @@ ai_id,ai_last,ai_first,affiliation,url,email,inst_id,inst_name,inst_db_url,ai_db
 2240,Yoshikawa,Hirokazu,New York University,NA,hiro.yoshikawa@nyu.edu,8,New York University (NYU),https://nyu.databrary.org/party/8,https://nyu.databrary.org/party/2240,0,NA,NA,NA
 249,Buss,Kristin A,The Pennsylvania State University,NA,kab37@psu.edu,12,"Pennsylvania State University, University Park",https://nyu.databrary.org/party/12,https://nyu.databrary.org/party/249,12,NA,NA,NA
 96,Perez-Edgar,Koraly,The Pennsylvania State University,http://www.catlabpsu.com/,kxp24@psu.edu,12,"Pennsylvania State University, University Park",https://nyu.databrary.org/party/12,https://nyu.databrary.org/party/96,9,NA,NA,NA
-1256,Frank,Jennifer,The Pennsylvania State University,NA,jfrank@psu.edu,12,"Pennsylvania State University, University Park",https://nyu.databrary.org/party/12,https://nyu.databrary.org/party/1256,7,NA,NA,NA
+1256,Frank,Jennifer,The Pennsylvania State University,NA,jfrank@psu.edu,12,"Pennsylvania State University, University Park",https://nyu.databrary.org/party/12,https://nyu.databrary.org/party/1256,8,NA,NA,NA
 6,Gilmore,Rick O.,The Pennsylvania State University,http://gilmore-lab.github.io,rogilmore@psu.edu,12,"Pennsylvania State University, University Park",https://nyu.databrary.org/party/12,https://nyu.databrary.org/party/6,4,0000-0002-7676-3982,5,NA
 252,Scherf,Kathryn Suzanne,The Pennsylvania State University,https://www.suzyscherf.com/,suzyscherf@psu.edu,12,"Pennsylvania State University, University Park",https://nyu.databrary.org/party/12,https://nyu.databrary.org/party/252,3,NA,NA,NA
 8047,O'Sullivan,Deirdre,The Pennsylvania State University,NA,dmo11@psu.edu,12,"Pennsylvania State University, University Park",https://nyu.databrary.org/party/12,https://nyu.databrary.org/party/8047,1,NA,NA,NA
@@ -51,8 +51,9 @@ ai_id,ai_last,ai_first,affiliation,url,email,inst_id,inst_name,inst_db_url,ai_db
 245,Wilkinson,Krista,The Pennsylvania State University,NA,kmw22@psu.edu,12,"Pennsylvania State University, University Park",https://nyu.databrary.org/party/12,https://nyu.databrary.org/party/245,0,NA,NA,NA
 5738,Worley,Timothy,The Pennsylvania State University,NA,txw298@psu.edu,12,"Pennsylvania State University, University Park",https://nyu.databrary.org/party/12,https://nyu.databrary.org/party/5738,0,NA,NA,NA
 273,Wyble,Brad,The Pennsylvania State University,NA,bwyble@gmail.com,12,"Pennsylvania State University, University Park",https://nyu.databrary.org/party/12,https://nyu.databrary.org/party/273,0,NA,NA,NA
+8306,Matthews,Percival,University of Wisconsin - Madison,NA,pmatthews@wisc.edu,43,"University of Wisconsin, Madison",https://nyu.databrary.org/party/43,https://nyu.databrary.org/party/8306,4,NA,NA,NA
+4648,Vlach,Haley,University of Wisconsin-Madison,NA,hvlach@wisc.edu,43,"University of Wisconsin, Madison",https://nyu.databrary.org/party/43,https://nyu.databrary.org/party/4648,4,NA,NA,NA
 274,Saffran,Jenny,University of Wisconsin - Madison,NA,jsaffran@wisc.edu,43,"University of Wisconsin, Madison",https://nyu.databrary.org/party/43,https://nyu.databrary.org/party/274,3,NA,NA,NA
-4648,Vlach,Haley,University of Wisconsin-Madison,NA,hvlach@wisc.edu,43,"University of Wisconsin, Madison",https://nyu.databrary.org/party/43,https://nyu.databrary.org/party/4648,3,NA,NA,NA
 1361,Pollak,Seth,University of Wisconsin-Madison,NA,spollak@wisc.edu,43,"University of Wisconsin, Madison",https://nyu.databrary.org/party/43,https://nyu.databrary.org/party/1361,1,NA,NA,NA
 327,Alibali,Martha W.,University of Wisconsin - Madison,NA,mwalibali@wisc.edu,43,"University of Wisconsin, Madison",https://nyu.databrary.org/party/43,https://nyu.databrary.org/party/327,0,NA,NA,NA
 1102,Davidson,Richard,University of Wisconsin-Madison,NA,rjdavids@wisc.edu,43,"University of Wisconsin, Madison",https://nyu.databrary.org/party/43,https://nyu.databrary.org/party/1102,0,NA,NA,NA
@@ -89,10 +90,10 @@ ai_id,ai_last,ai_first,affiliation,url,email,inst_id,inst_name,inst_db_url,ai_db
 3037,Yurovsky,Daniel,Carnegie Mellon University,http://callab.uchicago.edu/,yurovsky@cmu.edu,50,Carnegie Mellon University (CMU),https://nyu.databrary.org/party/50,https://nyu.databrary.org/party/3037,0,NA,NA,NA
 82,LoBue,Vanessa,Rutgers University,NA,vlobue@psychology.rutgers.edu,51,"Rutgers University, Newark",https://nyu.databrary.org/party/51,https://nyu.databrary.org/party/82,23,NA,NA,NA
 2173,Bonawitz,Elizabeth,Rutgers University - Newark,http://ccdlab.rutgers.edu/,lbaraff@gmail.com,51,"Rutgers University, Newark",https://nyu.databrary.org/party/51,https://nyu.databrary.org/party/2173,1,NA,NA,NA
-1339,Shafto,Patrick,Rutgers University - Newark,NA,patrick.shafto@gmail.com,51,"Rutgers University, Newark",https://nyu.databrary.org/party/51,https://nyu.databrary.org/party/1339,1,NA,NA,NA
 4732,Carcea,Ioana,Rutgers BHI,NA,ioana.carcea@rutgers.edu,51,"Rutgers University, Newark",https://nyu.databrary.org/party/51,https://nyu.databrary.org/party/4732,0,NA,NA,NA
 1414,Rivera,Luis M.,"Rutgers, Newark",NA,luis@psychology.rutgers.edu,51,"Rutgers University, Newark",https://nyu.databrary.org/party/51,https://nyu.databrary.org/party/1414,0,NA,NA,NA
 5287,Rosenberg-Lee,Miriam,Rutgers University,NA,miriam.rosenberglee@rutgers.edu,51,"Rutgers University, Newark",https://nyu.databrary.org/party/51,https://nyu.databrary.org/party/5287,0,NA,NA,NA
+1339,Shafto,Patrick,Rutgers University - Newark,NA,patrick.shafto@gmail.com,51,"Rutgers University, Newark",https://nyu.databrary.org/party/51,https://nyu.databrary.org/party/1339,0,NA,NA,NA
 4363,Tricomi,Elizabeth,Rutgers University - Newark,NA,etricomi@rutgers.edu,51,"Rutgers University, Newark",https://nyu.databrary.org/party/51,https://nyu.databrary.org/party/4363,0,NA,NA,NA
 6754,Wang,Jenny,Rutgers University,https://sites.rutgers.edu/jinjing-jenny-wang/,jinjing.jenny.wang@rutgers.edu,52,"Rutgers University, New Brunswick",https://nyu.databrary.org/party/52,https://nyu.databrary.org/party/6754,7,NA,NA,NA
 6972,Hepburn,Alexa,Rutgers University,NA,alexa.hepburn@rutgers.edu,52,"Rutgers University, New Brunswick",https://nyu.databrary.org/party/52,https://nyu.databrary.org/party/6972,0,NA,NA,NA
@@ -102,7 +103,7 @@ ai_id,ai_last,ai_first,affiliation,url,email,inst_id,inst_name,inst_db_url,ai_db
 70,Messinger,Daniel,University of Miami,NA,dmessinger@miami.edu,53,University of Miami,https://nyu.databrary.org/party/53,https://nyu.databrary.org/party/70,8,NA,NA,NA
 1974,Perry,Lynn,University of Miami,NA,lkperry@miami.edu,53,University of Miami,https://nyu.databrary.org/party/53,https://nyu.databrary.org/party/1974,3,NA,NA,NA
 2125,Simpson,Elizabeth Ann,University of Miami,http://www.psy.miami.edu/faculty/esimpson/,simpsone@miami.edu,53,University of Miami,https://nyu.databrary.org/party/53,https://nyu.databrary.org/party/2125,0,NA,NA,NA
-1197,Jirout,Jamie,University of Virginia,http://www.jamiejirout.com/,jirout@virginia.edu,54,University of Virginia,https://nyu.databrary.org/party/54,https://nyu.databrary.org/party/1197,15,NA,NA,NA
+1197,Jirout,Jamie,University of Virginia,http://www.jamiejirout.com/,jirout@virginia.edu,54,University of Virginia,https://nyu.databrary.org/party/54,https://nyu.databrary.org/party/1197,10,NA,NA,NA
 1117,Jaswal,Vikram,University of Virginia,http://www.learningtothink.org,jaswal@virginia.edu,54,University of Virginia,https://nyu.databrary.org/party/54,https://nyu.databrary.org/party/1117,9,NA,NA,NA
 318,Lillard,Angeline,University of Virginia,NA,lillard@virginia.edu,54,University of Virginia,https://nyu.databrary.org/party/54,https://nyu.databrary.org/party/318,4,NA,NA,NA
 67,Nosek,Brian,University of Virginia,NA,nosek@virginia.edu,54,University of Virginia,https://nyu.databrary.org/party/54,https://nyu.databrary.org/party/67,1,NA,NA,NA
@@ -139,6 +140,7 @@ ai_id,ai_last,ai_first,affiliation,url,email,inst_id,inst_name,inst_db_url,ai_db
 1083,Norman,Greg,University of Chicago,NA,gnorman@uchicago.edu,59,University of Chicago,https://nyu.databrary.org/party/59,https://nyu.databrary.org/party/1083,0,NA,NA,NA
 2640,Schreiber,Michael D.,University of Chicago,NA,mschreiber@uchicago.edu,59,University of Chicago,https://nyu.databrary.org/party/59,https://nyu.databrary.org/party/2640,0,NA,NA,NA
 5888,Feiman,Roman,Brown University,NA,roman_feiman@brown.edu,112,Brown University,https://nyu.databrary.org/party/112,https://nyu.databrary.org/party/5888,1,NA,NA,NA
+544,Serre,Thomas,Brown university,NA,thomas_serre@brown.edu,112,Brown University,https://nyu.databrary.org/party/112,https://nyu.databrary.org/party/544,1,NA,NA,NA
 111,Sobel,David,Brown University,NA,Dave_Sobel@brown.edu,112,Brown University,https://nyu.databrary.org/party/112,https://nyu.databrary.org/party/111,1,NA,NA,NA
 297,Amso,Dima,Brown University,NA,dima_amso@brown.edu,112,Brown University,https://nyu.databrary.org/party/112,https://nyu.databrary.org/party/297,0,NA,NA,NA
 5998,Pavlick,Ellie,Brown University,NA,ellie_pavlick@brown.edu,112,Brown University,https://nyu.databrary.org/party/112,https://nyu.databrary.org/party/5998,0,NA,NA,NA
@@ -155,52 +157,52 @@ ai_id,ai_last,ai_first,affiliation,url,email,inst_id,inst_name,inst_db_url,ai_db
 5348,Choi,Koeun,Virginia Polytechnic Institute and State University,NA,koeun@vt.edu,115,Virginia Tech,https://nyu.databrary.org/party/115,https://nyu.databrary.org/party/5348,0,NA,NA,NA
 3721,Dunsmore,Julie,Virginia Tech,NA,jdunsmor@vt.edu,115,Virginia Tech,https://nyu.databrary.org/party/115,https://nyu.databrary.org/party/3721,0,NA,NA,NA
 8282,Lee,Tae-Ho,Virginia Tech,NA,taehol@vt.edu,115,Virginia Tech,https://nyu.databrary.org/party/115,https://nyu.databrary.org/party/8282,0,NA,NA,NA
-99,Frick,Janet,University of Georgia,http://infantlab.uga.edu/,jfrick@uga.edu,116,University of Georgia,https://nyu.databrary.org/party/116,https://nyu.databrary.org/party/99,2,NA,NA,NA
+99,Frick,Janet,University of Georgia,http://infantlab.uga.edu/,jfrick@uga.edu,116,University of Georgia,https://nyu.databrary.org/party/116,https://nyu.databrary.org/party/99,3,NA,NA,NA
 118,Needham,Amy,Vanderbilt University,NA,amy.needham@vanderbilt.edu,119,Vanderbilt University,https://nyu.databrary.org/party/119,https://nyu.databrary.org/party/118,6,NA,NA,NA
-1977,Booth,Amy,Vanderbilt University,NA,amy.booth@vanderbilt.edu,119,Vanderbilt University,https://nyu.databrary.org/party/119,https://nyu.databrary.org/party/1977,3,NA,NA,NA
+1977,Booth,Amy,Vanderbilt University,NA,amy.booth@vanderbilt.edu,119,Vanderbilt University,https://nyu.databrary.org/party/119,https://nyu.databrary.org/party/1977,1,NA,NA,NA
 752,Fazio,Lisa,Vanderbilt University,NA,lisa.fazio@vanderbilt.edu,119,Vanderbilt University,https://nyu.databrary.org/party/119,https://nyu.databrary.org/party/752,0,NA,NA,NA
 6703,Humphreys,Kathryn,Vanderbilt University,NA,k.humphreys@vanderbilt.edu,119,Vanderbilt University,https://nyu.databrary.org/party/119,https://nyu.databrary.org/party/6703,0,NA,NA,NA
 3688,Jones,Robin,Vanderbilt University Medical Center,NA,robin.m.jones@vanderbilt.edu,119,Vanderbilt University,https://nyu.databrary.org/party/119,https://nyu.databrary.org/party/3688,0,NA,NA,NA
 1972,Troseth,Georgene Lynn,Vanderbilt University,NA,georgene.troseth@vanderbilt.edu,119,Vanderbilt University,https://nyu.databrary.org/party/119,https://nyu.databrary.org/party/1972,0,NA,NA,NA
 1280,Brooker,Rebecca Jo,Texas A&M University,NA,rebeccabrooker@tamu.edu,128,Texas A&M University,https://nyu.databrary.org/party/128,https://nyu.databrary.org/party/1280,1,NA,NA,NA
 7263,Carter-Sowell,Adrienne R.,Texas A&M University,NA,acsowell@tamu.edu,128,Texas A&M University,https://nyu.databrary.org/party/128,https://nyu.databrary.org/party/7263,0,NA,NA,NA
+8179,Turk-Browne,Nicholas,Yale University,NA,nicholas.turk-browne@yale.edu,134,Yale University,https://nyu.databrary.org/party/134,https://nyu.databrary.org/party/8179,3,NA,NA,NA
 324,Dunham,Yarrow,Yale University,NA,yarrow.dunham@yale.edu,134,Yale University,https://nyu.databrary.org/party/134,https://nyu.databrary.org/party/324,2,NA,NA,NA
 3899,Bailey,Craig,Yale University,NA,craig.bailey@yale.edu,134,Yale University,https://nyu.databrary.org/party/134,https://nyu.databrary.org/party/3899,1,NA,NA,NA
 7628,Deng,Jun,Yale University,https://medicine.yale.edu/profile/jun_deng/,jun.deng@yale.edu,134,Yale University,https://nyu.databrary.org/party/134,https://nyu.databrary.org/party/7628,1,NA,NA,NA
-8179,Turk-Browne,Nicholas,Yale University,NA,nicholas.turk-browne@yale.edu,134,Yale University,https://nyu.databrary.org/party/134,https://nyu.databrary.org/party/8179,1,NA,NA,NA
 3169,Gee,Dylan,Yale University,NA,dylan.gee@yale.edu,134,Yale University,https://nyu.databrary.org/party/134,https://nyu.databrary.org/party/3169,0,NA,NA,NA
 133,Wynn,Karen,Yale University,NA,karen.wynn@yale.edu,134,Yale University,https://nyu.databrary.org/party/134,https://nyu.databrary.org/party/133,0,NA,NA,NA
 2629,Jarvis,Tyler,Brigham Young University,NA,jarvis@math.byu.edu,135,Brigham Young University,https://nyu.databrary.org/party/135,https://nyu.databrary.org/party/2629,0,NA,NA,NA
 4154,Lundwall,Rebecca A.,Brigham Young University,NA,rebecca_lundwall@byu.edu,135,Brigham Young University,https://nyu.databrary.org/party/135,https://nyu.databrary.org/party/4154,0,NA,NA,NA
 3951,Sansom,Rebecca Louise,Brigham Young University,NA,rsansom@chem.byu.edu,135,Brigham Young University,https://nyu.databrary.org/party/135,https://nyu.databrary.org/party/3951,0,NA,NA,NA
-104,Barr,Rachel,Georgetown University,NA,rfb5@georgetown.edu,136,Georgetown University,https://nyu.databrary.org/party/136,https://nyu.databrary.org/party/104,7,NA,NA,NA
+104,Barr,Rachel,Georgetown University,NA,rfb5@georgetown.edu,136,Georgetown University,https://nyu.databrary.org/party/136,https://nyu.databrary.org/party/104,4,NA,NA,NA
 4640,Fernandez,Victor,Georgetown University,NA,vf109@georgetown.edu,136,Georgetown University,https://nyu.databrary.org/party/136,https://nyu.databrary.org/party/4640,0,NA,NA,NA
 433,Marsh,Abigail,Georgetown University,NA,aam72@georgetown.edu,136,Georgetown University,https://nyu.databrary.org/party/136,https://nyu.databrary.org/party/433,0,NA,NA,NA
-3044,Cabrera,Natasha,University of Maryland College Park,NA,ncabrera@umd.edu,137,"University of Maryland, College Park",https://nyu.databrary.org/party/137,https://nyu.databrary.org/party/3044,39,NA,NA,NA
+3044,Cabrera,Natasha,University of Maryland College Park,NA,ncabrera@umd.edu,137,"University of Maryland, College Park",https://nyu.databrary.org/party/137,https://nyu.databrary.org/party/3044,36,NA,NA,NA
 4945,Lombardi,Doug,University of Maryland,http://sciencelearning.net,lombard1@umd.edu,137,"University of Maryland, College Park",https://nyu.databrary.org/party/137,https://nyu.databrary.org/party/4945,22,NA,NA,NA
 594,Beier,Jonathan,University of Maryland,NA,jsbeier@gmail.com,137,"University of Maryland, College Park",https://nyu.databrary.org/party/137,https://nyu.databrary.org/party/594,2,NA,NA,NA
 333,Fox,Nathan,University of Maryland,NA,fox@umd.edu,137,"University of Maryland, College Park",https://nyu.databrary.org/party/137,https://nyu.databrary.org/party/333,2,NA,NA,NA
 1826,Lidz,Jeffrey,University of Maryland,http://ling.umd.edu/~jlidz,jlidz@umd.edu,137,"University of Maryland, College Park",https://nyu.databrary.org/party/137,https://nyu.databrary.org/party/1826,2,NA,NA,NA
-601,Ramani,Geetha,University of Maryland,NA,gramani@umd.edu,137,"University of Maryland, College Park",https://nyu.databrary.org/party/137,https://nyu.databrary.org/party/601,1,NA,NA,NA
 1841,Bolger,Donald J.,University of Maryland College Park,NA,djbolger@umd.edu,137,"University of Maryland, College Park",https://nyu.databrary.org/party/137,https://nyu.databrary.org/party/1841,0,NA,NA,NA
 129,Butler,Lucas P.,University of Maryland,NA,lpbutler@gmail.com,137,"University of Maryland, College Park",https://nyu.databrary.org/party/137,https://nyu.databrary.org/party/129,0,NA,NA,NA
 3707,Cassidy,Jude,"University of Maryland, College Park",NA,jastern@terpmail.umd.edu,137,"University of Maryland, College Park",https://nyu.databrary.org/party/137,https://nyu.databrary.org/party/3707,0,NA,NA,NA
 5837,He,Minxuan,"University of Maryland, College Park",NA,minxuanh@umd.edu,137,"University of Maryland, College Park",https://nyu.databrary.org/party/137,https://nyu.databrary.org/party/5837,0,NA,NA,NA
 4721,Kiemel,Tim,University of Maryland,NA,kiemel@umd.edu,137,"University of Maryland, College Park",https://nyu.databrary.org/party/137,https://nyu.databrary.org/party/4721,0,NA,NA,NA
 1611,Killen,Melanie,University of Maryland,http://www.education.umd.edu/HDQM/Killen-lab/,mkillen@umd.edu,137,"University of Maryland, College Park",https://nyu.databrary.org/party/137,https://nyu.databrary.org/party/1611,0,NA,NA,NA
+601,Ramani,Geetha,University of Maryland,NA,gramani@umd.edu,137,"University of Maryland, College Park",https://nyu.databrary.org/party/137,https://nyu.databrary.org/party/601,0,NA,NA,NA
 1811,Ratner,Nan,University of Maryland,NA,nratner@umd.edu,137,"University of Maryland, College Park",https://nyu.databrary.org/party/137,https://nyu.databrary.org/party/1811,0,NA,NA,NA
 3395,Redcay,Elizabeth,University of Maryland,NA,redcay@umd.edu,137,"University of Maryland, College Park",https://nyu.databrary.org/party/137,https://nyu.databrary.org/party/3395,0,NA,NA,NA
 1831,Romberg,Alexa,University of Maryland,NA,aromberg@umd.edu,137,"University of Maryland, College Park",https://nyu.databrary.org/party/137,https://nyu.databrary.org/party/1831,0,NA,NA,NA
 514,Rubin,Kenneth H,University of Maryland,NA,krubin@umd.edu,137,"University of Maryland, College Park",https://nyu.databrary.org/party/137,https://nyu.databrary.org/party/514,0,NA,NA,NA
 490,Shackman,Alex,University of Maryland,http://shackmanlab.org,shackman@umd.edu,137,"University of Maryland, College Park",https://nyu.databrary.org/party/137,https://nyu.databrary.org/party/490,0,NA,NA,NA
 1819,Wang,Cixin,NA,NA,cxwang@umd.edu,137,"University of Maryland, College Park",https://nyu.databrary.org/party/137,https://nyu.databrary.org/party/1819,0,NA,NA,NA
-6784,Chakrabarti,Bhismadev,University of Reading,NA,b.chakrabarti@reading.ac.uk,140,University of Reading,https://nyu.databrary.org/party/140,https://nyu.databrary.org/party/6784,0,NA,NA,NA
+6784,Chakrabarti,Bhismadev,University of Reading,NA,b.chakrabarti@reading.ac.uk,140,University of Reading,https://nyu.databrary.org/party/140,https://nyu.databrary.org/party/6784,1,NA,NA,NA
 2344,Dodd,Helen,University of Reading,NA,h.f.dodd@reading.ac.uk,140,University of Reading,https://nyu.databrary.org/party/140,https://nyu.databrary.org/party/2344,0,NA,NA,NA
 2843,Murray,Lynne,"Reading, UK",NA,lynne.murray@reading.ac.uk,140,University of Reading,https://nyu.databrary.org/party/140,https://nyu.databrary.org/party/2843,0,NA,NA,NA
 1515,Srinivasan,Mahesh,UC Berkeley,NA,srinivasan@berkeley.edu,141,"University of California, Berkeley",https://nyu.databrary.org/party/141,https://nyu.databrary.org/party/1515,11,NA,NA,NA
 6714,Abrahamson,Dor,University of California Berkeley,NA,dor@berkeley.edu,141,"University of California, Berkeley",https://nyu.databrary.org/party/141,https://nyu.databrary.org/party/6714,4,NA,NA,NA
-2921,Xu,Fei,UC Berkeley,NA,fei_xu@berkeley.edu,141,"University of California, Berkeley",https://nyu.databrary.org/party/141,https://nyu.databrary.org/party/2921,3,NA,NA,NA
-5032,Richert,Rebekah,"University of California, Riverside",NA,rebekah.richert@ucr.edu,142,"University of California, Riverside",https://nyu.databrary.org/party/142,https://nyu.databrary.org/party/5032,37,NA,NA,NA
+2921,Xu,Fei,UC Berkeley,NA,fei_xu@berkeley.edu,141,"University of California, Berkeley",https://nyu.databrary.org/party/141,https://nyu.databrary.org/party/2921,4,NA,NA,NA
+5032,Richert,Rebekah,"University of California, Riverside",NA,rebekah.richert@ucr.edu,142,"University of California, Riverside",https://nyu.databrary.org/party/142,https://nyu.databrary.org/party/5032,14,NA,NA,NA
 595,Woodward,Amanda Mae,"University of California, Riverside",NA,amwoodwa@umd.edu,142,"University of California, Riverside",https://nyu.databrary.org/party/142,https://nyu.databrary.org/party/595,9,NA,NA,NA
 14,Franchak,John,"University of California, Riverside",http://padlab.ucr.edu,franchak@ucr.edu,142,"University of California, Riverside",https://nyu.databrary.org/party/142,https://nyu.databrary.org/party/14,2,NA,NA,NA
 2932,Davis,Elizabeth,"University of California, Riverside",NA,elizabeth.davis@ucr.edu,142,"University of California, Riverside",https://nyu.databrary.org/party/142,https://nyu.databrary.org/party/2932,0,NA,NA,NA
@@ -231,7 +233,7 @@ ai_id,ai_last,ai_first,affiliation,url,email,inst_id,inst_name,inst_db_url,ai_db
 2189,Howard,Ayanna,Georgia Institute of Technology,NA,ayanna.howard@ece.gatech.edu,164,Georgia Institute of Technology,https://nyu.databrary.org/party/164,https://nyu.databrary.org/party/2189,0,NA,NA,NA
 400,Rehg,James M.,Georgia Institute of Technology,NA,rehg@gatech.edu,164,Georgia Institute of Technology,https://nyu.databrary.org/party/164,https://nyu.databrary.org/party/400,0,NA,NA,NA
 1733,Wheaton,Lewis,Georgia Tech,NA,law@gatech.edu,164,Georgia Institute of Technology,https://nyu.databrary.org/party/164,https://nyu.databrary.org/party/1733,0,NA,NA,NA
-474,Moulson,Margaret,Ryerson University,NA,mmoulson@psych.ryerson.ca,165,Ryerson University,https://nyu.databrary.org/party/165,https://nyu.databrary.org/party/474,2,NA,NA,NA
+474,Moulson,Margaret,Ryerson University,NA,mmoulson@psych.ryerson.ca,165,Ryerson University,https://nyu.databrary.org/party/165,https://nyu.databrary.org/party/474,1,NA,NA,NA
 6046,Wagner,Anne,Ryerson University,NA,anne.wagner@psych.ryerson.ca,165,Ryerson University,https://nyu.databrary.org/party/165,https://nyu.databrary.org/party/6046,1,NA,NA,NA
 148,Boudreau,Jean-Paul,Ryerson University,NA,Boudreau@ryerson.ca,165,Ryerson University,https://nyu.databrary.org/party/165,https://nyu.databrary.org/party/148,0,NA,NA,NA
 3140,Milligan,Karen,Ryerson University,NA,karen.milligan@psych.ryerson.ca,165,Ryerson University,https://nyu.databrary.org/party/165,https://nyu.databrary.org/party/3140,0,NA,NA,NA
@@ -255,10 +257,11 @@ ai_id,ai_last,ai_first,affiliation,url,email,inst_id,inst_name,inst_db_url,ai_db
 6963,Yeung,Serena,Stanford University,NA,syyeung@stanford.edu,171,Stanford University,https://nyu.databrary.org/party/171,https://nyu.databrary.org/party/6963,4,NA,NA,NA
 7030,Kennedy,Monroe,Stanford University,https://arm.stanford.edu/,monroek@stanford.edu,171,Stanford University,https://nyu.databrary.org/party/171,https://nyu.databrary.org/party/7030,2,NA,NA,NA
 4365,Wall,Dennis,Stanford University,NA,dpwall@stanford.edu,171,Stanford University,https://nyu.databrary.org/party/171,https://nyu.databrary.org/party/4365,2,NA,NA,NA
+8292,Obradovic,Jelena,Stanford University,NA,jelena.obradovic@stanford.edu,171,Stanford University,https://nyu.databrary.org/party/171,https://nyu.databrary.org/party/8292,1,NA,NA,NA
 3191,Gotlib,Ian,Stanford University,NA,iang@stanford.edu,171,Stanford University,https://nyu.databrary.org/party/171,https://nyu.databrary.org/party/3191,0,NA,NA,NA
 4206,Lowery,Brian,Stanford University,NA,blowery@stanford.edu,171,Stanford University,https://nyu.databrary.org/party/171,https://nyu.databrary.org/party/4206,0,NA,NA,NA
 1173,Widen,Sherri C.,Stanford University,NA,swiden@stanford.edu,171,Stanford University,https://nyu.databrary.org/party/171,https://nyu.databrary.org/party/1173,0,NA,NA,NA
-2382,Berger,Sarah E,"College of Staten Island, CUNY",https://csichildlab.wixsite.com/csichildlab,sarah.berger@csi.cuny.edu,172,"College of Staten Island, CUNY",https://nyu.databrary.org/party/172,https://nyu.databrary.org/party/2382,21,NA,NA,NA
+2382,Berger,Sarah E,"College of Staten Island, CUNY",https://csichildlab.wixsite.com/csichildlab,sarah.berger@csi.cuny.edu,172,"College of Staten Island, CUNY",https://nyu.databrary.org/party/172,https://nyu.databrary.org/party/2382,23,NA,NA,NA
 32,Karasik,Lana,CUNY,NA,lana.karasik@csi.cuny.edu,172,"College of Staten Island, CUNY",https://nyu.databrary.org/party/172,https://nyu.databrary.org/party/32,6,NA,NA,NA
 729,Brooks,Patricia,"College of Staten Island and the Graduate Center, CUNY",NA,patricia.brooks@csi.cuny.edu,172,"College of Staten Island, CUNY",https://nyu.databrary.org/party/172,https://nyu.databrary.org/party/729,3,NA,NA,NA
 3039,Gillespie-Lynch,Kristen,CUNY,NA,kristen.gillespie@csi.cuny.edu,172,"College of Staten Island, CUNY",https://nyu.databrary.org/party/172,https://nyu.databrary.org/party/3039,0,NA,NA,NA
@@ -270,21 +273,21 @@ ai_id,ai_last,ai_first,affiliation,url,email,inst_id,inst_name,inst_db_url,ai_db
 287,Langdon,Clifton,Gallaudet University,NA,clifton.langdon@gallaudet.edu,174,Gallaudet University,https://nyu.databrary.org/party/174,https://nyu.databrary.org/party/287,0,NA,NA,NA
 286,Petitto,Laura Ann,Gallaudet University,NA,laura-ann.petitto@gallaudet.edu,174,Gallaudet University,https://nyu.databrary.org/party/174,https://nyu.databrary.org/party/286,0,NA,NA,NA
 288,Fabricius,William,Arizona State University,NA,william.fabricius@asu.edu,176,Arizona State University,https://nyu.databrary.org/party/176,https://nyu.databrary.org/party/288,11,NA,NA,NA
-5783,Lucca,Kelsey,Arizona State University,https://kelseylucca.wordpress.com/,klucca@asu.edu,176,Arizona State University,https://nyu.databrary.org/party/176,https://nyu.databrary.org/party/5783,2,NA,NA,NA
-5493,Marley,Scott,Arizona State University,NA,scott.marley@asu.edu,176,Arizona State University,https://nyu.databrary.org/party/176,https://nyu.databrary.org/party/5493,1,NA,NA,NA
+5783,Lucca,Kelsey,Arizona State University,https://kelseylucca.wordpress.com/,klucca@asu.edu,176,Arizona State University,https://nyu.databrary.org/party/176,https://nyu.databrary.org/party/5783,8,NA,NA,NA
 3310,Benitez,Viridiana L.,Arizona State University,NA,viridiana.benitez@asu.edu,176,Arizona State University,https://nyu.databrary.org/party/176,https://nyu.databrary.org/party/3310,0,NA,NA,NA
 1812,Bradley,Robert Harold,Arizona State University,NA,robert.bradley@asu.edu,176,Arizona State University,https://nyu.databrary.org/party/176,https://nyu.databrary.org/party/1812,0,NA,NA,NA
 6712,Guerrero,Laura,Arizona State University,NA,laura.guerrero@asu.edu,176,Arizona State University,https://nyu.databrary.org/party/176,https://nyu.databrary.org/party/6712,0,NA,NA,NA
+5493,Marley,Scott,Arizona State University,NA,scott.marley@asu.edu,176,Arizona State University,https://nyu.databrary.org/party/176,https://nyu.databrary.org/party/5493,0,NA,NA,NA
 5632,Peterson,Daniel,Arizona State University,NA,daniel.peterson1@asu.edu,176,Arizona State University,https://nyu.databrary.org/party/176,https://nyu.databrary.org/party/5632,0,NA,NA,NA
 2664,Spinrad,Tracy Lorraine,Arizona State University,NA,tspinrad@asu.edu,176,Arizona State University,https://nyu.databrary.org/party/176,https://nyu.databrary.org/party/2664,0,NA,NA,NA
 5988,Diosan,Laura,"Babes Bolyai University, Faculty of Mathematics and Computer Science",NA,lauras@cs.ubbcluj.ro,177,Babes-Bolyai University,https://nyu.databrary.org/party/177,https://nyu.databrary.org/party/5988,7,NA,NA,NA
 558,Benga,Oana,Babes-Bolyai University Cluj-Napoca,https://www.researchgate.net/profile/Oana_Benga,oanabenga@psychology.ro,177,Babes-Bolyai University,https://nyu.databrary.org/party/177,https://nyu.databrary.org/party/558,0,NA,NA,NA
 3600,Stefan,Catrinel Alice,Babes-Bolyai University,NA,catrinelstefan@psychology.ro,177,Babes-Bolyai University,https://nyu.databrary.org/party/177,https://nyu.databrary.org/party/3600,0,NA,NA,NA
 798,Cordes,Sara,Boston College,NA,cordess@bc.edu,178,Boston College,https://nyu.databrary.org/party/178,https://nyu.databrary.org/party/798,6,NA,NA,NA
-2521,Hartshorne,Joshua,Boston College,NA,hartshoj@bc.edu,178,Boston College,https://nyu.databrary.org/party/178,https://nyu.databrary.org/party/2521,0,NA,NA,NA
+2521,Hartshorne,Joshua,Boston College,NA,hartshoj@bc.edu,178,Boston College,https://nyu.databrary.org/party/178,https://nyu.databrary.org/party/2521,2,NA,NA,NA
 4071,McAuliffe,Katherine,Boston College,NA,katherine.mcauliffe.2@bc.edu,178,Boston College,https://nyu.databrary.org/party/178,https://nyu.databrary.org/party/4071,0,NA,NA,NA
 4626,Miele,David,Boston College,NA,d.miele@bc.edu,178,Boston College,https://nyu.databrary.org/party/178,https://nyu.databrary.org/party/4626,0,NA,NA,NA
-3517,Curenton,Stephanie Michelle,Boston University,NA,curenton@bu.edu,179,Boston University,https://nyu.databrary.org/party/179,https://nyu.databrary.org/party/3517,9,NA,NA,NA
+3517,Curenton,Stephanie Michelle,Boston University,NA,curenton@bu.edu,179,Boston University,https://nyu.databrary.org/party/179,https://nyu.databrary.org/party/3517,8,NA,NA,NA
 1612,Corriveau,Kathleen,Boston University,NA,kcorriv@bu.edu,179,Boston University,https://nyu.databrary.org/party/179,https://nyu.databrary.org/party/1612,4,NA,NA,NA
 7742,Betke,Margrit,Boston University,https://cs-web.bu.edu/faculty/betke/,betke@bu.edu,179,Boston University,https://nyu.databrary.org/party/179,https://nyu.databrary.org/party/7742,1,NA,NA,NA
 610,Gill,Simone,Boston University,NA,simvgill@bu.edu,179,Boston University,https://nyu.databrary.org/party/179,https://nyu.databrary.org/party/610,1,NA,NA,NA
@@ -299,15 +302,15 @@ ai_id,ai_last,ai_first,affiliation,url,email,inst_id,inst_name,inst_db_url,ai_db
 8006,Bauer,Daniel,Columbia University,NA,bauer@cs.columbia.edu,181,Columbia University,https://nyu.databrary.org/party/181,https://nyu.databrary.org/party/8006,1,NA,NA,NA
 7290,Miller,Kenneth,Columbia University,NA,kdm2103@columbia.edu,181,Columbia University,https://nyu.databrary.org/party/181,https://nyu.databrary.org/party/7290,1,NA,NA,NA
 1639,Tottenham,Nim,Columbia University,NA,nlt7@columbia.edu,181,Columbia University,https://nyu.databrary.org/party/181,https://nyu.databrary.org/party/1639,0,NA,NA,NA
-650,Casasola,Marianella,Cornell University,http://www.human.cornell.edu/bio.cfm?netid=mc272,mc272@cornell.edu,182,Cornell University,https://nyu.databrary.org/party/182,https://nyu.databrary.org/party/650,30,NA,NA,NA
-5813,Kushnir,Tamar,Cornell University,NA,tk397@cornell.edu,182,Cornell University,https://nyu.databrary.org/party/182,https://nyu.databrary.org/party/5813,10,NA,NA,NA
+650,Casasola,Marianella,Cornell University,http://www.human.cornell.edu/bio.cfm?netid=mc272,mc272@cornell.edu,182,Cornell University,https://nyu.databrary.org/party/182,https://nyu.databrary.org/party/650,27,NA,NA,NA
+5813,Kushnir,Tamar,Cornell University,NA,tk397@cornell.edu,182,Cornell University,https://nyu.databrary.org/party/182,https://nyu.databrary.org/party/5813,5,NA,NA,NA
 6789,De Rosa,Eve,Cornell University,NA,edd56@cornell.edu,182,Cornell University,https://nyu.databrary.org/party/182,https://nyu.databrary.org/party/6789,0,NA,NA,NA
 1879,Evans,Gary,Cornell University,NA,gwe1@cornell.edu,182,Cornell University,https://nyu.databrary.org/party/182,https://nyu.databrary.org/party/1879,0,NA,NA,NA
 2644,Kinzler,Katherine,Cornell University,NA,kinzler@cornell.edu,182,Cornell University,https://nyu.databrary.org/party/182,https://nyu.databrary.org/party/2644,0,NA,NA,NA
 5648,Smith,Aimee West,East Carolina University,NA,smithaim18@ecu.edu,184,East Carolina University,https://nyu.databrary.org/party/184,https://nyu.databrary.org/party/5648,1,NA,NA,NA
 3940,Brown,Patrick Jerry Paul,East Tennessee State University,NA,brownpj@etsu.edu,185,East Tennessee State University,https://nyu.databrary.org/party/185,https://nyu.databrary.org/party/3940,0,NA,NA,NA
 1008,Dixon,Wallace Edward,East Tennessee State University,NA,dixonw@etsu.edu,185,East Tennessee State University,https://nyu.databrary.org/party/185,https://nyu.databrary.org/party/1008,0,NA,NA,NA
-5539,Bauer,Patricia,Emory University,NA,pjbauer@emory.edu,186,Emory University,https://nyu.databrary.org/party/186,https://nyu.databrary.org/party/5539,16,NA,NA,NA
+5539,Bauer,Patricia,Emory University,NA,pjbauer@emory.edu,186,Emory University,https://nyu.databrary.org/party/186,https://nyu.databrary.org/party/5539,10,NA,NA,NA
 6386,Rilling,James,Emory University,NA,jrillin@emory.edu,186,Emory University,https://nyu.databrary.org/party/186,https://nyu.databrary.org/party/6386,0,NA,NA,NA
 2389,Rochat,Philippe,Emory University,NA,psypr@emory.edu,186,Emory University,https://nyu.databrary.org/party/186,https://nyu.databrary.org/party/2389,0,NA,NA,NA
 3019,Stapel-Wax,Jennifer,Emory University,NA,jennifer.stapel-wax@emory.edu,186,Emory University,https://nyu.databrary.org/party/186,https://nyu.databrary.org/party/3019,0,NA,NA,NA
@@ -315,13 +318,13 @@ ai_id,ai_last,ai_first,affiliation,url,email,inst_id,inst_name,inst_db_url,ai_db
 376,Bahrick,Lorraine E.,Florida International University,NA,bahrick@fiu.edu,187,Florida International University,https://nyu.databrary.org/party/187,https://nyu.databrary.org/party/376,7,NA,NA,NA
 744,Lickliter,Robert,Florida International University,NA,licklite@fiu.edu,187,Florida International University,https://nyu.databrary.org/party/187,https://nyu.databrary.org/party/744,0,NA,NA,NA
 407,Todd,James Torrence,Florida International University,NA,jtodd@fiu.edu,187,Florida International University,https://nyu.databrary.org/party/187,https://nyu.databrary.org/party/407,0,NA,NA,NA
-531,Goldstein,Thalia R.,George Mason University,http://ssit.gmu.edu,tgoldste@gmu.edu,188,George Mason University,https://nyu.databrary.org/party/188,https://nyu.databrary.org/party/531,13,NA,NA,NA
+531,Goldstein,Thalia R.,George Mason University,http://ssit.gmu.edu,tgoldste@gmu.edu,188,George Mason University,https://nyu.databrary.org/party/188,https://nyu.databrary.org/party/531,10,NA,NA,NA
 5908,Doebel,Sabine,George Mason University,NA,sdoebel@gmu.edu,188,George Mason University,https://nyu.databrary.org/party/188,https://nyu.databrary.org/party/5908,1,NA,NA,NA
 7444,Sheridan,Kimberly,George Mason University,NA,ksherida@gmu.edu,188,George Mason University,https://nyu.databrary.org/party/188,https://nyu.databrary.org/party/7444,1,NA,NA,NA
 1419,Fisher,Carla,George Mason University,NA,cfishe23@gmu.edu,188,George Mason University,https://nyu.databrary.org/party/188,https://nyu.databrary.org/party/1419,0,NA,NA,NA
 1099,Subiaul,Francys,George Washington University,NA,subiaul@gwu.edu,189,George Washington University,https://nyu.databrary.org/party/189,https://nyu.databrary.org/party/1099,2,NA,NA,NA
 5439,Sigelman,Carol,George Washington University,NA,carol@gwu.edu,189,George Washington University,https://nyu.databrary.org/party/189,https://nyu.databrary.org/party/5439,0,NA,NA,NA
-2347,Rowe,Meredith,Harvard University,NA,meredith_rowe@gse.harvard.edu,190,Harvard University,https://nyu.databrary.org/party/190,https://nyu.databrary.org/party/2347,3,NA,NA,NA
+2347,Rowe,Meredith,Harvard University,NA,meredith_rowe@gse.harvard.edu,190,Harvard University,https://nyu.databrary.org/party/190,https://nyu.databrary.org/party/2347,2,NA,NA,NA
 7535,Harris,Paul Lansley,Harvard University,NA,paul_harris@gse.harvard.edu,190,Harvard University,https://nyu.databrary.org/party/190,https://nyu.databrary.org/party/7535,0,NA,NA,NA
 7214,Konkle,Talia,Harvard University,NA,talia_konkle@harvard.edu,190,Harvard University,https://nyu.databrary.org/party/190,https://nyu.databrary.org/party/7214,0,NA,NA,NA
 896,Leech,Katie,University of Maryland,NA,kleech@umd.edu,190,Harvard University,https://nyu.databrary.org/party/190,https://nyu.databrary.org/party/896,0,NA,NA,NA
@@ -335,7 +338,7 @@ ai_id,ai_last,ai_first,affiliation,url,email,inst_id,inst_name,inst_db_url,ai_db
 712,Myers,Lauren,Lafayette College,http://sites.lafayette.edu/kidslab/,myersl@lafayette.edu,194,Lafayette College,https://nyu.databrary.org/party/194,https://nyu.databrary.org/party/712,0,NA,NA,NA
 7159,Saxe,Rebecca,MIT,NA,saxe@mit.edu,195,Massachusetts Institute of Technology,https://nyu.databrary.org/party/195,https://nyu.databrary.org/party/7159,5,NA,NA,NA
 1398,Schulz,Laura,MIT,NA,lschulz@mit.edu,195,Massachusetts Institute of Technology,https://nyu.databrary.org/party/195,https://nyu.databrary.org/party/1398,3,NA,NA,NA
-6597,Asada,Harry,Massachusetts Institute of Technology,NA,asada@mit.edu,195,Massachusetts Institute of Technology,https://nyu.databrary.org/party/195,https://nyu.databrary.org/party/6597,2,NA,NA,NA
+6597,Asada,Harry,Massachusetts Institute of Technology,NA,asada@mit.edu,195,Massachusetts Institute of Technology,https://nyu.databrary.org/party/195,https://nyu.databrary.org/party/6597,1,NA,NA,NA
 7039,Tenenbaum,Joshua,MIT,NA,jbt@mit.edu,195,Massachusetts Institute of Technology,https://nyu.databrary.org/party/195,https://nyu.databrary.org/party/7039,1,NA,NA,NA
 7859,Kanwisher,Nancy,Massachusetts Institute of Technology,NA,ngk@mit.edu,195,Massachusetts Institute of Technology,https://nyu.databrary.org/party/195,https://nyu.databrary.org/party/7859,0,NA,NA,NA
 590,Lakusta,Laura,Montclair State University,NA,lakusta@gmail.com,196,Montclair State University,https://nyu.databrary.org/party/196,https://nyu.databrary.org/party/590,0,NA,NA,NA
@@ -347,7 +350,7 @@ ai_id,ai_last,ai_first,affiliation,url,email,inst_id,inst_name,inst_db_url,ai_db
 2618,Isaacowitz,Derek,Northeastern University,NA,dmi@neu.edu,199,Northeastern University,https://nyu.databrary.org/party/199,https://nyu.databrary.org/party/2618,0,NA,NA,NA
 3751,Levac,Danielle,Northeastern University,NA,d.levac@northeastern.edu,199,Northeastern University,https://nyu.databrary.org/party/199,https://nyu.databrary.org/party/3751,0,NA,NA,NA
 2118,Lewkowicz,David,Northeastern University,http://nuweb1.neu.edu/cdl/,d.lewkowicz@northeastern.edu,199,Northeastern University,https://nyu.databrary.org/party/199,https://nyu.databrary.org/party/2118,0,NA,NA,NA
-275,Waxman,Sandy,Northwestern University,http://www.psychology.northwestern.edu/people/faculty/core/profiles/sandra-waxman.html,s-waxman@northwestern.edu,201,Northwestern University,https://nyu.databrary.org/party/201,https://nyu.databrary.org/party/275,1,NA,NA,NA
+275,Waxman,Sandy,Northwestern University,http://www.psychology.northwestern.edu/people/faculty/core/profiles/sandra-waxman.html,s-waxman@northwestern.edu,201,Northwestern University,https://nyu.databrary.org/party/201,https://nyu.databrary.org/party/275,2,NA,NA,NA
 6361,Bodenhausen,Galen,Northwestern University,https://www.galenbodenhausen.com/,galen@northwestern.edu,201,Northwestern University,https://nyu.databrary.org/party/201,https://nyu.databrary.org/party/6361,0,NA,NA,NA
 2466,Broaders,Sara,Northwestern University,NA,s-broaders@northwestern.edu,201,Northwestern University,https://nyu.databrary.org/party/201,https://nyu.databrary.org/party/2466,0,NA,NA,NA
 4773,Danilovich,Margaret,Northwestern University,NA,margaret-wente@northwestern.edu,201,Northwestern University,https://nyu.databrary.org/party/201,https://nyu.databrary.org/party/4773,0,NA,NA,NA
@@ -391,7 +394,7 @@ ai_id,ai_last,ai_first,affiliation,url,email,inst_id,inst_name,inst_db_url,ai_db
 1813,Odic,Darko,University of British Columbia,http://odic.psych.ubc.ca,darko.odic@psych.ubc.ca,215,"University of British Columbia, Vancouver",https://nyu.databrary.org/party/215,https://nyu.databrary.org/party/1813,0,NA,NA,NA
 7784,Rhodin,Helge,University of British Columbia,NA,rhodin@cs.ubc.ca,215,"University of British Columbia, Vancouver",https://nyu.databrary.org/party/215,https://nyu.databrary.org/party/7784,0,NA,NA,NA
 284,Werker,Janet F.,The University of British Columbia,http://infantstudies.psych.ubc.ca/,jwerker@psych.ubc.ca,215,"University of British Columbia, Vancouver",https://nyu.databrary.org/party/215,https://nyu.databrary.org/party/284,0,NA,NA,NA
-538,Oakes,Lisa,UC Davis,NA,lmoakes@ucdavis.edu,216,"University of California, Davis",https://nyu.databrary.org/party/216,https://nyu.databrary.org/party/538,20,NA,NA,NA
+538,Oakes,Lisa,UC Davis,NA,lmoakes@ucdavis.edu,216,"University of California, Davis",https://nyu.databrary.org/party/216,https://nyu.databrary.org/party/538,19,NA,NA,NA
 4458,Prado,Elizabeth,University of California Davis,NA,elprado@ucdavis.edu,216,"University of California, Davis",https://nyu.databrary.org/party/216,https://nyu.databrary.org/party/4458,6,NA,NA,NA
 1469,Graf Estes,Katharine,"University of California, Davis",NA,kgrafestes@ucdavis.edu,216,"University of California, Davis",https://nyu.databrary.org/party/216,https://nyu.databrary.org/party/1469,1,NA,NA,NA
 344,Guyer,Amanda,"University of California, Davis",NA,aeguyer@ucdavis.edu,216,"University of California, Davis",https://nyu.databrary.org/party/216,https://nyu.databrary.org/party/344,0,NA,NA,NA
@@ -399,9 +402,9 @@ ai_id,ai_last,ai_first,affiliation,url,email,inst_id,inst_name,inst_db_url,ai_db
 2278,Swartz,Johnna,"University of California, Davis",NA,jrswartz@ucdavis.edu,216,"University of California, Davis",https://nyu.databrary.org/party/216,https://nyu.databrary.org/party/2278,0,NA,NA,NA
 482,Todd,Andrew,"University of California, Davis",NA,atodd@ucdavis.edu,216,"University of California, Davis",https://nyu.databrary.org/party/216,https://nyu.databrary.org/party/482,0,NA,NA,NA
 2668,Trzesniewski,Kali,UC Davis,http://www.selflab.org/,ktrz@ucdavis.edu,216,"University of California, Davis",https://nyu.databrary.org/party/216,https://nyu.databrary.org/party/2668,0,NA,NA,NA
-985,Colosimo,Laura,"University of California, Los Angeles",NA,lcolosimo36@gmail.com,217,"University of California, Los Angeles",https://nyu.databrary.org/party/217,https://nyu.databrary.org/party/985,13,NA,NA,NA
 8101,Wilson,Rujuta,"University of California, Los Angeles",NA,rbhatt@mednet.ucla.edu,217,"University of California, Los Angeles",https://nyu.databrary.org/party/217,https://nyu.databrary.org/party/8101,6,NA,NA,NA
 93,Johnson,Scott,"University of California, Los Angeles",NA,scott.johnson@ucla.edu,217,"University of California, Los Angeles",https://nyu.databrary.org/party/217,https://nyu.databrary.org/party/93,1,NA,NA,NA
+985,Colosimo,Laura,"University of California, Los Angeles",NA,lcolosimo36@gmail.com,217,"University of California, Los Angeles",https://nyu.databrary.org/party/217,https://nyu.databrary.org/party/985,0,NA,NA,NA
 6239,Lord,Catherine,"University of California, Los Angeles",NA,clord@mednet.ucla.edu,217,"University of California, Los Angeles",https://nyu.databrary.org/party/217,https://nyu.databrary.org/party/6239,0,NA,NA,NA
 5689,Paquette-Smith,Melissa,UCLA,NA,paquettesmith@psych.ucla.edu,217,"University of California, Los Angeles",https://nyu.databrary.org/party/217,https://nyu.databrary.org/party/5689,0,NA,NA,NA
 1627,Silvers,Jennifer Ashley,UCLA,NA,silvers@ucla.edu,217,"University of California, Los Angeles",https://nyu.databrary.org/party/217,https://nyu.databrary.org/party/1627,0,NA,NA,NA
@@ -426,7 +429,7 @@ ai_id,ai_last,ai_first,affiliation,url,email,inst_id,inst_name,inst_db_url,ai_db
 4099,Frankel,Leslie,University of Houston,NA,Lafrankel@uh.edu,222,University of Houston,https://nyu.databrary.org/party/222,https://nyu.databrary.org/party/4099,0,NA,NA,NA
 5353,Mills,Monique,University of Houston,NA,mtmills@uh.edu,222,University of Houston,https://nyu.databrary.org/party/222,https://nyu.databrary.org/party/5353,0,NA,NA,NA
 7718,Roy,Amanda,University of Illinois at Chicago,NA,alroy28@uic.edu,224,University of Illinois at Chicago,https://nyu.databrary.org/party/224,https://nyu.databrary.org/party/7718,1,NA,NA,NA
-314,Blumberg,Mark,University of Iowa,http://psychology.uiowa.edu/blumberg-lab,mark-blumberg@uiowa.edu,225,University of Iowa,https://nyu.databrary.org/party/225,https://nyu.databrary.org/party/314,2,NA,NA,NA
+314,Blumberg,Mark,University of Iowa,http://psychology.uiowa.edu/blumberg-lab,mark-blumberg@uiowa.edu,225,University of Iowa,https://nyu.databrary.org/party/225,https://nyu.databrary.org/party/314,3,NA,NA,NA
 3225,Cole,Renee,University of Iowa,NA,renee-cole@uiowa.edu,225,University of Iowa,https://nyu.databrary.org/party/225,https://nyu.databrary.org/party/3225,2,NA,NA,NA
 681,Cook,Susan Wagner,University of Iowa,NA,susan-cook@uiowa.edu,225,University of Iowa,https://nyu.databrary.org/party/225,https://nyu.databrary.org/party/681,0,NA,NA,NA
 697,Demir-Lira,O. Ece,University of Iowa,https://psychology.uiowa.edu/people/ece-demir-lira,ecdemir@gmail.com,225,University of Iowa,https://nyu.databrary.org/party/225,https://nyu.databrary.org/party/697,0,NA,NA,NA
@@ -439,7 +442,7 @@ ai_id,ai_last,ai_first,affiliation,url,email,inst_id,inst_name,inst_db_url,ai_db
 6864,Plumert,Jodie,University of Iowa,NA,jodie-plumert@uiowa.edu,225,University of Iowa,https://nyu.databrary.org/party/225,https://nyu.databrary.org/party/6864,0,NA,NA,NA
 761,Strathearn,Lane,University of Iowa,https://uichildrens.org/lane-strathearn,lane-strathearn@uiowa.edu,225,University of Iowa,https://nyu.databrary.org/party/225,https://nyu.databrary.org/party/761,0,0000-0001-5870-8843,NA,NA
 482,Todd,Andrew,"University of California, Davis",NA,atodd@ucdavis.edu,225,University of Iowa,https://nyu.databrary.org/party/225,https://nyu.databrary.org/party/482,0,NA,NA,NA
-302,Cashon,Cara,University of Louisville,NA,cara.cashon@louisville.edu,226,University of Louisville,https://nyu.databrary.org/party/226,https://nyu.databrary.org/party/302,3,NA,NA,NA
+302,Cashon,Cara,University of Louisville,NA,cara.cashon@louisville.edu,226,University of Louisville,https://nyu.databrary.org/party/226,https://nyu.databrary.org/party/302,2,NA,NA,NA
 1699,Noles,Nicholaus,University of Louisville,NA,nicholaus.noles@gmail.com,226,University of Louisville,https://nyu.databrary.org/party/226,https://nyu.databrary.org/party/1699,2,NA,NA,NA
 1483,Rosen,Paul,University of Louisville,NA,paul.rosen@louisville.edu,226,University of Louisville,https://nyu.databrary.org/party/226,https://nyu.databrary.org/party/1483,0,NA,NA,NA
 357,Mandalaywala,Tara,University of Massachusetts Amherst,https://www.thecadlab.org/,tmandalaywala@umass.edu,227,"University of Massachusetts, Amherst",https://nyu.databrary.org/party/227,https://nyu.databrary.org/party/357,2,NA,NA,NA
@@ -461,9 +464,9 @@ ai_id,ai_last,ai_first,affiliation,url,email,inst_id,inst_name,inst_db_url,ai_db
 1857,Banerjee,Meeta,University of South Carolina,NA,Meeta@mailbox.sc.edu,234,University of South Carolina,https://nyu.databrary.org/party/234,https://nyu.databrary.org/party/1857,0,NA,NA,NA
 1057,Mulvey,Kelly Lynn,University of South Carolina,NA,klmulvey1@gmail.com,234,University of South Carolina,https://nyu.databrary.org/party/234,https://nyu.databrary.org/party/1057,0,NA,NA,NA
 3299,Hay,Jessica,"University of Tennessee, Knoxville",NA,jhay@tennessee.edu,235,University of Tennessee,https://nyu.databrary.org/party/235,https://nyu.databrary.org/party/3299,1,NA,NA,NA
+6080,Reynolds,Gregory Durelle,"University of Tennessee, Knoxville",NA,greynolds@utk.edu,235,University of Tennessee,https://nyu.databrary.org/party/235,https://nyu.databrary.org/party/6080,1,NA,NA,NA
 2073,Ross-Sheehy,Shannon,University of Tennessee,NA,rosssheehy@utk.edu,235,University of Tennessee,https://nyu.databrary.org/party/235,https://nyu.databrary.org/party/2073,1,NA,NA,NA
-6080,Reynolds,Gregory Durelle,"University of Tennessee, Knoxville",NA,greynolds@utk.edu,235,University of Tennessee,https://nyu.databrary.org/party/235,https://nyu.databrary.org/party/6080,0,NA,NA,NA
-2738,Cirelli,Laura,University of Toronto Mississauga,NA,laura.cirelli@utoronto.ca,236,University of Toronto,https://nyu.databrary.org/party/236,https://nyu.databrary.org/party/2738,8,NA,NA,NA
+2738,Cirelli,Laura,University of Toronto Mississauga,NA,laura.cirelli@utoronto.ca,236,University of Toronto,https://nyu.databrary.org/party/236,https://nyu.databrary.org/party/2738,9,NA,NA,NA
 4692,Malti,Tina,University of Toronto,NA,tina.malti@utoronto.ca,236,University of Toronto,https://nyu.databrary.org/party/236,https://nyu.databrary.org/party/4692,3,NA,NA,NA
 3256,Schlichting,Margaret,University of Toronto,NA,meg.schlichting@utoronto.ca,236,University of Toronto,https://nyu.databrary.org/party/236,https://nyu.databrary.org/party/3256,3,NA,NA,NA
 3461,Rule,Nick,University of Toronto,NA,rule@psych.utoronto.ca,236,University of Toronto,https://nyu.databrary.org/party/236,https://nyu.databrary.org/party/3461,1,NA,NA,NA
@@ -485,6 +488,7 @@ ai_id,ai_last,ai_first,affiliation,url,email,inst_id,inst_name,inst_db_url,ai_db
 4565,Starmans,Christina,University of Toronto,NA,christina.starmans@utoronto.ca,236,University of Toronto,https://nyu.databrary.org/party/236,https://nyu.databrary.org/party/4565,0,NA,NA,NA
 1806,Olson,Kristina R,University of Washington,NA,krolson@uw.edu,237,University of Washington,https://nyu.databrary.org/party/237,https://nyu.databrary.org/party/1806,2,NA,NA,NA
 5894,Starr,Ariel,University of Washington,NA,abstarr@uw.edu,237,University of Washington,https://nyu.databrary.org/party/237,https://nyu.databrary.org/party/5894,1,NA,NA,NA
+8459,Barkan,Susan,NA,NA,barkas@uw.edu,237,University of Washington,https://nyu.databrary.org/party/237,https://nyu.databrary.org/party/8459,0,NA,NA,NA
 6316,Muir,Brittney,University of Washington,NA,bcmuir@uw.edu,237,University of Washington,https://nyu.databrary.org/party/237,https://nyu.databrary.org/party/6316,0,NA,NA,NA
 1439,Pace,Amy,University of Washington,NA,amypace@uw.edu,237,University of Washington,https://nyu.databrary.org/party/237,https://nyu.databrary.org/party/1439,0,NA,NA,NA
 4881,Lindskog,Marcus,Uppsala University,NA,marcus.lindskog@psyk.uu.se,239,Uppsala University,https://nyu.databrary.org/party/239,https://nyu.databrary.org/party/4881,2,NA,NA,NA
@@ -495,7 +499,7 @@ ai_id,ai_last,ai_first,affiliation,url,email,inst_id,inst_name,inst_db_url,ai_db
 3551,Chu,Virginia,Virginia Commonwealth University,NA,vchu@vcu.edu,240,Virginia Commonwealth University,https://nyu.databrary.org/party/240,https://nyu.databrary.org/party/3551,0,NA,NA,NA
 2815,Dzokoto,Vivian,Virginia Commonwealth University,NA,vdzokoto@vcu.edu,240,Virginia Commonwealth University,https://nyu.databrary.org/party/240,https://nyu.databrary.org/party/2815,0,NA,NA,NA
 2814,Serpell,Zewelanji,Virginia Commonwealth University,NA,znserpell@vcu.edu,240,Virginia Commonwealth University,https://nyu.databrary.org/party/240,https://nyu.databrary.org/party/2814,0,NA,NA,NA
-1286,Markson,Lori,Washington University,NA,markson@wustl.edu,241,"Washington University, St Louis",https://nyu.databrary.org/party/241,https://nyu.databrary.org/party/1286,4,NA,NA,NA
+1286,Markson,Lori,Washington University,NA,markson@wustl.edu,241,"Washington University, St Louis",https://nyu.databrary.org/party/241,https://nyu.databrary.org/party/1286,2,NA,NA,NA
 5030,Barch,Deanna,Washington University,NA,dbarch@wustl.edu,241,"Washington University, St Louis",https://nyu.databrary.org/party/241,https://nyu.databrary.org/party/5030,0,NA,NA,NA
 2672,Gaffrey,Michael,Washington University,NA,gaffreym@wustl.edu,241,"Washington University, St Louis",https://nyu.databrary.org/party/241,https://nyu.databrary.org/party/2672,0,NA,NA,NA
 4477,Prull,Matthew,Whitman College,NA,prullmw@whitman.edu,242,Whitman College,https://nyu.databrary.org/party/242,https://nyu.databrary.org/party/4477,0,NA,NA,NA
@@ -504,7 +508,7 @@ ai_id,ai_last,ai_first,affiliation,url,email,inst_id,inst_name,inst_db_url,ai_db
 2140,Huijding,Jorg,Utrecht University,NA,j.huijding@uu.nl,281,Utrecht University,https://nyu.databrary.org/party/281,https://nyu.databrary.org/party/2140,0,NA,NA,NA
 2020,Keij,Brigitta,Utrecht University,NA,b.m.keij@uu.nl,281,Utrecht University,https://nyu.databrary.org/party/281,https://nyu.databrary.org/party/2020,0,NA,NA,NA
 6866,Oudgenoeg-Paz,Ora,Utrecht University,NA,o.oudgenoeg@uu.nl,281,Utrecht University,https://nyu.databrary.org/party/281,https://nyu.databrary.org/party/6866,0,NA,NA,NA
-5,Adolph,Karen,New York University,http://www.psych.nyu.edu/adolph/,karen.adolph@nyu.edu,308,Staff,https://nyu.databrary.org/party/308,https://nyu.databrary.org/party/5,31,NA,NA,NA
+5,Adolph,Karen,New York University,http://www.psych.nyu.edu/adolph/,karen.adolph@nyu.edu,308,Staff,https://nyu.databrary.org/party/308,https://nyu.databrary.org/party/5,32,NA,NA,NA
 6,Gilmore,Rick O.,The Pennsylvania State University,http://gilmore-lab.github.io,rogilmore@psu.edu,308,Staff,https://nyu.databrary.org/party/308,https://nyu.databrary.org/party/6,4,0000-0002-7676-3982,5,NA
 4291,Nez,Reda,NYU,NA,rn56@nyu.edu,308,Staff,https://nyu.databrary.org/party/308,https://nyu.databrary.org/party/4291,0,NA,NA,NA
 406,Soska,Kasey,Databrary,https://sites.google.com/site/kcsoska,kcs266@nyu.edu,308,Staff,https://nyu.databrary.org/party/308,https://nyu.databrary.org/party/406,0,NA,NA,NA
@@ -563,8 +567,8 @@ ai_id,ai_last,ai_first,affiliation,url,email,inst_id,inst_name,inst_db_url,ai_db
 1970,Simonetti,Alessio,"Baylor College of Medicine, department of Neuropsychiatry, Houston TX",NA,alessio.simonetti@bcm.edu,963,Baylor College of Medicine,https://nyu.databrary.org/party/963,https://nyu.databrary.org/party/1970,0,NA,NA,NA
 928,Collins,Elizabeth,ISCTE-Instituto Universitario de Lisboa,NA,eccse@iscte-iul.pt,976,ISCTE - University Institute of Lisbon (IUL),https://nyu.databrary.org/party/976,https://nyu.databrary.org/party/928,1,NA,NA,NA
 2254,Garrido,Margarida,ISCTE-Instituto Universitário de Lisboa,NA,margarida.garrido@iscte.pt,976,ISCTE - University Institute of Lisbon (IUL),https://nyu.databrary.org/party/976,https://nyu.databrary.org/party/2254,0,NA,NA,NA
-562,Weisberg,Deena Skolnick,Villanova University,NA,deena.weisberg@villanova.edu,977,University of Pennsylvania,https://nyu.databrary.org/party/977,https://nyu.databrary.org/party/562,16,NA,NA,NA
-7389,Kording,Konrad,University of Pennsylvania,NA,kording@upenn.edu,977,University of Pennsylvania,https://nyu.databrary.org/party/977,https://nyu.databrary.org/party/7389,1,NA,NA,NA
+562,Weisberg,Deena Skolnick,Villanova University,NA,deena.weisberg@villanova.edu,977,University of Pennsylvania,https://nyu.databrary.org/party/977,https://nyu.databrary.org/party/562,17,NA,NA,NA
+7389,Kording,Konrad,University of Pennsylvania,NA,kording@upenn.edu,977,University of Pennsylvania,https://nyu.databrary.org/party/977,https://nyu.databrary.org/party/7389,0,NA,NA,NA
 3124,Liberman,Mark Yoffe,University of Pennsylvania,NA,myl@cis.upenn.edu,977,University of Pennsylvania,https://nyu.databrary.org/party/977,https://nyu.databrary.org/party/3124,0,NA,NA,NA
 3737,Swingley,Daniel,University of Pennsylvania,NA,swingley@psych.upenn.edu,977,University of Pennsylvania,https://nyu.databrary.org/party/977,https://nyu.databrary.org/party/3737,0,NA,NA,NA
 1670,Trueswell,John,University of Pennsylvania,NA,trueswel@psych.upenn.edu,977,University of Pennsylvania,https://nyu.databrary.org/party/977,https://nyu.databrary.org/party/1670,0,NA,NA,NA
@@ -586,12 +590,12 @@ ai_id,ai_last,ai_first,affiliation,url,email,inst_id,inst_name,inst_db_url,ai_db
 983,Baumann,Nicola,University of Trier,NA,nicola.baumann@uni-trier.de,1050,University of Trier,https://nyu.databrary.org/party/1050,https://nyu.databrary.org/party/983,0,NA,NA,NA
 3584,Franco,Fabia,"Middlesex University, London, UK",NA,f.franco@mdx.ac.uk,1053,Middlesex University,https://nyu.databrary.org/party/1053,https://nyu.databrary.org/party/3584,0,NA,NA,NA
 1027,Reynolds,Gemma,Middlesex University,NA,g.reynolds@mdx.ac.uk,1053,Middlesex University,https://nyu.databrary.org/party/1053,https://nyu.databrary.org/party/1027,0,NA,NA,NA
+4611,Fern,Alan,Oregon State University,NA,alan.fern@oregonstate.edu,1055,Oregon State University,https://nyu.databrary.org/party/1055,https://nyu.databrary.org/party/4611,1,NA,NA,NA
 4799,Fern,Xiaoli,Oregon State University,NA,xiaoli.fern@oregonstate.edu,1055,Oregon State University,https://nyu.databrary.org/party/1055,https://nyu.databrary.org/party/4799,1,NA,NA,NA
-4611,Fern,Alan,Oregon State University,NA,alan.fern@oregonstate.edu,1055,Oregon State University,https://nyu.databrary.org/party/1055,https://nyu.databrary.org/party/4611,0,NA,NA,NA
+4743,Todorovic,Sinisa,Oregon State University,NA,sinisa@oregonstate.edu,1055,Oregon State University,https://nyu.databrary.org/party/1055,https://nyu.databrary.org/party/4743,1,NA,NA,NA
 4750,Li,Fuxin,Oregon State University,NA,fuxin.li@oregonstate.edu,1055,Oregon State University,https://nyu.databrary.org/party/1055,https://nyu.databrary.org/party/4750,0,NA,NA,NA
 1000,Logan,Samuel Wood,Oregon State University,NA,sam.logan@oregonstate.edu,1055,Oregon State University,https://nyu.databrary.org/party/1055,https://nyu.databrary.org/party/1000,0,NA,NA,NA
 4744,Tadepalli,Prasad,Oregon State University,NA,tadepall@eecs.oregonstate.edu,1055,Oregon State University,https://nyu.databrary.org/party/1055,https://nyu.databrary.org/party/4744,0,NA,NA,NA
-4743,Todorovic,Sinisa,Oregon State University,NA,sinisa@oregonstate.edu,1055,Oregon State University,https://nyu.databrary.org/party/1055,https://nyu.databrary.org/party/4743,0,NA,NA,NA
 566,Bouakaz,Saida,Claude Bernard University Lyon 1,NA,saida.bouakaz@univ-lyon1.fr,1063,Claude Bernard University Lyon 1,https://nyu.databrary.org/party/1063,https://nyu.databrary.org/party/566,0,NA,NA,NA
 1010,Ilgaz,Hande,Bilkent University,NA,hande.ilgaz@bilkent.edu.tr,1065,Bilkent University,https://nyu.databrary.org/party/1065,https://nyu.databrary.org/party/1010,0,NA,NA,NA
 4542,Gregory,Kyomi,Pace University,NA,kgregory@pace.edu,1067,Pace University,https://nyu.databrary.org/party/1067,https://nyu.databrary.org/party/4542,0,NA,NA,NA
@@ -642,12 +646,12 @@ ai_id,ai_last,ai_first,affiliation,url,email,inst_id,inst_name,inst_db_url,ai_db
 1222,Maouene,Josita,Grand Valey State University MI,https://www.researchgate.net/profile/Josita_Maouene/,maouenej@gvsu.edu,1312,Grand Valley State University,https://nyu.databrary.org/party/1312,https://nyu.databrary.org/party/1222,0,NA,NA,NA
 4577,Nelson,Charles,Harvard,NA,charles_nelson@harvard.edu,1313,Boston Children's Hospital,https://nyu.databrary.org/party/1313,https://nyu.databrary.org/party/4577,1,NA,NA,NA
 1225,Gaab,Nadine,Harvard Medical School/Boston Children's Hospital,NA,nadine.gaab@childrens.harvard.edu,1313,Boston Children's Hospital,https://nyu.databrary.org/party/1313,https://nyu.databrary.org/party/1225,0,NA,NA,NA
-2891,Eisen,Sierra,Wesleyan University,http://sierraeisen.weebly.com,seisen@wesleyan.edu,1314,Wesleyan University,https://nyu.databrary.org/party/1314,https://nyu.databrary.org/party/2891,6,NA,NA,NA
+2891,Eisen,Sierra,Wesleyan University,http://sierraeisen.weebly.com,seisen@wesleyan.edu,1314,Wesleyan University,https://nyu.databrary.org/party/1314,https://nyu.databrary.org/party/2891,9,NA,NA,NA
 3319,Barth,Hilary,Wesleyan University,NA,hbarth@wesleyan.edu,1314,Wesleyan University,https://nyu.databrary.org/party/1314,https://nyu.databrary.org/party/3319,0,NA,NA,NA
 1236,Shusterman,Anna,Wesleyan University,NA,anna.shusterman@gmail.com,1314,Wesleyan University,https://nyu.databrary.org/party/1314,https://nyu.databrary.org/party/1236,0,NA,NA,NA
 1211,Pillow,Bradford,Northern Ilinois University,NA,pillow@niu.edu,1318,Northern Illinois University,https://nyu.databrary.org/party/1318,https://nyu.databrary.org/party/1211,1,NA,NA,NA
 2237,Odeh,Christina,Northern Illinois University,NA,codeh@niu.edu,1318,Northern Illinois University,https://nyu.databrary.org/party/1318,https://nyu.databrary.org/party/2237,0,NA,NA,NA
-2587,de Marchena,Ashley Brooke,University of the Sciences,NA,a.demarchena@usciences.edu,1333,University of the Sciences,https://nyu.databrary.org/party/1333,https://nyu.databrary.org/party/2587,6,NA,NA,NA
+2587,de Marchena,Ashley Brooke,University of the Sciences,NA,a.demarchena@usciences.edu,1333,University of the Sciences,https://nyu.databrary.org/party/1333,https://nyu.databrary.org/party/2587,4,NA,NA,NA
 1229,Rajan,Vinaya,University of the Sciences in Philadelphia,NA,v.rajan@usciences.edu,1333,University of the Sciences,https://nyu.databrary.org/party/1333,https://nyu.databrary.org/party/1229,0,NA,NA,NA
 1172,Christie,Stella,Swarthmore College,NA,christie@swarthmore.edu,1336,Swarthmore College,https://nyu.databrary.org/party/1336,https://nyu.databrary.org/party/1172,0,NA,NA,NA
 1278,Newman,Ellen,"IE University, Spain",NA,hamiltonellen@icloud.com,1337,IE University,https://nyu.databrary.org/party/1337,https://nyu.databrary.org/party/1278,0,NA,NA,NA
@@ -678,7 +682,7 @@ ai_id,ai_last,ai_first,affiliation,url,email,inst_id,inst_name,inst_db_url,ai_db
 1450,LaSalle,Bernie,University of Utah,NA,bernie.lasalle@hsc.utah.edu,1464,University of Utah,https://nyu.databrary.org/party/1464,https://nyu.databrary.org/party/1450,0,NA,NA,NA
 2203,Csibra,Gergely,Central European University,NA,csibrag@ceu.edu,1470,Central European University,https://nyu.databrary.org/party/1470,https://nyu.databrary.org/party/2203,0,NA,NA,NA
 1413,Fiser,Jozsef,Central European University,NA,fiserj@ceu.edu,1470,Central European University,https://nyu.databrary.org/party/1470,https://nyu.databrary.org/party/1413,0,NA,NA,NA
-7781,Flaherty,Molly,Davidson College,https://www.molly-flaherty.com/about,moflaherty@davidson.edu,1471,Davidson College,https://nyu.databrary.org/party/1471,https://nyu.databrary.org/party/7781,16,NA,NA,NA
+7781,Flaherty,Molly,Davidson College,https://www.molly-flaherty.com/about,moflaherty@davidson.edu,1471,Davidson College,https://nyu.databrary.org/party/1471,https://nyu.databrary.org/party/7781,1,NA,NA,NA
 523,Leyva,Diana,Davidson College,NA,dileyva@davidson.edu,1471,Davidson College,https://nyu.databrary.org/party/1471,https://nyu.databrary.org/party/523,0,NA,NA,NA
 1392,Samson,Andrea,"University of Geneva, Switzerland",NA,andrea.samson@unige.ch,1480,University of Geneva,https://nyu.databrary.org/party/1480,https://nyu.databrary.org/party/1392,0,NA,NA,NA
 5004,Governor,Donna,University of North Georgia,NA,donna.governor@ung.edu,1482,University of North Georgia,https://nyu.databrary.org/party/1482,https://nyu.databrary.org/party/5004,0,NA,NA,NA
@@ -696,6 +700,7 @@ ai_id,ai_last,ai_first,affiliation,url,email,inst_id,inst_name,inst_db_url,ai_db
 7644,Pardoe,Heath,NYU Grossman School of Medicine,NA,heath.pardoe@nyulangone.org,1505,"New York University, School of Medicine",https://nyu.databrary.org/party/1505,https://nyu.databrary.org/party/7644,0,NA,NA,NA
 2605,Schoppik,David,New York University School of Medicine,NA,david.schoppik@nyumc.org,1505,"New York University, School of Medicine",https://nyu.databrary.org/party/1505,https://nyu.databrary.org/party/2605,0,NA,NA,NA
 4537,Surkis,Alisa,NYU Langone Health,NA,alisa.surkis@nyulangone.org,1505,"New York University, School of Medicine",https://nyu.databrary.org/party/1505,https://nyu.databrary.org/party/4537,0,NA,NA,NA
+4726,Willheim,Erica,"New York University School of Medicine, Dept of Child and Adolescent Psychiatry",NA,erica.willheim@nyulangone.org,1505,"New York University, School of Medicine",https://nyu.databrary.org/party/1505,https://nyu.databrary.org/party/4726,0,NA,NA,NA
 1423,Butcher,Natalie,Teesside University,NA,n.butcher@tees.ac.uk,1511,Teesside University,https://nyu.databrary.org/party/1511,https://nyu.databrary.org/party/1423,0,NA,NA,NA
 1267,Hill,Alison,Oregon Health & Science University,NA,hillali@ohsu.edu,1512,Oregon Health & Science University,https://nyu.databrary.org/party/1512,https://nyu.databrary.org/party/1267,0,NA,NA,NA
 1519,Jones,Rebecca,Weill Cornell Medical College,NA,rej2004@med.cornell.edu,1529,Weill Cornell Medicine,https://nyu.databrary.org/party/1529,https://nyu.databrary.org/party/1519,0,NA,NA,NA
@@ -709,7 +714,7 @@ ai_id,ai_last,ai_first,affiliation,url,email,inst_id,inst_name,inst_db_url,ai_db
 2591,Scott,Rose,University of California Merced,NA,rscott@ucmerced.edu,1570,"University of California, Merced",https://nyu.databrary.org/party/1570,https://nyu.databrary.org/party/2591,4,NA,NA,NA
 1382,Walle,Eric A,"University of California, Merced",http://idlab.ucmerced.edu,ewalle@ucmerced.edu,1570,"University of California, Merced",https://nyu.databrary.org/party/1570,https://nyu.databrary.org/party/1382,3,NA,NA,NA
 7862,Isbell,Elif,University of California Merced,NA,eisbell@ucmerced.edu,1570,"University of California, Merced",https://nyu.databrary.org/party/1570,https://nyu.databrary.org/party/7862,0,NA,NA,NA
-562,Weisberg,Deena Skolnick,Villanova University,NA,deena.weisberg@villanova.edu,1598,Villanova University,https://nyu.databrary.org/party/1598,https://nyu.databrary.org/party/562,16,NA,NA,NA
+562,Weisberg,Deena Skolnick,Villanova University,NA,deena.weisberg@villanova.edu,1598,Villanova University,https://nyu.databrary.org/party/1598,https://nyu.databrary.org/party/562,17,NA,NA,NA
 1513,Brand,Rebecca,Villanova University,NA,rebecca.brand@villanova.edu,1598,Villanova University,https://nyu.databrary.org/party/1598,https://nyu.databrary.org/party/1513,0,NA,NA,NA
 1246,Cross,David,TCU,NA,d.cross@tcu.edu,1603,Texas Christian University,https://nyu.databrary.org/party/1603,https://nyu.databrary.org/party/1246,0,NA,NA,NA
 1232,Ekas,Naomi,Texas Christian University,NA,naomi.ekas@tcu.edu,1603,Texas Christian University,https://nyu.databrary.org/party/1603,https://nyu.databrary.org/party/1232,0,NA,NA,NA
@@ -775,11 +780,12 @@ ai_id,ai_last,ai_first,affiliation,url,email,inst_id,inst_name,inst_db_url,ai_db
 1734,Kanngiesser,Patricia,Freie Universität Berlin,NA,patricia.kanngiesser@fu-berlin.de,1890,Free University of Berlin,https://nyu.databrary.org/party/1890,https://nyu.databrary.org/party/1734,0,NA,NA,NA
 1096,Liebal,Katja,Freie Universität Berlin,NA,katja.liebal@fu-berlin.de,1890,Free University of Berlin,https://nyu.databrary.org/party/1890,https://nyu.databrary.org/party/1096,0,NA,NA,NA
 1872,Chen,Eva E,The Hong Kong University of Science and Technology,NA,evaechen@ust.hk,1893,Hong Kong University of Science and Technology,https://nyu.databrary.org/party/1893,https://nyu.databrary.org/party/1872,0,NA,NA,NA
-1791,Iftekharuddin,Khan,Old Dominion University,NA,kiftekha@odu.edu,1908,Old Dominion University,https://nyu.databrary.org/party/1908,https://nyu.databrary.org/party/1791,2,NA,NA,NA
+1791,Iftekharuddin,Khan,Old Dominion University,NA,kiftekha@odu.edu,1908,Old Dominion University,https://nyu.databrary.org/party/1908,https://nyu.databrary.org/party/1791,1,NA,NA,NA
 1892,Basu,Arindam,University of Canterbury,NA,arindam.basu@canterbury.ac.nz,1923,University of Canterbury,https://nyu.databrary.org/party/1923,https://nyu.databrary.org/party/1892,0,NA,NA,NA
-6232,Mills,Candice,The University of Texas at Dallas,NA,candice.mills@utdallas.edu,1932,University of Texas at Dallas,https://nyu.databrary.org/party/1932,https://nyu.databrary.org/party/6232,8,NA,NA,NA
-2028,Spence,Melanie,The University of Texas at Dallas,NA,mspence@utdallas.edu,1932,University of Texas at Dallas,https://nyu.databrary.org/party/1932,https://nyu.databrary.org/party/2028,2,NA,NA,NA
+6232,Mills,Candice,The University of Texas at Dallas,NA,candice.mills@utdallas.edu,1932,University of Texas at Dallas,https://nyu.databrary.org/party/1932,https://nyu.databrary.org/party/6232,7,NA,NA,NA
+2028,Spence,Melanie,The University of Texas at Dallas,NA,mspence@utdallas.edu,1932,University of Texas at Dallas,https://nyu.databrary.org/party/1932,https://nyu.databrary.org/party/2028,1,NA,NA,NA
 2353,Raman,Rachna,The University of Texas at Dallas,NA,rachna.raman@utdallas.edu,1932,University of Texas at Dallas,https://nyu.databrary.org/party/1932,https://nyu.databrary.org/party/2353,0,NA,NA,NA
+8286,Field,Andy,University of Sussex,https://profiles.sussex.ac.uk/p9846-andy-field,andy.field@sussex.ac.uk,1938,University of Sussex,https://nyu.databrary.org/party/1938,https://nyu.databrary.org/party/8286,2,NA,NA,NA
 624,Horst,Jessica S.,University of Sussex,http://www.sussex.ac.uk/wordlab/,jessica@sussex.ac.uk,1938,University of Sussex,https://nyu.databrary.org/party/1938,https://nyu.databrary.org/party/624,0,NA,NA,NA
 1934,Lavelli,Manuela,University of Verona,http://www.dfpp.univr.it/?ent=persona&id=466,manuela.lavelli@univr.it,1950,University of Verona,https://nyu.databrary.org/party/1950,https://nyu.databrary.org/party/1934,0,NA,NA,NA
 3053,Rowland,Caroline,MPI for Psycholinguistics,https://www.mpi.nl/people/rowland-caroline,crowland@liverpool.ac.uk,1955,University of Liverpool,https://nyu.databrary.org/party/1955,https://nyu.databrary.org/party/3053,1,NA,NA,NA
@@ -810,9 +816,9 @@ ai_id,ai_last,ai_first,affiliation,url,email,inst_id,inst_name,inst_db_url,ai_db
 4393,Hayward,Dana A,University of Alberta,NA,dana.hayward@ualberta.ca,2123,University of Alberta,https://nyu.databrary.org/party/2123,https://nyu.databrary.org/party/4393,0,NA,NA,NA
 3218,Marchak,Kristan,University of Alberta,NA,kmarchak@ualberta.ca,2123,University of Alberta,https://nyu.databrary.org/party/2123,https://nyu.databrary.org/party/3218,0,NA,NA,NA
 1988,Wiebe,Sandra,University of Alberta,NA,sandra.wiebe@ualberta.ca,2123,University of Alberta,https://nyu.databrary.org/party/2123,https://nyu.databrary.org/party/1988,0,NA,NA,NA
-650,Casasola,Marianella,Cornell University,http://www.human.cornell.edu/bio.cfm?netid=mc272,mc272@cornell.edu,2127,International Congress on Infant Studies (ICIS),https://nyu.databrary.org/party/2127,https://nyu.databrary.org/party/650,30,NA,NA,NA
+650,Casasola,Marianella,Cornell University,http://www.human.cornell.edu/bio.cfm?netid=mc272,mc272@cornell.edu,2127,International Congress on Infant Studies (ICIS),https://nyu.databrary.org/party/2127,https://nyu.databrary.org/party/650,27,NA,NA,NA
 82,LoBue,Vanessa,Rutgers University,NA,vlobue@psychology.rutgers.edu,2127,International Congress on Infant Studies (ICIS),https://nyu.databrary.org/party/2127,https://nyu.databrary.org/party/82,23,NA,NA,NA
-538,Oakes,Lisa,UC Davis,NA,lmoakes@ucdavis.edu,2127,International Congress on Infant Studies (ICIS),https://nyu.databrary.org/party/2127,https://nyu.databrary.org/party/538,20,NA,NA,NA
+538,Oakes,Lisa,UC Davis,NA,lmoakes@ucdavis.edu,2127,International Congress on Infant Studies (ICIS),https://nyu.databrary.org/party/2127,https://nyu.databrary.org/party/538,19,NA,NA,NA
 308,Staff,NA,Databrary,NA,NA,2127,International Congress on Infant Studies (ICIS),https://nyu.databrary.org/party/2127,https://nyu.databrary.org/party/308,4,NA,NA,TRUE
 1945,Hepach,Robert,Max Planck Institute for Evolutionary Anthropology,NA,hepach@eva.mpg.de,2130,Max Planck Institute for Evolutionary Anthropology,https://nyu.databrary.org/party/2130,https://nyu.databrary.org/party/1945,0,NA,NA,NA
 2773,Wojcik,Erica,Skidmore College,NA,ewojcik@skidmore.edu,2162,Skidmore College,https://nyu.databrary.org/party/2162,https://nyu.databrary.org/party/2773,4,NA,NA,NA
@@ -829,7 +835,7 @@ ai_id,ai_last,ai_first,affiliation,url,email,inst_id,inst_name,inst_db_url,ai_db
 2176,Harbourne,Regina,Duquesne University,NA,harbourner@duq.edu,2211,Duquesne University,https://nyu.databrary.org/party/2211,https://nyu.databrary.org/party/2176,6,NA,NA,NA
 2163,Gawrilow,Caterina,Eberhard Karls University Tuebingen,NA,caterina.gawrilow@uni-tuebingen.de,2212,University of Tuebingen,https://nyu.databrary.org/party/2212,https://nyu.databrary.org/party/2163,0,NA,NA,NA
 2171,Taylor-Partridge,Teresa,University of the Incarnate Word,NA,tpartrid@uiwtx.edu,2215,University of the Incarnate Word,https://nyu.databrary.org/party/2215,https://nyu.databrary.org/party/2171,0,NA,NA,NA
-2077,Fusaro,Maria,San Jose State University,NA,maria.fusaro@sjsu.edu,2224,San Jose State University,https://nyu.databrary.org/party/2224,https://nyu.databrary.org/party/2077,3,NA,NA,NA
+2077,Fusaro,Maria,San Jose State University,NA,maria.fusaro@sjsu.edu,2224,San Jose State University,https://nyu.databrary.org/party/2224,https://nyu.databrary.org/party/2077,2,NA,NA,NA
 7129,Bang,Janet,San Jose State University,NA,janet.bang@sjsu.edu,2224,San Jose State University,https://nyu.databrary.org/party/2224,https://nyu.databrary.org/party/7129,0,NA,NA,NA
 2097,Duh,Shinchieh CJ,San Jose State University,NA,cj.duh@sjsu.edu,2224,San Jose State University,https://nyu.databrary.org/party/2224,https://nyu.databrary.org/party/2097,0,NA,NA,NA
 2143,Vibbert,Martha,Boston Medical Center,NA,mvibbert@bu.edu,2229,Boston Medical Center,https://nyu.databrary.org/party/2229,https://nyu.databrary.org/party/2143,0,NA,NA,NA
@@ -849,8 +855,8 @@ ai_id,ai_last,ai_first,affiliation,url,email,inst_id,inst_name,inst_db_url,ai_db
 2210,Pastrovicchio,Sonia,NA,NA,sonia.pastrovicchio@gmail.com,2272,Association Italian Teachers Method Feldenkrais (AIIMF),https://nyu.databrary.org/party/2272,https://nyu.databrary.org/party/2210,0,NA,NA,NA
 1837,Best,Catherine,Kutztown University,NA,best@kutztown.edu,2273,Kutztown University of Pennsylvania,https://nyu.databrary.org/party/2273,https://nyu.databrary.org/party/1837,0,NA,NA,NA
 1889,Nonaka,Tetsushi,Kobe University,http://www2.kobe-u.ac.jp/~tnonaka/,tetsushi@people.kobe-u.ac.jp,2275,Kobe University,https://nyu.databrary.org/party/2275,https://nyu.databrary.org/party/1889,0,NA,NA,NA
-2285,Sutherland,Clare,University of Western Australia,NA,clare.sutherland@uwa.edu.au,2276,University of Western Australia,https://nyu.databrary.org/party/2276,https://nyu.databrary.org/party/2285,1,NA,NA,NA
 7728,Fraschini,Nicola,University of Western Australia,NA,nicola.fraschini@uwa.edu.au,2276,University of Western Australia,https://nyu.databrary.org/party/2276,https://nyu.databrary.org/party/7728,0,NA,NA,NA
+2285,Sutherland,Clare,University of Western Australia,NA,clare.sutherland@uwa.edu.au,2276,University of Western Australia,https://nyu.databrary.org/party/2276,https://nyu.databrary.org/party/2285,0,NA,NA,NA
 7891,Cheatham,Carol,University of North Carolina at Chapel Hill,NA,carol_cheatham@unc.edu,2282,"University of North Carolina, Chapel Hill",https://nyu.databrary.org/party/2282,https://nyu.databrary.org/party/7891,0,NA,NA,NA
 2168,Gray,Kurt,University of North Carolina at Chapel Hill,NA,kurtgray@unc.edu,2282,"University of North Carolina, Chapel Hill",https://nyu.databrary.org/party/2282,https://nyu.databrary.org/party/2168,0,NA,NA,NA
 3079,Hughes,Sherick,The University of North Carolina at Chapel Hill,http://cds.web.unc.edu/people/mentors/sherick-hughes-ph-d/,shughes@email.unc.edu,2282,"University of North Carolina, Chapel Hill",https://nyu.databrary.org/party/2282,https://nyu.databrary.org/party/3079,0,NA,NA,NA
@@ -858,7 +864,7 @@ ai_id,ai_last,ai_first,affiliation,url,email,inst_id,inst_name,inst_db_url,ai_db
 5667,Payne,Keith,University of North Carolina,NA,payne@unc.edu,2282,"University of North Carolina, Chapel Hill",https://nyu.databrary.org/party/2282,https://nyu.databrary.org/party/5667,0,NA,NA,NA
 2150,Rakoczy,Hannes,University of Göttingen,NA,hrakocz@gwdg.de,2287,University of Goettingen,https://nyu.databrary.org/party/2287,https://nyu.databrary.org/party/2150,0,NA,NA,NA
 2214,Blais,Caroline,Université du Québec en Outaouais,NA,caroline.blais@uqo.ca,2318,University of Quebec in Outaouais,https://nyu.databrary.org/party/2318,https://nyu.databrary.org/party/2214,0,NA,NA,NA
-1913,Kucker,Sarah,Oklahoma State University,NA,sarah.kucker@okstate.edu,2334,Oklahoma State University,https://nyu.databrary.org/party/2334,https://nyu.databrary.org/party/1913,17,NA,NA,NA
+1913,Kucker,Sarah,Oklahoma State University,NA,sarah.kucker@okstate.edu,2334,Oklahoma State University,https://nyu.databrary.org/party/2334,https://nyu.databrary.org/party/1913,15,NA,NA,NA
 2322,Ciciolla,Lucia,Oklahoma State University,NA,lucia.ciciolla@okstate.edu,2334,Oklahoma State University,https://nyu.databrary.org/party/2334,https://nyu.databrary.org/party/2322,1,NA,NA,NA
 4547,Byrd-Craven,Jennifer,Oklahoma State University,NA,jennifer.byrd.craven@okstate.edu,2334,Oklahoma State University,https://nyu.databrary.org/party/2334,https://nyu.databrary.org/party/4547,0,NA,NA,NA
 5755,Kaipa,Roha,Oklahoma State University,NA,roha.kaipa@okstate.edu,2334,Oklahoma State University,https://nyu.databrary.org/party/2334,https://nyu.databrary.org/party/5755,0,NA,NA,NA
@@ -866,7 +872,7 @@ ai_id,ai_last,ai_first,affiliation,url,email,inst_id,inst_name,inst_db_url,ai_db
 2852,Shen,Xunbing,"Institute of Psychology, Chinese Academy of Sciences",NA,shenxunbing@yahoo.com,2352,"Institute of Psychology, Chinese Academy of Sciences",https://nyu.databrary.org/party/2352,https://nyu.databrary.org/party/2852,0,NA,NA,NA
 2327,Begum,Momotaz,University of New Hampshire,http://www.cs.unh.edu/~mbegum/,mbegum@cs.unh.edu,2371,University of New Hampshire,https://nyu.databrary.org/party/2371,https://nyu.databrary.org/party/2327,0,NA,NA,NA
 3342,Nesbitt,Kimberly Turner,University of New Hampshire,NA,kimberly.nesbitt@unh.edu,2371,University of New Hampshire,https://nyu.databrary.org/party/2371,https://nyu.databrary.org/party/3342,0,NA,NA,NA
-3110,Reich,Stephanie,"University of California, Irvine",NA,smreich@uci.edu,2376,"University of California, Irvine",https://nyu.databrary.org/party/2376,https://nyu.databrary.org/party/3110,57,NA,NA,NA
+3110,Reich,Stephanie,"University of California, Irvine",NA,smreich@uci.edu,2376,"University of California, Irvine",https://nyu.databrary.org/party/2376,https://nyu.databrary.org/party/3110,55,NA,NA,NA
 1206,Richland,Lindsey,"University of California, Irvine",https://www.uciscienceoflearning.org/,l.richland@uci.edu,2376,"University of California, Irvine",https://nyu.databrary.org/party/2376,https://nyu.databrary.org/party/1206,1,NA,NA,NA
 2364,Begolli,Kreshnik Nasi,"University of California, Irvine",https://www.researchgate.net/profile/Kreshnik_Begolli,kbegolli@uci.edu,2376,"University of California, Irvine",https://nyu.databrary.org/party/2376,https://nyu.databrary.org/party/2364,0,NA,NA,NA
 5148,Chernyak,Nadia,University of California - Irvine,NA,nadia.chernyak@uci.edu,2376,"University of California, Irvine",https://nyu.databrary.org/party/2376,https://nyu.databrary.org/party/5148,0,NA,NA,NA
@@ -876,6 +882,7 @@ ai_id,ai_last,ai_first,affiliation,url,email,inst_id,inst_name,inst_db_url,ai_db
 2375,Beier,Klaus,Charité - Universitätsmedizin Berlin,NA,klaus.beier@charite.de,2398,Charité - University Medicine Berlin,https://nyu.databrary.org/party/2398,https://nyu.databrary.org/party/2375,0,NA,NA,NA
 3772,Bermpohl,Felix,"Department of Psychiatry and Psychotherapy, Charité - Universitätsmedizin Berlin",NA,Felix.Bermpohl@charite.de,2398,Charité - University Medicine Berlin,https://nyu.databrary.org/party/2398,https://nyu.databrary.org/party/3772,0,NA,NA,NA
 591,Prosser,Laura,The Children's Hospital of Philadelphia/University of Pennsylvania,NA,prosserl@email.chop.edu,2418,Children's Hospital of Philadelphia (CHOP),https://nyu.databrary.org/party/2418,https://nyu.databrary.org/party/591,2,NA,NA,NA
+8303,Cohen,Dov,University of Illinois,NA,dovcohen@illinois.edu,2451,University of Illinois at Urbana-Champaign,https://nyu.databrary.org/party/2451,https://nyu.databrary.org/party/8303,0,NA,NA,NA
 6859,Hasegawa-Johnson,Mark,University of Illinois,NA,jhasegaw@illinois.edu,2451,University of Illinois at Urbana-Champaign,https://nyu.databrary.org/party/2451,https://nyu.databrary.org/party/6859,0,NA,NA,NA
 3635,Krist,Christina,University of Illinois at Urbana-Champaign,NA,ckrist@illinois.edu,2451,University of Illinois at Urbana-Champaign,https://nyu.databrary.org/party/2451,https://nyu.databrary.org/party/3635,0,NA,NA,NA
 6987,Pietrowicz,Mary,"University of Illinois at Urbana-Champaign, Applied Research Institute",NA,marybp@illinois.edu,2451,University of Illinois at Urbana-Champaign,https://nyu.databrary.org/party/2451,https://nyu.databrary.org/party/6987,0,NA,NA,NA
@@ -899,7 +906,7 @@ ai_id,ai_last,ai_first,affiliation,url,email,inst_id,inst_name,inst_db_url,ai_db
 2088,Im-Bolter,Nancie,Trent University,NA,nimbolter@trentu.ca,2577,Trent University,https://nyu.databrary.org/party/2577,https://nyu.databrary.org/party/2088,0,NA,NA,NA
 2593,Gleason,Tracy,Wellesley College,NA,tgleason@wellesley.edu,2598,Wellesley College,https://nyu.databrary.org/party/2598,https://nyu.databrary.org/party/2593,0,NA,NA,NA
 3281,Pyers,Jennie,Wellesley College,NA,jpyers@wellesley.edu,2598,Wellesley College,https://nyu.databrary.org/party/2598,https://nyu.databrary.org/party/3281,0,NA,NA,NA
-2368,Farrar,M.. Jeffrey,University of Florida,NA,farrar@ufl.edu,2615,University of Florida,https://nyu.databrary.org/party/2615,https://nyu.databrary.org/party/2368,2,NA,NA,NA
+2368,Farrar,M.. Jeffrey,University of Florida,NA,farrar@ufl.edu,2615,University of Florida,https://nyu.databrary.org/party/2615,https://nyu.databrary.org/party/2368,1,NA,NA,NA
 7748,Ferris,Daniel,University of Florida,NA,dferris@bme.ufl.edu,2615,University of Florida,https://nyu.databrary.org/party/2615,https://nyu.databrary.org/party/7748,0,NA,NA,NA
 5153,Jain,Eakta,University of Florida,NA,ejain@ufl.edu,2615,University of Florida,https://nyu.databrary.org/party/2615,https://nyu.databrary.org/party/5153,0,NA,NA,NA
 2653,Scott,Lisa,University of Florida,NA,lscott@ufl.edu,2615,University of Florida,https://nyu.databrary.org/party/2615,https://nyu.databrary.org/party/2653,0,NA,NA,NA
@@ -917,6 +924,7 @@ ai_id,ai_last,ai_first,affiliation,url,email,inst_id,inst_name,inst_db_url,ai_db
 2675,Whipple,Sara,Virginia Military Institute,NA,whippless@vmi.edu,2703,Virginia Military Institute,https://nyu.databrary.org/party/2703,https://nyu.databrary.org/party/2675,0,NA,NA,NA
 2662,Hahn,Amanda,Humboldt State University,NA,amanda.hahn@humboldt.edu,2716,Humboldt State University,https://nyu.databrary.org/party/2716,https://nyu.databrary.org/party/2662,0,NA,NA,NA
 2704,Kukke,Sahana Nalini,The Catholic University of America,NA,kukke@cua.edu,2718,Catholic University of America,https://nyu.databrary.org/party/2718,https://nyu.databrary.org/party/2704,0,NA,NA,NA
+8355,Schladen,Manon,The Catholic University of America,NA,schladen@cua.edu,2718,Catholic University of America,https://nyu.databrary.org/party/2718,https://nyu.databrary.org/party/8355,0,NA,NA,NA
 2491,Atkins,Melissa S,Marshall University,NA,stinson8@marshall.edu,2732,Marshall University,https://nyu.databrary.org/party/2732,https://nyu.databrary.org/party/2491,0,NA,NA,NA
 2700,Smiley,Patrcia A,Pomona College,NA,psmiley@pomona.edu,2748,Pomona College,https://nyu.databrary.org/party/2748,https://nyu.databrary.org/party/2700,0,NA,NA,NA
 7671,Forcino,Stacy,"California State University, San Bernardino",NA,sforcino@csusb.edu,2751,"California State University, San Bernardino",https://nyu.databrary.org/party/2751,https://nyu.databrary.org/party/7671,0,NA,NA,NA
@@ -938,9 +946,9 @@ ai_id,ai_last,ai_first,affiliation,url,email,inst_id,inst_name,inst_db_url,ai_db
 2752,Dexter,Amy,Roosevelt University,NA,adexter@roosevelt.edu,2827,Roosevelt University,https://nyu.databrary.org/party/2827,https://nyu.databrary.org/party/2752,0,NA,NA,NA
 3103,Kono,Tetsuya,Rikkyo University,NA,tetsuyakono@rikkyo.ac.jp,2836,Rikkyo University,https://nyu.databrary.org/party/2836,https://nyu.databrary.org/party/3103,0,NA,NA,NA
 2518,Yamamoto,Naoki,Rikkyo University,NA,gk270259-3632@tbe.t-com.ne.jp,2836,Rikkyo University,https://nyu.databrary.org/party/2836,https://nyu.databrary.org/party/2518,0,NA,NA,NA
-2581,Camparo Avila,Daniel,Universidad de la República,NA,daniel.avila@mail.com,2845,University of the Republic,https://nyu.databrary.org/party/2845,https://nyu.databrary.org/party/2581,0,NA,NA,NA
-6799,Piazza,Manuela,"University of Trento, Italy",NA,manuela.piazza@unitn.it,2847,University of Trento,https://nyu.databrary.org/party/2847,https://nyu.databrary.org/party/6799,1,NA,NA,NA
+2581,Camparo Avila,Daniel,Universidad de la República,https://cicp.psico.edu.uy/node/103,daniel.avila@mail.com,2845,University of the Republic,https://nyu.databrary.org/party/2845,https://nyu.databrary.org/party/2581,2,NA,NA,NA
 7736,Franchin,Laura,University of Trento,NA,laura.franchin@unitn.it,2847,University of Trento,https://nyu.databrary.org/party/2847,https://nyu.databrary.org/party/7736,0,NA,NA,NA
+6799,Piazza,Manuela,"University of Trento, Italy",NA,manuela.piazza@unitn.it,2847,University of Trento,https://nyu.databrary.org/party/2847,https://nyu.databrary.org/party/6799,0,NA,NA,NA
 2746,Aschersleben,Gisa,Saarland University,NA,aschersleben@mx.uni-saarland.de,2860,Saarland University,https://nyu.databrary.org/party/2860,https://nyu.databrary.org/party/2746,2,NA,NA,NA
 718,Bunce,Louise,Oxford Brookes University,NA,louise.bunce@brookes.ac.uk,2861,Oxford Brookes University,https://nyu.databrary.org/party/2861,https://nyu.databrary.org/party/718,0,NA,NA,NA
 4885,Kenward,Ben,Oxford Brookes University,NA,bkenward@brookes.ac.uk,2861,Oxford Brookes University,https://nyu.databrary.org/party/2861,https://nyu.databrary.org/party/4885,0,NA,NA,NA
@@ -966,7 +974,7 @@ ai_id,ai_last,ai_first,affiliation,url,email,inst_id,inst_name,inst_db_url,ai_db
 2693,Robinovitch,Stephen,Simon Fraser University,NA,stever@sfu.ca,2997,Simon Fraser University,https://nyu.databrary.org/party/2997,https://nyu.databrary.org/party/2693,1,NA,NA,NA
 2987,Beisert,Maria,"Adam Mickiewicz University in Poznań, Poland",NA,beisert@amu.edu.pl,3000,Adam Mickiewicz University,https://nyu.databrary.org/party/3000,https://nyu.databrary.org/party/2987,0,NA,NA,NA
 2737,Nordmeyer,Ann,Southern New Hampshire University,NA,a.nordmeyer@snhu.edu,3011,Southern New Hampshire University,https://nyu.databrary.org/party/3011,https://nyu.databrary.org/party/2737,0,NA,NA,NA
-2988,Enticott,Peter,Deakin University,NA,peter.enticott@deakin.edu.au,3057,Deakin University,https://nyu.databrary.org/party/3057,https://nyu.databrary.org/party/2988,1,NA,NA,NA
+2988,Enticott,Peter,Deakin University,NA,peter.enticott@deakin.edu.au,3057,Deakin University,https://nyu.databrary.org/party/3057,https://nyu.databrary.org/party/2988,0,NA,NA,NA
 3066,Saad,Carmel Sarah,Westmont College,NA,csaad@westmont.edu,3071,Westmont College,https://nyu.databrary.org/party/3071,https://nyu.databrary.org/party/3066,0,NA,NA,NA
 3068,Christensen,Bo,Copenhagen Business School,NA,bc.marktg@cbs.dk,3072,Copenhagen Business School,https://nyu.databrary.org/party/3072,https://nyu.databrary.org/party/3068,0,NA,NA,NA
 1237,Brown,Melissa,Texas Woman's University,NA,mbrown50@twu.edu,3073,Texas Woman's University,https://nyu.databrary.org/party/3073,https://nyu.databrary.org/party/1237,0,NA,NA,NA
@@ -979,7 +987,7 @@ ai_id,ai_last,ai_first,affiliation,url,email,inst_id,inst_name,inst_db_url,ai_db
 3147,Lany,Jill,University of Notre Dame,NA,jlany@nd.edu,3197,University of Notre Dame,https://nyu.databrary.org/party/3197,https://nyu.databrary.org/party/3147,0,NA,NA,NA
 3219,McFall,Joseph,State University of New York at Fredonia,https://www.researchgate.net/profile/Joseph_Mcfall,joseph.mcfall@fredonia.edu,3265,State University of New York at Fredonia,https://nyu.databrary.org/party/3265,https://nyu.databrary.org/party/3219,0,NA,NA,NA
 3242,Karl,Jenni,Thompson Rivers University,NA,jkarl@tru.ca,3282,Thompson Rivers University,https://nyu.databrary.org/party/3282,https://nyu.databrary.org/party/3242,0,NA,NA,NA
-3184,Rasanen,Okko,Aalto University,NA,okko.rasanen@aalto.fi,3283,Aalto University,https://nyu.databrary.org/party/3283,https://nyu.databrary.org/party/3184,1,NA,NA,NA
+3184,Rasanen,Okko,Aalto University,NA,okko.rasanen@tuni.fi,3283,Aalto University,https://nyu.databrary.org/party/3283,https://nyu.databrary.org/party/3184,1,NA,NA,NA
 3217,Taylor,Gemma,University of Salford,NA,g.taylor4@salford.ac.uk,3292,University of Salford,https://nyu.databrary.org/party/3292,https://nyu.databrary.org/party/3217,0,NA,NA,NA
 3286,Fitzpatrick,Caroline,Université Sainte-Anne,NA,caroline.fitzpatrick@usainteanne.ca,3325,University Saint Anne,https://nyu.databrary.org/party/3325,https://nyu.databrary.org/party/3286,0,NA,NA,NA
 3305,Page,Melanie,West Virginia University,NA,mcpage@mail.wvu.edu,3335,West Virginia University,https://nyu.databrary.org/party/3335,https://nyu.databrary.org/party/3305,0,NA,NA,NA
@@ -1011,7 +1019,7 @@ ai_id,ai_last,ai_first,affiliation,url,email,inst_id,inst_name,inst_db_url,ai_db
 3431,Motomura,Yuki,Kyushu University,NA,motomura@design.kyushu-u.ac.jp,3569,Kyushu University,https://nyu.databrary.org/party/3569,https://nyu.databrary.org/party/3431,0,NA,NA,NA
 3562,Ogata,Kohichi,Kumamoto University,NA,ogata@cs.kumamoto-u.ac.jp,3573,Kumamoto University,https://nyu.databrary.org/party/3573,https://nyu.databrary.org/party/3562,0,NA,NA,NA
 3552,Fischer,Gregory,Worcester Polytechnic Institute,NA,gfischer@wpi.edu,3577,Worcester Polytechnic Institute,https://nyu.databrary.org/party/3577,https://nyu.databrary.org/party/3552,0,NA,NA,NA
-3505,Samuelson,Larissa,University of East Anglia,NA,l.samuelson@uea.ac.uk,3578,University of East Anglia,https://nyu.databrary.org/party/3578,https://nyu.databrary.org/party/3505,2,NA,NA,NA
+3505,Samuelson,Larissa,University of East Anglia,NA,l.samuelson@uea.ac.uk,3578,University of East Anglia,https://nyu.databrary.org/party/3578,https://nyu.databrary.org/party/3505,1,NA,NA,NA
 7758,Ewing,Louise,University of East Anglia,NA,l.ewing@uea.ac.uk,3578,University of East Anglia,https://nyu.databrary.org/party/3578,https://nyu.databrary.org/party/7758,0,NA,NA,NA
 2930,Gliga,Teodora,University of East Anglia,http://www.gligalab.co.uk,t.gliga@uea.ac.uk,3578,University of East Anglia,https://nyu.databrary.org/party/3578,https://nyu.databrary.org/party/2930,0,NA,NA,NA
 8173,Smith,Fraser,University of East Anglia,NA,Fraser.Smith@uea.ac.uk,3578,University of East Anglia,https://nyu.databrary.org/party/3578,https://nyu.databrary.org/party/8173,0,NA,NA,NA
@@ -1058,7 +1066,7 @@ ai_id,ai_last,ai_first,affiliation,url,email,inst_id,inst_name,inst_db_url,ai_db
 3812,Miller,Joan,New School University,NA,millerj@newschool.edu,3933,New School University,https://nyu.databrary.org/party/3933,https://nyu.databrary.org/party/3812,1,NA,NA,NA
 3663,Geangu,Elena,University of York,NA,elena.geangu@york.ac.uk,3944,University of York,https://nyu.databrary.org/party/3944,https://nyu.databrary.org/party/3663,0,NA,NA,NA
 3879,Ramos-Loyo,Julieta,University of Guadalajara,NA,jramos@cencar.udg.mx,3948,University of Guadalajara,https://nyu.databrary.org/party/3948,https://nyu.databrary.org/party/3879,0,NA,NA,NA
-3743,Ng,Florrie Fei-Yin,The Chinese University of Hong Kong,NA,florrieng@cuhk.edu.hk,3949,Chinese University of Hong Kong,https://nyu.databrary.org/party/3949,https://nyu.databrary.org/party/3743,3,NA,NA,NA
+3743,Ng,Florrie Fei-Yin,The Chinese University of Hong Kong,NA,florrieng@cuhk.edu.hk,3949,Chinese University of Hong Kong,https://nyu.databrary.org/party/3949,https://nyu.databrary.org/party/3743,2,NA,NA,NA
 5742,Yang,Yijian,The Chinese University of Hong Kong,https://www.spe.cuhk.edu.hk/eng/people.asp?pageid=99,yyang@cuhk.edu.hk,3949,Chinese University of Hong Kong,https://nyu.databrary.org/party/3949,https://nyu.databrary.org/party/5742,0,NA,NA,NA
 3883,Huziwara,Edson Massayuki,Universidade Federal de Minas Gerais,http://lattes.cnpq.br/4671775690334406,huziwara.edson@gmail.com,3950,Federal University of Minas Gerais,https://nyu.databrary.org/party/3950,https://nyu.databrary.org/party/3883,0,NA,NA,NA
 3866,Hoehle,Barbara,University of Potsdam,NA,hoehle@uni-potsdam.de,3960,University of Potsdam,https://nyu.databrary.org/party/3960,https://nyu.databrary.org/party/3866,1,NA,NA,NA
@@ -1067,7 +1075,7 @@ ai_id,ai_last,ai_first,affiliation,url,email,inst_id,inst_name,inst_db_url,ai_db
 3967,Soley,Gaye,Bogazici University,NA,gayesoley@gmail.com,4008,Bogazici University,https://nyu.databrary.org/party/4008,https://nyu.databrary.org/party/3967,0,NA,NA,NA
 7499,Tahiroglu,Deniz,Bogazici University,NA,deniz.tahiroglu@boun.edu.tr,4008,Bogazici University,https://nyu.databrary.org/party/4008,https://nyu.databrary.org/party/7499,0,NA,NA,NA
 3235,Banerjee,Bonny,University of Memphis,NA,bbnerjee@memphis.edu,4017,University of Memphis,https://nyu.databrary.org/party/4017,https://nyu.databrary.org/party/3235,0,NA,NA,NA
-4000,Tincoff,Ruth,The College of Idaho,NA,rtincoff@collegeofidaho.edu,4028,College of Idaho,https://nyu.databrary.org/party/4028,https://nyu.databrary.org/party/4000,0,NA,NA,NA
+4000,Tincoff,Ruth,The College of Idaho,https://www.researchgate.net/profile/Ruth-Tincoff,rtincoff@collegeofidaho.edu,4028,College of Idaho,https://nyu.databrary.org/party/4028,https://nyu.databrary.org/party/4000,1,NA,NA,NA
 4687,Henderson,Annette,University of Auckland,https://unidirectory.auckland.ac.nz/profile/a-henderson,a.henderson@auckland.ac.nz,4029,University of Auckland,https://nyu.databrary.org/party/4029,https://nyu.databrary.org/party/4687,0,NA,NA,NA
 4019,Overall,Nickola Christine,University of Auckland,NA,n.overall@auckland.ac.nz,4029,University of Auckland,https://nyu.databrary.org/party/4029,https://nyu.databrary.org/party/4019,0,NA,NA,NA
 3848,Ferrara,Michele,University of L'Aquila,NA,michele.ferrara@univaq.it,4074,University of L'Aquila,https://nyu.databrary.org/party/4074,https://nyu.databrary.org/party/3848,0,NA,NA,NA
@@ -1157,7 +1165,7 @@ ai_id,ai_last,ai_first,affiliation,url,email,inst_id,inst_name,inst_db_url,ai_db
 5021,Kalagher,Hilary,Drew University,NA,hkalagher@drew.edu,5176,Drew University,https://nyu.databrary.org/party/5176,https://nyu.databrary.org/party/5021,0,NA,NA,NA
 4825,Stotland,Mitchell Andrew,"Associate Clinical Professor of Surgery, Weill Cornell Medical College Qatar",NA,mstotland@sidra.org,5208,Sidra Medicine,https://nyu.databrary.org/party/5208,https://nyu.databrary.org/party/4825,0,NA,NA,NA
 5213,Alarcon Rubio,David,Universidad Pablo de Olavide,NA,dalarub@upo.es,5211,"Pablo de Olavide University, Seville",https://nyu.databrary.org/party/5211,https://nyu.databrary.org/party/5213,0,NA,NA,NA
-4697,Jakobsen,Krisztina Varga,James Madison University,NA,jakobskv@jmu.edu,5236,James Madison University,https://nyu.databrary.org/party/5236,https://nyu.databrary.org/party/4697,1,NA,NA,NA
+4697,Jakobsen,Krisztina Varga,James Madison University,NA,jakobskv@jmu.edu,5236,James Madison University,https://nyu.databrary.org/party/5236,https://nyu.databrary.org/party/4697,0,NA,NA,NA
 5162,Tripathi,Shikha,"PES University, Bangalore, India",http://pesitsouth.pes.edu/faculty/dr-shikha-tripathi/,shikha@pes.edu,5237,PES University,https://nyu.databrary.org/party/5237,https://nyu.databrary.org/party/5162,0,NA,NA,NA
 4866,Bergstrom,Brian,Maryville University in St. Louis,NA,bbergstrom@maryville.edu,5257,Maryville University,https://nyu.databrary.org/party/5257,https://nyu.databrary.org/party/4866,0,NA,NA,NA
 4930,Shaffer,Katy,University of Baltimore,NA,kshaffer@ubalt.edu,5258,University of Baltimore,https://nyu.databrary.org/party/5258,https://nyu.databrary.org/party/4930,0,NA,NA,NA
@@ -1167,7 +1175,7 @@ ai_id,ai_last,ai_first,affiliation,url,email,inst_id,inst_name,inst_db_url,ai_db
 6450,Miller,Stephanie,University of Mississippi,NA,semille5@olemiss.edu,5269,University of Mississippi,https://nyu.databrary.org/party/5269,https://nyu.databrary.org/party/6450,0,NA,NA,NA
 3213,Daum,Moritz,University of Zurich,NA,daum@psychologie.uzh.ch,5274,University of Zurich,https://nyu.databrary.org/party/5274,https://nyu.databrary.org/party/3213,0,NA,NA,NA
 5594,Gampe,Anja,University of Zurich,NA,a.gampe@psychologie.uzh.ch,5274,University of Zurich,https://nyu.databrary.org/party/5274,https://nyu.databrary.org/party/5594,0,NA,NA,NA
-5234,Jordan,Kerry,Utah State University,NA,kerry.jordan@usu.edu,5280,Utah State University,https://nyu.databrary.org/party/5280,https://nyu.databrary.org/party/5234,1,NA,NA,NA
+5234,Jordan,Kerry,Utah State University,NA,kerry.jordan@usu.edu,5280,Utah State University,https://nyu.databrary.org/party/5280,https://nyu.databrary.org/party/5234,2,NA,NA,NA
 5228,Ladd,Kevin,Indiana University South Bend,NA,kladd@iusb.edu,5286,"Indiana University, South Bend",https://nyu.databrary.org/party/5286,https://nyu.databrary.org/party/5228,0,NA,NA,NA
 4517,Sharon,Tanya Lee,Mercer University,NA,sharon_t@mercer.edu,5297,Mercer University,https://nyu.databrary.org/party/5297,https://nyu.databrary.org/party/4517,0,NA,NA,NA
 5284,Conry-Murray,Clare,Saint Joseph's University,https://www.sju.edu/about-sju/faculty-staff/clare-conry-murray-phd,cconrymu@sju.edu,5315,Saint Joseph's University,https://nyu.databrary.org/party/5315,https://nyu.databrary.org/party/5284,0,NA,NA,NA
@@ -1176,9 +1184,9 @@ ai_id,ai_last,ai_first,affiliation,url,email,inst_id,inst_name,inst_db_url,ai_db
 5205,Mitchell,Mica,Methodist University,NA,micamitchell@gmail.com,5393,Methodist University,https://nyu.databrary.org/party/5393,https://nyu.databrary.org/party/5205,0,NA,NA,NA
 5320,Gosselin,Dora,High Point University,NA,dgosseli@highpoint.edu,5398,High Point University,https://nyu.databrary.org/party/5398,https://nyu.databrary.org/party/5320,0,NA,NA,NA
 5059,O'Leary,Allison,Brevard College,NA,olearyap@brevard.edu,5399,Brevard College,https://nyu.databrary.org/party/5399,https://nyu.databrary.org/party/5059,0,NA,NA,NA
-5251,Loth,Dr Eva,Kings College London,NA,eva.loth@kcl.ac.uk,5401,King's College London,https://nyu.databrary.org/party/5401,https://nyu.databrary.org/party/5251,2,NA,NA,NA
+5251,Loth,Dr Eva,Kings College London,NA,eva.loth@kcl.ac.uk,5401,King's College London,https://nyu.databrary.org/party/5401,https://nyu.databrary.org/party/5251,0,NA,NA,NA
 5379,Rueda,M Rosario,University of Granada,NA,rorueda@ugr.es,5402,University of Granada,https://nyu.databrary.org/party/5402,https://nyu.databrary.org/party/5379,0,NA,NA,NA
-5356,Mastergeorge,Ann,Texas Tech University,NA,ann.mastergeorge@ttu.edu,5407,Texas Tech University,https://nyu.databrary.org/party/5407,https://nyu.databrary.org/party/5356,3,NA,NA,NA
+5356,Mastergeorge,Ann,Texas Tech University,NA,ann.mastergeorge@ttu.edu,5407,Texas Tech University,https://nyu.databrary.org/party/5407,https://nyu.databrary.org/party/5356,1,NA,NA,NA
 5360,Zaier,Amani,Texas Tech University,NA,amani.zaier@ttu.edu,5407,Texas Tech University,https://nyu.databrary.org/party/5407,https://nyu.databrary.org/party/5360,0,NA,NA,NA
 5303,Taylor,Marianne,Pacific Lutheran University,NA,taylormg@plu.edu,5408,Pacific Lutheran University,https://nyu.databrary.org/party/5408,https://nyu.databrary.org/party/5303,0,NA,NA,NA
 4766,Carvalho,Chrissie Ferreira de,Federal University of Santa Catarina,https://www.researchgate.net/profile/Chrissie_Carvalho,chrissie.carvalho@ufsc.br,5410,Federal University of Santa Catarina,https://nyu.databrary.org/party/5410,https://nyu.databrary.org/party/4766,0,NA,NA,NA
@@ -1187,10 +1195,10 @@ ai_id,ai_last,ai_first,affiliation,url,email,inst_id,inst_name,inst_db_url,ai_db
 5246,Ko,Byoug Chul,Keimyung University,http://newcms.kmu.ac.kr/computereeng/Faculty.do,niceko@kmu.ac.kr,5468,Keimyung University,https://nyu.databrary.org/party/5468,https://nyu.databrary.org/party/5246,0,NA,NA,NA
 6048,Alozie,Nonye,SRI International,NA,maggie.alozie@sri.com,5469,SRI International,https://nyu.databrary.org/party/5469,https://nyu.databrary.org/party/6048,0,NA,NA,NA
 5064,Grindal,Todd,SRI International,NA,todd.grindal@sri.com,5469,SRI International,https://nyu.databrary.org/party/5469,https://nyu.databrary.org/party/5064,0,NA,NA,NA
-5391,Loughland,Carmel,"University of Newcastle, Australia",NA,Carmel.Loughland@newcastle.edu.au,5535,University of Newcastle,https://nyu.databrary.org/party/5535,https://nyu.databrary.org/party/5391,1,NA,NA,NA
 7844,Axelsson,Emma,The University of Newcastle,NA,emma.axelsson@newcastle.edu.au,5535,University of Newcastle,https://nyu.databrary.org/party/5535,https://nyu.databrary.org/party/7844,0,NA,NA,NA
+5391,Loughland,Carmel,"University of Newcastle, Australia",NA,Carmel.Loughland@newcastle.edu.au,5535,University of Newcastle,https://nyu.databrary.org/party/5535,https://nyu.databrary.org/party/5391,0,NA,NA,NA
 4646,Borschel,Gregory,"Hospital for Sick Children, University of Toronto",NA,gregory.borschel@sickkids.ca,5540,SickKids,https://nyu.databrary.org/party/5540,https://nyu.databrary.org/party/4646,0,NA,NA,NA
-5392,Stirn,Aglaja,Kiel University,NA,Aglaja.Stirn@uksh.de,5543,Keil University,https://nyu.databrary.org/party/5543,https://nyu.databrary.org/party/5392,1,NA,NA,NA
+5392,Stirn,Aglaja,Kiel University,NA,Aglaja.Stirn@uksh.de,5543,Keil University,https://nyu.databrary.org/party/5543,https://nyu.databrary.org/party/5392,0,NA,NA,NA
 5547,Rizaoglu,Filiz,Pamukkale University,NA,frizaoglu@pau.edu.tr,5544,Pamukkale University,https://nyu.databrary.org/party/5544,https://nyu.databrary.org/party/5547,0,NA,NA,NA
 4674,Thanheiser,Eva,Portland State University,NA,evat@pdx.edu,5550,Portland State University,https://nyu.databrary.org/party/5550,https://nyu.databrary.org/party/4674,0,NA,NA,NA
 7072,Khan,Shehroz,Toronto Rehabilitation Institute,NA,shehroz.khan@uhn.ca,5571,University Health Network,https://nyu.databrary.org/party/5571,https://nyu.databrary.org/party/7072,0,NA,NA,NA
@@ -1260,6 +1268,7 @@ ai_id,ai_last,ai_first,affiliation,url,email,inst_id,inst_name,inst_db_url,ai_db
 6579,Golani,Ilan,Tel Aviv University,NA,ilan99@tauex.tau.ac.il,6553,Tel Aviv University,https://nyu.databrary.org/party/6553,https://nyu.databrary.org/party/6579,0,NA,NA,NA
 6561,Pitts,Shane,Birmingham-Southern College,NA,spitts@bsc.edu,6679,Birmingham-Southern College,https://nyu.databrary.org/party/6679,https://nyu.databrary.org/party/6561,0,NA,NA,NA
 6710,Wronski,Caroline,"University of Applied Sciences Potsdam, Potsdam, Germany",NA,wronski@fh-potsdam.de,6740,"University of Applied Sciences, Potsdam",https://nyu.databrary.org/party/6740,https://nyu.databrary.org/party/6710,0,NA,NA,NA
+8092,Anderson,Michael,University of Western Ontario,http://www.emrglab.org,mande54@uwo.ca,6750,Western University,https://nyu.databrary.org/party/6750,https://nyu.databrary.org/party/8092,1,NA,NA,NA
 254,Jayaraman,Swapnaa,"Indiana University, Western University",NA,swapnaa@indiana.edu,6750,Western University,https://nyu.databrary.org/party/6750,https://nyu.databrary.org/party/254,0,NA,NA,NA
 8153,Stevenson,Ryan,University of Western Ontario,NA,rsteve28@uwo.ca,6750,Western University,https://nyu.databrary.org/party/6750,https://nyu.databrary.org/party/8153,0,NA,NA,NA
 6734,Palaniswamy,Suja,Amrita Vishwa Vidyapeetham,NA,p_suja@blr.amrita.edu,6760,Amrita Vishwa Vidyapeetham,https://nyu.databrary.org/party/6760,https://nyu.databrary.org/party/6734,1,NA,NA,NA
@@ -1305,6 +1314,7 @@ ai_id,ai_last,ai_first,affiliation,url,email,inst_id,inst_name,inst_db_url,ai_db
 7479,Mortensen,Jennifer,"University of Nevada, Reno",NA,mortensen@unr.edu,7642,"University of Nevada, Reno",https://nyu.databrary.org/party/7642,https://nyu.databrary.org/party/7479,0,NA,NA,NA
 7609,Samarasinghe,Pradeepa,Sri Lanka Institute of Information Technology,https://www.sliit.lk/faculty-of-computing/staff/pradeepa.s/,pradeepa.s@sliit.lk,7646,Sri Lanka Institute of Information Technology,https://nyu.databrary.org/party/7646,https://nyu.databrary.org/party/7609,1,NA,NA,NA
 7513,Zeigler,Stacey,Clarkson University,NA,szeigler@clarkson.edu,7649,Clarkson University,https://nyu.databrary.org/party/7649,https://nyu.databrary.org/party/7513,0,NA,NA,NA
+2783,Ferry,Alissa Lauren,University of Manchester,NA,alissa.ferry@manchester.ac.uk,7654,University of Manchester,https://nyu.databrary.org/party/7654,https://nyu.databrary.org/party/2783,0,NA,NA,NA
 4967,Jackson,Iain,University of Manchester,NA,iain.jackson@manchester.ac.uk,7654,University of Manchester,https://nyu.databrary.org/party/7654,https://nyu.databrary.org/party/4967,0,NA,NA,NA
 7524,Bennetts,Rachel,Brunel University London,NA,rachel.bennetts@brunel.ac.uk,7658,Brunel University London,https://nyu.databrary.org/party/7658,https://nyu.databrary.org/party/7524,0,NA,NA,NA
 583,Wen,Nicole J.,The University of Texas at Austin,NA,nicole.wen@utexas.edu,7658,Brunel University London,https://nyu.databrary.org/party/7658,https://nyu.databrary.org/party/583,0,NA,NA,NA
@@ -1317,6 +1327,7 @@ ai_id,ai_last,ai_first,affiliation,url,email,inst_id,inst_name,inst_db_url,ai_db
 7703,Weaver,Joanna,"Wheaton College, MA",NA,weaver_joanna@wheatoncollege.edu,7799,Wheaton College,https://nyu.databrary.org/party/7799,https://nyu.databrary.org/party/7703,0,NA,NA,NA
 7618,Lee,Alees,Weber State University,NA,aleeslee@weber.edu,7811,Weber State University,https://nyu.databrary.org/party/7811,https://nyu.databrary.org/party/7618,0,NA,NA,NA
 7597,Tarle,Stephanie,California Lutheran University,NA,starle@callutheran.edu,7812,California Lutheran University,https://nyu.databrary.org/party/7812,https://nyu.databrary.org/party/7597,1,NA,NA,NA
+8357,Kraeutner,Sarah,University of British Columbia,NA,sarah.kraeutner@ubc.ca,7835,"University of British Columbia, Okanagan",https://nyu.databrary.org/party/7835,https://nyu.databrary.org/party/8357,0,NA,NA,NA
 2251,Ward,Shannon,University of British Columbia,NA,shannon.ward@ubc.ca,7835,"University of British Columbia, Okanagan",https://nyu.databrary.org/party/7835,https://nyu.databrary.org/party/2251,0,NA,NA,NA
 7808,Young,Andrew,Northeastern Illinois University,NA,ayoung20@neiu.edu,7855,Northeastern Illinois University,https://nyu.databrary.org/party/7855,https://nyu.databrary.org/party/7808,0,NA,NA,NA
 7852,Queen,Jennifer,Rollins College,NA,jqueen@rollins.edu,7869,Rollins College,https://nyu.databrary.org/party/7869,https://nyu.databrary.org/party/7852,0,NA,NA,NA
