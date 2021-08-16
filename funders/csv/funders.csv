@@ -1030,8 +1030,12 @@ vol_id,funder_id,funder_name,award
 984,NA,NA,NA
 985,NA,NA,NA
 986,NA,NA,NA
-987,100000001,National Science Foundation (NSF),1620294
-987,100000003,Institute of Education Sciences,NA
+987,100000001,National Science Foundation (NSF),1620294 (2016-2020)
+987,100000001,National Science Foundation (NSF),IBSS-L: Continuous Measurement of Children's Behavior and the Development of Social Dynamics
+987,100000055,National Institute on Deafness and Other Communication Disorders (NIDCD),R01DC018542 (2021-2026)
+987,100000055,National Institute on Deafness and Other Communication Disorders (NIDCD),Language Development and Social Interaction in Children with Hearing Loss
+987,100000003,Institute of Education Sciences,R324A180203 (07/2018-06/2022)
+987,100000003,Institute of Education Sciences,Teacher and Peer Speech in Inclusion Classrooms: Malleable Factors Affecting Language Outcomes for Children with Disabilities
 988,NA,NA,NA
 989,NA,NA,NA
 990,NA,NA,NA

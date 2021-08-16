@@ -71,9 +71,7 @@ if (update_asset_data) {
 ## Volume-level demographics
 
 message("----- Generating volume-level demographics report -----")
-
 copy_to_archive("participant-demographics", "participant-demog-report.html")
-
 if (update_demog_data) {
   message("-- Regenerating demog data from all volumes --")
   rmarkdown::render("participant-demographics/participant-demog-report.Rmd", 
@@ -82,17 +80,13 @@ if (update_demog_data) {
   message("-- Using previously saved demog data --")
   rmarkdown::render("participant-demographics/participant-demog-report.Rmd", 
                     params=list(update_demo_csvs=FALSE))
-  
 }
 
 ## Tags and keywords
 
 message("----- Generating tags and keywords report -----")
-
 source("tags-keywords/R/helpers.R")
-
 copy_to_archive("tags-keywords", "tags-keywords-report.html")
-
 rmarkdown::render("tags-keywords/tags-keywords-report.Rmd")
 
 ## Clean-up
