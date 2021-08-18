@@ -165,7 +165,7 @@ update_inst_csv <- function(csv_fn = paste0(here::here(),
     }
   } else {
     message("No file found. Recreating from inst_id 1:", max_id)
-    df <- get_inst_info(1, max_id)
+    df <- purrr::map_df(1:max_id, get_inst_info, update_geo = update_geo)
     if (save_new) {
       message(paste0("Writing new file: ", csv_fn))
       write_csv(df, csv_fn)
