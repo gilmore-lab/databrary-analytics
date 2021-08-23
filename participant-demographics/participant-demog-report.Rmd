@@ -11,8 +11,8 @@ output:
     code_folding: hide
 params:
     db_login: email@provider.com
-    new_vol_rg_min: 1281
-    new_vol_rg_max: 1310
+    new_vol_rg_min: 1251
+    new_vol_rg_max: 1300
     update_demo_csvs: False
 ---
 

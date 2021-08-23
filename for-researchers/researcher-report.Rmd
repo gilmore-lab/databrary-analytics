@@ -1,0 +1,124 @@
+---
+title: "Researcher report"
+output: html_notebook
+params:
+  my_party_id: 6
+---
+
+# Purpose
+
+This document describes Rick Gilmore's work to develop a researcher report for Authorized Investigators using Databrary.
+
+# Set-up
+
+Load required packages.
+
+```{r}
+library(databraryapi)
+library(tidyverse) # for %>%
+```
+
+Login to Databrary.
+
+```{r databrary-login}
+databraryapi::login_db()
+```
+
+Retrieve my Databrary information.
+
+```{r}
+my_databrary_info <- databraryapi::list_party(params$my_party_id)
+```
+
+
+# My profile information
+
+Select and show profile information.
+
+```{r}
+my_profile <- tibble::tibble(party_id = my_databrary_info$id, 
+                             last_name = my_databrary_info$sortname, 
+                             first_name_initial = my_databrary_info$prename, 
+                             orcid = my_databrary_info$orcid, 
+                             affiliation = my_databrary_info$affiliation, 
+                             url = my_databrary_info$url, 
+                             email = my_databrary_info$email,
+                             my_db_profile_url = paste0("https://databrary.org/profile/", party_id))
+
+knitr::kable(my_profile)
+```
+
+Show my institutional and Authorized Investigator sponsors.
+
+```{r}
+my_parents <- my_databrary_info$parents$party
+
+inst_sponsors <- my_parents %>%
+  dplyr::filter(., institution == TRUE) %>%
+  dplyr::mutate(., sponsor_url = paste0("https://nyu.databrary.org/party/", id))
+
+ai_sponsors <- my_parents %>%
+  dplyr::filter(., institution == FALSE) %>%
+  dplyr::mutate(., sponsor_url = paste0("https://nyu.databrary.org/party/", id))
+```
+
+## Institutional sponsor(s)
+
+```{r}
+knitr::kable(inst_sponsors)
+```
+
+## Authorized Investigator sponsor(s)
+
+```{r}
+knitr::kable(ai_sponsors)
+```
+
+# Volumes report
+
+```{r}
+
+```
+
+# Affiliates report
+
+```{r}
+my_affiliates <- tibble::tibble(my_databrary_info$children$party)
+my_affiliates$expires <- my_databrary_info$children$expires
+
+my_affiliates <- my_affiliates %>%
+  dplyr::mutate(., affiliate_url = "https://nyu.databrary.org/party/", id) %>%
+  dplyr::arrange(., desc(expires))
+
+knitr::kable(my_affiliates)
+```
+
+I have $n=$`r dim(my_affiliates)[1]` affiliates.
+
+```{r}
+knitr::kable(my_affiliates)
+```
+
+**N.B.** It might be good to highlight expired affiliates and those whose expirations are coming up soon.
+
+# Volumes/Projects
+
+```{r}
+my_projects <- tibble::tibble(my_databrary_info$access$volume)
+```
+
+My volumes/projects.
+
+```{r}
+knitr::kable(my_projects)
+```
+
+# Clean-up
+
+Logout of Databrary.
+
+```{r}
+databraryapi::logout_db()
+if (file.exists("for-researchers/.databrary.RData")) unlink("for-researchers/.databrary.RData")
+```
+

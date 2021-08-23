@@ -13,6 +13,7 @@ download_session_csv <- function(vol_id = 1, to_df = TRUE,
   }
   
   if (vb) message(paste0("Downloading spreadsheet from volume ", vol_id))
+  
   r <- httr::content(httr::GET(paste0("https://nyu.databrary.org/volume/",
                                       vol_id, "/csv")), 'text', encoding='UTF-8')
   
@@ -42,7 +43,9 @@ download_session_csv <- function(vol_id = 1, to_df = TRUE,
 }
 
 get_volume_demog <- function(vol_id) {
+  message(paste0("....Gathering demog data from volume ", vol_id))
   v_ss <- download_session_csv(vol_id)
+  
   if ("participant.birthdate" %in% names(v_ss)) {
     dplyr::select(v_ss, vol_id, participant.birthdate, participant.race, 
                   participant.ethnicity, participant.gender, participant.birthdate)
@@ -53,6 +56,8 @@ get_volume_demog <- function(vol_id) {
 
 get_volume_birthdate <- function(vol_id) {
   v_ss <- download_session_csv(vol_id)
+  message(paste0("....Gathering participant.birthdate data from volume ", vol_id))
+  
   if ("participant.birthdate" %in% names(v_ss)) {
     dplyr::select(v_ss, vol_id, session_id, participant.birthdate)
   } else {
@@ -62,7 +67,9 @@ get_volume_birthdate <- function(vol_id) {
 
 get_volume_gender <- function(vol_id) {
   v_ss <- download_session_csv(vol_id)
-  if ("participant.gender" %in% names(v_ss)) {
+  message(paste0("....Gathering participant.gender data from volume ", vol_id))
+  
+    if ("participant.gender" %in% names(v_ss)) {
     dplyr::select(v_ss, vol_id, session_id, participant.gender)
   } else {
     data.frame(vol_id = vol_id, session_id = NA,  participant.gender = NA)
@@ -71,7 +78,9 @@ get_volume_gender <- function(vol_id) {
 
 get_volume_race <- function(vol_id) {
   v_ss <- download_session_csv(vol_id)
-  if ("participant.race" %in% names(v_ss)) {
+  message(paste0("....Gathering participant.race data from volume ", vol_id))
+
+    if ("participant.race" %in% names(v_ss)) {
     dplyr::select(v_ss, vol_id, session_id, participant.race)
   } else {
     data.frame(vol_id = vol_id, session_id = NA, participant.race = NA)
@@ -80,7 +89,9 @@ get_volume_race <- function(vol_id) {
 
 get_volume_ethnicity <- function(vol_id) {
   v_ss <- download_session_csv(vol_id)
-  if ("participant.race" %in% names(v_ss)) {
+  message(paste0("....Gathering participant.ethnicity data from volume ", vol_id))
+  
+    if ("participant.ethnicity" %in% names(v_ss)) {
     dplyr::select(v_ss, vol_id, session_id, participant.ethnicity)
   } else {
     data.frame(vol_id = vol_id, session_id = NA, participant.ethnicity = NA)
@@ -89,14 +100,19 @@ get_volume_ethnicity <- function(vol_id) {
 
 get_volumes_demo <- function(min_vol_id = 1, max_vol_id = 10) {
   vols_range <- min_vol_id:max_vol_id
+  
   message(paste0("Getting demographic data for volumes ", min_vol_id, "-", max_vol_id, "\n"))
+  
   message("...Gathering birthdates")
   bdts <- purrr::map_dfr(vols_range, get_volume_birthdate)
-  message("...Gathering race")
+  
+  message("\n...Gathering race")
   races <- purrr::map_dfr(vols_range, get_volume_race)
-  message("...Gathering ethnicity")
+  
+  message("\n...Gathering ethnicity")
   ethn <- purrr::map_dfr(vols_range, get_volume_ethnicity)
-  message("...Gathering gender")
+  
+  message("\n...Gathering gender")
   gend <- purrr::map_dfr(vols_range, get_volume_gender)
   
   m <- dplyr::left_join(bdts, races, by = c("vol_id", "session_id"))
@@ -120,6 +136,11 @@ get_save_volumes_demo <- function(min_vol_id = 1, max_vol_id = 10,
   save_volumes_demo(df, min_vol_id, max_vol_id, dir)
 }
 
+
+# Downloads new demographic data from Databrary and saves it as a new CSV
+# 
+# For efficiency reasons, the code takes 10 volumes at a time and saves them
+# in individual CSVs labeled with the volume numbers.
 regenerate_vol_demo_csvs <- function(new_vol_rg_min = 1261, 
                                      new_vol_rg_max = 1270,
                                      csv_dir = "participant-demographics/csv") {
