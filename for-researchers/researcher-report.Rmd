@@ -1,6 +1,8 @@
 ---
 title: "Researcher report"
-output: html_notebook
+output:
+  html_document:
+    df_print: paged
 params:
   my_party_id: 6
 ---
@@ -48,7 +50,7 @@ my_profile <- tibble::tibble(party_id = my_databrary_info$id,
 knitr::kable(my_profile)
 ```
 
-Show my institutional and Authorized Investigator sponsors.
+Show my Institutional and Authorized Investigator sponsors.
 
 ```{r}
 my_parents <- my_databrary_info$parents$party
