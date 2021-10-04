@@ -45,7 +45,7 @@ add_institution <- function(party_id) {
 purrr::map_df(1:50, add_institution)
 ```
 
-That works. Based on Andrea's 2021-02-08, we are at party 7982
+That works. Based on Andrea's 2021-10-04 we are at party 8960
 
 ```{r}
 lt1000 <- purrr::map_df(1:1000, add_institution)
@@ -72,6 +72,7 @@ make_save_inst_list(6001:7000)
 make_save_inst_list(7001:7500)
 make_save_inst_list(7501:8000)
 make_save_inst_list(8001:8500)
+make_save_inst_list(8501:9000)
 ```
 
 Merge and re-export
