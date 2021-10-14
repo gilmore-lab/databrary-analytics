@@ -20,8 +20,8 @@ copy_to_archive <- function(fpath, fn) {
 ## Log in to Databrary
 
 login <- databraryapi::login_db(db_login)
-max_party_id <- 8392
-max_volume_id <- 1350
+max_party_id <- 8400
+max_volume_id <- 1375
 update_asset_data <- TRUE # This is very time consuming, but should be done periodically, probably quarterly
 update_demog_data <- TRUE # This is very time consuming, but should be done periodically, probably quarterly
 update_shared_volumes <- TRUE

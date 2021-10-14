@@ -1,4 +1,4 @@
 vol_id,mimetype,extension,asset_type,n_files,tot_size_gb,tot_dur_hrs
-99,video/mp4,mp4,MPEG-4 video,1,0.0030783876953125,0.01669277777777778
-99,text/plain,txt,Plain text,9,3.306640625e-6,0
 99,application/vnd.openxmlformats-officedocument.spreadsheetml.sheet,xlsx,Microsoft Excel (Office Open XML) workbook,1,6.895126953125e-4,0
+99,text/plain,txt,Plain text,9,3.306640625e-6,0
+99,video/mp4,mp4,MPEG-4 video,1,0.0030783876953125,0.01669277777777778

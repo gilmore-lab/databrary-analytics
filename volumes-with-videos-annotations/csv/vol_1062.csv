@@ -1,5 +1,5 @@
 vol_id,mimetype,extension,asset_type,n_files,tot_size_gb,tot_dur_hrs
-1062,video/mp4,mp4,MPEG-4 video,41,6.581591430664062,3.8470963888888887
-1062,text/plain,txt,Plain text,125,27.469536309570312,0
 1062,text/csv,csv,Comma-separated values,1,2.1171875e-6,0
 1062,text/elan,eaf,ELAN - Linguistic Annotator,47,0.0039897880859375,0
+1062,text/plain,txt,Plain text,125,27.469536309570312,0
+1062,video/mp4,mp4,MPEG-4 video,41,6.581591430664062,3.8470963888888887

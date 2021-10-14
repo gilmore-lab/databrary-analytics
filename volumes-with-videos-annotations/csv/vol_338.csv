@@ -1,4 +1,4 @@
 vol_id,mimetype,extension,asset_type,n_files,tot_size_gb,tot_dur_hrs
-338,video/mp4,mp4,MPEG-4 video,44,43.794819234375,43.778547222222215
-338,audio/mpeg,mp3,MPEG-1 or MPEG-2 audio layer III,88,13.11501617578125,1259.52522
 338,application/vnd.openxmlformats-officedocument.spreadsheetml.sheet,xlsx,Microsoft Excel (Office Open XML) workbook,2,0,0
+338,audio/mpeg,mp3,MPEG-1 or MPEG-2 audio layer III,88,13.11501617578125,1259.52522
+338,video/mp4,mp4,MPEG-4 video,44,43.794819234375,43.778547222222215
