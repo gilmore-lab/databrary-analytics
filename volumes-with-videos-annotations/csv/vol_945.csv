@@ -1,3 +1,3 @@
 vol_id,mimetype,extension,asset_type,n_files,tot_size_gb,tot_dur_hrs
-945,text/plain,txt,Plain text,30,9.14404296875e-5,0
 945,application/vnd.openxmlformats-officedocument.wordprocessingml.document,docx,Microsoft Word (Office Open XML) document,1,0.111852375,0
+945,text/plain,txt,Plain text,30,9.14404296875e-5,0
