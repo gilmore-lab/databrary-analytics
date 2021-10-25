@@ -15,14 +15,22 @@ download_session_csv <- function(vol_id = 1,
   
   if (vb)
     message(paste0("Downloading spreadsheet from volume ", vol_id))
+ 
+  url <-  paste0("https://nyu.databrary.org/volume/", 
+                 as.character(vol_id), "/csv")
+  # r <-
+  #   httr::content(httr::GET(url)
+  #   ), 'text', encoding = 'UTF-8')
   
-  r <-
-    httr::content(httr::GET(
-      paste0("https://nyu.databrary.org/volume/",
-             vol_id, "/csv")
-    ), 'text', encoding = 'UTF-8')
+  # Use curl library instead of httr and try() to handle 404 errors
+  r <- NULL
+  try(r <- read_lines(curl::curl(url)), silent = TRUE)
   
-  if (is.null(r) | !stringr::str_detect(r, "session-id")) {
+  if (is.null(r)) {
+    if (vb)
+      message(paste0("No CSV data returned from volume ", vol_id))
+    NULL
+  } else if (!stringr::str_detect(r, 'session-id')) {
     if (vb)
       message(paste0("No CSV data returned from volume ", vol_id))
     NULL
@@ -197,7 +205,6 @@ get_save_volumes_demo <- function(min_vol_id = 1,
   df <- get_volumes_demo(min_vol_id, max_vol_id)
   save_volumes_demo(df, min_vol_id, max_vol_id, dir)
 }
-
 
 # Downloads new demographic data from Databrary and saves it as a new CSV
 #
