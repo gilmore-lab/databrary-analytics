@@ -19,7 +19,7 @@ copy_to_archive <- function(fpath, fn) {
 
 ## Log in to Databrary
 
-login <- databraryapi::login_db(db_login)
+login <- databraryapi::login_db()
 max_party_id <- 8400
 max_volume_id <- 1380 # Must end in zero for 
 update_asset_data <- TRUE # This is very time consuming, but should be done periodically, probably quarterly
@@ -82,6 +82,12 @@ message("----- Generating volume-level demographics report -----")
 copy_to_archive("participant-demographics", "participant-demog-report.html")
 if (update_demog_data) {
   message("-- Regenerating demog data from all volumes --")
+  
+  # Delete "old" demog files
+  # old_demo_fn <- list.files("participant-demographics/csv", "demog", full.names = TRUE)
+  # sapply(old_demo_fn, unlink)
+  
+  # Generate report
   rmarkdown::render("participant-demographics/participant-demog-report.Rmd",
                     params=list(new_vol_rg_min = 1,
                                 new_vol_rg_max = max_volume_id,
