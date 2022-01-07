@@ -126,7 +126,7 @@ inst_id,inst_name,inst_url,databrary_url,n_auth_invest,daa,lat,lon
 356,Binghamton University,https://www.binghamton.edu/,https://nyu.databrary.org/party/356,1,TRUE,42.0893553,-75.9697049
 358,Lehigh University,https://www1.lehigh.edu/,https://nyu.databrary.org/party/358,3,TRUE,40.6069087,-75.3782832
 359,University of Akron,https://www.uakron.edu/,https://nyu.databrary.org/party/359,1,TRUE,41.076655,-81.5113386
-363,Syracuse University,https://www.syracuse.edu/,https://nyu.databrary.org/party/363,1,TRUE,43.0391534,-76.1351158
+363,Syracuse University,https://www.syracuse.edu/,https://nyu.databrary.org/party/363,1,TRUE,43.039153399999996,-76.1351158
 382,New York State Psychiatric Institute,NA,https://nyu.databrary.org/party/382,0,FALSE,40.8425117,-73.9444143
 391,Michigan State University,https://msu.edu/,https://nyu.databrary.org/party/391,6,TRUE,42.701848,-84.4821719
 402,University of São Paulo,http://www5.usp.br/english/?lang=en,https://nyu.databrary.org/party/402,2,TRUE,-23.5613991,-46.7307891
@@ -432,7 +432,7 @@ inst_id,inst_name,inst_url,databrary_url,n_auth_invest,daa,lat,lon
 3893,Metropolitan State University of Denver,https://www.msudenver.edu/,https://nyu.databrary.org/party/3893,1,TRUE,39.7431729,-105.0062626
 3933,New School University,https://www.newschool.edu/,https://nyu.databrary.org/party/3933,1,TRUE,40.7353426,-73.9938319
 3944,University of York,https://www.york.ac.uk/,https://nyu.databrary.org/party/3944,1,TRUE,53.9455334,-1.0561667
-3948,University of Guadalajara,http://www.udg.mx/en/welcome-university-guadalajara,https://nyu.databrary.org/party/3948,1,TRUE,20.6752205,-103.3590317
+3948,University of Guadalajara,http://www.udg.mx/en/welcome-university-guadalajara,https://nyu.databrary.org/party/3948,1,TRUE,20.675220499999998,-103.3590317
 3949,Chinese University of Hong Kong,http://www.cuhk.edu.hk/english/index.html,https://nyu.databrary.org/party/3949,2,TRUE,22.419625,114.2067606
 3950,Federal University of Minas Gerais,https://ufmg.br/international-visitors,https://nyu.databrary.org/party/3950,1,TRUE,-19.870682,-43.9677359
 3960,University of Potsdam,http://www.uni-potsdam.de/en/university-of-potsdam.html,https://nyu.databrary.org/party/3960,1,TRUE,52.4010314,13.0119098

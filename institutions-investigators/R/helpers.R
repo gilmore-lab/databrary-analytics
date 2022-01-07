@@ -478,7 +478,7 @@ render_institutions_report <- function(max_party_id = 8150) {
   clean_up()
 }
 
-render_investigators_report <- function(update_invest_csv = 'True') {
+render_investigators_report <- function(update_invest_csv = TRUE) {
   if (!db_credentials_valid()) databraryapi::login_db()
   
   rmarkdown::render("institutions-investigators/investigators.Rmd",

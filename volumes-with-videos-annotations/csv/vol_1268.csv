@@ -1,3 +1,5 @@
 vol_id,mimetype,extension,asset_type,n_files,tot_size_gb,tot_dur_hrs
-1268,audio/mpeg,mp3,MPEG-1 or MPEG-2 audio layer III,5,0,5.233458055555556
-1268,video/mp4,mp4,MPEG-4 video,9,0,9.814496666666667
+1268,application/pdf,pdf,Portable document,11,0,0
+1268,application/vnd.openxmlformats-officedocument.presentationml.presentation,pptx,Microsoft PowerPoint (Office Open XML) presentation,6,0,0
+1268,audio/mpeg,mp3,MPEG-1 or MPEG-2 audio layer III,10,0,8.023893333333334
+1268,video/mp4,mp4,MPEG-4 video,71,0,31.486458333333335

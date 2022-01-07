@@ -1,2 +1,2 @@
 vol_id,mimetype,extension,asset_type,n_files,tot_size_gb,tot_dur_hrs
-1314,application/vnd.openxmlformats-officedocument.spreadsheetml.sheet,xlsx,Microsoft Excel (Office Open XML) workbook,1,1.469140625e-5,0
+1314,application/x-spss-sav,sav,SPSS System File,1,6.556640625e-6,0

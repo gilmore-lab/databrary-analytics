@@ -3,7 +3,7 @@
 ## Requirements
 require(databraryapi)
 
-## Helper function
+## Helper functions
 
 copy_to_archive <- function(fpath, fn) {
   if (file.exists(paste0(fpath, "/", fn))) {
@@ -17,11 +17,23 @@ copy_to_archive <- function(fpath, fn) {
   }
 }
 
+make_next_ten <- function(n) {
+  n_mod_10 <- (n %% 10)
+  if (n_mod_10 == 0) {
+    n
+  } else {
+    n + (10 - n_mod_10)
+  }
+}
+
 ## Log in to Databrary
 
+max_party_id <- 9100
+max_volume_id <- 1450 # Must end in zero for now, so see next function
+max_party_id <- make_next_ten(max_party_id)
+
 login <- databraryapi::login_db()
-max_party_id <- 8400
-max_volume_id <- 1380 # Must end in zero for 
+
 update_asset_data <- TRUE # This is very time consuming, but should be done periodically, probably quarterly
 update_demog_data <- TRUE # This is very time consuming, but should be done periodically, probably quarterly
 update_shared_volumes <- TRUE
@@ -84,9 +96,9 @@ if (update_demog_data) {
   message("-- Regenerating demog data from all volumes --")
   
   # Delete "old" demog files
-  # old_demo_fn <- list.files("participant-demographics/csv", "demog", full.names = TRUE)
-  # sapply(old_demo_fn, unlink)
-  
+  old_demo_fn <- list.files("participant-demographics/csv", "demog", full.names = TRUE)
+  sapply(old_demo_fn, unlink)
+
   # Generate report
   rmarkdown::render("participant-demographics/participant-demog-report.Rmd",
                     params=list(new_vol_rg_min = 1,
