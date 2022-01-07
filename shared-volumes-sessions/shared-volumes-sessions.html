@@ -256,7 +256,7 @@ div.tocify {
 
 <h1 class="title toc-ignore">Shared volumes with sessions report</h1>
 <h4 class="author">Rick Gilmore</h4>
-<h4 class="date">2021-10-04 10:37:27</h4>
+<h4 class="date">2021-12-06 13:06:22</h4>
 
 </div>
 
@@ -410,12 +410,12 @@ if (params$save_file) {
   dplyr::mutate(., vol_url = paste0(&quot;https://nyu.databrary.org/volume/&quot;, vol_id)) %&gt;%
   dplyr::group_by(., vol_id, vol_name, vol_url, created_date, shared_type, n_sessions) %&gt;%
   dplyr::summarise(., n_owners = n())</code></pre>
-<p>There are <span class="math inline">\(n=\)</span> 782 total shared volumes on Databrary.</p>
+<p>There are <span class="math inline">\(n=\)</span> 804 total shared volumes on Databrary.</p>
 <div id="full-volume" class="section level2">
 <h2>Full volume</h2>
 <pre class="r"><code>unique_vols_full &lt;- unique_vols %&gt;%
   dplyr::filter(., shared_type == &quot;full_volume&quot;)</code></pre>
-<p>There are <span class="math inline">\(n=\)</span> 226 volumes fully shared on Databrary.</p>
+<p>There are <span class="math inline">\(n=\)</span> 228 volumes fully shared on Databrary.</p>
 <pre class="r"><code>unique_vols_full %&gt;%
   dplyr::arrange(., desc(n_sessions)) %&gt;%
   knitr::kable(., &quot;html&quot;) %&gt;%
@@ -2381,6 +2381,29 @@ full_volume
 </tr>
 <tr>
 <td style="text-align:right;">
+1358
+</td>
+<td style="text-align:left;">
+From Play to Language: Infants’ Actions on Objects Cascade to Word Learning
+</td>
+<td style="text-align:left;">
+<a href="https://nyu.databrary.org/volume/1358" class="uri">https://nyu.databrary.org/volume/1358</a>
+</td>
+<td style="text-align:left;">
+2021-08-27 19:42:41
+</td>
+<td style="text-align:left;">
+full_volume
+</td>
+<td style="text-align:right;">
+9
+</td>
+<td style="text-align:right;">
+2
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
 459
 </td>
 <td style="text-align:left;">
@@ -2446,29 +2469,6 @@ full_volume
 </td>
 <td style="text-align:right;">
 1
-</td>
-</tr>
-<tr>
-<td style="text-align:right;">
-1358
-</td>
-<td style="text-align:left;">
-From Play to Language: Infants’ Actions on Objects Cascade to Word Learning
-</td>
-<td style="text-align:left;">
-<a href="https://nyu.databrary.org/volume/1358" class="uri">https://nyu.databrary.org/volume/1358</a>
-</td>
-<td style="text-align:left;">
-2021-08-27 19:42:41
-</td>
-<td style="text-align:left;">
-full_volume
-</td>
-<td style="text-align:right;">
-7
-</td>
-<td style="text-align:right;">
-2
 </td>
 </tr>
 <tr>
@@ -3895,6 +3895,29 @@ full_volume
 </td>
 <td style="text-align:right;">
 4
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1368
+</td>
+<td style="text-align:left;">
+Jirout Conference Talk Videos
+</td>
+<td style="text-align:left;">
+<a href="https://nyu.databrary.org/volume/1368" class="uri">https://nyu.databrary.org/volume/1368</a>
+</td>
+<td style="text-align:left;">
+2021-10-04 20:17:11
+</td>
+<td style="text-align:left;">
+full_volume
+</td>
+<td style="text-align:right;">
+2
+</td>
+<td style="text-align:right;">
+1
 </td>
 </tr>
 <tr>
@@ -5374,7 +5397,7 @@ full_volume
 1314
 </td>
 <td style="text-align:left;">
-When Do Children Avoid Infection Risks: Lessons for Re-Opening Schools During the COVID-19 Pandemic
+When do children avoid infection risks: Lessons for schools during the COVID-19 pandemic
 </td>
 <td style="text-align:left;">
 <a href="https://nyu.databrary.org/volume/1314" class="uri">https://nyu.databrary.org/volume/1314</a>
@@ -5450,6 +5473,29 @@ Children’s flexible attention to numerical and spatial magnitudes in early chi
 </td>
 <td style="text-align:left;">
 2021-07-27 13:52:40
+</td>
+<td style="text-align:left;">
+full_volume
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+1
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1377
+</td>
+<td style="text-align:left;">
+Curiosity in Classrooms (CiC) Coding Protocol
+</td>
+<td style="text-align:left;">
+<a href="https://nyu.databrary.org/volume/1377" class="uri">https://nyu.databrary.org/volume/1377</a>
+</td>
+<td style="text-align:left;">
+2021-10-26 19:41:47
 </td>
 <td style="text-align:left;">
 full_volume
@@ -5652,7 +5698,7 @@ full_volume
 <h2>Overview only</h2>
 <pre class="r"><code>unique_vols_overview &lt;- unique_vols %&gt;%
   dplyr::filter(., shared_type == &quot;overview_only&quot;)</code></pre>
-<p>There are <span class="math inline">\(n=\)</span> 556 volume overviews shared on Databrary.</p>
+<p>There are <span class="math inline">\(n=\)</span> 576 volume overviews shared on Databrary.</p>
 <pre class="r"><code>unique_vols_overview %&gt;%
   dplyr::arrange(., desc(n_sessions)) %&gt;%
   knitr::kable(., &quot;html&quot;) %&gt;%
@@ -5962,6 +6008,29 @@ overview_only
 </tr>
 <tr>
 <td style="text-align:right;">
+1335
+</td>
+<td style="text-align:left;">
+CHUNKS
+</td>
+<td style="text-align:left;">
+<a href="https://nyu.databrary.org/volume/1335" class="uri">https://nyu.databrary.org/volume/1335</a>
+</td>
+<td style="text-align:left;">
+2021-06-29 19:16:18
+</td>
+<td style="text-align:left;">
+overview_only
+</td>
+<td style="text-align:right;">
+177
+</td>
+<td style="text-align:right;">
+1
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
 833
 </td>
 <td style="text-align:left;">
@@ -6047,29 +6116,6 @@ overview_only
 </td>
 <td style="text-align:right;">
 152
-</td>
-<td style="text-align:right;">
-1
-</td>
-</tr>
-<tr>
-<td style="text-align:right;">
-1335
-</td>
-<td style="text-align:left;">
-CHUNKS
-</td>
-<td style="text-align:left;">
-<a href="https://nyu.databrary.org/volume/1335" class="uri">https://nyu.databrary.org/volume/1335</a>
-</td>
-<td style="text-align:left;">
-2021-06-29 19:16:18
-</td>
-<td style="text-align:left;">
-overview_only
-</td>
-<td style="text-align:right;">
-150
 </td>
 <td style="text-align:right;">
 1
@@ -6737,29 +6783,6 @@ overview_only
 </td>
 <td style="text-align:right;">
 97
-</td>
-<td style="text-align:right;">
-1
-</td>
-</tr>
-<tr>
-<td style="text-align:right;">
-1326
-</td>
-<td style="text-align:left;">
-Testing for word comprehension in six-month-olds and nine-month-olds using mealtime words
-</td>
-<td style="text-align:left;">
-<a href="https://nyu.databrary.org/volume/1326" class="uri">https://nyu.databrary.org/volume/1326</a>
-</td>
-<td style="text-align:left;">
-2021-06-17 23:42:11
-</td>
-<td style="text-align:left;">
-overview_only
-</td>
-<td style="text-align:right;">
-96
 </td>
 <td style="text-align:right;">
 1
@@ -8676,29 +8699,6 @@ overview_only
 </tr>
 <tr>
 <td style="text-align:right;">
-1348
-</td>
-<td style="text-align:left;">
-Archive - excluded and extra infant sessions collected in Pennsylvania 2009-2016
-</td>
-<td style="text-align:left;">
-<a href="https://nyu.databrary.org/volume/1348" class="uri">https://nyu.databrary.org/volume/1348</a>
-</td>
-<td style="text-align:left;">
-2021-07-20 18:16:23
-</td>
-<td style="text-align:left;">
-overview_only
-</td>
-<td style="text-align:right;">
-39
-</td>
-<td style="text-align:right;">
-1
-</td>
-</tr>
-<tr>
-<td style="text-align:right;">
 758
 </td>
 <td style="text-align:left;">
@@ -8879,6 +8879,29 @@ overview_only
 </td>
 <td style="text-align:right;">
 1
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1337
+</td>
+<td style="text-align:left;">
+Character Survey and Uncertainty Exploration
+</td>
+<td style="text-align:left;">
+<a href="https://nyu.databrary.org/volume/1337" class="uri">https://nyu.databrary.org/volume/1337</a>
+</td>
+<td style="text-align:left;">
+2021-07-06 20:17:01
+</td>
+<td style="text-align:left;">
+overview_only
+</td>
+<td style="text-align:right;">
+35
+</td>
+<td style="text-align:right;">
+2
 </td>
 </tr>
 <tr>
@@ -9251,29 +9274,6 @@ overview_only
 </tr>
 <tr>
 <td style="text-align:right;">
-1341
-</td>
-<td style="text-align:left;">
-The role of skin color in six-month-olds’ comprehension of words for parts of the body
-</td>
-<td style="text-align:left;">
-<a href="https://nyu.databrary.org/volume/1341" class="uri">https://nyu.databrary.org/volume/1341</a>
-</td>
-<td style="text-align:left;">
-2021-07-12 03:08:39
-</td>
-<td style="text-align:left;">
-overview_only
-</td>
-<td style="text-align:right;">
-32
-</td>
-<td style="text-align:right;">
-1
-</td>
-</tr>
-<tr>
-<td style="text-align:right;">
 1053
 </td>
 <td style="text-align:left;">
@@ -9504,29 +9504,6 @@ overview_only
 </tr>
 <tr>
 <td style="text-align:right;">
-1337
-</td>
-<td style="text-align:left;">
-Character Survey and Uncertainty Exploration
-</td>
-<td style="text-align:left;">
-<a href="https://nyu.databrary.org/volume/1337" class="uri">https://nyu.databrary.org/volume/1337</a>
-</td>
-<td style="text-align:left;">
-2021-07-06 20:17:01
-</td>
-<td style="text-align:left;">
-overview_only
-</td>
-<td style="text-align:right;">
-27
-</td>
-<td style="text-align:right;">
-2
-</td>
-</tr>
-<tr>
-<td style="text-align:right;">
 821
 </td>
 <td style="text-align:left;">
@@ -9537,6 +9514,29 @@ Behavioral Flexibility in Sitting
 </td>
 <td style="text-align:left;">
 2018-12-06 15:25:12
+</td>
+<td style="text-align:left;">
+overview_only
+</td>
+<td style="text-align:right;">
+26
+</td>
+<td style="text-align:right;">
+1
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1375
+</td>
+<td style="text-align:left;">
+Combining Concentration Ideas
+</td>
+<td style="text-align:left;">
+<a href="https://nyu.databrary.org/volume/1375" class="uri">https://nyu.databrary.org/volume/1375</a>
+</td>
+<td style="text-align:left;">
+2021-10-22 14:38:39
 </td>
 <td style="text-align:left;">
 overview_only
@@ -9734,29 +9734,6 @@ overview_only
 </tr>
 <tr>
 <td style="text-align:right;">
-1349
-</td>
-<td style="text-align:left;">
-Parent-toddler interactions during motor play: Implications for developing verb comprehension
-</td>
-<td style="text-align:left;">
-<a href="https://nyu.databrary.org/volume/1349" class="uri">https://nyu.databrary.org/volume/1349</a>
-</td>
-<td style="text-align:left;">
-2021-07-21 16:16:53
-</td>
-<td style="text-align:left;">
-overview_only
-</td>
-<td style="text-align:right;">
-24
-</td>
-<td style="text-align:right;">
-1
-</td>
-</tr>
-<tr>
-<td style="text-align:right;">
 606
 </td>
 <td style="text-align:left;">
@@ -9882,6 +9859,29 @@ Study 179
 </td>
 <td style="text-align:left;">
 2020-11-11 21:39:06
+</td>
+<td style="text-align:left;">
+overview_only
+</td>
+<td style="text-align:right;">
+23
+</td>
+<td style="text-align:right;">
+1
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1392
+</td>
+<td style="text-align:left;">
+Analyzing Deaf and Hard-of-Hearing Users’ Behavior, Usage, and Interaction with a Personal Assistant Device that Understands Sign-Language Input
+</td>
+<td style="text-align:left;">
+<a href="https://nyu.databrary.org/volume/1392" class="uri">https://nyu.databrary.org/volume/1392</a>
+</td>
+<td style="text-align:left;">
+2021-11-30 19:54:35
 </td>
 <td style="text-align:left;">
 overview_only
@@ -11781,6 +11781,29 @@ overview_only
 </tr>
 <tr>
 <td style="text-align:right;">
+1383
+</td>
+<td style="text-align:left;">
+12 month visit (StangerDanger, Helping, Sharing, Cookies, Bracelets, ToM, Zoom_Cookies)
+</td>
+<td style="text-align:left;">
+<a href="https://nyu.databrary.org/volume/1383" class="uri">https://nyu.databrary.org/volume/1383</a>
+</td>
+<td style="text-align:left;">
+2021-11-16 22:59:53
+</td>
+<td style="text-align:left;">
+overview_only
+</td>
+<td style="text-align:right;">
+11
+</td>
+<td style="text-align:right;">
+1
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
 323
 </td>
 <td style="text-align:left;">
@@ -12034,6 +12057,29 @@ overview_only
 </tr>
 <tr>
 <td style="text-align:right;">
+1385
+</td>
+<td style="text-align:left;">
+23 month visit (Happiness, Balloons, Reward/Punish, C3PO_23)
+</td>
+<td style="text-align:left;">
+<a href="https://nyu.databrary.org/volume/1385" class="uri">https://nyu.databrary.org/volume/1385</a>
+</td>
+<td style="text-align:left;">
+2021-11-16 23:08:03
+</td>
+<td style="text-align:left;">
+overview_only
+</td>
+<td style="text-align:right;">
+10
+</td>
+<td style="text-align:right;">
+1
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
 148
 </td>
 <td style="text-align:left;">
@@ -12251,6 +12297,29 @@ What’s counting 2.0 csv files
 </td>
 <td style="text-align:left;">
 2021-07-12 19:12:03
+</td>
+<td style="text-align:left;">
+overview_only
+</td>
+<td style="text-align:right;">
+9
+</td>
+<td style="text-align:right;">
+1
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1386
+</td>
+<td style="text-align:left;">
+Hill_ZoomBaby
+</td>
+<td style="text-align:left;">
+<a href="https://nyu.databrary.org/volume/1386" class="uri">https://nyu.databrary.org/volume/1386</a>
+</td>
+<td style="text-align:left;">
+2021-11-16 23:10:31
 </td>
 <td style="text-align:left;">
 overview_only
@@ -12655,6 +12724,29 @@ overview_only
 </tr>
 <tr>
 <td style="text-align:right;">
+1382
+</td>
+<td style="text-align:left;">
+9 month visit (Attempts, Stargazer/Empathy, Ouch9, C3PO9)
+</td>
+<td style="text-align:left;">
+<a href="https://nyu.databrary.org/volume/1382" class="uri">https://nyu.databrary.org/volume/1382</a>
+</td>
+<td style="text-align:left;">
+2021-11-16 22:15:46
+</td>
+<td style="text-align:left;">
+overview_only
+</td>
+<td style="text-align:right;">
+7
+</td>
+<td style="text-align:right;">
+1
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
 633
 </td>
 <td style="text-align:left;">
@@ -12872,6 +12964,29 @@ Measuring Change Following NDTA Contemporary Practice ModelTM Intervention
 </td>
 <td style="text-align:left;">
 2021-04-20 17:23:13
+</td>
+<td style="text-align:left;">
+overview_only
+</td>
+<td style="text-align:right;">
+6
+</td>
+<td style="text-align:right;">
+1
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1384
+</td>
+<td style="text-align:left;">
+17 month visit (Bullies_Longtime, SnackTime, Clothespins, ToM, Zoom_ToM)
+</td>
+<td style="text-align:left;">
+<a href="https://nyu.databrary.org/volume/1384" class="uri">https://nyu.databrary.org/volume/1384</a>
+</td>
+<td style="text-align:left;">
+2021-11-16 23:04:14
 </td>
 <td style="text-align:left;">
 overview_only
@@ -13138,6 +13253,52 @@ overview_only
 </tr>
 <tr>
 <td style="text-align:right;">
+1356
+</td>
+<td style="text-align:left;">
+Learning from books vs. television
+</td>
+<td style="text-align:left;">
+<a href="https://nyu.databrary.org/volume/1356" class="uri">https://nyu.databrary.org/volume/1356</a>
+</td>
+<td style="text-align:left;">
+2021-08-16 16:30:23
+</td>
+<td style="text-align:left;">
+overview_only
+</td>
+<td style="text-align:right;">
+5
+</td>
+<td style="text-align:right;">
+1
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1389
+</td>
+<td style="text-align:left;">
+ActOVA11_Zoom
+</td>
+<td style="text-align:left;">
+<a href="https://nyu.databrary.org/volume/1389" class="uri">https://nyu.databrary.org/volume/1389</a>
+</td>
+<td style="text-align:left;">
+2021-11-16 23:19:01
+</td>
+<td style="text-align:left;">
+overview_only
+</td>
+<td style="text-align:right;">
+5
+</td>
+<td style="text-align:right;">
+1
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
 577
 </td>
 <td style="text-align:left;">
@@ -13355,6 +13516,52 @@ Behavioral Avoidance of Contagious and Non-Contagious Adults
 </td>
 <td style="text-align:left;">
 2021-07-22 18:08:20
+</td>
+<td style="text-align:left;">
+overview_only
+</td>
+<td style="text-align:right;">
+4
+</td>
+<td style="text-align:right;">
+1
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1387
+</td>
+<td style="text-align:left;">
+EmoGoals
+</td>
+<td style="text-align:left;">
+<a href="https://nyu.databrary.org/volume/1387" class="uri">https://nyu.databrary.org/volume/1387</a>
+</td>
+<td style="text-align:left;">
+2021-11-16 23:13:31
+</td>
+<td style="text-align:left;">
+overview_only
+</td>
+<td style="text-align:right;">
+4
+</td>
+<td style="text-align:right;">
+1
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1388
+</td>
+<td style="text-align:left;">
+InsideOut_Zoom
+</td>
+<td style="text-align:left;">
+<a href="https://nyu.databrary.org/volume/1388" class="uri">https://nyu.databrary.org/volume/1388</a>
+</td>
+<td style="text-align:left;">
+2021-11-16 23:17:08
 </td>
 <td style="text-align:left;">
 overview_only
@@ -13897,6 +14104,29 @@ overview_only
 </tr>
 <tr>
 <td style="text-align:right;">
+1357
+</td>
+<td style="text-align:left;">
+Do infants have sleep inertia?
+</td>
+<td style="text-align:left;">
+<a href="https://nyu.databrary.org/volume/1357" class="uri">https://nyu.databrary.org/volume/1357</a>
+</td>
+<td style="text-align:left;">
+2021-08-23 19:36:10
+</td>
+<td style="text-align:left;">
+overview_only
+</td>
+<td style="text-align:right;">
+3
+</td>
+<td style="text-align:right;">
+2
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
 1361
 </td>
 <td style="text-align:left;">
@@ -13916,6 +14146,29 @@ overview_only
 </td>
 <td style="text-align:right;">
 2
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1371
+</td>
+<td style="text-align:left;">
+Demo: Adult field of view
+</td>
+<td style="text-align:left;">
+<a href="https://nyu.databrary.org/volume/1371" class="uri">https://nyu.databrary.org/volume/1371</a>
+</td>
+<td style="text-align:left;">
+2021-10-08 15:50:10
+</td>
+<td style="text-align:left;">
+overview_only
+</td>
+<td style="text-align:right;">
+3
+</td>
+<td style="text-align:right;">
+1
 </td>
 </tr>
 <tr>
@@ -14679,16 +14932,16 @@ overview_only
 </tr>
 <tr>
 <td style="text-align:right;">
-1357
+1366
 </td>
 <td style="text-align:left;">
-Do infants have sleep inertia?
+Infant Physics on Lookit
 </td>
 <td style="text-align:left;">
-<a href="https://nyu.databrary.org/volume/1357" class="uri">https://nyu.databrary.org/volume/1357</a>
+<a href="https://nyu.databrary.org/volume/1366" class="uri">https://nyu.databrary.org/volume/1366</a>
 </td>
 <td style="text-align:left;">
-2021-08-23 19:36:10
+2021-10-01 15:42:31
 </td>
 <td style="text-align:left;">
 overview_only
@@ -14697,7 +14950,99 @@ overview_only
 2
 </td>
 <td style="text-align:right;">
+1
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1373
+</td>
+<td style="text-align:left;">
+In person Counting
+</td>
+<td style="text-align:left;">
+<a href="https://nyu.databrary.org/volume/1373" class="uri">https://nyu.databrary.org/volume/1373</a>
+</td>
+<td style="text-align:left;">
+2021-10-13 16:38:14
+</td>
+<td style="text-align:left;">
+overview_only
+</td>
+<td style="text-align:right;">
 2
+</td>
+<td style="text-align:right;">
+1
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1374
+</td>
+<td style="text-align:left;">
+Infant Physics on Lookit (staging)
+</td>
+<td style="text-align:left;">
+<a href="https://nyu.databrary.org/volume/1374" class="uri">https://nyu.databrary.org/volume/1374</a>
+</td>
+<td style="text-align:left;">
+2021-10-19 15:54:33
+</td>
+<td style="text-align:left;">
+overview_only
+</td>
+<td style="text-align:right;">
+2
+</td>
+<td style="text-align:right;">
+1
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1379
+</td>
+<td style="text-align:left;">
+Infant walking flexibility on slopes and bridges
+</td>
+<td style="text-align:left;">
+<a href="https://nyu.databrary.org/volume/1379" class="uri">https://nyu.databrary.org/volume/1379</a>
+</td>
+<td style="text-align:left;">
+2021-11-03 15:24:39
+</td>
+<td style="text-align:left;">
+overview_only
+</td>
+<td style="text-align:right;">
+2
+</td>
+<td style="text-align:right;">
+1
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1390
+</td>
+<td style="text-align:left;">
+ZoomKids
+</td>
+<td style="text-align:left;">
+<a href="https://nyu.databrary.org/volume/1390" class="uri">https://nyu.databrary.org/volume/1390</a>
+</td>
+<td style="text-align:left;">
+2021-11-16 23:20:37
+</td>
+<td style="text-align:left;">
+overview_only
+</td>
+<td style="text-align:right;">
+2
+</td>
+<td style="text-align:right;">
+1
 </td>
 </tr>
 <tr>
@@ -16611,6 +16956,29 @@ overview_only
 </tr>
 <tr>
 <td style="text-align:right;">
+1332
+</td>
+<td style="text-align:left;">
+MEL2 Project Year 5
+</td>
+<td style="text-align:left;">
+<a href="https://nyu.databrary.org/volume/1332" class="uri">https://nyu.databrary.org/volume/1332</a>
+</td>
+<td style="text-align:left;">
+2021-06-27 14:58:30
+</td>
+<td style="text-align:left;">
+overview_only
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+1
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
 1333
 </td>
 <td style="text-align:left;">
@@ -16703,16 +17071,16 @@ overview_only
 </tr>
 <tr>
 <td style="text-align:right;">
-1356
+1363
 </td>
 <td style="text-align:left;">
-Learning from books vs. television
+PLAYProject_PURDU
 </td>
 <td style="text-align:left;">
-<a href="https://nyu.databrary.org/volume/1356" class="uri">https://nyu.databrary.org/volume/1356</a>
+<a href="https://nyu.databrary.org/volume/1363" class="uri">https://nyu.databrary.org/volume/1363</a>
 </td>
 <td style="text-align:left;">
-2021-08-16 16:30:23
+2021-09-20 14:45:07
 </td>
 <td style="text-align:left;">
 overview_only
@@ -16726,16 +17094,39 @@ overview_only
 </tr>
 <tr>
 <td style="text-align:right;">
-1366
+1372
 </td>
 <td style="text-align:left;">
-Infant Physics on Lookit
+CAFE Consortium - OpenLattice Instructions and Documentation
 </td>
 <td style="text-align:left;">
-<a href="https://nyu.databrary.org/volume/1366" class="uri">https://nyu.databrary.org/volume/1366</a>
+<a href="https://nyu.databrary.org/volume/1372" class="uri">https://nyu.databrary.org/volume/1372</a>
 </td>
 <td style="text-align:left;">
-2021-10-01 15:42:31
+2021-10-09 14:33:40
+</td>
+<td style="text-align:left;">
+overview_only
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+2
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1395
+</td>
+<td style="text-align:left;">
+Video Game Creativity in Open World and Narrative Games
+</td>
+<td style="text-align:left;">
+<a href="https://nyu.databrary.org/volume/1395" class="uri">https://nyu.databrary.org/volume/1395</a>
+</td>
+<td style="text-align:left;">
+2021-12-05 16:50:07
 </td>
 <td style="text-align:left;">
 overview_only
@@ -18267,6 +18658,29 @@ overview_only
 </tr>
 <tr>
 <td style="text-align:right;">
+1326
+</td>
+<td style="text-align:left;">
+Testing for word comprehension in six-month-olds and nine-month-olds using mealtime words
+</td>
+<td style="text-align:left;">
+<a href="https://nyu.databrary.org/volume/1326" class="uri">https://nyu.databrary.org/volume/1326</a>
+</td>
+<td style="text-align:left;">
+2021-06-17 23:42:11
+</td>
+<td style="text-align:left;">
+overview_only
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+1
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
 1328
 </td>
 <td style="text-align:left;">
@@ -18313,29 +18727,6 @@ overview_only
 </tr>
 <tr>
 <td style="text-align:right;">
-1332
-</td>
-<td style="text-align:left;">
-MEL2 Project Year 5
-</td>
-<td style="text-align:left;">
-<a href="https://nyu.databrary.org/volume/1332" class="uri">https://nyu.databrary.org/volume/1332</a>
-</td>
-<td style="text-align:left;">
-2021-06-27 14:58:30
-</td>
-<td style="text-align:left;">
-overview_only
-</td>
-<td style="text-align:right;">
-0
-</td>
-<td style="text-align:right;">
-1
-</td>
-</tr>
-<tr>
-<td style="text-align:right;">
 1339
 </td>
 <td style="text-align:left;">
@@ -18369,6 +18760,75 @@ TikTok Facial Emotion Recognition dataset
 </td>
 <td style="text-align:left;">
 2021-07-10 22:43:46
+</td>
+<td style="text-align:left;">
+overview_only
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+1
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1341
+</td>
+<td style="text-align:left;">
+The role of skin color in six-month-olds’ comprehension of words for parts of the body
+</td>
+<td style="text-align:left;">
+<a href="https://nyu.databrary.org/volume/1341" class="uri">https://nyu.databrary.org/volume/1341</a>
+</td>
+<td style="text-align:left;">
+2021-07-12 03:08:39
+</td>
+<td style="text-align:left;">
+overview_only
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+1
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1348
+</td>
+<td style="text-align:left;">
+Archive - excluded and extra infant sessions collected in Pennsylvania 2009-2016
+</td>
+<td style="text-align:left;">
+<a href="https://nyu.databrary.org/volume/1348" class="uri">https://nyu.databrary.org/volume/1348</a>
+</td>
+<td style="text-align:left;">
+2021-07-20 18:16:23
+</td>
+<td style="text-align:left;">
+overview_only
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+1
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1349
+</td>
+<td style="text-align:left;">
+Parent-toddler interactions during motor play: Implications for developing verb comprehension
+</td>
+<td style="text-align:left;">
+<a href="https://nyu.databrary.org/volume/1349" class="uri">https://nyu.databrary.org/volume/1349</a>
+</td>
+<td style="text-align:left;">
+2021-07-21 16:16:53
 </td>
 <td style="text-align:left;">
 overview_only
@@ -18451,16 +18911,62 @@ overview_only
 </tr>
 <tr>
 <td style="text-align:right;">
-1363
+1370
 </td>
 <td style="text-align:left;">
-PLAYProject_PURDU
+PLAYProject_CHOPH
 </td>
 <td style="text-align:left;">
-<a href="https://nyu.databrary.org/volume/1363" class="uri">https://nyu.databrary.org/volume/1363</a>
+<a href="https://nyu.databrary.org/volume/1370" class="uri">https://nyu.databrary.org/volume/1370</a>
 </td>
 <td style="text-align:left;">
-2021-09-20 14:45:07
+2021-10-07 13:13:57
+</td>
+<td style="text-align:left;">
+overview_only
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+1
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1378
+</td>
+<td style="text-align:left;">
+CoMIT Developmental Assessments (Condiment Micronutrient Innovation Trial)
+</td>
+<td style="text-align:left;">
+<a href="https://nyu.databrary.org/volume/1378" class="uri">https://nyu.databrary.org/volume/1378</a>
+</td>
+<td style="text-align:left;">
+2021-11-02 22:06:59
+</td>
+<td style="text-align:left;">
+overview_only
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+1
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1393
+</td>
+<td style="text-align:left;">
+21 month visit (Zoom_Equity)
+</td>
+<td style="text-align:left;">
+<a href="https://nyu.databrary.org/volume/1393" class="uri">https://nyu.databrary.org/volume/1393</a>
+</td>
+<td style="text-align:left;">
+2021-11-30 23:58:17
 </td>
 <td style="text-align:left;">
 overview_only
@@ -18549,7 +19055,7 @@ full_volume
 13
 </td>
 <td style="text-align:right;">
-1829
+1831
 </td>
 <td style="text-align:right;">
 1
@@ -18983,13 +19489,13 @@ Jirout, Jamie
 full_volume
 </td>
 <td style="text-align:right;">
-7
+9
 </td>
 <td style="text-align:right;">
-191
+194
 </td>
 <td style="text-align:right;">
-2
+1
 </td>
 <td style="text-align:right;">
 77
@@ -20515,6 +21021,29 @@ full_volume
 </tr>
 <tr>
 <td style="text-align:left;">
+Suarez Rivera, Catalina
+</td>
+<td style="text-align:left;">
+<a href="https://nyu.databrary.org/party/5345" class="uri">https://nyu.databrary.org/party/5345</a>
+</td>
+<td style="text-align:left;">
+full_volume
+</td>
+<td style="text-align:right;">
+2
+</td>
+<td style="text-align:right;">
+12
+</td>
+<td style="text-align:right;">
+3
+</td>
+<td style="text-align:right;">
+9
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
 Shapiro, Liza
 </td>
 <td style="text-align:left;">
@@ -20534,29 +21063,6 @@ full_volume
 </td>
 <td style="text-align:right;">
 11
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-Suarez Rivera, Catalina
-</td>
-<td style="text-align:left;">
-<a href="https://nyu.databrary.org/party/5345" class="uri">https://nyu.databrary.org/party/5345</a>
-</td>
-<td style="text-align:left;">
-full_volume
-</td>
-<td style="text-align:right;">
-2
-</td>
-<td style="text-align:right;">
-10
-</td>
-<td style="text-align:right;">
-3
-</td>
-<td style="text-align:right;">
-7
 </td>
 </tr>
 <tr>
@@ -22380,7 +22886,7 @@ full_volume
 13
 </td>
 <td style="text-align:right;">
-1829
+1831
 </td>
 <td style="text-align:right;">
 1
@@ -22814,13 +23320,13 @@ Jirout, Jamie
 full_volume
 </td>
 <td style="text-align:right;">
-7
+9
 </td>
 <td style="text-align:right;">
-191
+194
 </td>
 <td style="text-align:right;">
-2
+1
 </td>
 <td style="text-align:right;">
 77
@@ -24346,6 +24852,29 @@ full_volume
 </tr>
 <tr>
 <td style="text-align:left;">
+Suarez Rivera, Catalina
+</td>
+<td style="text-align:left;">
+<a href="https://nyu.databrary.org/party/5345" class="uri">https://nyu.databrary.org/party/5345</a>
+</td>
+<td style="text-align:left;">
+full_volume
+</td>
+<td style="text-align:right;">
+2
+</td>
+<td style="text-align:right;">
+12
+</td>
+<td style="text-align:right;">
+3
+</td>
+<td style="text-align:right;">
+9
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
 Shapiro, Liza
 </td>
 <td style="text-align:left;">
@@ -24365,29 +24894,6 @@ full_volume
 </td>
 <td style="text-align:right;">
 11
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-Suarez Rivera, Catalina
-</td>
-<td style="text-align:left;">
-<a href="https://nyu.databrary.org/party/5345" class="uri">https://nyu.databrary.org/party/5345</a>
-</td>
-<td style="text-align:left;">
-full_volume
-</td>
-<td style="text-align:right;">
-2
-</td>
-<td style="text-align:right;">
-10
-</td>
-<td style="text-align:right;">
-3
-</td>
-<td style="text-align:right;">
-7
 </td>
 </tr>
 <tr>
