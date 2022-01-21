@@ -1,0 +1,379 @@
+---
+title: "State of the Repository Report"
+subtitle: "`r Sys.time()`"
+author: "Rick Gilmore"
+output: 
+  html_document:
+    self_contained: True
+    toc: True
+    toc_float: True
+    toc_depth: 3
+    code_folding: hide
+params:
+  update_gs: False
+  update_stats: False
+  from_gs: False
+  update_csv: False
+  vols_to_test: 10
+---
+
+```{r set-up, include=FALSE}
+knitr::opts_chunk$set(message = FALSE, 
+                      warning = FALSE)
+library(tidyverse)
+
+source("R/helpers.R")
+```
+
+# Purpose
+
+This document summarizes information about Databrary's holdings, partners, and citations. It draws upon datasets specific to these categories that are generated elsewhere.
+
+# Institutions & Authorized Users 
+
+## Growth
+
+```{r child = '../weekly/users.Rmd'}
+```
+
+## Map
+
+```{r}
+# Load saved file
+inst_df <- read_csv("../institutions-investigators/csv/institutions.csv")
+```
+
+```{r site-map, fig.align='center', out.width='80%'}
+ggmap::qmplot(lon, lat, 
+              data = inst_df, 
+              geom = "point")
+```
+
+## Investigators by institution
+
+```{r}
+with_ais <- inst_df %>%
+  dplyr::filter(., n_auth_invest > 0)
+
+ggplot(with_ais) +
+  aes(n_auth_invest) +
+  geom_histogram()
+```
+
+```{r}
+gte5_ais <- with_ais %>%
+  dplyr::filter(., n_auth_invest >= 5) %>%
+  dplyr::mutate(., db_url = paste0("https://nyu.databrary.org/party/", inst_id))
+```
+
+### Institutions with >5 investigators
+
+There are `r dim(gte5_ais)[1]` institutions with at least five authorized (PI-level) investigators.
+They are as follows:
+
+```{r}
+gte5_ais %>%
+  dplyr::arrange(., desc(n_auth_invest)) %>%
+  dplyr::select(., inst_id, inst_name, db_url, n_auth_invest) %>%
+  kableExtra::kbl(.) %>%
+  kableExtra::kable_styling(.) %>%
+  kableExtra::scroll_box(., height = "400px")
+```
+
+## Investigators with >5 affiliates
+
+```{r}
+invest_df <- readr::read_csv("../institutions-investigators/csv/investigators.csv",
+                      show_col_types = FALSE)
+gte5_affils <- invest_df %>%
+  dplyr::arrange(., ai_id, ai_last) %>%
+  dplyr::filter(., n_affils >= 5)
+```
+
+In turn, there are `r dim(gte5_affils)[1]` Authorized Investigators with 5 or more affiliates (staff, students, postdocs, or other collaborators).
+
+```{r}
+ggplot(gte5_affils) +
+  aes(n_affils) +
+  geom_histogram(bins = 10)
+```
+
+```{r}
+gte5_affils %>%
+  dplyr::arrange(., desc(n_affils)) %>%
+  dplyr::select(., ai_id, ai_last, ai_first, affiliation, ai_db_url, n_affils) %>%
+  dplyr::group_by(., ai_id, ai_last)
+  kableExtra::kbl(.) %>%
+  kableExtra::kable_styling(.) %>%
+  kableExtra::scroll_box(., height = "400px")
+```
+
+# Volumes
+
+## Growth
+
+```{r child = '../weekly/volumes_growth.Rmd'}
+```
+
+## How shared
+
+```{r}
+get_volume_name <- function(vol_id) {
+  vol_metadata <- databraryapi::list_volume_metadata(vol_id)
+  if (!is.null(vol_metadata)) {
+    as.character(vol_metadata$name)
+  } else {
+    NULL
+  }
+}
+
+vols_sess_data <- readr::read_csv("../shared-volumes-sessions/csv/shared_volumes_sessions.csv", show_col_types = FALSE)
+
+vols_dat <- vols_sess_data %>%
+  # change variable names, create full_volume vs. overview_only
+  dplyr::group_by(owner_ids.name, owner_ids.id) %>%
+  dplyr::rename(investigator = owner_ids.name, party_id = owner_ids.id) %>%
+  dplyr::mutate(shared_type = ifelse(sharing_level == "full", "full_volume", "overview_only")) %>%
+  dplyr::select(investigator,
+                party_id,
+                vol_id,
+                created_date,
+                shared_type,
+                n_sessions) %>%
+  dplyr::mutate(url = paste0("https://nyu.databrary.org/party/", party_id)) %>%
+  dplyr::group_by(investigator, url, shared_type) %>%
+  # summarise by total shared volumes by type with session stats
+  dplyr::summarise(
+    n_vols = n(),
+    tot_sess = sum(n_sessions),
+    min_n_sess = min(n_sessions),
+    max_n_sess = max(n_sessions)
+  ) %>%
+  dplyr::arrange(shared_type, desc(tot_sess))
+
+unique_vols <- vols_sess_data %>%
+  dplyr::rename(., investigator = owner_ids.name, party_id = owner_ids.id) %>%
+  dplyr::mutate(.,
+                shared_type = ifelse(sharing_level == "full", 
+                                     "full_volume", "overview_only")) %>%
+  dplyr::mutate(., vol_url = paste0("https://nyu.databrary.org/volume/", vol_id)) %>%
+  dplyr::group_by(., vol_id, vol_name, vol_url, created_date, shared_type, n_sessions) %>%
+  dplyr::summarise(., n_owners = n())
+```
+
+There are $n=$ `r dim(unique_vols)[1]` total shared volumes on Databrary.
+
+### Full volume
+
+```{r}
+unique_vols_full <- unique_vols %>%
+  dplyr::filter(., shared_type == "full_volume")
+```
+
+Of these, there are $n=$ `r dim(unique_vols_full)[1]` volumes fully shared on Databrary.
+
+```{r}
+unique_vols_full %>%
+  dplyr::arrange(., desc(n_sessions)) %>%
+  knitr::kable(., "html") %>%
+  kableExtra::kable_styling(.) %>%
+  kableExtra::scroll_box(., height = "400px")
+```
+
+### Overview only
+
+```{r}
+unique_vols_overview <- unique_vols %>%
+  dplyr::filter(., shared_type == "overview_only")
+```
+
+There are $n=$ `r dim(unique_vols_overview)[1]` volume overviews shared on Databrary. 
+
+```{r}
+unique_vols_overview %>%
+  dplyr::arrange(., desc(n_sessions)) %>%
+  knitr::kable(., "html") %>%
+  kableExtra::kable_styling(.) %>%
+  kableExtra::scroll_box(., height = "400px")
+```
+
+## Types of data
+
+```{r}
+#quietly_read_csv <- safely(readr::read_csv)
+
+if (dir.exists('../volumes-with-videos-annotations/csv')) {
+  csv_fns <- list.files('../volumes-with-videos-annotations/csv', '\\.csv', full.names = TRUE)
+  assets_df <- purrr::map_df(csv_fns, readr::read_csv, show_col_types = FALSE)
+} else {
+  stop(paste0('CSV directory not found: ', '../volumes-with-videos-annotations/csv'))
+}
+```
+
+There are `r length(unique(assets_df$vol_id))` shared volumes with assets.
+
+The following shows the number of shared volumes with a given asset type.
+
+```{r}
+assets_df %>%
+  dplyr::group_by(asset_type) %>%
+  dplyr::count(asset_type) %>%
+  dplyr::arrange(., desc(n)) %>%
+  kableExtra::kable(., format = 'html') %>%
+  kableExtra::kable_styling(.) %>%
+  kableExtra::scroll_box(., height = "400px")
+```
+
+
+Here is a summary of the number of files by file type, size (in MB), and where applicable, duration (in hrs).
+
+```{r}
+assets_df %>%
+  dplyr::group_by(asset_type) %>%
+  dplyr::summarise(total_files = sum(n_files),
+            total_size = sum(tot_size_gb),
+            total_dur = sum(tot_dur_hrs)) %>%
+  dplyr::arrange(., desc(total_files)) %>%
+  dplyr::select(asset_type, total_files, total_size, total_dur) %>%
+  kableExtra::kable(., format = 'html') %>%
+  kableExtra::kable_styling(.) %>%
+  kableExtra::scroll_box(., height = "400px")
+```
+
+## Participant demographics
+
+Databrary encourages users doing research with human participants to report demographic data in a structured format so that others may more easily find and reuse data relevant to their questions.
+
+```{r}
+load_demog_csvs <- function(dir = "../participant-demographics/csv") {
+  if (!is.character(dir)) {
+    stop("'dir' must be a string")
+  }
+  if (!dir.exists(dir)) {
+    stop("'dir' does not exist.")
+  }
+  
+  fl <- list.files(dir, "-demog\\.csv$", full.names = TRUE)
+  if (is.null(fl)) {
+    stop(paste0("No csv files in ", dir, "."))
+  }
+  purrr::map_dfr(fl, readr::read_csv, show_col_types = FALSE)
+}
+
+demo_df <- load_demog_csvs()
+```
+
+### Overall
+
+Databrary has demographic data for at least $n=$ `r sum(!is.na(demo_df$session_id))` individual sessions. This is a slight underestimate about the number of participants since some sessions include more than one participant.
+
+```{r}
+demo_df <- demo_df %>%
+  dplyr::mutate(., vol_url = paste0("https://nyu.databrary.org/volume/", vol_id))
+```
+
+### Gender
+
+#### Volumes and sessions
+
+```{r gender-volumes}
+gender_df <- demo_df %>%
+  dplyr::filter(., !is.na(participant.gender)) %>%
+  dplyr::group_by(., vol_id, vol_url) %>%
+  dplyr::summarize(., n_sessions = n()) %>%
+  dplyr::ungroup(.) %>%
+  dplyr::mutate(., n_vols_w_demo = n())
+
+gender_df %>%
+  dplyr::select(., vol_id, vol_url, n_sessions) %>%
+  dplyr::arrange(., desc(n_sessions)) %>%
+  knitr::kable(., "html") %>%
+  kableExtra::kable_styling(.) %>%
+  kableExtra::scroll_box(., height = "400px")
+```
+
+There are `r unique(gender_df$n_vols_w_demo)` volumes reporting `participant.gender`.
+
+#### Number of participants
+
+```{r gender-table}
+xtabs(formula = ~ participant.gender, data = demo_df) %>%
+  knitr::kable(., "html") %>%
+  kableExtra::kable_styling(.) %>%
+  kableExtra::scroll_box(., height = "400px")
+```
+
+### Race
+
+#### Volumes and sessions
+
+```{r race-volumes}
+race_df <- demo_df %>%
+  dplyr::filter(., !is.na(participant.race)) %>%
+  dplyr::group_by(., vol_id, vol_url) %>%
+  dplyr::summarize(., n_sessions = n()) %>%
+  dplyr::ungroup(.) %>%
+  dplyr::mutate(., n_vols_w_demo = n())
+```
+
+There are `r unique(race_df$n_vols_w_demo)` volumes reporting `participant.race`.
+
+```{r}
+race_df %>%
+  dplyr::select(., vol_id, vol_url, n_sessions) %>%
+  dplyr::arrange(., desc(n_sessions)) %>%
+  knitr::kable(., "html") %>%
+  kableExtra::kable_styling(.) %>%
+  kableExtra::scroll_box(., height = "400px")
+```
+
+#### Number of participants
+
+```{r race-table}
+xtabs(formula = ~ participant.race, data = demo_df) %>%
+  knitr::kable(., "html") %>%
+  kableExtra::kable_styling(.) %>%
+  kableExtra::scroll_box(., height = "400px")
+```
+
+### Ethnicity
+
+#### Volumes and sessions
+
+```{r ethnicity-volumes}
+ethnicity_df <- demo_df %>%
+  dplyr::filter(., !is.na(participant.ethnicity)) %>%
+  dplyr::group_by(., vol_id, vol_url) %>%
+  dplyr::summarize(., n_sessions = n()) %>%
+  dplyr::ungroup(.) %>%
+  dplyr::mutate(., n_vols_w_demo = n())
+```
+
+
+```{r}
+ethnicity_df %>%
+  dplyr::select(., vol_id, vol_url, n_sessions) %>%
+  dplyr::arrange(., desc(n_sessions)) %>%
+  knitr::kable(., "html") %>%
+  kableExtra::kable_styling(.) %>%
+  kableExtra::scroll_box(., height = "400px")
+```
+
+There are `r unique(ethnicity_df$n_vols_w_demo)` volumes reporting `participant.ethnicity`.
+
+#### Number of participants
+
+```{r ethnicity-table}
+xtabs(formula = ~ participant.ethnicity, data = demo_df) %>%
+  # dplyr::arrange(., desc(Freq)) %>%
+  knitr::kable(., "html") %>%
+  kableExtra::kable_styling(.) %>%
+  kableExtra::scroll_box(., height = "400px")
+```
+
+# Citations
+
+We mine the Google Scholar database to estimate the number of citations to Databrary or Datavyu.
+
+```{r child = '../weekly/citations.Rmd'}
+```

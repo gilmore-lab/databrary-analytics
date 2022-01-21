@@ -68,7 +68,8 @@ copy_to_archive("shared-volumes-sessions", "shared-volumes-sessions.html")
 
 if (update_shared_volumes) {
   rmarkdown::render("shared-volumes-sessions/shared-volumes-sessions.Rmd",
-                    params = list(use_saved_file = FALSE))  
+                    params = list(save_file = TRUE,
+                                  use_saved_file = FALSE))  
 } else {
   rmarkdown::render("shared-volumes-sessions/shared-volumes-sessions.Rmd")  
 }
