@@ -66,7 +66,7 @@ get_volume_demog <- function(vol_id) {
   message(paste0("....Gathering demog data from volume ", vol_id))
   v_ss <- download_session_csv(vol_id)
   
-  if ("participant.birthdate" %in% names(v_ss)) {
+  if ("birthdate" %in% names(v_ss)) {
     dplyr::select(
       v_ss,
       vol_id,
@@ -82,7 +82,7 @@ get_volume_demog <- function(vol_id) {
 }
 
 get_volume_birthdate <- function(vol_id) {
-  v_ss <- download_session_csv(vol_id)
+  v_ss <- databraryapi::download_session_csv(vol_id)
   message(paste0(
     "....Gathering participant.birthdate data from volume ",
     vol_id
@@ -100,7 +100,7 @@ get_volume_birthdate <- function(vol_id) {
 }
 
 get_volume_gender <- function(vol_id) {
-  v_ss <- download_session_csv(vol_id)
+  v_ss <- databraryapi::download_session_csv(vol_id)
   message(paste0("....Gathering participant.gender data from volume ", vol_id))
   
   if ("participant.gender" %in% names(v_ss)) {
@@ -115,7 +115,7 @@ get_volume_gender <- function(vol_id) {
 }
 
 get_volume_race <- function(vol_id) {
-  v_ss <- download_session_csv(vol_id)
+  v_ss <- databraryapi::download_session_csv(vol_id)
   message(paste0("....Gathering participant.race data from volume ", vol_id))
   
   if ("participant.race" %in% names(v_ss)) {
@@ -130,7 +130,7 @@ get_volume_race <- function(vol_id) {
 }
 
 get_volume_ethnicity <- function(vol_id) {
-  v_ss <- download_session_csv(vol_id)
+  v_ss <- databraryapi::download_session_csv(vol_id)
   message(paste0(
     "....Gathering participant.ethnicity data from volume ",
     vol_id
