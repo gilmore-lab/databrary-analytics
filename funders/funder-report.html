@@ -254,7 +254,7 @@ div.tocify {
 
 
 <h1 class="title toc-ignore">Databrary Funders</h1>
-<h4 class="date">2022-01-07 09:33:27</h4>
+<h4 class="date">2022-03-01 11:50:12</h4>
 
 </div>
 
@@ -306,7 +306,7 @@ get_volume_funding &lt;- function(vol_id) {
 <pre class="r"><code>vols_w_funders &lt;- funders_df %&gt;%
   dplyr::filter(., !is.na(funder_id), !is.na(funder_name)) %&gt;%
   dplyr::group_by(., vol_id)</code></pre>
-<p>There are <span class="math inline">\(n=\)</span> 121 volumes that list funders.</p>
+<p>There are <span class="math inline">\(n=\)</span> 124 volumes that list funders.</p>
 </div>
 <div id="funders-credited-by-number-of-volumes" class="section level3">
 <h3>Funders credited by number of volumes</h3>
@@ -336,7 +336,7 @@ n_vols
 National Science Foundation (NSF)
 </td>
 <td style="text-align:right;">
-53
+55
 </td>
 </tr>
 <tr>
@@ -360,7 +360,7 @@ National Institutes of Health (NIH)
 National Institute of Mental Health (NIMH)
 </td>
 <td style="text-align:right;">
-11
+14
 </td>
 </tr>
 <tr>
@@ -470,6 +470,14 @@ Social Science Research Institute, Penn State University (Penn State Social Scie
 <tr>
 <td style="text-align:left;">
 Society for Research in Child Development (SRCD)
+</td>
+<td style="text-align:right;">
+1
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+William T. Grant Foundation
 </td>
 <td style="text-align:right;">
 1
