@@ -1,6 +1,6 @@
 # databrary-analytics
-Code to produce and plot analytics about Databrary
 
+Code to produce and plot analytics about Databrary
 
 ## Weekly report
 
@@ -69,3 +69,7 @@ Code to produce and plot analytics about Databrary
 - [Report](https://gilmore-lab.github.io/databrary-analytics/funders/funder-report.html) on the number of shared volumes by funding source.
     - Then run `rmarkdown::render("funders/funder-report.Rmd", params = list(db_login="<YOUREMAIL@YOURDOMAIN>"))`  
         - replacing `<YOUREMAIL@YOURDOMAIN>` with your actual Databrary login (email).
+        
+# Summary report
+
+- A 'State of the Repository' report can be found [here]https://gilmore-lab.github.io/databrary-analytics/state-of-the-repo/index.html).
