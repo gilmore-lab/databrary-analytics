@@ -28,7 +28,7 @@ make_next_ten <- function(n) {
 
 ## Log in to Databrary
 
-max_party_id <- 9100
+max_party_id <- 9750
 max_volume_id <- 1450 # Must end in zero for now, so see next function
 max_party_id <- make_next_ten(max_party_id)
 
@@ -46,7 +46,8 @@ update_volume_tags <- TRUE
 message("----- Generating funders report -----")
 copy_to_archive("funders", "funder-report.html")
 rmarkdown::render(input = "funders/funder-report.Rmd",
-                  params = list(use_saved_file = "False"))
+                  params = list(use_saved_file = "False", 
+                                max_vol_id = max_volume_id ))
 
 ## Institutions
 
@@ -81,7 +82,8 @@ copy_to_archive("volumes-with-videos-annotations", "assets-stats.html")
 if (update_asset_data) {
   message("-- Regenerating asset data from all volumes --")
   rmarkdown::render("volumes-with-videos-annotations/assets-stats.Rmd", 
-                    params=list(use_saved_csvs=FALSE))
+                    params=list(use_saved_csvs=FALSE,
+                                max_vol_id = max_volume_id))
 } else {
   message("-- Using previously saved volume asset data --")
   rmarkdown::render("volumes-with-videos-annotations/assets-stats.Rmd", 

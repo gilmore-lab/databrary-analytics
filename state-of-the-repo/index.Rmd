@@ -66,7 +66,7 @@ gte5_ais <- with_ais %>%
   dplyr::mutate(., db_url = paste0("https://nyu.databrary.org/party/", inst_id))
 ```
 
-### Institutions with >5 investigators
+### Institutions with >= 5 investigators
 
 There are `r dim(gte5_ais)[1]` institutions with at least five authorized (PI-level) investigators.
 They are as follows:
@@ -80,7 +80,7 @@ gte5_ais %>%
   kableExtra::scroll_box(., height = "400px")
 ```
 
-## Investigators with >5 affiliates
+## Investigators with >= 5 affiliates
 
 ```{r}
 invest_df <- readr::read_csv("../institutions-investigators/csv/investigators.csv",
@@ -102,7 +102,7 @@ ggplot(gte5_affils) +
 gte5_affils %>%
   dplyr::arrange(., desc(n_affils)) %>%
   dplyr::select(., ai_id, ai_last, ai_first, affiliation, ai_db_url, n_affils) %>%
-  dplyr::group_by(., ai_id, ai_last)
+  dplyr::group_by(., ai_id, ai_last) %>%
   kableExtra::kbl(.) %>%
   kableExtra::kable_styling(.) %>%
   kableExtra::scroll_box(., height = "400px")
