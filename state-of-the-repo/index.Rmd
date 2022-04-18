@@ -40,7 +40,7 @@ This document summarizes information about Databrary's holdings, partners, and c
 
 ```{r}
 # Load saved file
-inst_df <- read_csv("../institutions-investigators/csv/institutions.csv")
+inst_df <- readr::read_csv("../institutions-investigators/csv/institutions.csv", show_col_types = FALSE)
 ```
 
 ```{r site-map, fig.align='center', out.width='80%'}
@@ -68,7 +68,7 @@ gte5_ais <- with_ais %>%
 
 ### Institutions with >= 5 investigators
 
-There are `r dim(gte5_ais)[1]` institutions with at least five authorized (PI-level) investigators.
+There are $n=$ `r dim(gte5_ais)[1]` institutions with at least five authorized (PI-level) investigators.
 They are as follows:
 
 ```{r}
@@ -90,7 +90,7 @@ gte5_affils <- invest_df %>%
   dplyr::filter(., n_affils >= 5)
 ```
 
-In turn, there are `r dim(gte5_affils)[1]` Authorized Investigators with 5 or more affiliates (staff, students, postdocs, or other collaborators).
+In turn, there are $n=$ `r dim(gte5_affils)[1]` Authorized Investigators with 5 or more affiliates (staff, students, postdocs, or other collaborators).
 
 ```{r}
 ggplot(gte5_affils) +
@@ -210,7 +210,9 @@ if (dir.exists('../volumes-with-videos-annotations/csv')) {
 }
 ```
 
-There are `r length(unique(assets_df$vol_id))` shared volumes with assets.
+### Volume focus
+
+There are $n=$ `r length(unique(assets_df$vol_id))` shared volumes with assets.
 
 The following shows the number of shared volumes with a given asset type.
 
@@ -224,6 +226,7 @@ assets_df %>%
   kableExtra::scroll_box(., height = "400px")
 ```
 
+### File-type focus
 
 Here is a summary of the number of files by file type, size (in MB), and where applicable, duration (in hrs).
 
@@ -265,7 +268,7 @@ demo_df <- load_demog_csvs()
 
 ### Overall
 
-Databrary has demographic data for at least $n=$ `r sum(!is.na(demo_df$session_id))` individual sessions. This is a slight underestimate about the number of participants since some sessions include more than one participant.
+Databrary has demographic data for at least $n=$ `r sum(!is.na(demo_df$session_id))` individual sessions. This is a slight underestimate of the number of participants since some sessions include more than one participant.
 
 ```{r}
 demo_df <- demo_df %>%
@@ -278,7 +281,7 @@ demo_df <- demo_df %>%
 
 ```{r gender-volumes}
 gender_df <- demo_df %>%
-  dplyr::filter(., !is.na(participant.gender)) %>%
+  dplyr::filter(., !is.na(participant_gender)) %>%
   dplyr::group_by(., vol_id, vol_url) %>%
   dplyr::summarize(., n_sessions = n()) %>%
   dplyr::ungroup(.) %>%
@@ -292,12 +295,12 @@ gender_df %>%
   kableExtra::scroll_box(., height = "400px")
 ```
 
-There are `r unique(gender_df$n_vols_w_demo)` volumes reporting `participant.gender`.
+There are $n=$ `r unique(gender_df$n_vols_w_demo)` volumes reporting `participant.gender`.
 
 #### Number of participants
 
 ```{r gender-table}
-xtabs(formula = ~ participant.gender, data = demo_df) %>%
+xtabs(formula = ~ participant_gender, data = demo_df) %>%
   knitr::kable(., "html") %>%
   kableExtra::kable_styling(.) %>%
   kableExtra::scroll_box(., height = "400px")
@@ -309,14 +312,14 @@ xtabs(formula = ~ participant.gender, data = demo_df) %>%
 
 ```{r race-volumes}
 race_df <- demo_df %>%
-  dplyr::filter(., !is.na(participant.race)) %>%
+  dplyr::filter(., !is.na(participant_race)) %>%
   dplyr::group_by(., vol_id, vol_url) %>%
   dplyr::summarize(., n_sessions = n()) %>%
   dplyr::ungroup(.) %>%
   dplyr::mutate(., n_vols_w_demo = n())
 ```
 
-There are `r unique(race_df$n_vols_w_demo)` volumes reporting `participant.race`.
+There are $n=$ `r unique(race_df$n_vols_w_demo)` volumes reporting `participant_race`.
 
 ```{r}
 race_df %>%
@@ -330,7 +333,7 @@ race_df %>%
 #### Number of participants
 
 ```{r race-table}
-xtabs(formula = ~ participant.race, data = demo_df) %>%
+xtabs(formula = ~ participant_race, data = demo_df) %>%
   knitr::kable(., "html") %>%
   kableExtra::kable_styling(.) %>%
   kableExtra::scroll_box(., height = "400px")
@@ -342,7 +345,7 @@ xtabs(formula = ~ participant.race, data = demo_df) %>%
 
 ```{r ethnicity-volumes}
 ethnicity_df <- demo_df %>%
-  dplyr::filter(., !is.na(participant.ethnicity)) %>%
+  dplyr::filter(., !is.na(participant_ethnicity)) %>%
   dplyr::group_by(., vol_id, vol_url) %>%
   dplyr::summarize(., n_sessions = n()) %>%
   dplyr::ungroup(.) %>%
@@ -359,12 +362,12 @@ ethnicity_df %>%
   kableExtra::scroll_box(., height = "400px")
 ```
 
-There are `r unique(ethnicity_df$n_vols_w_demo)` volumes reporting `participant.ethnicity`.
+There are $n=$ `r unique(ethnicity_df$n_vols_w_demo)` volumes reporting `participant_ethnicity`.
 
 #### Number of participants
 
 ```{r ethnicity-table}
-xtabs(formula = ~ participant.ethnicity, data = demo_df) %>%
+xtabs(formula = ~ participant_ethnicity, data = demo_df) %>%
   # dplyr::arrange(., desc(Freq)) %>%
   knitr::kable(., "html") %>%
   kableExtra::kable_styling(.) %>%

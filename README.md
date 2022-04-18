@@ -1,6 +1,10 @@
 # databrary-analytics
-Code to produce and plot analytics about Databrary
 
+Code to produce and plot analytics about Databrary.
+
+## State of the Repository
+
+This [report](https://gilmore-lab.github.io/databrary-analytics/state-of-the-repo/) draws information from the other reports and summarizes key characteristics.
 
 ## Weekly report
 
@@ -14,11 +18,11 @@ Code to produce and plot analytics about Databrary
 - To run the report without updating:
     - `source('weekly/R/helpers.R')`  
     - `render_weekly_report(db_account = "<YOUREMAIL@YOURDOMAIN>")`  
-        - replacing `<YOUREMAIL@YOURDOMAIN>` with your actual Databrary login (email). 
+        - replacing `<YOUREMAIL@YOURDOMAIN>` with your actual Databrary login (email).
+        
+Approximately quarterly, we generate updates of multiple reports by running `source("R/generate_quarterly_reports.R")`. This command takes about 2 hours to complete.
 
 # Citation Data
-
-- These numbers are from the Databrary Activity site https://nyu.databrary.org/api/activity  
 
 - "Databrary" and "Datavyu" (with quotes) are used to reduce bad hits in [Google Scholar](https://scholar.google.com)      
     - choose the 'anytime' option for Citations Monthly  
