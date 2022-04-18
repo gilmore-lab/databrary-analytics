@@ -26,18 +26,20 @@ make_next_ten <- function(n) {
   }
 }
 
-## Log in to Databrary
-
-max_party_id <- 9750
-max_volume_id <- 1450 # Must end in zero for now, so see next function
-max_party_id <- make_next_ten(max_party_id)
-
-login <- databraryapi::login_db()
+# Parameters
 
 update_asset_data <- TRUE # This is very time consuming, but should be done periodically, probably quarterly
 update_demog_data <- TRUE # This is very time consuming, but should be done periodically, probably quarterly
 update_shared_volumes <- TRUE
 update_volume_tags <- TRUE
+
+max_party_id <- 9750
+max_volume_id <- 1450 # Must end in zero for now, so see next function
+max_party_id <- make_next_ten(max_party_id)
+
+## Log in to Databrary
+
+login <- databraryapi::login_db()
 
 ## Funders report
 
@@ -122,7 +124,7 @@ copy_to_archive("tags-keywords", "tags-keywords-report.html")
 
 if (update_volume_tags) {
   rmarkdown::render("tags-keywords/tags-keywords-report.Rmd",
-                    params = list(read_saved = FALSE))
+                    params = list(read_saved = FALSE, max_vol_id = max_volume_id))
   
 } else {
   rmarkdown::render("tags-keywords/tags-keywords-report.Rmd",

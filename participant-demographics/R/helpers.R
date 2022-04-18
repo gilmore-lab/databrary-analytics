@@ -1,7 +1,7 @@
 # helper functions for participant-demog-report
 
 # Temporary until we update the databraryapi package
-download_session_csv <- function(vol_id = 1,
+download_session_csv_ <- function(vol_id = 1,
                                  to_df = TRUE,
                                  return_response = FALSE,
                                  vb = FALSE) {
@@ -12,25 +12,25 @@ download_session_csv <- function(vol_id = 1,
   if ((!is.numeric(vol_id)) || (vol_id <= 0)) {
     stop("vol_id must be an integer > 0.")
   }
-  
+
   if (vb)
     message(paste0("Downloading spreadsheet from volume ", vol_id))
- 
-  url <-  paste0("https://nyu.databrary.org/volume/", 
+
+  url <-  paste0("https://nyu.databrary.org/volume/",
                  as.character(vol_id), "/csv")
   # r <-
   #   httr::content(httr::GET(url)
   #   ), 'text', encoding = 'UTF-8')
-  
+
   # Use curl library instead of httr and try() to handle 404 errors
   r <- NULL
   try(r <- read_lines(curl::curl(url)), silent = TRUE)
-  
+
   if (is.null(r)) {
     if (vb)
       message(paste0("No CSV data returned from volume ", vol_id))
     NULL
-  } else if (!stringr::str_detect(r, 'session-id')) {
+  } else if (!stringr::str_detect(r[1], 'session[\\-\\.]id')) {
     if (vb)
       message(paste0("No CSV data returned from volume ", vol_id))
     NULL
@@ -47,8 +47,7 @@ download_session_csv <- function(vol_id = 1,
         session_id = session.id,
         session_name = session.name,
         session_date = session.date,
-        session_release = session.release
-      )
+        session_release = session.release      )
       r_df
     } else {
       if (vb)
@@ -62,93 +61,117 @@ download_session_csv <- function(vol_id = 1,
   }
 }
 
-get_volume_demog <- function(vol_id) {
+get_volume_demog <- function(vol_id, vb = FALSE) {
   message(paste0("....Gathering demog data from volume ", vol_id))
-  v_ss <- download_session_csv(vol_id)
+  v_ss <- try(databraryapi::download_session_csv(vol_id), silent = TRUE)
   
-  if ("birthdate" %in% names(v_ss)) {
+  if ("participant_birthdate" %in% names(v_ss)) {
     dplyr::select(
       v_ss,
       vol_id,
-      participant.birthdate,
-      participant.race,
-      participant.ethnicity,
-      participant.gender,
-      participant.birthdate
+      participant_birthdate,
+      participant_race,
+      participant_ethnicity,
+      participant_gender
     )
   } else {
     NULL
   }
 }
 
-get_volume_birthdate <- function(vol_id) {
-  v_ss <- databraryapi::download_session_csv(vol_id)
+get_volume_birthdate <- function(vol_id, vb = FALSE) {
+  v_ss <- try(databraryapi::download_session_csv(vol_id), silent = TRUE)
+  if (vb)
   message(paste0(
-    "....Gathering participant.birthdate data from volume ",
+    "....Gathering participant_birthdate data from volume ",
     vol_id
   ))
   
-  if ("participant.birthdate" %in% names(v_ss)) {
-    dplyr::select(v_ss, vol_id, session_id, participant.birthdate)
+  if ("participant_birthdate" %in% names(v_ss)) {
+    dplyr::select(v_ss, vol_id, session_id, participant_birthdate)
   } else {
+    if (vb) message(".....participant_birthdate not found for volume ", vol_id)
     data.frame(
       vol_id = vol_id,
       session_id = NA,
-      participant.birthdate = NA
+      participant_birthdate = NA
     )
   }
 }
 
-get_volume_gender <- function(vol_id) {
-  v_ss <- databraryapi::download_session_csv(vol_id)
-  message(paste0("....Gathering participant.gender data from volume ", vol_id))
-  
-  if ("participant.gender" %in% names(v_ss)) {
-    dplyr::select(v_ss, vol_id, session_id, participant.gender)
-  } else {
-    data.frame(
-      vol_id = vol_id,
-      session_id = NA,
-      participant.gender = NA
-    )
-  }
-}
-
-get_volume_race <- function(vol_id) {
-  v_ss <- databraryapi::download_session_csv(vol_id)
-  message(paste0("....Gathering participant.race data from volume ", vol_id))
-  
-  if ("participant.race" %in% names(v_ss)) {
-    dplyr::select(v_ss, vol_id, session_id, participant.race)
-  } else {
-    data.frame(
-      vol_id = vol_id,
-      session_id = NA,
-      participant.race = NA
-    )
-  }
-}
-
-get_volume_ethnicity <- function(vol_id) {
-  v_ss <- databraryapi::download_session_csv(vol_id)
-  message(paste0(
-    "....Gathering participant.ethnicity data from volume ",
+get_volume_session_date <- function(vol_id, vb = FALSE) {
+  v_ss <- try(databraryapi::download_session_csv(vol_id), silent = TRUE)
+  if (vb) message(paste0(
+    "....Gathering session_date data from volume ",
     vol_id
   ))
   
-  if ("participant.ethnicity" %in% names(v_ss)) {
-    dplyr::select(v_ss, vol_id, session_id, participant.ethnicity)
+  if ("session_date" %in% names(v_ss)) {
+    dplyr::select(v_ss, vol_id, session_date)
   } else {
+    message(".....session_date not found for volume ", vol_id)
     data.frame(
       vol_id = vol_id,
       session_id = NA,
-      participant.ethnicity = NA
+      session_date = NA
+    )
+  }
+}
+
+get_volume_gender <- function(vol_id, vb = FALSE) {
+  v_ss <- try(databraryapi::download_session_csv(vol_id), silent = TRUE)
+  if (vb) message(paste0("....Gathering participant_gender data from volume ", vol_id))
+  
+  if ("participant_gender" %in% names(v_ss)) {
+    dplyr::select(v_ss, vol_id, session_id, participant_gender)
+  } else {
+    if (vb) message(".....participant_gender not found for volume ", vol_id)
+    data.frame(
+      vol_id = vol_id,
+      session_id = NA,
+      participant_gender = NA
+    )
+  }
+}
+
+get_volume_race <- function(vol_id, vb = FALSE) {
+  v_ss <- try(databraryapi::download_session_csv(vol_id), silent = TRUE)
+  if (vb) message(paste0("....Gathering participant_race data from volume ", vol_id))
+  
+  if ("participant_race" %in% names(v_ss)) {
+    dplyr::select(v_ss, vol_id, session_id, participant_race)
+  } else {
+    if (vb) message(".....participant_race not found for volume ", vol_id)
+    data.frame(
+      vol_id = vol_id,
+      session_id = NA,
+      participant_race = NA
+    )
+  }
+}
+
+get_volume_ethnicity <- function(vol_id, vb = FALSE) {
+  v_ss <- try(databraryapi::download_session_csv(vol_id), silent = TRUE)
+  if (vb) message(paste0(
+    "....Gathering participant_ethnicity data from volume ",
+    vol_id
+  ))
+  
+  if ("participant_ethnicity" %in% names(v_ss)) {
+    dplyr::select(v_ss, vol_id, session_id, participant_ethnicity)
+  } else {
+    if (vb) message(".....participant_ethnicity not found for volume ", vol_id)
+    data.frame(
+      vol_id = vol_id,
+      session_id = NA,
+      participant_ethnicity = NA
     )
   }
 }
 
 get_volumes_demo <- function(min_vol_id = 1,
-                             max_vol_id = 10) {
+                             max_vol_id = 10,
+                             vb = FALSE) {
   vols_range <- min_vol_id:max_vol_id
   
   message(paste0(
@@ -159,17 +182,21 @@ get_volumes_demo <- function(min_vol_id = 1,
     "\n"
   ))
   
+  
+  # message("...Gathering session dates")
+  # bdts <- purrr::map_dfr(vols_range, get_volume_session_date)
+  # 
   message("...Gathering birthdates")
-  bdts <- purrr::map_dfr(vols_range, get_volume_birthdate)
+  bdts <- purrr::map_dfr(vols_range, get_volume_birthdate, vb)
   
   message("\n...Gathering race")
-  races <- purrr::map_dfr(vols_range, get_volume_race)
+  races <- purrr::map_dfr(vols_range, get_volume_race, vb)
   
   message("\n...Gathering ethnicity")
-  ethn <- purrr::map_dfr(vols_range, get_volume_ethnicity)
+  ethn <- purrr::map_dfr(vols_range, get_volume_ethnicity, vb)
   
   message("\n...Gathering gender")
-  gend <- purrr::map_dfr(vols_range, get_volume_gender)
+  gend <- purrr::map_dfr(vols_range, get_volume_gender, vb)
   
   m <- dplyr::left_join(bdts, races, by = c("vol_id", "session_id"))
   m <- dplyr::left_join(m, ethn, by = c("vol_id", "session_id"))
@@ -201,8 +228,9 @@ save_volumes_demo <- function(df, min_vol_id, max_vol_id,
 
 get_save_volumes_demo <- function(min_vol_id = 1,
                                   max_vol_id = 10,
-                                  dir = "participant-demographics/csv") {
-  df <- get_volumes_demo(min_vol_id, max_vol_id)
+                                  dir = "participant-demographics/csv",
+                                  vb = FALSE) {
+  df <- get_volumes_demo(min_vol_id, max_vol_id, vb)
   save_volumes_demo(df, min_vol_id, max_vol_id, dir)
 }
 
@@ -212,7 +240,8 @@ get_save_volumes_demo <- function(min_vol_id = 1,
 # in individual CSVs labeled with the volume numbers.
 regenerate_vol_demo_csvs <- function(new_vol_rg_min = 1261,
                                      new_vol_rg_max = 1270,
-                                     csv_dir = "participant-demographics/csv") {
+                                     csv_dir = "participant-demographics/csv",
+                                     vb = FALSE) {
   require(purrr)
   
   if (!is.numeric(new_vol_rg_min)) {
@@ -244,7 +273,8 @@ regenerate_vol_demo_csvs <- function(new_vol_rg_min = 1261,
   purrr::map2(.x = lo,
               .y = hi,
               get_save_volumes_demo,
-              csv_dir)
+              csv_dir,
+              vb)
 }
 
 load_demog_csvs <- function(dir = "participant-demographics/csv") {
@@ -259,7 +289,7 @@ load_demog_csvs <- function(dir = "participant-demographics/csv") {
   if (is.null(fl)) {
     stop(paste0("No csv files in ", dir, "."))
   }
-  purrr::map_dfr(fl, readr::read_csv)
+  purrr::map_dfr(fl, readr::read_csv, col_types = 'c', show_col_types = FALSE)
 }
 
 get_volumes_owners <- function(min_vol_id = 1,
@@ -348,7 +378,7 @@ load_owner_csvs <- function(dir = "participant-demographics/csv",
   if (is.null(fl)) {
     stop(paste0("No csv files in ", dir, "."))
   }
-  purrr::map_dfr(fl, readr::read_csv)
+  purrr::map_dfr(fl, readr::read_csv, col_types = 'c', show_col_types = FALSE)
 }
 
 render_participant_demog_report <- function(db_login) {
@@ -365,3 +395,18 @@ render_participant_demog_report <- function(db_login) {
     file.remove("participant-demographics/.databrary.RData")
   }
 }
+
+my_gender <- function(v, a) {
+  if (a == 'warning') {
+    warning('some warning')
+    return_value <- get_volume_gender(v)
+  } else if (a == 'error') {
+    warning('Error detected, ignored.')
+    return_value = NULL
+  } else {
+    return_value <- get_volume_gender(v)
+  }
+}
+
+
+
