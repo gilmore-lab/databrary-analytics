@@ -94,8 +94,8 @@ vol_id,funder_id,funder_name,award
 84,100000071,National Institute of Child Health and Human Development (NICHD),R37-HD33486
 85,NA,NA,NA
 86,100000071,National Institute of Child Health and Human Development (NICHD),R37HD033486
-87,NA,NA,NA
-88,NA,NA,NA
+87,100000071,National Institute of Child Health and Human Development (NICHD),R37-HD33486
+88,100000071,National Institute of Child Health and Human Development (NICHD),NA
 89,100000071,National Institute of Child Health and Human Development (NICHD),R37-HD33486
 90,100000025,National Institute of Mental Health (NIMH),1ROIMH60922
 91,NA,NA,NA
@@ -154,8 +154,8 @@ vol_id,funder_id,funder_name,award
 139,NA,NA,NA
 140,100000071,National Institute of Child Health and Human Development (NICHD),R37-HD33486
 141,NA,NA,NA
-142,NA,NA,NA
-143,NA,NA,NA
+142,100000071,National Institute of Child Health and Human Development (NICHD),R37-HD33486
+143,100000071,National Institute of Child Health and Human Development (NICHD),R37-HD33486
 144,100000001,National Science Foundation (NSF),BCS-1147440
 145,NA,NA,NA
 146,NA,NA,NA
@@ -164,7 +164,7 @@ vol_id,funder_id,funder_name,award
 149,NA,NA,NA
 150,NA,NA,NA
 151,NA,NA,NA
-152,NA,NA,NA
+152,100000071,National Institute of Child Health and Human Development (NICHD),R37-HD33486
 153,NA,NA,NA
 154,NA,NA,NA
 155,NA,NA,NA
@@ -181,7 +181,8 @@ vol_id,funder_id,funder_name,award
 166,NA,NA,NA
 167,NA,NA,NA
 168,NA,NA,NA
-169,NA,NA,NA
+169,100000071,National Institute of Child Health and Human Development (NICHD),R37-HD33486
+169,100000001,National Science Foundation (NSF),0813964
 170,NA,NA,NA
 171,NA,NA,NA
 172,NA,NA,NA
@@ -189,7 +190,10 @@ vol_id,funder_id,funder_name,award
 174,100000071,National Institute of Child Health and Human Development (NICHD),R21-HD095153
 174,100000865,Bill & Melinda Gates Foundation (BMGF),OPP1129031
 175,NA,NA,NA
-176,NA,NA,NA
+176,100000001,National Science Foundation (NSF),BCS-1528831
+176,100000001,National Science Foundation (NSF),BCS 1349044
+176,100000071,National Institute of Child Health and Human Development (NICHD),R37HD033486
+176,100000071,National Institute of Child Health and Human Development (NICHD),R01HD033486
 177,NA,NA,NA
 178,NA,NA,NA
 179,NA,NA,NA
@@ -235,7 +239,7 @@ vol_id,funder_id,funder_name,award
 217,NA,NA,NA
 218,100000001,National Science Foundation (NSF),BCS-1147440
 219,NA,NA,NA
-220,NA,NA,NA
+220,100000071,National Institute of Child Health and Human Development (NICHD),R01-HD-083381
 221,NA,NA,NA
 222,NA,NA,NA
 223,NA,NA,NA
@@ -1305,7 +1309,7 @@ vol_id,funder_id,funder_name,award
 1246,NA,NA,NA
 1247,100000925,John Templeton Foundation,NA
 1248,NA,NA,NA
-1249,NA,NA,NA
+1249,100000001,National Science Foundation (NSF),1462280
 1250,NA,NA,NA
 1251,NA,NA,NA
 1252,NA,NA,NA
