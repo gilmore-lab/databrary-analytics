@@ -10,7 +10,7 @@ output:
     code_folding: hide
 params:
   db_login: email@provider.com
-  max_party_id: 10000
+  max_party_id: 12000
   save_fn: "csv/investigators.csv"
   save_file: True
   use_saved_file: True
