@@ -94,30 +94,26 @@ if (update_asset_data) {
 
 ## Volume-level demographics
 
-# 2022-07-11 Removing this from the quarterly reports until we can do a proper
-# deep dive and fix the issues with volumes that don't have demo data, those
-# that have multiple participants, etc.
+message("----- Generating volume-level demographics report -----")
+copy_to_archive("participant-demographics", "participant-demog-report.html")
+if (update_demog_data) {
+  message("-- Regenerating demog data from all volumes --")
 
-# message("----- Generating volume-level demographics report -----")
-# copy_to_archive("participant-demographics", "participant-demog-report.html")
-# if (update_demog_data) {
-#   message("-- Regenerating demog data from all volumes --")
-#   
-#   # Delete "old" demog files
-#   old_demo_fn <- list.files("participant-demographics/csv", "demog", full.names = TRUE)
-#   sapply(old_demo_fn, unlink)
-# 
-#   # Generate report
-#   rmarkdown::render("participant-demographics/participant-demog-report.Rmd",
-#                     params=list(new_vol_rg_min = 1,
-#                                 new_vol_rg_max = max_volume_id,
-#                                 update_demo_csvs=TRUE))
-# } else {
-#   message("-- Using previously saved demog data --")
-#   rmarkdown::render("participant-demographics/participant-demog-report.Rmd", 
-#                     params=list(update_demo_csvs=FALSE))
-#   
-# }
+  # Delete "old" demog files
+  old_demo_fn <- list.files("participant-demographics/csv", "demog", full.names = TRUE)
+  sapply(old_demo_fn, unlink)
+  
+ # Generate report
+   rmarkdown::render("participant-demographics/participant-demog-report.Rmd",
+                     params=list(new_vol_rg_min = 1,
+                                 new_vol_rg_max = max_volume_id,
+                                 update_demo_csvs=TRUE))
+ } else {
+   message("-- Using previously saved demog data --")
+   rmarkdown::render("participant-demographics/participant-demog-report.Rmd",
+                     params=list(update_demo_csvs=FALSE))
+
+ }
 
 ## Tags and keywords
 

@@ -474,3 +474,179 @@ my_gender <- function(v, a) {
     return_value <- get_volume_gender(v)
   }
 }
+
+get_volume_ss <- function(vol_id = 1, 
+                          omit_materials = FALSE,
+                          vb = FALSE) {
+  message(paste0("Gathering spreadsheet data from volume ", vol_id))
+  v_ss <-
+    try(databraryapi::download_session_csv(vol_id), silent = TRUE)
+  
+  if ('try-error' %in% class(v_ss)) {
+    message(".Error loading CSV for volume ", vol_id)
+    df <- NULL
+    return(df)
+  } else if (is.null(v_ss)) {
+    message(".NULL CSV for volume ", vol_id)
+    df <- NULL
+    return(df)
+  } else {
+    df <- v_ss
+    if (omit_materials) {
+      df <- dplyr::filter(df, !(stringr::str_detect(session_date, 'materials')))
+    }
+    df$vol_id <- vol_id
+    return(df)    
+  }
+}
+
+get_save_volume_ss <- function(vol_id = 1,
+                               dir = "participant-demographics/csv",
+                               omit_materials = FALSE,
+                               vb = FALSE) {
+  stopifnot(is.numeric(vol_id))
+  stopifnot(vol_id > 0)
+  stopifnot(is.character(dir))
+  stopifnot(is.logical(omit_materials))
+  stopifnot(is.logical(vb))
+  
+  df <- get_volume_ss(vol_id, omit_materials, vb)
+  
+  if (!is.null(df)) {
+    if (omit_materials) {
+      fn <-
+        paste0(
+          dir,
+          "/",
+          stringr::str_pad(vol_id, 4, pad = "0"),
+          "-sess.csv"
+        )
+    } else {
+      fn <-
+        paste0(
+          dir,
+          "/",
+          stringr::str_pad(vol_id, 4, pad = "0"),
+          "-sess-materials.csv"
+        )
+    }
+    
+    readr::write_csv(df, fn)
+    message(".Saved ", fn)
+    
+  } else {
+    message(".No data available for volume: ", vol_id)
+  }
+}
+
+# Returns a tibble
+extract_sessions_from_vol_csv <- function(csv_fn = "participant-demographics/csv/0002-sess-materials.csv") {
+  stopifnot(is.character(csv_fn))
+  stopifnot(file.exists(csv_fn))
+  
+  #df <- readr::read_csv(csv_fn, show_col_types = FALSE)
+  df <- read.csv(csv_fn, colClasses = "character")
+  
+  if (dim(df)[1] == 0) {
+    message("CSV empty: ", csv_fn)
+    NULL
+  } else {
+    dplyr::filter(df, !(stringr::str_detect(session_date, 'materials')))
+  }
+}
+
+# Returns a tibble 
+count_sessions_materials_folders <- function(csv_fn = "participant-demographics/csv/0002-sess-materials.csv") {
+  stopifnot(is.character(csv_fn))
+  stopifnot(file.exists(csv_fn))
+  
+  df <- readr::read_csv(csv_fn, show_col_types = FALSE)
+  
+  if (dim(df)[1] == 0) {
+    message("CSV empty: ", csv_fn)
+    NULL
+  } else {
+    df_sess <- dplyr::filter(df, !(stringr::str_detect(session_date, 'materials')))
+    n_sess <- dim(df_sess)[1]
+    
+    df_materials <- dplyr::filter(df, (stringr::str_detect(session_date, 'materials')))
+    n_materials <- dim(df_materials)[1]
+    
+    vol_id <- stringr::str_extract(csv_fn, "[0-9]{4}")
+    
+    tibble::tibble(vol_id, n_sess, n_materials)
+  }
+  
+}
+
+detect_n_participants <- function(df) {
+  sum(stringr::str_detect(names(df), "participant[1-9]?_ID"))
+}
+
+generate_sessions_materials_df <- function(csv_folder = "participant-demographics/csv") {
+  stopifnot(is.character(csv_folder))
+  stopifnot(file.exists(csv_folder))
+  
+  fl <- list.files(csv_folder, "[0-9]{4}\\-sess\\-materials\\.csv", full.names = TRUE)
+  if (length(fl) <= 0) {
+    message("No session/materials CSV files found: ", csv_folder)
+    NULL
+  } else {
+    purrr::map_df(fl, count_sessions_materials_folders)
+  }
+}
+
+extract_participant_vars <- function(df) {
+  stopifnot(is.data.frame(df))
+  
+  stringr::str_match(names(df), "participant[1-9]?_([A-Za-z]+)")[,2]
+}
+
+extract_participant_identifiers <- function(df) {
+  stopifnot(is.data.frame(df))
+  
+  x <- unique(stringr::str_extract(names(df), "participant[1-9]?"))
+  x[!is.na(x)]
+}
+
+# If there are multiple participants, augmented data frame
+alter_sess_df_w_mult_part <- function(df) {
+  if (is.null(df)) return(NULL)
+  stopifnot(is.data.frame(df))
+  
+  n_particip <- detect_n_participants(df)
+  if (n_particip > 0) {
+    purrr::map_df(1:n_particip, select_particip_sess_by_number, df)    
+  } else {
+    message("No participant data...skipping")
+    NULL
+  }
+}
+
+# Helper function to extract data frame for participant1, participant2, etc.
+select_particip_sess_by_number <- function(i, df) {
+  stopifnot(is.numeric(i))
+  stopifnot(i > 0)
+  stopifnot(is.data.frame(df))
+  
+  vars_not_part_specific <- !(stringr::str_detect(names(df), "participant"))
+  if (i == 1) {
+    part_specific_vars <- stringr::str_detect(names(df), "participant[1]?_")
+  } else {
+    part_specific_vars <- stringr::str_detect(names(df), paste0("participant[", i, "]{1}"))
+  }
+  select_these <- vars_not_part_specific | part_specific_vars
+  out_df <- df[, select_these]
+  stripped_names <- stringr::str_replace(names(out_df), paste0("participant[", i, "]{1}"), "participant")
+  names(out_df) <- stripped_names
+  out_df
+}
+
+make_cleaned_session_df <- function(csv_fn) {
+  stopifnot(is.character(csv_fn))
+  stopifnot(file.exists(csv_fn))
+  
+  message("Extracting session info: ", csv_fn)
+  df <- extract_sessions_from_vol_csv(csv_fn)
+  alter_sess_df_w_mult_part(df)
+}
