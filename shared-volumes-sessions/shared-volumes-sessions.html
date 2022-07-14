@@ -1318,7 +1318,9 @@ window.initializeCodeFolding = function(show) {
     showCodeButton.append(showCodeText);
     showCodeButton
         .attr('data-toggle', 'collapse')
+        .attr('data-bs-toggle', 'collapse') // BS5
         .attr('data-target', '#' + id)
+        .attr('data-bs-target', '#' + id)   // BS5
         .attr('aria-expanded', showThis)
         .attr('aria-controls', id);
 
@@ -1626,6 +1628,7 @@ if (window.hljs) {
 
 
 
+
 <style type="text/css">
 .main-container {
   max-width: 940px;
@@ -1646,6 +1649,9 @@ button.code-folding-btn:focus {
 }
 summary {
   display: list-item;
+}
+details > summary > p:only-child {
+  display: inline;
 }
 pre code {
   padding: 0;
@@ -1804,7 +1810,7 @@ div.tocify {
 <div id="header">
 
 <div class="btn-group pull-right float-right">
-<button type="button" class="btn btn-default btn-xs btn-secondary btn-sm dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span>Code</span> <span class="caret"></span></button>
+<button type="button" class="btn btn-default btn-xs btn-secondary btn-sm dropdown-toggle" data-toggle="dropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span>Code</span> <span class="caret"></span></button>
 <ul class="dropdown-menu dropdown-menu-right" style="min-width: 50px;">
 <li><a id="rmd-show-all-code" href="#">Show All Code</a></li>
 <li><a id="rmd-hide-all-code" href="#">Hide All Code</a></li>
@@ -1815,7 +1821,7 @@ div.tocify {
 
 <h1 class="title toc-ignore">Shared volumes with sessions report</h1>
 <h4 class="author">Rick Gilmore</h4>
-<h4 class="date">2022-04-11 10:29:23</h4>
+<h4 class="date">2022-07-11 10:59:02</h4>
 
 </div>
 
@@ -1923,13 +1929,15 @@ status has changed since the CSV was generated.</p>
   v_1101_1200 &lt;- get_volumes_data(1101, 1200)
   v_1201_1300 &lt;- get_volumes_data(1201, 1300)
   v_1301_1400 &lt;- get_volumes_data(1301, 1400)
+  v_1401_1500 &lt;- get_volumes_data(1401, 1500)
   vols_sess_data &lt;- data.table::rbindlist(list(v_001_100, v_101_200, 
                                                v_201_300, v_301_400,
                                                v_401_500, v_501_600, v_601_700,
                                                v_701_800, v_801_900, v_901_1000,
                                                v_1001_1100, v_1101_1200,
                                                v_1201_1300,
-                                               v_1301_1400))
+                                               v_1301_1400,
+                                               v_1401_1500))
   
 }
 
@@ -1977,13 +1985,13 @@ if (params$save_file) {
   dplyr::mutate(., vol_url = paste0(&quot;https://nyu.databrary.org/volume/&quot;, vol_id)) %&gt;%
   dplyr::group_by(., vol_id, vol_name, vol_url, created_date, shared_type, n_sessions) %&gt;%
   dplyr::summarise(., n_owners = n())</code></pre>
-<p>There are <span class="math inline">\(n=\)</span> 817 total shared
+<p>There are <span class="math inline">\(n=\)</span> 892 total shared
 volumes on Databrary.</p>
 <div id="full-volume" class="section level2">
 <h2>Full volume</h2>
 <pre class="r"><code>unique_vols_full &lt;- unique_vols %&gt;%
   dplyr::filter(., shared_type == &quot;full_volume&quot;)</code></pre>
-<p>There are <span class="math inline">\(n=\)</span> 263 volumes fully
+<p>There are <span class="math inline">\(n=\)</span> 286 volumes fully
 shared on Databrary.</p>
 <pre class="r"><code>unique_vols_full %&gt;%
   dplyr::arrange(., desc(n_sessions)) %&gt;%
@@ -2297,6 +2305,30 @@ full_volume
 </td>
 <td style="text-align:right;">
 2
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+149
+</td>
+<td style="text-align:left;">
+Constructing Science: Connecting Causal Reasoning to Scientific Thinking
+in Young Children - which outcomes are science (chapter 7)
+</td>
+<td style="text-align:left;">
+<a href="https://nyu.databrary.org/volume/149" class="uri">https://nyu.databrary.org/volume/149</a>
+</td>
+<td style="text-align:left;">
+2015-06-15 15:47:52
+</td>
+<td style="text-align:left;">
+full_volume
+</td>
+<td style="text-align:right;">
+155
+</td>
+<td style="text-align:right;">
+1
 </td>
 </tr>
 <tr>
@@ -2699,6 +2731,29 @@ full_volume
 </td>
 <td style="text-align:right;">
 1
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+484
+</td>
+<td style="text-align:left;">
+Routine Language Intervention
+</td>
+<td style="text-align:left;">
+<a href="https://nyu.databrary.org/volume/484" class="uri">https://nyu.databrary.org/volume/484</a>
+</td>
+<td style="text-align:left;">
+2017-09-13 19:46:57
+</td>
+<td style="text-align:left;">
+full_volume
+</td>
+<td style="text-align:right;">
+103
+</td>
+<td style="text-align:right;">
+2
 </td>
 </tr>
 <tr>
@@ -3517,6 +3572,30 @@ full_volume
 </tr>
 <tr>
 <td style="text-align:right;">
+1249
+</td>
+<td style="text-align:left;">
+An RGBD Dataset of American Sign Language Homework-Assignment Videos by
+Students and by Fluent ASL Signers
+</td>
+<td style="text-align:left;">
+<a href="https://nyu.databrary.org/volume/1249" class="uri">https://nyu.databrary.org/volume/1249</a>
+</td>
+<td style="text-align:left;">
+2020-11-24 02:06:55
+</td>
+<td style="text-align:left;">
+full_volume
+</td>
+<td style="text-align:right;">
+46
+</td>
+<td style="text-align:right;">
+1
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
 338
 </td>
 <td style="text-align:left;">
@@ -3633,6 +3712,29 @@ full_volume
 </tr>
 <tr>
 <td style="text-align:right;">
+1174
+</td>
+<td style="text-align:left;">
+TEA 0 a 3
+</td>
+<td style="text-align:left;">
+<a href="https://nyu.databrary.org/volume/1174" class="uri">https://nyu.databrary.org/volume/1174</a>
+</td>
+<td style="text-align:left;">
+2020-08-22 01:59:32
+</td>
+<td style="text-align:left;">
+full_volume
+</td>
+<td style="text-align:right;">
+40
+</td>
+<td style="text-align:right;">
+2
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
 1298
 </td>
 <td style="text-align:left;">
@@ -3699,6 +3801,30 @@ full_volume
 </td>
 <td style="text-align:right;">
 1
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1412
+</td>
+<td style="text-align:left;">
+Quantifying Sources of Variability in Infancy Research Using the
+Infant-Directed-Speech Preference
+</td>
+<td style="text-align:left;">
+<a href="https://nyu.databrary.org/volume/1412" class="uri">https://nyu.databrary.org/volume/1412</a>
+</td>
+<td style="text-align:left;">
+2022-01-24 17:32:28
+</td>
+<td style="text-align:left;">
+full_volume
+</td>
+<td style="text-align:right;">
+37
+</td>
+<td style="text-align:right;">
+2
 </td>
 </tr>
 <tr>
@@ -3817,29 +3943,6 @@ full_volume
 </td>
 <td style="text-align:right;">
 1
-</td>
-</tr>
-<tr>
-<td style="text-align:right;">
-1174
-</td>
-<td style="text-align:left;">
-TEA 0 a 3
-</td>
-<td style="text-align:left;">
-<a href="https://nyu.databrary.org/volume/1174" class="uri">https://nyu.databrary.org/volume/1174</a>
-</td>
-<td style="text-align:left;">
-2020-08-22 01:59:32
-</td>
-<td style="text-align:left;">
-full_volume
-</td>
-<td style="text-align:right;">
-34
-</td>
-<td style="text-align:right;">
-2
 </td>
 </tr>
 <tr>
@@ -3963,6 +4066,29 @@ full_volume
 </tr>
 <tr>
 <td style="text-align:right;">
+941
+</td>
+<td style="text-align:left;">
+Walking and Talking
+</td>
+<td style="text-align:left;">
+<a href="https://nyu.databrary.org/volume/941" class="uri">https://nyu.databrary.org/volume/941</a>
+</td>
+<td style="text-align:left;">
+2019-07-11 21:02:49
+</td>
+<td style="text-align:left;">
+full_volume
+</td>
+<td style="text-align:right;">
+30
+</td>
+<td style="text-align:right;">
+2
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
 433
 </td>
 <td style="text-align:left;">
@@ -3973,6 +4099,29 @@ BCD Lab Adult Female Face Database
 </td>
 <td style="text-align:left;">
 2017-06-19 18:44:08
+</td>
+<td style="text-align:left;">
+full_volume
+</td>
+<td style="text-align:right;">
+29
+</td>
+<td style="text-align:right;">
+1
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1419
+</td>
+<td style="text-align:left;">
+Unweighting infants reveals hidden motor skills
+</td>
+<td style="text-align:left;">
+<a href="https://nyu.databrary.org/volume/1419" class="uri">https://nyu.databrary.org/volume/1419</a>
+</td>
+<td style="text-align:left;">
+2022-02-10 21:25:56
 </td>
 <td style="text-align:left;">
 full_volume
@@ -4105,25 +4254,25 @@ full_volume
 </tr>
 <tr>
 <td style="text-align:right;">
-941
+954
 </td>
 <td style="text-align:left;">
-Walking and Talking
+PLAYProject_GEORG
 </td>
 <td style="text-align:left;">
-<a href="https://nyu.databrary.org/volume/941" class="uri">https://nyu.databrary.org/volume/941</a>
+<a href="https://nyu.databrary.org/volume/954" class="uri">https://nyu.databrary.org/volume/954</a>
 </td>
 <td style="text-align:left;">
-2019-07-11 21:02:49
+2019-08-01 20:40:40
 </td>
 <td style="text-align:left;">
 full_volume
 </td>
 <td style="text-align:right;">
-21
+22
 </td>
 <td style="text-align:right;">
-2
+1
 </td>
 </tr>
 <tr>
@@ -4190,6 +4339,30 @@ full_volume
 </td>
 <td style="text-align:right;">
 19
+</td>
+<td style="text-align:right;">
+1
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+171
+</td>
+<td style="text-align:left;">
+Constructing Science: Connecting Causal Reasoning to Scientific Thinking
+in Young Children - blicket task with adults (chapter 5)
+</td>
+<td style="text-align:left;">
+<a href="https://nyu.databrary.org/volume/171" class="uri">https://nyu.databrary.org/volume/171</a>
+</td>
+<td style="text-align:left;">
+2015-10-13 17:57:57
+</td>
+<td style="text-align:left;">
+full_volume
+</td>
+<td style="text-align:right;">
+17
 </td>
 <td style="text-align:right;">
 1
@@ -4338,6 +4511,29 @@ full_volume
 </tr>
 <tr>
 <td style="text-align:right;">
+987
+</td>
+<td style="text-align:left;">
+Interactive Behavior in Schools (IBIS)
+</td>
+<td style="text-align:left;">
+<a href="https://nyu.databrary.org/volume/987" class="uri">https://nyu.databrary.org/volume/987</a>
+</td>
+<td style="text-align:left;">
+2019-09-20 16:52:17
+</td>
+<td style="text-align:left;">
+full_volume
+</td>
+<td style="text-align:right;">
+16
+</td>
+<td style="text-align:right;">
+5
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
 1279
 </td>
 <td style="text-align:left;">
@@ -4477,29 +4673,6 @@ full_volume
 </tr>
 <tr>
 <td style="text-align:right;">
-987
-</td>
-<td style="text-align:left;">
-Interactive Behavior in Schools (IBIS)
-</td>
-<td style="text-align:left;">
-<a href="https://nyu.databrary.org/volume/987" class="uri">https://nyu.databrary.org/volume/987</a>
-</td>
-<td style="text-align:left;">
-2019-09-20 16:52:17
-</td>
-<td style="text-align:left;">
-full_volume
-</td>
-<td style="text-align:right;">
-13
-</td>
-<td style="text-align:right;">
-5
-</td>
-</tr>
-<tr>
-<td style="text-align:right;">
 1311
 </td>
 <td style="text-align:left;">
@@ -4616,11 +4789,35 @@ full_volume
 </tr>
 <tr>
 <td style="text-align:right;">
+1300
+</td>
+<td style="text-align:left;">
+Neonatal mimicry of caregiver facial gestures at home: Online
+feasibility pilot
+</td>
+<td style="text-align:left;">
+<a href="https://nyu.databrary.org/volume/1300" class="uri">https://nyu.databrary.org/volume/1300</a>
+</td>
+<td style="text-align:left;">
+2021-03-26 21:16:03
+</td>
+<td style="text-align:left;">
+full_volume
+</td>
+<td style="text-align:right;">
+9
+</td>
+<td style="text-align:right;">
+1
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
 1358
 </td>
 <td style="text-align:left;">
 From Play to Language: Infants’ Actions on Objects Cascade to Word
-Learning
+Learning.
 </td>
 <td style="text-align:left;">
 <a href="https://nyu.databrary.org/volume/1358" class="uri">https://nyu.databrary.org/volume/1358</a>
@@ -4684,6 +4881,29 @@ full_volume
 </td>
 <td style="text-align:right;">
 4
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1369
+</td>
+<td style="text-align:left;">
+Puppet task training and reliability materials
+</td>
+<td style="text-align:left;">
+<a href="https://nyu.databrary.org/volume/1369" class="uri">https://nyu.databrary.org/volume/1369</a>
+</td>
+<td style="text-align:left;">
+2021-10-05 00:03:08
+</td>
+<td style="text-align:left;">
+full_volume
+</td>
+<td style="text-align:right;">
+8
+</td>
+<td style="text-align:right;">
+1
 </td>
 </tr>
 <tr>
@@ -4944,6 +5164,53 @@ full_volume
 </tr>
 <tr>
 <td style="text-align:right;">
+1403
+</td>
+<td style="text-align:left;">
+Word by Word: Everyday Math Talk in Hispanic Families
+</td>
+<td style="text-align:left;">
+<a href="https://nyu.databrary.org/volume/1403" class="uri">https://nyu.databrary.org/volume/1403</a>
+</td>
+<td style="text-align:left;">
+2021-12-22 15:30:58
+</td>
+<td style="text-align:left;">
+full_volume
+</td>
+<td style="text-align:right;">
+5
+</td>
+<td style="text-align:right;">
+1
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1417
+</td>
+<td style="text-align:left;">
+Object Play in the Everyday Home Environment Generates Rich
+Opportunities for Infant Learning
+</td>
+<td style="text-align:left;">
+<a href="https://nyu.databrary.org/volume/1417" class="uri">https://nyu.databrary.org/volume/1417</a>
+</td>
+<td style="text-align:left;">
+2022-02-09 19:51:12
+</td>
+<td style="text-align:left;">
+full_volume
+</td>
+<td style="text-align:right;">
+5
+</td>
+<td style="text-align:right;">
+3
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
 2
 </td>
 <td style="text-align:left;">
@@ -5200,6 +5467,54 @@ full_volume
 </td>
 <td style="text-align:right;">
 3
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1401
+</td>
+<td style="text-align:left;">
+ABBABB or 1212: Abstract language facilitates children’s early
+patterning skills
+</td>
+<td style="text-align:left;">
+<a href="https://nyu.databrary.org/volume/1401" class="uri">https://nyu.databrary.org/volume/1401</a>
+</td>
+<td style="text-align:left;">
+2021-12-17 20:50:46
+</td>
+<td style="text-align:left;">
+full_volume
+</td>
+<td style="text-align:right;">
+4
+</td>
+<td style="text-align:right;">
+1
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1454
+</td>
+<td style="text-align:left;">
+Developmental differences in children’s and adults’ strategies on a
+repeating pattern task
+</td>
+<td style="text-align:left;">
+<a href="https://nyu.databrary.org/volume/1454" class="uri">https://nyu.databrary.org/volume/1454</a>
+</td>
+<td style="text-align:left;">
+2022-04-27 13:53:25
+</td>
+<td style="text-align:left;">
+full_volume
+</td>
+<td style="text-align:right;">
+4
+</td>
+<td style="text-align:right;">
+1
 </td>
 </tr>
 <tr>
@@ -5580,6 +5895,30 @@ full_volume
 </tr>
 <tr>
 <td style="text-align:right;">
+1361
+</td>
+<td style="text-align:left;">
+Dynamics of the dyad: How mothers and infants co-construct interaction
+spaces during object play
+</td>
+<td style="text-align:left;">
+<a href="https://nyu.databrary.org/volume/1361" class="uri">https://nyu.databrary.org/volume/1361</a>
+</td>
+<td style="text-align:left;">
+2021-09-18 12:31:44
+</td>
+<td style="text-align:left;">
+full_volume
+</td>
+<td style="text-align:right;">
+3
+</td>
+<td style="text-align:right;">
+2
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
 1367
 </td>
 <td style="text-align:left;">
@@ -5590,6 +5929,76 @@ Infants use contextual memory to attend and learn in naturalistic scenes
 </td>
 <td style="text-align:left;">
 2021-10-04 13:25:43
+</td>
+<td style="text-align:left;">
+full_volume
+</td>
+<td style="text-align:right;">
+3
+</td>
+<td style="text-align:right;">
+2
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1426
+</td>
+<td style="text-align:left;">
+Children with ASD Establish Joint Attention during Free-Flowing Toy Play
+without Face Looks
+</td>
+<td style="text-align:left;">
+<a href="https://nyu.databrary.org/volume/1426" class="uri">https://nyu.databrary.org/volume/1426</a>
+</td>
+<td style="text-align:left;">
+2022-02-24 06:15:18
+</td>
+<td style="text-align:left;">
+full_volume
+</td>
+<td style="text-align:right;">
+3
+</td>
+<td style="text-align:right;">
+2
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1441
+</td>
+<td style="text-align:left;">
+UTK Multinet Files
+</td>
+<td style="text-align:left;">
+<a href="https://nyu.databrary.org/volume/1441" class="uri">https://nyu.databrary.org/volume/1441</a>
+</td>
+<td style="text-align:left;">
+2022-03-23 15:38:00
+</td>
+<td style="text-align:left;">
+full_volume
+</td>
+<td style="text-align:right;">
+3
+</td>
+<td style="text-align:right;">
+1
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1453
+</td>
+<td style="text-align:left;">
+Character Survey
+</td>
+<td style="text-align:left;">
+<a href="https://nyu.databrary.org/volume/1453" class="uri">https://nyu.databrary.org/volume/1453</a>
+</td>
+<td style="text-align:left;">
+2022-04-25 19:23:02
 </td>
 <td style="text-align:left;">
 full_volume
@@ -7713,29 +8122,6 @@ full_volume
 </tr>
 <tr>
 <td style="text-align:right;">
-1163
-</td>
-<td style="text-align:left;">
-ELP Puppet coding manual
-</td>
-<td style="text-align:left;">
-<a href="https://nyu.databrary.org/volume/1163" class="uri">https://nyu.databrary.org/volume/1163</a>
-</td>
-<td style="text-align:left;">
-2020-08-10 20:34:39
-</td>
-<td style="text-align:left;">
-full_volume
-</td>
-<td style="text-align:right;">
-1
-</td>
-<td style="text-align:right;">
-1
-</td>
-</tr>
-<tr>
-<td style="text-align:right;">
 1170
 </td>
 <td style="text-align:left;">
@@ -7832,30 +8218,6 @@ full_volume
 </tr>
 <tr>
 <td style="text-align:right;">
-1300
-</td>
-<td style="text-align:left;">
-Neonatal mimicry of caregiver facial gestures at home: Online
-feasibility pilot
-</td>
-<td style="text-align:left;">
-<a href="https://nyu.databrary.org/volume/1300" class="uri">https://nyu.databrary.org/volume/1300</a>
-</td>
-<td style="text-align:left;">
-2021-03-26 21:16:03
-</td>
-<td style="text-align:left;">
-full_volume
-</td>
-<td style="text-align:right;">
-1
-</td>
-<td style="text-align:right;">
-1
-</td>
-</tr>
-<tr>
-<td style="text-align:right;">
 1303
 </td>
 <td style="text-align:left;">
@@ -7907,9 +8269,8 @@ full_volume
 1317
 </td>
 <td style="text-align:left;">
-Individual data for a manuscript ‘Developmental change in gaze patterns
-in response to radial optic flow in 1- to 12-year-old children’
-(submitted)
+Raw data for a manuscript ‘Developmental changes in gaze patterns in
+response to radial optic flow in toddlerhood and childhood’ (submitted)
 </td>
 <td style="text-align:left;">
 <a href="https://nyu.databrary.org/volume/1317" class="uri">https://nyu.databrary.org/volume/1317</a>
@@ -7987,6 +8348,102 @@ Curiosity in Classrooms (CiC) Coding Protocol
 </td>
 <td style="text-align:left;">
 2021-10-26 19:41:47
+</td>
+<td style="text-align:left;">
+full_volume
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+1
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1410
+</td>
+<td style="text-align:left;">
+Intersensory Matching of Faces and Voices in Infancy Predicts Language
+Outcomes in Young Children
+</td>
+<td style="text-align:left;">
+<a href="https://nyu.databrary.org/volume/1410" class="uri">https://nyu.databrary.org/volume/1410</a>
+</td>
+<td style="text-align:left;">
+2022-01-19 14:52:44
+</td>
+<td style="text-align:left;">
+full_volume
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+3
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1447
+</td>
+<td style="text-align:left;">
+Dataset of BERT Embeddings to Model Word Importance in Conversational
+Transcripts for Deaf and Hard of Hearing Users
+</td>
+<td style="text-align:left;">
+<a href="https://nyu.databrary.org/volume/1447" class="uri">https://nyu.databrary.org/volume/1447</a>
+</td>
+<td style="text-align:left;">
+2022-04-06 14:04:09
+</td>
+<td style="text-align:left;">
+full_volume
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+1
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1474
+</td>
+<td style="text-align:left;">
+Automated measurement of infant and mother Duchenne facial expressions
+in the Face-to-Face/Still-Face
+</td>
+<td style="text-align:left;">
+<a href="https://nyu.databrary.org/volume/1474" class="uri">https://nyu.databrary.org/volume/1474</a>
+</td>
+<td style="text-align:left;">
+2022-06-10 20:46:57
+</td>
+<td style="text-align:left;">
+full_volume
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+1
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1476
+</td>
+<td style="text-align:left;">
+Program files to generate the frame sets of stimulus movies (Shirai and
+Imura, submitted to Scientific Reports)
+</td>
+<td style="text-align:left;">
+<a href="https://nyu.databrary.org/volume/1476" class="uri">https://nyu.databrary.org/volume/1476</a>
+</td>
+<td style="text-align:left;">
+2022-06-13 01:47:14
 </td>
 <td style="text-align:left;">
 full_volume
@@ -8184,6 +8641,100 @@ full_volume
 1
 </td>
 </tr>
+<tr>
+<td style="text-align:right;">
+1360
+</td>
+<td style="text-align:left;">
+Dynamics of the dyad: How mothers and infants co-construct interaction
+spaces during object play
+</td>
+<td style="text-align:left;">
+<a href="https://nyu.databrary.org/volume/1360" class="uri">https://nyu.databrary.org/volume/1360</a>
+</td>
+<td style="text-align:left;">
+2021-09-18 12:30:22
+</td>
+<td style="text-align:left;">
+full_volume
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+1
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1409
+</td>
+<td style="text-align:left;">
+DBN Data Collection Training Videos
+</td>
+<td style="text-align:left;">
+<a href="https://nyu.databrary.org/volume/1409" class="uri">https://nyu.databrary.org/volume/1409</a>
+</td>
+<td style="text-align:left;">
+2022-01-14 13:54:06
+</td>
+<td style="text-align:left;">
+full_volume
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+3
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1462
+</td>
+<td style="text-align:left;">
+Zoo Detective: Creative problem solving task
+</td>
+<td style="text-align:left;">
+<a href="https://nyu.databrary.org/volume/1462" class="uri">https://nyu.databrary.org/volume/1462</a>
+</td>
+<td style="text-align:left;">
+2022-05-11 20:55:47
+</td>
+<td style="text-align:left;">
+full_volume
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+2
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1480
+</td>
+<td style="text-align:left;">
+Routine Language Intervention: Supporting Caregiver Talk to Toddlers
+During Everyday Activities
+</td>
+<td style="text-align:left;">
+<a href="https://nyu.databrary.org/volume/1480" class="uri">https://nyu.databrary.org/volume/1480</a>
+</td>
+<td style="text-align:left;">
+2022-06-22 15:45:22
+</td>
+<td style="text-align:left;">
+full_volume
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+1
+</td>
+</tr>
 </tbody>
 </table>
 </div>
@@ -8191,7 +8742,7 @@ full_volume
 <h2>Overview only</h2>
 <pre class="r"><code>unique_vols_overview &lt;- unique_vols %&gt;%
   dplyr::filter(., shared_type == &quot;overview_only&quot;)</code></pre>
-<p>There are <span class="math inline">\(n=\)</span> 554 volume
+<p>There are <span class="math inline">\(n=\)</span> 606 volume
 overviews shared on Databrary.</p>
 <pre class="r"><code>unique_vols_overview %&gt;%
   dplyr::arrange(., desc(n_sessions)) %&gt;%
@@ -8272,6 +8823,29 @@ overview_only
 </tr>
 <tr>
 <td style="text-align:right;">
+1455
+</td>
+<td style="text-align:left;">
+The role of gesture and mimicry for children’s pattern learning
+</td>
+<td style="text-align:left;">
+<a href="https://nyu.databrary.org/volume/1455" class="uri">https://nyu.databrary.org/volume/1455</a>
+</td>
+<td style="text-align:left;">
+2022-04-28 18:36:47
+</td>
+<td style="text-align:left;">
+overview_only
+</td>
+<td style="text-align:right;">
+515
+</td>
+<td style="text-align:right;">
+1
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
 212
 </td>
 <td style="text-align:left;">
@@ -8288,6 +8862,29 @@ overview_only
 </td>
 <td style="text-align:right;">
 405
+</td>
+<td style="text-align:right;">
+1
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1335
+</td>
+<td style="text-align:left;">
+CHUNKS
+</td>
+<td style="text-align:left;">
+<a href="https://nyu.databrary.org/volume/1335" class="uri">https://nyu.databrary.org/volume/1335</a>
+</td>
+<td style="text-align:left;">
+2021-06-29 19:16:18
+</td>
+<td style="text-align:left;">
+overview_only
+</td>
+<td style="text-align:right;">
+344
 </td>
 <td style="text-align:right;">
 1
@@ -8352,29 +8949,6 @@ Trade-Off Quality
 </td>
 <td style="text-align:left;">
 2018-09-05 19:23:52
-</td>
-<td style="text-align:left;">
-overview_only
-</td>
-<td style="text-align:right;">
-270
-</td>
-<td style="text-align:right;">
-1
-</td>
-</tr>
-<tr>
-<td style="text-align:right;">
-1335
-</td>
-<td style="text-align:left;">
-CHUNKS
-</td>
-<td style="text-align:left;">
-<a href="https://nyu.databrary.org/volume/1335" class="uri">https://nyu.databrary.org/volume/1335</a>
-</td>
-<td style="text-align:left;">
-2021-06-29 19:16:18
 </td>
 <td style="text-align:left;">
 overview_only
@@ -8542,10 +9116,33 @@ Everyday Learning Remote Study
 overview_only
 </td>
 <td style="text-align:right;">
-176
+194
 </td>
 <td style="text-align:right;">
 9
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1438
+</td>
+<td style="text-align:left;">
+Hong Kong Preschooler Study (52M Block Play)
+</td>
+<td style="text-align:left;">
+<a href="https://nyu.databrary.org/volume/1438" class="uri">https://nyu.databrary.org/volume/1438</a>
+</td>
+<td style="text-align:left;">
+2022-03-15 06:25:20
+</td>
+<td style="text-align:left;">
+overview_only
+</td>
+<td style="text-align:right;">
+179
+</td>
+<td style="text-align:right;">
+1
 </td>
 </tr>
 <tr>
@@ -8570,6 +9167,29 @@ overview_only
 </td>
 <td style="text-align:right;">
 1
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+870
+</td>
+<td style="text-align:left;">
+Nanit
+</td>
+<td style="text-align:left;">
+<a href="https://nyu.databrary.org/volume/870" class="uri">https://nyu.databrary.org/volume/870</a>
+</td>
+<td style="text-align:left;">
+2019-03-20 16:34:03
+</td>
+<td style="text-align:left;">
+overview_only
+</td>
+<td style="text-align:right;">
+160
+</td>
+<td style="text-align:right;">
+2
 </td>
 </tr>
 <tr>
@@ -8616,29 +9236,6 @@ overview_only
 </td>
 <td style="text-align:right;">
 1
-</td>
-</tr>
-<tr>
-<td style="text-align:right;">
-870
-</td>
-<td style="text-align:left;">
-Nanit
-</td>
-<td style="text-align:left;">
-<a href="https://nyu.databrary.org/volume/870" class="uri">https://nyu.databrary.org/volume/870</a>
-</td>
-<td style="text-align:left;">
-2019-03-20 16:34:03
-</td>
-<td style="text-align:left;">
-overview_only
-</td>
-<td style="text-align:right;">
-157
-</td>
-<td style="text-align:right;">
-2
 </td>
 </tr>
 <tr>
@@ -9129,6 +9726,29 @@ overview_only
 </tr>
 <tr>
 <td style="text-align:right;">
+1431
+</td>
+<td style="text-align:left;">
+Influence of dehumanizing language on children’s social judgments
+</td>
+<td style="text-align:left;">
+<a href="https://nyu.databrary.org/volume/1431" class="uri">https://nyu.databrary.org/volume/1431</a>
+</td>
+<td style="text-align:left;">
+2022-03-03 19:03:16
+</td>
+<td style="text-align:left;">
+overview_only
+</td>
+<td style="text-align:right;">
+110
+</td>
+<td style="text-align:right;">
+1
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
 852
 </td>
 <td style="text-align:left;">
@@ -9431,6 +10051,29 @@ overview_only
 </tr>
 <tr>
 <td style="text-align:right;">
+1071
+</td>
+<td style="text-align:left;">
+Video Task- Alda Project
+</td>
+<td style="text-align:left;">
+<a href="https://nyu.databrary.org/volume/1071" class="uri">https://nyu.databrary.org/volume/1071</a>
+</td>
+<td style="text-align:left;">
+2020-02-26 15:49:15
+</td>
+<td style="text-align:left;">
+overview_only
+</td>
+<td style="text-align:right;">
+89
+</td>
+<td style="text-align:right;">
+2
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
 861
 </td>
 <td style="text-align:left;">
@@ -9638,29 +10281,6 @@ overview_only
 </tr>
 <tr>
 <td style="text-align:right;">
-1071
-</td>
-<td style="text-align:left;">
-Video Task- Alda Project
-</td>
-<td style="text-align:left;">
-<a href="https://nyu.databrary.org/volume/1071" class="uri">https://nyu.databrary.org/volume/1071</a>
-</td>
-<td style="text-align:left;">
-2020-02-26 15:49:15
-</td>
-<td style="text-align:left;">
-overview_only
-</td>
-<td style="text-align:right;">
-77
-</td>
-<td style="text-align:right;">
-2
-</td>
-</tr>
-<tr>
-<td style="text-align:right;">
 638
 </td>
 <td style="text-align:left;">
@@ -9799,6 +10419,29 @@ overview_only
 </tr>
 <tr>
 <td style="text-align:right;">
+868
+</td>
+<td style="text-align:left;">
+Keen
+</td>
+<td style="text-align:left;">
+<a href="https://nyu.databrary.org/volume/868" class="uri">https://nyu.databrary.org/volume/868</a>
+</td>
+<td style="text-align:left;">
+2019-03-06 14:18:18
+</td>
+<td style="text-align:left;">
+overview_only
+</td>
+<td style="text-align:right;">
+73
+</td>
+<td style="text-align:right;">
+2
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
 1245
 </td>
 <td style="text-align:left;">
@@ -9910,29 +10553,6 @@ overview_only
 </td>
 <td style="text-align:right;">
 1
-</td>
-</tr>
-<tr>
-<td style="text-align:right;">
-868
-</td>
-<td style="text-align:left;">
-Keen
-</td>
-<td style="text-align:left;">
-<a href="https://nyu.databrary.org/volume/868" class="uri">https://nyu.databrary.org/volume/868</a>
-</td>
-<td style="text-align:left;">
-2019-03-06 14:18:18
-</td>
-<td style="text-align:left;">
-overview_only
-</td>
-<td style="text-align:right;">
-69
-</td>
-<td style="text-align:right;">
-2
 </td>
 </tr>
 <tr>
@@ -10108,6 +10728,29 @@ Coordination
 </td>
 <td style="text-align:left;">
 2019-04-14 16:20:09
+</td>
+<td style="text-align:left;">
+overview_only
+</td>
+<td style="text-align:right;">
+63
+</td>
+<td style="text-align:right;">
+2
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1423
+</td>
+<td style="text-align:left;">
+STEADY-A2
+</td>
+<td style="text-align:left;">
+<a href="https://nyu.databrary.org/volume/1423" class="uri">https://nyu.databrary.org/volume/1423</a>
+</td>
+<td style="text-align:left;">
+2022-02-21 16:37:51
 </td>
 <td style="text-align:left;">
 overview_only
@@ -10468,6 +11111,29 @@ overview_only
 </tr>
 <tr>
 <td style="text-align:right;">
+1020
+</td>
+<td style="text-align:left;">
+Developing Environments
+</td>
+<td style="text-align:left;">
+<a href="https://nyu.databrary.org/volume/1020" class="uri">https://nyu.databrary.org/volume/1020</a>
+</td>
+<td style="text-align:left;">
+2019-10-29 13:31:54
+</td>
+<td style="text-align:left;">
+overview_only
+</td>
+<td style="text-align:right;">
+51
+</td>
+<td style="text-align:right;">
+1
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
 575
 </td>
 <td style="text-align:left;">
@@ -10630,6 +11296,29 @@ overview_only
 </tr>
 <tr>
 <td style="text-align:right;">
+1415
+</td>
+<td style="text-align:left;">
+Virtual cabinets
+</td>
+<td style="text-align:left;">
+<a href="https://nyu.databrary.org/volume/1415" class="uri">https://nyu.databrary.org/volume/1415</a>
+</td>
+<td style="text-align:left;">
+2022-02-04 12:49:22
+</td>
+<td style="text-align:left;">
+overview_only
+</td>
+<td style="text-align:right;">
+47
+</td>
+<td style="text-align:right;">
+3
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
 706
 </td>
 <td style="text-align:left;">
@@ -10640,30 +11329,6 @@ Dornröschen 3
 </td>
 <td style="text-align:left;">
 2018-06-06 15:41:37
-</td>
-<td style="text-align:left;">
-overview_only
-</td>
-<td style="text-align:right;">
-46
-</td>
-<td style="text-align:right;">
-1
-</td>
-</tr>
-<tr>
-<td style="text-align:right;">
-1249
-</td>
-<td style="text-align:left;">
-An RGBD Dataset of American Sign Language Homework-Assignment Videos by
-Students and by Fluent ASL Signers
-</td>
-<td style="text-align:left;">
-<a href="https://nyu.databrary.org/volume/1249" class="uri">https://nyu.databrary.org/volume/1249</a>
-</td>
-<td style="text-align:left;">
-2020-11-24 02:06:55
 </td>
 <td style="text-align:left;">
 overview_only
@@ -10792,6 +11457,30 @@ overview_only
 </tr>
 <tr>
 <td style="text-align:right;">
+1328
+</td>
+<td style="text-align:left;">
+Toddler’s action learning and memory from active and observational
+instruction
+</td>
+<td style="text-align:left;">
+<a href="https://nyu.databrary.org/volume/1328" class="uri">https://nyu.databrary.org/volume/1328</a>
+</td>
+<td style="text-align:left;">
+2021-06-21 20:13:03
+</td>
+<td style="text-align:left;">
+overview_only
+</td>
+<td style="text-align:right;">
+44
+</td>
+<td style="text-align:right;">
+1
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
 931
 </td>
 <td style="text-align:left;">
@@ -10885,6 +11574,29 @@ overview_only
 </tr>
 <tr>
 <td style="text-align:right;">
+899
+</td>
+<td style="text-align:left;">
+PLAYProject_NYUNI
+</td>
+<td style="text-align:left;">
+<a href="https://nyu.databrary.org/volume/899" class="uri">https://nyu.databrary.org/volume/899</a>
+</td>
+<td style="text-align:left;">
+2019-05-07 16:43:29
+</td>
+<td style="text-align:left;">
+overview_only
+</td>
+<td style="text-align:right;">
+42
+</td>
+<td style="text-align:right;">
+4
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
 1104
 </td>
 <td style="text-align:left;">
@@ -10954,29 +11666,6 @@ overview_only
 </tr>
 <tr>
 <td style="text-align:right;">
-899
-</td>
-<td style="text-align:left;">
-PLAYProject_NYUNI
-</td>
-<td style="text-align:left;">
-<a href="https://nyu.databrary.org/volume/899" class="uri">https://nyu.databrary.org/volume/899</a>
-</td>
-<td style="text-align:left;">
-2019-05-07 16:43:29
-</td>
-<td style="text-align:left;">
-overview_only
-</td>
-<td style="text-align:right;">
-41
-</td>
-<td style="text-align:right;">
-4
-</td>
-</tr>
-<tr>
-<td style="text-align:right;">
 730
 </td>
 <td style="text-align:left;">
@@ -11042,6 +11731,52 @@ overview_only
 </td>
 <td style="text-align:right;">
 1
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1332
+</td>
+<td style="text-align:left;">
+MEL2 Project Year 5
+</td>
+<td style="text-align:left;">
+<a href="https://nyu.databrary.org/volume/1332" class="uri">https://nyu.databrary.org/volume/1332</a>
+</td>
+<td style="text-align:left;">
+2021-06-27 14:58:30
+</td>
+<td style="text-align:left;">
+overview_only
+</td>
+<td style="text-align:right;">
+40
+</td>
+<td style="text-align:right;">
+1
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1465
+</td>
+<td style="text-align:left;">
+Humanizing Snakes
+</td>
+<td style="text-align:left;">
+<a href="https://nyu.databrary.org/volume/1465" class="uri">https://nyu.databrary.org/volume/1465</a>
+</td>
+<td style="text-align:left;">
+2022-05-19 19:40:13
+</td>
+<td style="text-align:left;">
+overview_only
+</td>
+<td style="text-align:right;">
+40
+</td>
+<td style="text-align:right;">
+2
 </td>
 </tr>
 <tr>
@@ -11599,16 +12334,39 @@ overview_only
 </tr>
 <tr>
 <td style="text-align:right;">
-1020
+1407
 </td>
 <td style="text-align:left;">
-Developing Environments
+Cross-Cultural Animal Study
 </td>
 <td style="text-align:left;">
-<a href="https://nyu.databrary.org/volume/1020" class="uri">https://nyu.databrary.org/volume/1020</a>
+<a href="https://nyu.databrary.org/volume/1407" class="uri">https://nyu.databrary.org/volume/1407</a>
 </td>
 <td style="text-align:left;">
-2019-10-29 13:31:54
+2022-01-11 18:49:30
+</td>
+<td style="text-align:left;">
+overview_only
+</td>
+<td style="text-align:right;">
+33
+</td>
+<td style="text-align:right;">
+2
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1456
+</td>
+<td style="text-align:left;">
+Variability’s influence on children’s pattern practice
+</td>
+<td style="text-align:left;">
+<a href="https://nyu.databrary.org/volume/1456" class="uri">https://nyu.databrary.org/volume/1456</a>
+</td>
+<td style="text-align:left;">
+2022-04-29 15:13:29
 </td>
 <td style="text-align:left;">
 overview_only
@@ -11831,6 +12589,29 @@ overview_only
 </tr>
 <tr>
 <td style="text-align:right;">
+1461
+</td>
+<td style="text-align:left;">
+Steady-A3 Use this one
+</td>
+<td style="text-align:left;">
+<a href="https://nyu.databrary.org/volume/1461" class="uri">https://nyu.databrary.org/volume/1461</a>
+</td>
+<td style="text-align:left;">
+2022-05-10 16:30:04
+</td>
+<td style="text-align:left;">
+overview_only
+</td>
+<td style="text-align:right;">
+31
+</td>
+<td style="text-align:right;">
+2
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
 786
 </td>
 <td style="text-align:left;">
@@ -11841,6 +12622,29 @@ Chimney Strategy
 </td>
 <td style="text-align:left;">
 2018-10-26 19:41:07
+</td>
+<td style="text-align:left;">
+overview_only
+</td>
+<td style="text-align:right;">
+30
+</td>
+<td style="text-align:right;">
+1
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1103
+</td>
+<td style="text-align:left;">
+PLAYProject_OHIOS
+</td>
+<td style="text-align:left;">
+<a href="https://nyu.databrary.org/volume/1103" class="uri">https://nyu.databrary.org/volume/1103</a>
+</td>
+<td style="text-align:left;">
+2020-03-31 20:17:46
 </td>
 <td style="text-align:left;">
 overview_only
@@ -12317,6 +13121,29 @@ overview_only
 </tr>
 <tr>
 <td style="text-align:right;">
+1173
+</td>
+<td style="text-align:left;">
+Predictors of gender differences in parent-child play styles
+</td>
+<td style="text-align:left;">
+<a href="https://nyu.databrary.org/volume/1173" class="uri">https://nyu.databrary.org/volume/1173</a>
+</td>
+<td style="text-align:left;">
+2020-08-20 22:18:51
+</td>
+<td style="text-align:left;">
+overview_only
+</td>
+<td style="text-align:right;">
+24
+</td>
+<td style="text-align:right;">
+1
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
 1349
 </td>
 <td style="text-align:left;">
@@ -12337,6 +13164,52 @@ overview_only
 </td>
 <td style="text-align:right;">
 1
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1395
+</td>
+<td style="text-align:left;">
+Video Game Creativity in Open World and Narrative Games
+</td>
+<td style="text-align:left;">
+<a href="https://nyu.databrary.org/volume/1395" class="uri">https://nyu.databrary.org/volume/1395</a>
+</td>
+<td style="text-align:left;">
+2021-12-05 16:50:07
+</td>
+<td style="text-align:left;">
+overview_only
+</td>
+<td style="text-align:right;">
+24
+</td>
+<td style="text-align:right;">
+2
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1411
+</td>
+<td style="text-align:left;">
+DBN - Lebanon - Wave 1 - Data Collection
+</td>
+<td style="text-align:left;">
+<a href="https://nyu.databrary.org/volume/1411" class="uri">https://nyu.databrary.org/volume/1411</a>
+</td>
+<td style="text-align:left;">
+2022-01-19 19:27:48
+</td>
+<td style="text-align:left;">
+overview_only
+</td>
+<td style="text-align:right;">
+24
+</td>
+<td style="text-align:right;">
+2
 </td>
 </tr>
 <tr>
@@ -12397,29 +13270,6 @@ Ambiguity Studies - Amb Pref Feedback
 </td>
 <td style="text-align:left;">
 2018-08-31 16:14:43
-</td>
-<td style="text-align:left;">
-overview_only
-</td>
-<td style="text-align:right;">
-23
-</td>
-<td style="text-align:right;">
-1
-</td>
-</tr>
-<tr>
-<td style="text-align:right;">
-1173
-</td>
-<td style="text-align:left;">
-Predictors of gender differences in parent-child play styles
-</td>
-<td style="text-align:left;">
-<a href="https://nyu.databrary.org/volume/1173" class="uri">https://nyu.databrary.org/volume/1173</a>
-</td>
-<td style="text-align:left;">
-2020-08-20 22:18:51
 </td>
 <td style="text-align:left;">
 overview_only
@@ -12525,16 +13375,39 @@ overview_only
 </tr>
 <tr>
 <td style="text-align:right;">
-1332
+1302
 </td>
 <td style="text-align:left;">
-MEL2 Project Year 5
+WalkTalk Coding Training for Dr. Rujuta Wilson
 </td>
 <td style="text-align:left;">
-<a href="https://nyu.databrary.org/volume/1332" class="uri">https://nyu.databrary.org/volume/1332</a>
+<a href="https://nyu.databrary.org/volume/1302" class="uri">https://nyu.databrary.org/volume/1302</a>
 </td>
 <td style="text-align:left;">
-2021-06-27 14:58:30
+2021-03-29 21:19:47
+</td>
+<td style="text-align:left;">
+overview_only
+</td>
+<td style="text-align:right;">
+22
+</td>
+<td style="text-align:right;">
+1
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1418
+</td>
+<td style="text-align:left;">
+Dual Eye-tracking Infant- Caregiver Shared Book Reading
+</td>
+<td style="text-align:left;">
+<a href="https://nyu.databrary.org/volume/1418" class="uri">https://nyu.databrary.org/volume/1418</a>
+</td>
+<td style="text-align:left;">
+2022-02-10 17:57:17
 </td>
 <td style="text-align:left;">
 overview_only
@@ -12640,6 +13513,52 @@ overview_only
 </tr>
 <tr>
 <td style="text-align:right;">
+1026
+</td>
+<td style="text-align:left;">
+Big Shoes
+</td>
+<td style="text-align:left;">
+<a href="https://nyu.databrary.org/volume/1026" class="uri">https://nyu.databrary.org/volume/1026</a>
+</td>
+<td style="text-align:left;">
+2019-11-18 19:14:40
+</td>
+<td style="text-align:left;">
+overview_only
+</td>
+<td style="text-align:right;">
+21
+</td>
+<td style="text-align:right;">
+1
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1435
+</td>
+<td style="text-align:left;">
+DBN - California - Wave 1 - Data collection
+</td>
+<td style="text-align:left;">
+<a href="https://nyu.databrary.org/volume/1435" class="uri">https://nyu.databrary.org/volume/1435</a>
+</td>
+<td style="text-align:left;">
+2022-03-10 21:46:42
+</td>
+<td style="text-align:left;">
+overview_only
+</td>
+<td style="text-align:right;">
+21
+</td>
+<td style="text-align:right;">
+4
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
 609
 </td>
 <td style="text-align:left;">
@@ -12732,16 +13651,16 @@ overview_only
 </tr>
 <tr>
 <td style="text-align:right;">
-1395
+1365
 </td>
 <td style="text-align:left;">
-Video Game Creativity in Open World and Narrative Games
+BTB Training
 </td>
 <td style="text-align:left;">
-<a href="https://nyu.databrary.org/volume/1395" class="uri">https://nyu.databrary.org/volume/1395</a>
+<a href="https://nyu.databrary.org/volume/1365" class="uri">https://nyu.databrary.org/volume/1365</a>
 </td>
 <td style="text-align:left;">
-2021-12-05 16:50:07
+2021-09-29 20:04:15
 </td>
 <td style="text-align:left;">
 overview_only
@@ -12750,7 +13669,7 @@ overview_only
 20
 </td>
 <td style="text-align:right;">
-1
+2
 </td>
 </tr>
 <tr>
@@ -12858,6 +13777,52 @@ Study 185
 </td>
 <td style="text-align:left;">
 2020-12-15 21:10:31
+</td>
+<td style="text-align:left;">
+overview_only
+</td>
+<td style="text-align:right;">
+19
+</td>
+<td style="text-align:right;">
+1
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1436
+</td>
+<td style="text-align:left;">
+Multi-step Planning
+</td>
+<td style="text-align:left;">
+<a href="https://nyu.databrary.org/volume/1436" class="uri">https://nyu.databrary.org/volume/1436</a>
+</td>
+<td style="text-align:left;">
+2022-03-11 19:30:01
+</td>
+<td style="text-align:left;">
+overview_only
+</td>
+<td style="text-align:right;">
+19
+</td>
+<td style="text-align:right;">
+1
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1468
+</td>
+<td style="text-align:left;">
+DBN - China - Wave 1 - Data Collection
+</td>
+<td style="text-align:left;">
+<a href="https://nyu.databrary.org/volume/1468" class="uri">https://nyu.databrary.org/volume/1468</a>
+</td>
+<td style="text-align:left;">
+2022-05-23 02:36:11
 </td>
 <td style="text-align:left;">
 overview_only
@@ -13239,16 +14204,16 @@ overview_only
 </tr>
 <tr>
 <td style="text-align:right;">
-1365
+1356
 </td>
 <td style="text-align:left;">
-BTB Training
+Learning from books vs. television
 </td>
 <td style="text-align:left;">
-<a href="https://nyu.databrary.org/volume/1365" class="uri">https://nyu.databrary.org/volume/1365</a>
+<a href="https://nyu.databrary.org/volume/1356" class="uri">https://nyu.databrary.org/volume/1356</a>
 </td>
 <td style="text-align:left;">
-2021-09-29 20:04:15
+2021-08-16 16:30:23
 </td>
 <td style="text-align:left;">
 overview_only
@@ -13257,7 +14222,7 @@ overview_only
 17
 </td>
 <td style="text-align:right;">
-2
+1
 </td>
 </tr>
 <tr>
@@ -13493,6 +14458,29 @@ overview_only
 </tr>
 <tr>
 <td style="text-align:right;">
+1066
+</td>
+<td style="text-align:left;">
+PLAYProject_UCSCR
+</td>
+<td style="text-align:left;">
+<a href="https://nyu.databrary.org/volume/1066" class="uri">https://nyu.databrary.org/volume/1066</a>
+</td>
+<td style="text-align:left;">
+2020-02-20 21:08:03
+</td>
+<td style="text-align:left;">
+overview_only
+</td>
+<td style="text-align:right;">
+16
+</td>
+<td style="text-align:right;">
+1
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
 1207
 </td>
 <td style="text-align:left;">
@@ -13723,29 +14711,6 @@ overview_only
 </tr>
 <tr>
 <td style="text-align:right;">
-1026
-</td>
-<td style="text-align:left;">
-Big Shoes
-</td>
-<td style="text-align:left;">
-<a href="https://nyu.databrary.org/volume/1026" class="uri">https://nyu.databrary.org/volume/1026</a>
-</td>
-<td style="text-align:left;">
-2019-11-18 19:14:40
-</td>
-<td style="text-align:left;">
-overview_only
-</td>
-<td style="text-align:right;">
-15
-</td>
-<td style="text-align:right;">
-1
-</td>
-</tr>
-<tr>
-<td style="text-align:right;">
 1048
 </td>
 <td style="text-align:left;">
@@ -13769,29 +14734,6 @@ overview_only
 </tr>
 <tr>
 <td style="text-align:right;">
-1103
-</td>
-<td style="text-align:left;">
-PLAYProject_OHIOS
-</td>
-<td style="text-align:left;">
-<a href="https://nyu.databrary.org/volume/1103" class="uri">https://nyu.databrary.org/volume/1103</a>
-</td>
-<td style="text-align:left;">
-2020-03-31 20:17:46
-</td>
-<td style="text-align:left;">
-overview_only
-</td>
-<td style="text-align:right;">
-15
-</td>
-<td style="text-align:right;">
-1
-</td>
-</tr>
-<tr>
-<td style="text-align:right;">
 1230
 </td>
 <td style="text-align:left;">
@@ -13802,29 +14744,6 @@ Study 170
 </td>
 <td style="text-align:left;">
 2020-11-05 21:20:45
-</td>
-<td style="text-align:left;">
-overview_only
-</td>
-<td style="text-align:right;">
-15
-</td>
-<td style="text-align:right;">
-1
-</td>
-</tr>
-<tr>
-<td style="text-align:right;">
-1302
-</td>
-<td style="text-align:left;">
-WalkTalk Coding Training for Dr. Rujuta Wilson
-</td>
-<td style="text-align:left;">
-<a href="https://nyu.databrary.org/volume/1302" class="uri">https://nyu.databrary.org/volume/1302</a>
-</td>
-<td style="text-align:left;">
-2021-03-29 21:19:47
 </td>
 <td style="text-align:left;">
 overview_only
@@ -13908,29 +14827,6 @@ overview_only
 </tr>
 <tr>
 <td style="text-align:right;">
-954
-</td>
-<td style="text-align:left;">
-PLAYProject_GEORG
-</td>
-<td style="text-align:left;">
-<a href="https://nyu.databrary.org/volume/954" class="uri">https://nyu.databrary.org/volume/954</a>
-</td>
-<td style="text-align:left;">
-2019-08-01 20:40:40
-</td>
-<td style="text-align:left;">
-overview_only
-</td>
-<td style="text-align:right;">
-14
-</td>
-<td style="text-align:right;">
-1
-</td>
-</tr>
-<tr>
-<td style="text-align:right;">
 956
 </td>
 <td style="text-align:left;">
@@ -13965,6 +14861,29 @@ Disorder: Qualitative Study Data and Analyses
 </td>
 <td style="text-align:left;">
 2020-01-02 19:02:05
+</td>
+<td style="text-align:left;">
+overview_only
+</td>
+<td style="text-align:right;">
+14
+</td>
+<td style="text-align:right;">
+2
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1463
+</td>
+<td style="text-align:left;">
+Miami Multisense Network
+</td>
+<td style="text-align:left;">
+<a href="https://nyu.databrary.org/volume/1463" class="uri">https://nyu.databrary.org/volume/1463</a>
+</td>
+<td style="text-align:left;">
+2022-05-19 13:28:37
 </td>
 <td style="text-align:left;">
 overview_only
@@ -14080,6 +14999,29 @@ Pilot videos of children sitting and standing for BTB
 </td>
 <td style="text-align:left;">
 2021-02-25 21:26:43
+</td>
+<td style="text-align:left;">
+overview_only
+</td>
+<td style="text-align:right;">
+13
+</td>
+<td style="text-align:right;">
+2
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1458
+</td>
+<td style="text-align:left;">
+DBN - Massachusetts - Wave 1 - Data collection
+</td>
+<td style="text-align:left;">
+<a href="https://nyu.databrary.org/volume/1458" class="uri">https://nyu.databrary.org/volume/1458</a>
+</td>
+<td style="text-align:left;">
+2022-05-05 22:06:02
 </td>
 <td style="text-align:left;">
 overview_only
@@ -14231,29 +15173,6 @@ overview_only
 </tr>
 <tr>
 <td style="text-align:right;">
-1066
-</td>
-<td style="text-align:left;">
-PLAYProject_UCSCR
-</td>
-<td style="text-align:left;">
-<a href="https://nyu.databrary.org/volume/1066" class="uri">https://nyu.databrary.org/volume/1066</a>
-</td>
-<td style="text-align:left;">
-2020-02-20 21:08:03
-</td>
-<td style="text-align:left;">
-overview_only
-</td>
-<td style="text-align:right;">
-12
-</td>
-<td style="text-align:right;">
-1
-</td>
-</tr>
-<tr>
-<td style="text-align:right;">
 1214
 </td>
 <td style="text-align:left;">
@@ -14277,16 +15196,16 @@ overview_only
 </tr>
 <tr>
 <td style="text-align:right;">
-1356
+1389
 </td>
 <td style="text-align:left;">
-Learning from books vs. television
+ActOVA11_Zoom
 </td>
 <td style="text-align:left;">
-<a href="https://nyu.databrary.org/volume/1356" class="uri">https://nyu.databrary.org/volume/1356</a>
+<a href="https://nyu.databrary.org/volume/1389" class="uri">https://nyu.databrary.org/volume/1389</a>
 </td>
 <td style="text-align:left;">
-2021-08-16 16:30:23
+2021-11-16 23:19:01
 </td>
 <td style="text-align:left;">
 overview_only
@@ -14300,16 +15219,16 @@ overview_only
 </tr>
 <tr>
 <td style="text-align:right;">
-1389
+1450
 </td>
 <td style="text-align:left;">
-ActOVA11_Zoom
+Concentration and HRV
 </td>
 <td style="text-align:left;">
-<a href="https://nyu.databrary.org/volume/1389" class="uri">https://nyu.databrary.org/volume/1389</a>
+<a href="https://nyu.databrary.org/volume/1450" class="uri">https://nyu.databrary.org/volume/1450</a>
 </td>
 <td style="text-align:left;">
-2021-11-16 23:19:01
+2022-04-18 14:33:20
 </td>
 <td style="text-align:left;">
 overview_only
@@ -14481,6 +15400,29 @@ overview_only
 </td>
 <td style="text-align:right;">
 2
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1376
+</td>
+<td style="text-align:left;">
+PLAYProject_CSULB
+</td>
+<td style="text-align:left;">
+<a href="https://nyu.databrary.org/volume/1376" class="uri">https://nyu.databrary.org/volume/1376</a>
+</td>
+<td style="text-align:left;">
+2021-10-22 16:30:48
+</td>
+<td style="text-align:left;">
+overview_only
+</td>
+<td style="text-align:right;">
+11
+</td>
+<td style="text-align:right;">
+1
 </td>
 </tr>
 <tr>
@@ -14738,6 +15680,29 @@ overview_only
 </tr>
 <tr>
 <td style="text-align:right;">
+1448
+</td>
+<td style="text-align:left;">
+Fitting &amp; Throwing
+</td>
+<td style="text-align:left;">
+<a href="https://nyu.databrary.org/volume/1448" class="uri">https://nyu.databrary.org/volume/1448</a>
+</td>
+<td style="text-align:left;">
+2022-04-08 20:08:22
+</td>
+<td style="text-align:left;">
+overview_only
+</td>
+<td style="text-align:right;">
+10
+</td>
+<td style="text-align:right;">
+1
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
 148
 </td>
 <td style="text-align:left;">
@@ -14900,29 +15865,6 @@ overview_only
 </tr>
 <tr>
 <td style="text-align:right;">
-1376
-</td>
-<td style="text-align:left;">
-PLAYProject_CSULB
-</td>
-<td style="text-align:left;">
-<a href="https://nyu.databrary.org/volume/1376" class="uri">https://nyu.databrary.org/volume/1376</a>
-</td>
-<td style="text-align:left;">
-2021-10-22 16:30:48
-</td>
-<td style="text-align:left;">
-overview_only
-</td>
-<td style="text-align:right;">
-9
-</td>
-<td style="text-align:right;">
-1
-</td>
-</tr>
-<tr>
-<td style="text-align:right;">
 1386
 </td>
 <td style="text-align:left;">
@@ -14942,6 +15884,52 @@ overview_only
 </td>
 <td style="text-align:right;">
 1
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1414
+</td>
+<td style="text-align:left;">
+ESBI Training Videos
+</td>
+<td style="text-align:left;">
+<a href="https://nyu.databrary.org/volume/1414" class="uri">https://nyu.databrary.org/volume/1414</a>
+</td>
+<td style="text-align:left;">
+2022-02-02 14:03:01
+</td>
+<td style="text-align:left;">
+overview_only
+</td>
+<td style="text-align:right;">
+9
+</td>
+<td style="text-align:right;">
+1
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1466
+</td>
+<td style="text-align:left;">
+Pet Picturebook Study
+</td>
+<td style="text-align:left;">
+<a href="https://nyu.databrary.org/volume/1466" class="uri">https://nyu.databrary.org/volume/1466</a>
+</td>
+<td style="text-align:left;">
+2022-05-19 19:40:56
+</td>
+<td style="text-align:left;">
+overview_only
+</td>
+<td style="text-align:right;">
+9
+</td>
+<td style="text-align:right;">
+2
 </td>
 </tr>
 <tr>
@@ -15315,6 +16303,29 @@ overview_only
 </tr>
 <tr>
 <td style="text-align:right;">
+1432
+</td>
+<td style="text-align:left;">
+TINSEL Lookit
+</td>
+<td style="text-align:left;">
+<a href="https://nyu.databrary.org/volume/1432" class="uri">https://nyu.databrary.org/volume/1432</a>
+</td>
+<td style="text-align:left;">
+2022-03-09 18:42:55
+</td>
+<td style="text-align:left;">
+overview_only
+</td>
+<td style="text-align:right;">
+7
+</td>
+<td style="text-align:right;">
+1
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
 633
 </td>
 <td style="text-align:left;">
@@ -15512,6 +16523,52 @@ Intervention
 </td>
 <td style="text-align:left;">
 2021-04-20 17:23:13
+</td>
+<td style="text-align:left;">
+overview_only
+</td>
+<td style="text-align:right;">
+6
+</td>
+<td style="text-align:right;">
+1
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1363
+</td>
+<td style="text-align:left;">
+PLAYProject_PURDU
+</td>
+<td style="text-align:left;">
+<a href="https://nyu.databrary.org/volume/1363" class="uri">https://nyu.databrary.org/volume/1363</a>
+</td>
+<td style="text-align:left;">
+2021-09-20 14:45:07
+</td>
+<td style="text-align:left;">
+overview_only
+</td>
+<td style="text-align:right;">
+6
+</td>
+<td style="text-align:right;">
+1
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1457
+</td>
+<td style="text-align:left;">
+Better Together: Classroom-Based Social Intervention for Spatial Skills
+</td>
+<td style="text-align:left;">
+<a href="https://nyu.databrary.org/volume/1457" class="uri">https://nyu.databrary.org/volume/1457</a>
+</td>
+<td style="text-align:left;">
+2022-05-01 21:28:03
 </td>
 <td style="text-align:left;">
 overview_only
@@ -15733,6 +16790,75 @@ overview_only
 </tr>
 <tr>
 <td style="text-align:right;">
+1379
+</td>
+<td style="text-align:left;">
+Infant walking flexibility on slopes and bridges
+</td>
+<td style="text-align:left;">
+<a href="https://nyu.databrary.org/volume/1379" class="uri">https://nyu.databrary.org/volume/1379</a>
+</td>
+<td style="text-align:left;">
+2021-11-03 15:24:39
+</td>
+<td style="text-align:left;">
+overview_only
+</td>
+<td style="text-align:right;">
+5
+</td>
+<td style="text-align:right;">
+1
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1420
+</td>
+<td style="text-align:left;">
+Exploring Connections between Fractions and Algebra Knowledge
+</td>
+<td style="text-align:left;">
+<a href="https://nyu.databrary.org/volume/1420" class="uri">https://nyu.databrary.org/volume/1420</a>
+</td>
+<td style="text-align:left;">
+2022-02-14 20:18:23
+</td>
+<td style="text-align:left;">
+overview_only
+</td>
+<td style="text-align:right;">
+5
+</td>
+<td style="text-align:right;">
+1
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1485
+</td>
+<td style="text-align:left;">
+Temperament X Trust (Temperament Measure)
+</td>
+<td style="text-align:left;">
+<a href="https://nyu.databrary.org/volume/1485" class="uri">https://nyu.databrary.org/volume/1485</a>
+</td>
+<td style="text-align:left;">
+2022-07-01 15:34:31
+</td>
+<td style="text-align:left;">
+overview_only
+</td>
+<td style="text-align:right;">
+5
+</td>
+<td style="text-align:right;">
+1
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
 577
 </td>
 <td style="text-align:left;">
@@ -15775,6 +16901,29 @@ overview_only
 </td>
 <td style="text-align:right;">
 1
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+760
+</td>
+<td style="text-align:left;">
+PLAYProject_NYUNI (testing for making tutorial videos)
+</td>
+<td style="text-align:left;">
+<a href="https://nyu.databrary.org/volume/760" class="uri">https://nyu.databrary.org/volume/760</a>
+</td>
+<td style="text-align:left;">
+2018-09-12 15:43:08
+</td>
+<td style="text-align:left;">
+overview_only
+</td>
+<td style="text-align:right;">
+4
+</td>
+<td style="text-align:right;">
+3
 </td>
 </tr>
 <tr>
@@ -16079,6 +17228,29 @@ overview_only
 </tr>
 <tr>
 <td style="text-align:right;">
+1391
+</td>
+<td style="text-align:left;">
+PLAYProject_VBLTU
+</td>
+<td style="text-align:left;">
+<a href="https://nyu.databrary.org/volume/1391" class="uri">https://nyu.databrary.org/volume/1391</a>
+</td>
+<td style="text-align:left;">
+2021-11-19 15:43:23
+</td>
+<td style="text-align:left;">
+overview_only
+</td>
+<td style="text-align:right;">
+4
+</td>
+<td style="text-align:right;">
+2
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
 1393
 </td>
 <td style="text-align:left;">
@@ -16102,6 +17274,29 @@ overview_only
 </tr>
 <tr>
 <td style="text-align:right;">
+1397
+</td>
+<td style="text-align:left;">
+PLAYProject_UHOUS
+</td>
+<td style="text-align:left;">
+<a href="https://nyu.databrary.org/volume/1397" class="uri">https://nyu.databrary.org/volume/1397</a>
+</td>
+<td style="text-align:left;">
+2021-12-08 22:20:11
+</td>
+<td style="text-align:left;">
+overview_only
+</td>
+<td style="text-align:right;">
+4
+</td>
+<td style="text-align:right;">
+1
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
 1398
 </td>
 <td style="text-align:left;">
@@ -16112,6 +17307,75 @@ Speech-to-Speech Synchronization Test
 </td>
 <td style="text-align:left;">
 2021-12-08 22:43:26
+</td>
+<td style="text-align:left;">
+overview_only
+</td>
+<td style="text-align:right;">
+4
+</td>
+<td style="text-align:right;">
+1
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1422
+</td>
+<td style="text-align:left;">
+PLAYProject_UIOWA
+</td>
+<td style="text-align:left;">
+<a href="https://nyu.databrary.org/volume/1422" class="uri">https://nyu.databrary.org/volume/1422</a>
+</td>
+<td style="text-align:left;">
+2022-02-18 18:13:43
+</td>
+<td style="text-align:left;">
+overview_only
+</td>
+<td style="text-align:right;">
+4
+</td>
+<td style="text-align:right;">
+1
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1467
+</td>
+<td style="text-align:left;">
+Maternal behavior recordings - Mouse
+</td>
+<td style="text-align:left;">
+<a href="https://nyu.databrary.org/volume/1467" class="uri">https://nyu.databrary.org/volume/1467</a>
+</td>
+<td style="text-align:left;">
+2022-05-20 16:32:34
+</td>
+<td style="text-align:left;">
+overview_only
+</td>
+<td style="text-align:right;">
+4
+</td>
+<td style="text-align:right;">
+1
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1486
+</td>
+<td style="text-align:left;">
+Judging Fraction Magnitudes across Symbolic and Nonsymbolic Formats
+</td>
+<td style="text-align:left;">
+<a href="https://nyu.databrary.org/volume/1486" class="uri">https://nyu.databrary.org/volume/1486</a>
+</td>
+<td style="text-align:left;">
+2022-07-01 16:00:41
 </td>
 <td style="text-align:left;">
 overview_only
@@ -16425,29 +17689,6 @@ overview_only
 </tr>
 <tr>
 <td style="text-align:right;">
-1132
-</td>
-<td style="text-align:left;">
-delete
-</td>
-<td style="text-align:left;">
-<a href="https://nyu.databrary.org/volume/1132" class="uri">https://nyu.databrary.org/volume/1132</a>
-</td>
-<td style="text-align:left;">
-2020-05-11 15:17:26
-</td>
-<td style="text-align:left;">
-overview_only
-</td>
-<td style="text-align:right;">
-3
-</td>
-<td style="text-align:right;">
-1
-</td>
-</tr>
-<tr>
-<td style="text-align:right;">
 1197
 </td>
 <td style="text-align:left;">
@@ -16517,6 +17758,29 @@ overview_only
 </tr>
 <tr>
 <td style="text-align:right;">
+1280
+</td>
+<td style="text-align:left;">
+Play &amp; Learning Across a Year (PLAY) Project - Data Release
+</td>
+<td style="text-align:left;">
+<a href="https://nyu.databrary.org/volume/1280" class="uri">https://nyu.databrary.org/volume/1280</a>
+</td>
+<td style="text-align:left;">
+2021-02-09 16:41:55
+</td>
+<td style="text-align:left;">
+overview_only
+</td>
+<td style="text-align:right;">
+3
+</td>
+<td style="text-align:right;">
+4
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
 1357
 </td>
 <td style="text-align:left;">
@@ -16540,17 +17804,16 @@ overview_only
 </tr>
 <tr>
 <td style="text-align:right;">
-1361
+1362
 </td>
 <td style="text-align:left;">
-Dynamics of the dyad: How mothers and infants co-construct interaction
-spaces during object play
+PLAYProject_STANF
 </td>
 <td style="text-align:left;">
-<a href="https://nyu.databrary.org/volume/1361" class="uri">https://nyu.databrary.org/volume/1361</a>
+<a href="https://nyu.databrary.org/volume/1362" class="uri">https://nyu.databrary.org/volume/1362</a>
 </td>
 <td style="text-align:left;">
-2021-09-18 12:31:44
+2021-09-19 21:47:16
 </td>
 <td style="text-align:left;">
 overview_only
@@ -16559,7 +17822,7 @@ overview_only
 3
 </td>
 <td style="text-align:right;">
-2
+1
 </td>
 </tr>
 <tr>
@@ -16634,16 +17897,134 @@ overview_only
 </tr>
 <tr>
 <td style="text-align:right;">
-1397
+1402
 </td>
 <td style="text-align:left;">
-PLAYProject_UHOUS
+Curiosity in Classrooms Training Videos
 </td>
 <td style="text-align:left;">
-<a href="https://nyu.databrary.org/volume/1397" class="uri">https://nyu.databrary.org/volume/1397</a>
+<a href="https://nyu.databrary.org/volume/1402" class="uri">https://nyu.databrary.org/volume/1402</a>
 </td>
 <td style="text-align:left;">
-2021-12-08 22:20:11
+2021-12-21 21:23:21
+</td>
+<td style="text-align:left;">
+overview_only
+</td>
+<td style="text-align:right;">
+3
+</td>
+<td style="text-align:right;">
+1
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1430
+</td>
+<td style="text-align:left;">
+Baby FaceTime: can toddlers learn from online video chat?
+</td>
+<td style="text-align:left;">
+<a href="https://nyu.databrary.org/volume/1430" class="uri">https://nyu.databrary.org/volume/1430</a>
+</td>
+<td style="text-align:left;">
+2022-03-02 05:39:47
+</td>
+<td style="text-align:left;">
+overview_only
+</td>
+<td style="text-align:right;">
+3
+</td>
+<td style="text-align:right;">
+1
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1437
+</td>
+<td style="text-align:left;">
+The Role of Familiarity in Infant Selective Attention to the Eyes and
+Language Development
+</td>
+<td style="text-align:left;">
+<a href="https://nyu.databrary.org/volume/1437" class="uri">https://nyu.databrary.org/volume/1437</a>
+</td>
+<td style="text-align:left;">
+2022-03-14 21:38:31
+</td>
+<td style="text-align:left;">
+overview_only
+</td>
+<td style="text-align:right;">
+3
+</td>
+<td style="text-align:right;">
+1
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1439
+</td>
+<td style="text-align:left;">
+Ambient sounds in the home environment reduce infant-mother language
+interactions
+</td>
+<td style="text-align:left;">
+<a href="https://nyu.databrary.org/volume/1439" class="uri">https://nyu.databrary.org/volume/1439</a>
+</td>
+<td style="text-align:left;">
+2022-03-20 12:46:51
+</td>
+<td style="text-align:left;">
+overview_only
+</td>
+<td style="text-align:right;">
+3
+</td>
+<td style="text-align:right;">
+2
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1446
+</td>
+<td style="text-align:left;">
+Children Differentially Fixate Faces Based on Face Orientation, Race,
+and Sex
+</td>
+<td style="text-align:left;">
+<a href="https://nyu.databrary.org/volume/1446" class="uri">https://nyu.databrary.org/volume/1446</a>
+</td>
+<td style="text-align:left;">
+2022-03-31 18:46:44
+</td>
+<td style="text-align:left;">
+overview_only
+</td>
+<td style="text-align:right;">
+3
+</td>
+<td style="text-align:right;">
+1
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1475
+</td>
+<td style="text-align:left;">
+Predictors of Play
+</td>
+<td style="text-align:left;">
+<a href="https://nyu.databrary.org/volume/1475" class="uri">https://nyu.databrary.org/volume/1475</a>
+</td>
+<td style="text-align:left;">
+2022-06-12 14:43:36
 </td>
 <td style="text-align:left;">
 overview_only
@@ -16912,29 +18293,6 @@ overview_only
 </tr>
 <tr>
 <td style="text-align:right;">
-760
-</td>
-<td style="text-align:left;">
-PLAYProject_NYUNI (testing for making tutorial videos)
-</td>
-<td style="text-align:left;">
-<a href="https://nyu.databrary.org/volume/760" class="uri">https://nyu.databrary.org/volume/760</a>
-</td>
-<td style="text-align:left;">
-2018-09-12 15:43:08
-</td>
-<td style="text-align:left;">
-overview_only
-</td>
-<td style="text-align:right;">
-2
-</td>
-<td style="text-align:right;">
-3
-</td>
-</tr>
-<tr>
-<td style="text-align:right;">
 765
 </td>
 <td style="text-align:left;">
@@ -17023,29 +18381,6 @@ overview_only
 </td>
 <td style="text-align:right;">
 1
-</td>
-</tr>
-<tr>
-<td style="text-align:right;">
-903
-</td>
-<td style="text-align:left;">
-ars create test
-</td>
-<td style="text-align:left;">
-<a href="https://nyu.databrary.org/volume/903" class="uri">https://nyu.databrary.org/volume/903</a>
-</td>
-<td style="text-align:left;">
-2019-05-10 13:33:45
-</td>
-<td style="text-align:left;">
-overview_only
-</td>
-<td style="text-align:right;">
-2
-</td>
-<td style="text-align:right;">
-2
 </td>
 </tr>
 <tr>
@@ -17326,29 +18661,6 @@ overview_only
 </tr>
 <tr>
 <td style="text-align:right;">
-1362
-</td>
-<td style="text-align:left;">
-PLAYProject_STANF
-</td>
-<td style="text-align:left;">
-<a href="https://nyu.databrary.org/volume/1362" class="uri">https://nyu.databrary.org/volume/1362</a>
-</td>
-<td style="text-align:left;">
-2021-09-19 21:47:16
-</td>
-<td style="text-align:left;">
-overview_only
-</td>
-<td style="text-align:right;">
-2
-</td>
-<td style="text-align:right;">
-1
-</td>
-</tr>
-<tr>
-<td style="text-align:right;">
 1366
 </td>
 <td style="text-align:left;">
@@ -17418,16 +18730,16 @@ overview_only
 </tr>
 <tr>
 <td style="text-align:right;">
-1379
+1425
 </td>
 <td style="text-align:left;">
-Infant walking flexibility on slopes and bridges
+Culture_Tajikistan_Gahvora_Mobile
 </td>
 <td style="text-align:left;">
-<a href="https://nyu.databrary.org/volume/1379" class="uri">https://nyu.databrary.org/volume/1379</a>
+<a href="https://nyu.databrary.org/volume/1425" class="uri">https://nyu.databrary.org/volume/1425</a>
 </td>
 <td style="text-align:left;">
-2021-11-03 15:24:39
+2022-02-23 20:43:12
 </td>
 <td style="text-align:left;">
 overview_only
@@ -18479,6 +19791,29 @@ overview_only
 </tr>
 <tr>
 <td style="text-align:right;">
+996
+</td>
+<td style="text-align:left;">
+PLAYProject_UMIAM
+</td>
+<td style="text-align:left;">
+<a href="https://nyu.databrary.org/volume/996" class="uri">https://nyu.databrary.org/volume/996</a>
+</td>
+<td style="text-align:left;">
+2019-09-27 17:43:10
+</td>
+<td style="text-align:left;">
+overview_only
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+2
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
 1008
 </td>
 <td style="text-align:left;">
@@ -18790,6 +20125,29 @@ BehAV.ai: Computer vision and developmental science
 </td>
 <td style="text-align:left;">
 2020-04-15 14:43:51
+</td>
+<td style="text-align:left;">
+overview_only
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+1
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1132
+</td>
+<td style="text-align:left;">
+Sample_Volume
+</td>
+<td style="text-align:left;">
+<a href="https://nyu.databrary.org/volume/1132" class="uri">https://nyu.databrary.org/volume/1132</a>
+</td>
+<td style="text-align:left;">
+2020-05-11 15:17:26
 </td>
 <td style="text-align:left;">
 overview_only
@@ -19149,29 +20507,6 @@ overview_only
 </tr>
 <tr>
 <td style="text-align:right;">
-1280
-</td>
-<td style="text-align:left;">
-Play &amp; Learning Across a Year (PLAY) Project - Data Release
-</td>
-<td style="text-align:left;">
-<a href="https://nyu.databrary.org/volume/1280" class="uri">https://nyu.databrary.org/volume/1280</a>
-</td>
-<td style="text-align:left;">
-2021-02-09 16:41:55
-</td>
-<td style="text-align:left;">
-overview_only
-</td>
-<td style="text-align:right;">
-1
-</td>
-<td style="text-align:right;">
-4
-</td>
-</tr>
-<tr>
-<td style="text-align:right;">
 1293
 </td>
 <td style="text-align:left;">
@@ -19379,29 +20714,6 @@ overview_only
 </tr>
 <tr>
 <td style="text-align:right;">
-1363
-</td>
-<td style="text-align:left;">
-PLAYProject_PURDU
-</td>
-<td style="text-align:left;">
-<a href="https://nyu.databrary.org/volume/1363" class="uri">https://nyu.databrary.org/volume/1363</a>
-</td>
-<td style="text-align:left;">
-2021-09-20 14:45:07
-</td>
-<td style="text-align:left;">
-overview_only
-</td>
-<td style="text-align:right;">
-1
-</td>
-<td style="text-align:right;">
-1
-</td>
-</tr>
-<tr>
-<td style="text-align:right;">
 1370
 </td>
 <td style="text-align:left;">
@@ -19481,6 +20793,285 @@ PLAYProject_INDNA
 </td>
 <td style="text-align:left;">
 2021-12-13 20:40:07
+</td>
+<td style="text-align:left;">
+overview_only
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+1
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1406
+</td>
+<td style="text-align:left;">
+Searching in the Sand: Protracted Video Deficit in U.S. Preschoolers’
+Spatial Recall Using a Continuous Search Space
+</td>
+<td style="text-align:left;">
+<a href="https://nyu.databrary.org/volume/1406" class="uri">https://nyu.databrary.org/volume/1406</a>
+</td>
+<td style="text-align:left;">
+2022-01-05 20:04:15
+</td>
+<td style="text-align:left;">
+overview_only
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+2
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1421
+</td>
+<td style="text-align:left;">
+Study 273
+</td>
+<td style="text-align:left;">
+<a href="https://nyu.databrary.org/volume/1421" class="uri">https://nyu.databrary.org/volume/1421</a>
+</td>
+<td style="text-align:left;">
+2022-02-16 19:14:11
+</td>
+<td style="text-align:left;">
+overview_only
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+1
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1433
+</td>
+<td style="text-align:left;">
+Developmental changes in the expression of gender stereotypes to child
+and adult stimuli
+</td>
+<td style="text-align:left;">
+<a href="https://nyu.databrary.org/volume/1433" class="uri">https://nyu.databrary.org/volume/1433</a>
+</td>
+<td style="text-align:left;">
+2022-03-10 18:36:14
+</td>
+<td style="text-align:left;">
+overview_only
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+1
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1452
+</td>
+<td style="text-align:left;">
+KidTalk
+</td>
+<td style="text-align:left;">
+<a href="https://nyu.databrary.org/volume/1452" class="uri">https://nyu.databrary.org/volume/1452</a>
+</td>
+<td style="text-align:left;">
+2022-04-19 18:19:36
+</td>
+<td style="text-align:left;">
+overview_only
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+2
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1459
+</td>
+<td style="text-align:left;">
+PLAYProject_UOREG
+</td>
+<td style="text-align:left;">
+<a href="https://nyu.databrary.org/volume/1459" class="uri">https://nyu.databrary.org/volume/1459</a>
+</td>
+<td style="text-align:left;">
+2022-05-07 21:41:19
+</td>
+<td style="text-align:left;">
+overview_only
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+1
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1460
+</td>
+<td style="text-align:left;">
+STEADY-A3
+</td>
+<td style="text-align:left;">
+<a href="https://nyu.databrary.org/volume/1460" class="uri">https://nyu.databrary.org/volume/1460</a>
+</td>
+<td style="text-align:left;">
+2022-05-10 16:13:10
+</td>
+<td style="text-align:left;">
+overview_only
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+2
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1469
+</td>
+<td style="text-align:left;">
+PLAY-CP
+</td>
+<td style="text-align:left;">
+<a href="https://nyu.databrary.org/volume/1469" class="uri">https://nyu.databrary.org/volume/1469</a>
+</td>
+<td style="text-align:left;">
+2022-05-24 23:45:09
+</td>
+<td style="text-align:left;">
+overview_only
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+1
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1470
+</td>
+<td style="text-align:left;">
+DBN - Jakarta - Wave 1 - Data Collection
+</td>
+<td style="text-align:left;">
+<a href="https://nyu.databrary.org/volume/1470" class="uri">https://nyu.databrary.org/volume/1470</a>
+</td>
+<td style="text-align:left;">
+2022-05-26 21:48:28
+</td>
+<td style="text-align:left;">
+overview_only
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+1
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1471
+</td>
+<td style="text-align:left;">
+DBN - Northern Ireland - Wave 1 - Data Collection
+</td>
+<td style="text-align:left;">
+<a href="https://nyu.databrary.org/volume/1471" class="uri">https://nyu.databrary.org/volume/1471</a>
+</td>
+<td style="text-align:left;">
+2022-06-06 10:39:57
+</td>
+<td style="text-align:left;">
+overview_only
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+4
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1478
+</td>
+<td style="text-align:left;">
+003 - JU12RO05M4020KJ
+</td>
+<td style="text-align:left;">
+<a href="https://nyu.databrary.org/volume/1478" class="uri">https://nyu.databrary.org/volume/1478</a>
+</td>
+<td style="text-align:left;">
+2022-06-17 17:28:17
+</td>
+<td style="text-align:left;">
+overview_only
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+3
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1479
+</td>
+<td style="text-align:left;">
+005- MA06JU12M21KJ
+</td>
+<td style="text-align:left;">
+<a href="https://nyu.databrary.org/volume/1479" class="uri">https://nyu.databrary.org/volume/1479</a>
+</td>
+<td style="text-align:left;">
+2022-06-17 17:40:47
+</td>
+<td style="text-align:left;">
+overview_only
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+2
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1488
+</td>
+<td style="text-align:left;">
+Estimating the rate of behavior: Optimal combination of sample size and
+observation duration
+</td>
+<td style="text-align:left;">
+<a href="https://nyu.databrary.org/volume/1488" class="uri">https://nyu.databrary.org/volume/1488</a>
+</td>
+<td style="text-align:left;">
+2022-07-07 21:46:13
 </td>
 <td style="text-align:left;">
 overview_only
@@ -19816,6 +21407,29 @@ overview_only
 </tr>
 <tr>
 <td style="text-align:right;">
+903
+</td>
+<td style="text-align:left;">
+ars create test
+</td>
+<td style="text-align:left;">
+<a href="https://nyu.databrary.org/volume/903" class="uri">https://nyu.databrary.org/volume/903</a>
+</td>
+<td style="text-align:left;">
+2019-05-10 13:33:45
+</td>
+<td style="text-align:left;">
+overview_only
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+2
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
 916
 </td>
 <td style="text-align:left;">
@@ -19951,29 +21565,6 @@ overview_only
 </td>
 <td style="text-align:right;">
 1
-</td>
-</tr>
-<tr>
-<td style="text-align:right;">
-996
-</td>
-<td style="text-align:left;">
-Miami PLAY Project
-</td>
-<td style="text-align:left;">
-<a href="https://nyu.databrary.org/volume/996" class="uri">https://nyu.databrary.org/volume/996</a>
-</td>
-<td style="text-align:left;">
-2019-09-27 17:43:10
-</td>
-<td style="text-align:left;">
-overview_only
-</td>
-<td style="text-align:right;">
-0
-</td>
-<td style="text-align:right;">
-4
 </td>
 </tr>
 <tr>
@@ -20877,30 +22468,6 @@ overview_only
 </tr>
 <tr>
 <td style="text-align:right;">
-1328
-</td>
-<td style="text-align:left;">
-Toddler’s conventional action learning and memory from active and
-observational instruction
-</td>
-<td style="text-align:left;">
-<a href="https://nyu.databrary.org/volume/1328" class="uri">https://nyu.databrary.org/volume/1328</a>
-</td>
-<td style="text-align:left;">
-2021-06-21 20:13:03
-</td>
-<td style="text-align:left;">
-overview_only
-</td>
-<td style="text-align:right;">
-0
-</td>
-<td style="text-align:right;">
-1
-</td>
-</tr>
-<tr>
-<td style="text-align:right;">
 1330
 </td>
 <td style="text-align:left;">
@@ -20993,16 +22560,202 @@ overview_only
 </tr>
 <tr>
 <td style="text-align:right;">
-1391
+1404
 </td>
 <td style="text-align:left;">
-PLAYProject_VBLTU
+New DataCite API Calls Old EZ
 </td>
 <td style="text-align:left;">
-<a href="https://nyu.databrary.org/volume/1391" class="uri">https://nyu.databrary.org/volume/1391</a>
+<a href="https://nyu.databrary.org/volume/1404" class="uri">https://nyu.databrary.org/volume/1404</a>
 </td>
 <td style="text-align:left;">
-2021-11-19 15:43:23
+2021-12-26 23:24:53
+</td>
+<td style="text-align:left;">
+overview_only
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+1
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1405
+</td>
+<td style="text-align:left;">
+EZID Test DOI Update
+</td>
+<td style="text-align:left;">
+<a href="https://nyu.databrary.org/volume/1405" class="uri">https://nyu.databrary.org/volume/1405</a>
+</td>
+<td style="text-align:left;">
+2021-12-27 00:08:46
+</td>
+<td style="text-align:left;">
+overview_only
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+1
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1429
+</td>
+<td style="text-align:left;">
+Curiosity in Schools - Mixed Methods
+</td>
+<td style="text-align:left;">
+<a href="https://nyu.databrary.org/volume/1429" class="uri">https://nyu.databrary.org/volume/1429</a>
+</td>
+<td style="text-align:left;">
+2022-03-01 14:20:59
+</td>
+<td style="text-align:left;">
+overview_only
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+2
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1434
+</td>
+<td style="text-align:left;">
+DBN - Yucatan - Wave 1 - Data collection
+</td>
+<td style="text-align:left;">
+<a href="https://nyu.databrary.org/volume/1434" class="uri">https://nyu.databrary.org/volume/1434</a>
+</td>
+<td style="text-align:left;">
+2022-03-10 21:28:50
+</td>
+<td style="text-align:left;">
+overview_only
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+5
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1445
+</td>
+<td style="text-align:left;">
+Mothers’ Language Input Differs as a Function of Mother-Infant Proximity
+in the Home Environment
+</td>
+<td style="text-align:left;">
+<a href="https://nyu.databrary.org/volume/1445" class="uri">https://nyu.databrary.org/volume/1445</a>
+</td>
+<td style="text-align:left;">
+2022-03-29 19:44:07
+</td>
+<td style="text-align:left;">
+overview_only
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+1
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1464
+</td>
+<td style="text-align:left;">
+Classroom Vocal Interactions and Engagement in Inclusive Preschools
+</td>
+<td style="text-align:left;">
+<a href="https://nyu.databrary.org/volume/1464" class="uri">https://nyu.databrary.org/volume/1464</a>
+</td>
+<td style="text-align:left;">
+2022-05-19 14:53:45
+</td>
+<td style="text-align:left;">
+overview_only
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+3
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1472
+</td>
+<td style="text-align:left;">
+DBN - Republic of Ireland - Wave 1 - Data Collection
+</td>
+<td style="text-align:left;">
+<a href="https://nyu.databrary.org/volume/1472" class="uri">https://nyu.databrary.org/volume/1472</a>
+</td>
+<td style="text-align:left;">
+2022-06-06 10:52:52
+</td>
+<td style="text-align:left;">
+overview_only
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+4
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1481
+</td>
+<td style="text-align:left;">
+PLAYProject_CSUFL
+</td>
+<td style="text-align:left;">
+<a href="https://nyu.databrary.org/volume/1481" class="uri">https://nyu.databrary.org/volume/1481</a>
+</td>
+<td style="text-align:left;">
+2022-06-23 22:06:21
+</td>
+<td style="text-align:left;">
+overview_only
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+1
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1484
+</td>
+<td style="text-align:left;">
+Listen to Your Mother: Children Use Hierarchical Social Roles to Guide
+their Judgments about People
+</td>
+<td style="text-align:left;">
+<a href="https://nyu.databrary.org/volume/1484" class="uri">https://nyu.databrary.org/volume/1484</a>
+</td>
+<td style="text-align:left;">
+2022-06-30 17:53:33
 </td>
 <td style="text-align:left;">
 overview_only
@@ -21069,7 +22822,7 @@ full_volume
 59
 </td>
 <td style="text-align:right;">
-2605
+2614
 </td>
 <td style="text-align:right;">
 1
@@ -21089,13 +22842,13 @@ Tamis-LeMonda, Catherine
 full_volume
 </td>
 <td style="text-align:right;">
-21
+25
 </td>
 <td style="text-align:right;">
-2219
+2332
 </td>
 <td style="text-align:right;">
-1
+0
 </td>
 <td style="text-align:right;">
 1351
@@ -21112,13 +22865,13 @@ Weisberg, Deena Skolnick
 full_volume
 </td>
 <td style="text-align:right;">
-12
+14
 </td>
 <td style="text-align:right;">
-1461
+1633
 </td>
 <td style="text-align:right;">
-34
+17
 </td>
 <td style="text-align:right;">
 216
@@ -21526,13 +23279,13 @@ Jirout, Jamie
 full_volume
 </td>
 <td style="text-align:right;">
-10
+12
 </td>
 <td style="text-align:right;">
-256
+259
 </td>
 <td style="text-align:right;">
-1
+0
 </td>
 <td style="text-align:right;">
 77
@@ -21839,6 +23592,29 @@ full_volume
 </tr>
 <tr>
 <td style="text-align:left;">
+Huenerfauth, Matt
+</td>
+<td style="text-align:left;">
+<a href="https://nyu.databrary.org/party/6349" class="uri">https://nyu.databrary.org/party/6349</a>
+</td>
+<td style="text-align:left;">
+full_volume
+</td>
+<td style="text-align:right;">
+5
+</td>
+<td style="text-align:right;">
+108
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+46
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
 Blumberg, Mark
 </td>
 <td style="text-align:left;">
@@ -21858,6 +23634,29 @@ full_volume
 </td>
 <td style="text-align:right;">
 57
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Escobar, Kelly
+</td>
+<td style="text-align:left;">
+<a href="https://nyu.databrary.org/party/862" class="uri">https://nyu.databrary.org/party/862</a>
+</td>
+<td style="text-align:left;">
+full_volume
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+103
+</td>
+<td style="text-align:right;">
+103
+</td>
+<td style="text-align:right;">
+103
 </td>
 </tr>
 <tr>
@@ -22046,6 +23845,29 @@ full_volume
 </tr>
 <tr>
 <td style="text-align:left;">
+Messinger, Daniel
+</td>
+<td style="text-align:left;">
+<a href="https://nyu.databrary.org/party/70" class="uri">https://nyu.databrary.org/party/70</a>
+</td>
+<td style="text-align:left;">
+full_volume
+</td>
+<td style="text-align:right;">
+4
+</td>
+<td style="text-align:right;">
+73
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+43
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
 Casasola, Marianella
 </td>
 <td style="text-align:left;">
@@ -22062,29 +23884,6 @@ full_volume
 </td>
 <td style="text-align:right;">
 2
-</td>
-<td style="text-align:right;">
-43
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-Messinger, Daniel
-</td>
-<td style="text-align:left;">
-<a href="https://nyu.databrary.org/party/70" class="uri">https://nyu.databrary.org/party/70</a>
-</td>
-<td style="text-align:left;">
-full_volume
-</td>
-<td style="text-align:right;">
-3
-</td>
-<td style="text-align:right;">
-69
-</td>
-<td style="text-align:right;">
-13
 </td>
 <td style="text-align:right;">
 43
@@ -22111,29 +23910,6 @@ full_volume
 </td>
 <td style="text-align:right;">
 32
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-Huenerfauth, Matt
-</td>
-<td style="text-align:left;">
-<a href="https://nyu.databrary.org/party/6349" class="uri">https://nyu.databrary.org/party/6349</a>
-</td>
-<td style="text-align:left;">
-full_volume
-</td>
-<td style="text-align:right;">
-3
-</td>
-<td style="text-align:right;">
-61
-</td>
-<td style="text-align:right;">
-15
-</td>
-<td style="text-align:right;">
-23
 </td>
 </tr>
 <tr>
@@ -22203,6 +23979,29 @@ full_volume
 </td>
 <td style="text-align:right;">
 59
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Barr, Rachel
+</td>
+<td style="text-align:left;">
+<a href="https://nyu.databrary.org/party/104" class="uri">https://nyu.databrary.org/party/104</a>
+</td>
+<td style="text-align:left;">
+full_volume
+</td>
+<td style="text-align:right;">
+8
+</td>
+<td style="text-align:right;">
+46
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+22
 </td>
 </tr>
 <tr>
@@ -22460,6 +24259,52 @@ full_volume
 </tr>
 <tr>
 <td style="text-align:left;">
+Camparo Avila, Daniel
+</td>
+<td style="text-align:left;">
+<a href="https://nyu.databrary.org/party/2581" class="uri">https://nyu.databrary.org/party/2581</a>
+</td>
+<td style="text-align:left;">
+full_volume
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+40
+</td>
+<td style="text-align:right;">
+40
+</td>
+<td style="text-align:right;">
+40
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Hontou, Cecilia
+</td>
+<td style="text-align:left;">
+<a href="https://nyu.databrary.org/party/7265" class="uri">https://nyu.databrary.org/party/7265</a>
+</td>
+<td style="text-align:left;">
+full_volume
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+40
+</td>
+<td style="text-align:right;">
+40
+</td>
+<td style="text-align:right;">
+40
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
 Fabricius, William
 </td>
 <td style="text-align:left;">
@@ -22506,6 +24351,29 @@ full_volume
 </tr>
 <tr>
 <td style="text-align:left;">
+Baldwin, Dare
+</td>
+<td style="text-align:left;">
+<a href="https://nyu.databrary.org/party/3746" class="uri">https://nyu.databrary.org/party/3746</a>
+</td>
+<td style="text-align:left;">
+full_volume
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+37
+</td>
+<td style="text-align:right;">
+37
+</td>
+<td style="text-align:right;">
+37
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
 Cole, Pamela M
 </td>
 <td style="text-align:left;">
@@ -22525,6 +24393,29 @@ full_volume
 </td>
 <td style="text-align:right;">
 32
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Kosie, Jessica E
+</td>
+<td style="text-align:left;">
+<a href="https://nyu.databrary.org/party/588" class="uri">https://nyu.databrary.org/party/588</a>
+</td>
+<td style="text-align:left;">
+full_volume
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+37
+</td>
+<td style="text-align:right;">
+37
+</td>
+<td style="text-align:right;">
+37
 </td>
 </tr>
 <tr>
@@ -22713,48 +24604,25 @@ full_volume
 </tr>
 <tr>
 <td style="text-align:left;">
-Camparo Avila, Daniel
+West, Kelsey Louise
 </td>
 <td style="text-align:left;">
-<a href="https://nyu.databrary.org/party/2581" class="uri">https://nyu.databrary.org/party/2581</a>
-</td>
-<td style="text-align:left;">
-full_volume
-</td>
-<td style="text-align:right;">
-1
-</td>
-<td style="text-align:right;">
-34
-</td>
-<td style="text-align:right;">
-34
-</td>
-<td style="text-align:right;">
-34
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-Hontou, Cecilia
-</td>
-<td style="text-align:left;">
-<a href="https://nyu.databrary.org/party/7265" class="uri">https://nyu.databrary.org/party/7265</a>
+<a href="https://nyu.databrary.org/party/600" class="uri">https://nyu.databrary.org/party/600</a>
 </td>
 <td style="text-align:left;">
 full_volume
 </td>
 <td style="text-align:right;">
+3
+</td>
+<td style="text-align:right;">
+33
+</td>
+<td style="text-align:right;">
 1
 </td>
 <td style="text-align:right;">
-34
-</td>
-<td style="text-align:right;">
-34
-</td>
-<td style="text-align:right;">
-34
+30
 </td>
 </tr>
 <tr>
@@ -22828,6 +24696,52 @@ full_volume
 </tr>
 <tr>
 <td style="text-align:left;">
+Prosser, Laura
+</td>
+<td style="text-align:left;">
+<a href="https://nyu.databrary.org/party/591" class="uri">https://nyu.databrary.org/party/591</a>
+</td>
+<td style="text-align:left;">
+full_volume
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+29
+</td>
+<td style="text-align:right;">
+29
+</td>
+<td style="text-align:right;">
+29
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Shirai, Nobu
+</td>
+<td style="text-align:left;">
+<a href="https://nyu.databrary.org/party/2219" class="uri">https://nyu.databrary.org/party/2219</a>
+</td>
+<td style="text-align:left;">
+full_volume
+</td>
+<td style="text-align:right;">
+9
+</td>
+<td style="text-align:right;">
+25
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+17
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
 Staff
 </td>
 <td style="text-align:left;">
@@ -22847,52 +24761,6 @@ full_volume
 </td>
 <td style="text-align:right;">
 25
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-Shirai, Nobu
-</td>
-<td style="text-align:left;">
-<a href="https://nyu.databrary.org/party/2219" class="uri">https://nyu.databrary.org/party/2219</a>
-</td>
-<td style="text-align:left;">
-full_volume
-</td>
-<td style="text-align:right;">
-8
-</td>
-<td style="text-align:right;">
-24
-</td>
-<td style="text-align:right;">
-1
-</td>
-<td style="text-align:right;">
-17
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-West, Kelsey Louise
-</td>
-<td style="text-align:left;">
-<a href="https://nyu.databrary.org/party/600" class="uri">https://nyu.databrary.org/party/600</a>
-</td>
-<td style="text-align:left;">
-full_volume
-</td>
-<td style="text-align:right;">
-3
-</td>
-<td style="text-align:right;">
-24
-</td>
-<td style="text-align:right;">
-1
-</td>
-<td style="text-align:right;">
-21
 </td>
 </tr>
 <tr>
@@ -22966,6 +24834,29 @@ full_volume
 </tr>
 <tr>
 <td style="text-align:left;">
+Herzberg, Orit
+</td>
+<td style="text-align:left;">
+<a href="https://nyu.databrary.org/party/3137" class="uri">https://nyu.databrary.org/party/3137</a>
+</td>
+<td style="text-align:left;">
+full_volume
+</td>
+<td style="text-align:right;">
+4
+</td>
+<td style="text-align:right;">
+20
+</td>
+<td style="text-align:right;">
+3
+</td>
+<td style="text-align:right;">
+8
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
 Soska, Kasey
 </td>
 <td style="text-align:left;">
@@ -23031,29 +24922,6 @@ full_volume
 </td>
 <td style="text-align:right;">
 19
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-Barr, Rachel
-</td>
-<td style="text-align:left;">
-<a href="https://nyu.databrary.org/party/104" class="uri">https://nyu.databrary.org/party/104</a>
-</td>
-<td style="text-align:left;">
-full_volume
-</td>
-<td style="text-align:right;">
-7
-</td>
-<td style="text-align:right;">
-17
-</td>
-<td style="text-align:right;">
-0
-</td>
-<td style="text-align:right;">
-12
 </td>
 </tr>
 <tr>
@@ -23127,25 +24995,94 @@ full_volume
 </tr>
 <tr>
 <td style="text-align:left;">
-Herzberg, Orit
+Fasano, Regina M.
 </td>
 <td style="text-align:left;">
-<a href="https://nyu.databrary.org/party/3137" class="uri">https://nyu.databrary.org/party/3137</a>
+<a href="https://nyu.databrary.org/party/4314" class="uri">https://nyu.databrary.org/party/4314</a>
 </td>
 <td style="text-align:left;">
 full_volume
 </td>
 <td style="text-align:right;">
-3
+1
 </td>
 <td style="text-align:right;">
-15
+16
 </td>
 <td style="text-align:right;">
-3
+16
 </td>
 <td style="text-align:right;">
-8
+16
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Gonzalez, Brittney Monique
+</td>
+<td style="text-align:left;">
+<a href="https://nyu.databrary.org/party/8104" class="uri">https://nyu.databrary.org/party/8104</a>
+</td>
+<td style="text-align:left;">
+full_volume
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+16
+</td>
+<td style="text-align:right;">
+16
+</td>
+<td style="text-align:right;">
+16
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Perry, Lynn
+</td>
+<td style="text-align:left;">
+<a href="https://nyu.databrary.org/party/1974" class="uri">https://nyu.databrary.org/party/1974</a>
+</td>
+<td style="text-align:left;">
+full_volume
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+16
+</td>
+<td style="text-align:right;">
+16
+</td>
+<td style="text-align:right;">
+16
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+vitale, laura corina
+</td>
+<td style="text-align:left;">
+<a href="https://nyu.databrary.org/party/6565" class="uri">https://nyu.databrary.org/party/6565</a>
+</td>
+<td style="text-align:left;">
+full_volume
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+16
+</td>
+<td style="text-align:right;">
+16
+</td>
+<td style="text-align:right;">
+16
 </td>
 </tr>
 <tr>
@@ -23169,75 +25106,6 @@ full_volume
 </td>
 <td style="text-align:right;">
 14
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-Fasano, Regina M.
-</td>
-<td style="text-align:left;">
-<a href="https://nyu.databrary.org/party/4314" class="uri">https://nyu.databrary.org/party/4314</a>
-</td>
-<td style="text-align:left;">
-full_volume
-</td>
-<td style="text-align:right;">
-1
-</td>
-<td style="text-align:right;">
-13
-</td>
-<td style="text-align:right;">
-13
-</td>
-<td style="text-align:right;">
-13
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-Gonzalez, Brittney Monique
-</td>
-<td style="text-align:left;">
-<a href="https://nyu.databrary.org/party/8104" class="uri">https://nyu.databrary.org/party/8104</a>
-</td>
-<td style="text-align:left;">
-full_volume
-</td>
-<td style="text-align:right;">
-1
-</td>
-<td style="text-align:right;">
-13
-</td>
-<td style="text-align:right;">
-13
-</td>
-<td style="text-align:right;">
-13
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-Perry, Lynn
-</td>
-<td style="text-align:left;">
-<a href="https://nyu.databrary.org/party/1974" class="uri">https://nyu.databrary.org/party/1974</a>
-</td>
-<td style="text-align:left;">
-full_volume
-</td>
-<td style="text-align:right;">
-1
-</td>
-<td style="text-align:right;">
-13
-</td>
-<td style="text-align:right;">
-13
-</td>
-<td style="text-align:right;">
-13
 </td>
 </tr>
 <tr>
@@ -23284,29 +25152,6 @@ full_volume
 </td>
 <td style="text-align:right;">
 12
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-vitale, laura corina
-</td>
-<td style="text-align:left;">
-<a href="https://nyu.databrary.org/party/6565" class="uri">https://nyu.databrary.org/party/6565</a>
-</td>
-<td style="text-align:left;">
-full_volume
-</td>
-<td style="text-align:right;">
-1
-</td>
-<td style="text-align:right;">
-13
-</td>
-<td style="text-align:right;">
-13
-</td>
-<td style="text-align:right;">
-13
 </td>
 </tr>
 <tr>
@@ -23426,6 +25271,29 @@ full_volume
 </tr>
 <tr>
 <td style="text-align:left;">
+Bayet, Laurie
+</td>
+<td style="text-align:left;">
+<a href="https://nyu.databrary.org/party/7006" class="uri">https://nyu.databrary.org/party/7006</a>
+</td>
+<td style="text-align:left;">
+full_volume
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+9
+</td>
+<td style="text-align:right;">
+9
+</td>
+<td style="text-align:right;">
+9
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
 Foster-Hanson, Emily
 </td>
 <td style="text-align:left;">
@@ -23472,6 +25340,75 @@ full_volume
 </tr>
 <tr>
 <td style="text-align:left;">
+Fyfe, Emily Ruth
+</td>
+<td style="text-align:left;">
+<a href="https://nyu.databrary.org/party/2536" class="uri">https://nyu.databrary.org/party/2536</a>
+</td>
+<td style="text-align:left;">
+full_volume
+</td>
+<td style="text-align:right;">
+2
+</td>
+<td style="text-align:right;">
+8
+</td>
+<td style="text-align:right;">
+4
+</td>
+<td style="text-align:right;">
+4
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Evans, Natalie
+</td>
+<td style="text-align:left;">
+<a href="https://nyu.databrary.org/party/8647" class="uri">https://nyu.databrary.org/party/8647</a>
+</td>
+<td style="text-align:left;">
+full_volume
+</td>
+<td style="text-align:right;">
+4
+</td>
+<td style="text-align:right;">
+7
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+3
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Iverson, Jana
+</td>
+<td style="text-align:left;">
+<a href="https://nyu.databrary.org/party/334" class="uri">https://nyu.databrary.org/party/334</a>
+</td>
+<td style="text-align:left;">
+full_volume
+</td>
+<td style="text-align:right;">
+4
+</td>
+<td style="text-align:right;">
+7
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+3
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
 MacWhinney, Brian
 </td>
 <td style="text-align:left;">
@@ -23495,6 +25432,29 @@ full_volume
 </tr>
 <tr>
 <td style="text-align:left;">
+Schneider, Joshua
+</td>
+<td style="text-align:left;">
+<a href="https://nyu.databrary.org/party/416" class="uri">https://nyu.databrary.org/party/416</a>
+</td>
+<td style="text-align:left;">
+full_volume
+</td>
+<td style="text-align:right;">
+3
+</td>
+<td style="text-align:right;">
+7
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+3
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
 Xu, Melody
 </td>
 <td style="text-align:left;">
@@ -23514,6 +25474,29 @@ full_volume
 </td>
 <td style="text-align:right;">
 7
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Bahrick, Lorraine E.
+</td>
+<td style="text-align:left;">
+<a href="https://nyu.databrary.org/party/376" class="uri">https://nyu.databrary.org/party/376</a>
+</td>
+<td style="text-align:left;">
+full_volume
+</td>
+<td style="text-align:right;">
+4
+</td>
+<td style="text-align:right;">
+6
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+3
 </td>
 </tr>
 <tr>
@@ -23560,29 +25543,6 @@ full_volume
 </td>
 <td style="text-align:right;">
 6
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-Bahrick, Lorraine E.
-</td>
-<td style="text-align:left;">
-<a href="https://nyu.databrary.org/party/376" class="uri">https://nyu.databrary.org/party/376</a>
-</td>
-<td style="text-align:left;">
-full_volume
-</td>
-<td style="text-align:right;">
-3
-</td>
-<td style="text-align:right;">
-5
-</td>
-<td style="text-align:right;">
-1
-</td>
-<td style="text-align:right;">
-3
 </td>
 </tr>
 <tr>
@@ -23725,6 +25685,29 @@ full_volume
 </tr>
 <tr>
 <td style="text-align:left;">
+Swirbul, Mackenzie
+</td>
+<td style="text-align:left;">
+<a href="https://nyu.databrary.org/party/7148" class="uri">https://nyu.databrary.org/party/7148</a>
+</td>
+<td style="text-align:left;">
+full_volume
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+5
+</td>
+<td style="text-align:right;">
+5
+</td>
+<td style="text-align:right;">
+5
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
 Amso, Dima
 </td>
 <td style="text-align:left;">
@@ -23771,29 +25754,6 @@ full_volume
 </tr>
 <tr>
 <td style="text-align:left;">
-Evans, Natalie
-</td>
-<td style="text-align:left;">
-<a href="https://nyu.databrary.org/party/8647" class="uri">https://nyu.databrary.org/party/8647</a>
-</td>
-<td style="text-align:left;">
-full_volume
-</td>
-<td style="text-align:right;">
-2
-</td>
-<td style="text-align:right;">
-4
-</td>
-<td style="text-align:right;">
-2
-</td>
-<td style="text-align:right;">
-2
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
 Gonzales, Christopher
 </td>
 <td style="text-align:left;">
@@ -23813,29 +25773,6 @@ full_volume
 </td>
 <td style="text-align:right;">
 4
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-Iverson, Jana
-</td>
-<td style="text-align:left;">
-<a href="https://nyu.databrary.org/party/334" class="uri">https://nyu.databrary.org/party/334</a>
-</td>
-<td style="text-align:left;">
-full_volume
-</td>
-<td style="text-align:right;">
-2
-</td>
-<td style="text-align:right;">
-4
-</td>
-<td style="text-align:right;">
-1
-</td>
-<td style="text-align:right;">
-3
 </td>
 </tr>
 <tr>
@@ -23863,29 +25800,6 @@ full_volume
 </tr>
 <tr>
 <td style="text-align:left;">
-Schneider, Joshua
-</td>
-<td style="text-align:left;">
-<a href="https://nyu.databrary.org/party/416" class="uri">https://nyu.databrary.org/party/416</a>
-</td>
-<td style="text-align:left;">
-full_volume
-</td>
-<td style="text-align:right;">
-2
-</td>
-<td style="text-align:right;">
-4
-</td>
-<td style="text-align:right;">
-1
-</td>
-<td style="text-align:right;">
-3
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
 Wilkinson, Krista
 </td>
 <td style="text-align:left;">
@@ -23905,6 +25819,29 @@ full_volume
 </td>
 <td style="text-align:right;">
 4
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Yu, Chen
+</td>
+<td style="text-align:left;">
+<a href="https://nyu.databrary.org/party/120" class="uri">https://nyu.databrary.org/party/120</a>
+</td>
+<td style="text-align:left;">
+full_volume
+</td>
+<td style="text-align:right;">
+2
+</td>
+<td style="text-align:right;">
+4
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+3
 </td>
 </tr>
 <tr>
@@ -24070,10 +26007,79 @@ full_volume
 </tr>
 <tr>
 <td style="text-align:left;">
+Ross-Sheehy, Shannon
+</td>
+<td style="text-align:left;">
+<a href="https://nyu.databrary.org/party/2073" class="uri">https://nyu.databrary.org/party/2073</a>
+</td>
+<td style="text-align:left;">
+full_volume
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+3
+</td>
+<td style="text-align:right;">
+3
+</td>
+<td style="text-align:right;">
+3
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Todd, James Torrence
+</td>
+<td style="text-align:left;">
+<a href="https://nyu.databrary.org/party/407" class="uri">https://nyu.databrary.org/party/407</a>
+</td>
+<td style="text-align:left;">
+full_volume
+</td>
+<td style="text-align:right;">
+3
+</td>
+<td style="text-align:right;">
+3
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+1
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
 Tummeltshammer, Kristen
 </td>
 <td style="text-align:left;">
 <a href="https://nyu.databrary.org/party/411" class="uri">https://nyu.databrary.org/party/411</a>
+</td>
+<td style="text-align:left;">
+full_volume
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+3
+</td>
+<td style="text-align:right;">
+3
+</td>
+<td style="text-align:right;">
+3
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Yurkovic-Harding, Julia
+</td>
+<td style="text-align:left;">
+<a href="https://nyu.databrary.org/party/9206" class="uri">https://nyu.databrary.org/party/9206</a>
 </td>
 <td style="text-align:left;">
 full_volume
@@ -24484,29 +26490,6 @@ full_volume
 </tr>
 <tr>
 <td style="text-align:left;">
-Todd, James Torrence
-</td>
-<td style="text-align:left;">
-<a href="https://nyu.databrary.org/party/407" class="uri">https://nyu.databrary.org/party/407</a>
-</td>
-<td style="text-align:left;">
-full_volume
-</td>
-<td style="text-align:right;">
-2
-</td>
-<td style="text-align:right;">
-2
-</td>
-<td style="text-align:right;">
-1
-</td>
-<td style="text-align:right;">
-1
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
 Voss, Annika
 </td>
 <td style="text-align:left;">
@@ -24622,29 +26605,6 @@ full_volume
 </tr>
 <tr>
 <td style="text-align:left;">
-Bayet, Laurie
-</td>
-<td style="text-align:left;">
-<a href="https://nyu.databrary.org/party/7006" class="uri">https://nyu.databrary.org/party/7006</a>
-</td>
-<td style="text-align:left;">
-full_volume
-</td>
-<td style="text-align:right;">
-1
-</td>
-<td style="text-align:right;">
-1
-</td>
-<td style="text-align:right;">
-1
-</td>
-<td style="text-align:right;">
-1
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
 Brandone, Amanda
 </td>
 <td style="text-align:left;">
@@ -24718,6 +26678,29 @@ DeLoache, Judy
 </td>
 <td style="text-align:left;">
 <a href="https://nyu.databrary.org/party/264" class="uri">https://nyu.databrary.org/party/264</a>
+</td>
+<td style="text-align:left;">
+full_volume
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+1
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Edgar, Elizabeth
+</td>
+<td style="text-align:left;">
+<a href="https://nyu.databrary.org/party/5329" class="uri">https://nyu.databrary.org/party/5329</a>
 </td>
 <td style="text-align:left;">
 full_volume
@@ -25036,10 +27019,10 @@ full_volume
 </tr>
 <tr>
 <td style="text-align:left;">
-Yu, Chen
+Carlsen, William
 </td>
 <td style="text-align:left;">
-<a href="https://nyu.databrary.org/party/120" class="uri">https://nyu.databrary.org/party/120</a>
+<a href="https://nyu.databrary.org/party/325" class="uri">https://nyu.databrary.org/party/325</a>
 </td>
 <td style="text-align:left;">
 full_volume
@@ -25048,21 +27031,44 @@ full_volume
 1
 </td>
 <td style="text-align:right;">
-1
+0
 </td>
 <td style="text-align:right;">
-1
+0
 </td>
 <td style="text-align:right;">
-1
+0
 </td>
 </tr>
 <tr>
 <td style="text-align:left;">
-Carlsen, William
+Corriveau, Kathleen
 </td>
 <td style="text-align:left;">
-<a href="https://nyu.databrary.org/party/325" class="uri">https://nyu.databrary.org/party/325</a>
+<a href="https://nyu.databrary.org/party/1612" class="uri">https://nyu.databrary.org/party/1612</a>
+</td>
+<td style="text-align:left;">
+full_volume
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+0
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Lesage, Kirsten A.
+</td>
+<td style="text-align:left;">
+<a href="https://nyu.databrary.org/party/1501" class="uri">https://nyu.databrary.org/party/1501</a>
 </td>
 <td style="text-align:left;">
 full_volume
@@ -25132,6 +27138,29 @@ Rushton, Gregory
 </td>
 <td style="text-align:left;">
 <a href="https://nyu.databrary.org/party/5351" class="uri">https://nyu.databrary.org/party/5351</a>
+</td>
+<td style="text-align:left;">
+full_volume
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+0
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Weisman, Kara
+</td>
+<td style="text-align:left;">
+<a href="https://nyu.databrary.org/party/7540" class="uri">https://nyu.databrary.org/party/7540</a>
 </td>
 <td style="text-align:left;">
 full_volume
@@ -25199,7 +27228,7 @@ full_volume
 59
 </td>
 <td style="text-align:right;">
-2605
+2614
 </td>
 <td style="text-align:right;">
 1
@@ -25219,13 +27248,13 @@ Tamis-LeMonda, Catherine
 full_volume
 </td>
 <td style="text-align:right;">
-21
+25
 </td>
 <td style="text-align:right;">
-2219
+2332
 </td>
 <td style="text-align:right;">
-1
+0
 </td>
 <td style="text-align:right;">
 1351
@@ -25242,13 +27271,13 @@ Weisberg, Deena Skolnick
 full_volume
 </td>
 <td style="text-align:right;">
-12
+14
 </td>
 <td style="text-align:right;">
-1461
+1633
 </td>
 <td style="text-align:right;">
-34
+17
 </td>
 <td style="text-align:right;">
 216
@@ -25656,13 +27685,13 @@ Jirout, Jamie
 full_volume
 </td>
 <td style="text-align:right;">
-10
+12
 </td>
 <td style="text-align:right;">
-256
+259
 </td>
 <td style="text-align:right;">
-1
+0
 </td>
 <td style="text-align:right;">
 77
@@ -25969,6 +27998,29 @@ full_volume
 </tr>
 <tr>
 <td style="text-align:left;">
+Huenerfauth, Matt
+</td>
+<td style="text-align:left;">
+<a href="https://nyu.databrary.org/party/6349" class="uri">https://nyu.databrary.org/party/6349</a>
+</td>
+<td style="text-align:left;">
+full_volume
+</td>
+<td style="text-align:right;">
+5
+</td>
+<td style="text-align:right;">
+108
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+46
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
 Blumberg, Mark
 </td>
 <td style="text-align:left;">
@@ -25988,6 +28040,29 @@ full_volume
 </td>
 <td style="text-align:right;">
 57
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Escobar, Kelly
+</td>
+<td style="text-align:left;">
+<a href="https://nyu.databrary.org/party/862" class="uri">https://nyu.databrary.org/party/862</a>
+</td>
+<td style="text-align:left;">
+full_volume
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+103
+</td>
+<td style="text-align:right;">
+103
+</td>
+<td style="text-align:right;">
+103
 </td>
 </tr>
 <tr>
@@ -26176,6 +28251,29 @@ full_volume
 </tr>
 <tr>
 <td style="text-align:left;">
+Messinger, Daniel
+</td>
+<td style="text-align:left;">
+<a href="https://nyu.databrary.org/party/70" class="uri">https://nyu.databrary.org/party/70</a>
+</td>
+<td style="text-align:left;">
+full_volume
+</td>
+<td style="text-align:right;">
+4
+</td>
+<td style="text-align:right;">
+73
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+43
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
 Casasola, Marianella
 </td>
 <td style="text-align:left;">
@@ -26192,29 +28290,6 @@ full_volume
 </td>
 <td style="text-align:right;">
 2
-</td>
-<td style="text-align:right;">
-43
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-Messinger, Daniel
-</td>
-<td style="text-align:left;">
-<a href="https://nyu.databrary.org/party/70" class="uri">https://nyu.databrary.org/party/70</a>
-</td>
-<td style="text-align:left;">
-full_volume
-</td>
-<td style="text-align:right;">
-3
-</td>
-<td style="text-align:right;">
-69
-</td>
-<td style="text-align:right;">
-13
 </td>
 <td style="text-align:right;">
 43
@@ -26241,29 +28316,6 @@ full_volume
 </td>
 <td style="text-align:right;">
 32
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-Huenerfauth, Matt
-</td>
-<td style="text-align:left;">
-<a href="https://nyu.databrary.org/party/6349" class="uri">https://nyu.databrary.org/party/6349</a>
-</td>
-<td style="text-align:left;">
-full_volume
-</td>
-<td style="text-align:right;">
-3
-</td>
-<td style="text-align:right;">
-61
-</td>
-<td style="text-align:right;">
-15
-</td>
-<td style="text-align:right;">
-23
 </td>
 </tr>
 <tr>
@@ -26333,6 +28385,29 @@ full_volume
 </td>
 <td style="text-align:right;">
 59
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Barr, Rachel
+</td>
+<td style="text-align:left;">
+<a href="https://nyu.databrary.org/party/104" class="uri">https://nyu.databrary.org/party/104</a>
+</td>
+<td style="text-align:left;">
+full_volume
+</td>
+<td style="text-align:right;">
+8
+</td>
+<td style="text-align:right;">
+46
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+22
 </td>
 </tr>
 <tr>
@@ -26590,6 +28665,52 @@ full_volume
 </tr>
 <tr>
 <td style="text-align:left;">
+Camparo Avila, Daniel
+</td>
+<td style="text-align:left;">
+<a href="https://nyu.databrary.org/party/2581" class="uri">https://nyu.databrary.org/party/2581</a>
+</td>
+<td style="text-align:left;">
+full_volume
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+40
+</td>
+<td style="text-align:right;">
+40
+</td>
+<td style="text-align:right;">
+40
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Hontou, Cecilia
+</td>
+<td style="text-align:left;">
+<a href="https://nyu.databrary.org/party/7265" class="uri">https://nyu.databrary.org/party/7265</a>
+</td>
+<td style="text-align:left;">
+full_volume
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+40
+</td>
+<td style="text-align:right;">
+40
+</td>
+<td style="text-align:right;">
+40
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
 Fabricius, William
 </td>
 <td style="text-align:left;">
@@ -26636,6 +28757,29 @@ full_volume
 </tr>
 <tr>
 <td style="text-align:left;">
+Baldwin, Dare
+</td>
+<td style="text-align:left;">
+<a href="https://nyu.databrary.org/party/3746" class="uri">https://nyu.databrary.org/party/3746</a>
+</td>
+<td style="text-align:left;">
+full_volume
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+37
+</td>
+<td style="text-align:right;">
+37
+</td>
+<td style="text-align:right;">
+37
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
 Cole, Pamela M
 </td>
 <td style="text-align:left;">
@@ -26655,6 +28799,29 @@ full_volume
 </td>
 <td style="text-align:right;">
 32
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Kosie, Jessica E
+</td>
+<td style="text-align:left;">
+<a href="https://nyu.databrary.org/party/588" class="uri">https://nyu.databrary.org/party/588</a>
+</td>
+<td style="text-align:left;">
+full_volume
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+37
+</td>
+<td style="text-align:right;">
+37
+</td>
+<td style="text-align:right;">
+37
 </td>
 </tr>
 <tr>
@@ -26843,48 +29010,25 @@ full_volume
 </tr>
 <tr>
 <td style="text-align:left;">
-Camparo Avila, Daniel
+West, Kelsey Louise
 </td>
 <td style="text-align:left;">
-<a href="https://nyu.databrary.org/party/2581" class="uri">https://nyu.databrary.org/party/2581</a>
-</td>
-<td style="text-align:left;">
-full_volume
-</td>
-<td style="text-align:right;">
-1
-</td>
-<td style="text-align:right;">
-34
-</td>
-<td style="text-align:right;">
-34
-</td>
-<td style="text-align:right;">
-34
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-Hontou, Cecilia
-</td>
-<td style="text-align:left;">
-<a href="https://nyu.databrary.org/party/7265" class="uri">https://nyu.databrary.org/party/7265</a>
+<a href="https://nyu.databrary.org/party/600" class="uri">https://nyu.databrary.org/party/600</a>
 </td>
 <td style="text-align:left;">
 full_volume
 </td>
 <td style="text-align:right;">
+3
+</td>
+<td style="text-align:right;">
+33
+</td>
+<td style="text-align:right;">
 1
 </td>
 <td style="text-align:right;">
-34
-</td>
-<td style="text-align:right;">
-34
-</td>
-<td style="text-align:right;">
-34
+30
 </td>
 </tr>
 <tr>
@@ -26958,6 +29102,52 @@ full_volume
 </tr>
 <tr>
 <td style="text-align:left;">
+Prosser, Laura
+</td>
+<td style="text-align:left;">
+<a href="https://nyu.databrary.org/party/591" class="uri">https://nyu.databrary.org/party/591</a>
+</td>
+<td style="text-align:left;">
+full_volume
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+29
+</td>
+<td style="text-align:right;">
+29
+</td>
+<td style="text-align:right;">
+29
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Shirai, Nobu
+</td>
+<td style="text-align:left;">
+<a href="https://nyu.databrary.org/party/2219" class="uri">https://nyu.databrary.org/party/2219</a>
+</td>
+<td style="text-align:left;">
+full_volume
+</td>
+<td style="text-align:right;">
+9
+</td>
+<td style="text-align:right;">
+25
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+17
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
 Staff
 </td>
 <td style="text-align:left;">
@@ -26977,52 +29167,6 @@ full_volume
 </td>
 <td style="text-align:right;">
 25
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-Shirai, Nobu
-</td>
-<td style="text-align:left;">
-<a href="https://nyu.databrary.org/party/2219" class="uri">https://nyu.databrary.org/party/2219</a>
-</td>
-<td style="text-align:left;">
-full_volume
-</td>
-<td style="text-align:right;">
-8
-</td>
-<td style="text-align:right;">
-24
-</td>
-<td style="text-align:right;">
-1
-</td>
-<td style="text-align:right;">
-17
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-West, Kelsey Louise
-</td>
-<td style="text-align:left;">
-<a href="https://nyu.databrary.org/party/600" class="uri">https://nyu.databrary.org/party/600</a>
-</td>
-<td style="text-align:left;">
-full_volume
-</td>
-<td style="text-align:right;">
-3
-</td>
-<td style="text-align:right;">
-24
-</td>
-<td style="text-align:right;">
-1
-</td>
-<td style="text-align:right;">
-21
 </td>
 </tr>
 <tr>
@@ -27096,6 +29240,29 @@ full_volume
 </tr>
 <tr>
 <td style="text-align:left;">
+Herzberg, Orit
+</td>
+<td style="text-align:left;">
+<a href="https://nyu.databrary.org/party/3137" class="uri">https://nyu.databrary.org/party/3137</a>
+</td>
+<td style="text-align:left;">
+full_volume
+</td>
+<td style="text-align:right;">
+4
+</td>
+<td style="text-align:right;">
+20
+</td>
+<td style="text-align:right;">
+3
+</td>
+<td style="text-align:right;">
+8
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
 Soska, Kasey
 </td>
 <td style="text-align:left;">
@@ -27161,29 +29328,6 @@ full_volume
 </td>
 <td style="text-align:right;">
 19
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-Barr, Rachel
-</td>
-<td style="text-align:left;">
-<a href="https://nyu.databrary.org/party/104" class="uri">https://nyu.databrary.org/party/104</a>
-</td>
-<td style="text-align:left;">
-full_volume
-</td>
-<td style="text-align:right;">
-7
-</td>
-<td style="text-align:right;">
-17
-</td>
-<td style="text-align:right;">
-0
-</td>
-<td style="text-align:right;">
-12
 </td>
 </tr>
 <tr>
@@ -27257,25 +29401,94 @@ full_volume
 </tr>
 <tr>
 <td style="text-align:left;">
-Herzberg, Orit
+Fasano, Regina M.
 </td>
 <td style="text-align:left;">
-<a href="https://nyu.databrary.org/party/3137" class="uri">https://nyu.databrary.org/party/3137</a>
+<a href="https://nyu.databrary.org/party/4314" class="uri">https://nyu.databrary.org/party/4314</a>
 </td>
 <td style="text-align:left;">
 full_volume
 </td>
 <td style="text-align:right;">
-3
+1
 </td>
 <td style="text-align:right;">
-15
+16
 </td>
 <td style="text-align:right;">
-3
+16
 </td>
 <td style="text-align:right;">
-8
+16
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Gonzalez, Brittney Monique
+</td>
+<td style="text-align:left;">
+<a href="https://nyu.databrary.org/party/8104" class="uri">https://nyu.databrary.org/party/8104</a>
+</td>
+<td style="text-align:left;">
+full_volume
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+16
+</td>
+<td style="text-align:right;">
+16
+</td>
+<td style="text-align:right;">
+16
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Perry, Lynn
+</td>
+<td style="text-align:left;">
+<a href="https://nyu.databrary.org/party/1974" class="uri">https://nyu.databrary.org/party/1974</a>
+</td>
+<td style="text-align:left;">
+full_volume
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+16
+</td>
+<td style="text-align:right;">
+16
+</td>
+<td style="text-align:right;">
+16
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+vitale, laura corina
+</td>
+<td style="text-align:left;">
+<a href="https://nyu.databrary.org/party/6565" class="uri">https://nyu.databrary.org/party/6565</a>
+</td>
+<td style="text-align:left;">
+full_volume
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+16
+</td>
+<td style="text-align:right;">
+16
+</td>
+<td style="text-align:right;">
+16
 </td>
 </tr>
 <tr>
@@ -27299,75 +29512,6 @@ full_volume
 </td>
 <td style="text-align:right;">
 14
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-Fasano, Regina M.
-</td>
-<td style="text-align:left;">
-<a href="https://nyu.databrary.org/party/4314" class="uri">https://nyu.databrary.org/party/4314</a>
-</td>
-<td style="text-align:left;">
-full_volume
-</td>
-<td style="text-align:right;">
-1
-</td>
-<td style="text-align:right;">
-13
-</td>
-<td style="text-align:right;">
-13
-</td>
-<td style="text-align:right;">
-13
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-Gonzalez, Brittney Monique
-</td>
-<td style="text-align:left;">
-<a href="https://nyu.databrary.org/party/8104" class="uri">https://nyu.databrary.org/party/8104</a>
-</td>
-<td style="text-align:left;">
-full_volume
-</td>
-<td style="text-align:right;">
-1
-</td>
-<td style="text-align:right;">
-13
-</td>
-<td style="text-align:right;">
-13
-</td>
-<td style="text-align:right;">
-13
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-Perry, Lynn
-</td>
-<td style="text-align:left;">
-<a href="https://nyu.databrary.org/party/1974" class="uri">https://nyu.databrary.org/party/1974</a>
-</td>
-<td style="text-align:left;">
-full_volume
-</td>
-<td style="text-align:right;">
-1
-</td>
-<td style="text-align:right;">
-13
-</td>
-<td style="text-align:right;">
-13
-</td>
-<td style="text-align:right;">
-13
 </td>
 </tr>
 <tr>
@@ -27414,29 +29558,6 @@ full_volume
 </td>
 <td style="text-align:right;">
 12
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-vitale, laura corina
-</td>
-<td style="text-align:left;">
-<a href="https://nyu.databrary.org/party/6565" class="uri">https://nyu.databrary.org/party/6565</a>
-</td>
-<td style="text-align:left;">
-full_volume
-</td>
-<td style="text-align:right;">
-1
-</td>
-<td style="text-align:right;">
-13
-</td>
-<td style="text-align:right;">
-13
-</td>
-<td style="text-align:right;">
-13
 </td>
 </tr>
 <tr>
@@ -27556,6 +29677,29 @@ full_volume
 </tr>
 <tr>
 <td style="text-align:left;">
+Bayet, Laurie
+</td>
+<td style="text-align:left;">
+<a href="https://nyu.databrary.org/party/7006" class="uri">https://nyu.databrary.org/party/7006</a>
+</td>
+<td style="text-align:left;">
+full_volume
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+9
+</td>
+<td style="text-align:right;">
+9
+</td>
+<td style="text-align:right;">
+9
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
 Foster-Hanson, Emily
 </td>
 <td style="text-align:left;">
@@ -27602,6 +29746,75 @@ full_volume
 </tr>
 <tr>
 <td style="text-align:left;">
+Fyfe, Emily Ruth
+</td>
+<td style="text-align:left;">
+<a href="https://nyu.databrary.org/party/2536" class="uri">https://nyu.databrary.org/party/2536</a>
+</td>
+<td style="text-align:left;">
+full_volume
+</td>
+<td style="text-align:right;">
+2
+</td>
+<td style="text-align:right;">
+8
+</td>
+<td style="text-align:right;">
+4
+</td>
+<td style="text-align:right;">
+4
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Evans, Natalie
+</td>
+<td style="text-align:left;">
+<a href="https://nyu.databrary.org/party/8647" class="uri">https://nyu.databrary.org/party/8647</a>
+</td>
+<td style="text-align:left;">
+full_volume
+</td>
+<td style="text-align:right;">
+4
+</td>
+<td style="text-align:right;">
+7
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+3
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Iverson, Jana
+</td>
+<td style="text-align:left;">
+<a href="https://nyu.databrary.org/party/334" class="uri">https://nyu.databrary.org/party/334</a>
+</td>
+<td style="text-align:left;">
+full_volume
+</td>
+<td style="text-align:right;">
+4
+</td>
+<td style="text-align:right;">
+7
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+3
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
 MacWhinney, Brian
 </td>
 <td style="text-align:left;">
@@ -27625,6 +29838,29 @@ full_volume
 </tr>
 <tr>
 <td style="text-align:left;">
+Schneider, Joshua
+</td>
+<td style="text-align:left;">
+<a href="https://nyu.databrary.org/party/416" class="uri">https://nyu.databrary.org/party/416</a>
+</td>
+<td style="text-align:left;">
+full_volume
+</td>
+<td style="text-align:right;">
+3
+</td>
+<td style="text-align:right;">
+7
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+3
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
 Xu, Melody
 </td>
 <td style="text-align:left;">
@@ -27644,6 +29880,29 @@ full_volume
 </td>
 <td style="text-align:right;">
 7
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Bahrick, Lorraine E.
+</td>
+<td style="text-align:left;">
+<a href="https://nyu.databrary.org/party/376" class="uri">https://nyu.databrary.org/party/376</a>
+</td>
+<td style="text-align:left;">
+full_volume
+</td>
+<td style="text-align:right;">
+4
+</td>
+<td style="text-align:right;">
+6
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+3
 </td>
 </tr>
 <tr>
@@ -27690,29 +29949,6 @@ full_volume
 </td>
 <td style="text-align:right;">
 6
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-Bahrick, Lorraine E.
-</td>
-<td style="text-align:left;">
-<a href="https://nyu.databrary.org/party/376" class="uri">https://nyu.databrary.org/party/376</a>
-</td>
-<td style="text-align:left;">
-full_volume
-</td>
-<td style="text-align:right;">
-3
-</td>
-<td style="text-align:right;">
-5
-</td>
-<td style="text-align:right;">
-1
-</td>
-<td style="text-align:right;">
-3
 </td>
 </tr>
 <tr>
@@ -27855,6 +30091,29 @@ full_volume
 </tr>
 <tr>
 <td style="text-align:left;">
+Swirbul, Mackenzie
+</td>
+<td style="text-align:left;">
+<a href="https://nyu.databrary.org/party/7148" class="uri">https://nyu.databrary.org/party/7148</a>
+</td>
+<td style="text-align:left;">
+full_volume
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+5
+</td>
+<td style="text-align:right;">
+5
+</td>
+<td style="text-align:right;">
+5
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
 Amso, Dima
 </td>
 <td style="text-align:left;">
@@ -27901,29 +30160,6 @@ full_volume
 </tr>
 <tr>
 <td style="text-align:left;">
-Evans, Natalie
-</td>
-<td style="text-align:left;">
-<a href="https://nyu.databrary.org/party/8647" class="uri">https://nyu.databrary.org/party/8647</a>
-</td>
-<td style="text-align:left;">
-full_volume
-</td>
-<td style="text-align:right;">
-2
-</td>
-<td style="text-align:right;">
-4
-</td>
-<td style="text-align:right;">
-2
-</td>
-<td style="text-align:right;">
-2
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
 Gonzales, Christopher
 </td>
 <td style="text-align:left;">
@@ -27943,29 +30179,6 @@ full_volume
 </td>
 <td style="text-align:right;">
 4
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-Iverson, Jana
-</td>
-<td style="text-align:left;">
-<a href="https://nyu.databrary.org/party/334" class="uri">https://nyu.databrary.org/party/334</a>
-</td>
-<td style="text-align:left;">
-full_volume
-</td>
-<td style="text-align:right;">
-2
-</td>
-<td style="text-align:right;">
-4
-</td>
-<td style="text-align:right;">
-1
-</td>
-<td style="text-align:right;">
-3
 </td>
 </tr>
 <tr>
@@ -27993,29 +30206,6 @@ full_volume
 </tr>
 <tr>
 <td style="text-align:left;">
-Schneider, Joshua
-</td>
-<td style="text-align:left;">
-<a href="https://nyu.databrary.org/party/416" class="uri">https://nyu.databrary.org/party/416</a>
-</td>
-<td style="text-align:left;">
-full_volume
-</td>
-<td style="text-align:right;">
-2
-</td>
-<td style="text-align:right;">
-4
-</td>
-<td style="text-align:right;">
-1
-</td>
-<td style="text-align:right;">
-3
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
 Wilkinson, Krista
 </td>
 <td style="text-align:left;">
@@ -28035,6 +30225,29 @@ full_volume
 </td>
 <td style="text-align:right;">
 4
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Yu, Chen
+</td>
+<td style="text-align:left;">
+<a href="https://nyu.databrary.org/party/120" class="uri">https://nyu.databrary.org/party/120</a>
+</td>
+<td style="text-align:left;">
+full_volume
+</td>
+<td style="text-align:right;">
+2
+</td>
+<td style="text-align:right;">
+4
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+3
 </td>
 </tr>
 <tr>
@@ -28200,10 +30413,79 @@ full_volume
 </tr>
 <tr>
 <td style="text-align:left;">
+Ross-Sheehy, Shannon
+</td>
+<td style="text-align:left;">
+<a href="https://nyu.databrary.org/party/2073" class="uri">https://nyu.databrary.org/party/2073</a>
+</td>
+<td style="text-align:left;">
+full_volume
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+3
+</td>
+<td style="text-align:right;">
+3
+</td>
+<td style="text-align:right;">
+3
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Todd, James Torrence
+</td>
+<td style="text-align:left;">
+<a href="https://nyu.databrary.org/party/407" class="uri">https://nyu.databrary.org/party/407</a>
+</td>
+<td style="text-align:left;">
+full_volume
+</td>
+<td style="text-align:right;">
+3
+</td>
+<td style="text-align:right;">
+3
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+1
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
 Tummeltshammer, Kristen
 </td>
 <td style="text-align:left;">
 <a href="https://nyu.databrary.org/party/411" class="uri">https://nyu.databrary.org/party/411</a>
+</td>
+<td style="text-align:left;">
+full_volume
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+3
+</td>
+<td style="text-align:right;">
+3
+</td>
+<td style="text-align:right;">
+3
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Yurkovic-Harding, Julia
+</td>
+<td style="text-align:left;">
+<a href="https://nyu.databrary.org/party/9206" class="uri">https://nyu.databrary.org/party/9206</a>
 </td>
 <td style="text-align:left;">
 full_volume
@@ -28614,29 +30896,6 @@ full_volume
 </tr>
 <tr>
 <td style="text-align:left;">
-Todd, James Torrence
-</td>
-<td style="text-align:left;">
-<a href="https://nyu.databrary.org/party/407" class="uri">https://nyu.databrary.org/party/407</a>
-</td>
-<td style="text-align:left;">
-full_volume
-</td>
-<td style="text-align:right;">
-2
-</td>
-<td style="text-align:right;">
-2
-</td>
-<td style="text-align:right;">
-1
-</td>
-<td style="text-align:right;">
-1
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
 Voss, Annika
 </td>
 <td style="text-align:left;">
@@ -28752,29 +31011,6 @@ full_volume
 </tr>
 <tr>
 <td style="text-align:left;">
-Bayet, Laurie
-</td>
-<td style="text-align:left;">
-<a href="https://nyu.databrary.org/party/7006" class="uri">https://nyu.databrary.org/party/7006</a>
-</td>
-<td style="text-align:left;">
-full_volume
-</td>
-<td style="text-align:right;">
-1
-</td>
-<td style="text-align:right;">
-1
-</td>
-<td style="text-align:right;">
-1
-</td>
-<td style="text-align:right;">
-1
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
 Brandone, Amanda
 </td>
 <td style="text-align:left;">
@@ -28848,6 +31084,29 @@ DeLoache, Judy
 </td>
 <td style="text-align:left;">
 <a href="https://nyu.databrary.org/party/264" class="uri">https://nyu.databrary.org/party/264</a>
+</td>
+<td style="text-align:left;">
+full_volume
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+1
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Edgar, Elizabeth
+</td>
+<td style="text-align:left;">
+<a href="https://nyu.databrary.org/party/5329" class="uri">https://nyu.databrary.org/party/5329</a>
 </td>
 <td style="text-align:left;">
 full_volume
@@ -29166,10 +31425,10 @@ full_volume
 </tr>
 <tr>
 <td style="text-align:left;">
-Yu, Chen
+Carlsen, William
 </td>
 <td style="text-align:left;">
-<a href="https://nyu.databrary.org/party/120" class="uri">https://nyu.databrary.org/party/120</a>
+<a href="https://nyu.databrary.org/party/325" class="uri">https://nyu.databrary.org/party/325</a>
 </td>
 <td style="text-align:left;">
 full_volume
@@ -29178,21 +31437,44 @@ full_volume
 1
 </td>
 <td style="text-align:right;">
-1
+0
 </td>
 <td style="text-align:right;">
-1
+0
 </td>
 <td style="text-align:right;">
-1
+0
 </td>
 </tr>
 <tr>
 <td style="text-align:left;">
-Carlsen, William
+Corriveau, Kathleen
 </td>
 <td style="text-align:left;">
-<a href="https://nyu.databrary.org/party/325" class="uri">https://nyu.databrary.org/party/325</a>
+<a href="https://nyu.databrary.org/party/1612" class="uri">https://nyu.databrary.org/party/1612</a>
+</td>
+<td style="text-align:left;">
+full_volume
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+0
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Lesage, Kirsten A.
+</td>
+<td style="text-align:left;">
+<a href="https://nyu.databrary.org/party/1501" class="uri">https://nyu.databrary.org/party/1501</a>
 </td>
 <td style="text-align:left;">
 full_volume
@@ -29262,6 +31544,29 @@ Rushton, Gregory
 </td>
 <td style="text-align:left;">
 <a href="https://nyu.databrary.org/party/5351" class="uri">https://nyu.databrary.org/party/5351</a>
+</td>
+<td style="text-align:left;">
+full_volume
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+0
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Weisman, Kara
+</td>
+<td style="text-align:left;">
+<a href="https://nyu.databrary.org/party/7540" class="uri">https://nyu.databrary.org/party/7540</a>
 </td>
 <td style="text-align:left;">
 full_volume
