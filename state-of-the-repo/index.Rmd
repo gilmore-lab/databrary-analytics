@@ -14,7 +14,6 @@ params:
   update_stats: False
   from_gs: False
   update_csv: False
-  vols_to_test: 10
 ---
 
 ```{r set-up, include=FALSE}
@@ -29,7 +28,9 @@ source("R/helpers.R")
 
 This document summarizes information about Databrary's holdings, partners, and citations. It draws upon datasets specific to these categories that are generated elsewhere.
 
-# Institutions & Authorized Users 
+# Community
+
+The Databrary community consists of Authorized Investigators and their Insitutions.
 
 ## Growth
 
@@ -68,7 +69,7 @@ gte5_ais <- with_ais %>%
 
 ### Institutions with >= 5 investigators
 
-There are $n=$ `r dim(gte5_ais)[1]` institutions with at least five authorized (PI-level) investigators.
+There are $n=$ `r dim(gte5_ais)[1]` institutions with at least five Authorized (PI-level) Investigators.
 They are as follows:
 
 ```{r}
@@ -90,7 +91,7 @@ gte5_affils <- invest_df %>%
   dplyr::filter(., n_affils >= 5)
 ```
 
-In turn, there are $n=$ `r dim(gte5_affils)[1]` Authorized Investigators with 5 or more affiliates (staff, students, postdocs, or other collaborators).
+In turn, there are $n=$ `r dim(gte5_affils)[1]` Authorized Investigators with 5 or more affiliates (staff, students, postdocs, or other collaborators) who the Authorized Investigators supervise.
 
 ```{r}
 ggplot(gte5_affils) +
@@ -109,6 +110,8 @@ gte5_affils %>%
 ```
 
 # Volumes
+
+A dataset or a collection of research materials is stored as a volume on Databrary.
 
 ## Growth
 
@@ -199,6 +202,8 @@ unique_vols_overview %>%
 
 ## Types of data
 
+Databrary specializes in storing and sharing video and audio recordings, but the system supports the storage of other file types, see <https://nyu.databrary.org/asset/formats>. The following summarizes the composition of currently *shared* data:
+
 ```{r}
 #quietly_read_csv <- safely(readr::read_csv)
 
@@ -210,11 +215,11 @@ if (dir.exists('../volumes-with-videos-annotations/csv')) {
 }
 ```
 
-### Volume focus
+### Data by volume
 
-There are $n=$ `r length(unique(assets_df$vol_id))` shared volumes with assets.
+There are $n=$ `r length(unique(assets_df$vol_id))` shared volumes with data/assets.
 
-The following shows the number of shared volumes with a given asset type.
+The following shows the number of shared volumes with a given data/asset type.
 
 ```{r}
 assets_df %>%
@@ -247,7 +252,7 @@ assets_df %>%
 
 Databrary encourages users doing research with human participants to report demographic data in a structured format so that others may more easily find and reuse data relevant to their questions.
 
-```{r}
+```{r load-demog-csvs}
 load_demog_csvs <- function(dir = "../participant-demographics/csv") {
   if (!is.character(dir)) {
     stop("'dir' must be a string")
@@ -256,11 +261,11 @@ load_demog_csvs <- function(dir = "../participant-demographics/csv") {
     stop("'dir' does not exist.")
   }
   
-  fl <- list.files(dir, "-demog\\.csv$", full.names = TRUE)
+  fl <- list.files(dir, "[0-9]{4}-sess-materials\\.csv$", full.names = TRUE)
   if (is.null(fl)) {
     stop(paste0("No csv files in ", dir, "."))
   }
-  purrr::map_dfr(fl, readr::read_csv, show_col_types = FALSE)
+  purrr::map_dfr(fl, read.csv, colClasses = "character")
 }
 
 demo_df <- load_demog_csvs()
@@ -268,7 +273,14 @@ demo_df <- load_demog_csvs()
 
 ### Overall
 
-Databrary has demographic data for at least $n=$ `r sum(!is.na(demo_df$session_id))` individual sessions. This is a slight underestimate of the number of participants since some sessions include more than one participant.
+```{r}
+demo_df <- demo_df %>%
+  dplyr::filter(., session_date != "materials")
+```
+
+Databrary has demographic data for at least $n=$ `r sum(!is.na(demo_df$session_id))` individual participant sessions.
+
+Not every volume reports the same collection of demographic variables, so the numbers will vary by variable.
 
 ```{r}
 demo_df <- demo_df %>%
@@ -276,6 +288,8 @@ demo_df <- demo_df %>%
 ```
 
 ### Gender
+
+The largest number of volumes report gender.
 
 #### Volumes and sessions
 
