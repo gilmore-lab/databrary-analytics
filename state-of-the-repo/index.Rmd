@@ -30,7 +30,7 @@ This document summarizes information about Databrary's holdings, partners, and c
 
 # Community
 
-The Databrary community consists of Authorized Investigators and their Insitutions.
+The Databrary community consists of Institutions and their Authorized Investigators. Authorized Investigators may, in turn, grant access to Affiliates whose access they supervise.
 
 ## Growth
 
@@ -64,10 +64,11 @@ ggplot(with_ais) +
 ```{r}
 gte5_ais <- with_ais %>%
   dplyr::filter(., n_auth_invest >= 5) %>%
-  dplyr::mutate(., db_url = paste0("https://nyu.databrary.org/party/", inst_id))
+  dplyr::mutate(., db_url = paste0("https://nyu.databrary.org/party/", inst_id)) %>%
+  dplyr::distinct(.)
 ```
 
-### Institutions with >= 5 investigators
+## Institutions with >= 5 investigators
 
 There are $n=$ `r dim(gte5_ais)[1]` institutions with at least five Authorized (PI-level) Investigators.
 They are as follows:
@@ -76,16 +77,18 @@ They are as follows:
 gte5_ais %>%
   dplyr::arrange(., desc(n_auth_invest)) %>%
   dplyr::select(., inst_id, inst_name, db_url, n_auth_invest) %>%
+  dplyr::distinct(.) %>%
   kableExtra::kbl(.) %>%
   kableExtra::kable_styling(.) %>%
   kableExtra::scroll_box(., height = "400px")
 ```
 
-## Investigators with >= 5 affiliates
+### Investigators with >= 5 affiliates
 
 ```{r}
 invest_df <- readr::read_csv("../institutions-investigators/csv/investigators.csv",
                       show_col_types = FALSE)
+
 gte5_affils <- invest_df %>%
   dplyr::arrange(., ai_id, ai_last) %>%
   dplyr::filter(., n_affils >= 5)
@@ -104,6 +107,7 @@ gte5_affils %>%
   dplyr::arrange(., desc(n_affils)) %>%
   dplyr::select(., ai_id, ai_last, ai_first, affiliation, ai_db_url, n_affils) %>%
   dplyr::group_by(., ai_id, ai_last) %>%
+  dplyr::distinct(.) %>%
   kableExtra::kbl(.) %>%
   kableExtra::kable_styling(.) %>%
   kableExtra::scroll_box(., height = "400px")
