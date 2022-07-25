@@ -83,7 +83,7 @@ gte5_ais %>%
   kableExtra::scroll_box(., height = "400px")
 ```
 
-### Investigators with >= 5 affiliates
+## Investigators with >= 5 affiliates
 
 ```{r}
 invest_df <- readr::read_csv("../institutions-investigators/csv/investigators.csv",
