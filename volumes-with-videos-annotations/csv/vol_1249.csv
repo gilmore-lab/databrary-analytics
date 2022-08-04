@@ -1,0 +1,7 @@
+vol_id,mimetype,extension,asset_type,n_files,tot_size_gb,tot_dur_hrs
+1249,application/pdf,pdf,Portable document,6,0,0
+1249,application/vnd.openxmlformats-officedocument.wordprocessingml.document,docx,Microsoft Word (Office Open XML) document,1,0,0
+1249,text/csv,csv,Comma-separated values,1,0,0
+1249,text/elan,eaf,ELAN - Linguistic Annotator,1853,0,0
+1249,text/plain,txt,Plain text,140,0,0
+1249,video/mp4,mp4,MPEG-4 video,960,0,3.109751388888889

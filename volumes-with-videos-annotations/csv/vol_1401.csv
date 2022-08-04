@@ -1,0 +1,4 @@
+vol_id,mimetype,extension,asset_type,n_files,tot_size_gb,tot_dur_hrs
+1401,application/pdf,pdf,Portable document,6,0.005467271484375,0
+1401,application/vnd.openxmlformats-officedocument.spreadsheetml.sheet,xlsx,Microsoft Excel (Office Open XML) workbook,1,8.87451171875e-5,0
+1401,application/vnd.openxmlformats-officedocument.wordprocessingml.document,docx,Microsoft Word (Office Open XML) document,11,0.0010586962890625,0

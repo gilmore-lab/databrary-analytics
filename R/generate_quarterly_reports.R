@@ -26,18 +26,20 @@ make_next_ten <- function(n) {
   }
 }
 
-## Log in to Databrary
-
-max_party_id <- 9100
-max_volume_id <- 1450 # Must end in zero for now, so see next function
-max_party_id <- make_next_ten(max_party_id)
-
-login <- databraryapi::login_db()
+# Parameters
 
 update_asset_data <- TRUE # This is very time consuming, but should be done periodically, probably quarterly
 update_demog_data <- TRUE # This is very time consuming, but should be done periodically, probably quarterly
 update_shared_volumes <- TRUE
 update_volume_tags <- TRUE
+
+max_party_id <- 12000
+max_volume_id <- 1500 # Must end in zero for now, so see next function
+max_party_id <- make_next_ten(max_party_id)
+
+## Log in to Databrary
+
+login <- databraryapi::login_db()
 
 ## Funders report
 
@@ -46,8 +48,8 @@ update_volume_tags <- TRUE
 message("----- Generating funders report -----")
 copy_to_archive("funders", "funder-report.html")
 rmarkdown::render(input = "funders/funder-report.Rmd",
-                  params = list(use_saved_file = "False"))
-
+                  params = list(use_saved_file = "False", 
+                                max_vol_id = max_volume_id ))
 ## Institutions
 
 message("----- Generating institutions report -----")
@@ -81,7 +83,8 @@ copy_to_archive("volumes-with-videos-annotations", "assets-stats.html")
 if (update_asset_data) {
   message("-- Regenerating asset data from all volumes --")
   rmarkdown::render("volumes-with-videos-annotations/assets-stats.Rmd", 
-                    params=list(use_saved_csvs=FALSE))
+                    params=list(use_saved_csvs=FALSE,
+                                max_vol_id = max_volume_id))
 } else {
   message("-- Using previously saved volume asset data --")
   rmarkdown::render("volumes-with-videos-annotations/assets-stats.Rmd", 
@@ -95,22 +98,22 @@ message("----- Generating volume-level demographics report -----")
 copy_to_archive("participant-demographics", "participant-demog-report.html")
 if (update_demog_data) {
   message("-- Regenerating demog data from all volumes --")
-  
+
   # Delete "old" demog files
   old_demo_fn <- list.files("participant-demographics/csv", "demog", full.names = TRUE)
   sapply(old_demo_fn, unlink)
-
-  # Generate report
-  rmarkdown::render("participant-demographics/participant-demog-report.Rmd",
-                    params=list(new_vol_rg_min = 1,
-                                new_vol_rg_max = max_volume_id,
-                                update_demo_csvs=TRUE))
-} else {
-  message("-- Using previously saved demog data --")
-  rmarkdown::render("participant-demographics/participant-demog-report.Rmd", 
-                    params=list(update_demo_csvs=FALSE))
   
-}
+ # Generate report
+   rmarkdown::render("participant-demographics/participant-demog-report.Rmd",
+                     params=list(new_vol_rg_min = 1,
+                                 new_vol_rg_max = max_volume_id,
+                                 update_demo_csvs=TRUE))
+ } else {
+   message("-- Using previously saved demog data --")
+   rmarkdown::render("participant-demographics/participant-demog-report.Rmd",
+                     params=list(update_demo_csvs=FALSE))
+
+ }
 
 ## Tags and keywords
 
@@ -120,7 +123,7 @@ copy_to_archive("tags-keywords", "tags-keywords-report.html")
 
 if (update_volume_tags) {
   rmarkdown::render("tags-keywords/tags-keywords-report.Rmd",
-                    params = list(read_saved = FALSE))
+                    params = list(read_saved = FALSE, max_vol_id = max_volume_id))
   
 } else {
   rmarkdown::render("tags-keywords/tags-keywords-report.Rmd",

@@ -1,3 +1,3 @@
 vol_id,mimetype,extension,asset_type,n_files,tot_size_gb,tot_dur_hrs
-1103,text/csv,csv,Comma-separated values,2,1.359375e-5,0
-1103,video/mp4,mp4,MPEG-4 video,11,9.95858310546875,4.38825
+1103,text/csv,csv,Comma-separated values,22,2.1362109375e-4,0
+1103,video/mp4,mp4,MPEG-4 video,103,121.75397079980469,51.06541305555556

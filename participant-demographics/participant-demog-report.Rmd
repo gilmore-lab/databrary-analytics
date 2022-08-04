@@ -11,9 +11,10 @@ output:
     code_folding: hide
 params:
     db_login: email@provider.com
-    new_vol_rg_min: 1351
-    new_vol_rg_max: 1400
+    new_vol_rg_min: 1
+    new_vol_rg_max: 1500
     update_demo_csvs: False
+    csv_path: 'csv'
 ---
 
 ```{r setup, include=FALSE}
@@ -33,7 +34,7 @@ To summarize the demographic characteristics of participants in shared volumes o
 
 This report adopts the following approach:
 
-- Download the spreadsheet CSVs using the `databraryapi::download_session_csv()` function, then aggregate.
+- Download the spreadsheet CSVs using the `databraryapi::download_session_csv()` function, then aggregates them.
 - Because the API calls are time and resource-consuming, the code below "chunks" the calls into group of 10 volumes each.
 The outputs are saved in separate CSVs, and then reimported.
 
@@ -43,7 +44,7 @@ The outputs are saved in separate CSVs, and then reimported.
 
 The user must be logged in to access the full spreadsheet data.
 
-```{r login_db}
+```{r login_db, eval=FALSE}
 databraryapi::login_db(params$db_login)
 ```
 
@@ -57,8 +58,7 @@ The default is *not* to update all of the CSVs, but use the locally saved copies
 if (params$update_demo_csvs == TRUE) {
   message(paste0("Updating CSVs for volume-level demographic data for volumes ",
                  params$new_vol_rg_min, " to ", params$new_vol_rg_max))
-  regenerate_vol_demo_csvs(params$new_vol_rg_min, params$new_vol_rg_max,
-                           csv_dir = "csv")
+  purrr::map(params$new_vol_rg_min:params$new_vol_rg_max, get_save_volume_ss, dir = params$csv_path)
 } else {
   message("Using saved volume-level demographic data.")
 }
@@ -70,13 +70,13 @@ This chunk regenerates data for the volume owners.
 It is not run by default, but can be run like the previous chunk.
 
 ```{r acquire-owner-data, eval=FALSE}
-purrr::map2(.x = lo, .y = hi, get_save_volumes_owners, dir = "csv")
+purrr::map2(.x = lo, .y = hi, get_save_volumes_owners, dir = params$csv_path)
 ```
 
 This chunk regenerates just the first volume owner data.
 
 ```{r, eval = FALSE}
-purrr::map2(.x = lo, .y = hi, get_save_volumes_first_owners, dir = "csv")
+purrr::map2(.x = lo, .y = hi, get_save_volumes_first_owners, dir = params$csv_path)
 ```
 
 # Load data
@@ -87,8 +87,9 @@ This chunk loads the set of CSVs into a common data frame.
 It *will* run when this report is rendered if the data exist in the proper directory.
 
 ```{r import-saved, message=FALSE, warning=FALSE}
-if (dir.exists("csv")) {
-demo_df <- load_demog_csvs("csv")  
+if (dir.exists(params$csv_path)) {
+  fl <- list.files(params$csv_path, "[0-9]{4}\\-sess\\-materials\\.csv", full.names = TRUE)
+  demo_df <- purrr::map_df(fl, make_cleaned_session_df)
 } else {
  message("Data directory empty.")
  demo_df = NULL
@@ -131,11 +132,36 @@ To generate the report, one must generate and save the data locally.
 
 ## Overall
 
-Databrary has demographic data for $n=$ `r sum(!is.na(demo_df$session_id))` individual sessions.
+Databrary has demographic data for $n=$ `r sum(!is.na(demo_df$session_id))` individual sessions and $n=$ `r sum(!is.na(demo_df$participant_ID))` individual participants.
 
 ```{r}
 demo_df <- demo_df %>%
   dplyr::mutate(., vol_url = paste0("https://nyu.databrary.org/volume/", vol_id))
+```
+
+## Age
+
+```{r create-age-df}
+# Beginning work on calculating age.
+age_df <- demo_df %>%
+  dplyr::filter(., !is.na(participant_birthdate),
+                !is.na(session_date)) 
+```
+
+We have birthdate and test date information on $n=$ `r sum(!is.na(age_df$session_date))` participants.
+
+```{r calculate-age-in-days}
+age_df <- age_df %>%
+  dplyr::mutate(., age_days = as.Date.character(age_df$session_date) - as.Date.character(age_df$participant_birthdate))
+```
+
+### Number of participants 
+
+```{r summarize-age}
+age_df <- age_df %>%
+  dplyr::mutate(., age_grp = cut(as.numeric(age_df$age_days), c(0, 90, 180, 365.25, 2*365.25, 3*365.25, 4*365.25, 5*365.25, 15*365.25, 20*365.25, 25*365.25, 100*365.25), c("<3m", "3-6m", "6m-1y", "1-2y", "2-3y", "3-4y", "4-5y", "5-15y", "15-20y", "20-25y", ">25y")))
+
+xtabs(formula = ~ age_grp, data = age_df)
 ```
 
 ## Gender
@@ -144,7 +170,7 @@ demo_df <- demo_df %>%
 
 ```{r gender-volumes}
 gender_df <- demo_df %>%
-  dplyr::filter(., !is.na(participant.gender)) %>%
+  dplyr::filter(., !is.na(participant_gender)) %>%
   dplyr::group_by(., vol_id, vol_url) %>%
   dplyr::summarize(., n_sessions = n()) %>%
   dplyr::ungroup(.) %>%
@@ -157,12 +183,12 @@ gender_df %>%
   kableExtra::kable_styling(.)
 ```
 
-There are `r unique(gender_df$n_vols_w_demo)` volumes reporting `participant.gender`.
+There are `r unique(gender_df$n_vols_w_demo)` volumes reporting `participant_gender`.
 
 ### Number of participants
 
 ```{r gender-table}
-xtabs(formula = ~ participant.gender, data = demo_df) %>%
+xtabs(formula = ~ participant_gender, data = demo_df) %>%
   knitr::kable(., "html") %>%
   kableExtra::kable_styling(.)
 ```
@@ -173,7 +199,7 @@ xtabs(formula = ~ participant.gender, data = demo_df) %>%
 
 ```{r race-volumes}
 race_df <- demo_df %>%
-  dplyr::filter(., !is.na(participant.race)) %>%
+  dplyr::filter(., !is.na(participant_race)) %>%
   dplyr::group_by(., vol_id, vol_url) %>%
   dplyr::summarize(., n_sessions = n()) %>%
   dplyr::ungroup(.) %>%
@@ -186,12 +212,12 @@ race_df %>%
   kableExtra::kable_styling(.)
 ```
 
-There are `r unique(race_df$n_vols_w_demo)` volumes reporting `participant.race`.
+There are `r unique(race_df$n_vols_w_demo)` volumes reporting `participant_race`.
 
 ### Number of participants
 
 ```{r race-table}
-xtabs(formula = ~ participant.race, data = demo_df) %>%
+xtabs(formula = ~ participant_race, data = demo_df) %>%
   knitr::kable(., "html") %>%
   kableExtra::kable_styling(.)
 ```
@@ -202,7 +228,7 @@ xtabs(formula = ~ participant.race, data = demo_df) %>%
 
 ```{r ethnicity-volumes}
 ethnicity_df <- demo_df %>%
-  dplyr::filter(., !is.na(participant.ethnicity)) %>%
+  dplyr::filter(., !is.na(participant_ethnicity)) %>%
   dplyr::group_by(., vol_id, vol_url) %>%
   dplyr::summarize(., n_sessions = n()) %>%
   dplyr::ungroup(.) %>%
@@ -215,12 +241,12 @@ ethnicity_df %>%
   kableExtra::kable_styling(.)
 ```
 
-There are `r unique(ethnicity_df$n_vols_w_demo)` volumes reporting `participant.ethnicity`.
+There are `r unique(ethnicity_df$n_vols_w_demo)` volumes reporting `participant_ethnicity`.
 
 ### Number of participants
 
 ```{r ethnicity-table}
-xtabs(formula = ~ participant.ethnicity, data = demo_df) %>%
+xtabs(formula = ~ participant_ethnicity, data = demo_df) %>%
   knitr::kable(., "html") %>%
   kableExtra::kable_styling(.)
 ```
@@ -265,7 +291,7 @@ demog_owners <- dplyr::left_join(demo_df, first_owner_vols_df, by = "vol_id")
 
 ```{r}
 demog_owners %>%
-  dplyr::filter(., !is.na(participant.gender)) %>%
+  dplyr::filter(., !is.na(participant_gender)) %>%
   dplyr::group_by(., person_id, sortname, person_url) %>%
   dplyr::summarize(., sess_per_pi = n()) %>%
   dplyr::filter(., !is.na(person_id),
@@ -279,7 +305,7 @@ demog_owners %>%
 
 ```{r}
 demog_owners %>%
-  dplyr::filter(., !is.na(participant.race)) %>%
+  dplyr::filter(., !is.na(participant_race)) %>%
   dplyr::group_by(., person_id, sortname, person_url) %>%
   dplyr::summarize(., sess_per_pi = n()) %>%
   dplyr::filter(., !is.na(person_id),
@@ -293,7 +319,7 @@ demog_owners %>%
 
 ```{r}
 demog_owners %>%
-  dplyr::filter(., !is.na(participant.ethnicity)) %>%
+  dplyr::filter(., !is.na(participant_ethnicity)) %>%
   dplyr::group_by(., person_id, sortname, person_url) %>%
   dplyr::summarize(., sess_per_pi = n()) %>%
   dplyr::filter(., !is.na(person_id),
