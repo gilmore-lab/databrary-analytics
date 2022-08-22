@@ -392,6 +392,57 @@ xtabs(formula = ~ participant_ethnicity, data = demo_df) %>%
   kableExtra::scroll_box(., height = "400px")
 ```
 
+## Tags & keywords
+
+```{r}
+tags <- readr::read_csv("../tags-keywords/csv/databrary-tags.csv")
+```
+
+### Histogram of tags/volume
+
+```{r tag-stats}
+vols_without_tags <- tags %>%
+  dplyr::filter(., is.na(tags))
+
+vols_with_tags <- tags %>%
+  dplyr::filter(., !is.na(tags)) %>%
+  dplyr::group_by(., vol_id) %>%
+  dplyr::summarise(., n_tags = n())
+```
+
+```{r tags-per-volume-histogram}
+vols_with_tags %>%
+  ggplot2::ggplot(.) +
+  aes(n_tags) +
+  geom_histogram(bins = 12)
+```
+
+### Unique tags
+
+```{r unique-tags}
+unique_tags <- tags %>%
+  dplyr::select(., tags, weight) %>%
+  dplyr::filter(., !is.na(tags)) %>%
+  dplyr::group_by(., tags) %>%
+  dplyr::summarise(., n_vols_using = n(), weight_sum = sum(weight)) %>%
+  dplyr::arrange(., desc(n_vols_using))
+```
+
+There are $n=$ `r dim(unique_tags)[1]` unique tags.
+
+```{r unique-tags-table}
+unique_tags %>%
+  knitr::kable(., "html") %>%
+  kableExtra::kable_styling()
+```
+
+### Word cloud
+
+```{r word-cloud}
+wordcloud::wordcloud(words = unique_tags$tags, 
+                     freq = unique_tags$n_vols_using)
+```
+
 # Citations
 
 We mine the Google Scholar database to estimate the number of citations to Databrary or Datavyu.
