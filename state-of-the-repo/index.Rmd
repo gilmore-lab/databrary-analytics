@@ -14,6 +14,7 @@ params:
   update_stats: False
   from_gs: False
   update_csv: False
+  archive_old: True
 ---
 
 ```{r set-up, include=FALSE}
@@ -23,6 +24,29 @@ library(tidyverse)
 
 source("R/helpers.R")
 ```
+
+```{r archive-old, include=FALSE}
+copy_to_archive <- function(fpath, fn) {
+  if (file.exists(file.path(fpath, fn))) {
+    current_fn <- file.path(fpath, fn)
+    new_fn <- file.path(fpath, "archive", paste0(Sys.Date(), '_', fn))
+    if (file.copy(current_fn, new_fn)) {
+      message("Report copied to '", paste0(fpath, "/archive'"))
+    }
+  } else {
+    message("No file copied.")
+  }
+}
+
+if (params$archive_old) {
+  if (!(dir.exists('archive'))) {
+  message("Directory `csv` does not exist. Creating.")
+  dir.create('archive')  
+  }
+  copy_to_archive(".", "index.html")
+}
+```
+
 
 # Purpose
 
@@ -34,12 +58,12 @@ The Databrary community consists of Institutions and their Authorized Investigat
 
 ## Growth
 
-```{r child = '../weekly/users.Rmd'}
+```{r user-growth, child = '../weekly/users.Rmd'}
 ```
 
 ## Map
 
-```{r}
+```{r load-inst-data}
 # Load saved file
 inst_df <- readr::read_csv("../institutions-investigators/csv/institutions.csv", show_col_types = FALSE)
 ```
@@ -211,11 +235,11 @@ Databrary specializes in storing and sharing video and audio recordings, but the
 ```{r}
 #quietly_read_csv <- safely(readr::read_csv)
 
-if (dir.exists('../volumes-with-videos-annotations/csv')) {
-  csv_fns <- list.files('../volumes-with-videos-annotations/csv', '\\.csv', full.names = TRUE)
+if (dir.exists('../volume-assets/csv')) {
+  csv_fns <- list.files('../volume-assets/csv', '\\.csv', full.names = TRUE)
   assets_df <- purrr::map_df(csv_fns, readr::read_csv, show_col_types = FALSE)
 } else {
-  stop(paste0('CSV directory not found: ', '../volumes-with-videos-annotations/csv'))
+  stop(paste0('CSV directory not found: ', '../volume-assets/csv'))
 }
 ```
 
@@ -395,7 +419,7 @@ xtabs(formula = ~ participant_ethnicity, data = demo_df) %>%
 ## Tags & keywords
 
 ```{r}
-tags <- readr::read_csv("../tags-keywords/csv/databrary-tags.csv")
+tags <- readr::read_csv("../tags-keywords/csv/databrary-tags.csv", show_col_types = FALSE)
 ```
 
 ### Histogram of tags/volume

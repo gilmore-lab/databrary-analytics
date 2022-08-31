@@ -1802,7 +1802,7 @@ border-radius: 0px;
 
 <h1 class="title toc-ignore">Participant demographics report</h1>
 <h4 class="author">Rick Gilmore</h4>
-<h4 class="date">2022-08-23 08:08:43</h4>
+<h4 class="date">2022-08-31 11:13:25</h4>
 
 </div>
 
@@ -1823,6 +1823,23 @@ aggregates them.</li>
 below “chunks” the calls into group of 10 volumes each. The outputs are
 saved in separate CSVs, and then reimported.</li>
 </ul>
+</div>
+<div id="set-up" class="section level1">
+<h1>Set-up</h1>
+<pre class="r"><code>if (!dir.exists(params$csv_path)) {
+  # If updating, create missing csv directory, otherwise exit.
+  if (params$update_demo_csvs) {
+    message(&quot;Directory `&quot;, params$csv_path, &quot;` does not exist. Creating.&quot;)
+    dir.create(&#39;csv&#39;)
+  } else {
+    stop(&quot;Directory `&quot;, params$csv_path, &quot;` does not exist. Exiting.&quot;)
+  }
+}
+
+if (!dir.exists(&#39;archive&#39;)) {
+  message(&quot;Directory `archive` does not exist. Creating.&quot;)
+  dir.create(&#39;archive&#39;)
+}</code></pre>
 </div>
 <div id="updating-spreadsheet-csvs" class="section level1">
 <h1>Updating spreadsheet CSVs</h1>
@@ -4901,7 +4918,7 @@ save the data locally.</p>
 <h1>Summary results</h1>
 <div id="overall" class="section level2">
 <h2>Overall</h2>
-<p>Databrary has demographic data for <span class="math inline">\(n=\)</span> 9940 individual sessions and <span class="math inline">\(n=\)</span> 9360 individual participants.</p>
+<p>Databrary has demographic data for <span class="math inline">\(n=\)</span> 9951 individual sessions and <span class="math inline">\(n=\)</span> 9370 individual participants.</p>
 <pre class="r"><code>demo_df &lt;- demo_df %&gt;%
   dplyr::mutate(., vol_url = paste0(&quot;https://nyu.databrary.org/volume/&quot;, vol_id))</code></pre>
 </div>
@@ -4911,7 +4928,7 @@ save the data locally.</p>
 age_df &lt;- demo_df %&gt;%
   dplyr::filter(., !is.na(participant_birthdate),
                 !is.na(session_date)) </code></pre>
-<p>We have birthdate and test date information on <span class="math inline">\(n=\)</span> 8293 participants.</p>
+<p>We have birthdate and test date information on <span class="math inline">\(n=\)</span> 8303 participants.</p>
 <pre class="r"><code>age_df &lt;- age_df %&gt;%
   dplyr::mutate(., age_days = as.Date.character(age_df$session_date) - as.Date.character(age_df$participant_birthdate))</code></pre>
 <div id="number-of-participants" class="section level3">
@@ -4922,7 +4939,7 @@ age_df &lt;- demo_df %&gt;%
 xtabs(formula = ~ age_grp, data = age_df)</code></pre>
 <pre><code>## age_grp
 ##    &lt;3m   3-6m  6m-1y   1-2y   2-3y   3-4y   4-5y  5-15y 15-20y 20-25y   &gt;25y 
-##     68    113    994   2982    733    446    884   1249     67    287    397</code></pre>
+##     69    113    998   2987    733    446    884   1249     67    287    397</code></pre>
 </div>
 </div>
 <div id="gender" class="section level2">
@@ -5404,7 +5421,7 @@ n_sessions
 <a href="https://nyu.databrary.org/volume/868" class="uri">https://nyu.databrary.org/volume/868</a>
 </td>
 <td style="text-align:right;">
-74
+75
 </td>
 </tr>
 <tr>
@@ -5420,10 +5437,10 @@ n_sessions
 </tr>
 <tr>
 <td style="text-align:left;">
-4
+1020
 </td>
 <td style="text-align:left;">
-<a href="https://nyu.databrary.org/volume/4" class="uri">https://nyu.databrary.org/volume/4</a>
+<a href="https://nyu.databrary.org/volume/1020" class="uri">https://nyu.databrary.org/volume/1020</a>
 </td>
 <td style="text-align:right;">
 67
@@ -5431,13 +5448,13 @@ n_sessions
 </tr>
 <tr>
 <td style="text-align:left;">
-1020
+4
 </td>
 <td style="text-align:left;">
-<a href="https://nyu.databrary.org/volume/1020" class="uri">https://nyu.databrary.org/volume/1020</a>
+<a href="https://nyu.databrary.org/volume/4" class="uri">https://nyu.databrary.org/volume/4</a>
 </td>
 <td style="text-align:right;">
-65
+67
 </td>
 </tr>
 <tr>
@@ -5811,7 +5828,7 @@ n_sessions
 <a href="https://nyu.databrary.org/volume/1103" class="uri">https://nyu.databrary.org/volume/1103</a>
 </td>
 <td style="text-align:right;">
-26
+27
 </td>
 </tr>
 <tr>
@@ -6025,6 +6042,17 @@ n_sessions
 </tr>
 <tr>
 <td style="text-align:left;">
+1379
+</td>
+<td style="text-align:left;">
+<a href="https://nyu.databrary.org/volume/1379" class="uri">https://nyu.databrary.org/volume/1379</a>
+</td>
+<td style="text-align:right;">
+12
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
 145
 </td>
 <td style="text-align:left;">
@@ -6091,6 +6119,17 @@ n_sessions
 </tr>
 <tr>
 <td style="text-align:left;">
+1364
+</td>
+<td style="text-align:left;">
+<a href="https://nyu.databrary.org/volume/1364" class="uri">https://nyu.databrary.org/volume/1364</a>
+</td>
+<td style="text-align:right;">
+8
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
 1376
 </td>
 <td style="text-align:left;">
@@ -6102,32 +6141,10 @@ n_sessions
 </tr>
 <tr>
 <td style="text-align:left;">
-1379
-</td>
-<td style="text-align:left;">
-<a href="https://nyu.databrary.org/volume/1379" class="uri">https://nyu.databrary.org/volume/1379</a>
-</td>
-<td style="text-align:right;">
-8
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
 1363
 </td>
 <td style="text-align:left;">
 <a href="https://nyu.databrary.org/volume/1363" class="uri">https://nyu.databrary.org/volume/1363</a>
-</td>
-<td style="text-align:right;">
-6
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-1364
-</td>
-<td style="text-align:left;">
-<a href="https://nyu.databrary.org/volume/1364" class="uri">https://nyu.databrary.org/volume/1364</a>
 </td>
 <td style="text-align:right;">
 6
@@ -6157,17 +6174,6 @@ n_sessions
 </tr>
 <tr>
 <td style="text-align:left;">
-1391
-</td>
-<td style="text-align:left;">
-<a href="https://nyu.databrary.org/volume/1391" class="uri">https://nyu.databrary.org/volume/1391</a>
-</td>
-<td style="text-align:right;">
-5
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
 1397
 </td>
 <td style="text-align:left;">
@@ -6190,6 +6196,17 @@ n_sessions
 </tr>
 <tr>
 <td style="text-align:left;">
+1391
+</td>
+<td style="text-align:left;">
+<a href="https://nyu.databrary.org/volume/1391" class="uri">https://nyu.databrary.org/volume/1391</a>
+</td>
+<td style="text-align:right;">
+4
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
 254
 </td>
 <td style="text-align:left;">
@@ -6197,6 +6214,17 @@ n_sessions
 </td>
 <td style="text-align:right;">
 4
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+1370
+</td>
+<td style="text-align:left;">
+<a href="https://nyu.databrary.org/volume/1370" class="uri">https://nyu.databrary.org/volume/1370</a>
+</td>
+<td style="text-align:right;">
+3
 </td>
 </tr>
 <tr>
@@ -6227,17 +6255,6 @@ n_sessions
 </td>
 <td style="text-align:left;">
 <a href="https://nyu.databrary.org/volume/1362" class="uri">https://nyu.databrary.org/volume/1362</a>
-</td>
-<td style="text-align:right;">
-2
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-1370
-</td>
-<td style="text-align:left;">
-<a href="https://nyu.databrary.org/volume/1370" class="uri">https://nyu.databrary.org/volume/1370</a>
 </td>
 <td style="text-align:right;">
 2
@@ -6390,7 +6407,7 @@ Freq
 Female
 </td>
 <td style="text-align:right;">
-4610
+4616
 </td>
 </tr>
 <tr>
@@ -6398,7 +6415,7 @@ Female
 Male
 </td>
 <td style="text-align:right;">
-4660
+4664
 </td>
 </tr>
 <tr>
@@ -6858,7 +6875,7 @@ n_sessions
 <a href="https://nyu.databrary.org/volume/868" class="uri">https://nyu.databrary.org/volume/868</a>
 </td>
 <td style="text-align:right;">
-74
+75
 </td>
 </tr>
 <tr>
@@ -6874,10 +6891,10 @@ n_sessions
 </tr>
 <tr>
 <td style="text-align:left;">
-4
+1020
 </td>
 <td style="text-align:left;">
-<a href="https://nyu.databrary.org/volume/4" class="uri">https://nyu.databrary.org/volume/4</a>
+<a href="https://nyu.databrary.org/volume/1020" class="uri">https://nyu.databrary.org/volume/1020</a>
 </td>
 <td style="text-align:right;">
 67
@@ -6885,13 +6902,13 @@ n_sessions
 </tr>
 <tr>
 <td style="text-align:left;">
-1020
+4
 </td>
 <td style="text-align:left;">
-<a href="https://nyu.databrary.org/volume/1020" class="uri">https://nyu.databrary.org/volume/1020</a>
+<a href="https://nyu.databrary.org/volume/4" class="uri">https://nyu.databrary.org/volume/4</a>
 </td>
 <td style="text-align:right;">
-65
+67
 </td>
 </tr>
 <tr>
@@ -7199,7 +7216,7 @@ n_sessions
 <a href="https://nyu.databrary.org/volume/1103" class="uri">https://nyu.databrary.org/volume/1103</a>
 </td>
 <td style="text-align:right;">
-26
+27
 </td>
 </tr>
 <tr>
@@ -7402,6 +7419,17 @@ n_sessions
 </tr>
 <tr>
 <td style="text-align:left;">
+1379
+</td>
+<td style="text-align:left;">
+<a href="https://nyu.databrary.org/volume/1379" class="uri">https://nyu.databrary.org/volume/1379</a>
+</td>
+<td style="text-align:right;">
+12
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
 145
 </td>
 <td style="text-align:left;">
@@ -7479,13 +7507,13 @@ n_sessions
 </tr>
 <tr>
 <td style="text-align:left;">
-1379
+1364
 </td>
 <td style="text-align:left;">
-<a href="https://nyu.databrary.org/volume/1379" class="uri">https://nyu.databrary.org/volume/1379</a>
+<a href="https://nyu.databrary.org/volume/1364" class="uri">https://nyu.databrary.org/volume/1364</a>
 </td>
 <td style="text-align:right;">
-8
+7
 </td>
 </tr>
 <tr>
@@ -7512,28 +7540,6 @@ n_sessions
 </tr>
 <tr>
 <td style="text-align:left;">
-1364
-</td>
-<td style="text-align:left;">
-<a href="https://nyu.databrary.org/volume/1364" class="uri">https://nyu.databrary.org/volume/1364</a>
-</td>
-<td style="text-align:right;">
-5
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-1391
-</td>
-<td style="text-align:left;">
-<a href="https://nyu.databrary.org/volume/1391" class="uri">https://nyu.databrary.org/volume/1391</a>
-</td>
-<td style="text-align:right;">
-5
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
 1397
 </td>
 <td style="text-align:left;">
@@ -7556,6 +7562,17 @@ n_sessions
 </tr>
 <tr>
 <td style="text-align:left;">
+1391
+</td>
+<td style="text-align:left;">
+<a href="https://nyu.databrary.org/volume/1391" class="uri">https://nyu.databrary.org/volume/1391</a>
+</td>
+<td style="text-align:right;">
+4
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
 254
 </td>
 <td style="text-align:left;">
@@ -7563,6 +7580,17 @@ n_sessions
 </td>
 <td style="text-align:right;">
 4
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+1370
+</td>
+<td style="text-align:left;">
+<a href="https://nyu.databrary.org/volume/1370" class="uri">https://nyu.databrary.org/volume/1370</a>
+</td>
+<td style="text-align:right;">
+3
 </td>
 </tr>
 <tr>
@@ -7593,17 +7621,6 @@ n_sessions
 </td>
 <td style="text-align:left;">
 <a href="https://nyu.databrary.org/volume/1362" class="uri">https://nyu.databrary.org/volume/1362</a>
-</td>
-<td style="text-align:right;">
-2
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-1370
-</td>
-<td style="text-align:left;">
-<a href="https://nyu.databrary.org/volume/1370" class="uri">https://nyu.databrary.org/volume/1370</a>
 </td>
 <td style="text-align:right;">
 2
@@ -7788,7 +7805,7 @@ Arab
 Asian
 </td>
 <td style="text-align:right;">
-1423
+1425
 </td>
 </tr>
 <tr>
@@ -7932,7 +7949,7 @@ Mixed
 More than one
 </td>
 <td style="text-align:right;">
-740
+741
 </td>
 </tr>
 <tr>
@@ -7972,7 +7989,7 @@ Not Reported
 Other
 </td>
 <td style="text-align:right;">
-13
+14
 </td>
 </tr>
 <tr>
@@ -8012,7 +8029,7 @@ Unknown or not reported
 White
 </td>
 <td style="text-align:right;">
-4054
+4059
 </td>
 </tr>
 <tr>
@@ -8036,7 +8053,7 @@ White and Afro LAtina
 White and Asian
 </td>
 <td style="text-align:right;">
-5
+6
 </td>
 </tr>
 <tr>
@@ -8477,7 +8494,7 @@ n_sessions
 <a href="https://nyu.databrary.org/volume/868" class="uri">https://nyu.databrary.org/volume/868</a>
 </td>
 <td style="text-align:right;">
-73
+74
 </td>
 </tr>
 <tr>
@@ -8493,10 +8510,10 @@ n_sessions
 </tr>
 <tr>
 <td style="text-align:left;">
-4
+1020
 </td>
 <td style="text-align:left;">
-<a href="https://nyu.databrary.org/volume/4" class="uri">https://nyu.databrary.org/volume/4</a>
+<a href="https://nyu.databrary.org/volume/1020" class="uri">https://nyu.databrary.org/volume/1020</a>
 </td>
 <td style="text-align:right;">
 67
@@ -8504,13 +8521,13 @@ n_sessions
 </tr>
 <tr>
 <td style="text-align:left;">
-1020
+4
 </td>
 <td style="text-align:left;">
-<a href="https://nyu.databrary.org/volume/1020" class="uri">https://nyu.databrary.org/volume/1020</a>
+<a href="https://nyu.databrary.org/volume/4" class="uri">https://nyu.databrary.org/volume/4</a>
 </td>
 <td style="text-align:right;">
-65
+67
 </td>
 </tr>
 <tr>
@@ -8807,7 +8824,7 @@ n_sessions
 <a href="https://nyu.databrary.org/volume/1103" class="uri">https://nyu.databrary.org/volume/1103</a>
 </td>
 <td style="text-align:right;">
-26
+27
 </td>
 </tr>
 <tr>
@@ -9021,6 +9038,17 @@ n_sessions
 </tr>
 <tr>
 <td style="text-align:left;">
+1379
+</td>
+<td style="text-align:left;">
+<a href="https://nyu.databrary.org/volume/1379" class="uri">https://nyu.databrary.org/volume/1379</a>
+</td>
+<td style="text-align:right;">
+12
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
 145
 </td>
 <td style="text-align:left;">
@@ -9098,13 +9126,13 @@ n_sessions
 </tr>
 <tr>
 <td style="text-align:left;">
-1379
+1364
 </td>
 <td style="text-align:left;">
-<a href="https://nyu.databrary.org/volume/1379" class="uri">https://nyu.databrary.org/volume/1379</a>
+<a href="https://nyu.databrary.org/volume/1364" class="uri">https://nyu.databrary.org/volume/1364</a>
 </td>
 <td style="text-align:right;">
-8
+7
 </td>
 </tr>
 <tr>
@@ -9131,28 +9159,6 @@ n_sessions
 </tr>
 <tr>
 <td style="text-align:left;">
-1364
-</td>
-<td style="text-align:left;">
-<a href="https://nyu.databrary.org/volume/1364" class="uri">https://nyu.databrary.org/volume/1364</a>
-</td>
-<td style="text-align:right;">
-5
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-1391
-</td>
-<td style="text-align:left;">
-<a href="https://nyu.databrary.org/volume/1391" class="uri">https://nyu.databrary.org/volume/1391</a>
-</td>
-<td style="text-align:right;">
-5
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
 1397
 </td>
 <td style="text-align:left;">
@@ -9175,6 +9181,17 @@ n_sessions
 </tr>
 <tr>
 <td style="text-align:left;">
+1391
+</td>
+<td style="text-align:left;">
+<a href="https://nyu.databrary.org/volume/1391" class="uri">https://nyu.databrary.org/volume/1391</a>
+</td>
+<td style="text-align:right;">
+4
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
 254
 </td>
 <td style="text-align:left;">
@@ -9182,6 +9199,17 @@ n_sessions
 </td>
 <td style="text-align:right;">
 4
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+1370
+</td>
+<td style="text-align:left;">
+<a href="https://nyu.databrary.org/volume/1370" class="uri">https://nyu.databrary.org/volume/1370</a>
+</td>
+<td style="text-align:right;">
+3
 </td>
 </tr>
 <tr>
@@ -9212,17 +9240,6 @@ n_sessions
 </td>
 <td style="text-align:left;">
 <a href="https://nyu.databrary.org/volume/1362" class="uri">https://nyu.databrary.org/volume/1362</a>
-</td>
-<td style="text-align:right;">
-2
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-1370
-</td>
-<td style="text-align:left;">
-<a href="https://nyu.databrary.org/volume/1370" class="uri">https://nyu.databrary.org/volume/1370</a>
 </td>
 <td style="text-align:right;">
 2
@@ -9392,7 +9409,7 @@ Chinese
 Choose not to answer
 </td>
 <td style="text-align:right;">
-3
+2
 </td>
 </tr>
 <tr>
@@ -9448,7 +9465,7 @@ Dominican
 Hispanic or Latino
 </td>
 <td style="text-align:right;">
-884
+886
 </td>
 </tr>
 <tr>
@@ -9472,7 +9489,7 @@ Mexican
 Not Hispanic or Latino
 </td>
 <td style="text-align:right;">
-4844
+4853
 </td>
 </tr>
 <tr>
@@ -11305,7 +11322,7 @@ Adolph
 <a href="https://nyu.databrary.org/party/5" class="uri">https://nyu.databrary.org/party/5</a>
 </td>
 <td style="text-align:right;">
-1875
+1878
 </td>
 </tr>
 <tr>
@@ -11561,7 +11578,7 @@ Adolph
 <a href="https://nyu.databrary.org/party/5" class="uri">https://nyu.databrary.org/party/5</a>
 </td>
 <td style="text-align:right;">
-1870
+1873
 </td>
 </tr>
 <tr>
@@ -11775,7 +11792,7 @@ Adolph
 <a href="https://nyu.databrary.org/party/5" class="uri">https://nyu.databrary.org/party/5</a>
 </td>
 <td style="text-align:right;">
-1858
+1861
 </td>
 </tr>
 <tr>

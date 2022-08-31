@@ -72,7 +72,7 @@ For efficiency reasons, we save a copy of the list of investigators in a CSV and
 ```{r}
 if (params$use_saved_file) {
   if (file.exists(params$save_fn)) {
-    invest_df <- read_csv(params$save_fn)
+    invest_df <- readr::read_csv(params$save_fn, show_col_types = FALSE)
   } else {
     message("File not found.")
   }

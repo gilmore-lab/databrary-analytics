@@ -1,0 +1,4 @@
+vol_id,mimetype,extension,asset_type,n_files,tot_size_gb,tot_dur_hrs
+546,application/vnd.openxmlformats-officedocument.spreadsheetml.sheet,xlsx,Microsoft Excel (Office Open XML) workbook,2,2.26279296875e-5,0
+546,application/vnd.openxmlformats-officedocument.wordprocessingml.document,docx,Microsoft Word (Office Open XML) document,2,2.51572265625e-5,0
+546,image/jpeg,jpg,JPEG image,32,0.00737893359375,0

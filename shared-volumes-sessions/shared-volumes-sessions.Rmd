@@ -13,6 +13,7 @@ params:
   save_fn: "csv/shared_volumes_sessions.csv"
   save_file: False
   use_saved_file: True
+  max_volume_id: 1520
   db_login: email@provider.com
 ---
 
@@ -33,6 +34,29 @@ knitr::opts_chunk$set(warning = FALSE,
 library(tidyverse)
 
 databraryapi::login_db(params$db_login)
+```
+
+```{r check-directories}
+if (params$use_saved_file) {
+  if (!(dir.exists('csv')))  {
+    stop("Directory `csv' does not exist. Exiting.")
+  }
+  if (!file.exists(params$save_fn)) {
+    stop("File `", params$save_fn, "` does not exist. Exiting.")
+  }
+}
+
+if (params$save_file) {
+  if (!(dir.exists('csv'))) {
+    dir.create('csv') 
+    message("Directory `csv' does not exist. Creating.")
+  }
+}
+
+if (!dir.exists('archive')) {
+  message("Directory `archive` does not exist. Creating.")
+  dir.create('archive')
+}
 ```
 
 Create a helper function to gather the necessary data.
@@ -104,11 +128,11 @@ This speeds things up considerably at the cost of not capturing 'old' volumes wh
 if (params$use_saved_file) {
   if (file.exists(params$save_fn)) {
     message("Reading from saved file.")
-    vols_sess_data <- read_csv(params$save_fn)
+    vols_sess_data <- readr::read_csv(params$save_fn, show_col_types = FALSE)
     # From current max(vol_id), get next 200 vols
-    max_vol_id <- max(vols_sess_data$vol_id)
+    max_volume_id <- max(vols_sess_data$vol_id)
     message("Retrieving possibly new volumes data.")
-    next_200 <- get_volumes_data(max_vol_id + 1, max_vol_id + 200)
+    next_200 <- get_volumes_data(max_volume_id + 1, max_volume_id + 200)
     vols_sess_data <- data.table::rbindlist(list(vols_sess_data, next_200))
   } else {
     message("File not found.")
@@ -130,6 +154,7 @@ if (params$use_saved_file) {
   v_1201_1300 <- get_volumes_data(1201, 1300)
   v_1301_1400 <- get_volumes_data(1301, 1400)
   v_1401_1500 <- get_volumes_data(1401, 1500)
+  v_1501_1600 <- get_volumes_data(1501, 1600)
   vols_sess_data <- data.table::rbindlist(list(v_001_100, v_101_200, 
                                                v_201_300, v_301_400,
                                                v_401_500, v_501_600, v_601_700,
@@ -137,7 +162,8 @@ if (params$use_saved_file) {
                                                v_1001_1100, v_1101_1200,
                                                v_1201_1300,
                                                v_1301_1400,
-                                               v_1401_1500))
+                                               v_1401_1500,
+                                               v_1501_1600))
   
 }
 

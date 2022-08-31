@@ -57,7 +57,7 @@ For efficiency reasons, we save a copy of the list of institutions in a CSV.
 ```{r}
 if (params$use_saved_file) {
   if (file.exists(params$save_fn)) {
-    inst_df <- read_csv(params$save_fn)
+    inst_df <- readr::read_csv(params$save_fn, show_col_types = FALSE)
   } else {
     message("File not found.")
   }

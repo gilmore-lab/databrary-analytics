@@ -1,5 +1,4 @@
 inst_id,affiliation,inst_url,party_id,sortname,prename,party_url,url,email
-2,NA,https://nyu.databrary.org/party/2,NA,NA,NA,NA,NA,NA
 8,New York University,https://nyu.databrary.org/party/8,5,Adolph,Karen,https://nyu.databrary.org/party/5,http://www.psych.nyu.edu/adolph/,karen.adolph@nyu.edu
 8,New York University,https://nyu.databrary.org/party/8,7,Millman,David,https://nyu.databrary.org/party/7,NA,dsm@nyu.edu
 8,New York University,https://nyu.databrary.org/party/8,11,Tamis-LeMonda,Catherine,https://nyu.databrary.org/party/11,NA,catherine.tamis-lemonda@nyu.edu
@@ -31,8 +30,6 @@ inst_id,affiliation,inst_url,party_id,sortname,prename,party_url,url,email
 8,New York University,https://nyu.databrary.org/party/8,6640,OConnor,Erin,https://nyu.databrary.org/party/6640,NA,eoc2@nyu.edu
 8,New York University,https://nyu.databrary.org/party/8,6697,Schneider,David,https://nyu.databrary.org/party/6697,NA,david.schneider@nyu.edu
 8,New York University,https://nyu.databrary.org/party/8,6869,Trainor,Audrey,https://nyu.databrary.org/party/6869,NA,aat8@nyu.edu
-9,NA,https://nyu.databrary.org/party/9,NA,NA,NA,NA,NA,NA
-10,NA,https://nyu.databrary.org/party/10,NA,NA,NA,NA,NA,NA
 12,Pennsylvania State University,https://nyu.databrary.org/party/12,96,Perez-Edgar,Koraly,https://nyu.databrary.org/party/96,http://www.catlabpsu.com/,kxp24@psu.edu
 12,Pennsylvania State University,https://nyu.databrary.org/party/12,245,Wilkinson,Krista,https://nyu.databrary.org/party/245,NA,kmw22@psu.edu
 12,Pennsylvania State University,https://nyu.databrary.org/party/12,252,Scherf,Kathryn Suzanne,https://nyu.databrary.org/party/252,https://www.suzyscherf.com/,suzyscherf@psu.edu
@@ -53,4 +50,3 @@ inst_id,affiliation,inst_url,party_id,sortname,prename,party_url,url,email
 12,The Pennsylvania State University,https://nyu.databrary.org/party/12,4658,Rajtmajer,Sarah,https://nyu.databrary.org/party/4658,NA,srajtmajer@ist.psu.edu
 12,Pennsylvania State University,https://nyu.databrary.org/party/12,6474,Mattila,Anna,https://nyu.databrary.org/party/6474,NA,asm6@psu.edu
 12,Penn State,https://nyu.databrary.org/party/12,7450,Oliver,Mary,https://nyu.databrary.org/party/7450,NA,mbo1@psu.edu
-15,NA,https://nyu.databrary.org/party/15,NA,NA,NA,NA,NA,NA

@@ -9,7 +9,7 @@ output:
     toc_depth: 2
     code_folding: hide
 params:
-  max_vol_id: 1450
+  max_volume_id: 1450
   use_saved_file: False
   save_fn: "csv/funders.csv"
   save_file: True
@@ -41,7 +41,14 @@ rmarkdown::render("funders/funder-report.Rmd", params = list(use_saved_file = "T
 ```{r set-up, include=FALSE}
 knitr::opts_chunk$set(message = FALSE, 
                       warning = FALSE)
-library(tidyverse)
+library(tidyverse) # for pipe %>%
+```
+
+```{r}
+if (params$save_file) {
+  message("Directory `csv' does not exist. Creating.")
+  if (!(dir.exists('csv'))) dir.create('csv')
+}
 ```
 
 # Gather data
@@ -60,15 +67,15 @@ get_volume_funding <- function(vol_id) {
 if (params$use_saved_file) {
   if (file.exists(params$save_fn)) {
     message("Reading from saved file.")
-    funders_df <- read_csv(params$save_fn)
+    funders_df <- read_csv(params$save_fn, show_col_types = FALSE)
   } else {
     message("File not found.")
     message(" Regenerating data from all volumes.")
-    funders_df <- purrr::map_df(1:params$max_vol_id, get_volume_funding)
+    funders_df <- purrr::map_df(1:params$max_volume_id, get_volume_funding)
   }
 } else {
   message(" Regenerating data from all volumes.")
-  funders_df <- purrr::map_df(1:params$max_vol_id, get_volume_funding)
+  funders_df <- purrr::map_df(1:params$max_volume_id, get_volume_funding)
 }
 ```
 

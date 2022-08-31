@@ -1,0 +1,3 @@
+vol_id,mimetype,extension,asset_type,n_files,tot_size_gb,tot_dur_hrs
+268,application/vnd.openxmlformats-officedocument.wordprocessingml.document,docx,Microsoft Word (Office Open XML) document,1,6.49423828125e-5,0
+268,text/csv,csv,Comma-separated values,8,0.0030479443359375,0

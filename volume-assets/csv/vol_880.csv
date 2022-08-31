@@ -1,0 +1,4 @@
+vol_id,mimetype,extension,asset_type,n_files,tot_size_gb,tot_dur_hrs
+880,application/vnd.openxmlformats-officedocument.presentationml.presentation,pptx,Microsoft PowerPoint (Office Open XML) presentation,1,0.0022651220703125,0
+880,text/plain,txt,Plain text,4,5.220703125e-6,0
+880,video/mp4,mp4,MPEG-4 video,4,8.13232421875e-4,0.005733333333333334

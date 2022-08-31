@@ -112,10 +112,7 @@ vol_id,funder_id,funder_name,award
 101,NA,NA,NA
 102,NA,NA,NA
 103,NA,NA,NA
-104,100000025,National Institute of Mental Health (NIMH),5R01MH43373
-104,100000025,National Institute of Mental Health (NIMH),5RO1MH48825
-104,100000025,National Institute of Mental Health (NIMH),5R01MH059014
-104,100001143,William T. Grant Foundation,NA
+104,NA,NA,NA
 105,NA,NA,NA
 106,NA,NA,NA
 107,NA,NA,NA
@@ -156,7 +153,7 @@ vol_id,funder_id,funder_name,award
 141,NA,NA,NA
 142,NA,NA,NA
 143,NA,NA,NA
-144,100000001,National Science Foundation (NSF),BCS-1147440
+144,NA,NA,NA
 145,NA,NA,NA
 146,NA,NA,NA
 147,NA,NA,NA
@@ -230,7 +227,7 @@ vol_id,funder_id,funder_name,award
 212,100000025,National Institute of Mental Health (NIMH),R01MH75750
 213,NA,NA,NA
 214,501100000781,"European Research Council (ERC), Belgium",StG-201111-24
-215,100000001,National Science Foundation (NSF),BCS-1147440
+215,NA,NA,NA
 216,NA,NA,NA
 217,NA,NA,NA
 218,100000001,National Science Foundation (NSF),BCS-1147440
