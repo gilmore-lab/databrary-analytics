@@ -24,7 +24,7 @@ if (params$from_gs) {
   old_stats <- db %>%
     googlesheets::gs_read(ws = 'institutions-investigators')
 } else {
-  old_stats <- readr::read_csv("csv/institutions-investigators.csv")
+  old_stats <- readr::read_csv("csv/institutions-investigators.csv", show_col_types = FALSE)
 }
 old_stats <- old_stats %>%
   dplyr::mutate(., date = lubridate::as_datetime(date))

@@ -1,9 +1,0 @@
-vol_id,mimetype,extension,asset_type,n_files,tot_size_gb,tot_dur_hrs
-1257,application/pdf,pdf,Portable document,191,0.4133315078125,0
-1257,application/vnd.ms-powerpoint,ppt,Microsoft PowerPoint presentation,2,0.004911,0
-1257,application/vnd.openxmlformats-officedocument.presentationml.presentation,pptx,Microsoft PowerPoint (Office Open XML) presentation,6,0.029577509765625,0
-1257,application/vnd.openxmlformats-officedocument.wordprocessingml.document,docx,Microsoft Word (Office Open XML) document,139,0.1805566787109375,0
-1257,audio/mpeg,mp3,MPEG-1 or MPEG-2 audio layer III,2,0.0532561435546875,0.8208177777777778
-1257,image/png,png,Portable network graphics,1,1.495703125e-4,0
-1257,text/rtf,rtf,Rich text format,104,0.1248139228515625,0
-1257,video/mp4,mp4,MPEG-4 video,367,132.55603185253906,220.12208805555557

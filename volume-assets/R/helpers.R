@@ -100,23 +100,23 @@ update_vol_asset_stats <- function(start_vol_id, end_vol_id, save_file = TRUE,
   purrr::map(c(start_vol_id:end_vol_id), calculate_vol_asset_stats, save_file, save_path, vb)
 }
 
-update_all_vol_stats <- function(max_vol_id, 
+update_all_vol_stats <- function(max_volume_id, 
                                  vols_per_pass = 50,
                                  save_file = TRUE,
                                  save_path = 'csv',
                                  vb = TRUE) {
   
-  if (!is.numeric(max_vol_id)) {
-    stop('`max_vol_id` must be a number.')
+  if (!is.numeric(max_volume_id)) {
+    stop('`max_volume_id` must be a number.')
   }
-  if (max_vol_id <= 0) {
-    stop('`max_vol_id` must be > 0')
+  if (max_volume_id <= 0) {
+    stop('`max_volume_id` must be > 0')
   }
   if (!is.numeric(vols_per_pass)) {
-    stop('`max_vol_id` must be a number.')
+    stop('`vols_per_pass` must be a number.')
   }
   if (vols_per_pass <= 0) {
-    stop('`max_vol_id` must be > 0')
+    stop('`vols_per_pass` must be > 0')
   }
   if (!is.logical(save_file)) {
     stop('`save_file` must be a logical value.')
@@ -137,7 +137,7 @@ update_all_vol_stats <- function(max_vol_id,
   # Some of the larger volumes have a lot of assets, and this 
   # chunking gives the analyst some feedback about what's happening.
   # Also, if a problem arises, it's easier to debug.
-  range_start_id <- seq(from = 1, to = max_vol_id, by = vols_per_pass)
+  range_start_id <- seq(from = 1, to = max_volume_id, by = vols_per_pass)
   range_end_id <- range_start_id + vols_per_pass
   
   purrr::map2(range_start_id, range_end_id, update_vol_asset_stats, 
