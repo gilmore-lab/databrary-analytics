@@ -28,6 +28,8 @@ source("R/helpers.R")
 # Log in to Databrary
 if (!databraryapi::login_db(params$db_account)) {
   message("Log-in failed.")
+} else {
+  message("Log-in succeeded.")
 }
 
 # Add pipe operator to workspace via tidyverse

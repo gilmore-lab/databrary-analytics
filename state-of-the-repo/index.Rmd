@@ -20,7 +20,36 @@ params:
 ```{r set-up, include=FALSE}
 knitr::opts_chunk$set(message = FALSE, 
                       warning = FALSE)
-library(tidyverse)
+
+if (!require("tidyverse")) {
+  install.packages("tidyverse")
+}
+if (!require("kableExtra")) {
+  install.packages("kableExtra")
+}
+if (!require("ggmap")) {
+  install.packages("ggmap")
+}
+if (!require("readr")) {
+  install.packages("readr")
+}
+if (!require("shiny")) {
+  install.packages("shiny")
+}
+if (!require("wordcloud")) {
+  install.packages("wordcloud")
+}
+if (!require("databraryapi")) {
+  if (!require("devtools")) {
+    install.packages("devtools")
+  }
+  devtools::install_github("PLAY-behaviorome/databraryapi")
+}
+if (!require("cowplot")) {
+  install.packages("cowplot")
+}
+
+library(tidyverse) # for pipe %>% operator
 
 source("R/helpers.R")
 ```
