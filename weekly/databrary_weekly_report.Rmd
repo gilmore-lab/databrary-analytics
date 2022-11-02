@@ -23,7 +23,7 @@ params:
 knitr::opts_chunk$set(echo = FALSE, message = FALSE, warning = FALSE)
 
 source("R/helpers.R")
-#install_required_pkgs()
+##install_required_pkgs()
 
 # Log in to Databrary
 if (!databraryapi::login_db(params$db_account)) {
