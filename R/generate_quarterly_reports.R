@@ -34,7 +34,7 @@ update_shared_volumes <- TRUE
 update_volume_tags <- TRUE
 
 max_party_id <- 12000
-max_volume_id <- 1500 # Must end in zero for now, so see next function
+max_volume_id <- 1520 # Must end in zero for now, so see next function
 max_party_id <- make_next_ten(max_party_id)
 
 ## Log in to Databrary

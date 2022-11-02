@@ -11,7 +11,7 @@ output:
     code_folding: hide
 params:
   db_login: email@provider.com
-  max_vol_id: 1450
+  max_volume_id: 1450
   save_tags: True
   read_saved: True
   tags_fn: "csv/databrary-tags.csv"
@@ -35,16 +35,39 @@ source("R/helpers.R")
 databraryapi::login_db(params$db_login)
 ```
 
+```{r check-directories}
+if (params$read_saved) {
+  if (!(dir.exists('csv')))  {
+    stop("Directory `csv` does not exist. Exiting.")
+  }
+  if (!file.exists(params$tags_fn)) {
+    stop("File `", params$tags_fn, "` does not exist. Exiting.")
+  }
+}
+
+if (params$save_tags) {
+  if (!(dir.exists('csv')))  {
+    message("Directory `csv' does not exist. Creating.")
+    dir.create('csv')
+  }
+}
+
+if (!dir.exists('archive')) {
+  message("Directory `archive` does not exist. Creating.")
+  dir.create('archive')
+}
+```
+
 # Acquire tags
 
 ```{r acquire-tags}
 # Acquire tags data
-vol_ids <- 1:params$max_vol_id
-message(paste0("Acquiring tags from Databrary for n=", length(vol_ids), " volumes."))
+vol_ids <- 1:params$max_volume_id
+message(paste0("Acquiring tags for n=", length(vol_ids), " volumes."))
 
 if (params$read_saved) {
   message('Reading froms saved file.')
-  tags <- readr::read_csv(params$tags_fn)
+  tags <- readr::read_csv(params$tags_fn, show_col_types = FALSE)
 } else {
   message('Reading tags from all volumes. Please be patient.')
   tags <- purrr::map_dfr(.x = vol_ids, .f = make_volume_tags_df)

@@ -133,7 +133,7 @@ get_max_institutional_id <- function(csv_fn = paste0(here::here(),
                                                      "/institutions-investigators/csv/institutions-investigators.csv")) {
   if (file.exists(csv_fn)) {
     message("Reading from saved file.")
-    inst_invest <- read_csv(csv_fn)
+    inst_invest <- readr::read_csv(csv_fn, show_col_types = FALSE)
     unique(max(inst_invest$inst_id))
   } else {
     message(paste0("File not found: ", csv_fn))
@@ -148,7 +148,7 @@ update_inst_csv <- function(csv_fn = paste0(here::here(),
 
   if (file.exists(csv_fn)) {
     message("Reading from saved file.")
-    old_inst <- read_csv(csv_fn)
+    old_inst <- readr::read_csv(csv_fn, show_col_types = FALSE)
     max_old_inst_id <- unique(max(old_inst$inst_id))
     if (max_old_inst_id < max_id) {
       message("Retrieving data from `party_id` ", max_old_inst_id + 1, ":", max_id)
@@ -177,7 +177,7 @@ update_inst_csv <- function(csv_fn = paste0(here::here(),
 resort_inst_fields <- function(csv_fn = paste0(here::here(), 
                                                "/institutions-investigators/csv/institutions-investigators.csv")) {
   if (file.exists(csv_fn)) {
-    inst_df <- read_csv(csv_fn)
+    inst_df <- readr::read_csv(csv_fn, show_col_types = FALSE)
     inst_df <- dplyr::select(inst_df, party_id, sortname, prename, affiliation, email,
                              inst_id, inst_url, party_url)
     write_csv(inst_df, csv_fn)
@@ -203,7 +203,7 @@ get_auth_inst_list <- function(update_inst = FALSE,
                                                "/institutions-investigators/csv/institutions.csv")) {
   if (update_inst) update_inst_csv()
   if (file.exists(csv_fn)) {
-    inst_df <- read_csv(csv_fn)
+    inst_df <- readr::read_csv(csv_fn, show_col_types = FALSE)
     unique(inst_df$inst_id)    
   } else {
     warning(paste("Institutions file not found: ", csv_fn))
@@ -445,7 +445,7 @@ export_cleaned_inst_json_from_csv <-
       stop(paste0('File not found: `', csv_fn, '`.'))
     }
     
-    df <- readr::read_csv(csv_fn)
+    df <- readr::read_csv(csv_fn, show_col_types = FALSE)
     message('Exporting json.')
     json <- export_inst_to_json(df)
     message('Cleaning json.')
@@ -735,7 +735,7 @@ get_ai_vols_assets <- function(party_id) {
 # Open a CSV with volume data, generate asset-level statistics, return an augmented
 # data frame
 merge_asset_stats_for_ai_vols <- function(vol_csv_fn) {
-  this_vol_df <- readr::read_csv(vol_csv_fn)
+  this_vol_df <- readr::read_csv(vol_csv_fn, show_col_types = FALSE)
   asset_stats_df <- purrr::map_df(this_vol_df$vol_id, calculate_vol_asset_stats)
   if (dim(asset_stats_df)[1] == 0) {
     warning("No asset data available for volumes in `", vol_csv_fn, '`.')

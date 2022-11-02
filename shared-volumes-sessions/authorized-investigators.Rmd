@@ -79,7 +79,7 @@ Merge and re-export
 
 ```{r}
 inst_fl <- list.files('csv', 'inst_', full.names = TRUE)
-these_inst <- purrr::map_df(inst_fl, read_csv)
+these_inst <- purrr::map_df(inst_fl, read_csv, show_col_types = FALSE)
 write_csv(these_inst, 'csv/all_inst_ids-2020-10-10.csv')
 ```
 
@@ -109,7 +109,7 @@ all_parties <- purrr::map_df(these_inst$party_id, list_inst_auth_parties)
 Import.
 
 ```{r}
-shared_vols <- read_csv('csv/shared_volumes_sessions.csv')
+shared_vols <- readr::read_csv('csv/shared_volumes_sessions.csv', show_col_types = FALSE)
 ```
 
 Filter.

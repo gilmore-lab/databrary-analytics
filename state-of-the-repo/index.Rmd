@@ -14,6 +14,7 @@ params:
   update_stats: False
   from_gs: False
   update_csv: False
+  archive_old: True
 ---
 
 ```{r set-up, include=FALSE}
@@ -23,6 +24,29 @@ library(tidyverse)
 
 source("R/helpers.R")
 ```
+
+```{r archive-old, include=FALSE}
+copy_to_archive <- function(fpath, fn) {
+  if (file.exists(file.path(fpath, fn))) {
+    current_fn <- file.path(fpath, fn)
+    new_fn <- file.path(fpath, "archive", paste0(Sys.Date(), '_', fn))
+    if (file.copy(current_fn, new_fn)) {
+      message("Report copied to '", paste0(fpath, "/archive'"))
+    }
+  } else {
+    message("No file copied.")
+  }
+}
+
+if (params$archive_old) {
+  if (!(dir.exists('archive'))) {
+  message("Directory `csv` does not exist. Creating.")
+  dir.create('archive')  
+  }
+  copy_to_archive(".", "index.html")
+}
+```
+
 
 # Purpose
 
@@ -34,12 +58,12 @@ The Databrary community consists of Institutions and their Authorized Investigat
 
 ## Growth
 
-```{r child = '../weekly/users.Rmd'}
+```{r user-growth, child = '../weekly/users.Rmd'}
 ```
 
 ## Map
 
-```{r}
+```{r load-inst-data}
 # Load saved file
 inst_df <- readr::read_csv("../institutions-investigators/csv/institutions.csv", show_col_types = FALSE)
 ```
@@ -211,11 +235,11 @@ Databrary specializes in storing and sharing video and audio recordings, but the
 ```{r}
 #quietly_read_csv <- safely(readr::read_csv)
 
-if (dir.exists('../volumes-with-videos-annotations/csv')) {
-  csv_fns <- list.files('../volumes-with-videos-annotations/csv', '\\.csv', full.names = TRUE)
+if (dir.exists('../volume-assets/csv')) {
+  csv_fns <- list.files('../volume-assets/csv', '\\.csv', full.names = TRUE)
   assets_df <- purrr::map_df(csv_fns, readr::read_csv, show_col_types = FALSE)
 } else {
-  stop(paste0('CSV directory not found: ', '../volumes-with-videos-annotations/csv'))
+  stop(paste0('CSV directory not found: ', '../volume-assets/csv'))
 }
 ```
 
@@ -390,6 +414,57 @@ xtabs(formula = ~ participant_ethnicity, data = demo_df) %>%
   knitr::kable(., "html") %>%
   kableExtra::kable_styling(.) %>%
   kableExtra::scroll_box(., height = "400px")
+```
+
+## Tags & keywords
+
+```{r}
+tags <- readr::read_csv("../tags-keywords/csv/databrary-tags.csv", show_col_types = FALSE)
+```
+
+### Histogram of tags/volume
+
+```{r tag-stats}
+vols_without_tags <- tags %>%
+  dplyr::filter(., is.na(tags))
+
+vols_with_tags <- tags %>%
+  dplyr::filter(., !is.na(tags)) %>%
+  dplyr::group_by(., vol_id) %>%
+  dplyr::summarise(., n_tags = n())
+```
+
+```{r tags-per-volume-histogram}
+vols_with_tags %>%
+  ggplot2::ggplot(.) +
+  aes(n_tags) +
+  geom_histogram(bins = 12)
+```
+
+### Unique tags
+
+```{r unique-tags}
+unique_tags <- tags %>%
+  dplyr::select(., tags, weight) %>%
+  dplyr::filter(., !is.na(tags)) %>%
+  dplyr::group_by(., tags) %>%
+  dplyr::summarise(., n_vols_using = n(), weight_sum = sum(weight)) %>%
+  dplyr::arrange(., desc(n_vols_using))
+```
+
+There are $n=$ `r dim(unique_tags)[1]` unique tags.
+
+```{r unique-tags-table}
+unique_tags %>%
+  knitr::kable(., "html") %>%
+  kableExtra::kable_styling()
+```
+
+### Word cloud
+
+```{r word-cloud}
+wordcloud::wordcloud(words = unique_tags$tags, 
+                     freq = unique_tags$n_vols_using)
 ```
 
 # Citations

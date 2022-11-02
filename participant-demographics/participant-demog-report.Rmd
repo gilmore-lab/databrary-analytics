@@ -12,19 +12,10 @@ output:
 params:
     db_login: email@provider.com
     new_vol_rg_min: 1
-    new_vol_rg_max: 1500
+    new_vol_rg_max: 1520
     update_demo_csvs: False
     csv_path: 'csv'
 ---
-
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(warning = FALSE,
-                      message = FALSE)
-
-library(tidyverse) # Mostly for pipe '%>%' operator
-
-source("R/helpers.R")
-```
 
 # Purpose
 
@@ -37,6 +28,34 @@ This report adopts the following approach:
 - Download the spreadsheet CSVs using the `databraryapi::download_session_csv()` function, then aggregates them.
 - Because the API calls are time and resource-consuming, the code below "chunks" the calls into group of 10 volumes each.
 The outputs are saved in separate CSVs, and then reimported.
+
+# Set-up
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(warning = FALSE,
+                      message = FALSE)
+
+library(tidyverse) # Mostly for pipe '%>%' operator
+
+source("R/helpers.R")
+```
+
+```{r check-directories}
+if (!dir.exists(params$csv_path)) {
+  # If updating, create missing csv directory, otherwise exit.
+  if (params$update_demo_csvs) {
+    message("Directory `", params$csv_path, "` does not exist. Creating.")
+    dir.create('csv')
+  } else {
+    stop("Directory `", params$csv_path, "` does not exist. Exiting.")
+  }
+}
+
+if (!dir.exists('archive')) {
+  message("Directory `archive` does not exist. Creating.")
+  dir.create('archive')
+}
+```
 
 # Updating spreadsheet CSVs
 

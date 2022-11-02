@@ -45,7 +45,7 @@ databraryapi::login_db(params$db_login)
 if (params$use_saved_file) {
   if (file.exists(params$save_fn)) {
     message("Reading from saved file.")
-    inst_invest <- read_csv(params$save_fn)
+    inst_invest <- read_csv(params$save_fn, show_col_types = FALSE)
   } else {
     message("File not found.")
     message(" Regenerating data from all volumes.")
@@ -63,7 +63,7 @@ inst_invest <- inst_invest %>%
 ```{r save-data}
 if (params$save_file) {
   message(paste0("Saving file: ", params$save_fn))
-  readr::write_csv(inst_invest, path = params$save_fn)
+  readr::write_csv(inst_invest, file = params$save_fn)
 }
 ```
 
