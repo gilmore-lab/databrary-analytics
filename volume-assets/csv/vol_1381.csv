@@ -1,0 +1,5 @@
+vol_id,mimetype,extension,asset_type,n_files,tot_size_gb,tot_dur_hrs
+1381,application/vnd.openxmlformats-officedocument.spreadsheetml.sheet,xlsx,Microsoft Excel (Office Open XML) workbook,1,0,0
+1381,text/csv,csv,Comma-separated values,783,0,0
+1381,text/plain,txt,Plain text,1,0,0
+1381,video/mp4,mp4,MPEG-4 video,6,0,6.706945

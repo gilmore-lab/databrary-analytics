@@ -1,4 +1,0 @@
-vol_id,mimetype,extension,asset_type,n_files,tot_size_gb,tot_dur_hrs
-430,application/vnd.datavyu,opf,Datavyu,2,6.29296875e-6,0
-430,application/vnd.openxmlformats-officedocument.wordprocessingml.document,docx,Microsoft Word (Office Open XML) document,8,5.10140625e-4,0
-430,video/mp4,mp4,MPEG-4 video,34,6.680664139648438,15.666333333333334

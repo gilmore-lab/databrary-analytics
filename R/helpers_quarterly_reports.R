@@ -31,7 +31,7 @@ load_default_report_parameters <- function() {
   
   max_party_id <- 12000
   max_volume_id <-
-    1520 # Must end in zero for now, so see next function
+    1540 # Must end in zero for now, so see next function
   max_party_id <- make_next_ten(max_party_id)
 }
 
@@ -117,7 +117,7 @@ make_shared_volumes_sessions_report <-
   }
 
 make_volume_assets_report <- function(update = FALSE,
-                                      max_volume_id = 1520) {
+                                      max_volume_id = 1540) {
   if (!is.logical(update))
     stop("`update` must be a logical value.")
   if (max_volume_id <= 0)
@@ -132,7 +132,7 @@ make_volume_assets_report <- function(update = FALSE,
     rmarkdown::render(
       "volume-assets/assets-stats.Rmd",
       params = list(use_saved_csvs = FALSE,
-                    max_vol_id = max_volume_id)
+                    max_volume_id = max_volume_id)
     )
   } else {
     message("-- Using previously saved volume asset data --")
@@ -144,7 +144,7 @@ make_volume_assets_report <- function(update = FALSE,
 }
 
 make_volume_demographics_report <- function(update = FALSE, 
-                                            max_volume_id = 1520) {
+                                            max_volume_id = 1540) {
   if (!is.logical(update))
     stop("`update` must be a logical value.")
   if (max_volume_id <= 0)

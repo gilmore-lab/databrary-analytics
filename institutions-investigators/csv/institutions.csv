@@ -681,3 +681,78 @@ inst_id,inst_name,inst_url,databrary_url,n_auth_invest,daa,lat,lon
 8698,"University of Kansas, Medical Center",https://www.kumc.edu/,https://nyu.databrary.org/party/8698,1,TRUE,39.0558912,-94.6088995
 8707,San Francisco de Quito University,https://www.usfq.edu.ec/en,https://nyu.databrary.org/party/8707,1,TRUE,-0.19689,-78.4357443
 8712,Vishwakarma Institute of Information Technology,http://www.viit.ac.in/,https://nyu.databrary.org/party/8712,1,TRUE,18.4595591,73.8854285
+8717,Mitsven,NA,https://nyu.databrary.org/party/8717,0,FALSE,NA,NA
+8720,Castellana,NA,https://nyu.databrary.org/party/8720,0,FALSE,NA,NA
+8777,"California State University, Los Angeles",https://www.calstatela.edu/,https://nyu.databrary.org/party/8777,1,TRUE,NA,NA
+8824,"Institute for Biomedical Research and Innovation (IRIB), National Research Council of Italy (CNR) of Messina",https://www.messina.irib.cnr.it/,https://nyu.databrary.org/party/8824,1,TRUE,NA,NA
+8875,University of Bern,https://www.unibe.ch/index_eng.html,https://nyu.databrary.org/party/8875,1,TRUE,NA,NA
+8920,Wageningen University & Research,https://www.wur.nl/en.htm,https://nyu.databrary.org/party/8920,1,TRUE,NA,NA
+8951,Western Kentucky University,https://www.wku.edu/,https://nyu.databrary.org/party/8951,1,TRUE,NA,NA
+8955,"University of South Carolina, Aiken",https://www.usca.edu/,https://nyu.databrary.org/party/8955,1,TRUE,NA,NA
+8965,Vassar College,https://www.vassar.edu/,https://nyu.databrary.org/party/8965,1,TRUE,NA,NA
+9079,Sungkyunkwan University,http://www.skku.edu/eng/index.do,https://nyu.databrary.org/party/9079,3,TRUE,NA,NA
+9088,The University of Oxford,https://www.ox.ac.uk/,https://nyu.databrary.org/party/9088,3,TRUE,NA,NA
+9091,Nagoya University,https://en.nagoya-u.ac.jp/,https://nyu.databrary.org/party/9091,2,TRUE,NA,NA
+9126,Chicago School of Professional Psychology,https://www.thechicagoschool.edu/,https://nyu.databrary.org/party/9126,1,TRUE,NA,NA
+9141,Fujita Health University,https://www.fujita-hu.ac.jp/en/,https://nyu.databrary.org/party/9141,1,TRUE,NA,NA
+9154,Southwestern University,https://www.southwestern.edu/,https://nyu.databrary.org/party/9154,1,TRUE,NA,NA
+9159,Rush University,https://www.rushu.rush.edu/,https://nyu.databrary.org/party/9159,1,TRUE,NA,NA
+9169,University of Lille,https://www.univ-lille.fr/,https://nyu.databrary.org/party/9169,2,TRUE,NA,NA
+9200,Gifu University,https://www.gifu-u.ac.jp/en/,https://nyu.databrary.org/party/9200,1,TRUE,NA,NA
+9202,Sabanci University,http://www.sabanciuniv.edu/en,https://nyu.databrary.org/party/9202,1,TRUE,NA,NA
+9216,Weizmann Institute of Science,https://www.weizmann.ac.il/,https://nyu.databrary.org/party/9216,2,TRUE,NA,NA
+9233,University Mannheim,https://www.uni-mannheim.de/en/,https://nyu.databrary.org/party/9233,0,FALSE,NA,NA
+9234,University Mannheim,https://www.uni-mannheim.de/en/,https://nyu.databrary.org/party/9234,1,TRUE,NA,NA
+9238,Rose,NA,https://nyu.databrary.org/party/9238,0,FALSE,NA,NA
+9251,Edge Hill University,https://www.edgehill.ac.uk/,https://nyu.databrary.org/party/9251,1,TRUE,NA,NA
+9286,University of Central Lancashire,https://www.uclan.ac.uk/,https://nyu.databrary.org/party/9286,1,TRUE,NA,NA
+9312,Cognition and Learning Research Center (CeRCA),https://cerca.labo.univ-poitiers.fr/en/research-centre-on-cognition-and-learning-2/,https://nyu.databrary.org/party/9312,1,TRUE,NA,NA
+9320,Mansoura University,https://www.mans.edu.eg/en,https://nyu.databrary.org/party/9320,1,TRUE,NA,NA
+9340,University of Almeria,https://www.ual.es/,https://nyu.databrary.org/party/9340,1,TRUE,NA,NA
+9341,Hiroshima University,https://www.hiroshima-u.ac.jp/en,https://nyu.databrary.org/party/9341,1,TRUE,NA,NA
+9342,ICESI University,https://www.icesi.edu.co/en/,https://nyu.databrary.org/party/9342,1,TRUE,NA,NA
+9352,"University of Nottingham, Malaysia",https://www.nottingham.edu.my/index.aspx,https://nyu.databrary.org/party/9352,1,TRUE,NA,NA
+9418,Keene State College,https://www.keene.edu/,https://nyu.databrary.org/party/9418,1,TRUE,NA,NA
+9474,"Indiana University, Purdue University Columbus",https://www.iupuc.edu/,https://nyu.databrary.org/party/9474,1,TRUE,NA,NA
+9490,Fordham University,https://www.fordham.edu/,https://nyu.databrary.org/party/9490,1,TRUE,NA,NA
+9513,University College Dublin,https://www.ucd.ie/,https://nyu.databrary.org/party/9513,1,TRUE,NA,NA
+9566,"University of Massachusetts, Lowell",https://www.uml.edu/,https://nyu.databrary.org/party/9566,1,TRUE,NA,NA
+9628,University of Prince Edward Island,https://www.upei.ca/,https://nyu.databrary.org/party/9628,1,TRUE,NA,NA
+9629,Nottingham Trent University,https://www.ntu.ac.uk/,https://nyu.databrary.org/party/9629,1,TRUE,NA,NA
+9649,Peking University,https://english.pku.edu.cn/,https://nyu.databrary.org/party/9649,2,TRUE,NA,NA
+9650,Avinashilingam University for Women,https://avinuty.ac.in/,https://nyu.databrary.org/party/9650,1,TRUE,NA,NA
+9687,University of Derby,https://www.derby.ac.uk/,https://nyu.databrary.org/party/9687,1,TRUE,NA,NA
+9688,"University of Michigan, Dearborn",https://umdearborn.edu/,https://nyu.databrary.org/party/9688,1,TRUE,NA,NA
+9693,Uskudar University,https://uskudar.edu.tr/en,https://nyu.databrary.org/party/9693,1,TRUE,NA,NA
+9694,Sookmyung Women's University,https://e.sookmyung.ac.kr/,https://nyu.databrary.org/party/9694,1,TRUE,NA,NA
+9715,"Royal United Hospitals, Bath",https://www.ruh.nhs.uk/,https://nyu.databrary.org/party/9715,1,TRUE,NA,NA
+9730,Louisiana State University,http://www.lsu.edu/,https://nyu.databrary.org/party/9730,1,TRUE,NA,NA
+9735,University of Adelaide,https://www.adelaide.edu.au/,https://nyu.databrary.org/party/9735,1,TRUE,NA,NA
+9853,Wits Health Consortium,https://www.witshealth.co.za/,https://nyu.databrary.org/party/9853,1,TRUE,NA,NA
+9881,Cleveland State University,https://www.csuohio.edu/,https://nyu.databrary.org/party/9881,1,TRUE,NA,NA
+9900,Shenyang Normal University,https://www.synu.edu.cn/,https://nyu.databrary.org/party/9900,1,TRUE,NA,NA
+9908,Shahid Beheshti University,https://en.sbu.ac.ir/,https://nyu.databrary.org/party/9908,2,TRUE,NA,NA
+9912,Federal University Juiz de Fora,https://www2.ufjf.br/,https://nyu.databrary.org/party/9912,1,TRUE,NA,NA
+9949,Chukyo University,https://kenkyu-db.chukyo-u.ac.jp/,https://nyu.databrary.org/party/9949,1,TRUE,NA,NA
+9950,University of Atacama,https://uda.cl/,https://nyu.databrary.org/party/9950,1,TRUE,NA,NA
+9987,Rhodes University,https://www.ru.ac.za/,https://nyu.databrary.org/party/9987,1,TRUE,NA,NA
+9999,Winston-Salem State University,https://www.wssu.edu/,https://nyu.databrary.org/party/9999,1,TRUE,NA,NA
+10005,Russell Sage College,https://www.sage.edu/,https://nyu.databrary.org/party/10005,1,TRUE,NA,NA
+10069,"California State University, Channel Islands",https://www.csuci.edu/,https://nyu.databrary.org/party/10069,1,TRUE,NA,NA
+10073,Smith College,https://www.smith.edu/,https://nyu.databrary.org/party/10073,1,TRUE,NA,NA
+10082,"Duke University, School of Medicine",https://medschool.duke.edu/,https://nyu.databrary.org/party/10082,1,TRUE,NA,NA
+10098,Paris City University,https://u-paris.fr/en/,https://nyu.databrary.org/party/10098,1,TRUE,NA,NA
+10145,University of Detroit Mercy,https://www.udmercy.edu/,https://nyu.databrary.org/party/10145,1,TRUE,NA,NA
+10149,University of Essex,https://www.essex.ac.uk/,https://nyu.databrary.org/party/10149,2,TRUE,NA,NA
+10164,University of Arkansas for Medical Sciences,https://www.uams.edu/,https://nyu.databrary.org/party/10164,0,TRUE,NA,NA
+10202,National Tsing Hua University,https://nthu-en.site.nthu.edu.tw/,https://nyu.databrary.org/party/10202,1,TRUE,NA,NA
+10341,University of Technology Sarawak,https://www.uts.edu.my/,https://nyu.databrary.org/party/10341,1,TRUE,NA,NA
+10376,Butler University,https://www.butler.edu/,https://nyu.databrary.org/party/10376,1,TRUE,NA,NA
+10384,University of Poitiers,https://www.univ-poitiers.fr/en/,https://nyu.databrary.org/party/10384,1,TRUE,NA,NA
+10387,Ashland University,https://www.ashland.edu/,https://nyu.databrary.org/party/10387,1,TRUE,NA,NA
+10407,Stockton University,https://stockton.edu/,https://nyu.databrary.org/party/10407,1,TRUE,NA,NA
+10453,University of Aberdeen,https://www.abdn.ac.uk/,https://nyu.databrary.org/party/10453,1,TRUE,NA,NA
+10455,University of Bamberg,https://www.uni-bamberg.de/en/,https://nyu.databrary.org/party/10455,1,TRUE,NA,NA
+10472,Laval University,https://www.ulaval.ca/en,https://nyu.databrary.org/party/10472,1,TRUE,NA,NA
+10508,"The Pennsylvania State University, Shenago",https://shenango.psu.edu/,https://nyu.databrary.org/party/10508,1,TRUE,NA,NA
+10509,Lebanon Valley College,https://www.lvc.edu/,https://nyu.databrary.org/party/10509,1,TRUE,NA,NA
