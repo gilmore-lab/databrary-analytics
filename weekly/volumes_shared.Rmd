@@ -16,7 +16,7 @@ if (params$from_gs) {
   old_vols <- db %>%
     googlesheets::gs_read(ws = 'volumes-shared-unshared')
 } else {
-  old_vols <- readr::read_csv("csv/volumes-shared-unshared.csv")
+  old_vols <- readr::read_csv("csv/volumes-shared-unshared.csv", show_col_types = FALSE)
 }
 
 if (purrr::is_empty(old_vols)) {

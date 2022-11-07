@@ -13,7 +13,7 @@ if (params$from_gs) {
   old_citations <- db %>%
     googlesheets::gs_read(ws = 'citations-monthly')
 } else {
-  old_citations <- readr::read_csv("csv/citations-monthly.csv")
+  old_citations <- readr::read_csv("csv/citations-monthly.csv", show_col_types = FALSE)
 }
 
 old_citations <- old_citations %>%
