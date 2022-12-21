@@ -756,3 +756,11 @@ inst_id,inst_name,inst_url,databrary_url,n_auth_invest,daa,lat,lon
 10472,Laval University,https://www.ulaval.ca/en,https://nyu.databrary.org/party/10472,1,TRUE,NA,NA
 10508,"The Pennsylvania State University, Shenago",https://shenango.psu.edu/,https://nyu.databrary.org/party/10508,1,TRUE,NA,NA
 10509,Lebanon Valley College,https://www.lvc.edu/,https://nyu.databrary.org/party/10509,1,TRUE,NA,NA
+10551,Wilkerson,NA,https://nyu.databrary.org/party/10551,0,FALSE,NA,NA
+10556,Eckerd College,https://www.eckerd.edu/,https://nyu.databrary.org/party/10556,1,TRUE,NA,NA
+10561,Ohio University,https://www.ohio.edu/,https://nyu.databrary.org/party/10561,1,TRUE,NA,NA
+10568,Public University of Navarre,https://www.unavarra.es/,https://nyu.databrary.org/party/10568,1,TRUE,NA,NA
+10579,University of Cologne,https://www.uni-koeln.de/,https://nyu.databrary.org/party/10579,1,TRUE,NA,NA
+10601,University of Kassel,https://www.uni-kassel.de/uni/,https://nyu.databrary.org/party/10601,1,TRUE,NA,NA
+10603,"Institute of Systems and Robotics, University of Coimbra",https://www.isr.uc.pt/,https://nyu.databrary.org/party/10603,1,TRUE,NA,NA
+10683,Southern Methodist University,https://www.smu.edu/,https://nyu.databrary.org/party/10683,1,TRUE,NA,NA

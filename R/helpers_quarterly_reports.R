@@ -21,7 +21,6 @@ make_next_ten <- function(n) {
 
 load_default_report_parameters <- function() {
   # Parameters
-  
   update_asset_data <-
     TRUE # This is very time consuming, but should be done periodically, probably quarterly
   update_demog_data <-
@@ -31,8 +30,10 @@ load_default_report_parameters <- function() {
   
   max_party_id <- 12000
   max_volume_id <-
-    1540 # Must end in zero for now, so see next function
+    1590 # Must end in zero for now, so see next function
   max_party_id <- make_next_ten(max_party_id)
+  max_volume_id <- make_next_ten(max_volume_id)
+  list(max_party_id = max_party_id, max_volume_id = max_volume_id)
 }
 
 make_funders_report <- function(use_saved_file = TRUE,
@@ -55,7 +56,8 @@ make_funders_report <- function(use_saved_file = TRUE,
   Sys.time() - start_time
 }
 
-make_institutions_report <- function(max_party_id = 12000, db_login) {
+make_institutions_report <- function(max_party_id = 12000, 
+                                     db_login = Sys.getenv("DATABRARY_LOGIN")) {
   if (max_party_id <= 0)
     stop("`max_party_id` must be > 0.")
   if (length(max_party_id) > 1)
@@ -73,7 +75,7 @@ make_institutions_report <- function(max_party_id = 12000, db_login) {
   Sys.time() - start_time
 }
 
-make_investigators_report <- function(max_party_id = 12000, db_login) {
+make_investigators_report <- function(max_party_id = 12000, db_login = Sys.getenv("DATABRARY_LOGIN")) {
   start_time <- Sys.time()
   
   message("----- Generating investigators report -----")
@@ -88,7 +90,8 @@ make_investigators_report <- function(max_party_id = 12000, db_login) {
 
 make_shared_volumes_sessions_report <-
   function(update = FALSE,
-           max_volume_id = 1520) {
+           max_volume_id = 1599,
+           db_login = Sys.getenv("DATABRARY_LOGIN")) {
     
     if (!is.logical(update))
       stop("`update` must be a logical value.")
@@ -105,19 +108,22 @@ make_shared_volumes_sessions_report <-
         "shared-volumes-sessions/shared-volumes-sessions.Rmd",
         params = list(save_file = TRUE,
                       use_saved_file = FALSE,
-                      max_volume_id = max_volume_id)
+                      max_volume_id = max_volume_id,
+                      db_login = db_login)
       )
     } else {
       rmarkdown::render("shared-volumes-sessions/shared-volumes-sessions.Rmd",
                         params = list(use_saved_file = TRUE,
-                                      max_volume_id = max_volume_id))
+                                      max_volume_id = max_volume_id,
+                                      db_login = db_login))
     }
     
     Sys.time() - start_time
   }
 
 make_volume_assets_report <- function(update = FALSE,
-                                      max_volume_id = 1540) {
+                                      max_volume_id = 1599,
+                                      db_login = Sys.getenv("DATABRARY_LOGIN")) {
   if (!is.logical(update))
     stop("`update` must be a logical value.")
   if (max_volume_id <= 0)
@@ -132,19 +138,22 @@ make_volume_assets_report <- function(update = FALSE,
     rmarkdown::render(
       "volume-assets/assets-stats.Rmd",
       params = list(use_saved_csvs = FALSE,
-                    max_volume_id = max_volume_id)
+                    max_volume_id = max_volume_id,
+                    db_login = db_login)
     )
   } else {
     message("-- Using previously saved volume asset data --")
     rmarkdown::render("volume-assets/assets-stats.Rmd",
-                      params = list(use_saved_csvs = TRUE))
+                      params = list(use_saved_csvs = TRUE,
+                                    db_login = db_login))
   }
   
   Sys.time() - start_time
 }
 
 make_volume_demographics_report <- function(update = FALSE, 
-                                            max_volume_id = 1540) {
+                                            max_volume_id = 1540,
+                                            db_login = Sys.getenv("DATABRARY_LOGIN")) {
   if (!is.logical(update))
     stop("`update` must be a logical value.")
   if (max_volume_id <= 0)
@@ -169,7 +178,8 @@ make_volume_demographics_report <- function(update = FALSE,
       params = list(
         new_vol_rg_min = 1,
         new_vol_rg_max = max_volume_id,
-        update_demo_csvs = TRUE
+        update_demo_csvs = TRUE,
+        db_login = db_login
       )
     )
   } else {
@@ -237,26 +247,56 @@ clean_up <- function() {
   if (file.exists("tags-keywords/.databrary.RData")) unlink("tags-keywords/.databrary.RData")
 }
 
-update_tags_report <- function(max_volume_id) {
+update_tags_report <- function(max_volume_id = 1590) {
   make_tags_keywords_report(update = TRUE,
                             max_volume_id = max_volume_id)
 }
 
-update_demog_report <- function(max_volume_id) {
+update_funders_report <- function(max_volume_id = 1590) {
+  make_funders_report(use_saved_file = FALSE,
+                                  max_volume_id = max_volume_id) 
+}
+
+update_demog_report <- function(max_volume_id = 1590) {
   make_volume_demographics_report(update = TRUE,
                                   max_volume_id = max_volume_id)
 }
 
-update_assets_report <- function() {
-  make_volume_assets_report(update = TRUE,
-                            max_volume_id = max_volume_id)
+update_assets_report <- function(max_volume_id = 1590) {
+  make_volume_assets_report(update = TRUE, max_volume_id = max_volume_id)
 }
 
-update_sessions_report <- function() {
+update_sessions_report <- function(max_volume_id = 1590) {
   make_shared_volumes_sessions_report(update = TRUE,
-                                      max_volume_id = max_volume_id)
+                                      max_volume_id)
 }
 
-update_institutions_report <- function(max_party_id, db_login) {
-  make_institutions_report(max_party_id, db_login)
+update_institutions_report <- function(max_party_id = 10684) {
+  make_institutions_report(max_party_id)
 }
+
+update_investigators_report <- function(max_party_id = 10684) {
+  make_investigators_report(max_party_id)
+}
+
+update_all_reports <- function() {
+  p <- load_default_report_parameters()
+  
+  # volume-level reports
+  update_tags_report(p$max_volume_id)
+  update_funders_report(p$max_volume_id)
+  update_demog_report(p$max_volume_id)
+  update_assets_report(p$max_volume_id)
+  update_sessions_report(p$max_volume_id)
+  
+  # party-level reports
+  update_institutions_report(p$max_party_id)
+  update_investigators_report(p$max_party_id)
+  
+  # summary reports
+  rmarkdown::render("state-of-the-repo/index.Rmd")
+  
+  # Clean-up
+  clean_up()
+}
+

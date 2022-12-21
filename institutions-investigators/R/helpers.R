@@ -255,7 +255,7 @@ count_affiliates_for_ais <- function(ai_ids) {
 # Updates the csv/investigators.csv file.
 #
 # if update_inst is TRUE, updates the institutional database first then uses the updated
-# institutions list to generate the authorize investigators data frame.
+# institutions list to generate the authorized investigators data frame.
 # if save_new is FALSE, no file is saved.
 update_invest_csv <- function(csv_fn = paste0(here::here(), 
                                             "/institutions-investigators/csv/investigators.csv"),

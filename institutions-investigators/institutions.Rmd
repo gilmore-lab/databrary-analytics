@@ -13,7 +13,7 @@ params:
   max_party_id: 12000
   save_fn: "csv/institutions.csv"
   save_file: True
-  use_saved_file: True
+  use_saved_file: False
 ---
 
 # Purpose

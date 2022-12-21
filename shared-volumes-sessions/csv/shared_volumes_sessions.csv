@@ -26,7 +26,7 @@ vol_id,vol_name,sharing_level,owner_ids.name,owner_ids.id,sessions_shared,n_sess
 31,Four-month-olds' discrimination of optic flow patterns depicting different directions of observer motion,full,"Gilmore, Rick O.",6,FALSE,1,2014-07-23T16:32:41Z
 32,Spatio-temporal tuning of coherent motion evoked responses in 4–6 month old infants and adults,full,"Gilmore, Rick O.",6,FALSE,1,2014-07-23T16:52:20Z
 33,Representing exact number visually using mental abacus,full,"Frank, Michael C.",258,FALSE,1,2014-07-28T17:21:21Z
-34,Development of infants’ attention to faces during the first year,full,"Frank, Michael C.",258,FALSE,1,2014-07-28T17:32:23Z
+34,Development of infants’ attention to faces during the first year (eye-tracking),full,"Frank, Michael C.",258,FALSE,1,2014-07-28T17:32:23Z
 35,Number as a cognitive technology: Evidence from Pirahã language and cognition,full,"Frank, Michael C.",258,FALSE,1,2014-07-28T17:48:26Z
 36,Measuring the development of social attention using free-viewing,full,"Frank, Michael C.",258,FALSE,1,2014-07-28T18:18:46Z
 37,Visual search and attention to faces during early infancy,full,"Frank, Michael C.",258,FALSE,1,2014-07-28T19:12:00Z
@@ -60,6 +60,13 @@ vol_id,vol_name,sharing_level,owner_ids.name,owner_ids.id,sessions_shared,n_sess
 83,"Infant and mother natural locomotion and gait: Spanish-speaking, low income families",restricted,"Adolph, Karen",5,FALSE,110,2014-10-29T17:37:08Z
 84,Motor decisions are not black and white: Selecting actions in the “gray zone”,full,"Adolph, Karen",5,FALSE,104,2014-11-03T22:57:47Z
 86,Excerpt volume: Crawling procedure & locomotor history,full,"Adolph, Karen",5,FALSE,2,2014-11-07T21:05:09Z
+87,Learning about the hidden affordances of containers,none,"Karasik, Lana",32,FALSE,233,2014-11-17T16:29:25Z
+87,Learning about the hidden affordances of containers,none,"Adolph, Karen",5,FALSE,233,2014-11-17T16:29:25Z
+87,Learning about the hidden affordances of containers,none,"Tamis-LeMonda, Catherine",11,FALSE,233,2014-11-17T16:29:25Z
+87,Learning about the hidden affordances of containers,none,"Spies, Jeffrey",4650,FALSE,233,2014-11-17T16:29:25Z
+87,Learning about the hidden affordances of containers,none,"Nez, Reda",4291,FALSE,233,2014-11-17T16:29:25Z
+88,Flexibility in action: How infants and adults go under a barrier,none,"Adolph, Karen",5,FALSE,132,2014-11-17T19:08:27Z
+88,Flexibility in action: How infants and adults go under a barrier,none,"Nez, Reda",4291,FALSE,132,2014-11-17T19:08:27Z
 89,The cost of simplifying complex developmental phenomena: A new perspective on learning to walk,full,"Adolph, Karen",5,FALSE,114,2014-11-19T20:05:35Z
 90,"Word-minimality, Epenthesis and Coda Licensing in the Early Acquisition of English",full,"Demuth, Katherine",537,FALSE,314,2014-11-20T17:48:20Z
 95,Semantic congruity affects numerical judgments similarly in monkeys and humans,full,"Brannon, Elizabeth M",313,FALSE,0,2014-12-05T15:56:51Z
@@ -68,7 +75,7 @@ vol_id,vol_name,sharing_level,owner_ids.name,owner_ids.id,sessions_shared,n_sess
 99,Faces in early visual environments of infants,full,"Fausey, Caitlin M.",126,FALSE,2,2014-12-17T02:36:55Z
 99,Faces in early visual environments of infants,full,"Smith, Linda B.",161,FALSE,2,2014-12-17T02:36:55Z
 99,Faces in early visual environments of infants,full,"Jayaraman, Swapnaa",254,FALSE,2,2014-12-17T02:36:55Z
-101,"Head-camera study of novel word learning with 8-, 12-, and 16-month olds",restricted,"Frank, Michael C.",258,FALSE,31,2015-01-09T20:47:22Z
+101,"Head-camera study of novel word learning with 8-, 12-, and 16-month olds",full,"Frank, Michael C.",258,FALSE,31,2015-01-09T20:47:22Z
 104,The Nonshared Environment in Adolescent Development (NEAD) Project: A Longitudinal Family Study of Twins and Siblings from Adolescence to Young Adulthood,none,"Neiderhiser, Jenae",330,FALSE,2,2015-01-29T14:40:51Z
 106,Datavyu Training Workshop,none,"Gilmore, Rick O.",6,FALSE,12,2015-02-02T14:35:56Z
 106,Datavyu Training Workshop,none,"Admin, Databrary",3341,FALSE,12,2015-02-02T14:35:56Z
@@ -87,6 +94,7 @@ vol_id,vol_name,sharing_level,owner_ids.name,owner_ids.id,sessions_shared,n_sess
 121,Excerpt volume: Gibson's “visual cliff”,full,"Adolph, Karen",5,FALSE,1,2015-04-21T19:46:11Z
 123,Active vision in passive locomotion: Real-world free viewing in infants and adults,full,"Adolph, Karen",5,FALSE,37,2015-04-28T20:03:00Z
 124,Head-mounted eye tracking: A new method to describe infant looking,full,"Adolph, Karen",5,FALSE,14,2015-04-28T20:32:07Z
+132,Pilot study: Infants perceiving the affordances of walking over gaps and down slopes,none,"Adolph, Karen",5,FALSE,19,2015-05-04T18:44:06Z
 135,See and be seen: Infant-caregiver social looking during locomotor free play,full,"Adolph, Karen",5,FALSE,27,2015-05-06T15:20:28Z
 135,See and be seen: Infant-caregiver social looking during locomotor free play,full,"Franchak, John",14,FALSE,27,2015-05-06T15:20:28Z
 136,What infants know and what they do: Perceiving possibilities for walking through openings.,full,"Adolph, Karen",5,FALSE,63,2015-05-06T19:29:17Z
@@ -94,19 +102,28 @@ vol_id,vol_name,sharing_level,owner_ids.name,owner_ids.id,sessions_shared,n_sess
 139,Fostering Children’s Reasoning about Disagreements through an Inquiry-based Curriculum (time point 1),full,"Sobel, David",111,FALSE,142,2015-06-01T13:42:07Z
 140,"It's the journey, not the destination: Locomotor exploration in infants",full,"Hoch, Justine",412,FALSE,102,2015-06-02T23:01:46Z
 140,"It's the journey, not the destination: Locomotor exploration in infants",full,"Adolph, Karen",5,FALSE,102,2015-06-02T23:01:46Z
+142,Infant Nanny Cam (LK),none,"Adolph, Karen",5,FALSE,1,2015-06-09T17:26:40Z
+143,Infant Nanny Cam (DKL),none,"Adolph, Karen",5,FALSE,11,2015-06-09T17:27:48Z
 144,Children's Brain Responses to Forms Defined by Visual Motion,none,"Gilmore, Rick O.",6,FALSE,53,2015-06-10T14:32:12Z
+145,Pilot study: Infants navigating an obstacle course,none,"Adolph, Karen",5,FALSE,12,2015-06-10T14:50:25Z
 146,Infant's Brain Responses to Laminar and Radial Motion Coherence Profiles,none,"Gilmore, Rick O.",6,FALSE,39,2015-06-11T13:40:59Z
+148,Monthly diary of a typical infant's milestones over the first 9 months of life,none,"Adolph, Karen",5,FALSE,9,2015-06-12T19:13:43Z
 149,Constructing Science: Connecting Causal Reasoning to Scientific Thinking in Young Children - which outcomes are science (chapter 7),full,"Weisberg, Deena Skolnick",562,FALSE,155,2015-06-15T15:47:52Z
 150,Preschoolers' extension and export of information from realistic and fantastical stories (Study 2),full,"Weisberg, Deena Skolnick",562,FALSE,111,2015-06-15T16:00:28Z
+152,Video diaries of six typical infants' locomotor milestones,none,"Adolph, Karen",5,FALSE,84,2015-06-19T20:14:53Z
 162,"Visual, manual, and postural coordination in the development of prehension",full,"Adolph, Karen",5,FALSE,94,2015-08-10T18:19:48Z
 163,What cruising infants understand about support for locomotion,full,"Adolph, Karen",5,FALSE,55,2015-09-01T21:23:50Z
 165,Being Sticker Rich:  Numerical Context Influences Children’s Sharing Behavior,full,"Cordes, Sara",798,FALSE,3,2015-09-18T18:33:58Z
+169,Monthly diary of a typical infant's milestones over the first 18 months of life,none,"Adolph, Karen",5,FALSE,16,2015-10-08T17:30:35Z
 171,Constructing Science: Connecting Causal Reasoning to Scientific Thinking in Young Children - blicket task with adults (chapter 5),full,"Weisberg, Deena Skolnick",562,FALSE,17,2015-10-13T17:57:57Z
 172,test (ARS collaborator),none,"Gilmore, Rick O.",6,FALSE,3,2015-10-13T18:33:18Z
 172,test (ARS collaborator),none,"Spies, Jeffrey",4650,FALSE,3,2015-10-13T18:33:18Z
 174,Spatiotemporal organization of myoclonic twitching in sleeping human infants,full,"Blumberg, Mark",314,FALSE,33,2015-10-14T13:45:39Z
 174,Spatiotemporal organization of myoclonic twitching in sleeping human infants,full,"Sokoloff, Greta",1317,FALSE,33,2015-10-14T13:45:39Z
+176,Excerpts for unauthorized colleagues,none,"Adolph, Karen",5,FALSE,7,2015-10-19T17:06:57Z
 184,Investigating the effectiveness of fantasy stories for teaching scientific principles (study 1),full,"Weisberg, Deena Skolnick",562,FALSE,161,2015-11-09T19:01:20Z
+186,Free Play at Home,none,Staff,308,FALSE,2,2015-11-11T18:06:55Z
+186,Free Play at Home,none,"Admin, Databrary",3341,FALSE,2,2015-11-11T18:06:55Z
 192,Free viewing gaze behavior in infants and adults,full,"Franchak, John",14,FALSE,52,2015-11-29T16:01:13Z
 192,Free viewing gaze behavior in infants and adults,full,"Adolph, Karen",5,FALSE,52,2015-11-29T16:01:13Z
 193,Excerpt volume: Infants' use of social information for guiding locomotion over slopes,full,"Adolph, Karen",5,FALSE,3,2015-11-30T19:58:52Z
@@ -128,6 +145,11 @@ vol_id,vol_name,sharing_level,owner_ids.name,owner_ids.id,sessions_shared,n_sess
 215,Children's Brain Responses to Forms Defined by Visual Motion,none,"Gilmore, Rick O.",6,FALSE,0,2016-03-21T15:44:12Z
 217,"Use it or lose it? Effects of age, experience, and disuse on crawling",full,"Adolph, Karen",5,FALSE,13,2016-03-31T17:10:06Z
 218,Motion Coherence Thresholds for Child Participants Viewing Linear and Radial Patterns of Optic Flow,full,"Gilmore, Rick O.",6,FALSE,35,2016-03-31T19:01:05Z
+220,Improving AAC Display Design: Eye-Tracking Analysis of Visual Attention,none,"Wilkinson, Krista",245,FALSE,1,2016-04-01T18:31:37Z
+220,Improving AAC Display Design: Eye-Tracking Analysis of Visual Attention,none,"Gilmore, Rick O.",6,FALSE,1,2016-04-01T18:31:37Z
+226,"Caregivers and infants using a traditional ""gahvora"" cradling practice in Tajikistan Longitudinal",none,"Karasik, Lana",32,FALSE,129,2016-04-07T17:28:50Z
+226,"Caregivers and infants using a traditional ""gahvora"" cradling practice in Tajikistan Longitudinal",none,"Adolph, Karen",5,FALSE,129,2016-04-07T17:28:50Z
+226,"Caregivers and infants using a traditional ""gahvora"" cradling practice in Tajikistan Longitudinal",none,"Tamis-LeMonda, Catherine",11,FALSE,129,2016-04-07T17:28:50Z
 231,Datavyu Workshop 2016-04-09 ​Andrew Gordon,none,"Admin, Databrary",3341,FALSE,0,2016-05-02T14:05:25Z
 231,Datavyu Workshop 2016-04-09 ​Andrew Gordon,none,"Gilmore, Rick O.",6,FALSE,0,2016-05-02T14:05:25Z
 231,Datavyu Workshop 2016-04-09 ​Andrew Gordon,none,"Seisler, Andrea R.",437,FALSE,0,2016-05-02T14:05:25Z
@@ -160,8 +182,6 @@ vol_id,vol_name,sharing_level,owner_ids.name,owner_ids.id,sessions_shared,n_sess
 254,PLAY Project: NICHD Workshop (2016-12-16),full,"Tamis-LeMonda, Catherine",11,FALSE,9,2016-07-20T19:47:54Z
 254,PLAY Project: NICHD Workshop (2016-12-16),full,"Gilmore, Rick O.",6,FALSE,9,2016-07-20T19:47:54Z
 254,PLAY Project: NICHD Workshop (2016-12-16),full,"Soska, Kasey",406,FALSE,9,2016-07-20T19:47:54Z
-257,US infants without India age-match,none,"Smith, Linda B.",161,FALSE,38,2016-08-19T18:34:48Z
-257,US infants without India age-match,none,"Jayaraman, Swapnaa",254,FALSE,38,2016-08-19T18:34:48Z
 268,Real-world visual statistics and infants’ first-learned object names,full,"Smith, Linda B.",161,FALSE,2,2016-10-11T17:28:08Z
 269,"Of Blickets, Butterflies, and Baby Dinosaurs: Children’s Diagnostic Reasoning Across Domains (Study 2)",full,"Weisberg, Deena Skolnick",562,FALSE,105,2016-10-14T13:48:41Z
 269,"Of Blickets, Butterflies, and Baby Dinosaurs: Children’s Diagnostic Reasoning Across Domains (Study 2)",full,"Sobel, David",111,FALSE,105,2016-10-14T13:48:41Z
@@ -172,6 +192,11 @@ vol_id,vol_name,sharing_level,owner_ids.name,owner_ids.id,sessions_shared,n_sess
 272,Pubertal development shapes perception of complex facial expressions,full,"Motta-Mena, Natalie V.",525,FALSE,5,2016-10-19T19:38:28Z
 272,Pubertal development shapes perception of complex facial expressions,full,"Scherf, Kathryn Suzanne",252,FALSE,5,2016-10-19T19:38:28Z
 273,2016 Cognitive Science Workshop: Active Learning,full,"Bonawitz, Elizabeth",2173,FALSE,1,2016-10-21T17:14:30Z
+290,Infant Self-Feeding,none,"Nonaka, Tetsushi",1889,FALSE,39,2016-11-26T20:44:45Z
+290,Infant Self-Feeding,none,"Gilmore, Rick O.",6,FALSE,39,2016-11-26T20:44:45Z
+296,"Caregivers and infants using a traditional ""gahvora"" cradling practice in Tajikistan: Longitudinal study",none,"Karasik, Lana",32,FALSE,328,2016-12-07T17:07:03Z
+296,"Caregivers and infants using a traditional ""gahvora"" cradling practice in Tajikistan: Longitudinal study",none,"Adolph, Karen",5,FALSE,328,2016-12-07T17:07:03Z
+296,"Caregivers and infants using a traditional ""gahvora"" cradling practice in Tajikistan: Longitudinal study",none,"Tamis-LeMonda, Catherine",11,FALSE,328,2016-12-07T17:07:03Z
 297,Affordances of Clay at the Clay Topos,full,"Nonaka, Tetsushi",1889,FALSE,14,2016-12-11T15:19:52Z
 302,Beyond the FFA: Brain-behavior correspondences in face recognition abilities,restricted,"Elbich, Daniel",1838,FALSE,1,2016-12-19T16:02:13Z
 302,Beyond the FFA: Brain-behavior correspondences in face recognition abilities,restricted,"Scherf, Kathryn Suzanne",252,FALSE,1,2016-12-19T16:02:13Z
@@ -179,6 +204,9 @@ vol_id,vol_name,sharing_level,owner_ids.name,owner_ids.id,sessions_shared,n_sess
 308,Investigating the effectiveness of fantasy stories for teaching scientific principles (study 2),full,"Weisberg, Deena Skolnick",562,FALSE,110,2017-01-30T15:13:19Z
 321,Looking without seeing: Children do not distinguish efficient from inefficient means to achieve a goal,full,"Ossmy, Ori",1526,FALSE,80,2017-02-09T22:19:00Z
 321,Looking without seeing: Children do not distinguish efficient from inefficient means to achieve a goal,full,"Adolph, Karen",5,FALSE,80,2017-02-09T22:19:00Z
+322,Children learning about the hidden affordances of everyday objects,none,"Adolph, Karen",5,FALSE,163,2017-02-23T19:50:52Z
+322,Children learning about the hidden affordances of everyday objects,none,"Tamis-LeMonda, Catherine",11,FALSE,163,2017-02-23T19:50:52Z
+323,The interplay of posture and vision in infancy,none,"Adolph, Karen",5,FALSE,10,2017-02-27T22:51:45Z
 324,Synthetic contrast- and spatial frequency-normalized grayscale patterns representing 2D wallpaper groups,full,"Norcia, Anthony M.",378,FALSE,17,2017-03-02T12:59:21Z
 324,Synthetic contrast- and spatial frequency-normalized grayscale patterns representing 2D wallpaper groups,full,"Gilmore, Rick O.",6,FALSE,17,2017-03-02T12:59:21Z
 324,Synthetic contrast- and spatial frequency-normalized grayscale patterns representing 2D wallpaper groups,full,"LIU, YANXI",3043,FALSE,17,2017-03-02T12:59:21Z
@@ -196,6 +224,7 @@ vol_id,vol_name,sharing_level,owner_ids.name,owner_ids.id,sessions_shared,n_sess
 339,Young children's neural processing of their mother’s voice: An fMRI study,full,"Scherf, Kathryn Suzanne",252,FALSE,32,2017-04-11T14:39:02Z
 339,Young children's neural processing of their mother’s voice: An fMRI study,full,"Perez-Edgar, Koraly",96,FALSE,32,2017-04-11T14:39:02Z
 339,Young children's neural processing of their mother’s voice: An fMRI study,full,"Vigeant, Michelle Celine",6688,FALSE,32,2017-04-11T14:39:02Z
+350,14-month old walking infants perceiving the affordances of walking over gaps,none,"Adolph, Karen",5,FALSE,51,2017-05-01T15:49:03Z
 351,infant hand observation,full,"Kukke, Sahana Nalini",2704,FALSE,19,2017-05-02T15:41:05Z
 357,Rules infants look by: Testing the assumption of transitivity in visual salience,full,"Kibbe, Melissa",2400,FALSE,3,2017-05-18T14:31:38Z
 357,Rules infants look by: Testing the assumption of transitivity in visual salience,full,"Kaldy, Zsuzsa",102,FALSE,3,2017-05-18T14:31:38Z
@@ -213,6 +242,8 @@ vol_id,vol_name,sharing_level,owner_ids.name,owner_ids.id,sessions_shared,n_sess
 390,Starter-ACLEW,full,"Durrant, Samantha",3046,FALSE,36,2017-06-07T13:31:59Z
 390,Starter-ACLEW,full,"Bunce, John",3312,FALSE,36,2017-06-07T13:31:59Z
 400,Preschoolers' extension and export of information from realistic and fantastical stories (Study 1),full,"Weisberg, Deena Skolnick",562,FALSE,183,2017-06-14T13:43:08Z
+430,TEMPORARY DATAVYU WORKSHOP VOLUME,none,"Adolph, Karen",5,FALSE,8,2017-06-14T21:13:55Z
+430,TEMPORARY DATAVYU WORKSHOP VOLUME,none,"Soska, Kasey",406,FALSE,8,2017-06-14T21:13:55Z
 433,BCD Lab Adult Female Face Database,full,"Scott, Lisa",2653,FALSE,29,2017-06-19T18:44:08Z
 434,Real-time Processes in the Development of Action Planning,full,"Ossmy, Ori",1526,FALSE,83,2017-06-20T16:19:54Z
 434,Real-time Processes in the Development of Action Planning,full,"Adolph, Karen",5,FALSE,83,2017-06-20T16:19:54Z
@@ -224,14 +255,18 @@ vol_id,vol_name,sharing_level,owner_ids.name,owner_ids.id,sessions_shared,n_sess
 445,ManyBabies 1: bll-umanitoba,full,"Soderstrom, Melanie",518,FALSE,118,2017-07-07T16:48:35Z
 445,ManyBabies 1: bll-umanitoba,full,"Klassen, Kelsey",3126,FALSE,118,2017-07-07T16:48:35Z
 452,Perceiving affordances for different motor skills (other conditions),full,"Adolph, Karen",5,FALSE,28,2017-07-13T15:06:14Z
+455,Pilot study: Crawling over gaps -- performance vs. perception,none,"Adolph, Karen",5,FALSE,41,2017-07-14T18:51:43Z
 458,Where Infants Go: Real‐Time Dynamics of Locomotor Exploration in Crawling and Walking Infants,full,"Hoch, Justine",412,FALSE,3,2017-07-19T17:43:33Z
 458,Where Infants Go: Real‐Time Dynamics of Locomotor Exploration in Crawling and Walking Infants,full,"Rachwani, Jaya",506,FALSE,3,2017-07-19T17:43:33Z
 458,Where Infants Go: Real‐Time Dynamics of Locomotor Exploration in Crawling and Walking Infants,full,"Adolph, Karen",5,FALSE,3,2017-07-19T17:43:33Z
 459,Excerpt volume: Object interaction and walking: Integration of old and new skills in infant development,full,"Adolph, Karen",5,FALSE,8,2017-07-19T17:50:41Z
+460,Pilot study: Longitudinal training study of children learning to brachiate on monkey bars,none,"Adolph, Karen",5,FALSE,39,2017-07-21T14:13:35Z
 465,test,full,"Arshad, Ahmad",2223,FALSE,1,2017-08-09T14:34:24Z
 468,"Individual data of ""Shirai et al. (submitted). Development of asymmetric vection for radial expansion/contraction motion: comparison between school-age children and adults""",full,"Shirai, Nobu",2219,FALSE,1,2017-08-12T02:06:00Z
 471,"Excerpt volume: Illustrations from motor development of Siegler's ""Overlapping Waves Model"" of strategy choice",full,"Adolph, Karen",5,FALSE,4,2017-08-17T14:58:10Z
 473,Penn State Psychology Department 2017 R Bootcamp,full,"Gilmore, Rick O.",6,FALSE,2,2017-08-18T19:59:26Z
+476,Body mass and free play,none,"Hoch, Justine",412,FALSE,35,2017-08-25T20:07:05Z
+476,Body mass and free play,none,"Adolph, Karen",5,FALSE,35,2017-08-25T20:07:05Z
 477,High resolution movies simulating self-motion through rich environments,none,"Gilmore, Rick O.",6,FALSE,1,2017-08-28T15:30:34Z
 480,"Instructions in Mathematical Equivalence with Gesture and No Gesture Matched for Audio Content, Body Position and Eye Gaze",full,"Cook, Susan Wagner",681,FALSE,1,2017-08-31T03:26:01Z
 481,"Asking children to ""be helpers"" can backfire after setbacks",full,"Foster-Hanson, Emily",3121,FALSE,3,2017-08-31T15:30:22Z
@@ -422,6 +457,9 @@ vol_id,vol_name,sharing_level,owner_ids.name,owner_ids.id,sessions_shared,n_sess
 756,Play Inclusion and Exclusion,restricted,"Beier, Jonathan",594,FALSE,238,2018-09-05T14:30:39Z
 757,Trade-Off Quality,restricted,"Jaswal, Vikram",1117,FALSE,270,2018-09-05T19:23:52Z
 758,MittPupps Visit 3,restricted,"Needham, Amy",118,FALSE,38,2018-09-07T19:09:41Z
+760,PLAYProject_NYUNI (testing for making tutorial videos),none,"Xu, Melody",2775,FALSE,5,2018-09-12T15:43:08Z
+760,PLAYProject_NYUNI (testing for making tutorial videos),none,"Adolph, Karen",5,FALSE,5,2018-09-12T15:43:08Z
+760,PLAYProject_NYUNI (testing for making tutorial videos),none,"Soska, Kasey",406,FALSE,5,2018-09-12T15:43:08Z
 761,Play Project: Solitary Dyadic Pilots,restricted,"Adolph, Karen",5,FALSE,11,2018-09-12T16:51:57Z
 761,Play Project: Solitary Dyadic Pilots,restricted,"Soska, Kasey",406,FALSE,11,2018-09-12T16:51:57Z
 762,"The Role of Age, Theory of Mind, and Linguistic Ability in Children's Understanding of Ownership",full,"McDermott, Catherine",1704,FALSE,2,2018-09-18T17:09:04Z
@@ -466,6 +504,7 @@ vol_id,vol_name,sharing_level,owner_ids.name,owner_ids.id,sessions_shared,n_sess
 825,Sacrifice to Parents among Chinese and European American Emerging Adults,restricted,"Miller, Joan",3812,FALSE,1,2019-01-03T18:02:29Z
 826,"Excerpt volume: Cultural differences in childrearing practices (constraint, exercise, massage)",full,"Adolph, Karen",5,FALSE,1,2019-01-05T13:11:09Z
 827,MomNoMom,restricted,"Adolph, Karen",5,FALSE,48,2019-01-07T23:40:18Z
+827,MomNoMom,restricted,"Hoch, Justine",412,FALSE,48,2019-01-07T23:40:18Z
 828,the BasicChild Project,full,"Gredebäck, Gustaf",4546,FALSE,5,2019-01-08T11:18:59Z
 828,the BasicChild Project,full,"Forssman, Linda",4787,FALSE,5,2019-01-08T11:18:59Z
 828,the BasicChild Project,full,"Lindskog, Marcus",4881,FALSE,5,2019-01-08T11:18:59Z
@@ -482,8 +521,8 @@ vol_id,vol_name,sharing_level,owner_ids.name,owner_ids.id,sessions_shared,n_sess
 834,Developmental changes in strategies for gathering evidence about biological kinds,full,"Rhodes, Marjorie",277,FALSE,2,2019-01-17T14:41:25Z
 834,Developmental changes in strategies for gathering evidence about biological kinds,full,"Moty, Kelsey",405,FALSE,2,2019-01-17T14:41:25Z
 835,Pilot Study: Apparatus Training,restricted,"Adolph, Karen",5,FALSE,62,2019-01-21T17:20:09Z
-836,Speaking of kinds: How generic language shapes the development of category representations,restricted,"Foster-Hanson, Emily",3121,FALSE,1,2019-01-23T16:41:23Z
-836,Speaking of kinds: How generic language shapes the development of category representations,restricted,"Rhodes, Marjorie",277,FALSE,1,2019-01-23T16:41:23Z
+836,Speaking of kinds: How correcting generic statements can shape children’s concepts,full,"Foster-Hanson, Emily",3121,FALSE,1,2019-01-23T16:41:23Z
+836,Speaking of kinds: How correcting generic statements can shape children’s concepts,full,"Rhodes, Marjorie",277,FALSE,1,2019-01-23T16:41:23Z
 837,Santa Claus Disbelief,full,"Goldstein, Thalia R.",531,FALSE,59,2019-01-25T21:36:50Z
 837,Santa Claus Disbelief,full,"Kanumuru, Pallavi",3989,FALSE,59,2019-01-25T21:36:50Z
 837,Santa Claus Disbelief,full,"Mills, Candice",6232,FALSE,59,2019-01-25T21:36:50Z
@@ -516,14 +555,16 @@ vol_id,vol_name,sharing_level,owner_ids.name,owner_ids.id,sessions_shared,n_sess
 864,Mdat data,restricted,"Gladstone, Melissa",4142,FALSE,1,2019-03-03T19:42:28Z
 865,ALL mdat data,restricted,"Gladstone, Melissa",4142,FALSE,1,2019-03-03T19:47:14Z
 867,Eye Gaze Contingency,restricted,"Beier, Jonathan",594,FALSE,15,2019-03-05T14:03:38Z
-868,Keen,restricted,"Adolph, Karen",5,FALSE,75,2019-03-06T14:18:18Z
-868,Keen,restricted,"Cole, Whitney Graham",81,FALSE,75,2019-03-06T14:18:18Z
+868,Keen,restricted,"Adolph, Karen",5,FALSE,76,2019-03-06T14:18:18Z
+868,Keen,restricted,"Cole, Whitney Graham",81,FALSE,76,2019-03-06T14:18:18Z
 870,Nanit,restricted,"Berger, Sarah E",2382,FALSE,160,2019-03-20T16:34:03Z
 870,Nanit,restricted,"Maia, Michele",7359,FALSE,160,2019-03-20T16:34:03Z
 871,Mouse mating behavior,restricted,"Froemke, Robert",4605,FALSE,1,2019-03-24T21:55:25Z
 873,Intentional and Accidental Events (video stimuli),full,"Fausey, Caitlin M.",126,FALSE,4,2019-03-26T16:30:15Z
 874,The Complex Emotion Expression Database: A Validated Stimulus Set of Trained Actors,full,"Scherf, Kathryn Suzanne",252,FALSE,17,2019-03-27T14:31:35Z
 874,The Complex Emotion Expression Database: A Validated Stimulus Set of Trained Actors,full,"Benda, Margaret Suzanne",5051,FALSE,17,2019-03-27T14:31:35Z
+875,NYU Datavyu Workshop Fisher-Price 2019-04-05,none,"Adolph, Karen",5,FALSE,1,2019-03-29T22:22:44Z
+875,NYU Datavyu Workshop Fisher-Price 2019-04-05,none,"Soska, Kasey",406,FALSE,1,2019-03-29T22:22:44Z
 876,Play and Learning Across a Year (PLAY) Project - Protocols & Documentation,full,"Adolph, Karen",5,FALSE,7,2019-04-01T15:48:23Z
 876,Play and Learning Across a Year (PLAY) Project - Protocols & Documentation,full,"Tamis-LeMonda, Catherine",11,FALSE,7,2019-04-01T15:48:23Z
 876,Play and Learning Across a Year (PLAY) Project - Protocols & Documentation,full,"Gilmore, Rick O.",6,FALSE,7,2019-04-01T15:48:23Z
@@ -533,6 +574,8 @@ vol_id,vol_name,sharing_level,owner_ids.name,owner_ids.id,sessions_shared,n_sess
 879,Theory of Mind and Deception,restricted,"Vishton, Peter",60,FALSE,22,2019-04-04T13:45:40Z
 880,The effect of spatial organization in the design of visual supports for adults with communicative disorders,restricted,"Gilmore, Rick O.",6,FALSE,3,2019-04-05T17:29:31Z
 880,The effect of spatial organization in the design of visual supports for adults with communicative disorders,restricted,"Wilkinson, Krista",245,FALSE,3,2019-04-05T17:29:31Z
+881,PLAY-collection-test,none,"Gilmore, Rick O.",6,FALSE,5,2019-04-08T14:22:16Z
+881,PLAY-collection-test,none,"Jayaraman, Swapnaa",254,FALSE,5,2019-04-08T14:22:16Z
 882,NoHelp Fence,restricted,"Beier, Jonathan",594,FALSE,76,2019-04-10T15:25:18Z
 883,The Developmental Roots of Black Female Invisibility,restricted,"Rhodes, Marjorie",277,FALSE,1,2019-04-10T18:42:14Z
 884,Eye-Gaze FoCuS Database,full,"Scherf, Kathryn Suzanne",252,FALSE,3,2019-04-10T21:11:58Z
@@ -558,6 +601,10 @@ vol_id,vol_name,sharing_level,owner_ids.name,owner_ids.id,sessions_shared,n_sess
 897,Learning the Designed Actions of Everyday Objects,full,"Karasik, Lana",32,FALSE,116,2019-05-03T17:38:55Z
 897,Learning the Designed Actions of Everyday Objects,full,"Rachwani, Jaya",506,FALSE,116,2019-05-03T17:38:55Z
 898,UoA_ManyBabies,restricted,"Henderson, Annette",4687,FALSE,1,2019-05-05T22:33:03Z
+899,PLAYProject_NYUNI,none,"Adolph, Karen",5,FALSE,59,2019-05-07T16:43:29Z
+899,PLAYProject_NYUNI,none,"Tamis-LeMonda, Catherine",11,FALSE,59,2019-05-07T16:43:29Z
+899,PLAYProject_NYUNI,none,"Soska, Kasey",406,FALSE,59,2019-05-07T16:43:29Z
+899,PLAYProject_NYUNI,none,"Gilmore, Rick O.",6,FALSE,59,2019-05-07T16:43:29Z
 900,Novel verb learning in 2- to 3.5-year-olds,restricted,"Arunachalam, Sudha",4685,FALSE,29,2019-05-07T20:50:17Z
 901,Holiday word learning in 12- to 19-month-olds,restricted,"Arunachalam, Sudha",4685,FALSE,25,2019-05-09T16:49:10Z
 903,ars create test,restricted,"Seisler, Andrea R.",437,FALSE,0,2019-05-10T13:33:45Z
@@ -586,6 +633,7 @@ vol_id,vol_name,sharing_level,owner_ids.name,owner_ids.id,sessions_shared,n_sess
 928,MittPupps Visit 4,restricted,"Needham, Amy",118,FALSE,21,2019-06-11T13:17:29Z
 929,"Language Emergence: Competition, Usage, and Analyses -- Honoring the Impact of Brian MacWhinney on Language Research",restricted,"Gilmore, Rick O.",6,FALSE,32,2019-06-11T14:31:43Z
 931,Social Communication in Children with and without Autism Spectrum Disorder,restricted,"de Marchena, Ashley Brooke",2587,FALSE,43,2019-06-13T15:45:03Z
+932,PLAY Project Videos,none,"Adolph, Karen",5,FALSE,3,2019-06-13T19:06:46Z
 933,HAB & Trust,restricted,"Palmquist, Carolyn",2945,FALSE,34,2019-06-14T20:33:36Z
 935,Trust in Context: Strategy,restricted,"Palmquist, Carolyn",2945,FALSE,1,2019-06-21T19:49:31Z
 937,Parental Beliefs about Infant and Child Learning,full,"Casasola, Marianella",650,FALSE,3,2019-06-27T18:30:44Z
@@ -594,8 +642,8 @@ vol_id,vol_name,sharing_level,owner_ids.name,owner_ids.id,sessions_shared,n_sess
 938,Adapt,restricted,"Bunge, Silvia",491,FALSE,36,2019-06-27T20:22:33Z
 940,Emotion Portrayal Creation,restricted,"Goldstein, Thalia R.",531,FALSE,0,2019-07-09T17:49:28Z
 940,Emotion Portrayal Creation,restricted,"Chulla, Kaylee Rose",4278,FALSE,0,2019-07-09T17:49:28Z
-941,Walking and Talking,full,"West, Kelsey Louise",600,FALSE,32,2019-07-11T21:02:49Z
-941,Walking and Talking,full,"Adolph, Karen",5,FALSE,32,2019-07-11T21:02:49Z
+941,Walking and Talking,full,"West, Kelsey Louise",600,FALSE,39,2019-07-11T21:02:49Z
+941,Walking and Talking,full,"Adolph, Karen",5,FALSE,39,2019-07-11T21:02:49Z
 942,Trust in Context: Flipped,restricted,"Palmquist, Carolyn",2945,FALSE,37,2019-07-12T18:05:36Z
 943,“Dancing” Together: Infant–Mother Locomotor Synchrony,full,"Hoch, Justine",412,FALSE,33,2019-07-15T21:45:50Z
 943,“Dancing” Together: Infant–Mother Locomotor Synchrony,full,"Ossmy, Ori",1526,FALSE,33,2019-07-15T21:45:50Z
@@ -610,6 +658,7 @@ vol_id,vol_name,sharing_level,owner_ids.name,owner_ids.id,sessions_shared,n_sess
 950,"Of Blickets, Butterflies, and Baby Dinosaurs: Children’s Diagnostic Reasoning Across Domains (Study 3)",full,"Weisberg, Deena Skolnick",562,FALSE,96,2019-07-29T17:53:12Z
 952,Kosie & Baldwin Video Corpus,restricted,"Baldwin, Dare",3746,FALSE,0,2019-07-30T21:53:17Z
 953,Example Videos - Pupillometry as a Window on the Role of Motionese in Infants' Processing of Dynamic Activity,restricted,"Baldwin, Dare",3746,FALSE,1,2019-07-30T21:59:13Z
+954,PLAYProject_GEORG,none,"Barr, Rachel",104,FALSE,38,2019-08-01T20:40:40Z
 955,"Oh, Behave!",full,"Adolph, Karen",5,FALSE,14,2019-08-05T13:08:28Z
 956,ESC Modeling,restricted,"Adolph, Karen",5,FALSE,14,2019-08-09T17:53:58Z
 957,ESC Sparkle,restricted,"Adolph, Karen",5,FALSE,34,2019-08-09T17:57:55Z
@@ -626,6 +675,8 @@ vol_id,vol_name,sharing_level,owner_ids.name,owner_ids.id,sessions_shared,n_sess
 965,Status essentialism in children,restricted,"Rhodes, Marjorie",277,FALSE,1,2019-09-05T18:19:11Z
 965,Status essentialism in children,restricted,"Mandalaywala, Tara",357,FALSE,1,2019-09-05T18:19:11Z
 965,Status essentialism in children,restricted,"Benitez, Josie",5803,FALSE,1,2019-09-05T18:19:11Z
+966,PLAYProject_UCRIV,none,"Franchak, John",14,FALSE,2,2019-09-08T19:26:57Z
+966,PLAYProject_UCRIV,none,"Luna, Aylin",10317,FALSE,2,2019-09-08T19:26:57Z
 968,OmissionBlender_13,restricted,"Hamlin, Kiley",2525,FALSE,20,2019-09-09T22:47:36Z
 969,"1 month Visit - Paddles, CryBaby, and Imitation",restricted,"Hamlin, Kiley",2525,FALSE,11,2019-09-09T22:52:43Z
 972,Bullies2_Rep9,restricted,"Hamlin, Kiley",2525,FALSE,2,2019-09-09T22:58:32Z
@@ -635,7 +686,7 @@ vol_id,vol_name,sharing_level,owner_ids.name,owner_ids.id,sessions_shared,n_sess
 976,Bullies2_P2,restricted,"Hamlin, Kiley",2525,FALSE,17,2019-09-11T17:28:53Z
 977,EndaHill_24,restricted,"Hamlin, Kiley",2525,FALSE,8,2019-09-11T17:39:47Z
 978,MB2_,restricted,"Hamlin, Kiley",2525,FALSE,1,2019-09-11T22:35:58Z
-979,PLAYProject_PRINU,restricted,"Lew-Williams, Casey",1371,FALSE,0,2019-09-12T23:33:58Z
+979,PLAYProject_PRINU,restricted,"Lew-Williams, Casey",1371,FALSE,1,2019-09-12T23:33:58Z
 982,PLAYProject_VCOMU,restricted,"Dusing, Stacey",255,FALSE,4,2019-09-16T18:07:16Z
 983,Learning Choice Check,restricted,"Lillard, Angeline",318,FALSE,1,2019-09-16T22:15:36Z
 987,Interactive Behavior in Schools (IBIS),full,"Messinger, Daniel",70,FALSE,16,2019-09-20T16:52:17Z
@@ -643,9 +694,9 @@ vol_id,vol_name,sharing_level,owner_ids.name,owner_ids.id,sessions_shared,n_sess
 987,Interactive Behavior in Schools (IBIS),full,"Fasano, Regina M.",4314,FALSE,16,2019-09-20T16:52:17Z
 987,Interactive Behavior in Schools (IBIS),full,"vitale, laura corina",6565,FALSE,16,2019-09-20T16:52:17Z
 987,Interactive Behavior in Schools (IBIS),full,"Gonzalez, Brittney Monique",8104,FALSE,16,2019-09-20T16:52:17Z
+988,Toy play: How children discover and implement the designed action of Duplo bricks,full,"Kaplan, Brianna Erin",2765,FALSE,119,2019-09-23T15:48:30Z
 988,Toy play: How children discover and implement the designed action of Duplo bricks,full,"Adolph, Karen",5,FALSE,119,2019-09-23T15:48:30Z
 988,Toy play: How children discover and implement the designed action of Duplo bricks,full,"Tamis-LeMonda, Catherine",11,FALSE,119,2019-09-23T15:48:30Z
-988,Toy play: How children discover and implement the designed action of Duplo bricks,full,"Kaplan, Brianna Erin",2765,FALSE,119,2019-09-23T15:48:30Z
 988,Toy play: How children discover and implement the designed action of Duplo bricks,full,"Rachwani, Jaya",506,FALSE,119,2019-09-23T15:48:30Z
 989,Containers,restricted,"Adolph, Karen",5,FALSE,127,2019-09-23T20:05:27Z
 989,Containers,restricted,"Nez, Reda",4291,FALSE,127,2019-09-23T20:05:27Z
@@ -655,6 +706,8 @@ vol_id,vol_name,sharing_level,owner_ids.name,owner_ids.id,sessions_shared,n_sess
 993,Study 211,restricted,"Bauer, Patricia",5539,FALSE,1,2019-09-24T20:59:45Z
 994,Capping Videos,restricted,"Bauer, Patricia",5539,FALSE,1,2019-09-24T21:08:38Z
 995,HAB & Trust V3,restricted,"Palmquist, Carolyn",2945,FALSE,6,2019-09-26T21:14:24Z
+996,PLAYProject_UMIAM,none,"Perry, Lynn",1974,FALSE,2,2019-09-27T17:43:10Z
+996,PLAYProject_UMIAM,none,"Messinger, Daniel",70,FALSE,2,2019-09-27T17:43:10Z
 997,Empty Room DARPA,restricted,"Nez, Reda",4291,FALSE,0,2019-10-01T20:31:29Z
 998,Fiction Preferences 2019,restricted,"Lillard, Angeline",318,FALSE,3,2019-10-01T21:33:28Z
 999,DisleksiaBelajar - Usability Testing PDM,restricted,"Admodisastro, Novia Indriaty",3519,FALSE,2,2019-10-03T08:44:21Z
@@ -663,9 +716,9 @@ vol_id,vol_name,sharing_level,owner_ids.name,owner_ids.id,sessions_shared,n_sess
 1005,Multisensory Attention Skills & Communication Foundation Ratings,full,"Todd, James Torrence",407,FALSE,3,2019-10-05T16:04:09Z
 1006,Attention to faces and races in the infant brain,full,"Scott, Lisa",2653,FALSE,1,2019-10-14T15:19:28Z
 1007,"Freeviewing gaze behavior in infants, children, and adults",full,"Franchak, John",14,FALSE,2,2019-10-15T23:01:53Z
-1008,PLAYProject_BOSTU,restricted,"Gill, Simone",610,FALSE,1,2019-10-16T19:40:14Z
-1008,PLAYProject_BOSTU,restricted,"Keegan, Laura",5994,FALSE,1,2019-10-16T19:40:14Z
-1008,PLAYProject_BOSTU,restricted,"Ayoub, Maria",6293,FALSE,1,2019-10-16T19:40:14Z
+1008,PLAYProject_BOSTU,restricted,"Gill, Simone",610,FALSE,6,2019-10-16T19:40:14Z
+1008,PLAYProject_BOSTU,restricted,"Keegan, Laura",5994,FALSE,6,2019-10-16T19:40:14Z
+1008,PLAYProject_BOSTU,restricted,"Ayoub, Maria",6293,FALSE,6,2019-10-16T19:40:14Z
 1009,Study 225,restricted,"Bauer, Patricia",5539,FALSE,1,2019-10-17T17:41:11Z
 1010,Study 232,restricted,"Bauer, Patricia",5539,FALSE,1,2019-10-17T17:43:02Z
 1011,Look before you fit: The real-time planning cascade in children and adults,full,"Ossmy, Ori",1526,FALSE,49,2019-10-18T12:25:32Z
@@ -679,14 +732,12 @@ vol_id,vol_name,sharing_level,owner_ids.name,owner_ids.id,sessions_shared,n_sess
 1017,Test 4,restricted,"Frog, Kermit",5415,FALSE,0,2019-10-25T17:24:42Z
 1018,Test 5 - entire volume shared but no affiliate access,restricted,"Frog, Kermit",5415,FALSE,0,2019-10-25T17:28:20Z
 1019,Test-Oct-25-2019,restricted,"Smith, Linda B.",161,FALSE,0,2019-10-25T18:02:58Z
-1020,Developing Environments,restricted,"Adolph, Karen",5,FALSE,75,2019-10-29T13:31:54Z
+1020,Developing Environments,restricted,"Adolph, Karen",5,FALSE,117,2019-10-29T13:31:54Z
 1021,Shared_Videos,restricted,"Gweon, Hyowon",5475,FALSE,0,2019-11-01T22:00:31Z
 1022,Nanit Sound Videos,restricted,"Berger, Sarah E",2382,FALSE,1,2019-11-02T19:54:06Z
-1023,PLAYProject_CUNYS,restricted,"Karasik, Lana",32,FALSE,0,2019-11-07T16:29:20Z
-1023,PLAYProject_CUNYS,restricted,"Xu, Melody",2775,FALSE,0,2019-11-07T16:29:20Z
-1023,PLAYProject_CUNYS,restricted,"Herzberg, Orit",3137,FALSE,0,2019-11-07T16:29:20Z
+1023,PLAYProject_CUNYS,restricted,"Karasik, Lana",32,FALSE,2,2019-11-07T16:29:20Z
 1025,Hiding Game,restricted,"Starr, Ariel",5894,FALSE,0,2019-11-15T19:21:50Z
-1026,Big Shoes,restricted,"Adolph, Karen",5,FALSE,21,2019-11-18T19:14:40Z
+1026,Big Shoes,restricted,"Adolph, Karen",5,FALSE,24,2019-11-18T19:14:40Z
 1027,"Study 1 (Hide 3, Reveal 3, Reveal 2) N = 45",restricted,"Fabricius, William",288,FALSE,45,2019-11-22T00:16:46Z
 1028,"Study 1A (Reveal-Search, Reveal-Look, Hide-Search)",restricted,"Fabricius, William",288,FALSE,0,2019-11-22T00:17:39Z
 1029,Paleolithic Social Transmission Network Pilot Study,restricted,"Stout, Dietrich",2993,FALSE,3,2019-11-22T20:11:11Z
@@ -720,16 +771,22 @@ vol_id,vol_name,sharing_level,owner_ids.name,owner_ids.id,sessions_shared,n_sess
 1062,An Isolated-Signing RGBD Dataset of 100 American Sign Language Signs Produced by Fluent ASL Signers,full,"Huenerfauth, Matt",6349,FALSE,23,2020-02-13T02:09:28Z
 1063,Study 22,restricted,"Bauer, Patricia",5539,FALSE,4,2020-02-13T22:44:14Z
 1065,Study 236 Videos from Camera Cards,restricted,"Bauer, Patricia",5539,FALSE,1,2020-02-19T17:47:55Z
-1066,PLAYProject_UCSCR,restricted,"Wang, Su-hua",1285,FALSE,23,2020-02-20T21:08:03Z
+1066,PLAYProject_UCSCR,restricted,"Wang, Su-hua",1285,FALSE,28,2020-02-20T21:08:03Z
 1067,Prediction Mechanisms Pilot,restricted,"Palmquist, Carolyn",2945,FALSE,17,2020-02-21T19:41:57Z
 1068,Prediction Mechanisms,restricted,"Palmquist, Carolyn",2945,FALSE,32,2020-02-21T20:01:00Z
 1069,Swist Kids,restricted,"Gweon, Hyowon",5475,FALSE,5,2020-02-22T00:56:49Z
 1070,Children's Academic Orientation Scale,full,"Jirout, Jamie",1197,FALSE,2,2020-02-25T19:32:03Z
-1071,Video Task- Alda Project,restricted,"Goldstein, Thalia R.",531,FALSE,110,2020-02-26T15:49:15Z
-1071,Video Task- Alda Project,restricted,"Orr, Margaret",9175,FALSE,110,2020-02-26T15:49:15Z
+1071,Video Task- Alda Project,restricted,"Goldstein, Thalia R.",531,FALSE,202,2020-02-26T15:49:15Z
+1071,Video Task- Alda Project,restricted,"Orr, Margaret",9175,FALSE,202,2020-02-26T15:49:15Z
 1072,Study 28,restricted,"Bauer, Patricia",5539,FALSE,5,2020-02-27T18:14:37Z
+1073,PLAYproject_TESTY,none,"Adolph, Karen",5,FALSE,2,2020-03-04T16:21:37Z
+1073,PLAYproject_TESTY,none,"Lingeman, Jesse",6072,FALSE,2,2020-03-04T16:21:37Z
+1075,Action Planning Study: Longitudinal,none,"Keen, Rachel",2192,FALSE,138,2020-03-06T15:36:28Z
+1075,Action Planning Study: Longitudinal,none,"Adolph, Karen",5,FALSE,138,2020-03-06T15:36:28Z
+1075,Action Planning Study: Longitudinal,none,"Ossmy, Ori",1526,FALSE,138,2020-03-06T15:36:28Z
 1076,Verb learning with special interests,restricted,"Arunachalam, Sudha",4685,FALSE,0,2020-03-09T17:31:02Z
 1077,Verb learning using special interest items in children with and without ASD,restricted,"Arunachalam, Sudha",4685,FALSE,0,2020-03-09T17:33:57Z
+1078,DELETE THIS VOLUME,none,"Adolph, Karen",5,FALSE,0,2020-03-11T13:30:01Z
 1081,Ultradian cycles and learning,restricted,"Berger, Sarah E",2382,FALSE,3,2020-03-12T14:59:20Z
 1081,Ultradian cycles and learning,restricted,"Horger, Melissa Noel",2642,FALSE,3,2020-03-12T14:59:20Z
 1082,Test volume,restricted,"Kushnir, Tamar",5813,FALSE,1,2020-03-13T17:34:19Z
@@ -749,14 +806,15 @@ vol_id,vol_name,sharing_level,owner_ids.name,owner_ids.id,sessions_shared,n_sess
 1100,ESBI - Parent (Kirsten's Dissertation),restricted,"Richert, Rebekah",5032,FALSE,116,2020-03-24T03:30:06Z
 1101,Reflection of Exploration,restricted,"Sobel, David",111,FALSE,1,2020-03-24T13:11:46Z
 1102,LENA Data,restricted,"Raver, Cybele",368,FALSE,2,2020-03-27T18:03:42Z
-1103,PLAYProject_OHIOS,restricted,"Heathcock, Jill",596,FALSE,33,2020-03-31T20:17:46Z
+1103,PLAYProject_OHIOS,restricted,"Heathcock, Jill",596,FALSE,39,2020-03-31T20:17:46Z
 1104,Spatial Language Towards a Robot,restricted,"Kushnir, Tamar",5813,FALSE,42,2020-04-01T18:00:40Z
 1104,Spatial Language Towards a Robot,restricted,"Kocher, Deanna",6533,FALSE,42,2020-04-01T18:00:40Z
+1105,DELETE THIS VOLUME,none,"Adolph, Karen",5,FALSE,0,2020-04-02T16:31:00Z
 1108,Children’s Use of Everyday Artifacts: Learning the Hidden Affordance of Zipping,full,"Rachwani, Jaya",506,FALSE,48,2020-04-03T00:24:44Z
 1108,Children’s Use of Everyday Artifacts: Learning the Hidden Affordance of Zipping,full,"Adolph, Karen",5,FALSE,48,2020-04-03T00:24:44Z
 1108,Children’s Use of Everyday Artifacts: Learning the Hidden Affordance of Zipping,full,"Tamis-LeMonda, Catherine",11,FALSE,48,2020-04-03T00:24:44Z
 1108,Children’s Use of Everyday Artifacts: Learning the Hidden Affordance of Zipping,full,"Kaplan, Brianna Erin",2765,FALSE,48,2020-04-03T00:24:44Z
-1110,Test CAFE,none,"Seisler, Andrea R.",437,FALSE,0,2020-04-03T13:13:39Z
+1109,DELETE THIS VOLUME,none,"Adolph, Karen",5,FALSE,0,2020-04-03T00:44:27Z
 1111,"Individual data of ""Effects of visual information presented by augmented reality on children’s behavior""",full,"Shirai, Nobu",2219,FALSE,1,2020-04-07T04:55:49Z
 1112,A poster presented at European Conference on Visual Perception 2019,full,"Shirai, Nobu",2219,FALSE,1,2020-04-07T05:08:37Z
 1113,Everyday Learning (Reorganized),restricted,"Tamis-LeMonda, Catherine",11,FALSE,69,2020-04-13T17:14:36Z
@@ -786,7 +844,7 @@ vol_id,vol_name,sharing_level,owner_ids.name,owner_ids.id,sessions_shared,n_sess
 1129,Musical groove shapes children's free dancing,full,"Cirelli, Laura",2738,FALSE,94,2020-05-04T18:24:58Z
 1130,Study 255,restricted,"Bauer, Patricia",5539,FALSE,44,2020-05-06T15:29:52Z
 1131,Developmental changes in natural scene viewing in infancy,full,"Oakes, Lisa",538,FALSE,104,2020-05-06T17:52:06Z
-1132,Sample_Volume,restricted,"Seisler, Andrea R.",437,FALSE,1,2020-05-11T15:17:26Z
+1132,Sample_Volume,restricted,"Seisler, Andrea R.",437,FALSE,2,2020-05-11T15:17:26Z
 1133,Transfer of spatial relations from 2D-3D with varied relational language,restricted,"Casasola, Marianella",650,FALSE,0,2020-05-14T17:20:53Z
 1134,MSR Long,restricted,"Lockman, Jeff",101,FALSE,1,2020-05-14T23:22:09Z
 1135,Concert Hall Acoustics - Spatial Room Impulse Responses & Subjective Attributes,restricted,"Vigeant, Michelle Celine",6688,FALSE,1,2020-05-19T18:42:15Z
@@ -804,6 +862,7 @@ vol_id,vol_name,sharing_level,owner_ids.name,owner_ids.id,sessions_shared,n_sess
 1141,Tiny dancers: Effects of musical familiarity and tempo on children’s free dancing,full,"Chan, Emma",8258,FALSE,93,2020-05-27T14:07:23Z
 1141,Tiny dancers: Effects of musical familiarity and tempo on children’s free dancing,full,"Moses, Rachel",9525,FALSE,93,2020-05-27T14:07:23Z
 1141,Tiny dancers: Effects of musical familiarity and tempo on children’s free dancing,full,"Cirelli, Laura",2738,FALSE,93,2020-05-27T14:07:23Z
+1143,Development of Dynamic Sitting,full,"Rachwani, Jaya",506,FALSE,28,2020-06-10T15:49:25Z
 1144,Mothers talk about infants’ actions: Verbs correspond to infants’ real-time behavior,full,"Adolph, Karen",5,FALSE,2,2020-06-10T19:26:45Z
 1144,Mothers talk about infants’ actions: Verbs correspond to infants’ real-time behavior,full,"West, Kelsey Louise",600,FALSE,2,2020-06-10T19:26:45Z
 1144,Mothers talk about infants’ actions: Verbs correspond to infants’ real-time behavior,full,"Tamis-LeMonda, Catherine",11,FALSE,2,2020-06-10T19:26:45Z
@@ -834,8 +893,8 @@ vol_id,vol_name,sharing_level,owner_ids.name,owner_ids.id,sessions_shared,n_sess
 1171,"Automated Video Interview Personality Assessments: Reliability, Validity, and Generalizability Investigations",restricted,"Tay, Louis",6982,FALSE,129,2020-08-20T14:24:45Z
 1172,Eyelink training video,restricted,"Bauer, Patricia",5539,FALSE,1,2020-08-20T20:28:42Z
 1173,Predictors of gender differences in parent-child play styles,restricted,"Hopkins, Emily",530,FALSE,24,2020-08-20T22:18:51Z
-1174,TEA 0 a 3,full,"Camparo Avila, Daniel",2581,FALSE,58,2020-08-22T01:59:32Z
-1174,TEA 0 a 3,full,"Hontou, Cecilia",7265,FALSE,58,2020-08-22T01:59:32Z
+1174,TEA 0 a 3,full,"Camparo Avila, Daniel",2581,FALSE,65,2020-08-22T01:59:32Z
+1174,TEA 0 a 3,full,"Hontou, Cecilia",7265,FALSE,65,2020-08-22T01:59:32Z
 1175,Cascades in action: How the transition to walking shapes caregiver communication during everyday interactions,full,"Schneider, Joshua",416,FALSE,3,2020-08-24T18:22:53Z
 1175,Cascades in action: How the transition to walking shapes caregiver communication during everyday interactions,full,"Iverson, Jana",334,FALSE,3,2020-08-24T18:22:53Z
 1176,Perceptions of behavior,restricted,"Jaswal, Vikram",1117,FALSE,0,2020-08-24T22:14:38Z
@@ -850,7 +909,7 @@ vol_id,vol_name,sharing_level,owner_ids.name,owner_ids.id,sessions_shared,n_sess
 1182,Debunking Handbook 2020,restricted,"Lombardi, Doug",4945,FALSE,1,2020-09-22T16:51:03Z
 1183,Children’s Gesture use Provides Insight into Proportional Reasoning Strategies,restricted,"Cordes, Sara",798,FALSE,0,2020-09-22T21:01:03Z
 1184,NewFAMS Attention Protocol: Turkey,restricted,"Raver, Cybele",368,FALSE,0,2020-09-24T13:59:01Z
-1185,Individual differences in learning: Crawling and walking into a foam pit,restricted,"Adolph, Karen",5,FALSE,34,2020-09-24T14:19:39Z
+1185,Pitfall or pratfall? Individual differences in infants’ learning from falling,full,"Adolph, Karen",5,FALSE,33,2020-09-24T14:19:39Z
 1186,Detroit Creativity Project,restricted,"Goldstein, Thalia R.",531,FALSE,0,2020-09-25T15:09:44Z
 1186,Detroit Creativity Project,restricted,"Felsman, Peter",6464,FALSE,0,2020-09-25T15:09:44Z
 1187,Data from Infant Perception of Causal Motion study,full,"Johnson, Scott",93,FALSE,2,2020-09-28T18:01:59Z
@@ -921,15 +980,15 @@ vol_id,vol_name,sharing_level,owner_ids.name,owner_ids.id,sessions_shared,n_sess
 1238,Study 177,restricted,"Bauer, Patricia",5539,FALSE,6,2020-11-11T20:13:35Z
 1239,Study 178,restricted,"Bauer, Patricia",5539,FALSE,43,2020-11-11T20:20:42Z
 1240,Study 179,restricted,"Bauer, Patricia",5539,FALSE,23,2020-11-11T21:39:06Z
-1241,Everyday Learning Remote Study,restricted,"Tamis-LeMonda, Catherine",11,FALSE,206,2020-11-12T17:09:30Z
-1241,Everyday Learning Remote Study,restricted,"Swirbul, Mackenzie",7148,FALSE,206,2020-11-12T17:09:30Z
-1241,Everyday Learning Remote Study,restricted,"Libertus, Melissa",2708,FALSE,206,2020-11-12T17:09:30Z
-1241,Everyday Learning Remote Study,restricted,"Suh, Daniel",3521,FALSE,206,2020-11-12T17:09:30Z
-1241,Everyday Learning Remote Study,restricted,"Cabrera, Natasha",3044,FALSE,206,2020-11-12T17:09:30Z
-1241,Everyday Learning Remote Study,restricted,"Silver, Alex",4325,FALSE,206,2020-11-12T17:09:30Z
-1241,Everyday Learning Remote Study,restricted,"Mendelsohn, Alexandra Kiri",4829,FALSE,206,2020-11-12T17:09:30Z
-1241,Everyday Learning Remote Study,restricted,"Ferraro, Jessica",6191,FALSE,206,2020-11-12T17:09:30Z
-1241,Everyday Learning Remote Study,restricted,"Mejia, Valerie",5584,FALSE,206,2020-11-12T17:09:30Z
+1241,Everyday Learning Remote Study,restricted,"Tamis-LeMonda, Catherine",11,FALSE,214,2020-11-12T17:09:30Z
+1241,Everyday Learning Remote Study,restricted,"Swirbul, Mackenzie",7148,FALSE,214,2020-11-12T17:09:30Z
+1241,Everyday Learning Remote Study,restricted,"Libertus, Melissa",2708,FALSE,214,2020-11-12T17:09:30Z
+1241,Everyday Learning Remote Study,restricted,"Suh, Daniel",3521,FALSE,214,2020-11-12T17:09:30Z
+1241,Everyday Learning Remote Study,restricted,"Cabrera, Natasha",3044,FALSE,214,2020-11-12T17:09:30Z
+1241,Everyday Learning Remote Study,restricted,"Silver, Alex",4325,FALSE,214,2020-11-12T17:09:30Z
+1241,Everyday Learning Remote Study,restricted,"Mendelsohn, Alexandra Kiri",4829,FALSE,214,2020-11-12T17:09:30Z
+1241,Everyday Learning Remote Study,restricted,"Ferraro, Jessica",6191,FALSE,214,2020-11-12T17:09:30Z
+1241,Everyday Learning Remote Study,restricted,"Mejia, Valerie",5584,FALSE,214,2020-11-12T17:09:30Z
 1242,STEADY A1_11.15.20,restricted,"Stepp, Stephanie",7115,FALSE,1,2020-11-15T20:02:49Z
 1243,Study 180,restricted,"Bauer, Patricia",5539,FALSE,18,2020-11-17T20:42:18Z
 1245,Study 181,restricted,"Bauer, Patricia",5539,FALSE,73,2020-11-17T21:04:37Z
@@ -978,19 +1037,28 @@ vol_id,vol_name,sharing_level,owner_ids.name,owner_ids.id,sessions_shared,n_sess
 1272,Arundhati's Frustration Study,restricted,"Weisberg, Deena Skolnick",562,FALSE,72,2021-01-18T15:04:20Z
 1273,Practice and proficiency: Factors that facilitate infant walking skill,full,"Adolph, Karen",5,FALSE,86,2021-01-21T19:56:46Z
 1275,Bilingual Learners,restricted,"Corriveau, Kathleen",1612,FALSE,16,2021-02-02T01:58:10Z
+1278,DARPA: Locomotion data for 3D reconstruction,none,"Nez, Reda",4291,FALSE,75,2021-02-03T21:36:00Z
+1278,DARPA: Locomotion data for 3D reconstruction,none,"Ossmy, Ori",1526,FALSE,75,2021-02-03T21:36:00Z
+1278,DARPA: Locomotion data for 3D reconstruction,none,"Adolph, Karen",5,FALSE,75,2021-02-03T21:36:00Z
 1279,PoseASL: An RGBD Dataset of American Sign Language,full,"Huenerfauth, Matt",6349,FALSE,15,2021-02-04T14:30:27Z
+1280,Play & Learning Across a Year (PLAY) Project - Data Release,none,"Adolph, Karen",5,FALSE,3,2021-02-09T16:41:55Z
+1280,Play & Learning Across a Year (PLAY) Project - Data Release,none,"Soska, Kasey",406,FALSE,3,2021-02-09T16:41:55Z
+1280,Play & Learning Across a Year (PLAY) Project - Data Release,none,"Tamis-LeMonda, Catherine",11,FALSE,3,2021-02-09T16:41:55Z
+1280,Play & Learning Across a Year (PLAY) Project - Data Release,none,"Gilmore, Rick O.",6,FALSE,3,2021-02-09T16:41:55Z
 1281,"Sleep, myoclonic twitching, and EEG activity in human infants",full,"Blumberg, Mark",314,FALSE,57,2021-02-15T18:25:05Z
 1281,"Sleep, myoclonic twitching, and EEG activity in human infants",full,"Sokoloff, Greta",1317,FALSE,57,2021-02-15T18:25:05Z
 1282,Sturgis SD Main St. traffic August 2020,restricted,"Ritter, Frank",7133,FALSE,4,2021-02-16T21:15:07Z
 1282,Sturgis SD Main St. traffic August 2020,restricted,"Oury, Jacob",7147,FALSE,4,2021-02-16T21:15:07Z
 1282,Sturgis SD Main St. traffic August 2020,restricted,"Nez, Reda",4291,FALSE,4,2021-02-16T21:15:07Z
 1283,Estimation of in-scanner head pose changes during structural MRI using a convolutional neural network trained on eye tracker video,restricted,"Pardoe, Heath",7644,FALSE,6,2021-02-17T23:51:51Z
-1285,Effort-Outcome,restricted,"LoBue, Vanessa",82,FALSE,97,2021-02-23T19:46:05Z
-1285,Effort-Outcome,restricted,"Kim, Emily",3545,FALSE,97,2021-02-23T19:46:05Z
+1285,Effort-Outcome,restricted,"LoBue, Vanessa",82,FALSE,101,2021-02-23T19:46:05Z
+1285,Effort-Outcome,restricted,"Kim, Emily",3545,FALSE,101,2021-02-23T19:46:05Z
+1286,Pilot videos of children sitting and standing for BTB,none,"Adolph, Karen",5,FALSE,13,2021-02-25T21:26:43Z
+1286,Pilot videos of children sitting and standing for BTB,none,"Cole, Whitney Graham",81,FALSE,13,2021-02-25T21:26:43Z
 1287,Estimation of in-scanner head pose changes during structural MRI using a convolutional neural network trained on eye tracker video,restricted,"Pardoe, Heath",7644,FALSE,94,2021-02-26T16:47:45Z
-1288,Publications from the Longitudinal Attention and Temperament Study (LANTS),full,"LoBue, Vanessa",82,FALSE,5,2021-02-26T18:30:42Z
-1288,Publications from the Longitudinal Attention and Temperament Study (LANTS),full,"Perez-Edgar, Koraly",96,FALSE,5,2021-02-26T18:30:42Z
-1288,Publications from the Longitudinal Attention and Temperament Study (LANTS),full,"Buss, Kristin A",249,FALSE,5,2021-02-26T18:30:42Z
+1288,Publications from the Longitudinal Attention and Temperament Study (LANTS),full,"LoBue, Vanessa",82,FALSE,6,2021-02-26T18:30:42Z
+1288,Publications from the Longitudinal Attention and Temperament Study (LANTS),full,"Perez-Edgar, Koraly",96,FALSE,6,2021-02-26T18:30:42Z
+1288,Publications from the Longitudinal Attention and Temperament Study (LANTS),full,"Buss, Kristin A",249,FALSE,6,2021-02-26T18:30:42Z
 1289,"Expanding the Horizons for Research at the Developmental Interface of Brain, Body, and Behavior",restricted,"Marshall, Peter",1228,FALSE,61,2021-03-03T15:07:42Z
 1289,"Expanding the Horizons for Research at the Developmental Interface of Brain, Body, and Behavior",restricted,"Campbell, Kaitlyn",7105,FALSE,61,2021-03-03T15:07:42Z
 1290,Methods Workshop_March 2021,restricted,"Corriveau, Kathleen",1612,FALSE,4,2021-03-05T00:26:54Z
@@ -1014,7 +1082,7 @@ vol_id,vol_name,sharing_level,owner_ids.name,owner_ids.id,sessions_shared,n_sess
 1300,Neonatal mimicry of caregiver facial gestures at home: Online feasibility pilot,full,"Bayet, Laurie",7006,FALSE,9,2021-03-26T21:16:03Z
 1301,Gender in 30 Years of IEEE Visualization,full,"Dragicevic, Pierre",8098,FALSE,2,2021-03-28T13:53:28Z
 1301,Gender in 30 Years of IEEE Visualization,full,"Isenberg, Petra",7019,FALSE,2,2021-03-28T13:53:28Z
-1302,WalkTalk Coding Training for Dr. Rujuta Wilson,restricted,"Iverson, Jana",334,FALSE,23,2021-03-29T21:19:47Z
+1302,WalkTalk Coding Training for Dr. Rujuta Wilson,restricted,"Iverson, Jana",334,FALSE,24,2021-03-29T21:19:47Z
 1303,"SRCD 2021 Symposium, Dynamics of the dyad: Reciprocal relations between infant action and caregiver input",full,"Schneider, Joshua",416,FALSE,1,2021-04-09T16:34:09Z
 1303,"SRCD 2021 Symposium, Dynamics of the dyad: Reciprocal relations between infant action and caregiver input",full,"Iverson, Jana",334,FALSE,1,2021-04-09T16:34:09Z
 1304,Using Storybooks to Teach Children About Illness Transmission and Promote Adaptive Health Behavior – A Pilot Study,full,"LoBue, Vanessa",82,FALSE,301,2021-04-13T13:55:35Z
@@ -1025,7 +1093,7 @@ vol_id,vol_name,sharing_level,owner_ids.name,owner_ids.id,sessions_shared,n_sess
 1308,ManyBabies4 - Project Videos,restricted,"Lucca, Kelsey",5783,FALSE,0,2021-04-21T17:12:14Z
 1309,Denver Pain Authenticity Stimulus Set,restricted,"Lloyd, Emily Paige",4963,FALSE,5,2021-04-23T02:43:37Z
 1310,Adolescent Degu Repeat Reunion,restricted,"Insel, Nathan",5292,FALSE,1,2021-04-23T16:11:27Z
-1311,Videos of sleep-related twitching and associated brain activity,full,"Blumberg, Mark",314,FALSE,13,2021-05-02T14:04:29Z
+1311,Videos of sleep-related twitching and associated brain activity,full,"Blumberg, Mark",314,FALSE,9,2021-05-02T14:04:29Z
 1312,Flexibility in Action: Development of Locomotion Under Overhead Barriers,full,"Rachwani, Jaya",506,FALSE,55,2021-05-10T22:25:41Z
 1312,Flexibility in Action: Development of Locomotion Under Overhead Barriers,full,"Adolph, Karen",5,FALSE,55,2021-05-10T22:25:41Z
 1313,Perceptions - Gaze Aversion,restricted,"Jaswal, Vikram",1117,FALSE,40,2021-05-11T21:33:25Z
@@ -1051,9 +1119,9 @@ vol_id,vol_name,sharing_level,owner_ids.name,owner_ids.id,sessions_shared,n_sess
 1334,Natural Variability in Parent-Child Puzzle Play at Home,full,"Pochinki, Nicole",5949,FALSE,2,2021-06-29T18:55:58Z
 1334,Natural Variability in Parent-Child Puzzle Play at Home,full,"Oakes, Lisa",538,FALSE,2,2021-06-29T18:55:58Z
 1334,Natural Variability in Parent-Child Puzzle Play at Home,full,"Casasola, Marianella",650,FALSE,2,2021-06-29T18:55:58Z
-1335,CHUNKS,restricted,"Arunachalam, Sudha",4685,FALSE,363,2021-06-29T19:16:18Z
-1337,Character Survey and Uncertainty Exploration,restricted,"Jirout, Jamie",1197,FALSE,56,2021-07-06T20:17:01Z
-1337,Character Survey and Uncertainty Exploration,restricted,"Evans, Natalie",8647,FALSE,56,2021-07-06T20:17:01Z
+1335,CHUNKS,restricted,"Arunachalam, Sudha",4685,FALSE,386,2021-06-29T19:16:18Z
+1337,Character Survey and Uncertainty Exploration,restricted,"Jirout, Jamie",1197,FALSE,57,2021-07-06T20:17:01Z
+1337,Character Survey and Uncertainty Exploration,restricted,"Evans, Natalie",8647,FALSE,57,2021-07-06T20:17:01Z
 1338,GU CAFE dataset to share with OL,full,"Barr, Rachel",104,FALSE,3,2021-07-08T00:40:21Z
 1338,GU CAFE dataset to share with OL,full,"Li, Yue",8453,FALSE,3,2021-07-08T00:40:21Z
 1339,TikTok Facial Emotion Recognition dataset,restricted,"Wall, Dennis",4365,FALSE,0,2021-07-10T22:39:25Z
@@ -1083,11 +1151,11 @@ vol_id,vol_name,sharing_level,owner_ids.name,owner_ids.id,sessions_shared,n_sess
 1361,Dynamics of the dyad: How mothers and infants co-construct interaction spaces during object play,full,"Schneider, Joshua",416,FALSE,3,2021-09-18T12:31:44Z
 1361,Dynamics of the dyad: How mothers and infants co-construct interaction spaces during object play,full,"Iverson, Jana",334,FALSE,3,2021-09-18T12:31:44Z
 1362,PLAYProject_STANF,restricted,"Frank, Michael C.",258,FALSE,3,2021-09-19T21:47:16Z
-1363,PLAYProject_PURDU,restricted,"Claxton, Laura",993,FALSE,9,2021-09-20T14:45:07Z
-1364,"Developmental, Behavioral, and Environmental Determinants of Infant Dust Ingestion",restricted,"Adolph, Karen",5,FALSE,19,2021-09-22T14:31:49Z
-1364,"Developmental, Behavioral, and Environmental Determinants of Infant Dust Ingestion",restricted,"Claxton, Laura",993,FALSE,19,2021-09-22T14:31:49Z
-1364,"Developmental, Behavioral, and Environmental Determinants of Infant Dust Ingestion",restricted,"Boor, Brandon",5598,FALSE,19,2021-09-22T14:31:49Z
-1364,"Developmental, Behavioral, and Environmental Determinants of Infant Dust Ingestion",restricted,"Laskin, Alexander",8907,FALSE,19,2021-09-22T14:31:49Z
+1363,PLAYProject_PURDU,restricted,"Claxton, Laura",993,FALSE,12,2021-09-20T14:45:07Z
+1364,"Developmental, Behavioral, and Environmental Determinants of Infant Dust Ingestion",restricted,"Adolph, Karen",5,FALSE,49,2021-09-22T14:31:49Z
+1364,"Developmental, Behavioral, and Environmental Determinants of Infant Dust Ingestion",restricted,"Claxton, Laura",993,FALSE,49,2021-09-22T14:31:49Z
+1364,"Developmental, Behavioral, and Environmental Determinants of Infant Dust Ingestion",restricted,"Boor, Brandon",5598,FALSE,49,2021-09-22T14:31:49Z
+1364,"Developmental, Behavioral, and Environmental Determinants of Infant Dust Ingestion",restricted,"Laskin, Alexander",8907,FALSE,49,2021-09-22T14:31:49Z
 1365,BTB Training,restricted,"Adolph, Karen",5,FALSE,20,2021-09-29T20:04:15Z
 1365,BTB Training,restricted,"Cole, Whitney Graham",81,FALSE,20,2021-09-29T20:04:15Z
 1366,Infant Physics on Lookit,restricted,"Schulz, Laura",1398,FALSE,2,2021-10-01T15:42:31Z
@@ -1095,16 +1163,19 @@ vol_id,vol_name,sharing_level,owner_ids.name,owner_ids.id,sessions_shared,n_sess
 1367,Infants use contextual memory to attend and  learn in naturalistic scenes,full,"Amso, Dima",297,FALSE,3,2021-10-04T13:25:43Z
 1368,Jirout Conference Talk Videos,full,"Jirout, Jamie",1197,FALSE,2,2021-10-04T20:17:11Z
 1369,Puppet task training and reliability materials,full,"Barr, Rachel",104,FALSE,7,2021-10-05T00:03:08Z
-1370,PLAYProject_CHOPH,restricted,"Prosser, Laura",591,FALSE,3,2021-10-07T13:13:57Z
+1370,PLAYProject_CHOPH,restricted,"Prosser, Laura",591,FALSE,7,2021-10-07T13:13:57Z
 1371,Demo: Adult field of view,restricted,"Adolph, Karen",5,FALSE,3,2021-10-08T15:50:10Z
 1372,CAFE Consortium - OpenLattice Instructions and Documentation,restricted,"Kirkorian, Heather",1021,FALSE,1,2021-10-09T14:33:40Z
 1372,CAFE Consortium - OpenLattice Instructions and Documentation,restricted,"Barr, Rachel",104,FALSE,1,2021-10-09T14:33:40Z
 1373,In person Counting,restricted,"Wang, Jenny",6754,FALSE,2,2021-10-13T16:38:14Z
 1374,Infant Physics on Lookit (staging),restricted,"Schulz, Laura",1398,FALSE,2,2021-10-19T15:54:33Z
 1375,Combining Concentration Ideas,restricted,"Lillard, Angeline",318,FALSE,26,2021-10-22T14:38:39Z
+1376,PLAYProject_CSULB,none,"Halim, May Ling Dodge",1804,FALSE,13,2021-10-22T16:30:48Z
 1377,Curiosity in Classrooms (CiC) Coding Protocol,full,"Jirout, Jamie",1197,FALSE,1,2021-10-26T19:41:47Z
 1378,CoMIT Developmental Assessments (Condiment Micronutrient Innovation Trial),restricted,"Prado, Elizabeth",4458,FALSE,4,2021-11-02T22:06:59Z
-1379,Infant walking flexibility on slopes and bridges,restricted,"Adolph, Karen",5,FALSE,12,2021-11-03T15:24:39Z
+1379,Infant walking flexibility on slopes and bridges,restricted,"Adolph, Karen",5,FALSE,31,2021-11-03T15:24:39Z
+1381,Harnessing multimodal data to enhance machine learning of children's vocalizations,full,"Perry, Lynn",1974,FALSE,5,2021-11-15T16:14:43Z
+1381,Harnessing multimodal data to enhance machine learning of children's vocalizations,full,"Messinger, Daniel",70,FALSE,5,2021-11-15T16:14:43Z
 1382,"9 month visit (Attempts, Stargazer/Empathy, Ouch9, C3PO9)",restricted,"Hamlin, Kiley",2525,FALSE,16,2021-11-16T22:15:46Z
 1383,"12 month visit (StangerDanger, Helping, Sharing, Cookies, Bracelets, ToM, Zoom_Cookies)",restricted,"Hamlin, Kiley",2525,FALSE,26,2021-11-16T22:59:53Z
 1384,"17 month visit (Bullies_Longtime, SnackTime, Clothespins, ToM, Zoom_ToM)",restricted,"Hamlin, Kiley",2525,FALSE,16,2021-11-16T23:04:14Z
@@ -1114,16 +1185,22 @@ vol_id,vol_name,sharing_level,owner_ids.name,owner_ids.id,sessions_shared,n_sess
 1388,InsideOut_Zoom,restricted,"Hamlin, Kiley",2525,FALSE,10,2021-11-16T23:17:08Z
 1389,ActOVA11_Zoom,restricted,"Hamlin, Kiley",2525,FALSE,12,2021-11-16T23:19:01Z
 1390,ZoomKids,restricted,"Hamlin, Kiley",2525,FALSE,3,2021-11-16T23:20:37Z
+1391,PLAYProject_VBLTU,none,"McGowan, Maggie",8436,FALSE,8,2021-11-19T15:43:23Z
+1391,PLAYProject_VBLTU,none,"Mattson, Evelyn Brodie",10150,FALSE,8,2021-11-19T15:43:23Z
+1391,PLAYProject_VBLTU,none,"Needham, Amy",118,FALSE,8,2021-11-19T15:43:23Z
 1392,"Analyzing Deaf and Hard-of-Hearing Users’ Behavior, Usage, and Interaction with a Personal Assistant Device that Understands Sign-Language Input",full,"Huenerfauth, Matt",6349,FALSE,23,2021-11-30T19:54:35Z
 1393,21 month visit (Zoom_Equity),restricted,"Hamlin, Kiley",2525,FALSE,4,2021-11-30T23:58:17Z
 1394,Children's Real-Time Behaviors During a Model Replication Task,full,"Tamis-LeMonda, Catherine",11,FALSE,5,2021-12-02T19:34:19Z
 1395,Video Game Creativity in Open World and Narrative Games,restricted,"Goldstein, Thalia R.",531,FALSE,26,2021-12-05T16:50:07Z
 1395,Video Game Creativity in Open World and Narrative Games,restricted,"Stapleton, Darian Fay",6812,FALSE,26,2021-12-05T16:50:07Z
 1396,Introducing the Female Cambridge Face Memory Test – Long Form (F-CFMT+),full,"Scherf, Kathryn Suzanne",252,FALSE,2,2021-12-08T12:51:44Z
+1397,PLAYProject_UHOUS,none,"Yoshida, Hanako",298,FALSE,14,2021-12-08T22:20:11Z
 1398,Speech-to-Speech Synchronization Test,restricted,"Ripolles, Pablo",9203,FALSE,4,2021-12-08T22:43:26Z
 1399,"Linguistic form, causal explanations, and social essentialism",restricted,"Benitez, Josie",5803,FALSE,2,2021-12-09T17:37:18Z
 1399,"Linguistic form, causal explanations, and social essentialism",restricted,"Leshin, Rachel",3391,FALSE,2,2021-12-09T17:37:18Z
 1399,"Linguistic form, causal explanations, and social essentialism",restricted,"Rhodes, Marjorie",277,FALSE,2,2021-12-09T17:37:18Z
+1400,PLAYProject_INDNA,none,"Yu, Chen",120,FALSE,6,2021-12-13T20:40:07Z
+1400,PLAYProject_INDNA,none,"Yurkovic-Harding, Julia",9206,FALSE,6,2021-12-13T20:40:07Z
 1401,ABBABB or 1212: Abstract language facilitates children’s early patterning skills,full,"Fyfe, Emily Ruth",2536,FALSE,4,2021-12-17T20:50:46Z
 1402,Curiosity in Classrooms Training Videos,restricted,"Jirout, Jamie",1197,FALSE,3,2021-12-21T21:23:21Z
 1403,Word by Word: Everyday Math Talk in Hispanic Families,full,"Tamis-LeMonda, Catherine",11,FALSE,5,2021-12-22T15:30:58Z
@@ -1139,39 +1216,43 @@ vol_id,vol_name,sharing_level,owner_ids.name,owner_ids.id,sessions_shared,n_sess
 1410,Intersensory Matching of Faces and Voices in Infancy Predicts Language Outcomes in Young Children,full,"Edgar, Elizabeth",5329,FALSE,1,2022-01-19T14:52:44Z
 1410,Intersensory Matching of Faces and Voices in Infancy Predicts Language Outcomes in Young Children,full,"Todd, James Torrence",407,FALSE,1,2022-01-19T14:52:44Z
 1410,Intersensory Matching of Faces and Voices in Infancy Predicts Language Outcomes in Young Children,full,"Bahrick, Lorraine E.",376,FALSE,1,2022-01-19T14:52:44Z
-1411,DBN - Lebanon - Wave 1 - Data Collection,restricted,"Ghossainy, Maliki E.",7156,FALSE,24,2022-01-19T19:27:48Z
-1411,DBN - Lebanon - Wave 1 - Data Collection,restricted,"Amin, Tamer",7545,FALSE,24,2022-01-19T19:27:48Z
+1411,DBN - Lebanon - Wave 1 - Data Collection,restricted,"Ghossainy, Maliki E.",7156,FALSE,78,2022-01-19T19:27:48Z
+1411,DBN - Lebanon - Wave 1 - Data Collection,restricted,"Amin, Tamer",7545,FALSE,78,2022-01-19T19:27:48Z
 1412,Quantifying Sources of Variability in Infancy Research Using the Infant-Directed-Speech Preference,full,"Baldwin, Dare",3746,FALSE,37,2022-01-24T17:32:28Z
 1412,Quantifying Sources of Variability in Infancy Research Using the Infant-Directed-Speech Preference,full,"Kosie, Jessica E",588,FALSE,37,2022-01-24T17:32:28Z
 1414,ESBI Training Videos,restricted,"Richert, Rebekah",5032,FALSE,9,2022-02-02T14:03:01Z
+1415,Virtual cabinets,none,"Adolph, Karen",5,FALSE,47,2022-02-04T12:49:22Z
+1415,Virtual cabinets,none,"Ossmy, Ori",1526,FALSE,47,2022-02-04T12:49:22Z
+1415,Virtual cabinets,none,"Han, Danyang",3201,FALSE,47,2022-02-04T12:49:22Z
 1417,Object Play in the Everyday Home Environment Generates Rich Opportunities for Infant Learning,full,"Swirbul, Mackenzie",7148,FALSE,5,2022-02-09T19:51:12Z
 1417,Object Play in the Everyday Home Environment Generates Rich Opportunities for Infant Learning,full,"Herzberg, Orit",3137,FALSE,5,2022-02-09T19:51:12Z
 1417,Object Play in the Everyday Home Environment Generates Rich Opportunities for Infant Learning,full,"Tamis-LeMonda, Catherine",11,FALSE,5,2022-02-09T19:51:12Z
-1418,Dual Eye-tracking Infant- Caregiver Shared Book Reading,restricted,"Scott, Lisa",2653,FALSE,25,2022-02-10T17:57:17Z
+1418,Dual Eye-tracking Infant- Caregiver Shared Book Reading,restricted,"Scott, Lisa",2653,FALSE,44,2022-02-10T17:57:17Z
 1419,Unweighting infants reveals hidden motor skills,full,"Prosser, Laura",591,FALSE,29,2022-02-10T21:25:56Z
 1420,Exploring Connections between Fractions and Algebra Knowledge,restricted,"Matthews, Percival",8306,FALSE,8,2022-02-14T20:18:23Z
 1421,Study 273,restricted,"Bauer, Patricia",5539,FALSE,1,2022-02-16T19:14:11Z
+1422,PLAYProject_UIOWA,none,"Gros-Louis, Julie Jeannette",1040,FALSE,6,2022-02-18T18:13:43Z
 1423,STEADY-A2,restricted,"Stepp, Stephanie",7115,FALSE,63,2022-02-21T16:37:51Z
 1423,STEADY-A2,restricted,"Vanwoerden, Salome",7114,FALSE,63,2022-02-21T16:37:51Z
 1425,Culture_Tajikistan_Gahvora_Mobile,restricted,"Karasik, Lana",32,FALSE,30,2022-02-23T20:43:12Z
 1426,Children with ASD Establish Joint Attention during Free-Flowing Toy Play without Face Looks,full,"Yurkovic-Harding, Julia",9206,FALSE,3,2022-02-24T06:15:18Z
 1426,Children with ASD Establish Joint Attention during Free-Flowing Toy Play without Face Looks,full,"Yu, Chen",120,FALSE,3,2022-02-24T06:15:18Z
-1429,Curiosity in Schools - Mixed Methods,restricted,"Jirout, Jamie",1197,FALSE,0,2022-03-01T14:20:59Z
-1429,Curiosity in Schools - Mixed Methods,restricted,"Evans, Natalie",8647,FALSE,0,2022-03-01T14:20:59Z
+1429,Curiosity in Schools - Mixed Methods,restricted,"Jirout, Jamie",1197,FALSE,8,2022-03-01T14:20:59Z
+1429,Curiosity in Schools - Mixed Methods,restricted,"Evans, Natalie",8647,FALSE,8,2022-03-01T14:20:59Z
 1430,Baby FaceTime: can toddlers learn from online video chat?,restricted,"Myers, Lauren",712,FALSE,3,2022-03-02T05:39:47Z
-1431,Influence of dehumanizing language on children's social judgments,restricted,"Jaswal, Vikram",1117,FALSE,110,2022-03-03T19:03:16Z
-1432,TINSEL Lookit,restricted,"Arunachalam, Sudha",4685,FALSE,69,2022-03-09T18:42:55Z
+1431,Influence of dehumanizing language on children's social judgments,restricted,"Jaswal, Vikram",1117,FALSE,113,2022-03-03T19:03:16Z
+1432,TINSEL Lookit,restricted,"Arunachalam, Sudha",4685,FALSE,136,2022-03-09T18:42:55Z
 1433,Developmental changes in the expression of gender stereotypes to child and adult stimuli,restricted,"Mandalaywala, Tara",357,FALSE,1,2022-03-10T18:36:14Z
 1434,DBN - Yucatan - Wave 1 - Data collection,restricted,"Richert, Rebekah",5032,FALSE,2,2022-03-10T21:28:50Z
 1434,DBN - Yucatan - Wave 1 - Data collection,restricted,"Weisman, Kara",7540,FALSE,2,2022-03-10T21:28:50Z
 1434,DBN - Yucatan - Wave 1 - Data collection,restricted,"Ghossainy, Maliki E.",7156,FALSE,2,2022-03-10T21:28:50Z
 1434,DBN - Yucatan - Wave 1 - Data collection,restricted,"Shneidman, Laura",950,FALSE,2,2022-03-10T21:28:50Z
 1434,DBN - Yucatan - Wave 1 - Data collection,restricted,"Lesage, Kirsten",9390,FALSE,2,2022-03-10T21:28:50Z
-1435,DBN - California - Wave 1 - Data collection,restricted,"Ghossainy, Maliki E.",7156,FALSE,28,2022-03-10T21:46:42Z
-1435,DBN - California - Wave 1 - Data collection,restricted,"Richert, Rebekah",5032,FALSE,28,2022-03-10T21:46:42Z
-1435,DBN - California - Wave 1 - Data collection,restricted,"Weisman, Kara",7540,FALSE,28,2022-03-10T21:46:42Z
-1435,DBN - California - Wave 1 - Data collection,restricted,"Lesage, Kirsten",9390,FALSE,28,2022-03-10T21:46:42Z
-1436,Multi-step Planning,restricted,"Adolph, Karen",5,FALSE,22,2022-03-11T19:30:01Z
+1435,DBN - California - Wave 1 - Data collection,restricted,"Ghossainy, Maliki E.",7156,FALSE,57,2022-03-10T21:46:42Z
+1435,DBN - California - Wave 1 - Data collection,restricted,"Richert, Rebekah",5032,FALSE,57,2022-03-10T21:46:42Z
+1435,DBN - California - Wave 1 - Data collection,restricted,"Weisman, Kara",7540,FALSE,57,2022-03-10T21:46:42Z
+1435,DBN - California - Wave 1 - Data collection,restricted,"Lesage, Kirsten",9390,FALSE,57,2022-03-10T21:46:42Z
+1436,Multi-step Planning,restricted,"Adolph, Karen",5,FALSE,39,2022-03-11T19:30:01Z
 1437,The Role of Familiarity in Infant Selective Attention to the Eyes and Language Development,restricted,"Scott, Lisa",2653,FALSE,3,2022-03-14T21:38:31Z
 1438,Hong Kong Preschooler Study (52M Block Play),restricted,"Ng, Florrie Fei-Yin",3743,FALSE,180,2022-03-15T06:25:20Z
 1439,Ambient sounds in the home environment reduce infant-mother language interactions,restricted,"Tamis-LeMonda, Catherine",11,FALSE,3,2022-03-20T12:46:51Z
@@ -1180,7 +1261,7 @@ vol_id,vol_name,sharing_level,owner_ids.name,owner_ids.id,sessions_shared,n_sess
 1445,Mothers' Language Input Differs as a Function of Mother-Infant Proximity in the Home Environment,restricted,"Tamis-LeMonda, Catherine",11,FALSE,0,2022-03-29T19:44:07Z
 1446,"Children Differentially Fixate Faces Based on Face Orientation, Race, and Sex",restricted,"Scott, Lisa",2653,FALSE,3,2022-03-31T18:46:44Z
 1447,Dataset of BERT Embeddings to Model Word Importance in Conversational Transcripts for Deaf and Hard of Hearing Users,full,"Huenerfauth, Matt",6349,FALSE,1,2022-04-06T14:04:09Z
-1448,Fitting & Throwing,restricted,"Adolph, Karen",5,FALSE,25,2022-04-08T20:08:22Z
+1448,Fitting & Throwing,restricted,"Adolph, Karen",5,FALSE,41,2022-04-08T20:08:22Z
 1450,Concentration and HRV,restricted,"Lillard, Angeline",318,FALSE,12,2022-04-18T14:33:20Z
 1452,KidTalk,restricted,"Hartshorne, Joshua",2521,FALSE,1,2022-04-19T18:19:36Z
 1452,KidTalk,restricted,"Li, Wei",4662,FALSE,1,2022-04-19T18:19:36Z
@@ -1189,39 +1270,39 @@ vol_id,vol_name,sharing_level,owner_ids.name,owner_ids.id,sessions_shared,n_sess
 1454,Developmental differences in children’s and adults’ strategies on a repeating pattern task,full,"Fyfe, Emily Ruth",2536,FALSE,4,2022-04-27T13:53:25Z
 1455,The role of gesture and mimicry for children’s pattern learning,restricted,"Fyfe, Emily Ruth",2536,FALSE,515,2022-04-28T18:36:47Z
 1456,Variability’s influence on children’s pattern practice,restricted,"Fyfe, Emily Ruth",2536,FALSE,33,2022-04-29T15:13:29Z
-1457,Better Together: Classroom-Based Social Intervention for Spatial Skills,restricted,"Ossmy, Ori",1526,FALSE,6,2022-05-01T21:28:03Z
-1458,DBN - Massachusetts - Wave 1 - Data collection,restricted,"Corriveau, Kathleen",1612,FALSE,42,2022-05-05T22:06:02Z
-1458,DBN - Massachusetts - Wave 1 - Data collection,restricted,"Ghossainy, Maliki E.",7156,FALSE,42,2022-05-05T22:06:02Z
+1457,Better Together: Classroom-Based Social Intervention for Spatial Skills,restricted,"Ossmy, Ori",1526,FALSE,12,2022-05-01T21:28:03Z
+1458,DBN - Massachusetts - Wave 1 - Data collection,restricted,"Corriveau, Kathleen",1612,FALSE,99,2022-05-05T22:06:02Z
+1458,DBN - Massachusetts - Wave 1 - Data collection,restricted,"Ghossainy, Maliki E.",7156,FALSE,99,2022-05-05T22:06:02Z
+1459,PLAYProject_UOREG,none,"Fausey, Caitlin M.",126,FALSE,1,2022-05-07T21:41:19Z
 1460,STEADY-A3,restricted,"Stepp, Stephanie",7115,FALSE,1,2022-05-10T16:13:10Z
 1460,STEADY-A3,restricted,"Vanwoerden, Salome",7114,FALSE,1,2022-05-10T16:13:10Z
 1461,Steady-A3 Use this one,restricted,"Stepp, Stephanie",7115,FALSE,50,2022-05-10T16:30:04Z
 1461,Steady-A3 Use this one,restricted,"Vanwoerden, Salome",7114,FALSE,50,2022-05-10T16:30:04Z
 1462,Zoo Detective: Creative problem solving task,full,"Jirout, Jamie",1197,FALSE,0,2022-05-11T20:55:47Z
 1462,Zoo Detective: Creative problem solving task,full,"Evans, Natalie",8647,FALSE,0,2022-05-11T20:55:47Z
-1463,Miami Multisense Network,restricted,"Perry, Lynn",1974,FALSE,41,2022-05-19T13:28:37Z
-1463,Miami Multisense Network,restricted,"Kucker, Sarah",1913,FALSE,41,2022-05-19T13:28:37Z
+1463,Miami Multisense Network,restricted,"Perry, Lynn",1974,FALSE,62,2022-05-19T13:28:37Z
+1463,Miami Multisense Network,restricted,"Kucker, Sarah",1913,FALSE,62,2022-05-19T13:28:37Z
 1464,Classroom Vocal Interactions and Engagement in Inclusive Preschools,restricted,"Fasano, Regina M.",4314,FALSE,0,2022-05-19T14:53:45Z
 1464,Classroom Vocal Interactions and Engagement in Inclusive Preschools,restricted,"Messinger, Daniel",70,FALSE,0,2022-05-19T14:53:45Z
 1464,Classroom Vocal Interactions and Engagement in Inclusive Preschools,restricted,"Perry, Lynn",1974,FALSE,0,2022-05-19T14:53:45Z
-1465,Humanizing Snakes,restricted,"LoBue, Vanessa",82,FALSE,79,2022-05-19T19:40:13Z
-1465,Humanizing Snakes,restricted,"Reider, Lori",4313,FALSE,79,2022-05-19T19:40:13Z
-1466,Pet Picturebook Study,restricted,"LoBue, Vanessa",82,FALSE,45,2022-05-19T19:40:56Z
-1466,Pet Picturebook Study,restricted,"Reider, Lori",4313,FALSE,45,2022-05-19T19:40:56Z
+1465,Humanizing Snakes,restricted,"LoBue, Vanessa",82,FALSE,90,2022-05-19T19:40:13Z
+1465,Humanizing Snakes,restricted,"Reider, Lori",4313,FALSE,90,2022-05-19T19:40:13Z
+1466,Pet Picturebook Study,restricted,"LoBue, Vanessa",82,FALSE,84,2022-05-19T19:40:56Z
+1466,Pet Picturebook Study,restricted,"Reider, Lori",4313,FALSE,84,2022-05-19T19:40:56Z
 1467,Maternal behavior recordings - Mouse,restricted,"Froemke, Robert",4605,FALSE,4,2022-05-20T16:32:34Z
-1468,DBN - China -  Wave 1 - Data Collection,restricted,"Zhao, Xin",7537,FALSE,74,2022-05-23T02:36:11Z
+1468,DBN - China -  Wave 1 - Data Collection,restricted,"Zhao, Xin",7537,FALSE,85,2022-05-23T02:36:11Z
 1469,PLAY-CP,restricted,"Heathcock, Jill",596,FALSE,1,2022-05-24T23:45:09Z
 1470,DBN - Jakarta - Wave 1 - Data Collection,restricted,"Anggoro, Florencia K.",5179,FALSE,1,2022-05-26T21:48:28Z
-1471,DBN - Northern Ireland - Wave 1 - Data Collection,restricted,"Dautel, Jocelyn",7679,FALSE,1,2022-06-06T10:39:57Z
-1471,DBN - Northern Ireland - Wave 1 - Data Collection,restricted,"Taylor, Laura Kathryn",7528,FALSE,1,2022-06-06T10:39:57Z
-1471,DBN - Northern Ireland - Wave 1 - Data Collection,restricted,"Coley, John D.",4174,FALSE,1,2022-06-06T10:39:57Z
-1471,DBN - Northern Ireland - Wave 1 - Data Collection,restricted,"Kramer, Hannah Jean",8969,FALSE,1,2022-06-06T10:39:57Z
+1471,DBN - Northern Ireland - Wave 1 - Data Collection,restricted,"Dautel, Jocelyn",7679,FALSE,22,2022-06-06T10:39:57Z
+1471,DBN - Northern Ireland - Wave 1 - Data Collection,restricted,"Taylor, Laura Kathryn",7528,FALSE,22,2022-06-06T10:39:57Z
+1471,DBN - Northern Ireland - Wave 1 - Data Collection,restricted,"Coley, John D.",4174,FALSE,22,2022-06-06T10:39:57Z
+1471,DBN - Northern Ireland - Wave 1 - Data Collection,restricted,"Kramer, Hannah Jean",8969,FALSE,22,2022-06-06T10:39:57Z
 1472,DBN - Republic of Ireland -  Wave 1 - Data Collection,restricted,"Dautel, Jocelyn",7679,FALSE,0,2022-06-06T10:52:52Z
 1472,DBN - Republic of Ireland -  Wave 1 - Data Collection,restricted,"Taylor, Laura Kathryn",7528,FALSE,0,2022-06-06T10:52:52Z
 1472,DBN - Republic of Ireland -  Wave 1 - Data Collection,restricted,"Coley, John D.",4174,FALSE,0,2022-06-06T10:52:52Z
 1472,DBN - Republic of Ireland -  Wave 1 - Data Collection,restricted,"Kramer, Hannah Jean",8969,FALSE,0,2022-06-06T10:52:52Z
-1473,DELETE THIS VOLUME,none,"Seisler, Andrea R.",437,FALSE,1,2022-06-07T13:16:32Z
 1474,Automated measurement of infant and mother Duchenne facial expressions in the Face-to-Face/Still-Face,full,"Messinger, Daniel",70,FALSE,1,2022-06-10T20:46:57Z
-1475,Predictors of Play,restricted,"Hopkins, Emily",530,FALSE,10,2022-06-12T14:43:36Z
+1475,Predictors of Play,restricted,"Hopkins, Emily",530,FALSE,13,2022-06-12T14:43:36Z
 1476,"Program files to generate the frame sets of stimulus movies (Shirai and Imura, submitted to Scientific Reports)",full,"Shirai, Nobu",2219,FALSE,1,2022-06-13T01:47:14Z
 1478,003 - JU12RO05M4020KJ,restricted,"Jordan, Kerry",5234,FALSE,1,2022-06-17T17:28:17Z
 1478,003 - JU12RO05M4020KJ,restricted,"Eschman, Bret",5926,FALSE,1,2022-06-17T17:28:17Z
@@ -1229,26 +1310,91 @@ vol_id,vol_name,sharing_level,owner_ids.name,owner_ids.id,sessions_shared,n_sess
 1479,005- MA06JU12M21KJ,restricted,"Jordan, Kerry",5234,FALSE,1,2022-06-17T17:40:47Z
 1479,005- MA06JU12M21KJ,restricted,"Bahrick, Lorraine E.",376,FALSE,1,2022-06-17T17:40:47Z
 1480,Routine Language Intervention: Supporting Caregiver Talk to Toddlers During Everyday Activities,full,"Tamis-LeMonda, Catherine",11,FALSE,0,2022-06-22T15:45:22Z
-1484,Listen to Your Mother: Children Use Hierarchical Social Roles to Guide their Judgments about People,restricted,"Noles, Nicholaus",1699,FALSE,0,2022-06-30T17:53:33Z
-1485,Temperament X Trust (Temperament Measure),restricted,"Palmquist, Carolyn",2945,FALSE,28,2022-07-01T15:34:31Z
+1481,PLAYProject_CSUFL,none,"Lee, Do Kyeong",384,FALSE,3,2022-06-23T22:06:21Z
+1484,Listen to Your Mother: Children Use Hierarchical Social Roles to Guide their Judgments about People,restricted,"Noles, Nicholaus",1699,FALSE,2,2022-06-30T17:53:33Z
+1485,Temperament X Trust (Temperament Measure),restricted,"Palmquist, Carolyn",2945,FALSE,29,2022-07-01T15:34:31Z
 1486,Judging Fraction Magnitudes across Symbolic and Nonsymbolic Formats,restricted,"Matthews, Percival",8306,FALSE,4,2022-07-01T16:00:41Z
 1488,Estimating the rate of behavior: Optimal combination of sample size and observation duration,restricted,"Adolph, Karen",5,FALSE,1,2022-07-07T21:46:13Z
 1489,DBN - India - Wave 1 - Data Collection,restricted,"Srinivasan, Mahesh",1515,FALSE,0,2022-07-13T20:35:24Z
-1490,DBN - Field Site -  Wave 1 - Data Collection,restricted,"Burdett, Emily",5014,FALSE,63,2022-07-14T09:23:43Z
-1491,Multisensory Data Network,restricted,"Bahrick, Lorraine E.",376,FALSE,8,2022-07-14T13:15:44Z
-1491,Multisensory Data Network,restricted,"Todd, James Torrence",407,FALSE,8,2022-07-14T13:15:44Z
-1491,Multisensory Data Network,restricted,"Edgar, Elizabeth",5329,FALSE,8,2022-07-14T13:15:44Z
-1491,Multisensory Data Network,restricted,"Eschman, Bret",5926,FALSE,8,2022-07-14T13:15:44Z
+1490,DBN - UK -  Wave 1 - Data Collection,restricted,"Burdett, Emily",5014,FALSE,80,2022-07-14T09:23:43Z
+1490,DBN - UK -  Wave 1 - Data Collection,restricted,"Stephens, Joanna",10365,FALSE,80,2022-07-14T09:23:43Z
+1491,Multisensory Data Network,restricted,"Bahrick, Lorraine E.",376,FALSE,7,2022-07-14T13:15:44Z
+1491,Multisensory Data Network,restricted,"Todd, James Torrence",407,FALSE,7,2022-07-14T13:15:44Z
+1491,Multisensory Data Network,restricted,"Edgar, Elizabeth",5329,FALSE,7,2022-07-14T13:15:44Z
+1491,Multisensory Data Network,restricted,"Eschman, Bret",5926,FALSE,7,2022-07-14T13:15:44Z
 1492,Predicting Event Memory and Trustworthiness in Adolescence,restricted,"Arterberry, Martha E",799,FALSE,1,2022-07-15T11:47:29Z
-1493,DBN - Singapore - Wave 1 - Data Collection,restricted,"Yu, Yue",7530,FALSE,26,2022-07-18T07:36:35Z
+1493,DBN - Singapore - Wave 1 - Data Collection,restricted,"Yu, Yue",7530,FALSE,54,2022-07-18T07:36:35Z
 1494,STEADY-A4,restricted,"Stepp, Stephanie",7115,FALSE,33,2022-07-19T14:24:02Z
 1494,STEADY-A4,restricted,"Vanwoerden, Salome",7114,FALSE,33,2022-07-19T14:24:02Z
 1495,Neural correlates of familiar and unfamiliar action in infancy,restricted,"Woodward, Amanda",244,FALSE,36,2022-07-19T16:01:20Z
-1496,Multisensory Data Network,restricted,"Bahrick, Lorraine E.",376,FALSE,0,2022-07-19T17:06:24Z
 1497,DBN-South Africa-Wave 1-Data Collection,restricted,"Tarullo, Amanda",7630,FALSE,0,2022-07-20T13:06:40Z
 1498,Infant action understanding: The roles of active training and motor development,restricted,"Woodward, Amanda",244,FALSE,39,2022-07-20T17:08:39Z
 1499,Seeking social information: Infant-caregiver interactions in Tajikistan,restricted,"Karasik, Lana",32,FALSE,3,2022-07-22T21:01:48Z
 1499,Seeking social information: Infant-caregiver interactions in Tajikistan,restricted,"Kahraman-Colosky, Hasibe Melda",6063,FALSE,3,2022-07-22T21:01:48Z
 1499,Seeking social information: Infant-caregiver interactions in Tajikistan,restricted,"Fernandes, Sara",1023,FALSE,3,2022-07-22T21:01:48Z
-1500,Dance and Affective Theory of Mind,restricted,"Stutesman, Megan G.",5678,FALSE,2,2022-07-23T13:19:29Z
-1500,Dance and Affective Theory of Mind,restricted,"Goldstein, Thalia R.",531,FALSE,2,2022-07-23T13:19:29Z
+1500,Dance and Affective Theory of Mind,restricted,"Stutesman, Megan G.",5678,FALSE,4,2022-07-23T13:19:29Z
+1500,Dance and Affective Theory of Mind,restricted,"Goldstein, Thalia R.",531,FALSE,4,2022-07-23T13:19:29Z
+1501,Gans et al. 2022-In-Person & Virtual Science Learning-APA 2022,full,"Lombardi, Doug",4945,FALSE,0,2022-07-24T13:59:09Z
+1502,Creating spaces for infant play,restricted,"Schneider, Joshua",416,FALSE,0,2022-07-24T18:15:48Z
+1502,Creating spaces for infant play,restricted,"Iverson, Jana",334,FALSE,0,2022-07-24T18:15:48Z
+1503,Improving Fraction Magnitude Knowledge: Is Analogy or Partitioning More Effective?,restricted,"Matthews, Percival",8306,FALSE,8,2022-07-25T20:53:05Z
+1504,Sounds at home: Infants' auditory environments shape language interactions,restricted,"Tamis-LeMonda, Catherine",11,FALSE,0,2022-08-02T16:37:34Z
+1505,Gahvora Cradling in Tajikistan: Cultural practices and associations with motor development,restricted,"Karasik, Lana",32,FALSE,6,2022-08-02T21:16:49Z
+1505,Gahvora Cradling in Tajikistan: Cultural practices and associations with motor development,restricted,"Adolph, Karen",5,FALSE,6,2022-08-02T21:16:49Z
+1505,Gahvora Cradling in Tajikistan: Cultural practices and associations with motor development,restricted,"Tamis-LeMonda, Catherine",11,FALSE,6,2022-08-02T21:16:49Z
+1505,Gahvora Cradling in Tajikistan: Cultural practices and associations with motor development,restricted,"Fernandes, Sara",1023,FALSE,6,2022-08-02T21:16:49Z
+1505,Gahvora Cradling in Tajikistan: Cultural practices and associations with motor development,restricted,"Robinson, Scott Reginald",2391,FALSE,6,2022-08-02T21:16:49Z
+1506,REaL,full,"Forssman, Linda",4787,FALSE,5,2022-08-09T14:52:15Z
+1509,Pup movement and dispersion,full,"Froemke, Robert",4605,FALSE,1,2022-08-18T21:15:30Z
+1510,The role of intentionality in infants' prediction of helping and hindering (videos),full,"Duh, Shinchieh",2097,FALSE,1,2022-08-22T09:49:37Z
+1510,The role of intentionality in infants' prediction of helping and hindering (videos),full,"Wang, Su-hua",1285,FALSE,1,2022-08-22T09:49:37Z
+1511,Juvenile Repeat Reunion,restricted,"Insel, Nathan",5292,FALSE,1,2022-08-25T23:36:19Z
+1512,"Influence of dehumanizing language on children's dehumanization, punishment, and policy attitudes",restricted,"Jaswal, Vikram",1117,FALSE,130,2022-08-26T20:36:01Z
+1513,DBN - Taiwan - Wave 1 - Test,restricted,"Chen, Eva E",10090,FALSE,2,2022-09-03T09:22:20Z
+1514,Curiosity in Students - Y1,restricted,"Jirout, Jamie",1197,FALSE,45,2022-09-12T14:43:54Z
+1514,Curiosity in Students - Y1,restricted,"Evans, Natalie",8647,FALSE,45,2022-09-12T14:43:54Z
+1515,PLAYProject_UGEOR,none,"Frick, Janet",99,FALSE,3,2022-09-19T15:39:04Z
+1515,PLAYProject_UGEOR,none,"Abney, Drew",10264,FALSE,3,2022-09-19T15:39:04Z
+1517,PLAYProject_UTAUS,none,"Legare, Cristine",585,FALSE,8,2022-09-21T19:54:14Z
+1519,The role of meaning in toddlers’ and preschoolers’ fixations of natural scenes,restricted,"Oakes, Lisa",538,FALSE,92,2022-09-23T07:02:29Z
+1520,Dance Expertise and Emotion Attribution,restricted,"Goldstein, Thalia R.",531,FALSE,1,2022-09-23T20:34:30Z
+1521,Selective Tuning of the Visual System to the Waist-to-Hip Ratio: “First Pass” Fecundity and “Peak” Fertility Filters,restricted,"Scherf, Kathryn Suzanne",252,FALSE,0,2022-09-30T13:27:43Z
+1522,Multisensory Data Network,restricted,"Bahrick, Lorraine E.",376,FALSE,0,2022-10-06T12:33:58Z
+1522,Multisensory Data Network,restricted,"Todd, James Torrence",407,FALSE,0,2022-10-06T12:33:58Z
+1524,Testing Human Learning to Adapt using Altered Gravity in a Virtual Reality Environment,restricted,"Ossmy, Ori",1526,FALSE,29,2022-10-10T09:57:48Z
+1525,Study 271 ERISS,restricted,"Bauer, Patricia",5539,FALSE,12,2022-10-13T17:29:43Z
+1526,Darpa Duplo,restricted,"Adolph, Karen",5,FALSE,9,2022-10-13T23:02:02Z
+1526,Darpa Duplo,restricted,"Kaplan, Brianna Erin",2765,FALSE,9,2022-10-13T23:02:02Z
+1526,Darpa Duplo,restricted,"Ossmy, Ori",1526,FALSE,9,2022-10-13T23:02:02Z
+1529,Physical Disability and Labor Market Discrimination: Evidence from a Video Resume Field Experiment,full,"Bellemare, Charles",10465,FALSE,1,2022-10-25T22:01:18Z
+1529,Physical Disability and Labor Market Discrimination: Evidence from a Video Resume Field Experiment,full,"Goussé, Marion",10463,FALSE,1,2022-10-25T22:01:18Z
+1529,Physical Disability and Labor Market Discrimination: Evidence from a Video Resume Field Experiment,full,"Lacroix, Guy",10464,FALSE,1,2022-10-25T22:01:18Z
+1529,Physical Disability and Labor Market Discrimination: Evidence from a Video Resume Field Experiment,full,"Marchand, Steeve",10507,FALSE,1,2022-10-25T22:01:18Z
+1539,Test to show how to make a volume,restricted,"Seisler, Andrea",437,FALSE,0,2022-10-31T16:18:04Z
+1540,Test to show how to make a volume,restricted,"Seisler, Andrea",437,FALSE,0,2022-10-31T16:21:16Z
+1541,Pedestrian Virtual Road Crossing Demo,full,"Plumert, Jodie",6864,FALSE,1,2022-11-02T14:29:25Z
+1542,Bicyclist Virtual Road Crossing Demo,full,"Plumert, Jodie",6864,FALSE,1,2022-11-02T14:44:25Z
+1543,Vision contributes to sex differences in spatial cognition and activity interests,none,"Qian, Yiming",4210,FALSE,1,2022-11-11T18:24:09Z
+1543,Vision contributes to sex differences in spatial cognition and activity interests,none,"Berenbaum, Sheri",1807,FALSE,1,2022-11-11T18:24:09Z
+1543,Vision contributes to sex differences in spatial cognition and activity interests,none,"Gilmore, Rick O.",6,FALSE,1,2022-11-11T18:24:09Z
+1543,Vision contributes to sex differences in spatial cognition and activity interests,none,"Seisler, Andrea",437,FALSE,1,2022-11-11T18:24:09Z
+1544,ST-Anthropomorphism,restricted,"Weisberg, Deena Skolnick",562,FALSE,11,2022-11-14T20:46:06Z
+1546,PLAYProject_RUTGU,none,"LoBue, Vanessa",82,FALSE,0,2022-11-18T20:02:56Z
+1547,ManyBabies4 (The University of Hong Kong),restricted,"Wong, Terry Tin Yau",9260,FALSE,0,2022-11-20T11:30:48Z
+1548,Stereotypes as prototypes in children's gender concepts,restricted,"Rhodes, Marjorie",277,FALSE,0,2022-11-22T19:52:53Z
+1549,Stereotypes as prototypes in children's gender concepts,full,"Rhodes, Marjorie",277,FALSE,1,2022-11-23T15:33:43Z
+1549,Stereotypes as prototypes in children's gender concepts,full,"Foster-Hanson, Emily",3121,FALSE,1,2022-11-23T15:33:43Z
+1550,Health Effects of Unaffordable Water,full,"Harlan, Sharon L",10645,FALSE,24,2022-12-02T20:22:34Z
+1550,Health Effects of Unaffordable Water,full,"Senier, Laura",9133,FALSE,24,2022-12-02T20:22:34Z
+1551,The Role of Sensory Input on Spatial and Scientific Skills in Adolescents,restricted,"Ossmy, Ori",1526,FALSE,6,2022-12-05T15:08:35Z
+1552,Walking and Falling: Using Simulated Robots to Model the Role of Errors in Infant Walking,restricted,"Adolph, Karen",5,FALSE,0,2022-12-08T21:30:09Z
+1552,Walking and Falling: Using Simulated Robots to Model the Role of Errors in Infant Walking,restricted,"Ossmy, Ori",1526,FALSE,0,2022-12-08T21:30:09Z
+1553,Infant Scene Perception: Point of View,restricted,"Oakes, Lisa",538,FALSE,0,2022-12-10T17:33:52Z
+1554,DBN - Taiwan - Wave 1 - Pilot,restricted,"Chen, Eva E",10090,FALSE,0,2022-12-11T13:44:37Z
+1555,DBN - Taiwan - Wave 1 - Data Collection,restricted,"Chen, Eva E",10090,FALSE,0,2022-12-11T13:51:03Z
+1556,Baby Steps Towards Reading: Infants’ Spontaneous Interactions with Books at Home,restricted,"Tamis-LeMonda, Catherine",11,FALSE,4,2022-12-12T14:16:36Z
+1556,Baby Steps Towards Reading: Infants’ Spontaneous Interactions with Books at Home,restricted,"Heiman, Carli Marisa",988,FALSE,4,2022-12-12T14:16:36Z
+1556,Baby Steps Towards Reading: Infants’ Spontaneous Interactions with Books at Home,restricted,"Herzberg, Orit",3137,FALSE,4,2022-12-12T14:16:36Z
+1556,Baby Steps Towards Reading: Infants’ Spontaneous Interactions with Books at Home,restricted,"West, Kelsey Louise",600,FALSE,4,2022-12-12T14:16:36Z
+1556,Baby Steps Towards Reading: Infants’ Spontaneous Interactions with Books at Home,restricted,"Fletcher, Katelyn Kim",3597,FALSE,4,2022-12-12T14:16:36Z
+1557,Integration of Visual Task Demands and Postural Sway in Infants,restricted,"Claxton, Laura",993,FALSE,0,2022-12-15T18:50:58Z

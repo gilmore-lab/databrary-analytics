@@ -86,7 +86,6 @@ invest_df <- invest_df %>%
   dplyr::distinct(ai_id, .keep_all = TRUE)
 ```
 
-
 # Visualize and summarize {.tabset .tabset-fade .tabset-pills}
 
 ```{r}
