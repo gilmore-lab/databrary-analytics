@@ -1,0 +1,192 @@
+---
+title: "NIH Inclusion Enrollment Report"
+author: "Rick Gilmore"
+date: "`r Sys.Date()`"
+output: html_document
+params: 
+  db_login: "your@email.com"
+---
+
+# Purpose
+
+This document explores produces an NIH-style inclusion enrollment report for a given set of volumes. Rick Gilmore created it for Justine Hoch.
+
+# Set-up
+
+## Install R package dependencies
+
+To run the following chunk(s), set `eval=TRUE` in the chunk headers.
+
+```{r, eval=FALSE}
+install.packages("tidyverse")
+install.packages("purrr")
+install.packages("lubridate")
+install.packages("devtools")
+```
+
+## Set-up authentication to Databrary
+
+- Download and install the `databraryapi` package from GitHub:.
+
+```{r, eval=FALSE}
+devtools::install_github('PLAY-behaviorome/databraryapi')
+```
+
+- Configure your R environment so you can log-in to Databrary: `databraryapi::config_passwd()`.
+
+```{r, eval=FALSE}
+databraryapi::config_passwd()
+```
+
+- Confirm that you can connect to Databrary:
+
+```{r, eval=FALSE}
+databraryapi::login_db()
+```
+
+If the latter command returns `TRUE` with a message `Login successful`, you are ready to proceed.
+
+# Load required functions into workspace
+
+There are several helper functions required.
+
+```{r}
+get_nih_enrollment_data <- function(vol_ids = 444, 
+                                    start_date = "2019-01-01", 
+                                    end_date = "2019-12-31",
+                                    vb = FALSE) {
+  require(purrr)
+  require(dplyr)
+  require(lubridate)
+  require(databraryapi)
+  
+  if (!is.numeric(vol_ids)) {
+    stop("'vol_ids' must be numeric.")
+  }
+  
+  # Log in to Databrary for access
+  db_log <- databraryapi::login_db()
+  if (!db_log) {
+    stop("Unable to log in to Databrary.")
+  }
+  
+  # Get data from Databrary
+  demog_data <- purrr::map_df(vol_ids, get_volume_demog, vb = vb)
+  
+  # Filter 
+  demog_filtered <- dplyr::filter(demog_data, 
+                                  lubridate::as_date(sess_d) > start_date,
+                                  lubridate::as_date(sess_d) < end_date)
+  
+  databraryapi::logout_db()
+  
+  demog_filtered
+}
+
+get_volume_demog <- function(vol_id, vb = FALSE) {
+  require(databraryapi)
+  require(dplyr)
+  
+  if (!is.numeric(vol_id)) {
+    stop("'vol_id' must be numeric.")
+  }
+  
+  if (vb) message("Retrieving session CSV from volume ", vol_id)
+  v_ss <- databraryapi::download_session_csv(vol_id)
+  if ("participant_birthdate" %in% names(v_ss)) {
+    if (vb) message("CSV appears valid; processing")
+    v_ss <- dplyr::filter(v_ss,
+                          !stringr::str_detect(session_date, "materials"))
+    v_ss <- dplyr::rename(v_ss,
+                          b_date = participant_birthdate,
+                          race = participant_race,
+                          ethnicity = participant_ethnicity,
+                          gender = participant_gender,
+                          sess_id = session_id,
+                          sess_rel = session_release,
+                          sess_d = session_date)
+    # Force dates to be character
+    v_ss <- dplyr::mutate(v_ss,
+                          b_date = as.character(b_date),
+                          sess_d = as.character(sess_d))
+    dplyr::select(
+      v_ss,
+      vol_id,
+      sess_id,
+      sess_rel,
+      sess_d,
+      b_date,
+      race,
+      ethnicity,
+      gender
+    )
+  } else {
+    if (vb) message("CSV invalid; skipping")
+    NULL
+  }
+}
+```
+
+# Gather demographic data
+
+```{r}
+# For KEA report with help from J. Hoch
+nyu_vols <- c(476, 350, 821, 827, 835, 868, 941, 1026, 1020)
+start_d <- "2019-02-19"
+end_d <- "2020-02-25"
+nyu_df <- get_nih_enrollment_data(nyu_vols, start_d, end_d)
+```
+
+# Make table
+
+Rick was unable to figure out how to create the “nested” table he wanted. But this array contains the data in a format that should work.
+
+```{r}
+nyu_xt <- xtabs(formula = ~ race + gender + 
+                  ethnicity, data = nyu_df)
+
+nyu_xt
+```
+
+# One more try…
+
+Let’s do some clean-up so the categories sum nicely.
+
+```{r}
+nyu_clean <- nyu_df %>%
+  dplyr::mutate(., race = replace(race, race == "Not reported", "Unknown"),
+                race = replace(race, race == "Unknown or not reported", "Unknown"),
+                 race = replace(race, race == "Black or African American", "Black"),
+                ethnicity = replace(ethnicity, ethnicity == "Hispanic or Latino", "Hisp/Lat"),
+                ethnicity = replace(ethnicity, ethnicity == " Hispanic or Latino", "Hisp/Lat"),
+                ethnicity = replace(ethnicity, ethnicity == "Not Hispanic or Latino", "Not Hisp/Lat"),
+                ethnicity = replace(ethnicity, ethnicity == "did not answer", "Unknown"),
+                ethnicity = replace(ethnicity, ethnicity == "Chose not to answer", "Unknown"),
+                ethnicity = replace(ethnicity, ethnicity == "Choose not to answer", "Unknown"),
+                ethnicity = replace(ethnicity, ethnicity == "Unknown or not reported", "Unknown")
+                )
+```
+
+This is a flat table, so we’ll use the ftable() and xtabs() functions.
+
+```{r}
+nyu_sum <- nyu_clean %>%
+  dplyr::select(., race, gender, ethnicity) %>%
+  dplyr::group_by(., race, gender, ethnicity) %>%
+  dplyr::summarise(., n = n())
+
+ft <- ftable(xtabs(n ~ race + ethnicity + gender, data = nyu_sum), 
+       row.vars = 1,
+       col.vars = c(2,3))
+
+ft
+```
+
+The table looks prettier when we render the chunks individually than when it’s rendered in full.
+
+# Clean-up
+
+```{r}
+databraryapi::logout_db() 
+```
+
