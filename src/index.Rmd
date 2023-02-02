@@ -1,0 +1,32 @@
+---
+title: "PLAY Project: Surveys"
+author: "Rick Gilmore"
+date: "`r Sys.Date()`"
+description: "Reports on Databrary users and usage"
+output: 
+  html_document:
+    code_folding: hide
+    toc: true
+    toc_depth: 2
+    toc_float: true
+params:
+  db_account: email@yourprovider.com
+  update_gs: False
+  update_stats: False
+  from_gs: False
+  update_csv: False
+  vols_to_test: 10
+---
+
+```{r setup-index, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE,
+                      fig.align = "center",
+                      fig.path = "include/img/")
+library(tidyverse)
+```
+
+# About {-}
+
+
+## Purpose {-}
+

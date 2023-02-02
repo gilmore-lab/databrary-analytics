@@ -4,6 +4,5 @@
 .Ruserdata
 .databrary.RData
 .httr-oauth
-packrat/lib*/
 .DS_Store
 .Rproj

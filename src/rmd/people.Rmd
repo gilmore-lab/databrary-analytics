@@ -1,0 +1,20 @@
+---
+title: "New people"
+author: "Andrea Seisler"
+date:  "`r Sys.time()`"
+---
+
+```{r db-people-table}
+new_people <- databraryapi::get_db_stats(type = "people")
+if (!is.null(new_people)) {
+  new_people %>%
+    dplyr::mutate(db_url = paste0("https://databrary.org/party/", id)) %>%
+    dplyr::select(., sortname, prename, affiliation, db_url) %>%
+    tidyr::unite(col = "Investigator Name", prename, sortname, sep=" ") %>%
+    knitr::kable(col.names = c("Full Name", "Affiliation", 
+                               "Databrary URL"), "html") %>%
+    kableExtra::kable_styling(.) #%>%
+} else {
+  cat("No new investigators since last report.")
+}
+```

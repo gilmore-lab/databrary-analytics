@@ -1,0 +1,31 @@
+---
+title: "old_weekly_reports"
+author: "Andrea R Seisler"
+date:  "`r Sys.time()`"
+---
+<!-- # Get List of Reports -->
+
+```{r get-list-old-reports, include=FALSE}
+old_report_files <- list.files("archive", pattern = "*.html")
+```
+
+```{r create-links}
+# Create list of links
+if (!purrr::is_empty(old_report_files)) {
+  df <-
+    data.frame(
+      url = paste0(
+        "https://gilmore-lab.github.io/databrary-analytics/archive/",
+        old_report_files
+      )
+    )
+  
+  # Create Table
+  df %>%
+    dplyr::arrange(., desc(url)) %>%
+    knitr::kable(., format = "html", col.names = ("Report URL")) %>%
+    kableExtra::kable_styling()
+} else {
+  message("No archival reports to display.")
+}
+```

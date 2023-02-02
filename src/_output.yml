@@ -1,0 +1,39 @@
+bookdown::bs4_book:
+  css: include/css/style.css
+  theme:
+    primary: "#096B72"
+  repo:
+    base: https://github.com/gilmore-lab/databrary-analytics
+    branch: main
+
+bookdown::gitbook:
+  css: include/css/style.css
+  config:
+    toc:
+      before: |
+        <li><a href="./">Databrary Analytics</a></li>
+      after: |
+        <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+    edit: https://github.com/USERNAME/REPO/edit/main/%s
+    download: ["pdf", "epub"]
+    sharing:
+      facebook: false
+      github: true
+      twitter: false
+      linkedin: false
+      weibo: false
+      instapaper: false
+      vk: false
+      whatsapp: false
+      all: ['github']
+
+bookdown::pdf_book:
+  includes:
+    in_header: preamble.tex
+  latex_engine: xelatex
+  citation_package: natbib
+  keep_tex: yes
+
+bookdown::epub_book: default
+
+
