@@ -1,5 +1,5 @@
 ---
-title: "PLAY Project: Surveys"
+title: "Databrary analytics"
 author: "Rick Gilmore"
 date: "`r Sys.Date()`"
 description: "Reports on Databrary users and usage"
@@ -16,6 +16,7 @@ params:
   from_gs: False
   update_csv: False
   vols_to_test: 10
+  archive_old: true
 ---
 
 ```{r setup-index, include=FALSE}
@@ -27,6 +28,7 @@ library(tidyverse)
 
 # About {-}
 
+These pages summarize information about the Databrary data library.
 
 ## Purpose {-}
 

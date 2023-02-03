@@ -1,0 +1,7 @@
+vol_id,mimetype,extension,asset_type,n_files,tot_size_gb,tot_dur_hrs
+1273,application/pdf,pdf,Portable document,2,8.1888671875e-5,0
+1273,application/vnd.datavyu,opf,Datavyu,82,0,0
+1273,application/vnd.ms-excel,xls,Microsoft Excel spreadsheet,1,5.9548828125e-5,0
+1273,application/vnd.openxmlformats-officedocument.wordprocessingml.document,docx,Microsoft Word (Office Open XML) document,2,6.29423828125e-5,0
+1273,text/rtf,rtf,Rich text format,2,1.65830078125e-5,0
+1273,video/mp4,mp4,MPEG-4 video,84,0.0181266826171875,82.3911288888889

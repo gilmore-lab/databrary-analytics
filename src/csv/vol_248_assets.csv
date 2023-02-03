@@ -1,0 +1,4 @@
+vol_id,mimetype,extension,asset_type,n_files,tot_size_gb,tot_dur_hrs
+248,audio/mpeg,mp3,MPEG-1 or MPEG-2 audio layer III,12,0.0021329931640625,0.050153333333333334
+248,image/jpeg,jpg,JPEG image,1,9.188291015625e-4,0
+248,image/png,png,Portable network graphics,2,1.55005859375e-4,0

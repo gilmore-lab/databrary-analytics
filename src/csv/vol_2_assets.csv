@@ -1,0 +1,4 @@
+vol_id,mimetype,extension,asset_type,n_files,tot_size_gb,tot_dur_hrs
+2,application/pdf,pdf,Portable document,1,7.265625e-5,0
+2,text/csv,csv,Comma-separated values,1,9.98046875e-7,0
+2,video/mp4,mp4,MPEG-4 video,14,3.4886225302734375,1.327995277777778

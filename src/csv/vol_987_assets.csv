@@ -1,0 +1,6 @@
+vol_id,mimetype,extension,asset_type,n_files,tot_size_gb,tot_dur_hrs
+987,application/pdf,pdf,Portable document,2,2.58296875e-4,0
+987,application/vnd.openxmlformats-officedocument.wordprocessingml.document,docx,Microsoft Word (Office Open XML) document,1,0,0
+987,audio/mpeg,mp3,MPEG-1 or MPEG-2 audio layer III,5,0,22.566206388888887
+987,text/plain,txt,Plain text,1,0,0
+987,video/mp4,mp4,MPEG-4 video,76,0,39.92678472222222

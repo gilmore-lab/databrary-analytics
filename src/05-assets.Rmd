@@ -1,0 +1,65 @@
+# Assets
+
+## Purpose
+
+This report summarizes the types of files (assets) that are stored and shared.
+
+## Import data
+
+
+## Update all or import
+
+```{r, message=FALSE}
+if (!params$use_saved_csvs) {
+  update_all_vol_stats(max_volume_id = params$max_volume_id)
+}
+
+#quietly_read_csv <- safely(readr::read_csv)
+
+if (dir.exists(params$csv_path)) {
+  csv_fns <- list.files(params$csv_path, '\\.csv', full.names = TRUE)
+  assets_df <- purrr::map_df(csv_fns, readr::read_csv, show_col_types = FALSE)
+} else {
+  stop(paste0('CSV directory not found: ', params$csv_path))
+}
+```
+
+# Analyze
+
+## Volumes with shared assets
+
+There are `r length(unique(assets_df$vol_id))` shared volumes with assets.
+
+The following shows the number of shared volumes with a given asset type.
+
+```{r}
+assets_df %>%
+  dplyr::group_by(asset_type) %>%
+  dplyr::count(asset_type) %>%
+  dplyr::arrange(., desc(n)) %>%
+  kableExtra::kable(., format = 'html') %>%
+  kableExtra::kable_styling(.)
+```
+
+## Assets
+
+Total number of assets, total size, and total duration by type:
+
+```{r}
+assets_df %>%
+  dplyr::group_by(asset_type) %>%
+  dplyr::summarise(total_files = sum(n_files),
+            total_size = sum(tot_size_gb),
+            total_dur = sum(tot_dur_hrs)) %>%
+  dplyr::arrange(., desc(total_files)) %>%
+  dplyr::select(asset_type, total_files, total_size, total_dur) %>%
+  kableExtra::kable(., format = 'html') %>%
+  kableExtra::kable_styling(.)
+```
+
+# Clean-up
+
+```{r}
+databraryapi::logout_db()
+```
+

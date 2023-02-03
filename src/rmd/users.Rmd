@@ -1,50 +1,15 @@
 ---
 title: "Authorized Institutions and Investigators"
-author: "Andrea Seisler"
-date:  "`r Sys.time()`"
+author: "Andrea Seisler & Rick Gilmore"
 ---
 
+
 ```{r}
-new_stats <- databraryapi::get_db_stats()
-new_stats$date <- lubridate::as_datetime(new_stats$date)
-
-new_stats <- new_stats %>%
-  dplyr::select(date, institutions, investigators, affiliates) %>%
-  dplyr::mutate(date = lubridate::as_datetime(date))
-if (purrr::is_empty(new_stats)) {
-  stop("Unable to retrieve new statistics from Databrary.")
-}
+targets::tar_load(inst_invest_csv, store = '../../_targets/')
+updated_stats <- inst_invest_csv
 ```
 
-
-```{r read-old-investigator-institution-data}
-if (params$from_gs) {
-  db <- googlesheets::gs_title('Databrary-analytics')
-  
-  old_stats <- db %>%
-    googlesheets::gs_read(ws = 'institutions-investigators')
-} else {
-  old_stats <- readr::read_csv("../csv/institutions-investigators.csv", show_col_types = FALSE)
-}
-old_stats <- old_stats %>%
-  dplyr::mutate(., date = lubridate::as_datetime(date))
-```
-
-```{r update-user-stats}
- # initialize updated_stats
-updated_stats <- old_stats
-if (as.logical(params$update_stats)) {
-  next_entry <- dim(updated_stats)[1] + 1
-  updated_stats[next_entry, ] = NA
-  
-  # fill with new data
-  # updated_stats$date[next_entry] <- new_stats$date
-  # updated_stats$institutions[next_entry] <- new_stats$investigators
-  # updated_stats$investigators[next_entry] <- new_stats$investigators
-  # updated_stats$affiliates[next_entry] <- new_stats$affiliates
-  updated_stats[next_entry, ] <- new_stats
-}
-
+```{r}
 # Calculate change
 n_rows <- dim(updated_stats)[1]
 
@@ -62,7 +27,7 @@ updated_stats <- updated_stats %>%
 
 <!-- Now, we plot the data. -->
 
-```{r db-inst-user-plot}
+```{r}
 # Create a tidy form for plotting both institutions and investigators and affiliates
 gathered_stats <- updated_stats %>%
   tidyr::gather(., key = "type", value = "count", -date) %>%
@@ -81,7 +46,7 @@ users_plot <- gathered_stats %>%
   )) +
   scale_x_date(date_labels = "%Y", date_breaks = '1 year') +
   geom_point() +
-  geom_line(size = ln_size) +
+  geom_line(linewidth = ln_size) +
   scale_colour_manual(values = c(color_orange, color_teal)) +
   ggtitle(paste("Authorizations as of ", Sys.Date())) +
   ylab("Authorizations") +
@@ -101,28 +66,5 @@ cowplot::ggdraw(users_plot) +
     "Institutions: ", updated_stats$institutions[n_rows],
     " (+ ", delta_institutions, ")"), colour = color_orange, .75, .5)
 ```
-<!-- Next, we update the Google Sheet if `params$update_gs` is TRUE. -->
-<!-- In the current context, `params$update_gs` == `r params$update_gs`. -->
 
-```{r update-inst-inv-gs}
-if (as.logical(params$update_gs)) {
-  db <- db %>%
-    gs_add_row(ws = 'institutions-investigators', 
-               input = new_stats)
-  message("'update_gs' parameter is 'TRUE', so Google Sheet data will be updated.")
-} else {
-  message("'update_gs' parameter is 'FALSE', so Google Sheet data unmodified.")
-}
-```
-
-```{r update-inst-inv-csv}
-if (as.logical(params$update_csv)) {
-  if (!purrr::is_empty(updated_stats)) {
-  readr::write_csv(updated_stats, "csv/institutions-investigators.csv")
-  message("Updated 'csv/institutions-investigators.csv'.")    
-  } else {
-    message("No new institutions or investigator data to write.")
-  }
-}
-```
 

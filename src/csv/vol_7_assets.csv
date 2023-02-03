@@ -1,0 +1,5 @@
+vol_id,mimetype,extension,asset_type,n_files,tot_size_gb,tot_dur_hrs
+7,application/msword,doc,Microsoft Word document,2,0.0020585,0
+7,application/vnd.datavyu,opf,Datavyu,54,6.07421875e-7,0
+7,image/jpeg,jpg,JPEG image,6,0,0
+7,video/mp4,mp4,MPEG-4 video,56,0,28.919621388888892

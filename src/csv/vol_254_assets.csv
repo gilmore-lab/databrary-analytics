@@ -1,0 +1,7 @@
+vol_id,mimetype,extension,asset_type,n_files,tot_size_gb,tot_dur_hrs
+254,application/pdf,pdf,Portable document,6,0.27190665625,0
+254,application/vnd.datavyu,opf,Datavyu,5,5.66259765625e-5,0
+254,image/jpeg,jpg,JPEG image,1,9.06599609375e-4,0
+254,image/png,png,Portable network graphics,6,0.007182630859375,0
+254,text/csv,csv,Comma-separated values,10,8.899140625e-4,0
+254,video/mp4,mp4,MPEG-4 video,122,8.105811827148438,14.136969722222222

@@ -1,0 +1,4 @@
+vol_id,mimetype,extension,asset_type,n_files,tot_size_gb,tot_dur_hrs
+330,application/vnd.openxmlformats-officedocument.spreadsheetml.sheet,xlsx,Microsoft Excel (Office Open XML) workbook,1,0,0
+330,audio/mpeg,mp3,MPEG-1 or MPEG-2 audio layer III,44,0,629.25432
+330,video/mp4,mp4,MPEG-4 video,45,0.01158088671875,44.41687861111111
