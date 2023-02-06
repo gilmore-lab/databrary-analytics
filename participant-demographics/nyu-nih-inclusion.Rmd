@@ -1,5 +1,5 @@
 ---
-title: "NIH Inclusion Enrollment Report"
+title: "NYU NIH Inclusion Enrollment Report"
 author: "Rick Gilmore"
 date: "`r Sys.Date()`"
 output: html_document
@@ -9,7 +9,7 @@ params:
 
 # Purpose
 
-This document explores produces an NIH-style inclusion enrollment report for a given set of volumes. Rick Gilmore created it for Justine Hoch.
+This document explores produces an NIH-style inclusion enrollment report for a given set of volumes. Rick Gilmore created it for Justine Hoch and modified it for Christina Hospodar.
 
 # Set-up
 
@@ -129,13 +129,22 @@ get_volume_demog <- function(vol_id, vb = FALSE) {
 
 # Gather demographic data
 
-```{r}
+```{r, eval = FALSE}
 # For KEA report with help from J. Hoch
 nyu_vols <- c(476, 350, 821, 827, 835, 868, 941, 1026, 1020)
 start_d <- "2019-02-19"
 end_d <- "2020-02-25"
 nyu_df <- get_nih_enrollment_data(nyu_vols, start_d, end_d)
 ```
+
+```{r}
+# For KEA report on 2023-02-06 with info from christina.hospodar@nyu.edu
+nyu_vols <- c(868,941,1020,1026,1379,1436,1448)
+start_d <- "2022-02-18"
+end_d <- "2023-02-25"
+nyu_df <- get_nih_enrollment_data(nyu_vols, start_d, end_d)
+```
+
 
 # Make table
 
@@ -154,17 +163,29 @@ Let’s do some clean-up so the categories sum nicely.
 
 ```{r}
 nyu_clean <- nyu_df %>%
-  dplyr::mutate(., race = replace(race, race == "Not reported", "Unknown"),
-                race = replace(race, race == "Unknown or not reported", "Unknown"),
-                 race = replace(race, race == "Black or African American", "Black"),
-                ethnicity = replace(ethnicity, ethnicity == "Hispanic or Latino", "Hisp/Lat"),
-                ethnicity = replace(ethnicity, ethnicity == " Hispanic or Latino", "Hisp/Lat"),
-                ethnicity = replace(ethnicity, ethnicity == "Not Hispanic or Latino", "Not Hisp/Lat"),
-                ethnicity = replace(ethnicity, ethnicity == "did not answer", "Unknown"),
-                ethnicity = replace(ethnicity, ethnicity == "Chose not to answer", "Unknown"),
-                ethnicity = replace(ethnicity, ethnicity == "Choose not to answer", "Unknown"),
-                ethnicity = replace(ethnicity, ethnicity == "Unknown or not reported", "Unknown")
-                )
+  dplyr::mutate(
+    .,
+    race = replace(race, race == "Not reported", "Unknown"),
+    race = replace(race, race == "Unknown or not reported", "Unknown"),
+    race = replace(race, race == "Black or African American", "Black"),
+    race = replace(race, race == "White and Afro LAtina", "More than one"),
+    race = replace(race, race == "Black or African American White", "More than one"),
+    race = replace(race, race == "White, Asian, Hawaiian", "More than one"),
+    race = replace(race, race == "While", "White"),
+    race = replace(race, race == "White and Asian", "More than one"),
+    race = replace(race, is.na(race), "Unknown"),
+    ethnicity = replace(ethnicity, ethnicity == "Hispanic or Latino", "Hisp/Lat"),
+    ethnicity = replace(ethnicity, ethnicity == " Hispanic or Latino", "Hisp/Lat"),
+    ethnicity = replace(ethnicity, ethnicity == "Not Hispanic or Latino", "Not Hisp/Lat"),
+    ethnicity = replace(ethnicity, ethnicity == "did not answer", "Unknown"),
+    ethnicity = replace(ethnicity, ethnicity == "Chose not to answer", "Unknown"),
+    ethnicity = replace(ethnicity, ethnicity == "Choose not to answer", "Unknown"),
+    ethnicity = replace(ethnicity, ethnicity == "Unknown or not reported", "Unknown"),
+    ethnicity = replace(ethnicity, is.na(ethnicity), "Unknown"),
+    gender = replace(gender, is.na(gender), "Unknown or not reported"),
+    gender = replace(gender, gender == "Non-binary", "Unknown or not reported"),
+    gender = replace(gender, gender == "Non binary", "Unknown or not reported")
+  )               
 ```
 
 This is a flat table, so we’ll use the ftable() and xtabs() functions.
