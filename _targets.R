@@ -66,5 +66,11 @@ list(
   #                                  age = as.difftime(13, units = "weeks"))
   # ),
   tar_target(volume_asset_stats_df,
-             make_volume_assets_stats_df())
+             make_volume_assets_stats_df()),
+  # Volume demographics from spreadsheets
+  tar_target(volume_ss_csvs,
+             get_save_multiple_volume_ss(1, max_vol_id),
+             cue = tarchetypes::tar_cue_age(name = volume_ss_csvs, 
+                                            age = as.difftime(13, units = "weeks"))
+  )
 )

@@ -310,13 +310,14 @@ update_vol_asset_stats <-
     suppressPackageStartupMessages(require(purrr))
     
     message(
-        paste0(
-          "Updating volume asset statistics for volumes ",
-          start_vol_id,
-          " : ",
-          end_vol_id, ". Please be patient."
-        )
+      paste0(
+        "Updating volume asset statistics for volumes ",
+        start_vol_id,
+        " : ",
+        end_vol_id,
+        ". Please be patient."
       )
+    )
     purrr::map(
       c(start_vol_id:end_vol_id),
       calculate_vol_asset_stats,
@@ -380,7 +381,8 @@ update_all_vol_stats <- function(max_volume_id,
 make_volume_assets_stats_df <- function(csv_dir = "src/csv") {
   stopifnot(dir.exists(csv_dir))
   csv_fns <- list.files(csv_dir, '_assets\\.csv', full.names = TRUE)
-  df <- purrr::map_df(csv_fns, readr::read_csv, show_col_types = FALSE)
+  df <-
+    purrr::map_df(csv_fns, readr::read_csv, show_col_types = FALSE)
   dplyr::arrange(df, vol_id)
 }
 
@@ -425,41 +427,75 @@ ms_to_hrs <- function(ms) {
 
 ################################################################################
 
+vol_csv_avail <- function(vol_id) {
+  stopifnot(is.numeric(vol_id))
+  stopifnot(vol_id > 0)
+  
+  this_url <-
+    paste0("https://nyu.databrary.org/volume/", vol_id, "/csv")
+  r <- httr::GET(this_url,
+                 httr::authenticate(Sys.getenv("DATABRARY_LOGIN"), 
+                                    keyring::key_get(service = "databrary", 
+                                                     username = Sys.getenv("DATABRARY_LOGIN"))))
+  
+  if (httr::status_code(r) == 404) {
+    FALSE
+  } else {
+    TRUE
+  }
+}
+
 get_volume_demog <- function(vol_id = 4, vb = FALSE) {
   stopifnot(is.numeric(vol_id))
   stopifnot(vol_id > 0)
   
-  if (vb) message(paste0("....Gathering demog data from volume ", vol_id))
+  if (vb)
+    message(paste0("Gathering demog data from volume ", vol_id))
+  
+  if (!vol_csv_avail(vol_id)) {
+    if (vb)
+      message("No CSV available for volume ", vol_id)
+    return(NULL)
+  }
+  
   v_ss <-
     try(databraryapi::download_session_csv(vol_id), silent = TRUE)
-
+  
   # v_ss <-
   #   try(vroom(paste0("https://nyu.databrary.org/volume/", vol_id, "/csv")))
   
   if ('try-error' %in% class(v_ss)) {
     message(".....Error loading CSV for volume ", vol_id)
-    df <- tibble(vol_id = NA,
-                 age_days = NA,
-                 participant_gender = NA,
-                 participant_race = NA,
-                 participant_ethnicity = NA)
+    df <- tibble(
+      vol_id = NA,
+      age_days = NA,
+      participant_gender = NA,
+      participant_race = NA,
+      participant_ethnicity = NA
+    )
     return(df)
   } else if (is.null(v_ss)) {
     message(".....NULL CSV for volume ", vol_id)
-    df <- tibble(vol_id = NA,
-                 age_days = NA,
-                 participant_gender = NA,
-                 participant_race = NA,
-                 participant_ethnicity = NA)
+    df <- tibble(
+      vol_id = NA,
+      age_days = NA,
+      participant_gender = NA,
+      participant_race = NA,
+      participant_ethnicity = NA
+    )
     return(df)
   }
   
   df <- v_ss
-
-  df$vol_id <- as.character(vol_id)  
-  df <- dplyr::filter(df, !(stringr::str_detect(session_date, 'materials')))
-  df <- dplyr::mutate(df, session_id = as.character(session_id),
-                      participant_ID = as.character(participant_ID))
+  
+  df$vol_id <- as.character(vol_id)
+  df <-
+    dplyr::filter(df, !(stringr::str_detect(session_date, 'materials')))
+  df <- dplyr::mutate(
+    df,
+    session_id = as.character(session_id),
+    participant_ID = as.character(participant_ID)
+  )
   
   df
 }
@@ -566,7 +602,6 @@ get_volume_ethnicity <- function(vol_id, vb = FALSE) {
 get_volumes_demo <- function(min_vol_id = 1,
                              max_vol_id = 10,
                              vb = FALSE) {
-  
   stopifnot(is.numeric(min_vol_id))
   stopifnot(min_vol_id > 0)
   stopifnot(is.numeric(max_vol_id))
@@ -582,9 +617,10 @@ get_volumes_demo <- function(min_vol_id = 1,
     max_vol_id,
     "\n"
   ))
-
+  
   # m <- purrr::map_df(vols_range, get_volume_demog, vb, .progress = TRUE)
-  m <- purrr::map_df(vols_range, download_csv_vroom, vb, .progress = TRUE)
+  m <-
+    purrr::map_df(vols_range, download_csv_vroom, vb, .progress = TRUE)
   
   m
 }
@@ -619,7 +655,6 @@ get_save_volumes_demo <- function(min_vol_id = 1,
                                   max_vol_id = 10,
                                   dir = "src/csv",
                                   vb = FALSE) {
-  
   stopifnot(is.numeric(min_vol_id))
   stopifnot(is.numeric(max_vol_id))
   stopifnot(min_vol_id > 0)
@@ -692,10 +727,22 @@ load_demog_csvs <- function(dir = "participant-demographics/csv") {
 }
 
 get_volumes_owners <- function(min_vol_id = 1,
-                               max_vol_id = 10) {
+                               max_vol_id = 10,
+                               vb = FALSE) {
+  stopifnot(is.numeric(min_vol_id))
+  stopifnot(is.numeric(max_vol_id))
+  stopifnot(min_vol_id > 0)
+  stopifnot(max_vol_id > 0)
+  stopifnot(min_vol_id < max_vol_id)
+  
   vols_range <- min_vol_id:max_vol_id
-  message(".Gathering volume owners")
-  purrr::map_dfr(.x = vols_range, .f = databraryapi::list_volume_owners)
+  if (vb)
+    message("Gathering owners from volumes ", min_vol_id, ":", max_vol_id)
+  purrr::map_dfr(
+    .x = vols_range,
+    .f = databraryapi::list_volume_owners,
+    .progress = TRUE
+  )
 }
 
 get_volume_first_owner <- function(vol_id) {
@@ -709,17 +756,40 @@ get_volume_first_owner <- function(vol_id) {
 
 get_volumes_first_owners <-
   function(min_vol_id = 1,
-           max_vol_id = 10) {
+           max_vol_id = 10,
+           vb = FALSE) {
+    stopifnot(is.numeric(min_vol_id))
+    stopifnot(is.numeric(max_vol_id))
+    stopifnot(min_vol_id > 0)
+    stopifnot(max_vol_id > 0)
+    stopifnot(min_vol_id < max_vol_id)
+    
     vols_range <- min_vol_id:max_vol_id
-    message(".Gathering volume first owners")
-    purrr::map_dfr(.x = vols_range, .f = get_volume_first_owner)
+    if (vb)
+      message("Gathering first owners from volumes ",
+              min_vol_id,
+              ":",
+              max_vol_id)
+    purrr::map_dfr(.x = vols_range,
+                   .f = get_volume_first_owner,
+                   .progress = TRUE)
   }
 
 save_volumes_owners <- function(df,
                                 min_vol_id,
                                 max_vol_id,
-                                dir = "participant-demographics/csv",
-                                fn_suffix = "-owners.csv") {
+                                dir = "src/csv",
+                                fn_suffix = "-owners.csv",
+                                vb = FALSE) {
+  stopifnot(is.data.frame(df))
+  stopifnot(is.numeric(min_vol_id))
+  stopifnot(is.numeric(max_vol_id))
+  stopifnot(min_vol_id > 0)
+  stopifnot(max_vol_id > 0)
+  stopifnot(min_vol_id < max_vol_id)
+  stopifnot(is.character(dir))
+  stopifnot(dir.exists(dir))
+  
   fn <-
     paste0(
       dir,
@@ -729,41 +799,84 @@ save_volumes_owners <- function(df,
       stringr::str_pad(max_vol_id, 4, pad = "0"),
       fn_suffix
     )
-  message(paste0(".Saving volume owner data to ", fn, "."))
+  if (vb)
+    message(paste0("Saving volume owner data to ", fn, "."))
   readr::write_csv(df, fn)
 }
 
 get_save_volumes_owners <-
   function(min_vol_id = 1,
            max_vol_id = 10,
-           dir = "participant-demographics/csv") {
-    message(paste0("Getting owner data for volumes ", min_vol_id, "-", max_vol_id))
-    df <- get_volumes_owners(min_vol_id, max_vol_id)
-    message(paste0("Saving owner data for volumes ", min_vol_id, "-", max_vol_id))
-    save_volumes_owners(df, min_vol_id, max_vol_id, dir, fn_suffix = "-owners.csv")
+           dir = "src/csv",
+           vb = TRUE) {
+    stopifnot(is.numeric(min_vol_id))
+    stopifnot(is.numeric(max_vol_id))
+    stopifnot(min_vol_id > 0)
+    stopifnot(max_vol_id > 0)
+    stopifnot(min_vol_id < max_vol_id)
+    stopifnot(is.character(dir))
+    stopifnot(dir.exists(dir))
+    
+    if (vb)
+      message(paste0("Getting owner data for volumes ", min_vol_id, ":", max_vol_id))
+    df <- get_volumes_owners(min_vol_id, max_vol_id, vb)
+    if (vb)
+      message(paste0("Saving owner data for volumes ", min_vol_id, "-", max_vol_id))
+    save_volumes_owners(df, min_vol_id, max_vol_id, dir, fn_suffix = "-owners.csv", vb)
   }
 
 get_save_volumes_first_owners <-
   function(min_vol_id = 1,
            max_vol_id = 10,
-           dir = "participant-demographics/csv") {
-    message(paste0(
-      "Getting first owner data for volumes ",
-      min_vol_id,
-      "-",
-      max_vol_id
-    ))
+           dir = "src/csv",
+           vb = FALSE) {
+    stopifnot(is.numeric(min_vol_id))
+    stopifnot(is.numeric(max_vol_id))
+    stopifnot(min_vol_id > 0)
+    stopifnot(max_vol_id > 0)
+    stopifnot(min_vol_id < max_vol_id)
+    stopifnot(is.character(dir))
+    stopifnot(dir.exists(dir))
+    
+    if (vb)
+      message(paste0(
+        "Getting first owner data for volumes ",
+        min_vol_id,
+        ":",
+        max_vol_id
+      ))
+    
     df <- get_volumes_first_owners(min_vol_id, max_vol_id)
-    message(paste0(
-      "Saving first owner data for volumes ",
-      min_vol_id,
-      "-",
-      max_vol_id
-    ))
-    save_volumes_owners(df, min_vol_id, max_vol_id, dir, fn_suffix = "-first-owners.csv")
+    
+    if (vb)
+      message(paste0(
+        "Saving first owner data for volumes ",
+        min_vol_id,
+        ":",
+        max_vol_id
+      ))
+    
+    save_volumes_owners(df, min_vol_id, max_vol_id, dir, fn_suffix = "-first-owners.csv", vb)
   }
 
-load_owner_csvs <- function(dir = "participant-demographics/csv",
+get_all_owners_save_csvs <-
+  function(max_vol_id = 1520,
+           dir = "src/csv",
+           vb = FALSE) {
+    stopifnot(is.numeric(max_vol_id))
+    stopifnot(max_vol_id > 0)
+    stopifnot(is.character(dir))
+    stopifnot(dir.exists(dir))
+    
+    # TODO: Fix this hack
+    get_save_volumes_owners(1, 500)
+    get_save_volumes_owners(501, 1000)
+    get_save_volumes_owners(1001, 1275) # skip 1276 & 1277 because no owners
+    get_save_volumes_owners(1278, 1500)
+    get_save_volumes_owners(1501, max_vol_id)
+  }
+
+load_owner_csvs <- function(dir = "src/csv",
                             fn_suffix = "-owners") {
   if (!is.character(dir)) {
     stop("'dir' must be a string")
@@ -810,10 +923,17 @@ my_gender <- function(v, a) {
   }
 }
 
-get_volume_ss <- function(vol_id = 1, 
+get_volume_ss <- function(vol_id = 1,
                           omit_materials = FALSE,
                           vb = FALSE) {
   message(paste0("Gathering spreadsheet data from volume ", vol_id))
+  
+  if (!vol_csv_avail(vol_id)) {
+    if (vb)
+      message("No CSV available for volume ", vol_id)
+    return(NULL)
+  }
+  
   v_ss <-
     try(databraryapi::download_session_csv(vol_id), silent = TRUE)
   
@@ -828,37 +948,51 @@ get_volume_ss <- function(vol_id = 1,
   } else {
     df <- v_ss
     if (omit_materials) {
-      df <- dplyr::filter(df, !(stringr::str_detect(session_date, 'materials')))
+      df <-
+        dplyr::filter(df, !(stringr::str_detect(session_date, 'materials')))
     }
     df$vol_id <- vol_id
-    return(df)    
+    return(df)
   }
 }
 
-get_volume_ss_vroom <- function(vol_id = 4, 
-                          omit_materials = FALSE,
-                          vb = FALSE) {
-  if(vb) message(paste0("Gathering spreadsheet data from volume ", vol_id))
-  this_url <- paste0("https://nyu.databrary.org/volume/", vol_id, "/csv")
+get_volume_ss_vroom <- function(vol_id = 4,
+                                omit_materials = FALSE,
+                                vb = FALSE) {
+  if (vb)
+    message(paste0("Gathering spreadsheet data from volume ", vol_id))
+  this_url <-
+    paste0("https://nyu.databrary.org/volume/", vol_id, "/csv")
+  
+  if (!vol_csv_avail(vol_id)) {
+    if (vb)
+      message("No CSV available for volume ", vol_id)
+    return(NULL)
+  }
+  
   v_ss <-
-    try(vroom::vroom(this_url, col_types = "cccccccccccccccccccc", 
-                     show_col_types = FALSE), silent = TRUE)
+    try(vroom::vroom(this_url, col_types = "cccccccccccccccccccc",
+                     show_col_types = FALSE),
+        silent = TRUE)
   if (inherits(v_ss, 'try-error')) {
-    if (vb) message(" Error loading CSV from ", this_url)
+    if (vb)
+      message(" Error loading CSV from ", this_url)
     df <- NULL
     return(df)
   } else if (is.null(v_ss)) {
-    if (vb) message(" NULL CSV for volume ", vol_id)
+    if (vb)
+      message(" NULL CSV for volume ", vol_id)
     df <- NULL
     return(df)
   } else {
     df <- v_ss
     names(df) <- stringr::str_replace_all(names(df), '[-\\. ]', '_')
     if (omit_materials) {
-      df <- dplyr::filter(df, !(stringr::str_detect(session_date, 'materials')))
+      df <-
+        dplyr::filter(df, !(stringr::str_detect(session_date, 'materials')))
     }
     df$vol_id <- as.character(vol_id)
-    return(df)    
+    return(df)
   }
 }
 
@@ -878,106 +1012,122 @@ get_save_volume_ss <- function(vol_id = 4,
   if (!is.null(df)) {
     if (omit_materials) {
       fn <-
-        paste0(
-          dir,
-          "/",
-          stringr::str_pad(vol_id, 4, pad = "0"),
-          "-sess.csv"
-        )
+        paste0(dir,
+               "/",
+               stringr::str_pad(vol_id, 4, pad = "0"),
+               "-sess.csv")
     } else {
       fn <-
-        paste0(
-          dir,
-          "/",
-          stringr::str_pad(vol_id, 4, pad = "0"),
-          "-sess-materials.csv"
-        )
+        paste0(dir,
+               "/",
+               stringr::str_pad(vol_id, 4, pad = "0"),
+               "-sess-materials.csv")
     }
     
     readr::write_csv(df, fn)
-    if (vb) message(" Saved ", fn)
+    if (vb)
+      message(" Saved ", fn)
     
   } else {
-    if (vb) message(" No data available for volume: ", vol_id)
+    if (vb)
+      message(" No data available for volume: ", vol_id)
   }
 }
 
-get_save_multiple_volume_ss <- function(vol_id_min, vol_id_max, csv_dir = "src/csv",
-                                        omit_materials = FALSE, vb = FALSE) {
-  
-  stopifnot(is.numeric(vol_id_min))
-  stopifnot(is.numeric(vol_id_max))
-  stopifnot(vol_id_min > 0)
-  stopifnot(vol_id_max > 0)
-  stopifnot(vol_id_min < vol_id_max)
-  stopifnot(is.character(csv_dir))
-  stopifnot(dir.exists(csv_dir))
-  
-  purrr::map(c(vol_id_min:vol_id_max), get_save_volume_ss, 
-             csv_dir, omit_materials, vb, .progress = TRUE)
-}
+get_save_multiple_volume_ss <-
+  function(vol_id_min,
+           vol_id_max,
+           csv_dir = "src/csv",
+           omit_materials = FALSE,
+           vb = FALSE) {
+
+    stopifnot(is.numeric(vol_id_min))
+    stopifnot(is.numeric(vol_id_max))
+    stopifnot(vol_id_min > 0)
+    stopifnot(vol_id_max > 0)
+    stopifnot(vol_id_min < vol_id_max)
+    stopifnot(is.character(csv_dir))
+    stopifnot(dir.exists(csv_dir))
+    
+    purrr::map(
+      c(vol_id_min:vol_id_max),
+      get_save_volume_ss,
+      csv_dir,
+      omit_materials,
+      vb,
+      .progress = TRUE
+    )
+  }
 
 # Returns a tibble
-extract_sessions_from_vol_csv <- function(csv_fn = "participant-demographics/csv/0002-sess-materials.csv") {
-  stopifnot(is.character(csv_fn))
-  stopifnot(file.exists(csv_fn))
-  
-  #df <- readr::read_csv(csv_fn, show_col_types = FALSE)
-  df <- read.csv(csv_fn, colClasses = "character")
-  
-  if (dim(df)[1] == 0) {
-    message("CSV empty: ", csv_fn)
-    NULL
-  } else {
-    dplyr::filter(df, !(stringr::str_detect(session_date, 'materials')))
+extract_sessions_from_vol_csv <-
+  function(csv_fn = "participant-demographics/csv/0002-sess-materials.csv") {
+    stopifnot(is.character(csv_fn))
+    stopifnot(file.exists(csv_fn))
+    
+    #df <- readr::read_csv(csv_fn, show_col_types = FALSE)
+    df <- read.csv(csv_fn, colClasses = "character")
+    
+    if (dim(df)[1] == 0) {
+      message("CSV empty: ", csv_fn)
+      NULL
+    } else {
+      dplyr::filter(df, !(stringr::str_detect(session_date, 'materials')))
+    }
   }
-}
 
-# Returns a tibble 
-count_sessions_materials_folders <- function(csv_fn = "participant-demographics/csv/0002-sess-materials.csv") {
-  stopifnot(is.character(csv_fn))
-  stopifnot(file.exists(csv_fn))
-  
-  df <- readr::read_csv(csv_fn, show_col_types = FALSE)
-  
-  if (dim(df)[1] == 0) {
-    message("CSV empty: ", csv_fn)
-    NULL
-  } else {
-    df_sess <- dplyr::filter(df, !(stringr::str_detect(session_date, 'materials')))
-    n_sess <- dim(df_sess)[1]
+# Returns a tibble
+count_sessions_materials_folders <-
+  function(csv_fn = "participant-demographics/csv/0002-sess-materials.csv") {
+    stopifnot(is.character(csv_fn))
+    stopifnot(file.exists(csv_fn))
     
-    df_materials <- dplyr::filter(df, (stringr::str_detect(session_date, 'materials')))
-    n_materials <- dim(df_materials)[1]
+    df <- readr::read_csv(csv_fn, show_col_types = FALSE)
     
-    vol_id <- stringr::str_extract(csv_fn, "[0-9]{4}")
+    if (dim(df)[1] == 0) {
+      message("CSV empty: ", csv_fn)
+      NULL
+    } else {
+      df_sess <-
+        dplyr::filter(df, !(stringr::str_detect(session_date, 'materials')))
+      n_sess <- dim(df_sess)[1]
+      
+      df_materials <-
+        dplyr::filter(df, (stringr::str_detect(session_date, 'materials')))
+      n_materials <- dim(df_materials)[1]
+      
+      vol_id <- stringr::str_extract(csv_fn, "[0-9]{4}")
+      
+      tibble::tibble(vol_id, n_sess, n_materials)
+    }
     
-    tibble::tibble(vol_id, n_sess, n_materials)
   }
-  
-}
 
 detect_n_participants <- function(df) {
   sum(stringr::str_detect(names(df), "participant[1-9]?_ID"))
 }
 
-generate_sessions_materials_df <- function(csv_folder = "participant-demographics/csv") {
-  stopifnot(is.character(csv_folder))
-  stopifnot(file.exists(csv_folder))
-  
-  fl <- list.files(csv_folder, "[0-9]{4}\\-sess\\-materials\\.csv", full.names = TRUE)
-  if (length(fl) <= 0) {
-    message("No session/materials CSV files found: ", csv_folder)
-    NULL
-  } else {
-    purrr::map_df(fl, count_sessions_materials_folders)
+generate_sessions_materials_df <-
+  function(csv_folder = "participant-demographics/csv") {
+    stopifnot(is.character(csv_folder))
+    stopifnot(file.exists(csv_folder))
+    
+    fl <-
+      list.files(csv_folder,
+                 "[0-9]{4}\\-sess\\-materials\\.csv",
+                 full.names = TRUE)
+    if (length(fl) <= 0) {
+      message("No session/materials CSV files found: ", csv_folder)
+      NULL
+    } else {
+      purrr::map_df(fl, count_sessions_materials_folders)
+    }
   }
-}
 
 extract_participant_vars <- function(df) {
   stopifnot(is.data.frame(df))
   
-  stringr::str_match(names(df), "participant[1-9]?_([A-Za-z]+)")[,2]
+  stringr::str_match(names(df), "participant[1-9]?_([A-Za-z]+)")[, 2]
 }
 
 extract_participant_identifiers <- function(df) {
@@ -989,12 +1139,13 @@ extract_participant_identifiers <- function(df) {
 
 # If there are multiple participants, augmented data frame
 alter_sess_df_w_mult_part <- function(df) {
-  if (is.null(df)) return(NULL)
+  if (is.null(df))
+    return(NULL)
   stopifnot(is.data.frame(df))
   
   n_particip <- detect_n_participants(df)
   if (n_particip > 0) {
-    purrr::map_df(1:n_particip, select_particip_sess_by_number, df)    
+    purrr::map_df(1:n_particip, select_particip_sess_by_number, df)
   } else {
     message("No participant data...skipping")
     NULL
@@ -1007,15 +1158,21 @@ select_particip_sess_by_number <- function(i, df) {
   stopifnot(i > 0)
   stopifnot(is.data.frame(df))
   
-  vars_not_part_specific <- !(stringr::str_detect(names(df), "participant"))
+  vars_not_part_specific <-
+    !(stringr::str_detect(names(df), "participant"))
   if (i == 1) {
-    part_specific_vars <- stringr::str_detect(names(df), "participant[1]?_")
+    part_specific_vars <-
+      stringr::str_detect(names(df), "participant[1]?_")
   } else {
-    part_specific_vars <- stringr::str_detect(names(df), paste0("participant[", i, "]{1}"))
+    part_specific_vars <-
+      stringr::str_detect(names(df), paste0("participant[", i, "]{1}"))
   }
   select_these <- vars_not_part_specific | part_specific_vars
   out_df <- df[, select_these]
-  stripped_names <- stringr::str_replace(names(out_df), paste0("participant[", i, "]{1}"), "participant")
+  stripped_names <-
+    stringr::str_replace(names(out_df),
+                         paste0("participant[", i, "]{1}"),
+                         "participant")
   names(out_df) <- stripped_names
   out_df
 }
@@ -1029,16 +1186,18 @@ make_cleaned_session_df <- function(csv_fn) {
   alter_sess_df_w_mult_part(df)
 }
 
-download_csv_vroom <- function(vol_id=4, vb = FALSE) {
- this_url <- paste0("https://nyu.databrary.org/volume/", vol_id, "/csv")
- x <- try(vroom(this_url, col_types = "cccccccccccccccccccc"), silent = TRUE)
- if (inherits(x, 'try-error'))  {
-   if (vb) message("Error in downloading spreadsheet from  ", this_url)
-   return(NULL)
- } else {
-   names(x) <- stringr::str_replace_all(names(x), '[-\\. ]', '_')
-   x$vol_id <- as.character(vol_id)
-   x   
- }
+download_csv_vroom <- function(vol_id = 4, vb = FALSE) {
+  this_url <-
+    paste0("https://nyu.databrary.org/volume/", vol_id, "/csv")
+  x <-
+    try(vroom(this_url, col_types = "cccccccccccccccccccc"), silent = TRUE)
+  if (inherits(x, 'try-error'))  {
+    if (vb)
+      message("Error in downloading spreadsheet from  ", this_url)
+    return(NULL)
+  } else {
+    names(x) <- stringr::str_replace_all(names(x), '[-\\. ]', '_')
+    x$vol_id <- as.character(vol_id)
+    x
+  }
 }
-
