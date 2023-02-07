@@ -43,7 +43,7 @@ get_inst_invest_datab <- function() {
     dplyr::select(date, institutions, investigators, affiliates) %>%
     dplyr::mutate(date = lubridate::as_datetime(date))
   
-  if (purrr::is_empty(new_stats)) {
+  if (rlang::is_empty(new_stats)) {
     warning("Unable to retrieve new statistics from Databrary.")
     NULL
   } else {
@@ -67,7 +67,7 @@ update_inst_invest_csv <-
   function(df,
            csv_dir = "csv",
            csv_fn = "institutions-investigators.csv") {
-    stopifnot(!purrr::is_empty(df))
+    stopifnot(!rlang::is_empty(df))
     stopifnot(dir.exists(csv_dir))
     stopifnot(file.exists(file.path(csv_dir, csv_fn)))
     
@@ -96,14 +96,14 @@ refresh_volume_tags_df <- function(vol_ids = 1:100) {
   )
   purrr::map_df(.x = vol_ids,
                 .f = make_volume_tags_df,
-                .progress = TRUE)
+                .progress = "Volume tags:")
 }
 
 update_vol_tags_csv <-
   function(df,
            csv_dir = "csv",
            csv_fn = "databrary-tags.csv") {
-    stopifnot(!purrr::is_empty(df))
+    stopifnot(!rlang::is_empty(df))
     stopifnot(dir.exists(csv_dir))
     stopifnot(file.exists(file.path(csv_dir, csv_fn)))
     
@@ -114,7 +114,7 @@ make_volume_tags_df <- function(vol_id, vb = FALSE) {
   if (vb)
     message(paste0("Gathering tags from volume ", vol_id))
   these_tags <- databraryapi::list_volume_tags(vol_id)
-  if (is_empty(these_tags)) {
+  if (rlang::is_empty(these_tags)) {
     df <- data.frame(
       vol_id = vol_id,
       url = paste0("https://nyu.databrary.org/volume/",
@@ -134,7 +134,7 @@ make_volume_tags_df <- function(vol_id, vb = FALSE) {
 }
 
 make_stem_tags_df <- function(tags_df,
-                              vb = TRUE,
+                              vb = FALSE,
                               save_csv = TRUE) {
   stem_tags <- dplyr::filter(tags_df, tags %in% select_tags)
   stem_tags <- dplyr::arrange(stem_tags, vol_id, tags)
@@ -150,7 +150,7 @@ make_stem_tags_df <- function(tags_df,
   stem_vols_df <- purrr::map_df(
     .x = stem_vol_ids,
     .f = databraryapi::list_volume_metadata,
-    .progress = TRUE
+    .progress = "STEM tags:"
   )
   
   stem_vols_df <-
@@ -183,14 +183,14 @@ refresh_volume_funders_df <- function(vol_ids = 1:1520) {
   )
   purrr::map_df(.x = vol_ids,
                 .f = get_volume_funding,
-                .progress = TRUE)
+                .progress = "Volume funders:")
 }
 
 update_volume_funders_csv <-
   function(df,
            csv_dir = "csv",
            csv_fn = "funders.csv") {
-    stopifnot(!purrr::is_empty(df))
+    stopifnot(!rlang::is_empty(df))
     stopifnot(dir.exists(csv_dir))
     if (!file.exists(file.path(csv_dir, csv_fn))) {
       warning("File does not exist: ", file.path(csv_dir, csv_fn))
@@ -324,7 +324,7 @@ update_vol_asset_stats <-
       save_file,
       save_path,
       vb,
-      .progress = TRUE
+      .progress = "Volume assets:"
     )
   }
 
@@ -332,7 +332,7 @@ update_all_vol_stats <- function(max_volume_id,
                                  vols_per_pass = 50,
                                  save_file = TRUE,
                                  save_path = 'csv',
-                                 vb = TRUE) {
+                                 vb = FALSE) {
   if (!is.numeric(max_volume_id)) {
     stop('`max_volume_id` must be a number.')
   }
@@ -427,6 +427,16 @@ ms_to_hrs <- function(ms) {
 
 ################################################################################
 
+make_all_session_df <- function(csv_dir = "src/csv") {
+  stopifnot(is.character(csv_dir))
+  stopifnot(dir.exists(csv_dir))
+  
+  fl <- list.files(csv_dir, "[0-9]{4}\\-sess\\-materials\\.csv", full.names = TRUE)
+  purrr::map_df(fl, make_cleaned_session_df, csv_dir, .progress = "Import sessions:")
+}
+
+
+################################################################################
 vol_csv_avail <- function(vol_id) {
   stopifnot(is.numeric(vol_id))
   stopifnot(vol_id > 0)
@@ -445,61 +455,142 @@ vol_csv_avail <- function(vol_id) {
   }
 }
 
+################################################################################
 get_volume_demog <- function(vol_id = 4, vb = FALSE) {
   stopifnot(is.numeric(vol_id))
   stopifnot(vol_id > 0)
   
-  if (vb)
-    message(paste0("Gathering demog data from volume ", vol_id))
+  this_url <-
+    paste0("https://nyu.databrary.org/volume/", vol_id, "/csv")
   
-  if (!vol_csv_avail(vol_id)) {
-    if (vb)
-      message("No CSV available for volume ", vol_id)
+  if (vb)
+    message(paste0("Gathering demog data from ", this_url))
+  
+  r <- try(httr::GET(this_url,
+                 httr::authenticate(Sys.getenv("DATABRARY_LOGIN"), 
+                                    keyring::key_get(service = "databrary", 
+                                                     username = Sys.getenv("DATABRARY_LOGIN")))), silent = TRUE)
+  
+  if (inherits(r, 'try-error')) {
+    if (vb) message(" Error accessing volume ", vol_id)
     return(NULL)
   }
   
-  v_ss <-
-    try(databraryapi::download_session_csv(vol_id), silent = TRUE)
+  if (httr::status_code(r) == 404) {
+    if (vb) message(" 404 error from ", this_url)
+    return(NULL)
+  }
+
+  if (is.null(r)) {
+      if (vb) message(" NULL response from ", this_url)
+      return(NULL)
+  }
+    
+  c <- httr::content(r, show_col_types = FALSE, type = "text/csv", 
+                     encoding = "utf-8")
   
-  # v_ss <-
-  #   try(vroom(paste0("https://nyu.databrary.org/volume/", vol_id, "/csv")))
-  
-  if ('try-error' %in% class(v_ss)) {
-    message(".....Error loading CSV for volume ", vol_id)
-    df <- tibble(
-      vol_id = NA,
-      age_days = NA,
-      participant_gender = NA,
-      participant_race = NA,
-      participant_ethnicity = NA
-    )
-    return(df)
-  } else if (is.null(v_ss)) {
-    message(".....NULL CSV for volume ", vol_id)
-    df <- tibble(
-      vol_id = NA,
-      age_days = NA,
-      participant_gender = NA,
-      participant_race = NA,
-      participant_ethnicity = NA
-    )
-    return(df)
+  if (is.null(c)) {
+    if (vb) message("  No CSV data returned from ", this_url)
+    return(NULL)
   }
   
-  df <- v_ss
-  
-  df$vol_id <- as.character(vol_id)
-  df <-
-    dplyr::filter(df, !(stringr::str_detect(session_date, 'materials')))
-  df <- dplyr::mutate(
-    df,
-    session_id = as.character(session_id),
-    participant_ID = as.character(participant_ID)
-  )
-  
-  df
+  if (vb) message("Converting response to data frame.")
+  if (is.data.frame(c)) {
+    if (vb) 
+      message(paste0("Imported data frame. Cleaning up."))
+    r_df <- dplyr::mutate(c, vol_id = vol_id)
+    names(r_df) <- stringr::str_replace_all(names(r_df), 
+                                        pattern = "[\\-|\\.| ]", replacement = "_")
+    r_df <-
+      dplyr::filter(r_df, !(stringr::str_detect(session_date, 'materials')))
+    r_df <- dplyr::mutate(
+      r_df,
+      session_id = as.character(session_id))
+    # TODO: Devise a more elegant way to clean-up/normalize the spreadsheet data
+    if ("participant_ID" %in% names(r_df))
+      r_df <- dplyr::mutate(r_df, participant_ID = as.character(participant_ID))
+    if ("participant1_ID" %in% names(r_df))
+      r_df <- dplyr::mutate(r_df, participant1_ID = as.character(participant1_ID))
+    if ("participant2_ID" %in% names(r_df))
+      r_df <- dplyr::mutate(r_df, participant2_ID = as.character(participant2_ID))
+    if ("participant3_ID" %in% names(r_df))
+      r_df <- dplyr::mutate(r_df, participant3_ID = as.character(participant3_ID))
+    if ("participant4_ID" %in% names(r_df))
+      r_df <- dplyr::mutate(r_df, participant4_ID = as.character(participant4_ID))
+    if ("participant4_ID" %in% names(r_df))
+      r_df <- dplyr::mutate(r_df, participant5_ID = as.character(participant5_ID))
+    if ("session_date" %in% names(r_df))
+      r_df <- dplyr::mutate(r_df, session_date = as.character(session_date))
+    if ("participant_birthdate" %in% names(r_df))
+      r_df <- dplyr::mutate(r_df, participant_birthdate = as.character(participant_birthdate))
+    if ("session_release" %in% names(r_df))
+      r_df <- dplyr::mutate(r_df, session_release = as.character(session_release))
+    if ("session_name" %in% names(r_df))
+      r_df <- dplyr::mutate(r_df, session_name = as.character(session_name))
+    if ("group_name" %in% names(r_df))
+      r_df <- dplyr::mutate(r_df, group_name = as.character(group_name))
+    return(r_df)
+  }
+  else {
+    if (vb) 
+      message("Can't coerce to data frame. Skipping.\n")
+    return(NULL)
+  }
+  r_df
 }
 
+################################################################################
+get_volume_ss_save_csv <- function(vol_id = 4, dir = "src/csv", vb = FALSE) {
+  stopifnot(is.numeric(vol_id))
+  stopifnot(vol_id > 0)
+  
+  this_url <-
+    paste0("https://nyu.databrary.org/volume/", vol_id, "/csv")
+  
+  if (vb)
+    message(paste0("Gathering demog data from ", this_url))
+  
+  r <- try(httr::GET(this_url,
+                     httr::authenticate(Sys.getenv("DATABRARY_LOGIN"), 
+                                        keyring::key_get(service = "databrary", 
+                                                         username = Sys.getenv("DATABRARY_LOGIN")))), silent = TRUE)
+  
+  if (inherits(r, 'try-error')) {
+    if (vb) message(" Error accessing volume ", vol_id)
+    return(NULL)
+  }
+  
+  if (httr::status_code(r) == 404) {
+    if (vb) message(" 404 error from ", this_url)
+    return(NULL)
+  }
+  
+  if (is.null(r)) {
+    if (vb) message(" NULL response from ", this_url)
+    return(NULL)
+  }
+  
+  c <- httr::content(r, as = 'text')
+  
+  if (is.null(c)) {
+    if (vb) message(" No text data returned from ", this_url)
+    return(NULL)
+  }
+  
+  df <- readr::read_csv(c, col_types = "cccccccccccccccccccccccccccccc")
+  if (is.data.frame(df)) {
+    if (vb) message(paste0(" Imported data frame."))
+    fn <- paste0(stringr::str_pad(vol_id, 4, pad = "0"), "-sess-materials.csv")
+    out_fn <- file.path(dir, fn)
+    if (vb) message(" Saving ", out_fn)
+    readr::write_csv(df, out_fn)
+  } else {
+    if (vb) message("Failed to convert to data frame.")
+    NULL
+  }
+}
+
+################################################################################
 get_volume_birthdate <- function(vol_id, vb = FALSE) {
   v_ss <-
     try(databraryapi::download_session_csv(vol_id), silent = TRUE)
@@ -522,6 +613,7 @@ get_volume_birthdate <- function(vol_id, vb = FALSE) {
   }
 }
 
+################################################################################
 get_volume_session_date <- function(vol_id, vb = FALSE) {
   v_ss <-
     try(databraryapi::download_session_csv(vol_id), silent = TRUE)
@@ -539,6 +631,7 @@ get_volume_session_date <- function(vol_id, vb = FALSE) {
   }
 }
 
+################################################################################
 get_volume_gender <- function(vol_id, vb = FALSE) {
   v_ss <-
     try(databraryapi::download_session_csv(vol_id), silent = TRUE)
@@ -558,6 +651,7 @@ get_volume_gender <- function(vol_id, vb = FALSE) {
   }
 }
 
+################################################################################
 get_volume_race <- function(vol_id, vb = FALSE) {
   v_ss <-
     try(databraryapi::download_session_csv(vol_id), silent = TRUE)
@@ -577,6 +671,7 @@ get_volume_race <- function(vol_id, vb = FALSE) {
   }
 }
 
+################################################################################
 get_volume_ethnicity <- function(vol_id, vb = FALSE) {
   v_ss <-
     try(databraryapi::download_session_csv(vol_id), silent = TRUE)
@@ -599,6 +694,7 @@ get_volume_ethnicity <- function(vol_id, vb = FALSE) {
   }
 }
 
+################################################################################
 get_volumes_demo <- function(min_vol_id = 1,
                              max_vol_id = 10,
                              vb = FALSE) {
@@ -610,7 +706,12 @@ get_volumes_demo <- function(min_vol_id = 1,
   
   vols_range <- min_vol_id:max_vol_id
   
-  message(paste0(
+  db_status <- databraryapi::login_db(Sys.getenv("DATABRARY_LOGIN"))
+  if (!db_status) {
+    message("Unable to login to Databrary. Only public data will be gathered")
+  }
+  
+  if(vb) message(paste0(
     "Getting demographic data for volumes ",
     min_vol_id,
     ":",
@@ -618,13 +719,48 @@ get_volumes_demo <- function(min_vol_id = 1,
     "\n"
   ))
   
-  # m <- purrr::map_df(vols_range, get_volume_demog, vb, .progress = TRUE)
-  m <-
-    purrr::map_df(vols_range, download_csv_vroom, vb, .progress = TRUE)
+  ml <-
+    purrr::map_df(vols_range, get_volume_demog, vb, .progress = "Volume demog:")
   
-  m
+  databraryapi::logout_db()
+  
+  purrr::list_rbind(ml)
 }
 
+################################################################################
+get_volume_demo_save_csv_mult <- function(min_vol_id = 1,
+                             max_vol_id = 10,
+                             csv_dir = 'src/csv',
+                             vb = FALSE) {
+  stopifnot(is.numeric(min_vol_id))
+  stopifnot(min_vol_id > 0)
+  stopifnot(is.numeric(max_vol_id))
+  stopifnot(max_vol_id > 0)
+  stopifnot(min_vol_id < max_vol_id)
+  stopifnot(is.character(csv_dir))
+  stopifnot(dir.exists(csv_dir))
+  
+  vols_range <- min_vol_id:max_vol_id
+  
+  db_status <- databraryapi::login_db(Sys.getenv("DATABRARY_LOGIN"))
+  if (!db_status) {
+    message("Unable to login to Databrary. Only public data will be gathered")
+  }
+  
+  if(vb) message(paste0(
+    "Getting demographic data for volumes ",
+    min_vol_id,
+    ":",
+    max_vol_id,
+    "\n"
+  ))
+  
+  purrr::map(vols_range, get_volume_ss_save_csv, csv_dir, vb, .progress = "Volume ss:")
+  
+  databraryapi::logout_db()
+}
+
+################################################################################
 save_volumes_demo <- function(df, min_vol_id, max_vol_id,
                               dir = "participant-demographics/csv") {
   message(paste0(
@@ -647,6 +783,7 @@ save_volumes_demo <- function(df, min_vol_id, max_vol_id,
   readr::write_csv(df, fn)
 }
 
+################################################################################
 # Downloads new demographic data from Databrary and saves it as a new CSV
 #
 # For efficiency reasons, the code takes 10 volumes at a time and saves them
@@ -741,13 +878,13 @@ get_volumes_owners <- function(min_vol_id = 1,
   purrr::map_dfr(
     .x = vols_range,
     .f = databraryapi::list_volume_owners,
-    .progress = TRUE
+    .progress = "Volume owners:"
   )
 }
 
 get_volume_first_owner <- function(vol_id) {
   df <- databraryapi::list_volume_owners(vol_id)
-  if (purrr::is_empty(df)) {
+  if (rlang::is_empty(df)) {
     NULL
   } else {
     df[1,]
@@ -772,7 +909,7 @@ get_volumes_first_owners <-
               max_vol_id)
     purrr::map_dfr(.x = vols_range,
                    .f = get_volume_first_owner,
-                   .progress = TRUE)
+                   .progress = "Volume 1st owners:")
   }
 
 save_volumes_owners <- function(df,
@@ -808,7 +945,7 @@ get_save_volumes_owners <-
   function(min_vol_id = 1,
            max_vol_id = 10,
            dir = "src/csv",
-           vb = TRUE) {
+           vb = FALSE) {
     stopifnot(is.numeric(min_vol_id))
     stopifnot(is.numeric(max_vol_id))
     stopifnot(min_vol_id > 0)
@@ -923,6 +1060,7 @@ my_gender <- function(v, a) {
   }
 }
 
+################################################################################
 get_volume_ss <- function(vol_id = 1,
                           omit_materials = FALSE,
                           vb = FALSE) {
@@ -956,6 +1094,14 @@ get_volume_ss <- function(vol_id = 1,
   }
 }
 
+get_volume_ss_httr <- function(vol_id = 1,
+                               omit_materials = FALSE,
+                               vb = FALSE) {
+  
+  
+}
+
+################################################################################
 get_volume_ss_vroom <- function(vol_id = 4,
                                 omit_materials = FALSE,
                                 vb = FALSE) {
@@ -971,7 +1117,7 @@ get_volume_ss_vroom <- function(vol_id = 4,
   }
   
   v_ss <-
-    try(vroom::vroom(this_url, col_types = "cccccccccccccccccccc",
+    try(vroom::vroom(this_url, delim = ",", col_types = "cccccccccccccccccccc",
                      show_col_types = FALSE),
         silent = TRUE)
   if (inherits(v_ss, 'try-error')) {
@@ -1049,27 +1195,31 @@ get_save_multiple_volume_ss <-
     stopifnot(is.character(csv_dir))
     stopifnot(dir.exists(csv_dir))
     
+    db_status <- databraryapi::login_db(Sys.getenv("DATABRARY_LOGIN"))
+    if (!db_status) {
+      message("Unable to login to Databrary. Only public data will be gathered")
+    }
+    
     purrr::map(
       c(vol_id_min:vol_id_max),
       get_save_volume_ss,
       csv_dir,
       omit_materials,
       vb,
-      .progress = TRUE
+      .progress = "Volume ss:"
     )
   }
 
 # Returns a tibble
 extract_sessions_from_vol_csv <-
-  function(csv_fn = "participant-demographics/csv/0002-sess-materials.csv") {
+  function(csv_fn = "src/csv/0002-sess-materials.csv", vb = FALSE) {
     stopifnot(is.character(csv_fn))
     stopifnot(file.exists(csv_fn))
     
-    #df <- readr::read_csv(csv_fn, show_col_types = FALSE)
     df <- read.csv(csv_fn, colClasses = "character")
     
     if (dim(df)[1] == 0) {
-      message("CSV empty: ", csv_fn)
+      if (vb) message("CSV empty: ", csv_fn)
       NULL
     } else {
       dplyr::filter(df, !(stringr::str_detect(session_date, 'materials')))
@@ -1138,7 +1288,7 @@ extract_participant_identifiers <- function(df) {
 }
 
 # If there are multiple participants, augmented data frame
-alter_sess_df_w_mult_part <- function(df) {
+alter_sess_df_w_mult_part <- function(df, vb = FALSE) {
   if (is.null(df))
     return(NULL)
   stopifnot(is.data.frame(df))
@@ -1147,7 +1297,7 @@ alter_sess_df_w_mult_part <- function(df) {
   if (n_particip > 0) {
     purrr::map_df(1:n_particip, select_particip_sess_by_number, df)
   } else {
-    message("No participant data...skipping")
+    if (vb) message(" No participant data:...skipping")
     NULL
   }
 }
@@ -1177,20 +1327,20 @@ select_particip_sess_by_number <- function(i, df) {
   out_df
 }
 
-make_cleaned_session_df <- function(csv_fn) {
+make_cleaned_session_df <- function(csv_fn, vb = FALSE) {
   stopifnot(is.character(csv_fn))
   stopifnot(file.exists(csv_fn))
   
-  message("Extracting session info: ", csv_fn)
-  df <- extract_sessions_from_vol_csv(csv_fn)
-  alter_sess_df_w_mult_part(df)
+  if (vb) message("Extracting session info: ", csv_fn)
+  df <- extract_sessions_from_vol_csv(csv_fn, vb)
+  alter_sess_df_w_mult_part(df, vb)
 }
 
 download_csv_vroom <- function(vol_id = 4, vb = FALSE) {
   this_url <-
     paste0("https://nyu.databrary.org/volume/", vol_id, "/csv")
   x <-
-    try(vroom(this_url, col_types = "cccccccccccccccccccc"), silent = TRUE)
+    try(vroom::vroom(this_url, col_types = "cccccccccccccccccccc",  delim = ","), silent = TRUE)
   if (inherits(x, 'try-error'))  {
     if (vb)
       message("Error in downloading spreadsheet from  ", this_url)
