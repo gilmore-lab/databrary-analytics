@@ -9,31 +9,22 @@ To summarize the demographic characteristics of participants in shared volumes o
 ### Demographic data 
 
 ```{r, message=FALSE, warning=FALSE}
-targets::tar_load(volume_ss_df)
+library(targets)
+targets::tar_load(volume_demog_df, store = "../_targets")
 ```
 
 ### Owner data
 
 All owners.
 
-```{r import-saved-owners, message=FALSE, warning=FALSE}
+:::
+
+**TODO**: Fix importing of owners data.
+
+:::
+
+```{r import-saved-owners, message=FALSE, warning=FALSE, eval=FALSE}
 owner_df <- load_owner_csvs("csv", fn_suffix = "-owners")  
-```
-
-One owner (the first) per volume.
-
-```{r import-saved-first-owners, message=FALSE, warning=FALSE, eval=FALSE}
-if (dir.exists("csv")) {
-  first_owner_df <- load_owner_csvs("csv", fn_suffix = "-first-owners")  
-} else {
- message("Data directory empty.")
- first_owner_df = NULL
-}
-
-# Filter NAs
-first_owner_df <- first_owner_df %>%
-  dplyr::filter(., !is.na(person_id),
-                !is.na(sortname))
 ```
 
 ::: {.rmdnote}
@@ -47,37 +38,20 @@ To generate the report, one must generate and save the data locally.
 
 ### Overall
 
-Databrary has demographic data for $n=$ `r sum(!is.na(demo_df$session_id))` individual sessions and $n=$ `r sum(!is.na(demo_df$participant_ID))` individual participants.
+Databrary has demographic data for $n=$ `r sum(!is.na(demo_df$participant_ID))` individual participants.
 
 ```{r add-databrary-volume-url}
-demo_df <- volume_ss_df %>%
-  dplyr::mutate(., vol_url = paste0("https://nyu.databrary.org/volume/", vol_id))
+demo_df <- volume_demog_df %>%
+  dplyr::mutate(., vol_url = paste0("https://nyu.databrary.org/volume/", as.numeric(vol_id)))
 ```
 
 ### Age
 
-```{r create-age-df}
-# Beginning work on calculating age.
-age_df <- demo_df %>%
-  dplyr::filter(., !is.na(participant_birthdate),
-                !is.na(session_date)) 
-```
+::: {.rmdnote}
 
-We have birthdate and test date information on $n=$ `r sum(!is.na(age_df$session_date))` participants.
+**TODO**: Current workflow drops `session_date` variable, but this is needed to calculate ages. Need to add back to workflow.
 
-```{r calculate-age-in-days}
-age_df <- age_df %>%
-  dplyr::mutate(., age_days = as.Date.character(age_df$session_date) - as.Date.character(age_df$participant_birthdate))
-```
-
-#### Number of participants 
-
-```{r summarize-age}
-age_df <- age_df %>%
-  dplyr::mutate(., age_grp = cut(as.numeric(age_df$age_days), c(0, 90, 180, 365.25, 2*365.25, 3*365.25, 4*365.25, 5*365.25, 15*365.25, 20*365.25, 25*365.25, 100*365.25), c("<3m", "3-6m", "6m-1y", "1-2y", "2-3y", "3-4y", "4-5y", "5-15y", "15-20y", "20-25y", ">25y")))
-
-xtabs(formula = ~ age_grp, data = age_df)
-```
+:::
 
 ### Gender
 
@@ -166,87 +140,132 @@ xtabs(formula = ~ participant_ethnicity, data = demo_df) %>%
   kableExtra::kable_styling(.)
 ```
 
-### Owners contributing...
 
-**NOTE**: There could be double-counting of sessions if a volume is owned by more than one investigator.
 
-#### First owners only
+### Participant language
 
-We'll filter the owners to include just one per volume, selecting the first author/owner.
-This provides a more precise estimate of which (first) volume owners are providing demographic data.
+#### Volumes and sessions
 
-#### Volumes (with or without demographic data) by first owner
+```{r language-volumes}
+language_df <- demo_df %>%
+  dplyr::filter(., !is.na(participant_language)) %>%
+  dplyr::group_by(., vol_id, vol_url) %>%
+  dplyr::summarize(., n_sessions = n()) %>%
+  dplyr::ungroup(.) %>%
+  dplyr::mutate(., n_vols_w_demo = n())
 
-```{r}
-first_owner_vols_df <- first_owner_df %>%
-  dplyr::mutate(., person_url = paste0("https://nyu.databrary.org/party/", person_id)) %>%
-  dplyr::group_by(., person_id, sortname) %>%
-  dplyr::mutate(., vols_per_pi = n()) %>%
-  dplyr::filter(., !is.na(person_id),
-                !is.na(sortname)) %>%
-  dplyr::ungroup(.)
-
-first_owner_vols_df %>%
-  dplyr::select(., -vol_id) %>%
-  dplyr::group_by(., person_id, sortname, person_url, vols_per_pi) %>%
-  dplyr::summarize(., n_vols_shared = mean(vols_per_pi)) %>%
-  dplyr::select(., -vols_per_pi) %>%
-  dplyr::arrange(., desc(n_vols_shared)) %>%
+language_df %>%
+  dplyr::select(., vol_id, vol_url, n_sessions) %>%
+  dplyr::arrange(., desc(n_sessions)) %>%
   knitr::kable(., "html") %>%
-  kableExtra::kable_styling()
+  kableExtra::kable_styling(.)
 ```
 
-Now, combine with demographic data to determine sessions with such data for each of the first owners.
+There are `r unique(language_df$n_vols_w_demo)` volumes reporting `participant_language`.
 
-```{r}
-demog_owners <- dplyr::left_join(demo_df, first_owner_vols_df, by = "vol_id")
+#### Number of participants
+
+```{r language-table}
+xtabs(formula = ~ participant_language, data = demo_df) %>%
+  knitr::kable(., "html") %>%
+  kableExtra::kable_styling(.)
 ```
 
-#### Gender data
 
-```{r}
-demog_owners %>%
-  dplyr::filter(., !is.na(participant_gender)) %>%
-  dplyr::group_by(., person_id, sortname, person_url) %>%
-  dplyr::summarize(., sess_per_pi = n()) %>%
-  dplyr::filter(., !is.na(person_id),
-                !is.na(sortname)) %>%
-  dplyr::arrange(., desc(sess_per_pi)) %>%
-    knitr::kable(., "html") %>%
-    kableExtra::kable_styling()
+
+### Pregnancy term
+
+#### Volumes and sessions
+
+```{r pregnancy-term-volumes}
+participant_pregnancy_term_df <- demo_df %>%
+  dplyr::filter(., !is.na(participant_pregnancy_term)) %>%
+  dplyr::group_by(., vol_id, vol_url) %>%
+  dplyr::summarize(., n_sessions = n()) %>%
+  dplyr::ungroup(.) %>%
+  dplyr::mutate(., n_vols_w_demo = n())
+
+participant_pregnancy_term_df %>%
+  dplyr::select(., vol_id, vol_url, n_sessions) %>%
+  dplyr::arrange(., desc(n_sessions)) %>%
+  knitr::kable(., "html") %>%
+  kableExtra::kable_styling(.)
 ```
 
-#### Race data
+There are `r unique(participant_pregnancy_term_df$n_vols_w_demo)` volumes reporting `participant_pregnancy_term`.
 
-```{r}
-demog_owners %>%
-  dplyr::filter(., !is.na(participant_race)) %>%
-  dplyr::group_by(., person_id, sortname, person_url) %>%
-  dplyr::summarize(., sess_per_pi = n()) %>%
-  dplyr::filter(., !is.na(person_id),
-                !is.na(sortname)) %>%
-  dplyr::arrange(., desc(sess_per_pi)) %>%
-    knitr::kable(., "html") %>%
-    kableExtra::kable_styling()
+#### Number of participants
+
+```{r pregnancy-term-table}
+xtabs(formula = ~ participant_pregnancy_term, data = demo_df) %>%
+  knitr::kable(., "html") %>%
+  kableExtra::kable_styling(.)
 ```
 
-#### Ethnicity data
 
-```{r}
-demog_owners %>%
-  dplyr::filter(., !is.na(participant_ethnicity)) %>%
-  dplyr::group_by(., person_id, sortname, person_url) %>%
-  dplyr::summarize(., sess_per_pi = n()) %>%
-  dplyr::filter(., !is.na(person_id),
-                !is.na(sortname)) %>%
-  dplyr::arrange(., desc(sess_per_pi)) %>%
-    knitr::kable(., "html") %>%
-    kableExtra::kable_styling()
+
+### Birthweight
+
+#### Volumes and sessions
+
+```{r birthweight-volumes}
+participant_birth_weight_df <- demo_df %>%
+  dplyr::filter(., !is.na(participant_birth_weight)) %>%
+  dplyr::group_by(., vol_id, vol_url) %>%
+  dplyr::summarize(., n_sessions = n()) %>%
+  dplyr::ungroup(.) %>%
+  dplyr::mutate(., n_vols_w_demo = n())
+
+participant_birth_weight_df %>%
+  dplyr::select(., vol_id, vol_url, n_sessions) %>%
+  dplyr::arrange(., desc(n_sessions)) %>%
+  knitr::kable(., "html") %>%
+  kableExtra::kable_styling(.)
 ```
 
-## Clean-up
+There are `r unique(participant_birth_weight_df$n_vols_w_demo)` volumes reporting `participant_birth_weight`.
+
+#### Number of participants
+
+```{r birthweight-table}
+xtabs(formula = ~ participant_birth_weight, data = demo_df) %>%
+  knitr::kable(., "html") %>%
+  kableExtra::kable_styling(.)
+```
 
 ```{r}
-databraryapi::logout_db()
+demo_df %>%
+  ggplot() +
+  aes(x = as.numeric(participant_birth_weight)) +
+  geom_histogram(bins = 15)
+```
+
+### Disability
+
+#### Volumes and sessions
+
+```{r participant_disability-volumes}
+participant_disability_df <- demo_df %>%
+  dplyr::filter(., !is.na(participant_disability)) %>%
+  dplyr::group_by(., vol_id, vol_url) %>%
+  dplyr::summarize(., n_sessions = n()) %>%
+  dplyr::ungroup(.) %>%
+  dplyr::mutate(., n_vols_w_demo = n())
+
+participant_disability_df %>%
+  dplyr::select(., vol_id, vol_url, n_sessions) %>%
+  dplyr::arrange(., desc(n_sessions)) %>%
+  knitr::kable(., "html") %>%
+  kableExtra::kable_styling(.)
+```
+
+There are `r unique(participant_disability_df$n_vols_w_demo)` volumes reporting `participant_disability`.
+
+#### Number of participants
+
+```{r disability-table}
+xtabs(formula = ~ participant_disability, data = demo_df) %>%
+  knitr::kable(., "html") %>%
+  kableExtra::kable_styling(.)
 ```
 
