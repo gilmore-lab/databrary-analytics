@@ -79,12 +79,7 @@ list(
                                    age = as.difftime(13, units = "weeks"))
   ),
   tar_target(volume_ss_csv_fl,
-             list.files('src/csv', "[0-9]{4}\\-sess\\-materials\\.csv", full.names = TRUE))
-  # tar_target(volume_ss_df,
-  #            purrr::map_df(volume_ss_csv_fl, make_cleaned_session_df)),
-  # tar_target(volume_demog_df,
-  #            get_volumes_demo(1, max_vol_id),
-  #            cue = tarchetypes::tar_cue_age(name = volume_demog_df,
-  #                                           age = as.difftime(13, units = "weeks"))
-  # )
+             list.files('src/csv', "[0-9]+\\-sess\\-materials\\.csv", full.names = TRUE)),
+  tar_target(volume_demog_df,
+             create_complete_demog_df(volume_ss_csv_fl))
 )
