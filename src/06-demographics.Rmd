@@ -47,11 +47,52 @@ demo_df <- volume_demog_df %>%
 
 ### Age
 
-::: {.rmdnote}
+#### Volumes and session 
 
-**TODO**: Current workflow drops `session_date` variable, but this is needed to calculate ages. Need to add back to workflow.
+```{r create-age}
+age_df <- demo_df %>%
+  dplyr::filter(., !is.na(age_days)) %>%
+  dplyr::group_by(., vol_id, vol_url) %>%
+  dplyr::summarize(., n_sessions = n()) %>%
+  dplyr::ungroup(.) %>%
+  dplyr::mutate(., n_vols_w_demo = n())
 
-:::
+age_df %>%
+  dplyr::select(., vol_id, vol_url, n_sessions) %>%
+  dplyr::arrange(., desc(n_sessions)) %>%
+  knitr::kable(., "html") %>%
+  kableExtra::kable_styling(.)  
+```
+
+#### Histogram
+
+```{r}
+demo_df %>%
+  dplyr::filter(., age_days <= 365.24*5) %>%
+  ggplot() +
+  aes(age_days) +
+  geom_histogram() +
+  ggtitle("Age at test (weeks) for 5-year-olds and younger")
+```
+
+```{r}
+demo_df %>%
+  dplyr::filter(., age_days > 365.24*5,
+                age_days <= 365.24*15) %>%
+  ggplot() +
+  aes(age_days) +
+  geom_histogram() +
+  ggtitle("Age at test (weeks) for 5-15 year-olds")
+```
+
+```{r}
+demo_df %>%
+  dplyr::filter(., age_days > 365.24*15) %>%
+  ggplot() +
+  aes(age_days) +
+  geom_histogram() +
+  ggtitle("Age at test (weeks) 15+ year-olds")
+```
 
 ### Gender
 

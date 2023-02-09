@@ -31,6 +31,8 @@ owner-data
 summary-results
 overall
 age
+volumes-and-session
+histogram
 gender
 volumes-and-sessions
 number-of-participants
