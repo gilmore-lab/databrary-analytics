@@ -1,3 +1,5 @@
+fig:under-5y-hist
+fig:5y-15y-hist
 weekly
 set-up
 institutions-authorized-users

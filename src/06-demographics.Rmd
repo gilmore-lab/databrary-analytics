@@ -66,7 +66,7 @@ age_df %>%
 
 #### Histogram
 
-```{r}
+```{r under-5y-hist, fig.cap="Age distribution of < 5yrs"}
 demo_df %>%
   dplyr::filter(., age_days <= 365.24*5) %>%
   ggplot() +
@@ -75,7 +75,7 @@ demo_df %>%
   ggtitle("Age at test (weeks) for 5-year-olds and younger")
 ```
 
-```{r}
+```{r 5y-15y-hist, fig.cap="Age distribution of 5-15 year-olds"}
 demo_df %>%
   dplyr::filter(., age_days > 365.24*5,
                 age_days <= 365.24*15) %>%
@@ -85,7 +85,7 @@ demo_df %>%
   ggtitle("Age at test (weeks) for 5-15 year-olds")
 ```
 
-```{r}
+```{r 15y+-hist, fig.cap="Age distribution of 15+ year-olds"}
 demo_df %>%
   dplyr::filter(., age_days > 365.24*15) %>%
   ggplot() +
