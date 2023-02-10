@@ -1,20 +1,20 @@
 vol_id,url,tags,weight
-1,https://nyu.databrary.org/volume/1,icis,1
 1,https://nyu.databrary.org/volume/1,icis nola,1
-1,https://nyu.databrary.org/volume/1,workshops,1
-1,https://nyu.databrary.org/volume/1,meetings,1
+1,https://nyu.databrary.org/volume/1,icis,1
 1,https://nyu.databrary.org/volume/1,talk,1
 1,https://nyu.databrary.org/volume/1,presentations,1
+1,https://nyu.databrary.org/volume/1,workshops,1
+1,https://nyu.databrary.org/volume/1,meetings,1
 2,https://nyu.databrary.org/volume/2,motion,1
 2,https://nyu.databrary.org/volume/2,adult,1
 3,https://nyu.databrary.org/volume/3,NA,NA
-4,https://nyu.databrary.org/volume/4,locomotion,1
+4,https://nyu.databrary.org/volume/4,infants,1
 4,https://nyu.databrary.org/volume/4,motor development,1
+4,https://nyu.databrary.org/volume/4,locomotion,1
 4,https://nyu.databrary.org/volume/4,materials,1
 4,https://nyu.databrary.org/volume/4,coding,1
-4,https://nyu.databrary.org/volume/4,manuals,1
 4,https://nyu.databrary.org/volume/4,protocols,1
-4,https://nyu.databrary.org/volume/4,infants,1
+4,https://nyu.databrary.org/volume/4,manuals,1
 5,https://nyu.databrary.org/volume/5,locomotion,1
 5,https://nyu.databrary.org/volume/5,infants,1
 5,https://nyu.databrary.org/volume/5,manuals,1
@@ -853,9 +853,9 @@ vol_id,url,tags,weight
 432,https://nyu.databrary.org/volume/432,NA,NA
 433,https://nyu.databrary.org/volume/433,adult female,1
 433,https://nyu.databrary.org/volume/433,luminance matched,1
-433,https://nyu.databrary.org/volume/433,black and white,1
 433,https://nyu.databrary.org/volume/433,luminance varied,1
 433,https://nyu.databrary.org/volume/433,color,1
+433,https://nyu.databrary.org/volume/433,black and white,1
 434,https://nyu.databrary.org/volume/434,NA,NA
 435,https://nyu.databrary.org/volume/435,NA,NA
 436,https://nyu.databrary.org/volume/436,NA,NA

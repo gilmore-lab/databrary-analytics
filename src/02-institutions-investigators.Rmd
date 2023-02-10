@@ -1,0 +1,51 @@
+# Investigators and Institutions
+
+```{r, include=FALSE}
+suppressPackageStartupMessages(library(tidyverse))
+```
+
+
+## Institutions
+
+```{r}
+library(targets)
+tar_load(inst_df, store = "../_targets/")
+
+# l <- list.files("csv", "inst\\-[0-9]+\\.csv", full.names = TRUE)
+# ll <- length(l)
+# 
+# inst_df <- load_inst_df_from_csvs(l[2:ll])
+
+inst_daa_df <- dplyr::filter(inst_df , daa == TRUE)
+```
+
+There are `r dim(inst_df)[1]` total institutions in the Databrary system.
+
+Of these, `r dim(inst_daa_df)[1]` have active Databrary Access Agreements (DAA).
+
+### Histogram
+
+```{r n-investigators-per-inst, fig.cap="Distribution of investigators/authorized institution"}
+inst_daa_df |>
+  ggplot() +
+  aes(n_auth_invest) +
+  geom_histogram()
+```
+
+### Table
+
+```{r}
+inst_daa_df %>%
+  dplyr::select(., -c("lat", "lon", "daa", "inst_url")) %>%
+  dplyr::arrange(., desc(n_auth_invest)) %>%
+  kableExtra::kable(format = 'html')
+```
+
+## Investigators
+
+::: {.rmdnote}
+
+These summaries are a work-in-progress.
+
+:::
+

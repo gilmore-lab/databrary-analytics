@@ -8,22 +8,23 @@ To summarize the demographic characteristics of participants in shared volumes o
 
 ### Demographic data 
 
-```{r, message=FALSE, warning=FALSE}
+```{r, message=FALSE, warning=FALSE, echo = TRUE}
 library(targets)
 targets::tar_load(volume_demog_df, store = "../_targets")
+demo_df <- volume_demog_df
 ```
 
 ### Owner data
 
 All owners.
 
-:::
+::: {.rmdnote}
 
 **TODO**: Fix importing of owners data.
 
 :::
 
-```{r import-saved-owners, message=FALSE, warning=FALSE, eval=FALSE}
+```{r import-saved-owners, message=FALSE, warning=FALSE, eval=FALSE, echo = TRUE}
 owner_df <- load_owner_csvs("csv", fn_suffix = "-owners")  
 ```
 
@@ -38,9 +39,10 @@ To generate the report, one must generate and save the data locally.
 
 ### Overall
 
-Databrary has demographic data for $n=$ `r sum(!is.na(demo_df$participant_ID))` individual participants.
+Databrary has demographic data for ~$n=$ `r sum(!is.na(demo_df$participant_ID))` individual participant-sessions.
+This number is an underestimate because the number of unshared volumes is 3-4x the number of shared volumes.
 
-```{r add-databrary-volume-url}
+```{r add-databrary-volume-url, echo = TRUE}
 demo_df <- volume_demog_df %>%
   dplyr::mutate(., vol_url = paste0("https://nyu.databrary.org/volume/", as.numeric(vol_id)))
 ```
@@ -49,7 +51,7 @@ demo_df <- volume_demog_df %>%
 
 #### Volumes and session 
 
-```{r create-age}
+```{r create-age, echo = TRUE}
 age_df <- demo_df %>%
   dplyr::filter(., !is.na(age_days)) %>%
   dplyr::group_by(., vol_id, vol_url) %>%
@@ -64,9 +66,20 @@ age_df %>%
   kableExtra::kable_styling(.)  
 ```
 
-#### Histogram
+There are `r unique(age_df$n_vols_w_demo)` volumes reporting `age_days`.
 
-```{r under-5y-hist, fig.cap="Age distribution of < 5yrs"}
+#### Number of participants and age distribution
+
+The following summarizes the number of individual participant-sessions for whom there are data.
+
+```{r summarize-age}
+age_df <- demo_df %>%
+  dplyr::mutate(., age_grp = cut(as.numeric(demo_df$age_days), c(0, 90, 180, 365.25, 2*365.25, 3*365.25, 4*365.25, 5*365.25, 15*365.25, 20*365.25, 25*365.25, 100*365.25), c("<3m", "3-6m", "6m-1y", "1-2y", "2-3y", "3-4y", "4-5y", "5-15y", "15-20y", "20-25y", ">25y")))
+
+xtabs(formula = ~ age_grp, data = age_df)
+```
+
+```{r under-5y-hist, fig.cap="Age distribution of < 5yrs", echo = TRUE}
 demo_df %>%
   dplyr::filter(., age_days <= 365.24*5) %>%
   ggplot() +
@@ -75,7 +88,7 @@ demo_df %>%
   ggtitle("Age at test (weeks) for 5-year-olds and younger")
 ```
 
-```{r 5y-15y-hist, fig.cap="Age distribution of 5-15 year-olds"}
+```{r 5y-15y-hist, fig.cap="Age distribution of 5-15 year-olds", echo = TRUE}
 demo_df %>%
   dplyr::filter(., age_days > 365.24*5,
                 age_days <= 365.24*15) %>%
@@ -85,7 +98,7 @@ demo_df %>%
   ggtitle("Age at test (weeks) for 5-15 year-olds")
 ```
 
-```{r 15y+-hist, fig.cap="Age distribution of 15+ year-olds"}
+```{r 15y+-hist, fig.cap="Age distribution of 15+ year-olds", echo = TRUE}
 demo_df %>%
   dplyr::filter(., age_days > 365.24*15) %>%
   ggplot() +
@@ -98,7 +111,7 @@ demo_df %>%
 
 #### Volumes and sessions
 
-```{r gender-volumes}
+```{r gender-volumes, echo = TRUE}
 gender_df <- demo_df %>%
   dplyr::filter(., !is.na(participant_gender)) %>%
   dplyr::group_by(., vol_id, vol_url) %>%
@@ -117,7 +130,7 @@ There are `r unique(gender_df$n_vols_w_demo)` volumes reporting `participant_gen
 
 #### Number of participants
 
-```{r gender-table}
+```{r gender-table, echo = TRUE}
 xtabs(formula = ~ participant_gender, data = demo_df) %>%
   knitr::kable(., "html") %>%
   kableExtra::kable_styling(.)
@@ -127,7 +140,7 @@ xtabs(formula = ~ participant_gender, data = demo_df) %>%
 
 #### Volumes and sessions
 
-```{r race-volumes}
+```{r race-volumes, echo = TRUE}
 race_df <- demo_df %>%
   dplyr::filter(., !is.na(participant_race)) %>%
   dplyr::group_by(., vol_id, vol_url) %>%
@@ -146,7 +159,7 @@ There are `r unique(race_df$n_vols_w_demo)` volumes reporting `participant_race`
 
 #### Number of participants
 
-```{r race-table}
+```{r race-table, echo = TRUE}
 xtabs(formula = ~ participant_race, data = demo_df) %>%
   knitr::kable(., "html") %>%
   kableExtra::kable_styling(.)
@@ -156,7 +169,7 @@ xtabs(formula = ~ participant_race, data = demo_df) %>%
 
 #### Volumes and sessions
 
-```{r ethnicity-volumes}
+```{r ethnicity-volumes, echo = TRUE}
 ethnicity_df <- demo_df %>%
   dplyr::filter(., !is.na(participant_ethnicity)) %>%
   dplyr::group_by(., vol_id, vol_url) %>%
@@ -175,19 +188,17 @@ There are `r unique(ethnicity_df$n_vols_w_demo)` volumes reporting `participant_
 
 #### Number of participants
 
-```{r ethnicity-table}
+```{r ethnicity-table, echo = TRUE}
 xtabs(formula = ~ participant_ethnicity, data = demo_df) %>%
   knitr::kable(., "html") %>%
   kableExtra::kable_styling(.)
 ```
 
-
-
 ### Participant language
 
 #### Volumes and sessions
 
-```{r language-volumes}
+```{r language-volumes, echo = TRUE}
 language_df <- demo_df %>%
   dplyr::filter(., !is.na(participant_language)) %>%
   dplyr::group_by(., vol_id, vol_url) %>%
@@ -206,19 +217,17 @@ There are `r unique(language_df$n_vols_w_demo)` volumes reporting `participant_l
 
 #### Number of participants
 
-```{r language-table}
+```{r language-table, echo = TRUE}
 xtabs(formula = ~ participant_language, data = demo_df) %>%
   knitr::kable(., "html") %>%
   kableExtra::kable_styling(.)
 ```
 
-
-
 ### Pregnancy term
 
 #### Volumes and sessions
 
-```{r pregnancy-term-volumes}
+```{r pregnancy-term-volumes, echo = TRUE}
 participant_pregnancy_term_df <- demo_df %>%
   dplyr::filter(., !is.na(participant_pregnancy_term)) %>%
   dplyr::group_by(., vol_id, vol_url) %>%
@@ -237,19 +246,17 @@ There are `r unique(participant_pregnancy_term_df$n_vols_w_demo)` volumes report
 
 #### Number of participants
 
-```{r pregnancy-term-table}
+```{r pregnancy-term-table, echo = TRUE}
 xtabs(formula = ~ participant_pregnancy_term, data = demo_df) %>%
   knitr::kable(., "html") %>%
   kableExtra::kable_styling(.)
 ```
 
-
-
 ### Birthweight
 
 #### Volumes and sessions
 
-```{r birthweight-volumes}
+```{r birthweight-volumes, echo = TRUE}
 participant_birth_weight_df <- demo_df %>%
   dplyr::filter(., !is.na(participant_birth_weight)) %>%
   dplyr::group_by(., vol_id, vol_url) %>%
@@ -268,13 +275,15 @@ There are `r unique(participant_birth_weight_df$n_vols_w_demo)` volumes reportin
 
 #### Number of participants
 
-```{r birthweight-table}
+```{r birthweight-table, echo = TRUE}
 xtabs(formula = ~ participant_birth_weight, data = demo_df) %>%
   knitr::kable(., "html") %>%
   kableExtra::kable_styling(.)
 ```
 
-```{r}
+#### Histogram
+
+```{r birthweight-hist, echo = TRUE}
 demo_df %>%
   ggplot() +
   aes(x = as.numeric(participant_birth_weight)) +
@@ -285,7 +294,7 @@ demo_df %>%
 
 #### Volumes and sessions
 
-```{r participant_disability-volumes}
+```{r participant_disability-volumes, echo = TRUE}
 participant_disability_df <- demo_df %>%
   dplyr::filter(., !is.na(participant_disability)) %>%
   dplyr::group_by(., vol_id, vol_url) %>%
@@ -304,7 +313,7 @@ There are `r unique(participant_disability_df$n_vols_w_demo)` volumes reporting 
 
 #### Number of participants
 
-```{r disability-table}
+```{r disability-table, echo = TRUE}
 xtabs(formula = ~ participant_disability, data = demo_df) %>%
   knitr::kable(., "html") %>%
   kableExtra::kable_styling(.)

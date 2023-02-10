@@ -57,14 +57,18 @@ list(
     update_volume_funders_csv(volume_funders_df, "src/csv")
   ),
   # Volume assets
-  # tar_target(
-  #   volume_asset_stats_csvs,
-  #   update_volume_asset_stats(1, max_vol_id),
-  #   cue = tarchetypes::tar_cue_age(name = volume_asset_stats_csvs,
-  #                                  age = as.difftime(13, units = "weeks"))
-  # ),
+  tar_target(
+    volume_asset_csv_list,
+    generate_volume_asset_csv_list("src/csv")
+  ),
+  tar_target(
+    volume_asset_stats_csvs,
+    update_all_vol_stats(max_vol_id),
+    cue = tarchetypes::tar_cue_age(name = volume_asset_stats_csvs,
+                                   age = as.difftime(13, units = "weeks"))
+  ),
   tar_target(volume_asset_stats_df,
-             make_volume_assets_stats_df()),
+             make_volume_assets_stats_df(volume_asset_csv_list)),
   # Volume demographics from spreadsheets
   tar_target(
     volume_ss_csvs,
@@ -81,5 +85,11 @@ list(
   tar_target(volume_ss_csv_fl,
              list.files('src/csv', "[0-9]+\\-sess\\-materials\\.csv", full.names = TRUE)),
   tar_target(volume_demog_df,
-             create_complete_demog_df(volume_ss_csv_fl))
+             create_complete_demog_df(volume_ss_csv_fl)),
+  # Institutions and investigators (detailed)
+  tar_target(institution_csv_fl,
+             list.files("src/csv", "inst\\-[0-9]+\\.csv", full.names = TRUE)),
+  #--- Skip party 2 (staff)
+  tar_target(inst_df,
+             load_inst_df_from_csvs(institution_csv_fl[2:length(institution_csv_fl)]))
 )

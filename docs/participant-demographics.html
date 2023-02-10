@@ -4,16 +4,16 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<title>4 Participant demographics | Databrary analytics</title>
+<title>6 Participant demographics | Databrary analytics</title>
 <meta name="author" content="Rick Gilmore">
-<meta name="description" content="4.1 Purpose To summarize the demographic characteristics of participants in shared volumes on Databrary.  4.2 Load data  4.2.1 Demographic data   4.2.2 Owner data All owners. ::: TODO: Fix...">
+<meta name="description" content="6.1 Purpose To summarize the demographic characteristics of participants in shared volumes on Databrary.  6.2 Load data  6.2.1 Demographic data library(targets) targets::tar_load(volume_demog_df,...">
 <meta name="generator" content="bookdown 0.32 with bs4_book()">
-<meta property="og:title" content="4 Participant demographics | Databrary analytics">
+<meta property="og:title" content="6 Participant demographics | Databrary analytics">
 <meta property="og:type" content="book">
-<meta property="og:description" content="4.1 Purpose To summarize the demographic characteristics of participants in shared volumes on Databrary.  4.2 Load data  4.2.1 Demographic data   4.2.2 Owner data All owners. ::: TODO: Fix...">
+<meta property="og:description" content="6.1 Purpose To summarize the demographic characteristics of participants in shared volumes on Databrary.  6.2 Load data  6.2.1 Demographic data library(targets) targets::tar_load(volume_demog_df,...">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="4 Participant demographics | Databrary analytics">
-<meta name="twitter:description" content="4.1 Purpose To summarize the demographic characteristics of participants in shared volumes on Databrary.  4.2 Load data  4.2.1 Demographic data   4.2.2 Owner data All owners. ::: TODO: Fix...">
+<meta name="twitter:title" content="6 Participant demographics | Databrary analytics">
+<meta name="twitter:description" content="6.1 Purpose To summarize the demographic characteristics of participants in shared volumes on Databrary.  6.2 Load data  6.2.1 Demographic data library(targets) targets::tar_load(volume_demog_df,...">
 <!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <link href="libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet">
 <script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><script src="libs/bs3compat-0.4.2/transition.js"></script><script src="libs/bs3compat-0.4.2/tabs.js"></script><script src="libs/bs3compat-0.4.2/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
@@ -46,9 +46,11 @@
         <ul class="book-toc list-unstyled">
 <li><a class="" href="index.html">About</a></li>
 <li><a class="" href="weekly.html"><span class="header-section-number">1</span> Weekly</a></li>
-<li><a class="" href="tags-and-keywords.html"><span class="header-section-number">2</span> Tags and keywords</a></li>
-<li><a class="" href="funders.html"><span class="header-section-number">3</span> Funders</a></li>
-<li><a class="active" href="participant-demographics.html"><span class="header-section-number">4</span> Participant demographics</a></li>
+<li><a class="" href="investigators-and-institutions.html"><span class="header-section-number">2</span> Investigators and Institutions</a></li>
+<li><a class="" href="tags-and-keywords.html"><span class="header-section-number">3</span> Tags and keywords</a></li>
+<li><a class="" href="funders.html"><span class="header-section-number">4</span> Funders</a></li>
+<li><a class="" href="assets.html"><span class="header-section-number">5</span> Assets</a></li>
+<li><a class="active" href="participant-demographics.html"><span class="header-section-number">6</span> Participant demographics</a></li>
 </ul>
 
         <div class="book-extra">
@@ -56,57 +58,80 @@
         </div>
       </nav>
 </div>
-  </header><main class="col-sm-12 col-md-9 col-lg-7" id="content"><div id="participant-demographics" class="section level1" number="4">
+  </header><main class="col-sm-12 col-md-9 col-lg-7" id="content"><div id="participant-demographics" class="section level1" number="6">
 <h1>
-<span class="header-section-number">4</span> Participant demographics<a class="anchor" aria-label="anchor" href="#participant-demographics"><i class="fas fa-link"></i></a>
+<span class="header-section-number">6</span> Participant demographics<a class="anchor" aria-label="anchor" href="#participant-demographics"><i class="fas fa-link"></i></a>
 </h1>
-<div id="purpose-3" class="section level2" number="4.1">
+<div id="purpose-4" class="section level2" number="6.1">
 <h2>
-<span class="header-section-number">4.1</span> Purpose<a class="anchor" aria-label="anchor" href="#purpose-3"><i class="fas fa-link"></i></a>
+<span class="header-section-number">6.1</span> Purpose<a class="anchor" aria-label="anchor" href="#purpose-4"><i class="fas fa-link"></i></a>
 </h2>
 <p>To summarize the demographic characteristics of participants in shared volumes on Databrary.</p>
 </div>
-<div id="load-data" class="section level2" number="4.2">
+<div id="load-data" class="section level2" number="6.2">
 <h2>
-<span class="header-section-number">4.2</span> Load data<a class="anchor" aria-label="anchor" href="#load-data"><i class="fas fa-link"></i></a>
+<span class="header-section-number">6.2</span> Load data<a class="anchor" aria-label="anchor" href="#load-data"><i class="fas fa-link"></i></a>
 </h2>
-<div id="demographic-data" class="section level3" number="4.2.1">
+<div id="demographic-data" class="section level3" number="6.2.1">
 <h3>
-<span class="header-section-number">4.2.1</span> Demographic data<a class="anchor" aria-label="anchor" href="#demographic-data"><i class="fas fa-link"></i></a>
+<span class="header-section-number">6.2.1</span> Demographic data<a class="anchor" aria-label="anchor" href="#demographic-data"><i class="fas fa-link"></i></a>
 </h3>
+<div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://docs.ropensci.org/targets/">targets</a></span><span class="op">)</span></span>
+<span><span class="fu">targets</span><span class="fu">::</span><span class="fu"><a href="https://docs.ropensci.org/targets/reference/tar_load.html">tar_load</a></span><span class="op">(</span><span class="va">volume_demog_df</span>, store <span class="op">=</span> <span class="st">"../_targets"</span><span class="op">)</span></span>
+<span><span class="va">demo_df</span> <span class="op">&lt;-</span> <span class="va">volume_demog_df</span></span></code></pre></div>
 </div>
-<div id="owner-data" class="section level3" number="4.2.2">
+<div id="owner-data" class="section level3" number="6.2.2">
 <h3>
-<span class="header-section-number">4.2.2</span> Owner data<a class="anchor" aria-label="anchor" href="#owner-data"><i class="fas fa-link"></i></a>
+<span class="header-section-number">6.2.2</span> Owner data<a class="anchor" aria-label="anchor" href="#owner-data"><i class="fas fa-link"></i></a>
 </h3>
 <p>All owners.</p>
-<p>:::</p>
+<div class="rmdnote">
 <p><strong>TODO</strong>: Fix importing of owners data.</p>
-<p>:::</p>
+</div>
+<div class="sourceCode" id="cb6"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">owner_df</span> <span class="op">&lt;-</span> <span class="fu">load_owner_csvs</span><span class="op">(</span><span class="st">"csv"</span>, fn_suffix <span class="op">=</span> <span class="st">"-owners"</span><span class="op">)</span>  </span></code></pre></div>
 <div class="rmdnote">
 <p>The session-level CSV data are stored in a local directory that is <strong>not</strong> synched with GitHub.
 To generate the report, one must generate and save the data locally.</p>
 </div>
 </div>
 </div>
-<div id="summary-results" class="section level2" number="4.3">
+<div id="summary-results" class="section level2" number="6.3">
 <h2>
-<span class="header-section-number">4.3</span> Summary results<a class="anchor" aria-label="anchor" href="#summary-results"><i class="fas fa-link"></i></a>
+<span class="header-section-number">6.3</span> Summary results<a class="anchor" aria-label="anchor" href="#summary-results"><i class="fas fa-link"></i></a>
 </h2>
-<div id="overall" class="section level3" number="4.3.1">
+<div id="overall" class="section level3" number="6.3.1">
 <h3>
-<span class="header-section-number">4.3.1</span> Overall<a class="anchor" aria-label="anchor" href="#overall"><i class="fas fa-link"></i></a>
+<span class="header-section-number">6.3.1</span> Overall<a class="anchor" aria-label="anchor" href="#overall"><i class="fas fa-link"></i></a>
 </h3>
-<p>Databrary has demographic data for <span class="math inline">\(n=\)</span> 9777 individual participants.</p>
+<p>Databrary has demographic data for ~<span class="math inline">\(n=\)</span> 9777 individual participant-sessions.
+This number is an underestimate because the number of unshared volumes is 3-4x the number of shared volumes.</p>
+<div class="sourceCode" id="cb7"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">demo_df</span> <span class="op">&lt;-</span> <span class="va">volume_demog_df</span> <span class="op">%&gt;%</span></span>
+<span>  <span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate.html">mutate</a></span><span class="op">(</span><span class="va">.</span>, vol_url <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/paste.html">paste0</a></span><span class="op">(</span><span class="st">"https://nyu.databrary.org/volume/"</span>, <span class="fu"><a href="https://rdrr.io/r/base/numeric.html">as.numeric</a></span><span class="op">(</span><span class="va">vol_id</span><span class="op">)</span><span class="op">)</span><span class="op">)</span></span></code></pre></div>
 </div>
-<div id="age" class="section level3" number="4.3.2">
+<div id="age" class="section level3" number="6.3.2">
 <h3>
-<span class="header-section-number">4.3.2</span> Age<a class="anchor" aria-label="anchor" href="#age"><i class="fas fa-link"></i></a>
+<span class="header-section-number">6.3.2</span> Age<a class="anchor" aria-label="anchor" href="#age"><i class="fas fa-link"></i></a>
 </h3>
-<div id="volumes-and-session" class="section level4" number="4.3.2.1">
+<div id="volumes-and-session" class="section level4" number="6.3.2.1">
 <h4>
-<span class="header-section-number">4.3.2.1</span> Volumes and session<a class="anchor" aria-label="anchor" href="#volumes-and-session"><i class="fas fa-link"></i></a>
+<span class="header-section-number">6.3.2.1</span> Volumes and session<a class="anchor" aria-label="anchor" href="#volumes-and-session"><i class="fas fa-link"></i></a>
 </h4>
+<div class="sourceCode" id="cb8"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">age_df</span> <span class="op">&lt;-</span> <span class="va">demo_df</span> <span class="op">%&gt;%</span></span>
+<span>  <span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html">filter</a></span><span class="op">(</span><span class="va">.</span>, <span class="op">!</span><span class="fu"><a href="https://rdrr.io/r/base/NA.html">is.na</a></span><span class="op">(</span><span class="va">age_days</span><span class="op">)</span><span class="op">)</span> <span class="op">%&gt;%</span></span>
+<span>  <span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/group_by.html">group_by</a></span><span class="op">(</span><span class="va">.</span>, <span class="va">vol_id</span>, <span class="va">vol_url</span><span class="op">)</span> <span class="op">%&gt;%</span></span>
+<span>  <span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/summarise.html">summarize</a></span><span class="op">(</span><span class="va">.</span>, n_sessions <span class="op">=</span> <span class="fu">n</span><span class="op">(</span><span class="op">)</span><span class="op">)</span> <span class="op">%&gt;%</span></span>
+<span>  <span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/group_by.html">ungroup</a></span><span class="op">(</span><span class="va">.</span><span class="op">)</span> <span class="op">%&gt;%</span></span>
+<span>  <span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate.html">mutate</a></span><span class="op">(</span><span class="va">.</span>, n_vols_w_demo <span class="op">=</span> <span class="fu">n</span><span class="op">(</span><span class="op">)</span><span class="op">)</span></span>
+<span></span>
+<span><span class="va">age_df</span> <span class="op">%&gt;%</span></span>
+<span>  <span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/select.html">select</a></span><span class="op">(</span><span class="va">.</span>, <span class="va">vol_id</span>, <span class="va">vol_url</span>, <span class="va">n_sessions</span><span class="op">)</span> <span class="op">%&gt;%</span></span>
+<span>  <span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/arrange.html">arrange</a></span><span class="op">(</span><span class="va">.</span>, <span class="fu">desc</span><span class="op">(</span><span class="va">n_sessions</span><span class="op">)</span><span class="op">)</span> <span class="op">%&gt;%</span></span>
+<span>  <span class="fu">knitr</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/knitr/man/kable.html">kable</a></span><span class="op">(</span><span class="va">.</span>, <span class="st">"html"</span><span class="op">)</span> <span class="op">%&gt;%</span></span>
+<span>  <span class="fu">kableExtra</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/kableExtra/man/kable_styling.html">kable_styling</a></span><span class="op">(</span><span class="va">.</span><span class="op">)</span>  </span></code></pre></div>
 <div class="inline-table"><table class="table" style="margin-left: auto; margin-right: auto;">
 <thead><tr>
 <th style="text-align:left;">
@@ -1552,23 +1577,52 @@ n_sessions
 </tr>
 </tbody>
 </table></div>
+<p>There are 130 volumes reporting <code>age_days</code>.</p>
 </div>
-<div id="histogram" class="section level4" number="4.3.2.2">
+<div id="number-of-participants-and-age-distribution" class="section level4" number="6.3.2.2">
 <h4>
-<span class="header-section-number">4.3.2.2</span> Histogram<a class="anchor" aria-label="anchor" href="#histogram"><i class="fas fa-link"></i></a>
+<span class="header-section-number">6.3.2.2</span> Number of participants and age distribution<a class="anchor" aria-label="anchor" href="#number-of-participants-and-age-distribution"><i class="fas fa-link"></i></a>
 </h4>
+<p>The following summarizes the number of individual participant-sessions for whom there are data.</p>
+<pre><code>## age_grp
+##    &lt;3m   3-6m  6m-1y   1-2y   2-3y   3-4y   4-5y  5-15y 15-20y 
+##     90    129   1065   2870    764    450    886   1431     67 
+## 20-25y   &gt;25y 
+##    299    398</code></pre>
+<div class="sourceCode" id="cb10"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">demo_df</span> <span class="op">%&gt;%</span></span>
+<span>  <span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html">filter</a></span><span class="op">(</span><span class="va">.</span>, <span class="va">age_days</span> <span class="op">&lt;=</span> <span class="fl">365.24</span><span class="op">*</span><span class="fl">5</span><span class="op">)</span> <span class="op">%&gt;%</span></span>
+<span>  <span class="fu">ggplot</span><span class="op">(</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu">aes</span><span class="op">(</span><span class="va">age_days</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu">geom_histogram</span><span class="op">(</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu">ggtitle</span><span class="op">(</span><span class="st">"Age at test (weeks) for 5-year-olds and younger"</span><span class="op">)</span></span></code></pre></div>
 <div class="figure" style="text-align: center">
 <span style="display:block;" id="fig:under-5y-hist"></span>
 <img src="include/img/under-5y-hist-1.png" alt="Age distribution of &lt; 5yrs" width="672"><p class="caption">
-Figure 4.1: Age distribution of &lt; 5yrs
+Figure 6.1: Age distribution of &lt; 5yrs
 </p>
 </div>
+<div class="sourceCode" id="cb11"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">demo_df</span> <span class="op">%&gt;%</span></span>
+<span>  <span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html">filter</a></span><span class="op">(</span><span class="va">.</span>, <span class="va">age_days</span> <span class="op">&gt;</span> <span class="fl">365.24</span><span class="op">*</span><span class="fl">5</span>,</span>
+<span>                <span class="va">age_days</span> <span class="op">&lt;=</span> <span class="fl">365.24</span><span class="op">*</span><span class="fl">15</span><span class="op">)</span> <span class="op">%&gt;%</span></span>
+<span>  <span class="fu">ggplot</span><span class="op">(</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu">aes</span><span class="op">(</span><span class="va">age_days</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu">geom_histogram</span><span class="op">(</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu">ggtitle</span><span class="op">(</span><span class="st">"Age at test (weeks) for 5-15 year-olds"</span><span class="op">)</span></span></code></pre></div>
 <div class="figure" style="text-align: center">
 <span style="display:block;" id="fig:5y-15y-hist"></span>
 <img src="include/img/5y-15y-hist-1.png" alt="Age distribution of 5-15 year-olds" width="672"><p class="caption">
-Figure 4.2: Age distribution of 5-15 year-olds
+Figure 6.2: Age distribution of 5-15 year-olds
 </p>
 </div>
+<div class="sourceCode" id="cb12"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">demo_df</span> <span class="op">%&gt;%</span></span>
+<span>  <span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html">filter</a></span><span class="op">(</span><span class="va">.</span>, <span class="va">age_days</span> <span class="op">&gt;</span> <span class="fl">365.24</span><span class="op">*</span><span class="fl">15</span><span class="op">)</span> <span class="op">%&gt;%</span></span>
+<span>  <span class="fu">ggplot</span><span class="op">(</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu">aes</span><span class="op">(</span><span class="va">age_days</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu">geom_histogram</span><span class="op">(</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu">ggtitle</span><span class="op">(</span><span class="st">"Age at test (weeks) 15+ year-olds"</span><span class="op">)</span></span></code></pre></div>
 <div class="figure" style="text-align: center">
 <img src="include/img/15y+-hist-1.png" alt="Age distribution of 15+ year-olds" width="672"><p class="caption">
 (#fig:15y+-hist)Age distribution of 15+ year-olds
@@ -1576,14 +1630,27 @@ Figure 4.2: Age distribution of 5-15 year-olds
 </div>
 </div>
 </div>
-<div id="gender" class="section level3" number="4.3.3">
+<div id="gender" class="section level3" number="6.3.3">
 <h3>
-<span class="header-section-number">4.3.3</span> Gender<a class="anchor" aria-label="anchor" href="#gender"><i class="fas fa-link"></i></a>
+<span class="header-section-number">6.3.3</span> Gender<a class="anchor" aria-label="anchor" href="#gender"><i class="fas fa-link"></i></a>
 </h3>
-<div id="volumes-and-sessions" class="section level4" number="4.3.3.1">
+<div id="volumes-and-sessions" class="section level4" number="6.3.3.1">
 <h4>
-<span class="header-section-number">4.3.3.1</span> Volumes and sessions<a class="anchor" aria-label="anchor" href="#volumes-and-sessions"><i class="fas fa-link"></i></a>
+<span class="header-section-number">6.3.3.1</span> Volumes and sessions<a class="anchor" aria-label="anchor" href="#volumes-and-sessions"><i class="fas fa-link"></i></a>
 </h4>
+<div class="sourceCode" id="cb13"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">gender_df</span> <span class="op">&lt;-</span> <span class="va">demo_df</span> <span class="op">%&gt;%</span></span>
+<span>  <span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html">filter</a></span><span class="op">(</span><span class="va">.</span>, <span class="op">!</span><span class="fu"><a href="https://rdrr.io/r/base/NA.html">is.na</a></span><span class="op">(</span><span class="va">participant_gender</span><span class="op">)</span><span class="op">)</span> <span class="op">%&gt;%</span></span>
+<span>  <span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/group_by.html">group_by</a></span><span class="op">(</span><span class="va">.</span>, <span class="va">vol_id</span>, <span class="va">vol_url</span><span class="op">)</span> <span class="op">%&gt;%</span></span>
+<span>  <span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/summarise.html">summarize</a></span><span class="op">(</span><span class="va">.</span>, n_sessions <span class="op">=</span> <span class="fu">n</span><span class="op">(</span><span class="op">)</span><span class="op">)</span> <span class="op">%&gt;%</span></span>
+<span>  <span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/group_by.html">ungroup</a></span><span class="op">(</span><span class="va">.</span><span class="op">)</span> <span class="op">%&gt;%</span></span>
+<span>  <span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate.html">mutate</a></span><span class="op">(</span><span class="va">.</span>, n_vols_w_demo <span class="op">=</span> <span class="fu">n</span><span class="op">(</span><span class="op">)</span><span class="op">)</span></span>
+<span></span>
+<span><span class="va">gender_df</span> <span class="op">%&gt;%</span></span>
+<span>  <span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/select.html">select</a></span><span class="op">(</span><span class="va">.</span>, <span class="va">vol_id</span>, <span class="va">vol_url</span>, <span class="va">n_sessions</span><span class="op">)</span> <span class="op">%&gt;%</span></span>
+<span>  <span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/arrange.html">arrange</a></span><span class="op">(</span><span class="va">.</span>, <span class="fu">desc</span><span class="op">(</span><span class="va">n_sessions</span><span class="op">)</span><span class="op">)</span> <span class="op">%&gt;%</span></span>
+<span>  <span class="fu">knitr</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/knitr/man/kable.html">kable</a></span><span class="op">(</span><span class="va">.</span>, <span class="st">"html"</span><span class="op">)</span> <span class="op">%&gt;%</span></span>
+<span>  <span class="fu">kableExtra</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/kableExtra/man/kable_styling.html">kable_styling</a></span><span class="op">(</span><span class="va">.</span><span class="op">)</span></span></code></pre></div>
 <div class="inline-table"><table class="table" style="margin-left: auto; margin-right: auto;">
 <thead><tr>
 <th style="text-align:left;">
@@ -3097,10 +3164,14 @@ n_sessions
 </table></div>
 <p>There are 136 volumes reporting <code>participant_gender</code>.</p>
 </div>
-<div id="number-of-participants" class="section level4" number="4.3.3.2">
+<div id="number-of-participants" class="section level4" number="6.3.3.2">
 <h4>
-<span class="header-section-number">4.3.3.2</span> Number of participants<a class="anchor" aria-label="anchor" href="#number-of-participants"><i class="fas fa-link"></i></a>
+<span class="header-section-number">6.3.3.2</span> Number of participants<a class="anchor" aria-label="anchor" href="#number-of-participants"><i class="fas fa-link"></i></a>
 </h4>
+<div class="sourceCode" id="cb14"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/stats/xtabs.html">xtabs</a></span><span class="op">(</span>formula <span class="op">=</span> <span class="op">~</span> <span class="va">participant_gender</span>, data <span class="op">=</span> <span class="va">demo_df</span><span class="op">)</span> <span class="op">%&gt;%</span></span>
+<span>  <span class="fu">knitr</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/knitr/man/kable.html">kable</a></span><span class="op">(</span><span class="va">.</span>, <span class="st">"html"</span><span class="op">)</span> <span class="op">%&gt;%</span></span>
+<span>  <span class="fu">kableExtra</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/kableExtra/man/kable_styling.html">kable_styling</a></span><span class="op">(</span><span class="va">.</span><span class="op">)</span></span></code></pre></div>
 <div class="inline-table"><table class="table" style="margin-left: auto; margin-right: auto;">
 <thead><tr>
 <th style="text-align:left;">
@@ -3171,14 +3242,27 @@ Unknown or not reported
 </table></div>
 </div>
 </div>
-<div id="race" class="section level3" number="4.3.4">
+<div id="race" class="section level3" number="6.3.4">
 <h3>
-<span class="header-section-number">4.3.4</span> Race<a class="anchor" aria-label="anchor" href="#race"><i class="fas fa-link"></i></a>
+<span class="header-section-number">6.3.4</span> Race<a class="anchor" aria-label="anchor" href="#race"><i class="fas fa-link"></i></a>
 </h3>
-<div id="volumes-and-sessions-1" class="section level4" number="4.3.4.1">
+<div id="volumes-and-sessions-1" class="section level4" number="6.3.4.1">
 <h4>
-<span class="header-section-number">4.3.4.1</span> Volumes and sessions<a class="anchor" aria-label="anchor" href="#volumes-and-sessions-1"><i class="fas fa-link"></i></a>
+<span class="header-section-number">6.3.4.1</span> Volumes and sessions<a class="anchor" aria-label="anchor" href="#volumes-and-sessions-1"><i class="fas fa-link"></i></a>
 </h4>
+<div class="sourceCode" id="cb15"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">race_df</span> <span class="op">&lt;-</span> <span class="va">demo_df</span> <span class="op">%&gt;%</span></span>
+<span>  <span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html">filter</a></span><span class="op">(</span><span class="va">.</span>, <span class="op">!</span><span class="fu"><a href="https://rdrr.io/r/base/NA.html">is.na</a></span><span class="op">(</span><span class="va">participant_race</span><span class="op">)</span><span class="op">)</span> <span class="op">%&gt;%</span></span>
+<span>  <span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/group_by.html">group_by</a></span><span class="op">(</span><span class="va">.</span>, <span class="va">vol_id</span>, <span class="va">vol_url</span><span class="op">)</span> <span class="op">%&gt;%</span></span>
+<span>  <span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/summarise.html">summarize</a></span><span class="op">(</span><span class="va">.</span>, n_sessions <span class="op">=</span> <span class="fu">n</span><span class="op">(</span><span class="op">)</span><span class="op">)</span> <span class="op">%&gt;%</span></span>
+<span>  <span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/group_by.html">ungroup</a></span><span class="op">(</span><span class="va">.</span><span class="op">)</span> <span class="op">%&gt;%</span></span>
+<span>  <span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate.html">mutate</a></span><span class="op">(</span><span class="va">.</span>, n_vols_w_demo <span class="op">=</span> <span class="fu">n</span><span class="op">(</span><span class="op">)</span><span class="op">)</span></span>
+<span></span>
+<span><span class="va">race_df</span> <span class="op">%&gt;%</span></span>
+<span>  <span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/select.html">select</a></span><span class="op">(</span><span class="va">.</span>, <span class="va">vol_id</span>, <span class="va">vol_url</span>, <span class="va">n_sessions</span><span class="op">)</span> <span class="op">%&gt;%</span></span>
+<span>  <span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/arrange.html">arrange</a></span><span class="op">(</span><span class="va">.</span>, <span class="fu">desc</span><span class="op">(</span><span class="va">n_sessions</span><span class="op">)</span><span class="op">)</span> <span class="op">%&gt;%</span></span>
+<span>  <span class="fu">knitr</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/knitr/man/kable.html">kable</a></span><span class="op">(</span><span class="va">.</span>, <span class="st">"html"</span><span class="op">)</span> <span class="op">%&gt;%</span></span>
+<span>  <span class="fu">kableExtra</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/kableExtra/man/kable_styling.html">kable_styling</a></span><span class="op">(</span><span class="va">.</span><span class="op">)</span></span></code></pre></div>
 <div class="inline-table"><table class="table" style="margin-left: auto; margin-right: auto;">
 <thead><tr>
 <th style="text-align:left;">
@@ -4527,10 +4611,14 @@ n_sessions
 </table></div>
 <p>There are 121 volumes reporting <code>participant_race</code>.</p>
 </div>
-<div id="number-of-participants-1" class="section level4" number="4.3.4.2">
+<div id="number-of-participants-1" class="section level4" number="6.3.4.2">
 <h4>
-<span class="header-section-number">4.3.4.2</span> Number of participants<a class="anchor" aria-label="anchor" href="#number-of-participants-1"><i class="fas fa-link"></i></a>
+<span class="header-section-number">6.3.4.2</span> Number of participants<a class="anchor" aria-label="anchor" href="#number-of-participants-1"><i class="fas fa-link"></i></a>
 </h4>
+<div class="sourceCode" id="cb16"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/stats/xtabs.html">xtabs</a></span><span class="op">(</span>formula <span class="op">=</span> <span class="op">~</span> <span class="va">participant_race</span>, data <span class="op">=</span> <span class="va">demo_df</span><span class="op">)</span> <span class="op">%&gt;%</span></span>
+<span>  <span class="fu">knitr</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/knitr/man/kable.html">kable</a></span><span class="op">(</span><span class="va">.</span>, <span class="st">"html"</span><span class="op">)</span> <span class="op">%&gt;%</span></span>
+<span>  <span class="fu">kableExtra</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/kableExtra/man/kable_styling.html">kable_styling</a></span><span class="op">(</span><span class="va">.</span><span class="op">)</span></span></code></pre></div>
 <div class="inline-table"><table class="table" style="margin-left: auto; margin-right: auto;">
 <thead><tr>
 <th style="text-align:left;">
@@ -4945,14 +5033,27 @@ White/Vietnamese
 </table></div>
 </div>
 </div>
-<div id="ethnicity" class="section level3" number="4.3.5">
+<div id="ethnicity" class="section level3" number="6.3.5">
 <h3>
-<span class="header-section-number">4.3.5</span> Ethnicity<a class="anchor" aria-label="anchor" href="#ethnicity"><i class="fas fa-link"></i></a>
+<span class="header-section-number">6.3.5</span> Ethnicity<a class="anchor" aria-label="anchor" href="#ethnicity"><i class="fas fa-link"></i></a>
 </h3>
-<div id="volumes-and-sessions-2" class="section level4" number="4.3.5.1">
+<div id="volumes-and-sessions-2" class="section level4" number="6.3.5.1">
 <h4>
-<span class="header-section-number">4.3.5.1</span> Volumes and sessions<a class="anchor" aria-label="anchor" href="#volumes-and-sessions-2"><i class="fas fa-link"></i></a>
+<span class="header-section-number">6.3.5.1</span> Volumes and sessions<a class="anchor" aria-label="anchor" href="#volumes-and-sessions-2"><i class="fas fa-link"></i></a>
 </h4>
+<div class="sourceCode" id="cb17"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">ethnicity_df</span> <span class="op">&lt;-</span> <span class="va">demo_df</span> <span class="op">%&gt;%</span></span>
+<span>  <span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html">filter</a></span><span class="op">(</span><span class="va">.</span>, <span class="op">!</span><span class="fu"><a href="https://rdrr.io/r/base/NA.html">is.na</a></span><span class="op">(</span><span class="va">participant_ethnicity</span><span class="op">)</span><span class="op">)</span> <span class="op">%&gt;%</span></span>
+<span>  <span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/group_by.html">group_by</a></span><span class="op">(</span><span class="va">.</span>, <span class="va">vol_id</span>, <span class="va">vol_url</span><span class="op">)</span> <span class="op">%&gt;%</span></span>
+<span>  <span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/summarise.html">summarize</a></span><span class="op">(</span><span class="va">.</span>, n_sessions <span class="op">=</span> <span class="fu">n</span><span class="op">(</span><span class="op">)</span><span class="op">)</span> <span class="op">%&gt;%</span></span>
+<span>  <span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/group_by.html">ungroup</a></span><span class="op">(</span><span class="va">.</span><span class="op">)</span> <span class="op">%&gt;%</span></span>
+<span>  <span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate.html">mutate</a></span><span class="op">(</span><span class="va">.</span>, n_vols_w_demo <span class="op">=</span> <span class="fu">n</span><span class="op">(</span><span class="op">)</span><span class="op">)</span></span>
+<span></span>
+<span><span class="va">ethnicity_df</span> <span class="op">%&gt;%</span></span>
+<span>  <span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/select.html">select</a></span><span class="op">(</span><span class="va">.</span>, <span class="va">vol_id</span>, <span class="va">vol_url</span>, <span class="va">n_sessions</span><span class="op">)</span> <span class="op">%&gt;%</span></span>
+<span>  <span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/arrange.html">arrange</a></span><span class="op">(</span><span class="va">.</span>, <span class="fu">desc</span><span class="op">(</span><span class="va">n_sessions</span><span class="op">)</span><span class="op">)</span> <span class="op">%&gt;%</span></span>
+<span>  <span class="fu">knitr</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/knitr/man/kable.html">kable</a></span><span class="op">(</span><span class="va">.</span>, <span class="st">"html"</span><span class="op">)</span> <span class="op">%&gt;%</span></span>
+<span>  <span class="fu">kableExtra</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/kableExtra/man/kable_styling.html">kable_styling</a></span><span class="op">(</span><span class="va">.</span><span class="op">)</span></span></code></pre></div>
 <div class="inline-table"><table class="table" style="margin-left: auto; margin-right: auto;">
 <thead><tr>
 <th style="text-align:left;">
@@ -6290,10 +6391,14 @@ n_sessions
 </table></div>
 <p>There are 120 volumes reporting <code>participant_ethnicity</code>.</p>
 </div>
-<div id="number-of-participants-2" class="section level4" number="4.3.5.2">
+<div id="number-of-participants-2" class="section level4" number="6.3.5.2">
 <h4>
-<span class="header-section-number">4.3.5.2</span> Number of participants<a class="anchor" aria-label="anchor" href="#number-of-participants-2"><i class="fas fa-link"></i></a>
+<span class="header-section-number">6.3.5.2</span> Number of participants<a class="anchor" aria-label="anchor" href="#number-of-participants-2"><i class="fas fa-link"></i></a>
 </h4>
+<div class="sourceCode" id="cb18"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/stats/xtabs.html">xtabs</a></span><span class="op">(</span>formula <span class="op">=</span> <span class="op">~</span> <span class="va">participant_ethnicity</span>, data <span class="op">=</span> <span class="va">demo_df</span><span class="op">)</span> <span class="op">%&gt;%</span></span>
+<span>  <span class="fu">knitr</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/knitr/man/kable.html">kable</a></span><span class="op">(</span><span class="va">.</span>, <span class="st">"html"</span><span class="op">)</span> <span class="op">%&gt;%</span></span>
+<span>  <span class="fu">kableExtra</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/kableExtra/man/kable_styling.html">kable_styling</a></span><span class="op">(</span><span class="va">.</span><span class="op">)</span></span></code></pre></div>
 <div class="inline-table"><table class="table" style="margin-left: auto; margin-right: auto;">
 <thead><tr>
 <th style="text-align:left;">
@@ -6468,14 +6573,27 @@ Unknown or not reported
 </table></div>
 </div>
 </div>
-<div id="participant-language" class="section level3" number="4.3.6">
+<div id="participant-language" class="section level3" number="6.3.6">
 <h3>
-<span class="header-section-number">4.3.6</span> Participant language<a class="anchor" aria-label="anchor" href="#participant-language"><i class="fas fa-link"></i></a>
+<span class="header-section-number">6.3.6</span> Participant language<a class="anchor" aria-label="anchor" href="#participant-language"><i class="fas fa-link"></i></a>
 </h3>
-<div id="volumes-and-sessions-3" class="section level4" number="4.3.6.1">
+<div id="volumes-and-sessions-3" class="section level4" number="6.3.6.1">
 <h4>
-<span class="header-section-number">4.3.6.1</span> Volumes and sessions<a class="anchor" aria-label="anchor" href="#volumes-and-sessions-3"><i class="fas fa-link"></i></a>
+<span class="header-section-number">6.3.6.1</span> Volumes and sessions<a class="anchor" aria-label="anchor" href="#volumes-and-sessions-3"><i class="fas fa-link"></i></a>
 </h4>
+<div class="sourceCode" id="cb19"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">language_df</span> <span class="op">&lt;-</span> <span class="va">demo_df</span> <span class="op">%&gt;%</span></span>
+<span>  <span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html">filter</a></span><span class="op">(</span><span class="va">.</span>, <span class="op">!</span><span class="fu"><a href="https://rdrr.io/r/base/NA.html">is.na</a></span><span class="op">(</span><span class="va">participant_language</span><span class="op">)</span><span class="op">)</span> <span class="op">%&gt;%</span></span>
+<span>  <span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/group_by.html">group_by</a></span><span class="op">(</span><span class="va">.</span>, <span class="va">vol_id</span>, <span class="va">vol_url</span><span class="op">)</span> <span class="op">%&gt;%</span></span>
+<span>  <span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/summarise.html">summarize</a></span><span class="op">(</span><span class="va">.</span>, n_sessions <span class="op">=</span> <span class="fu">n</span><span class="op">(</span><span class="op">)</span><span class="op">)</span> <span class="op">%&gt;%</span></span>
+<span>  <span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/group_by.html">ungroup</a></span><span class="op">(</span><span class="va">.</span><span class="op">)</span> <span class="op">%&gt;%</span></span>
+<span>  <span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate.html">mutate</a></span><span class="op">(</span><span class="va">.</span>, n_vols_w_demo <span class="op">=</span> <span class="fu">n</span><span class="op">(</span><span class="op">)</span><span class="op">)</span></span>
+<span></span>
+<span><span class="va">language_df</span> <span class="op">%&gt;%</span></span>
+<span>  <span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/select.html">select</a></span><span class="op">(</span><span class="va">.</span>, <span class="va">vol_id</span>, <span class="va">vol_url</span>, <span class="va">n_sessions</span><span class="op">)</span> <span class="op">%&gt;%</span></span>
+<span>  <span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/arrange.html">arrange</a></span><span class="op">(</span><span class="va">.</span>, <span class="fu">desc</span><span class="op">(</span><span class="va">n_sessions</span><span class="op">)</span><span class="op">)</span> <span class="op">%&gt;%</span></span>
+<span>  <span class="fu">knitr</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/knitr/man/kable.html">kable</a></span><span class="op">(</span><span class="va">.</span>, <span class="st">"html"</span><span class="op">)</span> <span class="op">%&gt;%</span></span>
+<span>  <span class="fu">kableExtra</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/kableExtra/man/kable_styling.html">kable_styling</a></span><span class="op">(</span><span class="va">.</span><span class="op">)</span></span></code></pre></div>
 <div class="inline-table"><table class="table" style="margin-left: auto; margin-right: auto;">
 <thead><tr>
 <th style="text-align:left;">
@@ -7648,10 +7766,14 @@ n_sessions
 </table></div>
 <p>There are 105 volumes reporting <code>participant_language</code>.</p>
 </div>
-<div id="number-of-participants-3" class="section level4" number="4.3.6.2">
+<div id="number-of-participants-3" class="section level4" number="6.3.6.2">
 <h4>
-<span class="header-section-number">4.3.6.2</span> Number of participants<a class="anchor" aria-label="anchor" href="#number-of-participants-3"><i class="fas fa-link"></i></a>
+<span class="header-section-number">6.3.6.2</span> Number of participants<a class="anchor" aria-label="anchor" href="#number-of-participants-3"><i class="fas fa-link"></i></a>
 </h4>
+<div class="sourceCode" id="cb20"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/stats/xtabs.html">xtabs</a></span><span class="op">(</span>formula <span class="op">=</span> <span class="op">~</span> <span class="va">participant_language</span>, data <span class="op">=</span> <span class="va">demo_df</span><span class="op">)</span> <span class="op">%&gt;%</span></span>
+<span>  <span class="fu">knitr</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/knitr/man/kable.html">kable</a></span><span class="op">(</span><span class="va">.</span>, <span class="st">"html"</span><span class="op">)</span> <span class="op">%&gt;%</span></span>
+<span>  <span class="fu">kableExtra</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/kableExtra/man/kable_styling.html">kable_styling</a></span><span class="op">(</span><span class="va">.</span><span class="op">)</span></span></code></pre></div>
 <div class="inline-table"><table class="table" style="margin-left: auto; margin-right: auto;">
 <thead><tr>
 <th style="text-align:left;">
@@ -8738,14 +8860,27 @@ Unknown
 </table></div>
 </div>
 </div>
-<div id="pregnancy-term" class="section level3" number="4.3.7">
+<div id="pregnancy-term" class="section level3" number="6.3.7">
 <h3>
-<span class="header-section-number">4.3.7</span> Pregnancy term<a class="anchor" aria-label="anchor" href="#pregnancy-term"><i class="fas fa-link"></i></a>
+<span class="header-section-number">6.3.7</span> Pregnancy term<a class="anchor" aria-label="anchor" href="#pregnancy-term"><i class="fas fa-link"></i></a>
 </h3>
-<div id="volumes-and-sessions-4" class="section level4" number="4.3.7.1">
+<div id="volumes-and-sessions-4" class="section level4" number="6.3.7.1">
 <h4>
-<span class="header-section-number">4.3.7.1</span> Volumes and sessions<a class="anchor" aria-label="anchor" href="#volumes-and-sessions-4"><i class="fas fa-link"></i></a>
+<span class="header-section-number">6.3.7.1</span> Volumes and sessions<a class="anchor" aria-label="anchor" href="#volumes-and-sessions-4"><i class="fas fa-link"></i></a>
 </h4>
+<div class="sourceCode" id="cb21"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">participant_pregnancy_term_df</span> <span class="op">&lt;-</span> <span class="va">demo_df</span> <span class="op">%&gt;%</span></span>
+<span>  <span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html">filter</a></span><span class="op">(</span><span class="va">.</span>, <span class="op">!</span><span class="fu"><a href="https://rdrr.io/r/base/NA.html">is.na</a></span><span class="op">(</span><span class="va">participant_pregnancy_term</span><span class="op">)</span><span class="op">)</span> <span class="op">%&gt;%</span></span>
+<span>  <span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/group_by.html">group_by</a></span><span class="op">(</span><span class="va">.</span>, <span class="va">vol_id</span>, <span class="va">vol_url</span><span class="op">)</span> <span class="op">%&gt;%</span></span>
+<span>  <span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/summarise.html">summarize</a></span><span class="op">(</span><span class="va">.</span>, n_sessions <span class="op">=</span> <span class="fu">n</span><span class="op">(</span><span class="op">)</span><span class="op">)</span> <span class="op">%&gt;%</span></span>
+<span>  <span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/group_by.html">ungroup</a></span><span class="op">(</span><span class="va">.</span><span class="op">)</span> <span class="op">%&gt;%</span></span>
+<span>  <span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate.html">mutate</a></span><span class="op">(</span><span class="va">.</span>, n_vols_w_demo <span class="op">=</span> <span class="fu">n</span><span class="op">(</span><span class="op">)</span><span class="op">)</span></span>
+<span></span>
+<span><span class="va">participant_pregnancy_term_df</span> <span class="op">%&gt;%</span></span>
+<span>  <span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/select.html">select</a></span><span class="op">(</span><span class="va">.</span>, <span class="va">vol_id</span>, <span class="va">vol_url</span>, <span class="va">n_sessions</span><span class="op">)</span> <span class="op">%&gt;%</span></span>
+<span>  <span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/arrange.html">arrange</a></span><span class="op">(</span><span class="va">.</span>, <span class="fu">desc</span><span class="op">(</span><span class="va">n_sessions</span><span class="op">)</span><span class="op">)</span> <span class="op">%&gt;%</span></span>
+<span>  <span class="fu">knitr</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/knitr/man/kable.html">kable</a></span><span class="op">(</span><span class="va">.</span>, <span class="st">"html"</span><span class="op">)</span> <span class="op">%&gt;%</span></span>
+<span>  <span class="fu">kableExtra</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/kableExtra/man/kable_styling.html">kable_styling</a></span><span class="op">(</span><span class="va">.</span><span class="op">)</span></span></code></pre></div>
 <div class="inline-table"><table class="table" style="margin-left: auto; margin-right: auto;">
 <thead><tr>
 <th style="text-align:left;">
@@ -8994,10 +9129,14 @@ n_sessions
 </table></div>
 <p>There are 21 volumes reporting <code>participant_pregnancy_term</code>.</p>
 </div>
-<div id="number-of-participants-4" class="section level4" number="4.3.7.2">
+<div id="number-of-participants-4" class="section level4" number="6.3.7.2">
 <h4>
-<span class="header-section-number">4.3.7.2</span> Number of participants<a class="anchor" aria-label="anchor" href="#number-of-participants-4"><i class="fas fa-link"></i></a>
+<span class="header-section-number">6.3.7.2</span> Number of participants<a class="anchor" aria-label="anchor" href="#number-of-participants-4"><i class="fas fa-link"></i></a>
 </h4>
+<div class="sourceCode" id="cb22"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/stats/xtabs.html">xtabs</a></span><span class="op">(</span>formula <span class="op">=</span> <span class="op">~</span> <span class="va">participant_pregnancy_term</span>, data <span class="op">=</span> <span class="va">demo_df</span><span class="op">)</span> <span class="op">%&gt;%</span></span>
+<span>  <span class="fu">knitr</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/knitr/man/kable.html">kable</a></span><span class="op">(</span><span class="va">.</span>, <span class="st">"html"</span><span class="op">)</span> <span class="op">%&gt;%</span></span>
+<span>  <span class="fu">kableExtra</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/kableExtra/man/kable_styling.html">kable_styling</a></span><span class="op">(</span><span class="va">.</span><span class="op">)</span></span></code></pre></div>
 <div class="inline-table"><table class="table" style="margin-left: auto; margin-right: auto;">
 <thead><tr>
 <th style="text-align:left;">
@@ -9132,14 +9271,27 @@ Unknown
 </table></div>
 </div>
 </div>
-<div id="birthweight" class="section level3" number="4.3.8">
+<div id="birthweight" class="section level3" number="6.3.8">
 <h3>
-<span class="header-section-number">4.3.8</span> Birthweight<a class="anchor" aria-label="anchor" href="#birthweight"><i class="fas fa-link"></i></a>
+<span class="header-section-number">6.3.8</span> Birthweight<a class="anchor" aria-label="anchor" href="#birthweight"><i class="fas fa-link"></i></a>
 </h3>
-<div id="volumes-and-sessions-5" class="section level4" number="4.3.8.1">
+<div id="volumes-and-sessions-5" class="section level4" number="6.3.8.1">
 <h4>
-<span class="header-section-number">4.3.8.1</span> Volumes and sessions<a class="anchor" aria-label="anchor" href="#volumes-and-sessions-5"><i class="fas fa-link"></i></a>
+<span class="header-section-number">6.3.8.1</span> Volumes and sessions<a class="anchor" aria-label="anchor" href="#volumes-and-sessions-5"><i class="fas fa-link"></i></a>
 </h4>
+<div class="sourceCode" id="cb23"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">participant_birth_weight_df</span> <span class="op">&lt;-</span> <span class="va">demo_df</span> <span class="op">%&gt;%</span></span>
+<span>  <span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html">filter</a></span><span class="op">(</span><span class="va">.</span>, <span class="op">!</span><span class="fu"><a href="https://rdrr.io/r/base/NA.html">is.na</a></span><span class="op">(</span><span class="va">participant_birth_weight</span><span class="op">)</span><span class="op">)</span> <span class="op">%&gt;%</span></span>
+<span>  <span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/group_by.html">group_by</a></span><span class="op">(</span><span class="va">.</span>, <span class="va">vol_id</span>, <span class="va">vol_url</span><span class="op">)</span> <span class="op">%&gt;%</span></span>
+<span>  <span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/summarise.html">summarize</a></span><span class="op">(</span><span class="va">.</span>, n_sessions <span class="op">=</span> <span class="fu">n</span><span class="op">(</span><span class="op">)</span><span class="op">)</span> <span class="op">%&gt;%</span></span>
+<span>  <span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/group_by.html">ungroup</a></span><span class="op">(</span><span class="va">.</span><span class="op">)</span> <span class="op">%&gt;%</span></span>
+<span>  <span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate.html">mutate</a></span><span class="op">(</span><span class="va">.</span>, n_vols_w_demo <span class="op">=</span> <span class="fu">n</span><span class="op">(</span><span class="op">)</span><span class="op">)</span></span>
+<span></span>
+<span><span class="va">participant_birth_weight_df</span> <span class="op">%&gt;%</span></span>
+<span>  <span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/select.html">select</a></span><span class="op">(</span><span class="va">.</span>, <span class="va">vol_id</span>, <span class="va">vol_url</span>, <span class="va">n_sessions</span><span class="op">)</span> <span class="op">%&gt;%</span></span>
+<span>  <span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/arrange.html">arrange</a></span><span class="op">(</span><span class="va">.</span>, <span class="fu">desc</span><span class="op">(</span><span class="va">n_sessions</span><span class="op">)</span><span class="op">)</span> <span class="op">%&gt;%</span></span>
+<span>  <span class="fu">knitr</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/knitr/man/kable.html">kable</a></span><span class="op">(</span><span class="va">.</span>, <span class="st">"html"</span><span class="op">)</span> <span class="op">%&gt;%</span></span>
+<span>  <span class="fu">kableExtra</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/kableExtra/man/kable_styling.html">kable_styling</a></span><span class="op">(</span><span class="va">.</span><span class="op">)</span></span></code></pre></div>
 <div class="inline-table"><table class="table" style="margin-left: auto; margin-right: auto;">
 <thead><tr>
 <th style="text-align:left;">
@@ -9190,10 +9342,14 @@ n_sessions
 </table></div>
 <p>There are 3 volumes reporting <code>participant_birth_weight</code>.</p>
 </div>
-<div id="number-of-participants-5" class="section level4" number="4.3.8.2">
+<div id="number-of-participants-5" class="section level4" number="6.3.8.2">
 <h4>
-<span class="header-section-number">4.3.8.2</span> Number of participants<a class="anchor" aria-label="anchor" href="#number-of-participants-5"><i class="fas fa-link"></i></a>
+<span class="header-section-number">6.3.8.2</span> Number of participants<a class="anchor" aria-label="anchor" href="#number-of-participants-5"><i class="fas fa-link"></i></a>
 </h4>
+<div class="sourceCode" id="cb24"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/stats/xtabs.html">xtabs</a></span><span class="op">(</span>formula <span class="op">=</span> <span class="op">~</span> <span class="va">participant_birth_weight</span>, data <span class="op">=</span> <span class="va">demo_df</span><span class="op">)</span> <span class="op">%&gt;%</span></span>
+<span>  <span class="fu">knitr</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/knitr/man/kable.html">kable</a></span><span class="op">(</span><span class="va">.</span>, <span class="st">"html"</span><span class="op">)</span> <span class="op">%&gt;%</span></span>
+<span>  <span class="fu">kableExtra</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/kableExtra/man/kable_styling.html">kable_styling</a></span><span class="op">(</span><span class="va">.</span><span class="op">)</span></span></code></pre></div>
 <div class="inline-table"><table class="table" style="margin-left: auto; margin-right: auto;">
 <thead><tr>
 <th style="text-align:left;">
@@ -9686,17 +9842,40 @@ Freq
 </tr>
 </tbody>
 </table></div>
-<div class="inline-figure"><img src="include/img/unnamed-chunk-21-1.png" width="672" style="display: block; margin: auto;"></div>
 </div>
-</div>
-<div id="disability" class="section level3" number="4.3.9">
-<h3>
-<span class="header-section-number">4.3.9</span> Disability<a class="anchor" aria-label="anchor" href="#disability"><i class="fas fa-link"></i></a>
-</h3>
-<div id="volumes-and-sessions-6" class="section level4" number="4.3.9.1">
+<div id="histogram-1" class="section level4" number="6.3.8.3">
 <h4>
-<span class="header-section-number">4.3.9.1</span> Volumes and sessions<a class="anchor" aria-label="anchor" href="#volumes-and-sessions-6"><i class="fas fa-link"></i></a>
+<span class="header-section-number">6.3.8.3</span> Histogram<a class="anchor" aria-label="anchor" href="#histogram-1"><i class="fas fa-link"></i></a>
 </h4>
+<div class="sourceCode" id="cb25"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">demo_df</span> <span class="op">%&gt;%</span></span>
+<span>  <span class="fu">ggplot</span><span class="op">(</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu">aes</span><span class="op">(</span>x <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/numeric.html">as.numeric</a></span><span class="op">(</span><span class="va">participant_birth_weight</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu">geom_histogram</span><span class="op">(</span>bins <span class="op">=</span> <span class="fl">15</span><span class="op">)</span></span></code></pre></div>
+<div class="inline-figure"><img src="include/img/birthweight-hist-1.png" width="672" style="display: block; margin: auto;"></div>
+</div>
+</div>
+<div id="disability" class="section level3" number="6.3.9">
+<h3>
+<span class="header-section-number">6.3.9</span> Disability<a class="anchor" aria-label="anchor" href="#disability"><i class="fas fa-link"></i></a>
+</h3>
+<div id="volumes-and-sessions-6" class="section level4" number="6.3.9.1">
+<h4>
+<span class="header-section-number">6.3.9.1</span> Volumes and sessions<a class="anchor" aria-label="anchor" href="#volumes-and-sessions-6"><i class="fas fa-link"></i></a>
+</h4>
+<div class="sourceCode" id="cb26"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">participant_disability_df</span> <span class="op">&lt;-</span> <span class="va">demo_df</span> <span class="op">%&gt;%</span></span>
+<span>  <span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html">filter</a></span><span class="op">(</span><span class="va">.</span>, <span class="op">!</span><span class="fu"><a href="https://rdrr.io/r/base/NA.html">is.na</a></span><span class="op">(</span><span class="va">participant_disability</span><span class="op">)</span><span class="op">)</span> <span class="op">%&gt;%</span></span>
+<span>  <span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/group_by.html">group_by</a></span><span class="op">(</span><span class="va">.</span>, <span class="va">vol_id</span>, <span class="va">vol_url</span><span class="op">)</span> <span class="op">%&gt;%</span></span>
+<span>  <span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/summarise.html">summarize</a></span><span class="op">(</span><span class="va">.</span>, n_sessions <span class="op">=</span> <span class="fu">n</span><span class="op">(</span><span class="op">)</span><span class="op">)</span> <span class="op">%&gt;%</span></span>
+<span>  <span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/group_by.html">ungroup</a></span><span class="op">(</span><span class="va">.</span><span class="op">)</span> <span class="op">%&gt;%</span></span>
+<span>  <span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate.html">mutate</a></span><span class="op">(</span><span class="va">.</span>, n_vols_w_demo <span class="op">=</span> <span class="fu">n</span><span class="op">(</span><span class="op">)</span><span class="op">)</span></span>
+<span></span>
+<span><span class="va">participant_disability_df</span> <span class="op">%&gt;%</span></span>
+<span>  <span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/select.html">select</a></span><span class="op">(</span><span class="va">.</span>, <span class="va">vol_id</span>, <span class="va">vol_url</span>, <span class="va">n_sessions</span><span class="op">)</span> <span class="op">%&gt;%</span></span>
+<span>  <span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/arrange.html">arrange</a></span><span class="op">(</span><span class="va">.</span>, <span class="fu">desc</span><span class="op">(</span><span class="va">n_sessions</span><span class="op">)</span><span class="op">)</span> <span class="op">%&gt;%</span></span>
+<span>  <span class="fu">knitr</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/knitr/man/kable.html">kable</a></span><span class="op">(</span><span class="va">.</span>, <span class="st">"html"</span><span class="op">)</span> <span class="op">%&gt;%</span></span>
+<span>  <span class="fu">kableExtra</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/kableExtra/man/kable_styling.html">kable_styling</a></span><span class="op">(</span><span class="va">.</span><span class="op">)</span></span></code></pre></div>
 <div class="inline-table"><table class="table" style="margin-left: auto; margin-right: auto;">
 <thead><tr>
 <th style="text-align:left;">
@@ -10638,10 +10817,14 @@ n_sessions
 </table></div>
 <p>There are 84 volumes reporting <code>participant_disability</code>.</p>
 </div>
-<div id="number-of-participants-6" class="section level4" number="4.3.9.2">
+<div id="number-of-participants-6" class="section level4" number="6.3.9.2">
 <h4>
-<span class="header-section-number">4.3.9.2</span> Number of participants<a class="anchor" aria-label="anchor" href="#number-of-participants-6"><i class="fas fa-link"></i></a>
+<span class="header-section-number">6.3.9.2</span> Number of participants<a class="anchor" aria-label="anchor" href="#number-of-participants-6"><i class="fas fa-link"></i></a>
 </h4>
+<div class="sourceCode" id="cb27"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/stats/xtabs.html">xtabs</a></span><span class="op">(</span>formula <span class="op">=</span> <span class="op">~</span> <span class="va">participant_disability</span>, data <span class="op">=</span> <span class="va">demo_df</span><span class="op">)</span> <span class="op">%&gt;%</span></span>
+<span>  <span class="fu">knitr</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/knitr/man/kable.html">kable</a></span><span class="op">(</span><span class="va">.</span>, <span class="st">"html"</span><span class="op">)</span> <span class="op">%&gt;%</span></span>
+<span>  <span class="fu">kableExtra</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/kableExtra/man/kable_styling.html">kable_styling</a></span><span class="op">(</span><span class="va">.</span><span class="op">)</span></span></code></pre></div>
 <div class="inline-table"><table class="table" style="margin-left: auto; margin-right: auto;">
 <thead><tr>
 <th style="text-align:left;">
@@ -10803,30 +10986,30 @@ Unknown
 </div>
 </div>
   <div class="chapter-nav">
-<div class="prev"><a href="funders.html"><span class="header-section-number">3</span> Funders</a></div>
+<div class="prev"><a href="assets.html"><span class="header-section-number">5</span> Assets</a></div>
 <div class="empty"></div>
 </div></main><div class="col-md-3 col-lg-2 d-none d-md-block sidebar sidebar-chapter">
     <nav id="toc" data-toggle="toc" aria-label="On this page"><h2>On this page</h2>
       <ul class="nav navbar-nav">
-<li><a class="nav-link" href="#participant-demographics"><span class="header-section-number">4</span> Participant demographics</a></li>
-<li><a class="nav-link" href="#purpose-3"><span class="header-section-number">4.1</span> Purpose</a></li>
+<li><a class="nav-link" href="#participant-demographics"><span class="header-section-number">6</span> Participant demographics</a></li>
+<li><a class="nav-link" href="#purpose-4"><span class="header-section-number">6.1</span> Purpose</a></li>
 <li>
-<a class="nav-link" href="#load-data"><span class="header-section-number">4.2</span> Load data</a><ul class="nav navbar-nav">
-<li><a class="nav-link" href="#demographic-data"><span class="header-section-number">4.2.1</span> Demographic data</a></li>
-<li><a class="nav-link" href="#owner-data"><span class="header-section-number">4.2.2</span> Owner data</a></li>
+<a class="nav-link" href="#load-data"><span class="header-section-number">6.2</span> Load data</a><ul class="nav navbar-nav">
+<li><a class="nav-link" href="#demographic-data"><span class="header-section-number">6.2.1</span> Demographic data</a></li>
+<li><a class="nav-link" href="#owner-data"><span class="header-section-number">6.2.2</span> Owner data</a></li>
 </ul>
 </li>
 <li>
-<a class="nav-link" href="#summary-results"><span class="header-section-number">4.3</span> Summary results</a><ul class="nav navbar-nav">
-<li><a class="nav-link" href="#overall"><span class="header-section-number">4.3.1</span> Overall</a></li>
-<li><a class="nav-link" href="#age"><span class="header-section-number">4.3.2</span> Age</a></li>
-<li><a class="nav-link" href="#gender"><span class="header-section-number">4.3.3</span> Gender</a></li>
-<li><a class="nav-link" href="#race"><span class="header-section-number">4.3.4</span> Race</a></li>
-<li><a class="nav-link" href="#ethnicity"><span class="header-section-number">4.3.5</span> Ethnicity</a></li>
-<li><a class="nav-link" href="#participant-language"><span class="header-section-number">4.3.6</span> Participant language</a></li>
-<li><a class="nav-link" href="#pregnancy-term"><span class="header-section-number">4.3.7</span> Pregnancy term</a></li>
-<li><a class="nav-link" href="#birthweight"><span class="header-section-number">4.3.8</span> Birthweight</a></li>
-<li><a class="nav-link" href="#disability"><span class="header-section-number">4.3.9</span> Disability</a></li>
+<a class="nav-link" href="#summary-results"><span class="header-section-number">6.3</span> Summary results</a><ul class="nav navbar-nav">
+<li><a class="nav-link" href="#overall"><span class="header-section-number">6.3.1</span> Overall</a></li>
+<li><a class="nav-link" href="#age"><span class="header-section-number">6.3.2</span> Age</a></li>
+<li><a class="nav-link" href="#gender"><span class="header-section-number">6.3.3</span> Gender</a></li>
+<li><a class="nav-link" href="#race"><span class="header-section-number">6.3.4</span> Race</a></li>
+<li><a class="nav-link" href="#ethnicity"><span class="header-section-number">6.3.5</span> Ethnicity</a></li>
+<li><a class="nav-link" href="#participant-language"><span class="header-section-number">6.3.6</span> Participant language</a></li>
+<li><a class="nav-link" href="#pregnancy-term"><span class="header-section-number">6.3.7</span> Pregnancy term</a></li>
+<li><a class="nav-link" href="#birthweight"><span class="header-section-number">6.3.8</span> Birthweight</a></li>
+<li><a class="nav-link" href="#disability"><span class="header-section-number">6.3.9</span> Disability</a></li>
 </ul>
 </li>
 </ul>
@@ -10846,7 +11029,7 @@ Unknown
 <footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
 
   <div class="col-12 col-md-6 mt-3">
-    <p>"<strong>Databrary analytics</strong>" was written by Rick Gilmore. It was last built on 2023-02-09.</p>
+    <p>"<strong>Databrary analytics</strong>" was written by Rick Gilmore. It was last built on 2023-02-10.</p>
   </div>
 
   <div class="col-12 col-md-6 mt-3">

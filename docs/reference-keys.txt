@@ -1,3 +1,4 @@
+fig:n-investigators-per-inst
 fig:under-5y-hist
 fig:5y-15y-hist
 weekly
@@ -10,6 +11,11 @@ new-volumes
 citations
 archived-reports
 clean-up
+investigators-and-institutions
+institutions
+histogram
+table
+investigators
 tags-and-keywords
 purpose-1
 load-tags-data
@@ -25,8 +31,14 @@ gather-data
 volumes-by-funder
 number-of-volumes-listing-funders
 funders-by-number-of-volumes
-participant-demographics
+assets
 purpose-3
+import
+analyze
+volumes-with-shared-assets
+assets-1
+participant-demographics
+purpose-4
 load-data
 demographic-data
 owner-data
@@ -34,7 +46,7 @@ summary-results
 overall
 age
 volumes-and-session
-histogram
+number-of-participants-and-age-distribution
 gender
 volumes-and-sessions
 number-of-participants
@@ -53,6 +65,7 @@ number-of-participants-4
 birthweight
 volumes-and-sessions-5
 number-of-participants-5
+histogram-1
 disability
 volumes-and-sessions-6
 number-of-participants-6
