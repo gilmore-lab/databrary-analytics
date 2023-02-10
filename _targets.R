@@ -91,5 +91,11 @@ list(
              list.files("src/csv", "inst\\-[0-9]+\\.csv", full.names = TRUE)),
   #--- Skip party 2 (staff)
   tar_target(inst_df,
-             load_inst_df_from_csvs(institution_csv_fl[2:length(institution_csv_fl)]))
+             load_inst_df_from_csvs(institution_csv_fl[2:length(institution_csv_fl)])),
+  # Volume-level sessions
+  tar_target(vols_sess_df,
+             get_many_volumes_data(1, max_vol_id),
+             cue = tarchetypes::tar_cue_age(name = vols_sess_df,
+                                            age = as.difftime(13, units = "weeks"))
+  )
 )

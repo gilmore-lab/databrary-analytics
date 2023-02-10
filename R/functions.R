@@ -1913,3 +1913,66 @@ db_credentials_valid <- function() {
     FALSE
   }
 }
+
+################################################################################
+# Data about shared volumes and their sessions.
+
+#-------------------------------------------------------------------------------
+get_volume_data <- function(vol_id = 1, skip_vols = c(1276, 1277), vb = FALSE) {
+  stopifnot(is.numeric(vol_id))
+  stopifnot(vol_id > 0)
+  
+  if (vol_id %in% skip_vols) return(NULL)
+  
+  vol_data <- databraryapi::download_containers_records(vol_id)
+  if (is.null(vol_data)) {
+    if (vb) message(paste0("No data in volume ", vol_id))
+    NULL
+  } else {
+    if (vb) message(paste0("Gathering data from volume ", vol_id))
+    data.frame(
+      vol_id = vol_data$id,
+      vol_name = vol_data$name,
+      sharing_level = vol_data$publicaccess,
+      owner_ids = vol_data$owners,
+      sessions_shared = ifelse(
+        is.null(vol_data$publicsharefull),
+        FALSE,
+        vol_data$publicsharefull
+      ),
+      n_sessions = dim(vol_data$containers)[1] - 1,
+      created_date = lubridate::as_datetime(vol_data$creation)
+    )
+  }
+}
+
+#-------------------------------------------------------------------------------
+get_many_volumes_data <- function(min_vol = 1, max_vol = 10, vb = FALSE) {
+  
+  stopifnot(is.numeric(min_vol))
+  stopifnot(min_vol > 0)
+  stopifnot(is.numeric(max_vol))
+  stopifnot(max_vol > 0)
+  stopifnot(min_vol < max_vol)
+  stopifnot(databraryapi::login_db(Sys.getenv("DATABRARY_LOGIN")))
+  
+  vol_index <- min_vol:max_vol
+  # vols_data <- lapply(vol_index, get_volume_data)
+  vols_data <- purrr::map(vol_index, get_volume_data, vb = vb, .progress = "Vols data:")
+  
+  # Merge data frames
+  # data.table::rbindlist(vols_data)
+  purrr::list_rbind(vols_data)
+}
+
+#-------------------------------------------------------------------------------
+get_volume_name <- function(vol_id) {
+  message("Getting name for volume ", vol_id)
+  vol_metadata <- databraryapi::list_volume_metadata(vol_id)
+  if (!is.null(vol_metadata)) {
+    tibble::tibble(vol_id = vol_id,
+                   vol_name = as.character(vol_metadata$name))
+  } else {
+    tibble::tibble(vol_id = vol_id, vol_name = NA)
+  }
+}

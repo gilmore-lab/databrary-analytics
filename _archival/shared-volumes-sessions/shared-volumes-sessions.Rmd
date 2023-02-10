@@ -272,17 +272,8 @@ vols_dat %>%
 
 ```{r}
 vols_dat %>%
-  dplyr::filter(., shared_type == "full_volume") %>%
+  dplyr::filter(., shared_type == "overview_only") %>%
   knitr::kable(., "html") %>%
   kableExtra::kable_styling(.)
-```
-
-# Logout
-
-```{r}
-databraryapi::logout_db()
-if (file.exists(".databrary.RData")) {
-  unlink(".databrary.RData")
-}
 ```
 

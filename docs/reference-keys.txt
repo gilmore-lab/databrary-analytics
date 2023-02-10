@@ -69,3 +69,12 @@ histogram-1
 disability
 volumes-and-sessions-6
 number-of-participants-6
+shared-volumes-and-sessions
+purpose-5
+import-data
+how-shared-by-unique-volume
+full-volume
+overview-only
+how-shared-by-investigator
+full-volume-1
+overview-only-1
