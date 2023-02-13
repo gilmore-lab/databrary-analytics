@@ -1,5 +1,0 @@
-session_id,session_name,session_date,session_release,participant1_ID,participant1_birthdate,participant1_gender,participant1_race,participant1_ethnicity,participant2_ID,participant2_birthdate,participant2_gender,participant2_race,participant2_ethnicity,context_setting,context_state,vol_id
-9,moore-downtown-henderson,2013-08-29,PUBLIC,Florian Raudies,1982-04-15,Male,White,Not Hispanic or Latino,Rick O. Gilmore,1963-07-21,Male,White,Not Hispanic or Latino,Outdoor,PA,2
-10,moore-pattee-chandlee,2013-08-30,PUBLIC,Florian Raudies,1982-04-15,Male,White,Not Hispanic or Latino,Rick O. Gilmore,1963-07-21,Male,White,Not Hispanic or Latino,Outdoor,PA,2
-11,to-airport,2013-08-30,PUBLIC,Florian Raudies,1982-04-15,Male,White,Not Hispanic or Latino,Rick O. Gilmore,1963-07-21,Male,White,Not Hispanic or Latino,NA,NA,2
-9819,Top-level materials,materials,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,2
