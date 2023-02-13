@@ -1,0 +1,468 @@
+session_id,session_name,session_date,session_release,participant_ID,participant_birthdate,participant_gender,participant_race,participant_ethnicity,participant_gestational age,participant_pregnancy term,participant_disability,participant_language,participant_country,participant_state,exclusion1_reason,exclusion2_reason,exclusion3_reason,exclusion4_reason,exclusion5_reason,exclusion6_reason,exclusion7_reason,exclusion8_reason,vol_id
+24082,Misc Files Testing,materials,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+33616,S_20131017_1200,2013-10-17,SHARED,S,2012-10-17,Male,White,Not Hispanic or Latino,NA,Full term,ASD,English,Australia,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+33660,S_20131019_1202,2013-10-19,SHARED,S,2012-10-17,Male,White,Not Hispanic or Latino,NA,Full term,ASD,English,Australia,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+33661,S_20131024_1207,2013-10-24,SHARED,S,2012-10-17,Male,White,Not Hispanic or Latino,NA,Full term,ASD,English,Australia,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+33662,S_20131027_1210,2013-10-27,SHARED,S,2012-10-17,Male,White,Not Hispanic or Latino,NA,Full term,ASD,English,Australia,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+33663,S_20131031_1214,2013-10-31,SHARED,S,2012-10-17,Male,White,Not Hispanic or Latino,NA,Full term,ASD,English,Australia,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+33664,S_20131103_1217,2013-11-03,SHARED,S,2012-10-17,Male,White,Not Hispanic or Latino,NA,Full term,ASD,English,Australia,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+33665,S_20131106_1220,2013-11-06,SHARED,S,2012-10-17,Male,White,Not Hispanic or Latino,NA,Full term,ASD,English,Australia,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+33666,S_20131110_1224,2013-11-10,SHARED,S,2012-10-17,Male,White,Not Hispanic or Latino,NA,Full term,ASD,English,Australia,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+33668,S_20131113_1227,2013-11-13,SHARED,S,2012-10-17,Male,White,Not Hispanic or Latino,NA,Full term,ASD,English,Australia,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+33669,S_20131117_1300,2013-11-17,SHARED,S,2012-10-17,Male,White,Not Hispanic or Latino,NA,Full term,ASD,English,Australia,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+33670,S_20131121_1304,2013-11-21,SHARED,S,2012-10-17,Male,White,Not Hispanic or Latino,NA,Full term,ASD,English,Australia,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+33671,S_20131123_1306,2013-11-23,SHARED,S,2012-10-17,Male,White,Not Hispanic or Latino,NA,Full term,ASD,English,Australia,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+33672,S_20131127_1310,2013-11-27,SHARED,S,2012-10-17,Male,White,Not Hispanic or Latino,NA,Full term,ASD,English,Australia,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+33673,S_20131130_1313,2013-11-30,SHARED,S,2012-10-17,Male,White,Not Hispanic or Latino,NA,Full term,ASD,English,Australia,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+33674,S_20131204_1317,2013-12-04,SHARED,S,2012-10-17,Male,White,Not Hispanic or Latino,NA,Full term,ASD,English,Australia,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+33675,S_20131207_1320,2013-12-07,SHARED,S,2012-10-17,Male,White,Not Hispanic or Latino,NA,Full term,ASD,English,Australia,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+33676,S_20131212_1325,2013-12-12,SHARED,S,2012-10-17,Male,White,Not Hispanic or Latino,NA,Full term,ASD,English,Australia,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+33677,S_20131214_1327,2013-12-14,SHARED,S,2012-10-17,Male,White,Not Hispanic or Latino,NA,Full term,ASD,English,Australia,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+33678,S_20131218_1401,2013-12-18,SHARED,S,2012-10-17,Male,White,Not Hispanic or Latino,NA,Full term,ASD,English,Australia,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+33679,S_20131221_1404,2013-12-21,SHARED,S,2012-10-17,Male,White,Not Hispanic or Latino,NA,Full term,ASD,English,Australia,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+33680,S_20131225_1408,2013-12-25,SHARED,S,2012-10-17,Male,White,Not Hispanic or Latino,NA,Full term,ASD,English,Australia,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+33681,S_20131226_1409,2013-12-26,SHARED,S,2012-10-17,Male,White,Not Hispanic or Latino,NA,Full term,ASD,English,Australia,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+33682,S_20131228_1411,2013-12-28,SHARED,S,2012-10-17,Male,White,Not Hispanic or Latino,NA,Full term,ASD,English,Australia,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+33683,S_20140101_1415,2014-01-01,SHARED,S,2012-10-17,Male,White,Not Hispanic or Latino,NA,Full term,ASD,English,Australia,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+33684,S_20140104_1418,2014-01-04,SHARED,S,2012-10-17,Male,White,Not Hispanic or Latino,NA,Full term,ASD,English,Australia,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+33686,S_20140107_1421,2014-01-07,SHARED,S,2012-10-17,Male,White,Not Hispanic or Latino,NA,Full term,ASD,English,Australia,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+33687,S_20140112_1426,2014-01-12,SHARED,S,2012-10-17,Male,White,Not Hispanic or Latino,NA,Full term,ASD,English,Australia,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+33688,S_20140115_1429,2014-01-15,SHARED,S,2012-10-17,Male,White,Not Hispanic or Latino,NA,Full term,ASD,English,Australia,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+33689,S_20140119_1502,2014-01-19,SHARED,S,2012-10-17,Male,White,Not Hispanic or Latino,NA,Full term,ASD,English,Australia,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+33690,S_20140123_1506,2014-01-23,SHARED,S,2012-10-17,Male,White,Not Hispanic or Latino,NA,Full term,ASD,English,Australia,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+33691,S_20140125_1508,2014-01-25,SHARED,S,2012-10-17,Male,White,Not Hispanic or Latino,NA,Full term,ASD,English,Australia,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+33692,S_20140129_1512,2014-01-29,SHARED,S,2012-10-17,Male,White,Not Hispanic or Latino,NA,Full term,ASD,English,Australia,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+33693,S_20140201_1515,2014-02-01,SHARED,S,2012-10-17,Male,White,Not Hispanic or Latino,NA,Full term,ASD,English,Australia,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+33694,S_20140202_1516,2014-02-02,SHARED,S,2012-10-17,Male,White,Not Hispanic or Latino,NA,Full term,ASD,English,Australia,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+33695,S_20140206_1520,2014-02-06,SHARED,S,2012-10-17,Male,White,Not Hispanic or Latino,NA,Full term,ASD,English,Australia,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+33696,S_20140208_1522,2014-02-08,SHARED,S,2012-10-17,Male,White,Not Hispanic or Latino,NA,Full term,ASD,English,Australia,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+33697,S_20140212_1526,2014-02-12,SHARED,S,2012-10-17,Male,White,Not Hispanic or Latino,NA,Full term,ASD,English,Australia,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+33701,S_20140215_1529,2014-02-15,SHARED,S,2012-10-17,Male,White,Not Hispanic or Latino,NA,Full term,ASD,English,Australia,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+33702,S_20140220_1603,2014-02-20,SHARED,S,2012-10-17,Male,White,Not Hispanic or Latino,NA,Full term,ASD,English,Australia,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+33703,S_20140222_1605,2014-02-22,SHARED,S,2012-10-17,Male,White,Not Hispanic or Latino,NA,Full term,ASD,English,Australia,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+33704,S_20140227_1610,2014-02-27,SHARED,S,2012-10-17,Male,White,Not Hispanic or Latino,NA,Full term,ASD,English,Australia,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+33706,S_20140302_1613,2014-03-02,SHARED,S,2012-10-17,Male,White,Not Hispanic or Latino,NA,Full term,ASD,English,Australia,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+33708,S_20140305_1616,2014-03-05,SHARED,S,2012-10-17,Male,White,Not Hispanic or Latino,NA,Full term,ASD,English,Australia,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+33711,S_20140308_1619,2014-03-08,SHARED,S,2012-10-17,Male,White,Not Hispanic or Latino,NA,Full term,ASD,English,Australia,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+33712,S_20140309_1620,2014-03-09,SHARED,S,2012-10-17,Male,White,Not Hispanic or Latino,NA,Full term,ASD,English,Australia,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+33714,S_20140312_1623,2014-03-12,SHARED,S,2012-10-17,Male,White,Not Hispanic or Latino,NA,Full term,ASD,English,Australia,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+33716,S_20140315_1626,2014-03-15,SHARED,S,2012-10-17,Male,White,Not Hispanic or Latino,NA,Full term,ASD,English,Australia,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+33719,S_20140320_1703,2014-03-20,SHARED,S,2012-10-17,Male,White,Not Hispanic or Latino,NA,Full term,ASD,English,Australia,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+33744,S_20140322_1705,2014-03-22,SHARED,S,2012-10-17,Male,White,Not Hispanic or Latino,NA,Full term,ASD,English,Australia,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+33783,S_20140326_1709,2014-03-26,SHARED,S,2012-10-17,Male,White,Not Hispanic or Latino,NA,Full term,ASD,English,Australia,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+33784,S_20140329_1712,2014-03-29,SHARED,S,2012-10-17,Male,White,Not Hispanic or Latino,NA,Full term,ASD,English,Australia,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+33785,S_20140413_1727,2014-04-13,SHARED,S,2012-10-17,Male,White,Not Hispanic or Latino,NA,Full term,ASD,English,Australia,NA,License Plate shown,Privacy Concern (verified),NA,NA,NA,NA,NA,NA,564
+33786,S_20140418_1801,2014-04-18,SHARED,S,2012-10-17,Male,White,Not Hispanic or Latino,NA,Full term,ASD,English,Australia,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+33787,S_20140403_1717,2014-04-03,SHARED,S,2012-10-17,Male,White,Not Hispanic or Latino,NA,Full term,ASD,English,Australia,NA,Other,Other,Other,Other,Other,Other,Other,Other,564
+33788,S_20140423_1806,2014-04-23,SHARED,S,2012-10-17,Male,White,Not Hispanic or Latino,NA,Full term,ASD,English,Australia,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+33789,S_20140508_1821,2014-05-08,SHARED,S,2012-10-17,Male,White,Not Hispanic or Latino,NA,Full term,ASD,English,Australia,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+33790,S_20140510_1823,2014-05-10,SHARED,S,2012-10-17,Male,White,Not Hispanic or Latino,NA,Full term,ASD,English,Australia,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+33792,S_20140514_1827,2014-05-14,SHARED,S,2012-10-17,Male,White,Not Hispanic or Latino,NA,Full term,ASD,English,Australia,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+33795,S_20140517_1900,2014-05-17,SHARED,S,2012-10-17,Male,White,Not Hispanic or Latino,NA,Full term,ASD,English,Australia,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+33797,S_20140522_1905,2014-05-22,SHARED,S,2012-10-17,Male,White,Not Hispanic or Latino,NA,Full term,ASD,English,Australia,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+33798,S_20140524_1907,2014-05-24,SHARED,S,2012-10-17,Male,White,Not Hispanic or Latino,NA,Full term,ASD,English,Australia,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+33799,S_20140528_1911,2014-05-28,SHARED,S,2012-10-17,Male,White,Not Hispanic or Latino,NA,Full term,ASD,English,Australia,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+33800,S_20140531_1914,2014-05-31,SHARED,S,2012-10-17,Male,White,Not Hispanic or Latino,NA,Full term,ASD,English,Australia,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+33801,S_20140605_1919,2014-06-05,SHARED,S,2012-10-17,Male,White,Not Hispanic or Latino,NA,Full term,ASD,English,Australia,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+33803,S_20140607_1921,2014-06-07,SHARED,S,2012-10-17,Male,White,Not Hispanic or Latino,NA,Full term,ASD,English,Australia,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+33804,S_20140609_1923,2014-06-09,SHARED,S,2012-10-17,Male,White,Not Hispanic or Latino,NA,Full term,ASD,English,Australia,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+33807,S_20140611_1925,2014-06-11,SHARED,S,2012-10-17,Male,White,Not Hispanic or Latino,NA,Full term,ASD,English,Australia,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+33809,S_20140612_1926,2014-06-12,SHARED,S,2012-10-17,Male,White,Not Hispanic or Latino,NA,Full term,ASD,English,Australia,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+33810,S_20140614_1928,2014-06-14,SHARED,S,2012-10-17,Male,White,Not Hispanic or Latino,NA,Full term,ASD,English,Australia,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+33811,S_20140618_2001,2014-06-18,SHARED,S,2012-10-17,Male,White,Not Hispanic or Latino,NA,Full term,ASD,English,Australia,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+33812,S_20140621_2004,2014-06-21,SHARED,S,2012-10-17,Male,White,Not Hispanic or Latino,NA,Full term,ASD,English,Australia,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+33813,S_20140622_2005,2014-06-22,SHARED,S,2012-10-17,Male,White,Not Hispanic or Latino,NA,Full term,ASD,English,Australia,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+33814,S_20140628_2011,2014-06-28,SHARED,S,2012-10-17,Male,White,Not Hispanic or Latino,NA,Full term,ASD,English,Australia,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+33815,S_20140601_1915,2014-06-01,SHARED,S,2012-10-17,Male,White,Not Hispanic or Latino,NA,Full term,ASD,English,Australia,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+33816,S_20140705_2018,2014-07-05,SHARED,S,2012-10-17,Male,White,Not Hispanic or Latino,NA,Full term,ASD,English,Australia,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+33817,S_20140707_2020,2014-07-07,SHARED,S,2012-10-17,Male,White,Not Hispanic or Latino,NA,Full term,ASD,English,Australia,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+33824,S_20140710_2023,2014-07-10,SHARED,S,2012-10-17,Male,White,Not Hispanic or Latino,NA,Full term,ASD,English,Australia,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+33825,S_20140713_2026,2014-07-13,SHARED,S,2012-10-17,Male,White,Not Hispanic or Latino,NA,Full term,ASD,English,Australia,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+33826,S_20140717_2100,2014-07-17,SHARED,S,2012-10-17,Male,White,Not Hispanic or Latino,NA,Full term,ASD,English,Australia,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+33827,S_20140720_2103,2014-07-20,SHARED,S,2012-10-17,Male,White,Not Hispanic or Latino,NA,Full term,ASD,English,Australia,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+33828,S_20140729_2112,2014-07-29,SHARED,S,2012-10-17,Male,White,Not Hispanic or Latino,NA,Full term,ASD,English,Australia,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+33829,S_20140801_2115,2014-08-01,SHARED,S,2012-10-17,Male,White,Not Hispanic or Latino,NA,Full term,ASD,English,Australia,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+33830,S_20140806_2120,2014-08-06,SHARED,S,2012-10-17,Male,White,Not Hispanic or Latino,NA,Full term,ASD,English,Australia,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+33831,S_20140809_2123,2014-08-09,SHARED,S,2012-10-17,Male,White,Not Hispanic or Latino,NA,Full term,ASD,English,Australia,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+33833,S_20140814_2128,2014-08-14,SHARED,S,2012-10-17,Male,White,Not Hispanic or Latino,NA,Full term,ASD,English,Australia,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+33834,S_20140815_2129,2014-08-15,SHARED,S,2012-10-17,Male,White,Not Hispanic or Latino,NA,Full term,ASD,English,Australia,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+33835,S_20140816_2130,2014-08-16,SHARED,S,2012-10-17,Male,White,Not Hispanic or Latino,NA,Full term,ASD,English,Australia,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+33836,S_20140821_2204,2014-08-21,SHARED,S,2012-10-17,Male,White,Not Hispanic or Latino,NA,Full term,ASD,English,Australia,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+33837,S_20140823_2206,2014-08-23,SHARED,S,2012-10-17,Male,White,Not Hispanic or Latino,NA,Full term,ASD,English,Australia,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+33838,S_20140824_2207,2014-08-24,SHARED,S,2012-10-17,Male,White,Not Hispanic or Latino,NA,Full term,ASD,English,Australia,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+33840,S_20140828_2211,2014-08-28,SHARED,S,2012-10-17,Male,White,Not Hispanic or Latino,NA,Full term,ASD,English,Australia,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+33841,S_20140830_2213,2014-08-30,SHARED,S,2012-10-17,Male,White,Not Hispanic or Latino,NA,Full term,ASD,English,Australia,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+33842,S_20140903_2217,2014-09-03,SHARED,S,2012-10-17,Male,White,Not Hispanic or Latino,NA,Full term,ASD,English,Australia,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+33844,S_20140906_2220,2014-09-06,SHARED,S,2012-10-17,Male,White,Not Hispanic or Latino,NA,Full term,ASD,English,Australia,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+33845,S_20140907_2221,2014-09-07,SHARED,S,2012-10-17,Male,White,Not Hispanic or Latino,NA,Full term,ASD,English,Australia,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+33846,S_20140911_2225,2014-09-11,SHARED,S,2012-10-17,Male,White,Not Hispanic or Latino,NA,Full term,ASD,English,Australia,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+33847,S_20140913_2227,2014-09-13,SHARED,S,2012-10-17,Male,White,Not Hispanic or Latino,NA,Full term,ASD,English,Australia,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+33849,S_20140917_2300,2014-09-17,SHARED,S,2012-10-17,Male,White,Not Hispanic or Latino,NA,Full term,ASD,English,Australia,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+33850,S_20140920_2303,2014-09-20,SHARED,S,2012-10-17,Male,White,Not Hispanic or Latino,NA,Full term,ASD,English,Australia,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+33851,S_20140921_2304,2014-09-21,SHARED,S,2012-10-17,Male,White,Not Hispanic or Latino,NA,Full term,ASD,English,Australia,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+33852,S_20140926_2309,2014-09-26,SHARED,S,2012-10-17,Male,White,Not Hispanic or Latino,NA,Full term,ASD,English,Australia,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+33853,S_20141001_2314,2014-10-01,SHARED,S,2012-10-17,Male,White,Not Hispanic or Latino,NA,Full term,ASD,English,Australia,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+33855,S_20141004_2317,2014-10-04,SHARED,S,2012-10-17,Male,White,Not Hispanic or Latino,NA,Full term,ASD,English,Australia,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+33856,S_20141025_2408,2014-10-25,SHARED,S,2012-10-17,Male,White,Not Hispanic or Latino,NA,Full term,ASD,English,Australia,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+33857,S_20141029_2412,2014-10-29,SHARED,S,2012-10-17,Male,White,Not Hispanic or Latino,NA,Full term,ASD,English,Australia,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+33859,S_20141109_2423,2014-11-09,SHARED,S,2012-10-17,Male,White,Not Hispanic or Latino,NA,Full term,ASD,English,Australia,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+33860,S_20141112_2426,2014-11-12,SHARED,S,2012-10-17,Male,White,Not Hispanic or Latino,NA,Full term,ASD,English,Australia,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+33861,S_20141115_2429,2014-11-15,SHARED,S,2012-10-17,Male,White,Not Hispanic or Latino,NA,Full term,ASD,English,Australia,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+33862,S_20141116_2430,2014-11-16,SHARED,S,2012-10-17,Male,White,Not Hispanic or Latino,NA,Full term,ASD,English,Australia,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+33864,S_20141119_2502,2014-11-19,SHARED,S,2012-10-17,Male,White,Not Hispanic or Latino,NA,Full term,ASD,English,Australia,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+33865,S_20141122_2505,2014-11-22,SHARED,S,2012-10-17,Male,White,Not Hispanic or Latino,NA,Full term,ASD,English,Australia,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+33866,S_20141129_2512,2014-11-29,SHARED,S,2012-10-17,Male,White,Not Hispanic or Latino,NA,Full term,ASD,English,Australia,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+33907,S_20141130_2513,2014-11-30,SHARED,S,2012-10-17,Male,White,Not Hispanic or Latino,NA,Full term,ASD,English,Australia,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+33908,S_20141203_2516,2014-12-03,SHARED,S,2012-10-17,Male,White,Not Hispanic or Latino,NA,Full term,ASD,English,Australia,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+33909,S_20141206_2519,2014-12-06,SHARED,S,2012-10-17,Male,White,Not Hispanic or Latino,NA,Full term,ASD,English,Australia,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+33910,S_20141207_2520,2014-12-07,SHARED,S,2012-10-17,Male,White,Not Hispanic or Latino,NA,Full term,ASD,English,Australia,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+33911,S_20141211_2524,2014-12-11,SHARED,S,2012-10-17,Male,White,Not Hispanic or Latino,NA,Full term,ASD,English,Australia,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+33913,S_20141214_2527,2014-12-14,SHARED,S,2012-10-17,Male,White,Not Hispanic or Latino,NA,Full term,ASD,English,Australia,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+33914,S_20141218_2601,2014-12-04,SHARED,S,2012-10-17,Male,White,Not Hispanic or Latino,NA,Full term,ASD,English,Australia,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+33916,S_20141221_2604,2014-12-21,SHARED,S,2012-10-17,Male,White,Not Hispanic or Latino,NA,Full term,ASD,English,Australia,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+33917,S_20141224_2607,2014-12-24,SHARED,S,2012-10-17,Male,White,Not Hispanic or Latino,NA,Full term,ASD,English,Australia,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+33918,S_20141228_2611,2014-12-28,SHARED,S,2012-10-17,Male,White,Not Hispanic or Latino,NA,Full term,ASD,English,Australia,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+33919,S_20150101_2615,2015-01-01,SHARED,S,2012-10-17,Male,White,Not Hispanic or Latino,NA,Full term,ASD,English,Australia,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+33920,S_20150104_2618,2015-01-04,SHARED,S,2012-10-17,Male,White,Not Hispanic or Latino,NA,Full term,ASD,English,Australia,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+33921,S_20150107_2621,2015-01-07,SHARED,S,2012-10-17,Male,White,Not Hispanic or Latino,NA,Full term,ASD,English,Australia,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+33922,S_20150111_2625,2015-01-11,SHARED,S,2012-10-17,Male,White,Not Hispanic or Latino,NA,Full term,ASD,English,Australia,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+33923,S_20150115_2629,2015-01-15,SHARED,S,2012-10-17,Male,White,Not Hispanic or Latino,NA,Full term,ASD,English,Australia,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+33924,S_20150118_2701,2015-01-18,SHARED,S,2012-10-17,Male,White,Not Hispanic or Latino,NA,Full term,ASD,English,Australia,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+33925,S_20150121_2704,2015-01-21,SHARED,S,2012-10-17,Male,White,Not Hispanic or Latino,NA,Full term,ASD,English,Australia,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+33926,S_20150124_2707,2015-01-24,SHARED,S,2012-10-17,Male,White,Not Hispanic or Latino,NA,Full term,ASD,English,Australia,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+33927,S_20150131_2714,2015-01-31,SHARED,S,2012-10-17,Male,White,Not Hispanic or Latino,NA,Full term,ASD,English,Australia,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+33928,S_20150203_2717,2015-02-03,SHARED,S,2012-10-17,Male,White,Not Hispanic or Latino,NA,Full term,ASD,English,Australia,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+33929,S_20150209_2723,2015-02-09,SHARED,S,2012-10-17,Male,White,Not Hispanic or Latino,NA,Full term,ASD,English,Australia,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+33930,S_20150215_2729,2015-02-15,SHARED,S,2012-10-17,Male,White,Not Hispanic or Latino,NA,Full term,ASD,English,Australia,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+33946,S_20150219_2802,2015-02-19,SHARED,S,2012-10-17,Male,White,Not Hispanic or Latino,NA,Full term,ASD,English,Australia,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+33948,S_20150222_2805,2015-02-22,SHARED,S,2012-10-17,Male,White,Not Hispanic or Latino,NA,Full term,ASD,English,Australia,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+33950,S_20150223_2806,2015-02-23,SHARED,S,2012-10-17,Male,White,Not Hispanic or Latino,NA,Full term,ASD,English,Australia,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+33952,S_20150226_2809,2015-02-26,SHARED,S,2012-10-17,Male,White,Not Hispanic or Latino,NA,Full term,ASD,English,Australia,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+33954,S_20150301_2812,2015-03-01,SHARED,S,2012-10-17,Male,White,Not Hispanic or Latino,NA,Full term,ASD,English,Australia,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+33955,S_20150309_2820,2015-03-09,SHARED,S,2012-10-17,Male,White,Not Hispanic or Latino,NA,Full term,ASD,English,Australia,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+33957,S_20150302_2813,2015-03-02,SHARED,S,2012-10-17,Male,White,Not Hispanic or Latino,NA,Full term,ASD,English,Australia,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+33959,S_20150312_2823,2015-03-12,SHARED,S,2012-10-17,Male,White,Not Hispanic or Latino,NA,Full term,ASD,English,Australia,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+33961,S_20150314_2825,2015-03-14,SHARED,S,2012-10-17,Male,White,Not Hispanic or Latino,NA,Full term,ASD,English,Australia,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+33962,S_20150315_2826,2015-03-15,SHARED,S,2012-10-17,Male,White,Not Hispanic or Latino,NA,Full term,ASD,English,Australia,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+33965,S_20150319_2902,2015-03-19,SHARED,S,2012-10-17,Male,White,Not Hispanic or Latino,NA,Full term,ASD,English,Australia,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+33967,S_20150322_2905,2015-03-22,SHARED,S,2012-10-17,Male,White,Not Hispanic or Latino,NA,Full term,ASD,English,Australia,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+33970,S_20150324_2907,2015-03-24,SHARED,S,2012-10-17,Male,White,Not Hispanic or Latino,NA,Full term,ASD,English,Australia,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+33972,S_20150329_2912,2015-03-29,SHARED,S,2012-10-17,Male,White,Not Hispanic or Latino,NA,Full term,ASD,English,Australia,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+33978,S_20150331_2914,2015-03-31,SHARED,S,2012-10-17,Male,White,Not Hispanic or Latino,NA,Full term,ASD,English,Australia,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+33983,S_20150403_2917,2015-04-03,SHARED,S,2012-10-17,Male,White,Not Hispanic or Latino,NA,Full term,ASD,English,Australia,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+33985,S_20150405_2919,2015-04-05,SHARED,S,2012-10-17,Male,White,Not Hispanic or Latino,NA,Full term,ASD,English,Australia,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+33988,S_20150409_2923,2015-04-09,SHARED,S,2012-10-17,Male,White,Not Hispanic or Latino,NA,Full term,ASD,English,Australia,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+33991,S_20150412_2926,2015-04-12,SHARED,S,2012-10-17,Male,White,Not Hispanic or Latino,NA,Full term,ASD,English,Australia,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+33993,S_20150416_2930,2015-04-15,SHARED,S,2012-10-17,Male,White,Not Hispanic or Latino,NA,Full term,ASD,English,Australia,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+33995,S_20150419_3001,2015-04-19,SHARED,S,2012-10-17,Male,White,Not Hispanic or Latino,NA,Full term,ASD,English,Australia,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+34003,S_20130417_0600,2013-04-17,SHARED,S,2012-10-17,Male,White,Not Hispanic or Latino,NA,Full term,ASD,English,Australia,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+34005,S_20130421_0604,2013-04-21,SHARED,S,2012-10-17,Male,White,Not Hispanic or Latino,NA,Full term,ASD,English,Australia,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+34007,S_20130424_0607,2013-04-24,SHARED,S,2012-10-17,Male,White,Not Hispanic or Latino,NA,Full term,ASD,English,Australia,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+34008,S_20130428_0611,2013-04-28,SHARED,S,2012-10-17,Male,White,Not Hispanic or Latino,NA,Full term,ASD,English,Australia,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+34011,S_20130501_0614,2013-05-01,SHARED,S,2012-10-17,Male,White,Not Hispanic or Latino,NA,Full term,ASD,English,Australia,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+34012,S_20130504_0617,2013-05-04,SHARED,S,2012-10-17,Male,White,Not Hispanic or Latino,NA,Full term,ASD,English,Australia,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+34015,S_20130508_0621,2013-05-08,SHARED,S,2012-10-17,Male,White,Not Hispanic or Latino,NA,Full term,ASD,English,Australia,NA,License Plate shown,Other,NA,NA,NA,NA,NA,NA,564
+34017,S_20130512_0625,2013-05-12,SHARED,S,2012-10-17,Male,White,Not Hispanic or Latino,NA,Full term,ASD,English,Australia,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+34018,S_20130515_0628,2013-05-15,SHARED,S,2012-10-17,Male,White,Not Hispanic or Latino,NA,Full term,ASD,English,Australia,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+34020,S_20130519_0702,2013-05-19,SHARED,S,2012-10-17,Male,White,Not Hispanic or Latino,NA,Full term,ASD,English,Australia,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+34021,S_20130522_0705,2013-05-22,SHARED,S,2012-10-17,Male,White,Not Hispanic or Latino,NA,Full term,ASD,English,Australia,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+34022,S_20130526_0709,2013-05-26,SHARED,S,2012-10-17,Male,White,Not Hispanic or Latino,NA,Full term,ASD,English,Australia,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+34026,S_20130529_0712,2013-05-29,SHARED,S,2012-10-17,Male,White,Not Hispanic or Latino,NA,Full term,ASD,English,Australia,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+34027,S_20130602_0716,2013-06-02,SHARED,S,2012-10-17,Male,White,Not Hispanic or Latino,NA,Full term,ASD,English,Australia,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+34029,S_20130605_0719,2013-06-05,SHARED,S,2012-10-17,Male,White,Not Hispanic or Latino,NA,Full term,ASD,English,Australia,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+34030,S_20130608_0722,2013-06-08,SHARED,S,2012-10-17,Male,White,Not Hispanic or Latino,NA,Full term,ASD,English,Australia,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+34031,S_20130612_0726,2013-06-12,SHARED,S,2012-10-17,Male,White,Not Hispanic or Latino,NA,Full term,ASD,English,Australia,NA,Limited Playback,Other,NA,NA,NA,NA,NA,NA,564
+34032,S_20130616_0730,2013-06-16,SHARED,S,2012-10-17,Male,White,Not Hispanic or Latino,NA,Full term,ASD,English,Australia,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+34034,S_20130619_0802,2013-06-19,SHARED,S,2012-10-17,Male,White,Not Hispanic or Latino,NA,Full term,ASD,English,Australia,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+34035,S_20130622_0805,2013-06-22,SHARED,S,2012-10-17,Male,White,Not Hispanic or Latino,NA,Full term,ASD,English,Australia,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+34036,S_20130626_0809,2013-06-26,SHARED,S,2012-10-17,Male,White,Not Hispanic or Latino,NA,Full term,ASD,English,Australia,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+34037,S_20130630_0813,2013-06-30,SHARED,S,2012-10-17,Male,White,Not Hispanic or Latino,NA,Full term,ASD,English,Australia,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+34038,S_20130703_0816,2013-07-03,SHARED,S,2012-10-17,Male,White,Not Hispanic or Latino,NA,Full term,ASD,English,Australia,NA,Limited Playback,Other,NA,NA,NA,NA,NA,NA,564
+34040,S_20130706_0819,2013-07-06,SHARED,S,2012-10-17,Male,White,Not Hispanic or Latino,NA,Full term,ASD,English,Australia,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+34041,S_20130710_0823,2013-07-10,SHARED,S,2012-10-17,Male,White,Not Hispanic or Latino,NA,Full term,ASD,English,Australia,NA,Limited Playback,Other,NA,NA,NA,NA,NA,NA,564
+34042,S_20130714_0827,2013-07-14,SHARED,S,2012-10-17,Male,White,Not Hispanic or Latino,NA,Full term,ASD,English,Australia,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+34043,S_20130717_0900,2013-07-17,SHARED,S,2012-10-17,Male,White,Not Hispanic or Latino,NA,Full term,ASD,English,Australia,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+34044,S_20130720_0903,2013-07-20,SHARED,S,2012-10-17,Male,White,Not Hispanic or Latino,NA,Full term,ASD,English,Australia,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+34045,S_20130724_0907,2013-07-24,SHARED,S,2012-10-17,Male,White,Not Hispanic or Latino,NA,Full term,ASD,English,Australia,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+34046,S_20130728_0911,2013-07-28,SHARED,S,2012-10-17,Male,White,Not Hispanic or Latino,NA,Full term,ASD,English,Australia,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+34047,S_20130731_0914,2013-07-31,SHARED,S,2012-10-17,Male,White,Not Hispanic or Latino,NA,Full term,ASD,English,Australia,NA,Limited Playback,Other,NA,NA,NA,NA,NA,NA,564
+34048,S_20130803_0917,2013-08-03,SHARED,S,2012-10-17,Male,White,Not Hispanic or Latino,NA,Full term,ASD,English,Australia,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+34049,S_20130808_0922,2013-08-08,SHARED,S,2012-10-17,Male,White,Not Hispanic or Latino,NA,Full term,ASD,English,Australia,NA,Limited Playback,Other,NA,NA,NA,NA,NA,NA,564
+34050,S_20130811_0925,2013-08-11,SHARED,S,2012-10-17,Male,White,Not Hispanic or Latino,NA,Full term,ASD,English,Australia,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+34051,S_20130814_0928,2013-08-14,SHARED,S,2012-10-17,Male,White,Not Hispanic or Latino,NA,Full term,ASD,English,Australia,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+34052,S_20130818_1001,2013-08-18,SHARED,S,2012-10-17,Male,White,Not Hispanic or Latino,NA,Full term,ASD,English,Australia,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+34053,S_20130822_1005,2013-08-22,SHARED,S,2012-10-17,Male,White,Not Hispanic or Latino,NA,Full term,ASD,English,Australia,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+34054,S_20130824_1007,2013-08-24,SHARED,S,2012-10-17,Male,White,Not Hispanic or Latino,NA,Full term,ASD,English,Australia,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+34055,S_20130829_1012,2013-08-29,SHARED,S,2012-10-17,Male,White,Not Hispanic or Latino,NA,Full term,ASD,English,Australia,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+34056,S_20130901_1015,2013-09-01,SHARED,S,2012-10-17,Male,White,Not Hispanic or Latino,NA,Full term,ASD,English,Australia,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+34057,S_20130905_1019,2013-09-05,SHARED,S,2012-10-17,Male,White,Not Hispanic or Latino,NA,Full term,ASD,English,Australia,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+34058,S_20130908_1022,2013-09-08,SHARED,S,2012-10-17,Male,White,Not Hispanic or Latino,NA,Full term,ASD,English,Australia,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+34059,S_20130911_1025,2013-09-11,SHARED,S,2012-10-17,Male,White,Not Hispanic or Latino,NA,Full term,ASD,English,Australia,NA,License Plate shown,Privacy Concern (unchecked),NA,NA,NA,NA,NA,NA,564
+34060,S_20130915_1029,2013-09-15,SHARED,S,2012-10-17,Male,White,Not Hispanic or Latino,NA,Full term,ASD,English,Australia,NA,Privacy Concern (unchecked),NA,NA,NA,NA,NA,NA,NA,564
+34061,S_20130919_1102,2013-09-19,SHARED,S,2012-10-17,Male,White,Not Hispanic or Latino,NA,Full term,ASD,English,Australia,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+34062,S_20130922_1105,2013-09-22,SHARED,S,2012-10-17,Male,White,Not Hispanic or Latino,NA,Full term,ASD,English,Australia,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+34063,S_20130925_1108,2013-09-25,SHARED,S,2012-10-17,Male,White,Not Hispanic or Latino,NA,Full term,ASD,English,Australia,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+34064,S_20130928_1111,2013-09-28,SHARED,S,2012-10-17,Male,White,Not Hispanic or Latino,NA,Full term,ASD,English,Australia,NA,Privacy Concern (unchecked),NA,NA,NA,NA,NA,NA,NA,564
+34065,S_20131003_1116,2013-10-03,SHARED,S,2012-10-17,Male,White,Not Hispanic or Latino,NA,Full term,ASD,English,Australia,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+34066,S_20131009_1122,2013-10-09,SHARED,S,2012-10-17,Male,White,Not Hispanic or Latino,NA,Full term,ASD,English,Australia,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+34067,S_20131012_1125,2013-10-12,SHARED,S,2012-10-17,Male,White,Not Hispanic or Latino,NA,Full term,ASD,English,Australia,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+34080,S_20140405_1719,2014-04-05,SHARED,S,2012-10-17,Male,White,Not Hispanic or Latino,NA,Full term,ASD,English,Australia,NA,License Plate shown,NA,NA,NA,NA,NA,NA,NA,564
+34082,S_20140406_1720,2014-04-06,SHARED,S,2012-10-17,Male,White,Not Hispanic or Latino,NA,Full term,ASD,English,Australia,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+34083,S_20140409_1723,2014-04-09,SHARED,S,2012-10-17,Male,White,Not Hispanic or Latino,NA,Full term,ASD,English,Australia,NA,Other,Other,NA,NA,NA,NA,NA,NA,564
+34086,S_20140420_1803,2014-04-20,SHARED,S,2012-10-17,Male,White,Not Hispanic or Latino,NA,Full term,ASD,English,Australia,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+34088,S_20140426_1809,2014-04-26,SHARED,S,2012-10-17,Male,White,Not Hispanic or Latino,NA,Full term,ASD,English,Australia,NA,License Plate shown,NA,NA,NA,NA,NA,NA,NA,564
+34091,S_20140430_1813,2014-04-30,SHARED,S,2012-10-17,Male,White,Not Hispanic or Latino,NA,Full term,ASD,English,Australia,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+34094,S_20140503_1816,2014-05-03,SHARED,S,2012-10-17,Male,White,Not Hispanic or Latino,NA,Full term,ASD,English,Australia,NA,Other,Other,Other,NA,NA,NA,NA,NA,564
+34096,S_20140928_2311,2014-09-28,SHARED,S,2012-10-17,Male,White,Not Hispanic or Latino,NA,Full term,ASD,English,Australia,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+34097,S_20141009_2322,2014-10-09,SHARED,S,2012-10-17,Male,White,Not Hispanic or Latino,NA,Full term,ASD,English,Australia,NA,Other,License Plate shown,Other,Other,NA,NA,NA,NA,564
+34098,S_20141011_2324,2014-10-11,SHARED,S,2012-10-17,Male,White,Not Hispanic or Latino,NA,Full term,ASD,English,Australia,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+34100,S_20141015_2328,2014-10-15,SHARED,S,2012-10-17,Male,White,Not Hispanic or Latino,NA,Full term,ASD,English,Australia,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+34103,S_20141018_2401,2014-10-15,SHARED,S,2012-10-17,Male,White,Not Hispanic or Latino,NA,Full term,ASD,English,Australia,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+34104,S_20141019_2402,2014-10-19,SHARED,S,2012-10-17,Male,White,Not Hispanic or Latino,NA,Full term,ASD,English,Australia,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+34106,S_20141023_2406,2014-10-23,SHARED,S,2012-10-17,Male,White,Not Hispanic or Latino,NA,Full term,ASD,English,Australia,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+34108,S_20141026_2409,2014-10-26,SHARED,S,2012-10-17,Male,White,Not Hispanic or Latino,NA,Full term,ASD,English,Australia,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+34109,S_20141101_2415,2014-11-01,SHARED,S,2012-10-17,Male,White,Not Hispanic or Latino,NA,Full term,ASD,English,Australia,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+34110,S_20141102_2416,2014-11-02,SHARED,S,2012-10-17,Male,White,Not Hispanic or Latino,NA,Full term,ASD,English,Australia,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+34112,S_20141106_2420,2014-11-06,SHARED,S,2012-10-17,Male,White,Not Hispanic or Latino,NA,Full term,ASD,English,Australia,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+34113,S_20141108_2422,2014-11-08,SHARED,S,2012-10-17,Male,White,Not Hispanic or Latino,NA,Full term,ASD,English,Australia,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+34116,A_20130531_0818,2013-05-31,SHARED,Alice,2012-09-13,Female,White,Not Hispanic or Latino,NA,Full term,typical,English,US,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+34117,A_20130601_0819,2013-06-01,SHARED,Alice,2012-09-13,Female,White,Not Hispanic or Latino,NA,Full term,typical,English,US,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+34118,A_20130607_0825,2013-06-07,SHARED,Alice,2012-09-13,Female,White,Not Hispanic or Latino,NA,Full term,typical,English,US,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+34119,A_20130609_0827,2013-06-09,SHARED,Alice,2012-09-13,Female,White,Not Hispanic or Latino,NA,Full term,typical,English,US,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+34120,A_20130612_0830,2013-06-12,SHARED,Alice,2012-09-13,Female,White,Not Hispanic or Latino,NA,Full term,typical,English,US,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+34121,A_20130614_0901,2013-06-14,SHARED,Alice,2012-09-13,Female,White,Not Hispanic or Latino,NA,Full term,typical,English,US,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+34122,A_20130617_0904,2013-06-17,SHARED,Alice,2012-09-13,Female,White,Not Hispanic or Latino,NA,Full term,typical,English,US,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+34123,A_20130622_0909,2013-06-22,SHARED,Alice,2012-09-13,Female,White,Not Hispanic or Latino,NA,Full term,typical,English,US,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+34124,A_20130624_0911,2013-06-24,SHARED,Alice,2012-09-13,Female,White,Not Hispanic or Latino,NA,Full term,typical,English,US,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+34125,A_20130628_0915,2013-06-28,SHARED,Alice,2012-09-13,Female,White,Not Hispanic or Latino,NA,Full term,typical,English,US,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+34128,A_20130711_0928,2013-07-11,SHARED,Alice,2012-09-13,Female,White,Not Hispanic or Latino,NA,Full term,typical,English,US,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+34129,A_20130712_0929,2013-07-12,SHARED,Alice,2012-09-13,Female,White,Not Hispanic or Latino,NA,Full term,typical,English,US,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+34130,A_20130719_1006,2013-07-19,SHARED,Alice,2012-09-13,Female,White,Not Hispanic or Latino,NA,Full term,typical,English,US,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+34131,A_20130721_1008,2013-07-21,SHARED,Alice,2012-09-13,Female,White,Not Hispanic or Latino,NA,Full term,typical,English,US,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+34134,A_20130726_1013,2013-07-26,SHARED,Alice,2012-09-13,Female,White,Not Hispanic or Latino,NA,Full term,typical,English,US,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+34146,A_20130727_1014,2013-07-27,SHARED,Alice,2012-09-13,Female,White,Not Hispanic or Latino,NA,Full term,typical,English,US,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+34147,A_20130731_1018,2013-07-31,SHARED,Alice,2012-09-13,Female,White,Not Hispanic or Latino,NA,Full term,typical,English,US,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+34148,A_20130802_1020,2013-08-02,SHARED,Alice,2012-09-13,Female,White,Not Hispanic or Latino,NA,Full term,typical,English,US,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+34149,A_20130808_1026,2013-08-08,SHARED,Alice,2012-09-13,Female,White,Not Hispanic or Latino,NA,Full term,typical,English,US,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+34150,A_20130809_1027,2013-08-09,SHARED,Alice,2012-09-13,Female,White,Not Hispanic or Latino,NA,Full term,typical,English,US,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+34151,A_20130813_1100,2013-08-13,SHARED,Alice,2012-09-13,Female,White,Not Hispanic or Latino,NA,Full term,typical,English,US,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+34152,A_20130818_1105,2013-08-18,SHARED,Alice,2012-09-13,Female,White,Not Hispanic or Latino,NA,Full term,typical,English,US,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+34153,A_20130819_1106,2013-08-19,SHARED,Alice,2012-09-13,Female,White,Not Hispanic or Latino,NA,Full term,typical,English,US,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+34154,A_20130823_1110,2013-08-23,SHARED,Alice,2012-09-13,Female,White,Not Hispanic or Latino,NA,Full term,typical,English,US,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+34155,A_20130827_1114,2013-08-27,SHARED,Alice,2012-09-13,Female,White,Not Hispanic or Latino,NA,Full term,typical,English,US,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+34156,A_20130830_1117,2013-08-30,SHARED,Alice,2012-09-13,Female,White,Not Hispanic or Latino,NA,Full term,typical,English,US,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+34157,A_20130906_1124,2013-09-06,SHARED,Alice,2012-09-13,Female,White,Not Hispanic or Latino,NA,Full term,typical,English,US,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+34158,A_20130907_1125,2013-09-07,SHARED,Alice,2012-09-13,Female,White,Not Hispanic or Latino,NA,Full term,typical,English,US,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+34159,A_20130913_1200,2013-09-13,SHARED,Alice,2012-09-13,Female,White,Not Hispanic or Latino,NA,Full term,typical,English,US,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+34160,A_20130914_1201,2013-09-14,SHARED,Alice,2012-09-13,Female,White,Not Hispanic or Latino,NA,Full term,typical,English,US,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+34161,A_20130916_1203,2013-09-16,SHARED,Alice,2012-09-13,Female,White,Not Hispanic or Latino,NA,Full term,typical,English,US,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+34162,A_20130920_1207,2013-09-20,SHARED,Alice,2012-09-13,Female,White,Not Hispanic or Latino,NA,Full term,typical,English,US,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+34163,A_20130922_1209,2013-09-22,SHARED,Alice,2012-09-13,Female,White,Not Hispanic or Latino,NA,Full term,typical,English,US,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+34164,A_20130925_1212,2013-09-25,SHARED,Alice,2012-09-13,Female,White,Not Hispanic or Latino,NA,Full term,typical,English,US,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+34165,A_20130927_1214,2013-09-28,SHARED,Alice,2012-09-13,Female,White,Not Hispanic or Latino,NA,Full term,typical,English,US,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+34166,A_20131001_1218,2013-10-01,SHARED,Alice,2012-09-13,Female,White,Not Hispanic or Latino,NA,Full term,typical,English,US,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+34167,A_20131012_1229,2013-10-12,SHARED,Alice,2012-09-13,Female,White,Not Hispanic or Latino,NA,Full term,typical,English,US,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+34169,A_20131017_1304,2013-10-17,SHARED,Alice,2012-09-13,Female,White,Not Hispanic or Latino,NA,Full term,typical,English,US,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+34170,A_20131022_1309,2013-10-22,SHARED,Alice,2012-09-13,Female,White,Not Hispanic or Latino,NA,Full term,typical,English,US,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+34180,A_20131024_1311,2013-10-24,SHARED,Alice,2012-09-13,Female,White,Not Hispanic or Latino,NA,Full term,typical,English,US,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+34184,A_20131108_1326,2013-11-08,SHARED,Alice,2012-09-13,Female,White,Not Hispanic or Latino,NA,Full term,typical,English,US,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+34187,A_20131111_1329,2013-11-11,SHARED,Alice,2012-09-13,Female,White,Not Hispanic or Latino,NA,Full term,typical,English,US,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+34191,A_20131123_1410,2013-11-23,SHARED,Alice,2012-09-13,Female,White,Not Hispanic or Latino,NA,Full term,typical,English,US,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+34195,A_20131127_1414,2013-11-27,SHARED,Alice,2012-09-13,Female,White,Not Hispanic or Latino,NA,Full term,typical,English,US,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+34196,A_20131202_1419,2013-12-02,SHARED,Alice,2012-09-13,Female,White,Not Hispanic or Latino,NA,Full term,typical,English,US,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+34202,A_20131206_1423,2013-12-06,SHARED,Alice,2012-09-13,Female,White,Not Hispanic or Latino,NA,Full term,typical,English,US,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+34203,A_20140106_1524,2014-01-06,SHARED,Alice,2012-09-13,Female,White,Not Hispanic or Latino,NA,Full term,typical,English,US,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+34206,A_20140110_1528,2014-01-10,SHARED,Alice,2012-09-13,Female,White,Not Hispanic or Latino,NA,Full term,typical,English,US,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+34207,A_20140115_1602,2014-01-15,SHARED,Alice,2012-09-13,Female,White,Not Hispanic or Latino,NA,Full term,typical,English,US,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+34208,A_20140117_1604,2014-01-17,SHARED,Alice,2012-09-13,Female,White,Not Hispanic or Latino,NA,Full term,typical,English,US,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+34209,A_20140121_1608,2014-01-21,SHARED,Alice,2012-09-13,Female,White,Not Hispanic or Latino,NA,Full term,typical,English,US,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+34210,A_20140131_1618,2014-01-31,SHARED,Alice,2012-09-13,Female,White,Not Hispanic or Latino,NA,Full term,typical,English,US,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+34211,A_20140201_1620,2014-02-01,SHARED,Alice,2012-09-13,Female,White,Not Hispanic or Latino,NA,Full term,typical,English,US,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+34212,A_20140208_1626,2014-02-08,SHARED,Alice,2012-09-13,Female,White,Not Hispanic or Latino,NA,Full term,typical,English,US,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+34221,A_20140209_1627,2014-02-09,SHARED,Alice,2012-09-13,Female,White,Not Hispanic or Latino,NA,Full term,typical,English,US,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+34234,A_20140216_1703,2014-02-16,SHARED,Alice,2012-09-13,Female,White,Not Hispanic or Latino,NA,Full term,typical,English,US,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+34244,A_20140222_1709,2014-02-22,SHARED,Alice,2012-09-13,Female,White,Not Hispanic or Latino,NA,Full term,typical,English,US,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+34254,A_20140223_1710,2014-02-23,SHARED,Alice,2012-09-13,Female,White,Not Hispanic or Latino,NA,Full term,typical,English,US,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+34263,A_20140228_1715,2014-02-28,SHARED,Alice,2012-09-13,Female,White,Not Hispanic or Latino,NA,Full term,typical,English,US,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+34267,A_20140301_1716,2014-03-01,SHARED,Alice,2012-09-13,Female,White,Not Hispanic or Latino,NA,Full term,typical,English,US,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+34268,A_20140305_1720,2014-03-05,SHARED,Alice,2012-09-13,Female,White,Not Hispanic or Latino,NA,Full term,typical,English,US,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+34269,A_20140307_1722,2014-03-07,SHARED,Alice,2012-09-13,Female,White,Not Hispanic or Latino,NA,Full term,typical,English,US,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+34270,A_20140314_1801,2014-03-14,SHARED,Alice,2012-09-13,Female,White,Not Hispanic or Latino,NA,Full term,typical,English,US,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+34271,A_20140315_1802,2014-03-15,SHARED,Alice,2012-09-13,Female,White,Not Hispanic or Latino,NA,Full term,typical,English,US,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+34273,A_20140502_1919,2014-05-02,SHARED,Alice,2012-09-13,Female,White,Not Hispanic or Latino,NA,Full term,typical,English,US,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+34274,A_20140506_1923,2014-05-06,SHARED,Alice,2012-09-13,Female,White,Not Hispanic or Latino,NA,Full term,typical,English,US,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+34308,A_20140509_1926,2014-05-09,SHARED,Alice,2012-09-13,Female,White,Not Hispanic or Latino,NA,Full term,typical,English,US,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+34309,A_20140513_2000,2014-05-13,SHARED,Alice,2012-09-13,Female,White,Not Hispanic or Latino,NA,Full term,typical,English,US,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+34310,A_20140214_1701,2014-02-14,SHARED,Alice,2012-09-13,Female,White,Not Hispanic or Latino,NA,Full term,typical,English,US,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+34311,A_20140317_1804,2014-03-17,SHARED,Alice,2012-09-13,Female,White,Not Hispanic or Latino,NA,Full term,typical,English,US,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+34312,A_20140321_1808,2014-03-21,SHARED,Alice,2012-09-13,Female,White,Not Hispanic or Latino,NA,Full term,typical,English,US,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+34313,A_20140330_1817,2014-03-30,SHARED,Alice,2012-09-13,Female,White,Not Hispanic or Latino,NA,Full term,typical,English,US,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+34314,A_20140401_1819,2014-04-01,SHARED,Alice,2012-09-13,Female,White,Not Hispanic or Latino,NA,Full term,typical,English,US,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+34315,A_20140402_1820,2014-04-02,SHARED,Alice,2012-09-13,Female,White,Not Hispanic or Latino,NA,Full term,typical,English,US,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+34316,A_20140408_1826,2014-04-08,SHARED,Alice,2012-09-13,Female,White,Not Hispanic or Latino,NA,Full term,typical,English,US,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+34317,A_20140418_1905,2014-04-18,SHARED,Alice,2012-09-13,Female,White,Not Hispanic or Latino,NA,Full term,typical,English,US,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+34318,A_20140427_1914,2014-04-27,SHARED,Alice,2012-09-13,Female,White,Not Hispanic or Latino,NA,Full term,typical,English,US,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+34319,A_20140521_2008,2014-05-21,SHARED,Alice,2012-09-13,Female,White,Not Hispanic or Latino,NA,Full term,typical,English,US,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+34320,A_20140530_2017,2014-05-30,SHARED,Alice,2012-09-13,Female,White,Not Hispanic or Latino,NA,Full term,typical,English,US,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+34321,A_20140601_2019,2014-06-01,SHARED,Alice,2012-09-13,Female,White,Not Hispanic or Latino,NA,Full term,typical,English,US,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+34322,A_20140609_2027,2014-06-09,SHARED,Alice,2012-09-13,Female,White,Not Hispanic or Latino,NA,Full term,typical,English,US,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+34323,A_20140620_2107,2014-06-20,SHARED,Alice,2012-09-13,Female,White,Not Hispanic or Latino,NA,Full term,typical,English,US,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+34324,A_20140624_2111,2014-06-24,SHARED,Alice,2012-09-13,Female,White,Not Hispanic or Latino,NA,Full term,typical,English,US,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+34325,A_20140630_2117,2014-06-30,SHARED,Alice,2012-09-13,Female,White,Not Hispanic or Latino,NA,Full term,typical,English,US,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+34326,A_20140704_2121,2014-07-04,SHARED,Alice,2012-09-13,Female,White,Not Hispanic or Latino,NA,Full term,typical,English,US,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+34327,A_20140709_2126,2014-07-09,SHARED,Alice,2012-09-13,Female,White,Not Hispanic or Latino,NA,Full term,typical,English,US,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+34337,A_20140720_2207,2014-07-20,SHARED,Alice,2012-09-13,Female,White,Not Hispanic or Latino,NA,Full term,typical,English,US,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+34340,A_20140725_2212,2014-07-25,SHARED,Alice,2012-09-13,Female,White,Not Hispanic or Latino,NA,Full term,typical,English,US,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+34341,A_20140803_2221,2014-08-03,SHARED,Alice,2012-09-13,Female,White,Not Hispanic or Latino,NA,Full term,typical,English,US,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+34344,A_20140820_2307,2014-08-20,SHARED,Alice,2012-09-13,Female,White,Not Hispanic or Latino,NA,Full term,typical,English,US,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+34348,A_20140823_2310,2014-08-23,SHARED,Alice,2012-09-13,Female,White,Not Hispanic or Latino,NA,Full term,typical,English,US,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+34353,A_20140912_2330,2014-09-12,SHARED,Alice,2012-09-13,Female,White,Not Hispanic or Latino,NA,Full term,typical,English,US,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+34355,A_20140918_2405,2014-09-18,SHARED,Alice,2012-09-13,Female,White,Not Hispanic or Latino,NA,Full term,typical,English,US,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+34357,A_20140920_2407,2014-09-20,SHARED,Alice,2012-09-13,Female,White,Not Hispanic or Latino,NA,Full term,typical,English,US,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+34359,A_20141004_2421,2014-10-04,SHARED,Alice,2012-09-13,Female,White,Not Hispanic or Latino,NA,Full term,typical,English,US,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+34363,A_20141012_2429,2014-10-12,SHARED,Alice,2012-09-13,Female,White,Not Hispanic or Latino,NA,Full term,typical,English,US,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+34364,A_20141029_2516,2014-10-29,SHARED,Alice,2012-09-13,Female,White,Not Hispanic or Latino,NA,Full term,typical,English,US,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+34365,A_20141101_2519,2014-11-01,SHARED,Alice,2012-09-13,Female,White,Not Hispanic or Latino,NA,Full term,typical,English,US,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+34368,A_20141103_2521,2014-11-03,SHARED,Alice,2012-09-13,Female,White,Not Hispanic or Latino,NA,Full term,typical,English,US,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+34369,A_20141105_2523,2014-11-05,SHARED,Alice,2012-09-13,Female,White,Not Hispanic or Latino,NA,Full term,typical,English,US,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+34371,A_20141109_2527,2014-11-09,SHARED,Alice,2012-09-13,Female,White,Not Hispanic or Latino,NA,Full term,typical,English,US,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+34374,A_20141110_2528,2014-11-10,SHARED,Alice,2012-09-13,Female,White,Not Hispanic or Latino,NA,Full term,typical,English,US,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+34375,A_20141122_2609,2014-11-22,SHARED,Alice,2012-09-13,Female,White,Not Hispanic or Latino,NA,Full term,typical,English,US,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+34377,A_20141124_2611,2014-11-24,SHARED,Alice,2012-09-13,Female,White,Not Hispanic or Latino,NA,Full term,typical,English,US,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+34378,A_20141207_2624,2014-12-07,SHARED,Alice,2012-09-13,Female,White,Not Hispanic or Latino,NA,Full term,typical,English,US,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+34379,A_20141213_2700,2014-12-13,SHARED,Alice,2012-09-13,Female,White,Not Hispanic or Latino,NA,Full term,typical,English,US,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+34381,A_20141214_2701,2014-12-14,SHARED,Alice,2012-09-13,Female,White,Not Hispanic or Latino,NA,Full term,typical,English,US,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+34382,A_20141217_2704,2014-12-17,SHARED,Alice,2012-09-13,Female,White,Not Hispanic or Latino,NA,Full term,typical,English,US,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+34383,A_20141227_2714,2014-12-27,SHARED,Alice,2012-09-13,Female,White,Not Hispanic or Latino,NA,Full term,typical,English,US,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+34384,A_20141228_2715,2014-12-28,SHARED,Alice,2012-09-13,Female,White,Not Hispanic or Latino,NA,Full term,typical,English,US,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+34386,A_20141229_2716,2014-12-29,SHARED,Alice,2012-09-13,Female,White,Not Hispanic or Latino,NA,Full term,typical,English,US,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+34388,A_20150104_2722,2015-01-04,SHARED,Alice,2012-09-13,Female,White,Not Hispanic or Latino,NA,Full term,typical,English,US,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+34389,A_20150106_2724,2015-01-06,SHARED,Alice,2012-09-13,Female,White,Not Hispanic or Latino,NA,Full term,typical,English,US,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+34392,A_20150115_2802,2015-01-15,SHARED,Alice,2012-09-13,Female,White,Not Hispanic or Latino,NA,Full term,typical,English,US,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+34394,A_20150116_2803,2015-01-16,SHARED,Alice,2012-09-13,Female,White,Not Hispanic or Latino,NA,Full term,typical,English,US,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+34396,A_20150117_2804,2015-01-17,SHARED,Alice,2012-09-13,Female,White,Not Hispanic or Latino,NA,Full term,typical,English,US,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+34397,A_20150123_2810,2015-01-23,SHARED,Alice,2012-09-13,Female,White,Not Hispanic or Latino,NA,Full term,typical,English,US,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+34398,A_20150127_2814,2015-01-27,SHARED,Alice,2012-09-13,Female,White,Not Hispanic or Latino,NA,Full term,typical,English,US,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+34401,A_20150201_2819,2015-02-01,SHARED,Alice,2012-09-13,Female,White,Not Hispanic or Latino,NA,Full term,typical,English,US,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+34403,A_20150216_2903,2015-02-16,SHARED,Alice,2012-09-13,Female,White,Not Hispanic or Latino,NA,Full term,typical,English,US,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+34416,A_20150221_2908,2015-02-21,SHARED,Alice,2012-09-13,Female,White,Not Hispanic or Latino,NA,Full term,typical,English,US,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+34417,A_20150308_2923,2015-03-08,SHARED,Alice,2012-09-13,Female,White,Not Hispanic or Latino,NA,Full term,typical,English,US,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+34418,A_20150324_3011,2015-03-24,SHARED,Alice,2012-09-13,Female,White,Not Hispanic or Latino,NA,Full term,typical,English,US,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+34419,A_20150329_3016,2015-03-29,SHARED,Alice,2012-09-13,Female,White,Not Hispanic or Latino,NA,Full term,typical,English,US,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+34420,A_20150404_3022,2015-04-04,SHARED,Alice,2012-09-13,Female,White,Not Hispanic or Latino,NA,Full term,typical,English,US,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+34421,A_20150411_3029,2015-04-11,SHARED,Alice,2012-09-13,Female,White,Not Hispanic or Latino,NA,Full term,typical,English,US,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+34422,A_20150425_3112,2015-04-25,SHARED,Alice,2012-09-13,Female,White,Not Hispanic or Latino,NA,Full term,typical,English,US,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+34423,A_20150426_3113,2015-04-26,SHARED,Alice,2012-09-13,Female,White,Not Hispanic or Latino,NA,Full term,typical,English,US,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+34424,A_20150507_3124,2015-05-07,SHARED,Alice,2012-09-13,Female,White,Not Hispanic or Latino,NA,Full term,typical,English,US,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+34425,A_20130705_0922,2013-07-05,SHARED,Alice,2012-09-13,Female,White,Not Hispanic or Latino,NA,Full term,typical,English,US,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+35168,Y_20180925_0711,2018-09-25,SHARED,Y,2018-02-14,Male,More than one,Not Hispanic or Latino,NA,Full term,typical,English,US,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+35169,Y_20180929_0715,2018-09-29,SHARED,Y,2018-02-14,Male,More than one,Not Hispanic or Latino,NA,Full term,typical,English,US,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+35170,Y_20181003_0719,2018-10-03,SHARED,Y,2018-02-14,Male,More than one,Not Hispanic or Latino,NA,Full term,typical,English,US,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+35173,Y_20181006_0722,2018-10-06,SHARED,Y,2018-02-14,Male,More than one,Not Hispanic or Latino,NA,Full term,typical,English,US,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+35178,Y_20181011_0727,2018-10-11,SHARED,Y,2018-02-14,Male,More than one,Not Hispanic or Latino,NA,Full term,typical,English,US,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+35179,Y_20181013_0729,2018-10-13,SHARED,Y,2018-02-14,Male,More than one,Not Hispanic or Latino,NA,Full term,typical,English,US,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+35181,Y_20181018_0804,2018-10-18,SHARED,Y,2018-02-14,Male,More than one,Not Hispanic or Latino,NA,Full term,typical,English,US,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+35187,Y_20181020_0806,2018-10-20,SHARED,Y,2018-02-14,Male,More than one,Not Hispanic or Latino,NA,Full term,typical,English,US,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+35188,Y_20181025_0811,2018-10-25,SHARED,Y,2018-02-14,Male,More than one,Not Hispanic or Latino,NA,Full term,typical,English,US,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+35189,Y_20181027_0813,2018-10-27,SHARED,Y,2018-02-14,Male,More than one,Not Hispanic or Latino,NA,Full term,typical,English,US,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+35190,Y_20181031_0817,2018-10-31,SHARED,Y,2018-02-14,Male,More than one,Not Hispanic or Latino,NA,Full term,typical,English,US,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+35191,Y_20181108_0825,2018-11-08,SHARED,Y,2018-02-14,Male,More than one,Not Hispanic or Latino,NA,Full term,typical,English,US,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+35192,Y_20181110_0827,2018-11-10,SHARED,Y,2018-02-14,Male,More than one,Not Hispanic or Latino,NA,Full term,typical,English,US,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+35193,Y_20181114_0900,2018-11-14,SHARED,Y,2018-02-14,Male,More than one,Not Hispanic or Latino,NA,Full term,typical,English,US,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+35194,Y_20181115_0901,2018-11-15,SHARED,Y,2018-02-14,Male,More than one,Not Hispanic or Latino,NA,Full term,typical,English,US,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+35195,Y_20181117_0903,2018-11-17,SHARED,Y,2018-02-14,Male,More than one,Not Hispanic or Latino,NA,Full term,typical,English,US,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+35196,Y_20181123_0909,2018-11-23,SHARED,Y,2018-02-14,Male,More than one,Not Hispanic or Latino,NA,Full term,typical,English,US,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+35197,Y_20181124_0910,2018-11-24,SHARED,Y,2018-02-14,Male,More than one,Not Hispanic or Latino,NA,Full term,typical,English,US,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+35198,Y_20181130_0916,2018-11-30,SHARED,Y,2018-02-14,Male,More than one,Not Hispanic or Latino,NA,Full term,typical,English,US,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+35199,Y_20181201_0917,2018-12-01,SHARED,Y,2018-02-14,Male,More than one,Not Hispanic or Latino,NA,Full term,typical,English,US,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+35215,Y_20181207_0923,2018-12-07,SHARED,Y,2018-02-14,Male,More than one,Not Hispanic or Latino,NA,Full term,typical,English,US,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+35216,Y_20181208_0924,2018-12-08,SHARED,Y,2018-02-14,Male,More than one,Not Hispanic or Latino,NA,Full term,typical,English,US,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+35217,Y_20181214_1000,2018-12-14,SHARED,Y,2018-02-14,Male,More than one,Not Hispanic or Latino,NA,Full term,typical,English,US,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+35218,Y_20181215_1001,2018-12-15,SHARED,Y,2018-02-14,Male,More than one,Not Hispanic or Latino,NA,Full term,typical,English,US,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+35219,Y_20181218_1004,2018-12-18,SHARED,Y,2018-02-14,Male,More than one,Not Hispanic or Latino,NA,Full term,typical,English,US,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+35220,Y_20181229_1015,2018-12-29,SHARED,Y,2018-02-14,Male,More than one,Not Hispanic or Latino,NA,Full term,typical,English,US,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+35224,Y_20190102_1019,2019-01-02,SHARED,Y,2018-02-14,Male,More than one,Not Hispanic or Latino,NA,Full term,typical,English,US,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+35225,Y_20190105_1022,2019-01-05,SHARED,Y,2018-02-14,Male,More than one,Not Hispanic or Latino,NA,Full term,typical,English,US,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+35226,Y_20190112_1029,2019-01-12,SHARED,Y,2018-02-14,Male,More than one,Not Hispanic or Latino,NA,Full term,typical,English,US,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+35227,Y_20190117_1103,2019-01-17,SHARED,Y,2018-02-14,Male,More than one,Not Hispanic or Latino,NA,Full term,typical,English,US,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+35239,Y_20190119_1105,2019-01-19,SHARED,Y,2018-02-14,Male,More than one,Not Hispanic or Latino,NA,Full term,typical,English,US,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+35241,Y_20190125_1111,2019-01-25,SHARED,Y,2018-02-14,Male,More than one,Not Hispanic or Latino,NA,Full term,typical,English,US,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+35242,Y_20190126_1112,2019-01-26,SHARED,Y,2018-02-14,Male,More than one,Not Hispanic or Latino,NA,Full term,typical,English,US,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+35244,Y_20190201_1118,2019-02-01,SHARED,Y,2018-02-14,Male,More than one,Not Hispanic or Latino,NA,Full term,typical,English,US,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+35246,Y_20190202_1119,2019-02-02,SHARED,Y,2018-02-14,Male,More than one,Not Hispanic or Latino,NA,Full term,typical,English,US,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+35249,Y_20190208_1125,2019-02-08,SHARED,Y,2018-02-14,Male,More than one,Not Hispanic or Latino,NA,Full term,typical,English,US,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+35252,Y_20190209_1126,2019-02-09,SHARED,Y,2018-02-14,Male,More than one,Not Hispanic or Latino,NA,Full term,typical,English,US,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+35253,Y_20190215_1201,2019-02-15,SHARED,Y,2018-02-14,Male,More than one,Not Hispanic or Latino,NA,Full term,typical,English,US,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+35255,Y_20190216_1202,2019-02-16,SHARED,Y,2018-02-14,Male,More than one,Not Hispanic or Latino,NA,Full term,typical,English,US,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+35256,Y_20190301_1215,2019-03-01,SHARED,Y,2018-02-14,Male,More than one,Not Hispanic or Latino,NA,Full term,typical,English,US,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+35257,Y_20190302_1216,2019-03-02,SHARED,Y,2018-02-14,Male,More than one,Not Hispanic or Latino,NA,Full term,typical,English,US,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+35258,Y_20190308_1222,2019-03-08,SHARED,Y,2018-02-14,Male,More than one,Not Hispanic or Latino,NA,Full term,typical,English,US,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+35259,Y_20190309_1223,2019-03-09,SHARED,Y,2018-02-14,Male,More than one,Not Hispanic or Latino,NA,Full term,typical,English,US,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+37669,Y_20190111_1028,2019-01-11,SHARED,Y,2018-02-14,Male,More than one,Not Hispanic or Latino,NA,Full term,typical,English,US,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+37670,Y_20190329_1315,2019-03-29,SHARED,Y,2018-02-14,Male,More than one,Not Hispanic or Latino,NA,Full term,typical,English,US,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+37671,Y_20190330_1316,2019-03-30,SHARED,Y,2018-02-14,Male,More than one,Not Hispanic or Latino,NA,Full term,typical,English,US,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+37672,Y_20190406_1323,2019-04-06,SHARED,Y,2018-02-14,Male,More than one,Not Hispanic or Latino,NA,Full term,typical,English,US,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+37674,Y_20190407_1324,2019-04-07,SHARED,Y,2018-02-14,Male,More than one,Not Hispanic or Latino,NA,Full term,typical,English,US,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+37675,Y_20190412_1329,2019-04-12,SHARED,Y,2018-02-14,Male,More than one,Not Hispanic or Latino,NA,Full term,typical,English,US,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+37676,Y_20190413_1330,2019-04-13,SHARED,Y,2018-02-14,Male,More than one,Not Hispanic or Latino,NA,Full term,typical,English,US,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+37677,Y_20190419_1405,2019-04-19,SHARED,Y,2018-02-14,Male,More than one,Not Hispanic or Latino,NA,Full term,typical,English,US,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+37678,Y_20190420_1406,2019-04-20,SHARED,Y,2018-02-14,Male,More than one,Not Hispanic or Latino,NA,Full term,typical,English,US,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+37679,Y_20190426_1412,2019-04-26,SHARED,Y,2018-02-14,Male,More than one,Not Hispanic or Latino,NA,Full term,typical,English,US,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+37680,Y_20190427_1413,2019-04-27,SHARED,Y,2018-02-14,Male,More than one,Not Hispanic or Latino,NA,Full term,typical,English,US,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+37974,Y_20190504_1420,2019-05-04,SHARED,Y,2018-02-14,Male,More than one,Not Hispanic or Latino,NA,Full term,typical,English,US,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+37975,Y_20190517_1503,2019-05-17,SHARED,Y,2018-02-14,Male,More than one,Not Hispanic or Latino,NA,Full term,typical,English,US,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+37976,Y_20190518_1504,2019-05-18,SHARED,Y,2018-02-14,Male,More than one,Not Hispanic or Latino,NA,Full term,typical,English,US,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+37977,Y_20190526_1512,2019-05-26,SHARED,Y,2018-02-14,Male,More than one,Not Hispanic or Latino,NA,Full term,typical,English,US,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+37980,Y_20190528_1514,2019-05-28,SHARED,Y,2018-02-14,Male,More than one,Not Hispanic or Latino,NA,Full term,typical,English,US,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+38096,Y_20190608_1525,2019-06-08,SHARED,Y,2018-02-14,Male,More than one,Not Hispanic or Latino,NA,Full term,typical,English,US,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+38272,Y_20190612_1529,2019-06-12,SHARED,Y,2018-02-14,Male,More than one,Not Hispanic or Latino,NA,Full term,typical,English,US,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+38286,ASQ and CDI Measure Response for Alice,materials,NA,Alice,2012-09-13,Female,White,Not Hispanic or Latino,NA,Full term,typical,English,US,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+38292,ASQ and CDI Measure Response for Sam,materials,NA,S,2012-10-17,Male,White,Not Hispanic or Latino,NA,Full term,ASD,English,Australia,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+38293,ASQ and CDI Measure Response for Asa,materials,NA,Y,2018-02-14,Male,More than one,Not Hispanic or Latino,NA,Full term,typical,English,US,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+38294,Developmental Measure Templates,materials,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+38375,Y_20190623_1609,2019-06-23,SHARED,Y,2018-02-14,Male,More than one,Not Hispanic or Latino,NA,Full term,typical,English,US,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+38506,Y_20190627_1613,2019-06-27,SHARED,Y,2018-02-14,Male,More than one,Not Hispanic or Latino,NA,Full term,typical,English,US,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+38508,Y_20190629_1615,2019-06-29,SHARED,Y,2018-02-14,Male,More than one,Not Hispanic or Latino,NA,Full term,typical,English,US,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+38533,Y_20190705_1621,2019-07-05,SHARED,Y,2018-02-14,Male,More than one,Not Hispanic or Latino,NA,Full term,typical,English,US,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+38534,Y_20190706_1622,2019-07-06,SHARED,Y,2018-02-14,Male,More than one,Not Hispanic or Latino,NA,Full term,typical,English,US,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+39159,Y_20190712_1628,2019-07-12,SHARED,Y,2018-02-14,Male,More than one,Not Hispanic or Latino,NA,Full term,typical,English,US,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+39171,Y_20190713_1629,2019-07-13,SHARED,Y,2018-02-14,Male,More than one,Not Hispanic or Latino,NA,Full term,typical,English,US,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+39179,Y_20190720_1706,2019-07-20,SHARED,Y,2018-02-14,Male,More than one,Not Hispanic or Latino,NA,Full term,typical,English,US,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+39180,Y_20190726_1712,2019-07-26,SHARED,Y,2018-02-14,Male,More than one,Not Hispanic or Latino,NA,Full term,typical,English,US,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+39196,Y_20190727_1713,2019-07-27,SHARED,Y,2018-02-14,Male,More than one,Not Hispanic or Latino,NA,Full term,typical,English,US,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+39562,Y_20190817_1803,2019-08-17,SHARED,Y,2018-02-14,Male,More than one,Not Hispanic or Latino,NA,Full term,typical,English,US,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+39637,Y_20190823_1809,2019-08-23,SHARED,Y,2018-02-14,Male,More than one,Not Hispanic or Latino,NA,Full term,typical,English,US,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+39642,Y_20190824_1810,2019-08-24,SHARED,Y,2018-02-14,Male,More than one,Not Hispanic or Latino,NA,Full term,typical,English,US,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+39982,Y_20190830_1816,2019-08-30,SHARED,Y,2018-02-14,Male,More than one,Not Hispanic or Latino,NA,Full term,typical,English,US,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+39983,Y_20190901_1818,2019-09-01,SHARED,Y,2018-02-14,Male,More than one,Not Hispanic or Latino,NA,Full term,typical,English,US,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+40463,Y_20190907_1824,2019-09-07,SHARED,Y,2018-02-14,Male,More than one,Not Hispanic or Latino,NA,Full term,typical,English,US,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+40464,Y_20190914_1900,2019-09-14,SHARED,Y,2018-02-14,Male,More than one,Not Hispanic or Latino,NA,Full term,typical,English,US,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+40852,Y_20190920_1906,2019-09-20,SHARED,Y,2018-02-14,Male,More than one,Not Hispanic or Latino,NA,Full term,typical,English,US,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+40868,Y_20190921_1907,2019-09-21,SHARED,Y,2018-02-14,Male,More than one,Not Hispanic or Latino,NA,Full term,typical,English,US,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+41204,Y_20190927_1913,2019-09-27,SHARED,Y,2018-02-14,Male,More than one,Not Hispanic or Latino,NA,Full term,typical,English,US,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+41207,Y_20191004_1920,2019-10-04,SHARED,Y,2018-02-14,Male,More than one,Not Hispanic or Latino,NA,Full term,typical,English,US,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+41505,Y_20191007_1923,2019-10-07,SHARED,Y,2018-02-14,Male,More than one,Not Hispanic or Latino,NA,Full term,typical,English,US,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+41508,Y_20191011_1927,2019-10-11,SHARED,Y,2018-02-14,Male,More than one,Not Hispanic or Latino,NA,Full term,typical,English,US,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+41512,Y_20191012_1928,2019-10-12,SHARED,Y,2018-02-14,Male,More than one,Not Hispanic or Latino,NA,Full term,typical,English,US,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+41806,Y_20191019_2005,2019-10-19,SHARED,Y,2018-02-14,Male,More than one,Not Hispanic or Latino,NA,Full term,typical,English,US,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+41807,Y_20191101_2018,2019-11-01,SHARED,Y,2018-02-14,Male,More than one,Not Hispanic or Latino,NA,Full term,typical,English,US,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+41809,Y_20191102_2019,2019-11-02,SHARED,Y,2018-02-14,Male,More than one,Not Hispanic or Latino,NA,Full term,typical,English,US,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+42269,Y_20191108_2025,2019-11-08,SHARED,Y,2018-02-14,Male,More than one,Not Hispanic or Latino,NA,Full term,typical,English,US,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+42270,Y_20191116_2102,2019-11-16,SHARED,Y,2018-02-14,Male,More than one,Not Hispanic or Latino,NA,Full term,typical,English,US,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+42271,Y_20191123_2109,2019-11-23,SHARED,Y,2018-02-14,Male,More than one,Not Hispanic or Latino,NA,Full term,typical,English,US,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+42358,Y_20191207_2123,2019-12-07,SHARED,Y,2018-02-14,Male,More than one,Not Hispanic or Latino,NA,Full term,typical,English,US,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+42359,Y_20191214_2200,2019-12-14,SHARED,Y,2018-02-14,Male,More than one,Not Hispanic or Latino,NA,Full term,typical,English,US,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+42360,Y_20200103_2220,2020-01-03,SHARED,Y,2018-02-14,Male,More than one,Not Hispanic or Latino,NA,Full term,typical,English,US,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+42362,Y_20200104_2221,2020-01-04,SHARED,Y,2018-02-14,Male,More than one,Not Hispanic or Latino,NA,Full term,typical,English,US,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+42674,Y_20200111_2228,2020-01-11,SHARED,Y,2018-02-14,Male,More than one,Not Hispanic or Latino,NA,Full term,typical,English,US,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+42676,Y_20200112_2229,2020-01-12,SHARED,Y,2018-02-14,Male,More than one,Not Hispanic or Latino,NA,Full term,typical,English,US,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+42677,Y_20200117_2303,2020-01-17,SHARED,Y,2018-02-14,Male,More than one,Not Hispanic or Latino,NA,Full term,typical,English,US,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+42678,Y_20200118_2304,2020-01-18,SHARED,Y,2018-02-14,Male,More than one,Not Hispanic or Latino,NA,Full term,typical,English,US,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+42886,Y_20200125_2311,2020-01-25,SHARED,Y,2018-02-14,Male,More than one,Not Hispanic or Latino,NA,Full term,typical,English,US,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+42888,Y_20200126_2312,2020-01-25,SHARED,Y,2018-02-14,Male,More than one,Not Hispanic or Latino,NA,Full term,typical,English,US,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+42895,Y_20200131_2317,2020-01-31,SHARED,Y,2018-02-14,Male,More than one,Not Hispanic or Latino,NA,Full term,typical,English,US,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+42896,Y_20200201_2318,2020-02-01,SHARED,Y,2018-02-14,Male,More than one,Not Hispanic or Latino,NA,Full term,typical,English,US,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+47832,"Procedures, Coding Schemes, and Additional Materials",materials,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+47835,Y_20200208_2325,2020-02-08,SHARED,Y,2018-02-14,Male,More than one,Not Hispanic or Latino,NA,Full term,typical,English,US,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+47836,Y_20200218_2404,2020-02-18,SHARED,Y,2018-02-14,Male,More than one,Not Hispanic or Latino,NA,Full term,typical,English,US,NA,NA,NA,NA,NA,NA,NA,NA,NA,564
+47837,Y_20200602_2719,2020-06-02,SHARED,Y,2018-02-14,Male,More than one,Not Hispanic or Latino,NA,Full term,typical,English,US,NA,NA,NA,NA,NA,NA,NA,NA,NA,564

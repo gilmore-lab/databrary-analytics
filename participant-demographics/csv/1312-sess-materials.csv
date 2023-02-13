@@ -1,0 +1,56 @@
+session_id,session_name,session_date,session_release,participant_ID,participant_birthdate,participant_gender,participant_race,participant_ethnicity,participant_disability,participant_language,group_name,context_setting,context_language,context_country,context_state,vol_id
+54306,NA,2013-05-03,EXCERPTS,33,2011-11-24,Female,White,Not Hispanic or Latino,typical,English,17 month olds,Lab,English,US,NY,1312
+54307,NA,2013-11-18,EXCERPTS,56,2012-06-18,Male,Asian,Not Hispanic or Latino,typical,English,17 month olds,Lab,English,US,NY,1312
+54308,NA,2013-11-20,EXCERPTS,57,2012-06-30,Female,More than one,Not Hispanic or Latino,typical,English,17 month olds,Lab,English,US,NY,1312
+54309,NA,2014-01-23,EXCERPTS,58,2012-08-15,Male,White,Not Hispanic or Latino,typical,English,17 month olds,Lab,English,US,NY,1312
+54310,NA,2014-02-04,EXCERPTS,59,2012-09-04,Male,White,Not Hispanic or Latino,typical,English,17 month olds,Lab,English,US,NY,1312
+54311,NA,2014-03-11,EXCERPTS,60,2012-10-15,Female,More than one,Not Hispanic or Latino,typical,English,17 month olds,Lab,English,US,NY,1312
+54312,NA,2014-06-06,EXCERPTS,62,2012-12-07,Male,White,Not Hispanic or Latino,typical,English,17 month olds,Lab,English,US,NY,1312
+54313,NA,2014-06-18,EXCERPTS,64,2013-01-11,Female,White,Not Hispanic or Latino,typical,English,17 month olds,Lab,English,US,NY,1312
+54314,NA,2014-06-18,EXCERPTS,65,2012-12-29,Male,White,Not Hispanic or Latino,typical,English,17 month olds,Lab,English,US,NY,1312
+54315,NA,2014-06-24,EXCERPTS,66,2013-02-07,Male,White,Not Hispanic or Latino,typical,English,17 month olds,Lab,English,US,NY,1312
+54316,NA,2014-08-04,EXCERPTS,67,2013-03-08,Male,Unknown or not reported,Not Hispanic or Latino,typical,English,17 month olds,Lab,English,US,NY,1312
+54317,NA,2014-08-11,EXCERPTS,68,2013-03-07,Male,White,Not Hispanic or Latino,typical,English,17 month olds,Lab,English,US,NY,1312
+54318,NA,2014-08-12,EXCERPTS,69,2013-03-27,Female,More than one,Not Hispanic or Latino,typical,English,17 month olds,Lab,English,US,NY,1312
+54319,NA,2014-08-25,EXCERPTS,71,2013-03-25,Male,White,Not Hispanic or Latino,typical,English,17 month olds,Lab,English,US,NY,1312
+54320,NA,2014-09-03,EXCERPTS,72,2013-03-28,Male,Unknown or not reported,Not Hispanic or Latino,typical,English,17 month olds,Lab,English,US,NY,1312
+54321,NA,2014-11-17,EXCERPTS,74,2013-06-24,Male,More than one,Not Hispanic or Latino,typical,English,17 month olds,Lab,English,US,NY,1312
+54322,NA,2014-11-25,EXCERPTS,76,2013-06-06,Female,White,Not Hispanic or Latino,typical,English,17 month olds,Lab,English,US,NY,1312
+54323,NA,2014-12-02,EXCERPTS,77,2013-06-24,Male,White,Not Hispanic or Latino,typical,English,17 month olds,Lab,English,US,NY,1312
+54324,NA,2014-12-02,EXCERPTS,78,2013-06-19,Female,White,Not Hispanic or Latino,typical,English,17 month olds,Lab,English,US,NY,1312
+54325,NA,2014-12-03,EXCERPTS,79,2013-06-22,Female,White,Hispanic or Latino,typical,English,17 month olds,Lab,English,US,NY,1312
+54326,NA,2013-06-05,EXCERPTS,1204,2012-04-30,Male,White,Not Hispanic or Latino,typical,English,13 month olds,Lab,English,US,NY,1312
+54327,NA,2013-08-26,SHARED,1210,2012-08-14,Male,White,Not Hispanic or Latino,typical,English,13 month olds,Lab,English,US,NY,1312
+54328,NA,2014-05-28,EXCERPTS,1216,2013-04-30,Male,White,Not Hispanic or Latino,typical,English,13 month olds,Lab,English,US,NY,1312
+54329,NA,2014-06-06,EXCERPTS,1217,2013-05-21,Male,More than one,Hispanic or Latino,typical,English,13 month olds,Lab,English,US,NY,1312
+54330,NA,2014-XX-XX,PRIVATE,1220,NA,Male,White,Not Hispanic or Latino,typical,English,13 month olds,Lab,English,US,NY,1312
+54331,NA,2014-08-20,EXCERPTS,1222,2013-07-29,Female,White,Not Hispanic or Latino,typical,English,13 month olds,Lab,English,US,NY,1312
+54332,NA,2014-11-03,EXCERPTS,1224,2013-10-15,Female,White,Not Hispanic or Latino,typical,English,13 month olds,Lab,English,US,NY,1312
+54333,NA,2014-11-11,EXCERPTS,1225,2013-10-16,Male,White,Not Hispanic or Latino,typical,English,13 month olds,Lab,English,US,NY,1312
+54334,NA,2015-04-10,EXCERPTS,1230,2014-03-29,Female,White,Not Hispanic or Latino,typical,English,13 month olds,Lab,English,US,NY,1312
+54335,NA,2015-08-21,EXCERPTS,1232,2014-07-21,Female,Asian,Not Hispanic or Latino,typical,English,13 month olds,Lab,English,US,NY,1312
+54336,NA,2015-08-24,SHARED,1233,2014-08-05,Female,More than one,Not Hispanic or Latino,typical,English,13 month olds,Lab,English,US,NY,1312
+54337,NA,2016-02-13,EXCERPTS,1235,2015-01-12,Male,White,Not Hispanic or Latino,typical,English,13 month olds,Lab,English,US,NY,1312
+54338,NA,2016-03-04,EXCERPTS,1236,2015-02-08,Female,White,Not Hispanic or Latino,typical,English,13 month olds,Lab,English,US,NY,1312
+54339,NA,2016-05-20,EXCERPTS,1239,2015-05-04,Female,White,Not Hispanic or Latino,typical,English,13 month olds,Lab,English,US,NY,1312
+54340,NA,2013-06-03,EXCERPTS,2001,1993-01-25,Male,White,Not Hispanic or Latino,typical,English,Adults,Lab,English,US,NY,1312
+54341,NA,2013-06-03,EXCERPTS,2002,1994-09-01,Female,Black or African American,Not Hispanic or Latino,typical,English,Adults,Lab,English,US,NY,1312
+54342,NA,2013-06-03,EXCERPTS,2003,1985-11-26,Female,White,Not Hispanic or Latino,typical,English,Adults,Lab,English,US,NY,1312
+54343,NA,2013-06-03,SHARED,2004,1991-01-21,Female,White,Not Hispanic or Latino,typical,English,Adults,Lab,English,US,NY,1312
+54344,NA,2013-06-03,SHARED,2005,1981-02-27,Male,White,Not Hispanic or Latino,typical,English,Adults,Lab,English,US,NY,1312
+54345,NA,2013-06-06,EXCERPTS,2006,1989-04-23,Male,White,Not Hispanic or Latino,typical,English,Adults,Lab,English,US,NY,1312
+54346,NA,2013-06-06,EXCERPTS,2007,1990-09-23,Female,White,Not Hispanic or Latino,typical,English,Adults,Lab,English,US,NY,1312
+54347,NA,2013-06-06,EXCERPTS,2008,1978-03-24,Male,White,Not Hispanic or Latino,typical,English,Adults,Lab,English,US,NY,1312
+54348,NA,2016-04-04,EXCERPTS,2009,1995-01-22,Female,White,Not Hispanic or Latino,typical,English,Adults,Lab,English,US,NY,1312
+54349,NA,2016-04-04,EXCERPTS,2010,1993-12-17,Female,Asian,Not Hispanic or Latino,typical,English,Adults,Lab,English,US,NY,1312
+54350,NA,2016-04-04,EXCERPTS,2011,1995-10-30,Male,Asian,Not Hispanic or Latino,typical,English,Adults,Lab,English,US,NY,1312
+54351,NA,2016-04-05,EXCERPTS,2012,1994-09-08,Female,Asian,Not Hispanic or Latino,typical,English,Adults,Lab,English,US,NY,1312
+54352,NA,2016-04-05,EXCERPTS,2013,1993-03-07,Female,Asian,Not Hispanic or Latino,typical,English,Adults,Lab,English,US,NY,1312
+54353,NA,2016-04-12,EXCERPTS,2014,1988-01-01,Male,White,Not Hispanic or Latino,typical,English,Adults,Lab,English,US,NY,1312
+54360,NA,materials,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,1312
+54361,NA,materials,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,1312
+54362,NA,materials,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,1312
+54363,NA,materials,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,1312
+54364,NA,materials,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,1312
+54365,NA,materials,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,1312
+54366,NA,materials,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,1312

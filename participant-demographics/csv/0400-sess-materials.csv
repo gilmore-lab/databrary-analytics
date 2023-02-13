@@ -1,0 +1,184 @@
+session_id,session_name,session_date,session_release,participant_ID,participant_birthdate,participant_gender,participant_race,participant_ethnicity,participant_disability,participant_language,pilot_name,condition_name,vol_id
+18014,NA,2013-XX-XX,PRIVATE,2013-30,NA,Female,White,Not Hispanic or Latino,typical,English,Pilot,Fantastic - Chit,400
+18208,NA,2013-11-01,SHARED,2013-31,2010-08-23,Male,White,Not Hispanic or Latino,typical,English,Pilot,Realistic - Chit,400
+18209,NA,2014-01-29,SHARED,2014-30,2010-04-05,Male,Asian,Not Hispanic or Latino,typical,English - ESL,NA,Fantastic - Meow,400
+18214,NA,2014-01-29,SHARED,2014-31,2010-03-21,Female,Asian,Not Hispanic or Latino,typical,English - ESL,NA,Realistic - Chit,400
+18310,NA,2014-02-14,SHARED,2014-33,2009-04-18,Male,White,Not Hispanic or Latino,typical,English,NA,Realistic - Hello,400
+18311,NA,2014-02-21,SHARED,2014-34,2008-05-28,Female,White,Not Hispanic or Latino,typical,English,NA,Realistic - Hello,400
+18312,NA,2014-02-24,SHARED,2014-35,2009-12-15,Male,White,Not Hispanic or Latino,typical,English,NA,Realistic - Meow,400
+18313,NA,2014-XX-XX,PRIVATE,2014-36,NA,Male,White,Not Hispanic or Latino,typical,English,NA,Fantastic - Chit,400
+18372,NA,2014-05-20,SHARED,2014-107,2009-09-18,Female,Black or African American,Not Hispanic or Latino,typical,English,NA,Fantastic - Hello,400
+20591,NA,2014-01-28,SHARED,2014-024,2009-07-10,Female,Asian,Not Hispanic or Latino,typical,English,NA,Realistic - Chit,400
+20596,NA,2013-11-13,SHARED,2013-075,2010-08-06,Female,White,Not Hispanic or Latino,typical,English,NA,Realistic - Meow,400
+20599,NA,2013-11-15,SHARED,2013-073,2009-10-26,Male,White,Not Hispanic or Latino,typical,English,NA,Realistic - Hello,400
+20602,NA,2013-11-06,SHARED,2013-046,2009-09-21,Female,Black or African American,Not Hispanic or Latino,typical,English,NA,Realistic - Chit,400
+20611,NA,2015-02-18,SHARED,2014-259,2010-04-15,Female,White,Not Hispanic or Latino,typical,English,Pilot,NA,400
+20613,NA,2015-02-18,SHARED,2014-258,2010-05-20,Female,White,Not Hispanic or Latino,typical,English,Pilot,NA,400
+20614,NA,2015-XX-XX,PRIVATE,2014-257,NA,Male,White,Not Hispanic or Latino,typical,English,Pilot,NA,400
+20615,NA,2015-02-18,SHARED,2014-256,2010-09-10,Female,White,Not Hispanic or Latino,typical,English,Pilot,NA,400
+20617,NA,2015-XX-XX,PRIVATE,2014-239,NA,Female,White,Not Hispanic or Latino,typical,English,Pilot,NA,400
+20622,NA,2015-02-18,SHARED,2014-238,2010-10-14,Female,White,Not Hispanic or Latino,typical,English,Pilot,NA,400
+20623,NA,2015-02-18,SHARED,2014-237,2010-07-12,Female,White,Not Hispanic or Latino,typical,English,Pilot,NA,400
+20624,NA,2015-02-18,SHARED,2014-236,2010-08-30,Male,White,Not Hispanic or Latino,typical,English,Pilot,NA,400
+20626,NA,2015-02-18,SHARED,2014-235,2010-06-14,Female,White,Not Hispanic or Latino,typical,English,Pilot,NA,400
+20627,NA,2015-02-18,SHARED,2014-234,2010-05-04,Male,White,Not Hispanic or Latino,typical,English,Pilot,NA,400
+20628,NA,2015-02-18,SHARED,2015-016,2009-11-23,Male,White,Not Hispanic or Latino,typical,English,Pilot,NA,400
+20705,NA,2015-02-06,SHARED,2015-004,2011-07-17,Female,White,Not Hispanic or Latino,typical,English,Pilot,NA,400
+20706,NA,2015-02-06,SHARED,2015-003,2011-08-16,Female,Black or African American,Not Hispanic or Latino,typical,English,Pilot,NA,400
+20707,NA,2015-02-06,SHARED,2014-244,2010-02-22,Male,Black or African American,Not Hispanic or Latino,typical,English,Pilot,NA,400
+20708,NA,2015-XX-XX,PRIVATE,2014-203,NA,Female,Black or African American,Not Hispanic or Latino,typical,English,Pilot,NA,400
+20709,NA,2015-XX-XX,PRIVATE,2014-262,NA,Female,Black or African American,Not Hispanic or Latino,typical,English,NA,NA,400
+20710,NA,2015-02-10,SHARED,2015-013,2011-03-31,Female,Black or African American,Not Hispanic or Latino,typical,English,Pilot,NA,400
+20711,NA,2015-02-10,SHARED,2015-012,2010-12-16,Female,White,Not Hispanic or Latino,typical,English,Pilot,NA,400
+20712,NA,2015-02-10,SHARED,2014-208,201-06-10,Female,White,Not Hispanic or Latino,typical,English,Pilot,NA,400
+20713,NA,2015-02-10,SHARED,2014-207,2010-06-16,Male,Black or African American,Not Hispanic or Latino,typical,English,Pilot,NA,400
+20714,NA,2014-12-08,SHARED,2014-192,2010-05-14,Female,White,Not Hispanic or Latino,typical,English,Pilot,Realistic - Chit,400
+20716,NA,2014-12-08,SHARED,2014-269,2010-06-01,Male,White,Not Hispanic or Latino,typical,English,NA,NA,400
+20717,NA,2014-12-08,SHARED,2014-268,2010-06-17,Male,White,Not Hispanic or Latino,typical,English,Pilot,Realistic - Chit,400
+20718,NA,2014-11-19,SHARED,2014-250,2009-11-11,Female,White,Not Hispanic or Latino,typical,English,Pilot,Realistic - Chit,400
+24496,NA,2013-XX-XX,NA,2013-33,NA,Female,White,Not Hispanic or Latino,typical,English,NA,Realistic - Meow,400
+24497,NA,2013-XX-XX,NA,2013-34,NA,Female,White,Not Hispanic or Latino,typical,English,Pilot,Realistic - Hello,400
+24498,NA,2013-XX-XX,NA,2013-35,NA,Female,White,Not Hispanic or Latino,typical,English,NA,Fantastic - Chit,400
+24499,NA,2013-XX-XX,NA,2013-36,NA,Female,White,Not Hispanic or Latino,typical,English,Pilot,Fantastic - Meow,400
+24500,NA,2013-XX-XX,NA,2013-37,NA,Female,White,Not Hispanic or Latino,typical,English,NA,Fantastic - Chit,400
+24501,NA,2013-XX-XX,NA,2013-38,NA,Male,White,Not Hispanic or Latino,typical,English,NA,Realistic - Chit,400
+24502,NA,2013-XX-XX,NA,2013-39,NA,Female,Asian,Not Hispanic or Latino,typical,English,NA,Fantastic - Meow,400
+24503,NA,2013-XX-XX,NA,2013-40,NA,Female,Asian,Not Hispanic or Latino,typical,English,NA,Realistic - Meow,400
+24504,NA,2013-XX-XX,NA,2013-41,NA,Female,Black or African American,Not Hispanic or Latino,typical,English,NA,Realistic - Meow,400
+24505,NA,2013-XX-XX,NA,2013-42,NA,Female,White,Not Hispanic or Latino,typical,English,NA,Fantastic - Chit,400
+24506,NA,2013-XX-XX,NA,2013-43,NA,Male,White,Not Hispanic or Latino,typical,English,NA,Fantastic - Meow,400
+24507,NA,2013-XX-XX,NA,2013-44,NA,Male,Asian,Not Hispanic or Latino,typical,English,NA,Fantastic - Meow,400
+24508,NA,2013-XX-XX,NA,2013-45,NA,Male,White,Not Hispanic or Latino,typical,English,NA,Realistic - Chit,400
+24509,NA,2013-XX-XX,NA,2013-46,NA,Female,Black or African American,Not Hispanic or Latino,typical,English,NA,Realistic - Chit,400
+24510,NA,2013-XX-XX,NA,2013-47,NA,Female,White,Not Hispanic or Latino,typical,English,NA,Fantastic - Chit,400
+24511,NA,2013-XX-XX,NA,2013-48,NA,Male,White,Not Hispanic or Latino,typical,English,NA,Fantastic - Chit,400
+24512,NA,2013-XX-XX,NA,2013-49,NA,Male,White,Not Hispanic or Latino,typical,English,NA,Realistic - Meow,400
+24513,NA,2013-XX-XX,NA,2013-50,NA,Female,White,Not Hispanic or Latino,typical,English,NA,Realistic - Chit,400
+24514,NA,2013-XX-XX,NA,2013-51,NA,Male,White,Not Hispanic or Latino,typical,English,NA,Realistic - Meow,400
+24515,NA,2013-XX-XX,NA,2013-54,NA,Female,Black or African American,Not Hispanic or Latino,typical,English,NA,Fantastic - Hello,400
+24516,NA,2013-XX-XX,NA,2013-69,NA,Female,Asian,Not Hispanic or Latino,typical,English,NA,Fantastic - Meow,400
+24517,NA,2013-XX-XX,NA,2013-70,NA,Female,White,Not Hispanic or Latino,typical,English,NA,Fantastic - Meow,400
+24518,NA,2013-XX-XX,NA,2013-71,NA,Female,White,Not Hispanic or Latino,typical,English,NA,Realistic - Chit,400
+24519,NA,2013-XX-XX,NA,2013-72,NA,Male,White,Not Hispanic or Latino,typical,English,NA,Realistic - Meow,400
+24520,NA,2013-XX-XX,NA,2013-73,NA,Male,White,Not Hispanic or Latino,typical,English,NA,Realistic - Hello,400
+24521,NA,2013-XX-XX,NA,2013-74,NA,Female,Black or African American,Not Hispanic or Latino,typical,English,NA,Realistic - Hello,400
+24524,NA,2013-XX-XX,NA,2013-75,NA,Female,White,Not Hispanic or Latino,typical,English,NA,Realistic - Meow,400
+24525,NA,2013-XX-XX,NA,2013-76,NA,Male,White,Not Hispanic or Latino,typical,English,NA,Fantastic - Chit,400
+24526,NA,2014-XX-XX,NA,2014-2,NA,Male,Asian,Not Hispanic or Latino,typical,English,NA,Realistic - Chit,400
+24527,NA,2014-XX-XX,NA,2014-3,NA,Female,Black or African American,Not Hispanic or Latino,typical,English,NA,Fantastic - Hello,400
+24528,NA,2014-XX-XX,NA,2014-4,NA,Male,Asian,Not Hispanic or Latino,typical,English,NA,Fantastic - Hello,400
+24529,NA,2014-XX-XX,NA,2014-5,NA,Female,Black or African American,Not Hispanic or Latino,typical,English,NA,Fantastic - Meow,400
+24530,NA,2014-XX-XX,NA,2014-6,NA,Female,Asian,Not Hispanic or Latino,typical,English,NA,Realistic - Hello,400
+24531,NA,2014-XX-XX,NA,2014-7,NA,Female,American Indian or Alaska Native,Not Hispanic or Latino,typical,English,NA,Fantastic - Hello,400
+24532,NA,2014-XX-XX,NA,2014-10,NA,Female,H,Hispanic or Latino,typical,English,NA,Fantastic - Hello,400
+24533,NA,2014-XX-XX,NA,2014-11,NA,Female,Asian,Not Hispanic or Latino,typical,English,NA,Fantastic - Chit,400
+24534,NA,2014-XX-XX,NA,2014-12,NA,Female,H,Hispanic or Latino,typical,English,NA,Realistic - Chit,400
+24535,NA,2014-XX-XX,NA,2014-13,NA,Female,H,Hispanic or Latino,typical,English,NA,Fantastic - Meow,400
+24537,NA,2014-XX-XX,NA,2014-14,NA,Female,White,Not Hispanic or Latino,typical,English,NA,Realistic - Meow,400
+24538,NA,2014-XX-XX,NA,2014-15,NA,Female,H,Hispanic or Latino,typical,English,NA,Realistic - Meow,400
+24539,NA,2014-XX-XX,NA,2014-18,NA,Male,Black or African American,Not Hispanic or Latino,typical,English,NA,Fantastic - Meow,400
+24540,NA,2014-XX-XX,NA,2014-19,NA,Female,Asian,Not Hispanic or Latino,typical,English - ESL,NA,Realistic - Chit,400
+24541,NA,2014-XX-XX,NA,2014-20,NA,Female,Asian,Not Hispanic or Latino,typical,English,NA,Realistic - Chit,400
+24543,NA,2014-XX-XX,NA,2014-21,NA,Female,Black or African American,Not Hispanic or Latino,typical,English,NA,Fantastic - Chit,400
+24544,NA,2014-XX-XX,NA,2014-22,NA,Female,Asian,Not Hispanic or Latino,typical,English,NA,Fantastic - Chit,400
+24545,NA,2014-XX-XX,NA,2014-23,NA,Male,Asian,Not Hispanic or Latino,typical,English - ESL,NA,Realistic - Meow,400
+24546,NA,2014-XX-XX,NA,2014-26,NA,Male,H,Hispanic or Latino,typical,English,NA,Fantastic - Hello,400
+24547,NA,2014-XX-XX,NA,2014-27,NA,Female,H,Hispanic or Latino,typical,English - ESL,NA,Fantastic - Hello,400
+24549,NA,2014-XX-XX,NA,2014-28,NA,Female,White,Not Hispanic or Latino,typical,English,NA,Fantastic - Chit,400
+24550,NA,2014-XX-XX,NA,2014-29,NA,Female,H,Hispanic or Latino,typical,English,NA,Fantastic - Meow,400
+24551,NA,2014-XX-XX,NA,2014-37,NA,Male,Asian,Not Hispanic or Latino,typical,English - ESL,NA,Realistic - Hello,400
+24552,NA,2014-XX-XX,NA,2014-38,NA,Female,American Indian or Alaska Native,Not Hispanic or Latino,typical,English,NA,Realistic - Chit,400
+24553,NA,2014-XX-XX,NA,2014-41,NA,Male,White,Not Hispanic or Latino,typical,English,NA,Fantastic - Meow,400
+24554,NA,2014-XX-XX,NA,2014-42,NA,Male,Middle East,Not Hispanic or Latino,typical,English,NA,Realistic - Hello,400
+24557,NA,2014-XX-XX,NA,2014-43,NA,Female,White,Not Hispanic or Latino,typical,English,NA,Fantastic - Hello,400
+24558,NA,2014-XX-XX,NA,2014-44,NA,Female,White,Not Hispanic or Latino,typical,English,NA,Realistic - Hello,400
+24559,NA,2014-XX-XX,NA,2014-45,NA,Female,White,Not Hispanic or Latino,typical,English,NA,Fantastic - Meow,400
+24560,NA,2014-XX-XX,NA,2014-46,NA,Male,White,NA,typical,English,NA,Fantastic - Hello,400
+24562,NA,2014-XX-XX,NA,2014-47,NA,Female,White,Not Hispanic or Latino,typical,English,NA,Fantastic - Chit,400
+24563,NA,2014-XX-XX,NA,2014-48,NA,Female,White,Not Hispanic or Latino,typical,English,NA,Realistic - Chit,400
+24564,NA,2014-XX-XX,NA,2014-50,NA,Male,Black or African American,Not Hispanic or Latino,typical,English,NA,Realistic - Meow,400
+24565,NA,2014-XX-XX,NA,2014-51,NA,Male,White,Not Hispanic or Latino,typical,English,NA,Realistic - Meow,400
+24566,NA,2014-XX-XX,NA,2014-53,NA,Female,White,Not Hispanic or Latino,typical,English,NA,Fantastic - Meow,400
+24567,NA,2014-XX-XX,NA,2014-54,NA,Male,Black or African American,Not Hispanic or Latino,typical,English,NA,Fantastic - Meow,400
+24568,NA,2014-XX-XX,NA,2014-55,NA,Male,Black or African American,Not Hispanic or Latino,typical,English,NA,Realistic - Chit,400
+24569,NA,2014-XX-XX,NA,2014-57,NA,Male,Black or African American,Not Hispanic or Latino,typical,English,NA,Fantastic - Chit,400
+24571,NA,2014-XX-XX,NA,2014-58,NA,Male,Asian,Not Hispanic or Latino,typical,English,NA,Fantastic - Chit,400
+24572,NA,2014-XX-XX,NA,2014-59,NA,Female,Black or African American,Not Hispanic or Latino,typical,English,NA,Realistic - Meow,400
+24573,NA,2014-XX-XX,NA,2014-60,NA,Male,Black or African American,Not Hispanic or Latino,typical,English,NA,Realistic - Chit,400
+24574,NA,2014-XX-XX,NA,2014-62,NA,Male,White,Not Hispanic or Latino,typical,English,NA,Fantastic - Hello,400
+24575,NA,2014-XX-XX,NA,2014-63,NA,Female,White,Not Hispanic or Latino,typical,English,NA,Fantastic - Hello,400
+24577,NA,2014-XX-XX,NA,2014-66,NA,Female,White,Not Hispanic or Latino,typical,English,NA,Fantastic - Meow,400
+24579,NA,2014-XX-XX,NA,2014-67,NA,Female,Black or African American,Not Hispanic or Latino,typical,English,NA,Realistic - Chit,400
+24581,NA,2014-XX-XX,NA,2014-70,NA,Female,White,Not Hispanic or Latino,typical,English,NA,Realistic - Meow,400
+24582,NA,2014-XX-XX,NA,2014-71,NA,Male,Asian,Not Hispanic or Latino,typical,English,NA,Realistic - Hello,400
+24583,NA,2014-XX-XX,NA,2014-72,NA,Male,White,Not Hispanic or Latino,typical,English,NA,Realistic - Hello,400
+24585,NA,2014-XX-XX,NA,2014-73,NA,Female,Asian,Not Hispanic or Latino,typical,English,NA,Realistic - Meow,400
+24586,NA,2014-XX-XX,NA,2014-74,NA,Female,White,Not Hispanic or Latino,typical,English,NA,Fantastic - Chit,400
+24587,NA,2014-XX-XX,NA,2014-76,NA,Female,White,Not Hispanic or Latino,typical,English,NA,Realistic - Chit,400
+24589,NA,2014-XX-XX,NA,2014-77,NA,Male,Asian,Not Hispanic or Latino,typical,English,NA,Fantastic - Hello,400
+24590,NA,2014-XX-XX,NA,2014-79,NA,Male,White,Not Hispanic or Latino,typical,English,NA,Fantastic - Meow,400
+24591,NA,2014-XX-XX,NA,2014-80,NA,Male,White,Not Hispanic or Latino,typical,English,NA,Realistic - Hello,400
+24592,NA,2014-XX-XX,NA,2014-138,NA,Male,Black or African American,Not Hispanic or Latino,typical,English,NA,Fantastic - Chit,400
+24593,NA,2014-XX-XX,NA,2014-139,NA,Male,Black or African American,Not Hispanic or Latino,typical,English,NA,Realistic - Chit,400
+24595,NA,2014-XX-XX,NA,2014-155,NA,Female,Black or African American,Not Hispanic or Latino,typical,English,NA,Realistic - Meow,400
+24596,NA,2014-XX-XX,NA,2014-156,NA,Male,Black or African American,Not Hispanic or Latino,typical,English,NA,Fantastic - Hello,400
+24597,NA,2014-XX-XX,NA,2014-161,NA,Female,Black or African American,Not Hispanic or Latino,typical,English,NA,Fantastic - Meow,400
+24598,NA,2014-XX-XX,NA,2014-162,NA,Male,White,Not Hispanic or Latino,typical,English,NA,Fantastic - Chit,400
+24603,NA,2014-XX-XX,NA,2014-16,NA,Male,Asian,Not Hispanic or Latino,typical,English,NA,Fantastic - Chit,400
+24604,NA,2014-XX-XX,NA,2014-17,NA,Male,Nepall,Not Hispanic or Latino,typical,English - ESL,NA,Fantastic - Meow,400
+24605,NA,2014-XX-XX,NA,2014-24,NA,Female,Asian,Not Hispanic or Latino,typical,English - ESL,NA,Realistic - Chit,400
+24606,NA,2014-XX-XX,NA,2014-25,NA,Male,Asian,Hispanic or Latino,typical,English - ESL,NA,Realistic - Meow,400
+24607,NA,2014-XX-XX,NA,2014-39,NA,Male,White,Not Hispanic or Latino,typical,English,NA,Fantastic - Hello,400
+24608,NA,2014-XX-XX,NA,2014-40,NA,Male,Half Asian,Not Hispanic or Latino,typical,English,NA,Fantastic - Hello,400
+24609,NA,2014-XX-XX,NA,2014-87,NA,Male,White,Not Hispanic or Latino,typical,English,NA,Fantastic - Meow,400
+24610,NA,2014-XX-XX,NA,2014-86,NA,Female,White,Not Hispanic or Latino,typical,English,NA,Realistic - Chit,400
+24611,NA,2014-XX-XX,NA,2014-109,NA,Male,NA,Hispanic or Latino,typical,English,NA,Fantastic - Chit,400
+24612,NA,2014-XX-XX,NA,2014-90,NA,Male,White,Not Hispanic or Latino,typical,English,NA,Realistic - Meow,400
+24613,NA,2014-XX-XX,NA,2014-120,NA,Male,White,Not Hispanic or Latino,typical,English,NA,Fantastic - Meow,400
+24614,NA,2014-XX-XX,NA,2014-9,NA,Female,Asian,Not Hispanic or Latino,typical,English,NA,Fantastic - Meow,400
+24615,NA,2013-XX-XX,NA,2013-62,NA,Female,NA,Hispanic or Latino,typical,English,NA,Fantastic - Hello,400
+24616,NA,2013-XX-XX,NA,2013-68,NA,Male,White,Not Hispanic or Latino,typical,English,NA,Fantastic - Chit,400
+24617,NA,2013-XX-XX,NA,2013-77,NA,Male,NA,NA,typical,English,NA,Realistic - Hello,400
+24618,NA,2014-XX-XX,NA,2014-1,NA,Male,Asian,Not Hispanic or Latino,typical,English,NA,Realistic - Hello,400
+24621,NA,2014-XX-XX,NA,2014-8,NA,Female,White,Not Hispanic or Latino,typical,English,NA,Realistic - Hello,400
+24624,NA,2014-XX-XX,NA,2014-85,NA,Female,White,Not Hispanic or Latino,typical,English,NA,Fantastic - Chit,400
+24625,NA,2014-XX-XX,NA,2014-116,NA,Female,White,Not Hispanic or Latino,typical,English,NA,Realistic - Chit,400
+24626,NA,2014-XX-XX,NA,2014-56,NA,Male,White/Mixed,NA,typical,English,NA,Realistic - Chit,400
+24629,NA,2014-XX-XX,NA,2014-52,NA,Female,White,Not Hispanic or Latino,typical,English,NA,Fantastic - Chit,400
+24631,NA,2014-XX-XX,NA,2014-117,NA,Female,White,Not Hispanic or Latino,typical,English,NA,Realistic - Hello,400
+24634,NA,2014-XX-XX,NA,2014-49,NA,Male,Black/Mixed,NA,typical,English,NA,Fantastic - Meow,400
+24635,NA,2014-XX-XX,NA,2014-64,NA,Male,White,Not Hispanic or Latino,typical,English,NA,Fantastic - Chit,400
+24636,NA,2014-XX-XX,NA,2014-65,NA,Female,White/Asian,NA,typical,English,NA,Fantastic - Meow,400
+24637,NA,2014-XX-XX,NA,2014-78,NA,Female,White,Not Hispanic or Latino,typical,English,NA,Fantastic - Hello,400
+24638,NA,2014-XX-XX,NA,2014-81,NA,Female,White,Not Hispanic or Latino,typical,English,NA,Fantastic - Hello,400
+24639,NA,2014-XX-XX,NA,2014-82,NA,Female,Indian,Not Hispanic or Latino,typical,English,NA,Realistic -Hello,400
+24640,NA,2014-XX-XX,NA,2014-83,NA,Female,Asian,Not Hispanic or Latino,typical,English,NA,Fantastic - Meow,400
+24831,NA,2014-XX-XX,NA,2014-122,NA,Female,White,NA,typical,English,NA,Realistic - Hello,400
+24832,NA,2014-XX-XX,NA,2014-123,NA,Female,White,NA,typical,English,NA,Realistic - Hello,400
+24833,NA,2014-XX-XX,NA,2014-124,NA,Male,White,NA,typical,English,NA,Realistic - Meow,400
+24834,NA,2014-XX-XX,NA,2014-125,NA,Male,Black or African American,NA,typical,English,NA,Fantastic - Meow,400
+24835,NA,2014-XX-XX,NA,2014-126,NA,Male,White,NA,typical,English,NA,Realistic - Chit,400
+24836,NA,2014-XX-XX,NA,2014-127,NA,Female,Asian,NA,typical,English,NA,Fantastic - Chit,400
+24837,NA,2014-XX-XX,NA,2014-128,NA,Female,White,NA,typical,English,NA,Fantastic - Hello,400
+24838,NA,2014-XX-XX,NA,2014-137,NA,Male,Black or African American,NA,typical,English,NA,Realistic - Meow,400
+24839,NA,2014-XX-XX,NA,2014-165,NA,Male,Asian,NA,typical,English,NA,Realistic - Hello,400
+24840,NA,2014-XX-XX,NA,2014-175,NA,Female,White,Hispanic or Latino,typical,English,NA,Realistic - Hello,400
+24841,NA,2014-XX-XX,NA,2014-178,NA,Male,Black or African American,NA,typical,English,NA,Realistic - Meow,400
+24842,NA,2014-XX-XX,NA,2014-106,NA,Female,White,NA,typical,English,NA,Realistic - Meow,400
+25021,NA,2013-XX-XX,NA,2013-77,NA,Male,NA,NA,typical,English,NA,Realistic - Hello,400
+38579,NA,2019-07-09,SHARED,2019-036,2015-01-16,Male,White,Not Hispanic or Latino,typical,English,NA,Control,400
+38581,NA,2019-07-09,EXCERPTS,2019-038,2014-01-02,Female,White,NA,typical,English,NA,Control,400
+38582,NA,2019-07-09,EXCERPTS,2019-039,2014-05-15,Male,White,NA,typical,English,NA,Control,400
+38583,NA,2019-XX-XX,PRIVATE,2019-040,NA,Male,NA,NA,typical,English,NA,Control,400
+38852,NA,2019-XX-XX,PRIVATE,2019-044,NA,Female,White,NA,typical,English,NA,Control,400
+39040,NA,2019-XX-XX,PRIVATE,2019-045,NA,Male,White,NA,typical,English,NA,Control,400
+39041,NA,2019-XX-XX,PRIVATE,2019-046,NA,Male,White,NA,typical,English,NA,Control,400
+39042,NA,2019-XX-XX,PRIVATE,2019-047,NA,Female,White,NA,typical,English,NA,Control,400
+39043,NA,2019-XX-XX,PRIVATE,2019-048,NA,Male,White,NA,typical,English,NA,Control,400
+39044,NA,2019-07-23,EXCERPTS,2019-049,2015-07-13,Male,White,NA,typical,English,NA,Control,400
+39045,NA,2019-07-23,EXCERPTS,2019-050,2014-11-04,Female,White,NA,typical,English,NA,Control,400
+39046,NA,2019-07-23,EXCERPTS,2019-051,2015-05-01,Male,NA,NA,typical,English,NA,Control,400
+39210,NA,2019-07-30,EXCERPTS,2019-085,2013-11-21,Male,White,NA,typical,English,NA,Control,400
+39212,NA,2019-07-30,EXCERPTS,2019-086,2014-09-19,Female,White,NA,typical,English,NA,Control,400
+39214,NA,2019-07-30,SHARED,2019-087,2013-09-23,Female,White,NA,typical,English,NA,Control,400
+39215,NA,2019-07-30,SHARED,2019-088,2013-09-23,Female,White,NA,typical,English,NA,NA,400

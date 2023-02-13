@@ -1,0 +1,15 @@
+session_id,session_name,session_date,session_release,vol_id
+15460,Group1_Session1_Angle1,2012-06-26,SHARED,297
+15461,Group1_Session1_Angle2,2012-06-26,SHARED,297
+15462,Group1_Session1_Angle3,2012-06-26,SHARED,297
+15463,Group1_Session1_Angle4,2012-06-26,SHARED,297
+15464,Group1_Session2_Angle1,2012-11-13,SHARED,297
+15465,Group1_Session2_Angle2,2012-11-13,SHARED,297
+15503,Group1_Session2_Angle3,2012-11-13,SHARED,297
+15504,Group1_Session2_Angle4,2012-11-13,SHARED,297
+15505,Group2_Session1_Angle4,2012-07-03,SHARED,297
+15506,Group2_Session1_Angle1,2012-07-03,SHARED,297
+15507,Group2_Session1_Angle2,2012-07-03,SHARED,297
+15508,Group2_Session1_Angle3,2012-07-03,SHARED,297
+16015,Coding_example1,materials,NA,297
+16016,Coding_example2,materials,NA,297

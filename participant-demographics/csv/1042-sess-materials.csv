@@ -1,0 +1,170 @@
+session_id,session_name,session_date,session_release,participant_ID,participant_birthdate,participant_gender,participant_race,participant_ethnicity,participant_disability,participant_language,exclusion_reason,group_name,task1_name,task1_description,task2_name,task2_description,task3_name,task3_description,task4_name,task4_description,task5_name,task5_description,task6_name,task6_description,task7_name,task7_description,task8_name,task8_description,context_setting,context_language,context_country,context_state,vol_id
+42437,NA,2014-12-01,EXCERPTS,832108,2013-05-02,Male,NA,Hispanic or Latino,typical,spanish,NA,19 mos,background,NA,free play,NA,background,NA,gait,NA,NA,NA,NA,NA,NA,NA,NA,NA,Lab,Spanish,US,NY,1042
+42438,NA,2014-XX-XX,PRIVATE,832203,NA,Female,More than one,Hispanic or Latino,typical,spanish,NA,13 mos,background,NA,background,NA,gait,NA,feeding,NA,NA,NA,NA,NA,NA,NA,NA,NA,Lab,Spanish,US,NY,1042
+42439,NA,2014-12-22,EXCERPTS,832106,2013-05-10,Male,NA,Hispanic or Latino,typical,spanish,NA,19 mos,background,NA,free play,NA,background,NA,gait,NA,background,NA,NA,NA,NA,NA,NA,NA,Lab,Spanish,US,NY,1042
+42442,NA,2015-01-20,EXCERPTS,832095,2013-06-05,Male,NA,Hispanic or Latino,typical,spanish,NA,19 mos,background,NA,free play,NA,background,NA,gait,NA,NA,NA,NA,NA,NA,NA,NA,NA,Lab,Spanish,US,NY,1042
+42443,NA,2015-01-21,EXCERPTS,832086,2013-05-30,Female,NA,Hispanic or Latino,typical,English,Did not fall,19 mos,free play,NA,background,NA,gait,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,Lab,Spanish,US,NY,1042
+42444,NA,2015-01-22,EXCERPTS,832083,2013-05-29,Male,White,Hispanic or Latino,typical,spanish,Did not fall,19 mos,background,NA,free play,NA,background,NA,gait,NA,NA,NA,NA,NA,NA,NA,NA,NA,Lab,Spanish,US,NY,1042
+42445,NA,2015-01-28,EXCERPTS,832215,2013-12-19,Female,NA,Hispanic or Latino,typical,spanish,NA,13 mos,background,NA,background,NA,gait,NA,feeding,NA,background,NA,NA,NA,NA,NA,NA,NA,Lab,Spanish,US,NY,1042
+42446,NA,2015-01-30,EXCERPTS,832099,2013-06-23,Female,NA,Hispanic or Latino,typical,spanish,NA,19 mos,background,NA,free play,NA,background,NA,gait,NA,NA,NA,NA,NA,NA,NA,NA,NA,Lab,Spanish,US,NY,1042
+42447,NA,2014-04-22,EXCERPTS,832001,2012-10-04,Female,NA,Hispanic or Latino,typical,spanish,NA,19 mos,background,NA,free play,NA,background,NA,background,NA,NA,NA,NA,NA,NA,NA,NA,NA,Lab,Spanish,US,NY,1042
+42449,NA,2014-05-10,SHARED,832005,2012-10-02,Male,NA,Hispanic or Latino,typical,spanish,NA,19 mos,background,NA,free play,NA,background,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,Lab,Spanish,US,NY,1042
+42450,NA,2014-06-10,EXCERPTS,832023,2012-11-14,Female,NA,Hispanic or Latino,typical,spanish,NA,19 mos,background,NA,free play,NA,background,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,Lab,Spanish,US,NY,1042
+42452,NA,2014-07-11,EXCERPTS,832025,2012-11-10,Female,NA,Hispanic or Latino,typical,spanish,Did not fall,19 mos,background,NA,free play,NA,background,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,Lab,Spanish,US,NY,1042
+42453,NA,2014-07-10,EXCERPTS,832031,2012-11-28,Male,NA,Hispanic or Latino,typical,spanish,NA,19 mos,background,NA,free play,NA,background,NA,gait,NA,feeding,NA,background,NA,background,NA,free play,NA,Lab,Spanish,US,NY,1042
+42454,NA,2014-07-31,EXCERPTS,832044,2012-12-17,Female,NA,Hispanic or Latino,typical,spanish,NA,19 mos,background,NA,free play,NA,background,NA,background,NA,NA,NA,NA,NA,NA,NA,NA,NA,Lab,Spanish,US,NY,1042
+42456,NA,2014-07-17,SHARED,832047,2012-12-04,Male,NA,Hispanic or Latino,typical,spanish,NA,19 mos,background,NA,free play,NA,background,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,Lab,Spanish,US,NY,1042
+42457,NA,2014-07-21,EXCERPTS,832048,2012-12-09,Female,NA,Hispanic or Latino,typical,spanish,NA,19 mos,background,NA,free play,NA,background,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,Lab,Spanish,US,NY,1042
+42458,NA,2014-07-24,SHARED,832050,2012-12-16,Female,NA,Hispanic or Latino,typical,spanish,NA,19 mos,background,NA,free play,NA,background,NA,background,NA,NA,NA,NA,NA,NA,NA,NA,NA,Lab,Spanish,US,NY,1042
+42459,NA,2014-07-22,EXCERPTS,832054,2012-12-06,Female,NA,Hispanic or Latino,typical,spanish,NA,19 mos,background,NA,free play,NA,background,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,Lab,Spanish,US,NY,1042
+42460,NA,2014-06-08,EXCERPTS,832056,2012-11-16,Male,White,Hispanic or Latino,typical,spanish,NA,19 mos,background,NA,free play,NA,background,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,Lab,Spanish,US,NY,1042
+42461,NA,2014-03-15,EXCERPTS,832073,2013-01-30,Female,White,Hispanic or Latino,typical,spanish,Did not fall,13 mos,background,NA,free play,NA,background,NA,background,NA,NA,NA,NA,NA,NA,NA,NA,NA,Lab,Spanish,US,NY,1042
+42462,NA,2014-XX-XX,PRIVATE,832076,NA,Male,NA,Hispanic or Latino,typical,spanish,Did not fall,19 mos,background,NA,free play,NA,background,NA,background,NA,NA,NA,NA,NA,NA,NA,NA,NA,Lab,Spanish,US,NY,1042
+42463,NA,2014-08-19,EXCERPTS,832087,2013-05-03,Female,NA,Hispanic or Latino,typical,spanish,NA,15 mos,background,NA,free play,NA,background,NA,background,NA,NA,NA,NA,NA,NA,NA,NA,NA,Lab,Spanish,US,NY,1042
+42464,NA,2014-09-12,EXCERPTS,832088,2013-06-11,Female,NA,Hispanic or Latino,typical,spanish,NA,15 mos,background,NA,free play,NA,background,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,Lab,Spanish,US,NY,1042
+42465,NA,2014-07-01,SHARED,832092,2013-06-04,Male,NA,Hispanic or Latino,typical,spanish,NA,13 mos,background,NA,free play,NA,background,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,Lab,Spanish,US,NY,1042
+42466,NA,2014-08-07,SHARED,832104,2013-06-28,Female,NA,Hispanic or Latino,typical,spanish,NA,13 mos,background,NA,free play,NA,background,NA,feeding,NA,background,NA,NA,NA,NA,NA,NA,NA,Lab,Spanish,US,NY,1042
+42467,NA,2014-09-15,SHARED,832111,2013-06-07,Female,NA,Hispanic or Latino,typical,spanish,NA,15 mos,background,NA,free play,NA,background,NA,background,NA,NA,NA,NA,NA,NA,NA,NA,NA,Lab,Spanish,US,NY,1042
+42468,NA,2014-09-22,EXCERPTS,832137,2013-08-06,Male,NA,Hispanic or Latino,typical,spanish,NA,13 mos,background,NA,free play,NA,background,NA,background,NA,background,NA,NA,NA,NA,NA,NA,NA,Lab,Spanish,US,NY,1042
+42469,NA,2014-10-30,SHARED,832149,2013-09-24,Female,NA,Hispanic or Latino,typical,spanish,NA,13 mos,background,NA,gait,NA,feeding,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,Lab,Spanish,US,NY,1042
+42473,NA,2013-10-11,EXCERPTS,896,2012-08-22,Female,White,Not Hispanic or Latino,typical,English,NA,13 mos,background,NA,free play,NA,background,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,Lab,English,US,NY,1042
+42475,NA,2015-02-02,EXCERPTS,8969,2013-06-22,Female,White,Hispanic or Latino,typical,English,NA,19 mos,background,NA,free play,NA,background,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,Lab,English,US,NY,1042
+42476,NA,2014-05-19,EXCERPTS,832002,2012-10-19,Female,NA,Hispanic or Latino,typical,English,Did not fall,19 mos,background,NA,free play,NA,background,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,Lab,English,US,NY,1042
+42477,NA,2014-05-20,EXCERPTS,832024,2012-10-23,Male,NA,Hispanic or Latino,typical,English,NA,19 mos,background,NA,free play,NA,background,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,Lab,English,US,NY,1042
+42478,NA,2014-07-22,EXCERPTS,832059,2012-12-12,Male,NA,Hispanic or Latino,typical,English,NA,19 mos,background,NA,free play,NA,background,NA,background,NA,NA,NA,NA,NA,NA,NA,NA,NA,Lab,English,US,NY,1042
+42479,NA,2014-07-21,EXCERPTS,832105,2013-06-12,Male,NA,Hispanic or Latino,typical,English,NA,13 mos,background,NA,free play,NA,background,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,Lab,English,US,NY,1042
+42480,NA,2014-09-24,EXCERPTS,832172,2013-08-13,Male,More than one,Hispanic or Latino,typical,English,NA,13 mos,background,NA,background,NA,gait,NA,feeding,NA,background,NA,NA,NA,NA,NA,NA,NA,Lab,Spanish,US,NY,1042
+42481,NA,2013-XX-XX,NA,8914,NA,Male,White,Hispanic or Latino,typical,English,NA,19 mos,background,NA,free play,NA,background,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,Lab,English,US,NY,1042
+42482,NA,2014-05-12,EXCERPTS,8937,2012-09-29,Male,White,Hispanic or Latino,typical,English,NA,19 mos,background,NA,free play,NA,background,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,Lab,English,US,NY,1042
+42483,NA,2014-10-06,SHARED,8945,2013-07-22,Female,White,Hispanic or Latino,typical,English,NA,15 mos,background,NA,free play,NA,background,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,Lab,English,US,NY,1042
+42484,NA,2014-03-25,EXCERPTS,892,2012-09-05,Male,White,Not Hispanic or Latino,typical,English,NA,19 mos,background,NA,free play,NA,background,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,Lab,English,US,NY,1042
+42485,NA,2014-03-10,EXCERPTS,893,2012-08-22,Female,NA,NA,typical,English,NA,19 mos,background,NA,free play,NA,background,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,Lab,English,US,NY,1042
+42486,NA,2013-XX-XX,PRIVATE,8910,NA,Female,More than one,Not Hispanic or Latino,typical,English,NA,19 mos,free play,NA,background,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,Lab,English,US,NY,1042
+42487,NA,2013-10-21,EXCERPTS,8911,2012-03-11,Male,White,Not Hispanic or Latino,typical,English,Did not fall,19 mos,free play,NA,background,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,Lab,English,US,NY,1042
+42488,NA,2013-10-24,EXCERPTS,8912,2012-03-23,Male,Black or African American,Not Hispanic or Latino,typical,English,NA,19 mos,background,NA,free play,NA,background,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,Lab,English,US,NY,1042
+42489,NA,2013-10-25,SHARED,8913,2012-03-17,Female,Black or African American,Not Hispanic or Latino,typical,English,Did not fall,19 mos,free play,NA,background,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,Lab,English,US,NY,1042
+42490,NA,2013-11-04,EXCERPTS,8916,2012-09-17,Female,White,Not Hispanic or Latino,typical,English,NA,13 mos,background,NA,free play,NA,background,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,Lab,English,US,NY,1042
+42491,NA,2013-XX-XX,PRIVATE,8918,NA,Male,White,Not Hispanic or Latino,typical,English,NA,13 mos,background,NA,free play,NA,background,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,Lab,English,US,NY,1042
+42492,NA,2013-12-16,SHARED,8921,2012-10-23,Female,White,Not Hispanic or Latino,typical,English,NA,13 mos,free play,NA,background,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,Lab,English,US,NY,1042
+42493,NA,2013-12-19,EXCERPTS,8922,2012-05-22,Female,More than one,Not Hispanic or Latino,typical,English,NA,19 mos,free play,NA,background,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,Lab,English,US,NY,1042
+42494,NA,2014-01-27,EXCERPTS,8923,2012-06-30,Female,More than one,Not Hispanic or Latino,typical,English,Did not fall,19 mos,free play,NA,background,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,Lab,English,US,NY,1042
+42495,NA,2014-01-30,EXCERPTS,8924,2012-07-14,Male,White,Not Hispanic or Latino,typical,English,NA,19 mos,free play,NA,background,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,Lab,English,US,NY,1042
+42496,NA,2014-02-10,EXCERPTS,8926,2012-07-21,Male,White,Not Hispanic or Latino,typical,English,NA,19 mos,free play,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,Lab,English,US,NY,1042
+42497,NA,2014-02-10,EXCERPTS,8927,2012-07-15,Male,More than one,Not Hispanic or Latino,typical,English,NA,19 mos,free play,NA,background,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,Lab,English,US,NY,1042
+42498,NA,2014-03-10,SHARED,8932,2012-08-15,Male,White,Not Hispanic or Latino,typical,English,NA,19 mos,background,NA,free play,NA,background,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,Lab,English,US,NY,1042
+42499,NA,2014-05-07,EXCERPTS,8936,2012-10-15,Female,More than one,Not Hispanic or Latino,typical,English,NA,19 mos,free play,NA,background,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,Lab,English,US,NY,1042
+42500,NA,2014-10-02,SHARED,8944,2013-06-28,Female,White,Not Hispanic or Latino,typical,English,NA,15 mos,background,NA,free play,NA,background,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,Lab,English,US,NY,1042
+42501,NA,2015-01-13,EXCERPTS,8946,2013-12-13,Male,White,Not Hispanic or Latino,typical,English,NA,13 mos,background,NA,free play,NA,feeding,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,Lab,English,US,NY,1042
+42503,NA,2014-10-10,EXCERPTS,8947,2013-03-25,Male,White,Not Hispanic or Latino,typical,English,NA,19 mos,background,NA,free play,NA,background,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,Lab,English,US,NY,1042
+42504,NA,2015-01-19,SHARED,8948,2013-07-02,Male,White,Hispanic or Latino,typical,English,NA,19 mos,background,NA,free play,NA,background,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,Lab,English,US,NY,1042
+42505,NA,2014-10-17,EXCERPTS,8952,2013-03-28,Male,NA,Hispanic or Latino,typical,English,NA,19 mos,background,NA,free play,NA,background,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,Lab,English,US,NY,1042
+42506,NA,2014-10-23,EXCERPTS,8953,2013-07-29,Female,White,Not Hispanic or Latino,typical,English,Did not fall,15 mos,free play,NA,background,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,Lab,English,US,NY,1042
+42507,NA,2014-10-24,EXCERPTS,8956,2013-07-29,Female,White,Not Hispanic or Latino,typical,English,NA,15 mos,background,NA,free play,NA,background,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,Lab,English,US,NY,1042
+42508,NA,2014-10-27,EXCERPTS,8957,2013-08-08,Male,More than one,Not Hispanic or Latino,typical,English,NA,15 mos,background,NA,free play,NA,background,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,Lab,English,US,NY,1042
+42509,NA,2014-11-04,EXCERPTS,8959,2013-08-05,Female,Asian,Not Hispanic or Latino,typical,English,NA,15 mos,background,NA,free play,NA,background,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,Lab,English,US,NY,1042
+42510,NA,2014-XX-XX,PRIVATE,8960,NA,Female,White,Not Hispanic or Latino,typical,English,NA,13 mos,background,NA,free play,NA,background,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,Lab,English,US,NY,1042
+42511,NA,2015-01-16,EXCERPTS,8961,2013-10-15,Female,White,Hispanic or Latino,typical,English,NA,15 mos,background,NA,free play,NA,background,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,Lab,English,US,NY,1042
+42512,NA,2014-11-11,EXCERPTS,8962,2013-03-27,Female,More than one,Not Hispanic or Latino,typical,English,NA,19 mos,background,NA,free play,NA,background,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,Lab,English,US,NY,1042
+42513,NA,2014-11-19,SHARED,8963,2013-10-16,Male,White,Not Hispanic or Latino,typical,English,NA,13 mos,background,NA,free play,NA,background,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,Lab,English,US,NY,1042
+42514,NA,2015-01-09,EXCERPTS,8968,2013-10-15,Female,White,Not Hispanic or Latino,typical,English,NA,15 mos,background,NA,free play,NA,background,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,Lab,English,US,NY,1042
+42515,NA,2015-02-18,EXCERPTS,8971,2014-01-06,Male,White,Not Hispanic or Latino,typical,English,NA,13 mos,background,NA,free play,NA,background,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,Lab,English,US,NY,1042
+42516,NA,2015-02-26,EXCERPTS,832112,2013-07-23,Female,NA,Hispanic or Latino,typical,spanish,NA,19 mos,background,NA,gait,NA,feeding,NA,free play,NA,NA,NA,NA,NA,NA,NA,NA,NA,Lab,Spanish,US,NY,1042
+42517,NA,2015-03-05,EXCERPTS,8954,2013-07-22,Male,White,Not Hispanic or Latino,typical,English,NA,19 mos,background,NA,free play,NA,background,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,Lab,English,US,NY,1042
+42518,NA,2015-03-06,EXCERPTS,8955,2013-07-30,Female,White,Not Hispanic or Latino,typical,English,NA,19 mos,background,NA,free play,NA,background,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,Lab,English,US,NY,1042
+42519,NA,2015-03-10,EXCERPTS,832130,2013-08-18,Female,NA,Hispanic or Latino,typical,spanish,NA,19 mos,background,NA,free play,NA,background,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,Lab,Spanish,US,NY,1042
+42520,NA,2015-03-10,EXCERPTS,8976,2014-02-08,Female,More than one,Not Hispanic or Latino,typical,English,NA,13 mos,background,NA,free play,NA,background,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,Lab,English,US,NY,1042
+42521,NA,2015-04-08,EXCERPTS,8967,2013-09-10,Male,More than one,NA,typical,English,NA,19 mos,background,NA,free play,NA,background,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,Lab,English,US,NY,1042
+42522,NA,2015-XX-XX,NA,8966,NA,Male,More than one,Not Hispanic or Latino,typical,English,NA,19 mos,background,NA,free play,NA,background,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,Lab,English,US,NY,1042
+42523,NA,2015-04-13,EXCERPTS,832152,2013-09-09,Male,NA,Hispanic or Latino,typical,spanish,NA,19 mos,background,NA,free play,NA,background,NA,gait,NA,NA,NA,NA,NA,NA,NA,NA,NA,Lab,Spanish,US,NY,1042
+42528,NA,2015-04-14,EXCERPTS,8965,2013-09-05,Male,White,Not Hispanic or Latino,typical,English,Did not fall,19 mos,background,NA,free play,NA,background,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,Lab,English,US,NY,1042
+42530,NA,2015-04-27,EXCERPTS,832281,2014-04-03,Male,NA,Hispanic or Latino,typical,spanish,NA,13 mos,free play,NA,background,NA,gait,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,Lab,Spanish,US,NY,1042
+42531,NA,2015-04-30,EXCERPTS,8958,2013-10-03,Female,NA,Hispanic or Latino,typical,English,NA,19 mos,background,NA,free play,NA,background,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,Lab,English,US,NY,1042
+42532,NA,2015-05-11,EXCERPTS,832299,2014-04-18,Male,NA,Hispanic or Latino,typical,spanish,NA,13 mos,free play,NA,background,NA,gait,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,Lab,Spanish,US,NY,1042
+42533,NA,2015-05-28,EXCERPTS,8970,2014-04-22,Male,More than one,Hispanic or Latino,typical,English,NA,13 mos,background,NA,free play,NA,background,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,Lab,English,US,NY,1042
+42534,NA,2015-06-23,EXCERPTS,8942,2013-11-12,Male,White,Not Hispanic or Latino,typical,English,NA,19 mos,background,NA,free play,NA,background,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,Lab,English,US,NY,1042
+42535,NA,2015-06-26,EXCERPTS,8943,2013-12-07,Male,White,Not Hispanic or Latino,typical,English,NA,19 mos,background,NA,free play,NA,background,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,Lab,English,US,NY,1042
+42536,NA,2015-07-06,EXCERPTS,8972,2013-12-01,Male,White,Not Hispanic or Latino,typical,English,NA,19 mos,background,NA,free play,NA,background,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,Lab,English,US,NY,1042
+42537,NA,2015-07-20,EXCERPTS,832213,2013-12-19,Male,NA,Hispanic or Latino,typical,spanish,Did not fall,19 mos,background,NA,free play,NA,background,NA,gait,NA,NA,NA,NA,NA,NA,NA,NA,NA,Lab,Spanish,US,NY,1042
+42538,NA,2015-07-30,EXCERPTS,832226,2013-12-29,Female,NA,Hispanic or Latino,typical,spanish,NA,19 mos,background,NA,free play,NA,background,NA,gait,NA,NA,NA,NA,NA,NA,NA,NA,NA,Lab,Spanish,US,NY,1042
+42539,NA,2015-09-01,EXCERPTS,8982,2014-08-05,Female,More than one,Not Hispanic or Latino,typical,English,NA,13 mos,background,NA,free play,NA,background,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,Lab,English,US,NY,1042
+42540,NA,2015-09-11,EXCERPTS,8981,2014-07-21,Female,Asian,Not Hispanic or Latino,typical,English,NA,13 mos,background,NA,free play,NA,background,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,Lab,English,US,NY,1042
+42541,NA,2015-10-12,EXCERPTS,14021,2014-06-29,Male,White,Not Hispanic or Latino,typical,"English, Portuguese",NA,15 mos,free play,NA,feeding,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,Lab,English,US,NY,1042
+42542,NA,2015-10-14,EXCERPTS,14022,2014-07-08,Female,More than one,Hispanic or Latino,typical,"English, Spanish",NA,15 mos,free play,NA,feeding,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,Lab,English,US,NY,1042
+42543,NA,2015-XX-XX,NA,14023,NA,Female,White,Not Hispanic or Latino,typical,English,NA,15 mos,free play,NA,feeding,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,Lab,English,US,NY,1042
+42544,NA,2015-10-23,EXCERPTS,14024,2014-03-28,Male,White,Not Hispanic or Latino,typical,English,NA,19 mos,free play,NA,feeding,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,Lab,English,US,NY,1042
+42545,NA,2015-10-26,EXCERPTS,14025,2014-07-26,Male,White,Not Hispanic or Latino,typical,"English, Italian",Did not fall,15 mos,free play,NA,feeding,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,Lab,English,US,NY,1042
+42546,NA,2015-10-28,EXCERPTS,14026,2014-08-03,Female,White,Hispanic or Latino,typical,English,NA,15 mos,free play,NA,feeding,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,Lab,English,US,NY,1042
+42547,NA,2015-11-03,EXCERPTS,14028,2014-07-23,Female,White,Not Hispanic or Latino,typical,English,NA,15 mos,free play,NA,feeding,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,Lab,English,US,NY,1042
+42548,NA,2015-11-10,EXCERPTS,14029,2014-08-17,Male,White,Not Hispanic or Latino,typical,English,NA,15 mos,free play,NA,feeding,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,Lab,English,US,NY,1042
+42549,NA,2015-11-11,EXCERPTS,14030,2014-07-30,Male,More than one,Not Hispanic or Latino,typical,English,NA,15 mos,free play,NA,feeding,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,Lab,English,US,NY,1042
+42550,NA,2015-11-11,EXCERPTS,14031,2014-07-24,Female,Asian,Not Hispanic or Latino,typical,"English, Mandarin, Cantonese, French",NA,15 mos,free play,NA,feeding,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,Lab,English,US,NY,1042
+42551,NA,2015-11-12,EXCERPTS,8983,2014-10-22,Male,More than one,Not Hispanic or Latino,typical,English,NA,13 mos,background,NA,free play,NA,background,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,Lab,English,US,NY,1042
+42552,NA,2015-11-13,EXCERPTS,14032,2014-07-25,Male,White,Not Hispanic or Latino,typical,English,NA,15 mos,free play,NA,feeding,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,Lab,English,US,NY,1042
+42553,NA,2015-11-18,EXCERPTS,14033,2014-08-10,Female,White,Not Hispanic or Latino,typical,"English, Swedish",NA,15 mos,free play,NA,feeding,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,Lab,English,US,NY,1042
+42554,NA,2015-11-18,EXCERPTS,14034,2014-08-17,Female,More than one,Not Hispanic or Latino,typical,"English, Korean",NA,15 mos,free play,NA,feeding,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,Lab,English,US,NY,1042
+42555,NA,2015-12-04,EXCERPTS,14036,2014-08-18,Male,White,Not Hispanic or Latino,typical,English,NA,15 mos,free play,NA,feeding,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,Lab,English,US,NY,1042
+42556,NA,2015-XX-XX,NA,14037,NA,Female,Black or African American,NA,typical,"English, Spanish, French",NA,15 mos,free play,NA,feeding,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,Lab,English,US,NY,1042
+42557,NA,2016-01-14,EXCERPTS,14038,2014-10-25,Male,White,Hispanic or Latino,typical,"English, Spanish",NA,15 mos,free play,NA,feeding,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,Lab,English,US,NY,1042
+42558,NA,2016-01-14,EXCERPTS,14039,2014-10-22,Male,More than one,Not Hispanic or Latino,typical,"English, Thai",Did not fall,15 mos,free play,NA,feeding,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,Lab,English,US,NY,1042
+42559,NA,2016-01-21,EXCERPTS,14040,2014-10-30,Female,White,Not Hispanic or Latino,typical,English,NA,15 mos,free play,NA,feeding,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,Lab,English,US,NY,1042
+42560,NA,2016-03-04,EXCERPTS,14041,2014-12-16,Female,Black or African American,Not Hispanic or Latino,typical,English,NA,15 mos,free play,NA,feeding,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,Lab,English,US,NY,1042
+42561,NA,2016-03-08,EXCERPTS,14042,2014-12-15,Female,White,Not Hispanic or Latino,typical,English,NA,15 mos,free play,NA,feeding,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,Lab,English,US,NY,1042
+42563,NA,2016-03-11,EXCERPTS,8984,2015-02-08,Female,White,Not Hispanic or Latino,typical,English,NA,13 mos,background,NA,free play,NA,background,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,Lab,English,US,NY,1042
+42564,NA,2016-03-15,EXCERPTS,14043,2014-12-20,Female,White,Not Hispanic or Latino,typical,"English, Russian",NA,15 mos,free play,NA,feeding,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,Lab,English,US,NY,1042
+42565,NA,2016-03-28,EXCERPTS,14044,2015-01-05,Female,White,Hispanic or Latino,typical,Spanish,Did not fall,15 mos,free play,NA,feeding,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,Lab,English,US,NY,1042
+42566,NA,2016-04-01,EXCERPTS,14046,2014-12-17,Male,Asian,Not Hispanic or Latino,typical,English,Did not fall,15 mos,free play,NA,feeding,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,Lab,English,US,NY,1042
+42568,NA,2016-04-27,EXCERPTS,8985,2015-03-16,Female,White,Hispanic or Latino,typical,English,NA,13 mos,background,NA,free play,NA,background,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,Lab,English,US,NY,1042
+42569,NA,2016-05-02,EXCERPTS,14048,2015-02-08,Female,White,Not Hispanic or Latino,typical,English,Did not fall,15 mos,free play,NA,feeding,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,Lab,English,US,NY,1042
+42570,NA,2016-05-05,EXCERPTS,14049,2015-02-09,Female,More than one,Not Hispanic or Latino,typical,English,NA,15 mos,free play,NA,feeding,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,Lab,English,US,NY,1042
+42571,NA,2016-06-02,EXCERPTS,14050,2015-03-04,Female,More than one,Not Hispanic or Latino,typical,"English, Japanese",Did not fall,15 mos,free play,NA,feeding,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,Lab,English,US,NY,1042
+42572,NA,2016-06-08,EXCERPTS,14051,2015-03-09,Male,More than one,Not Hispanic or Latino,typical,"English, Chinese",NA,15 mos,free play,NA,feeding,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,Lab,English,US,NY,1042
+42573,NA,2016-06-17,SHARED,14052,2015-03-17,Female,More than one,Not Hispanic or Latino,typical,English,NA,15 mos,free play,NA,feeding,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,Lab,English,US,NY,1042
+42574,NA,2016-06-20,EXCERPTS,14053,2015-04-05,Female,Asian,Not Hispanic or Latino,typical,English,NA,15 mos,free play,NA,feeding,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,Lab,English,US,NY,1042
+42575,NA,2016-06-21,EXCERPTS,14054,2015-03-09,Male,White,Not Hispanic or Latino,typical,"English, German",NA,15 mos,free play,NA,feeding,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,Lab,English,US,NY,1042
+42576,NA,2016-06-27,EXCERPTS,14055,2015-05-26,Female,White,Not Hispanic or Latino,typical,English,NA,13 mos,free play,NA,feeding,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,Lab,English,US,NY,1042
+42577,NA,2016-07-08,EXCERPTS,14056,2015-04-16,Male,White,Not Hispanic or Latino,typical,"English, Spanish",Did not fall,15 mos,free play,NA,feeding,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,Lab,English,US,NY,1042
+42578,NA,2016-07-08,EXCERPTS,14057,2015-05-26,Female,White,Not Hispanic or Latino,typical,"English, Spanish",NA,15 mos,free play,NA,feeding,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,Lab,English,US,NY,1042
+42579,NA,2016-07-15,EXCERPTS,14058,2015-04-21,Male,White,Not Hispanic or Latino,typical,English,NA,15 mos,free play,NA,feeding,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,Lab,English,US,NY,1042
+42580,NA,2016-07-22,EXCERPTS,14059,2015-04-20,Male,White,Not Hispanic or Latino,typical,English,NA,15 mos,free play,NA,feeding,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,Lab,English,US,NY,1042
+42581,NA,2016-08-18,EXCERPTS,14060,2015-07-11,Female,NA,NA,typical,"English, German, Spanish",NA,13 mos,free play,NA,feeding,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,Lab,English,US,NY,1042
+42582,NA,2016-08-18,EXCERPTS,14061,2015-05-26,Male,More than one,Not Hispanic or Latino,typical,"English, Spanish, Farsi",NA,15 mos,free play,NA,feeding,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,Lab,English,US,NY,1042
+42583,NA,2016-08-26,EXCERPTS,14062,2015-07-14,Male,More than one,NA,typical,English,NA,13 mos,free play,NA,feeding,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,Lab,English,US,NY,1042
+42584,NA,2016-10-17,EXCERPTS,14063,2015-09-16,Female,Black or African American,Not Hispanic or Latino,typical,English,NA,13 mos,free play,NA,feeding,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,Lab,English,US,NY,1042
+42585,NA,2016-10-27,EXCERPTS,14064,2015-09-18,Male,White,Not Hispanic or Latino,typical,"English, Spanish",NA,13 mos,free play,NA,feeding,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,Lab,English,US,NY,1042
+42586,NA,2016-10-28,EXCERPTS,14065,2015-03-23,Female,More than one,Not Hispanic or Latino,typical,English,NA,19 mos,free play,NA,feeding,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,Lab,English,US,NY,1042
+42587,NA,2016-11-08,EXCERPTS,14066,2015-07-25,Male,White,Not Hispanic or Latino,typical,"French, English",NA,15 mos,free play,NA,feeding,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,Lab,English,US,NY,1042
+42588,NA,2016-11-21,EXCERPTS,14069,2015-09-02,Female,More than one,Not Hispanic or Latino,typical,"English, Chinese",NA,15 mos,free play,NA,feeding,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,Lab,English,US,NY,1042
+42589,NA,2016-11-22,EXCERPTS,14070,2015-08-15,Female,More than one,Not Hispanic or Latino,typical,"English, Greek",NA,15 mos,free play,NA,feeding,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,Lab,English,US,NY,1042
+42590,NA,2016-12-14,EXCERPTS,14071,2015-09-22,Male,White,Hispanic or Latino,typical,"English, Spanish",NA,15 mos,free play,NA,feeding,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,Lab,English,US,NY,1042
+42591,NA,2016-12-15,EXCERPTS,14072,2015-09-21,Female,White,Not Hispanic or Latino,typical,English,Did not fall,15 mos,free play,NA,feeding,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,Lab,English,US,NY,1042
+42592,NA,2017-02-03,SHARED,14073,2015-11-04,Male,Asian,Not Hispanic or Latino,typical,"English, Hindi",NA,15 mos,free play,NA,feeding,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,Lab,English,US,NY,1042
+42593,NA,2017-02-14,EXCERPTS,14074,2015-11-05,Male,White,Not Hispanic or Latino,typical,"English, Spanish",NA,15 mos,free play,NA,feeding,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,Lab,English,US,NY,1042
+42594,NA,2017-03-03,EXCERPTS,14077,2015-12-01,Male,White,Not Hispanic or Latino,typical,English,NA,15 mos,free play,NA,feeding,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,Lab,English,US,NY,1042
+42595,NA,2017-03-10,EXCERPTS,14078,2015-12-01,Male,White,Not Hispanic or Latino,typical,English,NA,15 mos,free play,NA,feeding,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,Lab,English,US,NY,1042
+42596,NA,2017-03-17,EXCERPTS,14079,2015-12-17,Female,White,Not Hispanic or Latino,typical,English,NA,15 mos,free play,NA,feeding,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,Lab,English,US,NY,1042
+42597,NA,2017-03-17,EXCERPTS,14080,2015-12-03,Female,White,Not Hispanic or Latino,typical,"English, Greek",NA,15 mos,free play,NA,feeding,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,Lab,English,US,NY,1042
+42598,NA,2017-04-16,EXCERPTS,14081,2016-01-13,Male,White,Not Hispanic or Latino,typical,English,NA,15 mos,free play,NA,feeding,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,Lab,English,US,NY,1042
+42599,NA,2017-XX-XX,NA,14082,NA,Male,Black or African American,Not Hispanic or Latino,typical,"Arabic, English",Did not fall,15 mos,free play,NA,feeding,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,Lab,English,US,NY,1042
+42600,NA,2017-05-29,EXCERPTS,14083,2016-03-05,Male,More than one,Not Hispanic or Latino,typical,"English, Tagalog",Did not fall,15 mos,free play,NA,feeding,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,Lab,English,US,NY,1042
+42601,NA,2017-06-12,EXCERPTS,14084,2016-03-09,Male,White,Not Hispanic or Latino,typical,English,NA,15 mos,free play,NA,feeding,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,Lab,English,US,NY,1042
+42602,NA,2017-06-12,EXCERPTS,14085,2016-03-23,Male,White,Not Hispanic or Latino,typical,"English, Spanish",NA,15 mos,free play,NA,feeding,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,Lab,English,US,NY,1042
+42603,NA,2017-06-20,SHARED,14086,2016-04-04,Female,White,Not Hispanic or Latino,typical,English,NA,15 mos,free play,NA,feeding,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,Lab,English,US,NY,1042
+42604,NA,2017-06-23,EXCERPTS,14087,2016-03-14,Male,White,Not Hispanic or Latino,typical,"English, Turkish",NA,15 mos,free play,NA,feeding,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,Lab,English,US,NY,1042
+42605,NA,2017-06-26,EXCERPTS,14089,2016-04-05,Female,White,Not Hispanic or Latino,typical,English,Did not fall,15 mos,free play,NA,feeding,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,Lab,English,US,NY,1042
+42606,NA,2017-07-07,EXCERPTS,14091,2016-04-10,Male,Black or African American,Not Hispanic or Latino,typical,English,NA,15 mos,free play,NA,feeding,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,Lab,English,US,NY,1042
+42607,NA,2017-07-13,EXCERPTS,14092,2016-04-13,Female,White,Not Hispanic or Latino,typical,English,NA,15 mos,free play,NA,feeding,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,Lab,English,US,NY,1042
+42608,NA,2017-07-18,EXCERPTS,14093,2016-04-11,Female,More than one,Not Hispanic or Latino,typical,English,NA,15 mos,free play,NA,feeding,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,Lab,English,US,NY,1042
+42609,NA,2017-07-19,EXCERPTS,14094,2016-04-26,Male,White,Not Hispanic or Latino,typical,English,NA,15 mos,free play,NA,feeding,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,Lab,English,US,NY,1042
+42610,NA,2017-07-24,EXCERPTS,14095,2016-04-12,Male,Black or African American,Not Hispanic or Latino,typical,English,NA,15 mos,free play,NA,feeding,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,Lab,English,US,NY,1042
+42611,NA,2017-07-25,EXCERPTS,14096,2016-05-03,Male,White,NA,typical,English; Spanish,NA,15 mos,free play,NA,feeding,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,Lab,English,US,NY,1042
+42612,NA,2017-08-16,EXCERPTS,14097,2016-05-15,Female,White,Not Hispanic or Latino,typical,English,NA,15 mos,free play,NA,feeding,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,Lab,English,US,NY,1042
+44646,Exported data and analyses scripts,materials,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,1042
+44651,Coding manual and coding scripts,materials,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,1042
+44739,Exemplar infant falls,materials,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,1042
+44743,Method,materials,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,1042
+44748,NA,2015-04-13,EXCERPTS,8979,2014-03-04,Female,White,Not Hispanic or Latino,typical,English,NA,13 mos,background,NA,free play,NA,background,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,Lab,English,US,NY,1042
+44749,NA,2015-XX-XX,PRIVATE,8980,NA,Female,More than one,Not Hispanic or Latino,typical,English,NA,13 mos,background,NA,free play,NA,background,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,Lab,English,US,NY,1042
+45029,Exemplar infant falls,materials,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,1042
+46744,Exemplar infant falls,materials,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,1042
+50662,File organization and analyses steps,materials,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,1042
+50711,Datavyu Files,materials,EXCERPTS,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,1042

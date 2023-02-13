@@ -1,0 +1,2 @@
+session_id,session_name,session_date,session_release,participant1_ID,participant1_birthdate,participant1_gender,participant1_race,participant1_ethnicity,participant1_disability,participant1_language,participant2_ID,participant2_birthdate,participant2_gender,participant2_race,participant2_ethnicity,participant2_disability,participant2_language,context_setting,context_state,vol_id
+6113,NA,2011-10-03,SHARED,1,2000-12-17,Female,Asian,Not Hispanic or Latino,Unknown,English,2,1999-08-24,Female,White,Hispanic or Latino,Unknown,English,Outdoor,NY,9

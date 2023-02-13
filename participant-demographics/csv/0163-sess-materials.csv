@@ -1,0 +1,56 @@
+session_id,session_name,session_date,session_release,participant_ID,participant_birthdate,participant_gender,participant_race,participant_ethnicity,participant_pregnancy term,participant_disability,exclusion_reason,condition_name,context_setting,context_language,context_country,context_state,vol_id
+10726,NA,2007-XX-XX,NA,1,NA,Male,Asian,Not Hispanic or Latino,Full term,typical,NA,A,Lab,English,US,NY,163
+10727,NA,2007-XX-XX,NA,2,NA,Male,Asian,Not Hispanic or Latino,Full term,typical,Withdrew/fussy/tired,NA,Lab,English,US,NY,163
+10728,NA,2007-XX-XX,NA,3,NA,Male,Unknown or not reported,Unknown or not reported,Full term,typical,Withdrew/fussy/tired,NA,Lab,English,US,NY,163
+10729,NA,2007-XX-XX,NA,4,NA,Male,White,Not Hispanic or Latino,Full term,typical,Withdrew/fussy/tired,NA,Lab,English,US,NY,163
+10730,NA,2007-XX-XX,NA,5,NA,Female,White,Not Hispanic or Latino,Full term,typical,Withdrew/fussy/tired,NA,Lab,English,US,NY,163
+10731,NA,2008-XX-XX,NA,6,NA,Male,White,Not Hispanic or Latino,Full term,typical,NA,B,Lab,English,US,NY,163
+10732,NA,2008-XX-XX,NA,7,NA,Female,More than one,Hispanic or Latino,Full term,typical,NA,C,Lab,English,US,NY,163
+10733,NA,2008-XX-XX,NA,8,NA,Male,Unknown or not reported,Unknown or not reported,Full term,typical,NA,D,Lab,English,US,NY,163
+10734,NA,2008-XX-XX,NA,9,NA,Female,White,Not Hispanic or Latino,Full term,typical,NA,E,Lab,English,US,NY,163
+10735,NA,2008-XX-XX,NA,10,NA,Male,Unknown or not reported,Hispanic or Latino,Full term,typical,Withdrew/fussy/tired,NA,Lab,English,US,NY,163
+10736,NA,2008-XX-XX,NA,11,NA,Male,White,Not Hispanic or Latino,Full term,typical,Withdrew/fussy/tired,NA,Lab,English,US,NY,163
+10737,NA,2008-XX-XX,NA,12,NA,Female,White,Not Hispanic or Latino,Full term,typical,NA,B,Lab,English,US,NY,163
+10738,NA,2008-XX-XX,NA,13,NA,Male,White,Hispanic or Latino,Full term,typical,Withdrew/fussy/tired,NA,Lab,English,US,NY,163
+10739,NA,2008-XX-XX,NA,14,NA,Male,White,Not Hispanic or Latino,Full term,typical,NA,F,Lab,English,US,NY,163
+10740,NA,2008-XX-XX,NA,15,NA,Female,More than one,Hispanic or Latino,Full term,typical,NA,F,Lab,English,US,NY,163
+10741,NA,2008-XX-XX,NA,16,NA,Female,White,Not Hispanic or Latino,Full term,typical,NA,A,Lab,English,US,NY,163
+10742,NA,2008-XX-XX,NA,17,NA,Male,White,Not Hispanic or Latino,Full term,typical,Withdrew/fussy/tired,NA,Lab,English,US,NY,163
+10743,NA,2008-XX-XX,NA,18,NA,Male,White,Not Hispanic or Latino,Full term,typical,Withdrew/fussy/tired,NA,Lab,English,US,NY,163
+10744,NA,2008-XX-XX,NA,19,NA,Female,White,Not Hispanic or Latino,Full term,typical,Withdrew/fussy/tired,NA,Lab,English,US,NY,163
+10745,NA,2008-XX-XX,NA,20,NA,Male,More than one,Not Hispanic or Latino,Full term,typical,Withdrew/fussy/tired,NA,Lab,English,US,NY,163
+10746,NA,2008-XX-XX,NA,21,NA,Male,Black or African American,Not Hispanic or Latino,Full term,typical,Withdrew/fussy/tired,NA,Lab,English,US,NY,163
+10747,NA,2008-XX-XX,NA,22,NA,Female,White,Not Hispanic or Latino,Full term,typical,NA,C,Lab,English,US,NY,163
+10748,NA,2008-XX-XX,NA,23,NA,Female,White,Not Hispanic or Latino,Full term,typical,NA,E,Lab,English,US,NY,163
+10749,NA,2008-XX-XX,NA,24,NA,Female,White,Not Hispanic or Latino,Full term,typical,Withdrew/fussy/tired,NA,Lab,English,US,NY,163
+10750,NA,2008-XX-XX,NA,25,NA,Male,White,Not Hispanic or Latino,Full term,typical,Withdrew/fussy/tired,NA,Lab,English,US,NY,163
+10751,NA,2008-XX-XX,NA,26,NA,Female,White,Not Hispanic or Latino,Full term,typical,Withdrew/fussy/tired,NA,Lab,English,US,NY,163
+10752,NA,2008-XX-XX,NA,27,NA,Male,White,Not Hispanic or Latino,Full term,typical,NA,D,Lab,English,US,NY,163
+10753,NA,2008-XX-XX,NA,28,NA,Male,White,Not Hispanic or Latino,Full term,typical,Withdrew/fussy/tired,NA,Lab,English,US,NY,163
+10754,NA,2008-XX-XX,NA,29,NA,Male,Black or African American,Not Hispanic or Latino,Full term,typical,Withdrew/fussy/tired,NA,Lab,English,US,NY,163
+10755,NA,2009-XX-XX,NA,30,NA,Female,Unknown or not reported,Hispanic or Latino,Full term,typical,Withdrew/fussy/tired,NA,Lab,English,US,NY,163
+10756,NA,2009-XX-XX,NA,31,NA,Male,Black or African American,Not Hispanic or Latino,Full term,typical,NA,B,Lab,English,US,NY,163
+10757,NA,2009-XX-XX,NA,32,NA,Female,White,Not Hispanic or Latino,Full term,typical,NA,C,Lab,English,US,NY,163
+10758,NA,2009-XX-XX,NA,33,NA,Male,White,Not Hispanic or Latino,Full term,typical,Withdrew/fussy/tired,NA,Lab,English,US,NY,163
+10759,NA,2009-XX-XX,NA,34,NA,Male,White,Not Hispanic or Latino,Full term,typical,Withdrew/fussy/tired,NA,Lab,English,US,NY,163
+10760,NA,2009-XX-XX,NA,35,NA,Female,White,Not Hispanic or Latino,Full term,typical,NA,A,Lab,English,US,NY,163
+10761,NA,2009-XX-XX,NA,36,NA,Male,More than one,Hispanic or Latino,Full term,typical,NA,E,Lab,English,US,NY,163
+10762,NA,2009-XX-XX,NA,37,NA,Male,White,Not Hispanic or Latino,Full term,typical,NA,F,Lab,English,US,NY,163
+10763,NA,2009-XX-XX,NA,38,NA,Female,White,Not Hispanic or Latino,Full term,typical,Withdrew/fussy/tired,NA,Lab,English,US,NY,163
+10764,NA,2009-XX-XX,NA,39,NA,Male,White,Not Hispanic or Latino,Full term,typical,Withdrew/fussy/tired,NA,Lab,English,US,NY,163
+10765,NA,2009-XX-XX,NA,40,NA,Female,White,Not Hispanic or Latino,Full term,typical,NA,D,Lab,English,US,NY,163
+10766,NA,2009-XX-XX,NA,43,NA,Female,White,Not Hispanic or Latino,Full term,typical,NA,C,Lab,English,US,NY,163
+10767,NA,2009-XX-XX,NA,44,NA,Female,Asian,Not Hispanic or Latino,Full term,typical,Withdrew/fussy/tired,NA,Lab,English,US,NY,163
+10768,NA,2009-XX-XX,NA,45,NA,Female,Asian,Not Hispanic or Latino,Full term,typical,NA,A,Lab,English,US,NY,163
+10769,NA,2009-XX-XX,NA,46,NA,Female,Black or African American,Hispanic or Latino,Full term,typical,NA,D,Lab,English,US,NY,163
+10770,NA,2009-XX-XX,NA,47,NA,Male,White,Not Hispanic or Latino,Full term,typical,Withdrew/fussy/tired,NA,Lab,English,US,NY,163
+10771,NA,2009-XX-XX,NA,48,NA,Female,White,Not Hispanic or Latino,Full term,typical,NA,E,Lab,English,US,NY,163
+10772,NA,2009-XX-XX,NA,49,NA,Male,White,Not Hispanic or Latino,Full term,typical,NA,B,Lab,English,US,NY,163
+10773,NA,2009-XX-XX,NA,50,NA,Female,Asian,Not Hispanic or Latino,Full term,typical,Withdrew/fussy/tired,NA,Lab,English,US,NY,163
+10774,NA,2009-XX-XX,NA,51,NA,Female,American Indian or Alaska Native,Not Hispanic or Latino,Full term,typical,Withdrew/fussy/tired,NA,Lab,English,US,NY,163
+10775,NA,2009-XX-XX,NA,52,NA,Male,White,Not Hispanic or Latino,Full term,typical,NA,A,Lab,English,US,NY,163
+10776,NA,2009-XX-XX,NA,53,NA,Female,Black or African American,Not Hispanic or Latino,Full term,typical,NA,F,Lab,English,US,NY,163
+10777,NA,2009-XX-XX,PRIVATE,54,NA,Male,White,Not Hispanic or Latino,Full term,typical,NA,C,Lab,English,US,NY,163
+10778,NA,2009-11-20,EXCERPTS,55,2008-12-17,Male,White,Not Hispanic or Latino,Full term,typical,NA,E,Lab,English,US,NY,163
+10779,NA,2009-12-01,EXCERPTS,56,2009-01-04,Female,White,Hispanic or Latino,Full term,typical,NA,B,Lab,English,US,NY,163
+10780,NA,2009-12-21,EXCERPTS,57,2009-01-22,Female,White,Not Hispanic or Latino,Full term,typical,NA,F,Lab,English,US,NY,163

@@ -1,0 +1,58 @@
+session_id,session_name,session_date,session_release,participant_ID,participant_birthdate,participant_gender,participant_race,participant_ethnicity,participant_disability,exclusion_reason,group_name,context_setting,context_state,vol_id
+135,NA,2010-10-15,EXCERPTS,101,1988-11-19,Female,Asian,Not Hispanic or Latino,typical,NA,Younger adults,Lab,NY,7
+136,NA,2010-XX-XX,NA,102,NA,Female,Asian,Not Hispanic or Latino,typical,NA,Younger adults,Lab,NY,7
+137,NA,2010-10-21,EXCERPTS,103,1985-05-08,Female,White,Not Hispanic or Latino,typical,NA,Younger adults,Lab,NY,7
+138,NA,2010-10-27,EXCERPTS,105,1980-03-19,Female,White,Hispanic or Latino,typical,Did not meet inclusion criteria,NA,Lab,NY,7
+139,NA,2010-10-27,EXCERPTS,106,1983-05-27,Male,White,Not Hispanic or Latino,typical,NA,Younger adults,Lab,NY,7
+140,NA,2010-XX-XX,NA,107,NA,Female,White,Not Hispanic or Latino,typical,NA,Younger adults,Lab,NY,7
+141,NA,2010-XX-XX,NA,108,NA,Female,Asian,Not Hispanic or Latino,typical,NA,Younger adults,Lab,NY,7
+142,NA,2011-02-28,EXCERPTS,109,1990-06-01,Male,White,Not Hispanic or Latino,typical,NA,Younger adults,Lab,NY,7
+143,NA,2011-02-28,EXCERPTS,110,1989-11-11,Female,White,Not Hispanic or Latino,typical,Procedural/experimenter error,Younger adults,Lab,NY,7
+144,NA,2011-03-01,EXCERPTS,111,1989-09-19,Female,White,Not Hispanic or Latino,typical,NA,Younger adults,Lab,NY,7
+145,NA,2011-XX-XX,PRIVATE,112,NA,Female,White,Not Hispanic or Latino,typical,Procedural/experimenter error,Younger adults,Lab,NY,7
+146,NA,2011-XX-XX,PRIVATE,113,NA,Male,White,Not Hispanic or Latino,typical,NA,Younger adults,Lab,NY,7
+147,NA,2011-XX-XX,PRIVATE,114,NA,Male,White,Not Hispanic or Latino,typical,NA,Younger adults,Lab,NY,7
+148,NA,2011-XX-XX,PRIVATE,115,NA,Male,Asian,Not Hispanic or Latino,typical,NA,Younger adults,Lab,NY,7
+149,NA,2011-XX-XX,PRIVATE,116,NA,Male,White,Not Hispanic or Latino,typical,NA,Younger adults,Lab,NY,7
+150,NA,2011-XX-XX,PRIVATE,117,NA,Male,White,Not Hispanic or Latino,typical,NA,Younger adults,Lab,NY,7
+151,NA,2011-XX-XX,PRIVATE,118,NA,Male,White,Not Hispanic or Latino,typical,NA,Younger adults,Lab,NY,7
+152,NA,2011-12-02,EXCERPTS,119,1985-10-31,Female,White,Not Hispanic or Latino,typical,NA,Younger adults,Lab,NY,7
+153,NA,2012-02-20,EXCERPTS,120,1991-05-26,Female,Asian,Not Hispanic or Latino,typical,NA,Younger adults,Lab,NY,7
+154,NA,2012-02-20,EXCERPTS,121,1989-10-18,Male,White,Not Hispanic or Latino,typical,NA,Younger adults,Lab,NY,7
+155,NA,2012-02-20,SHARED,122,1991-10-19,Female,NA,Hispanic or Latino,typical,NA,Younger adults,Lab,NY,7
+156,NA,2012-02-20,EXCERPTS,123,1991-10-13,Male,Asian,Not Hispanic or Latino,typical,NA,Younger adults,Lab,NY,7
+157,NA,2012-03-19,EXCERPTS,124,1990-02-18,Female,White,Not Hispanic or Latino,typical,NA,Younger adults,Lab,NY,7
+158,NA,2012-05-03,EXCERPTS,125,1991-07-06,Female,White,Not Hispanic or Latino,typical,NA,Younger adults,Lab,NY,7
+159,NA,2012-05-03,EXCERPTS,126,1991-07-09,Male,White,Not Hispanic or Latino,typical,NA,Younger adults,Lab,NY,7
+160,NA,2012-05-22,EXCERPTS,127,1990-11-03,Male,Asian,Not Hispanic or Latino,typical,NA,Younger adults,Lab,NY,7
+161,NA,2012-XX-XX,PRIVATE,128,NA,Female,More than one,Not Hispanic or Latino,typical,NA,Younger adults,Lab,NY,7
+162,NA,2012-06-19,EXCERPTS,129,1987-04-30,Male,White,Not Hispanic or Latino,typical,NA,Younger adults,Lab,NY,7
+163,NA,2010-XX-XX,PRIVATE,201,NA,Female,White,Not Hispanic or Latino,typical,NA,Older adults,Lab,NY,7
+164,NA,2010-11-30,EXCERPTS,202,1945-10-06,Female,White,Not Hispanic or Latino,typical,NA,Older adults,Lab,NY,7
+165,NA,2010-XX-XX,PRIVATE,203,NA,Male,White,Not Hispanic or Latino,typical,NA,Older adults,Lab,NY,7
+166,NA,2011-01-15,EXCERPTS,204,1950-12-02,Female,White,Not Hispanic or Latino,typical,NA,Older adults,Lab,NY,7
+167,NA,2011-01-15,EXCERPTS,205,1950-11-30,Male,White,Not Hispanic or Latino,typical,NA,Older adults,Lab,NY,7
+168,NA,2011-XX-XX,PRIVATE,206,NA,Male,White,Not Hispanic or Latino,typical,NA,Older adults,Lab,NY,7
+169,NA,2011-XX-XX,PRIVATE,207,NA,Male,White,Not Hispanic or Latino,typical,NA,Older adults,Lab,NY,7
+170,NA,2011-XX-XX,PRIVATE,208,NA,Female,White,Not Hispanic or Latino,typical,NA,Older adults,Lab,NY,7
+171,NA,2011-XX-XX,PRIVATE,209,NA,Male,White,Not Hispanic or Latino,typical,NA,Older adults,Lab,NY,7
+172,NA,2011-XX-XX,PRIVATE,210,NA,Male,White,Not Hispanic or Latino,typical,NA,Older adults,Lab,NY,7
+173,NA,2012-02-20,EXCERPTS,211,1943-09-10,Female,White,Not Hispanic or Latino,typical,NA,Older adults,Lab,NY,7
+174,NA,2012-03-13,EXCERPTS,212,1946-11-19,Male,White,Not Hispanic or Latino,typical,NA,Older adults,Lab,NY,7
+175,NA,2012-04-02,EXCERPTS,213,1939-03-12,Male,White,Not Hispanic or Latino,typical,NA,Older adults,Lab,NY,7
+176,NA,2012-XX-XX,PRIVATE,214,NA,Female,White,Not Hispanic or Latino,typical,NA,Older adults,Lab,NY,7
+177,NA,2012-XX-XX,NA,215,NA,Male,White,Not Hispanic or Latino,typical,NA,Older adults,Lab,NY,7
+178,NA,2012-04-05,EXCERPTS,216,1949-06-08,Male,White,Not Hispanic or Latino,typical,NA,Older adults,Lab,NY,7
+179,NA,2012-04-16,EXCERPTS,217,1944-12-30,Female,Black or African American,Not Hispanic or Latino,typical,NA,Older adults,Lab,NY,7
+180,NA,2012-04-16,EXCERPTS,218,1951-01-03,Male,White,Not Hispanic or Latino,typical,NA,Older adults,Lab,NY,7
+181,NA,2012-04-19,EXCERPTS,219,1950-04-17,Female,White,Not Hispanic or Latino,typical,NA,Older adults,Lab,NY,7
+182,NA,2012-04-30,EXCERPTS,220,1929-04-10,Male,White,Not Hispanic or Latino,typical,NA,Older adults,Lab,NY,7
+183,NA,2012-05-07,EXCERPTS,221,1950-09-27,Male,White,Hispanic or Latino,typical,NA,Older adults,Lab,NY,7
+184,NA,2012-XX-XX,PRIVATE,222,NA,Female,White,Hispanic or Latino,typical,NA,Older adults,Lab,NY,7
+185,NA,2012-05-08,EXCERPTS,223,1945-11-29,Female,White,Not Hispanic or Latino,typical,Procedural/experimenter error,Older adults,Lab,NY,7
+186,NA,2012-05-25,EXCERPTS,224,1950-05-08,Female,White,Not Hispanic or Latino,typical,NA,Older adults,Lab,NY,7
+187,NA,2012-06-15,EXCERPTS,225,1933-11-08,Female,White,Not Hispanic or Latino,typical,Procedural/experimenter error,Older adults,Lab,NY,7
+6110,NA,2010-10-21,EXCERPTS,104,1963-08-02,Female,White,Not Hispanic or Latino,typical,Did not meet inclusion criteria,NA,Lab,NY,7
+6111,NA,2010-11-17,SHARED,301,1963-04-10,Female,White,Not Hispanic or Latino,typical,Did not meet inclusion criteria,NA,Lab,NY,7
+6253,NA,materials,NA,NA,NA,NA,NA,NA,typical,NA,Older adults,NA,NA,7
+9831,Top-level materials,materials,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,7

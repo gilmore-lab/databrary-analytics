@@ -1,0 +1,37 @@
+session_id,session_name,session_date,session_release,participant_ID,participant_info,participant_description,participant_birthdate,participant_gender,participant_race,participant_ethnicity,participant_disability,participant_language,participant_country,participant_state,group_name,group_description,vol_id
+18140,NA,2017-06-01,PUBLIC,2224,01_16,DOB_is_placeholder,2016-02-01,Female,White,Not Hispanic or Latino,typical,English,US,NY,BER,NA,390
+18171,NA,2017-06-01,SHARED,9733,C167,DOB_is_placeholder,2016-07-01,Male,Unknown or not reported,Not Hispanic or Latino,typical,English,CA,MB,SOD,NA,390
+18173,NA,2017-06-01,SHARED,5223,C176,DOB_is_placeholder,2016-07-01,Male,Unknown or not reported,Not Hispanic or Latino,typical,English,CA,MB,SOD,NA,390
+18174,NA,2017-06-01,SHARED,8560,C181,DOB_is_placeholder,2016-08-01,Female,Unknown or not reported,Not Hispanic or Latino,typical,English,CA,MB,SOD,NA,390
+18175,NA,2017-06-01,PUBLIC,0485,12_12,DOB_is_placeholder,2016-06-01,Male,White,Not Hispanic or Latino,typical,English,US,NY,BER,NA,390
+18176,NA,2017-06-01,PUBLIC,0713,07_07,DOB_is_placeholder,2016-11-01,Male,White,Not Hispanic or Latino,typical,English,US,NY,BER,NA,390
+18177,NA,2017-XX-XX,PRIVATE,8787,F29_C01,DOB_is_placeholder,NA,Male,American Indian or Alaska Native,Hispanic or Latino,typical,Tseltal,MX,CP,CAS,NA,390
+18178,NA,2017-XX-XX,PRIVATE,2625,F37_C02,DOB_is_placeholder,NA,Female,American Indian or Alaska Native,Hispanic or Latino,typical,Tseltal,MX,CP,CAS,NA,390
+18179,NA,2017-XX-XX,PRIVATE,0643,F40_C01,DOB_is_placeholder,NA,Male,American Indian or Alaska Native,Hispanic or Latino,typical,Tseltal,MX,CP,CAS,NA,390
+18181,NA,2017-06-01,PUBLIC,3628,C026,DOB_is_placeholder,2015-11-01,Female,White,Not Hispanic or Latino,typical,English,UK,NA,ROW,NA,390
+18182,NA,2017-06-01,PUBLIC,0049,C067,DOB_is_placeholder,2015-05-01,Male,White,Not Hispanic or Latino,typical,English,UK,NA,ROW,NA,390
+18183,NA,2017-06-01,PUBLIC,2811,C061,DOB_is_placeholder,2016-06-01,Female,White,Not Hispanic or Latino,typical,English,UK,NA,ROW,NA,390
+18191,NA,2017-06-01,PUBLIC,9755,0340,DOB_is_placeholder,2017-03-01,Female,White,Not Hispanic or Latino,typical,English,US,CA,WAR,NA,390
+18194,NA,2017-06-01,PUBLIC,2337,0530,DOB_is_placeholder,2016-12-01,Female,Unknown or not reported,Hispanic or Latino,typical,English,US,CA,WAR,NA,390
+18235,NA,2017-06-01,PUBLIC,5959,0651,DOB_is_placeholder,2016-09-01,Male,White,Not Hispanic or Latino,typical,English,US,CA,WAR,NA,390
+18544,NA,2017-06-01,PUBLIC,5271,M08-a1,DOB_is_placeholder,2015-10-01,Male,Unknown or not reported,Not indigenous,typical,Spanish,ARG,Bs.As,ROS,NA,390
+18545,NA,2017-XX-XX,PRIVATE,9559,B08-a1,DOB_is_placeholder,NA,Female,Unknown or not reported,Indigenous,typical,Spanish,ARG,Bs.As.,ROS,NA,390
+18546,NA,2017-XX-XX,PRIVATE,8340,B05-a1,DOB_is_placehold,NA,Female,Unknown or not reported,Not indigenous,typical,Spanish,ARG,Bs.As.,ROS,NA,390
+18781,NA,materials,NA,0713,07_07,DOB_is_placeholder,2016-11-01,Male,White,Not Hispanic or Latino,typical,English,US,NY,BER,NA,390
+18782,NA,materials,NA,0485,12_12,DOB_is_placeholder,2016-06-01,Male,White,Not Hispanic or Latino,typical,English,US,NY,BER,NA,390
+19039,NA,materials,NA,9733,C167,DOB_is_placeholder,2016-07-01,Male,Unknown or not reported,Not Hispanic or Latino,typical,English,CA,MB,SOD,NA,390
+19040,NA,materials,NA,5223,C176,DOB_is_placeholder,2016-07-01,Male,Unknown or not reported,Not Hispanic or Latino,typical,English,CA,MB,SOD,NA,390
+19041,NA,materials,NA,8560,C181,DOB_is_placeholder,2016-08-01,Female,Unknown or not reported,Not Hispanic or Latino,typical,English,CA,MB,SOD,NA,390
+19042,NA,materials,NA,8787,F29_C01,DOB_is_placeholder,NA,Male,American Indian or Alaska Native,Hispanic or Latino,typical,Tseltal,MX,CP,CAS,NA,390
+19043,NA,materials,NA,2625,F37_C02,DOB_is_placeholder,NA,Female,American Indian or Alaska Native,Hispanic or Latino,typical,Tseltal,MX,CP,CAS,NA,390
+19044,NA,materials,NA,0643,F40_C01,DOB_is_placeholder,NA,Male,American Indian or Alaska Native,Hispanic or Latino,typical,Tseltal,MX,CP,CAS,NA,390
+19045,NA,materials,NA,3628,C026,DOB_is_placeholder,2015-11-01,Female,White,Not Hispanic or Latino,typical,English,UK,NA,ROW,NA,390
+19046,NA,materials,NA,0049,C067,DOB_is_placeholder,2015-05-01,Male,White,Not Hispanic or Latino,typical,English,UK,NA,ROW,NA,390
+19047,NA,materials,NA,2811,C061,DOB_is_placeholder,2016-06-01,Female,White,Not Hispanic or Latino,typical,English,UK,NA,ROW,NA,390
+19048,NA,materials,NA,9755,0340,DOB_is_placeholder,2017-03-01,Female,White,Not Hispanic or Latino,typical,English,US,CA,WAR,NA,390
+19049,NA,materials,NA,2337,0530,DOB_is_placeholder,2016-12-01,Female,Unknown or not reported,Hispanic or Latino,typical,English,US,CA,WAR,NA,390
+19050,NA,materials,NA,5959,0651,DOB_is_placeholder,2016-09-01,Male,White,Not Hispanic or Latino,typical,English,US,CA,WAR,NA,390
+19051,NA,materials,NA,5271,M08-a1,DOB_is_placeholder,2015-10-01,Male,Unknown or not reported,Not indigenous,typical,Spanish,ARG,Bs.As,ROS,NA,390
+19052,NA,materials,NA,9559,B08-a1,DOB_is_placeholder,NA,Female,Unknown or not reported,Indigenous,typical,Spanish,ARG,Bs.As.,ROS,NA,390
+19053,NA,materials,NA,8340,B05-a1,DOB_is_placehold,NA,Female,Unknown or not reported,Not indigenous,typical,Spanish,ARG,Bs.As.,ROS,NA,390
+27444,NA,materials,NA,2224,01_16,DOB_is_placeholder,2016-02-01,Female,White,Not Hispanic or Latino,typical,English,US,NY,BER,NA,390

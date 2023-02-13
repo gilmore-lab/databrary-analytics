@@ -1,0 +1,107 @@
+session_id,session_name,session_date,session_release,participant_ID,participant_birthdate,participant_gender,participant_race,participant_ethnicity,participant_pregnancy term,participant_disability,participant_language,exclusion_reason,condition1_name,condition2_name,group_name,task1_name,task2_name,task3_name,task4_name,context_setting,context_language,context_country,context_state,vol_id
+7853,NA,2013-03-02,SHARED,0001,1992-08-23,Female,White,Not Hispanic or Latino,Full term,typical,English,NA,2 hands free,Eye tracking,Adults,Hammers,Intake,Funky Tools,NA,Lab,English,US,NY,114
+7854,NA,2013-03-02,EXCERPTS,0002,1991-01-05,Male,Black or African American,Not Hispanic or Latino,Full term,typical,English,NA,2 hands free,Eye tracking,Adults,Hammers,Intake,Funky Tools,NA,Lab,English,US,NY,114
+7855,NA,2013-03-02,EXCERPTS,0003,1991-09-21,Female,White,Unknown or not reported,Full term,typical,English,NA,2 hands free,Eye tracking,Adults,Hammers,Intake,Funky Tools,NA,Lab,English,US,NY,114
+7856,NA,2013-XX-XX,NA,0004,NA,Male,White,Not Hispanic or Latino,Full term,typical,English,NA,2 hands free,Eye tracking,Adults,Hammers,Intake,Funky Tools,NA,Lab,English,US,NY,114
+7857,NA,2013-03-02,EXCERPTS,0005,1992-02-03,Female,White,Not Hispanic or Latino,Full term,typical,English,NA,2 hands free,Eye tracking,Adults,Hammers,Intake,Funky Tools,NA,Lab,English,US,NY,114
+7858,NA,2013-03-02,EXCERPTS,0006,1993-04-27,Male,Black or African American,Not Hispanic or Latino,Full term,typical,English,NA,2 hands free,Eye tracking,Adults,Hammers,Intake,Funky Tools,NA,Lab,English,US,NY,114
+7859,NA,2013-03-02,EXCERPTS,0007,1991-11-07,Female,Asian,Not Hispanic or Latino,Full term,typical,English,NA,2 hands free,Eye tracking,Adults,Hammers,Intake,Funky Tools,NA,Lab,English,US,NY,114
+7860,NA,2013-03-02,EXCERPTS,0008,1992-01-15,Male,White,Not Hispanic or Latino,Full term,typical,English,NA,2 hands free,Eye tracking,Adults,Hammers,Intake,Funky Tools,NA,Lab,English,US,NY,114
+7861,NA,2011-12-03,SHARED,0301,2008-02-28,Female,White,Unknown or not reported,Full term,typical,English,NA,2 hands free,Eye tracking,4 year olds,Hammers,Spoons,Intake,NA,Lab,English,US,NY,114
+7862,NA,2011-XX-XX,PRIVATE,0302,NA,Male,White,Hispanic or Latino,Full term,typical,English,NA,2 hands free,Eye tracking,4 year olds,Hammers,Spoons,Intake,NA,Lab,English,US,NY,114
+7863,NA,2011-12-03,SHARED,0303,2008-09-28,Female,White,Not Hispanic or Latino,Full term,typical,English,Did not meet inclusion criteria,2 hands free,NA,4 year olds,NA,NA,NA,NA,Lab,English,US,NY,114
+7864,NA,2011-12-04,SHARED,0304,2008-09-08,Male,White,Not Hispanic or Latino,Full term,typical,English,NA,2 hands free,NA,4 year olds,Hammers,Spoons,Intake,NA,Lab,English,US,NY,114
+7865,NA,2011-XX-XX,PRIVATE,0305,NA,Male,White,Not Hispanic or Latino,Full term,typical,English,NA,2 hands free,Eye tracking,4 year olds,Hammers,Spoons,Intake,NA,Lab,English,US,NY,114
+7866,NA,2011-XX-XX,PRIVATE,0306,NA,Male,White,Not Hispanic or Latino,Full term,typical,English,NA,2 hands free,NA,4 year olds,Hammers,Spoons,Intake,NA,Lab,English,US,NY,114
+7867,NA,2011-XX-XX,PRIVATE,0402,NA,Male,White,Not Hispanic or Latino,Full term,typical,English,NA,2 hands free,Eye tracking,4 year olds,Hammers,Spoons,Intake,NA,Lab,English,US,NY,114
+7868,NA,2011-11-16,SHARED,0403,2007-10-22,Female,White,Not Hispanic or Latino,Full term,typical,English,NA,2 hands free,Eye tracking,4 year olds,Hammers,Spoons,Intake,NA,Lab,English,US,NY,114
+7869,NA,2011-11-16,SHARED,0404,2007-11-15,Female,White,Not Hispanic or Latino,Full term,typical,English,NA,2 hands free,Eye tracking,4 year olds,Hammers,Spoons,Intake,NA,Lab,English,US,NY,114
+7870,NA,2011-11-17,SHARED,0405,2008-01-07,Male,White,Not Hispanic or Latino,Full term,typical,English,NA,2 hands free,NA,4 year olds,Hammers,Spoons,Intake,NA,Lab,English,US,NY,114
+7871,NA,2011-XX-XX,PRIVATE,0406,NA,Female,More than one,Hispanic or Latino,Full term,typical,English,NA,2 hands free,Eye tracking,4 year olds,Hammers,Spoons,Intake,Funky Tools,Lab,English,US,NY,114
+7872,NA,2011-XX-XX,PRIVATE,0407,NA,Female,More than one,Hispanic or Latino,Full term,typical,English,NA,2 hands free,Eye tracking,4 year olds,Hammers,Spoons,Intake,Funky Tools,Lab,English,US,NY,114
+7873,NA,2011-XX-XX,PRIVATE,0408,NA,Female,White,Not Hispanic or Latino,Full term,typical,English,NA,2 hands free,Eye tracking,4 year olds,Hammers,Spoons,Intake,Funky Tools,Lab,English,US,NY,114
+7874,NA,2011-11-19,SHARED,0409,2007-11-19,Male,White,Hispanic or Latino,Full term,typical,English,NA,2 hands free,Eye tracking,4 year olds,Hammers,Spoons,Intake,Funky Tools,Lab,English,US,NY,114
+7875,NA,2011-11-19,SHARED,0410,2008-01-08,Female,White,Not Hispanic or Latino,Full term,typical,English,NA,2 hands free,NA,4 year olds,Hammers,Funky Tools,NA,NA,Lab,English,US,NY,114
+7876,NA,2011-11-20,SHARED,0411,2008-01-04,Male,More than one,Not Hispanic or Latino,Full term,typical,English,NA,2 hands free,Eye tracking,4 year olds,Hammers,Spoons,Intake,Funky Tools,Lab,English,US,NY,114
+7877,NA,2011-11-21,SHARED,0412,2007-10-06,Male,White,Not Hispanic or Latino,Full term,typical,English,NA,2 hands free,Eye tracking,4 year olds,Hammers,Spoons,Intake,Funky Tools,Lab,English,US,NY,114
+7878,NA,2011-11-29,SHARED,0413,2007-12-11,Female,Unknown or not reported,Unknown or not reported,Full term,typical,English,NA,2 hands free,Eye tracking,4 year olds,Hammers,Spoons,Intake,Funky Tools,Lab,English,US,NY,114
+7879,NA,2011-12-01,SHARED,0414,2007-10-22,Female,Asian,Not Hispanic or Latino,Full term,typical,English,NA,2 hands free,Eye tracking,4 year olds,Hammers,Spoons,Intake,Funky Tools,Lab,English,US,NY,114
+7880,NA,2011-12-05,SHARED,0415,2008-01-04,Male,White,Not Hispanic or Latino,Full term,typical,English,NA,2 hands free,Eye tracking,4 year olds,Hammers,Funky Tools,Spoons,NA,Lab,English,US,NY,114
+7881,NA,2011-XX-XX,PRIVATE,0416,NA,Female,White,Not Hispanic or Latino,Full term,typical,English,NA,2 hands free,Eye tracking,4 year olds,Hammers,Spoons,Intake,Funky Tools,Lab,English,US,NY,114
+7882,NA,2011-12-08,SHARED,0417,2007-09-26,Female,White,Not Hispanic or Latino,Full term,typical,English,NA,2 hands free,Eye tracking,4 year olds,Hammers,Spoons,Intake,Funky Tools,Lab,English,US,NY,114
+7883,NA,2011-12-09,SHARED,0418,2007-11-15,Female,White,Hispanic or Latino,Full term,typical,English,NA,2 hands free,Eye tracking,4 year olds,Hammers,Spoons,Intake,Funky Tools,Lab,English,US,NY,114
+7884,NA,2011-12-10,SHARED,0419,2006-12-12,Male,White,Not Hispanic or Latino,Full term,typical,English,NA,2 hands free,NA,4 year olds,Hammers,Spoons,Intake,NA,Lab,English,US,NY,114
+7885,NA,2011-XX-XX,PRIVATE,0420,NA,Male,Unknown or not reported,Unknown or not reported,Full term,typical,English,NA,2 hands free,NA,4 year olds,Hammers,Spoons,Intake,NA,Lab,English,US,NY,114
+7886,NA,2012-01-07,SHARED,0421,2007-11-09,Female,White,Unknown or not reported,Full term,typical,English,NA,2 hands free,Eye tracking,4 year olds,Hammers,Spoons,Intake,Funky Tools,Lab,English,US,NY,114
+7887,NA,2012-03-15,SHARED,0422,2007-12-20,Female,White,Not Hispanic or Latino,Full term,typical,English,NA,2 hands free,Eye tracking,4 year olds,Hammers,Spoons,Intake,Funky Tools,Lab,English,US,NY,114
+7888,NA,2012-03-20,SHARED,0423,2008-04-15,Male,White,Not Hispanic or Latino,Full term,typical,English,NA,2 hands free,Eye tracking,4 year olds,Hammers,Spoons,Funky Tools,Intake,Lab,English,US,NY,114
+7889,NA,2012-03-24,SHARED,0424,2008-04-14,Male,White,Not Hispanic or Latino,Full term,typical,English,NA,2 hands free,Eye tracking,4 year olds,Hammers,Spoons,Intake,NA,Lab,English,US,NY,114
+7890,NA,2012-03-25,SHARED,0425,2008-02-21,Male,Asian,Not Hispanic or Latino,Full term,typical,English,NA,2 hands free,Eye tracking,4 year olds,Hammers,Spoons,Intake,Funky Tools,Lab,English,US,NY,114
+7891,NA,2011-XX-XX,PRIVATE,0601,NA,Male,White,Not Hispanic or Latino,Full term,typical,English,NA,2 hands free,Eye tracking,6 year olds,Hammers,Funky Tools,Spoons,NA,Lab,English,US,NY,114
+7892,NA,2011-12-03,SHARED,0602,2005-12-12,Male,White,Not Hispanic or Latino,Full term,typical,English,NA,2 hands free,Eye tracking,6 year olds,Hammers,Funky Tools,Spoons,NA,Lab,English,US,NY,114
+7893,NA,2011-12-10,SHARED,0603,2006-07-31,Male,White,Not Hispanic or Latino,Full term,typical,English,NA,2 hands free,Eye tracking,6 year olds,Hammers,Funky Tools,Spoons,NA,Lab,English,US,NY,114
+7894,NA,2012-XX-XX,NA,0604,NA,Female,White,Hispanic or Latino,Full term,typical,English,NA,2 hands free,Eye tracking,6 year olds,Hammers,Funky Tools,Spoons,NA,Lab,English,US,NY,114
+7895,NA,2011-11-05,SHARED,0605,2006-07-12,Male,White,Unknown or not reported,Full term,typical,English,NA,2 hands free,Eye tracking,6 year olds,Hammers,Funky Tools,Spoons,NA,Lab,English,US,NY,114
+7896,NA,2011-12-10,SHARED,0801,2003-09-23,Female,White,Not Hispanic or Latino,Full term,typical,English,NA,2 hands free,Eye tracking,8 year olds,Spoons,Hammers,Intake,Funky Tools,Lab,English,US,NY,114
+7897,NA,2011-12-10,SHARED,0802,2003-11-10,Female,White,Not Hispanic or Latino,Full term,typical,English,NA,2 hands free,Eye tracking,8 year olds,Hammers,Spoons,Intake,Funky Tools,Lab,English,US,NY,114
+7898,NA,2011-12-19,SHARED,0803,2003-09-18,Female,White,Not Hispanic or Latino,Full term,typical,English,NA,2 hands free,Eye tracking,8 year olds,Hammers,Spoons,Intake,Funky Tools,Lab,English,US,NY,114
+7899,NA,2012-01-05,SHARED,0804,2003-10-11,Female,White,Not Hispanic or Latino,Full term,typical,English,NA,2 hands free,Eye tracking,8 year olds,Hammers,Spoons,Intake,Funky Tools,Lab,English,US,NY,114
+7900,NA,2012-01-14,SHARED,0805,2003-02-09,Male,Unknown or not reported,Hispanic or Latino,Full term,typical,English,NA,2 hands free,Eye tracking,8 year olds,Hammers,Spoons,Intake,Funky Tools,Lab,English,US,NY,114
+7901,NA,2012-01-14,SHARED,0806,2004-03-08,Female,Asian,Not Hispanic or Latino,Full term,typical,English,NA,2 hands free,Eye tracking,8 year olds,Hammers,Spoons,Intake,Funky Tools,Lab,English,US,NY,114
+7902,NA,2012-01-30,SHARED,0807,2003-11-01,Male,White,Not Hispanic or Latino,Full term,typical,English,NA,2 hands free,Eye tracking,8 year olds,Hammers,Spoons,Intake,Funky Tools,Lab,English,US,NY,114
+7903,NA,2012-02-06,SHARED,0808,2003-12-31,Male,White,Hispanic or Latino,Full term,typical,English,NA,2 hands free,Eye tracking,8 year olds,Hammers,Spoons,Intake,Funky Tools,Lab,English,US,NY,114
+7904,NA,2012-02-06,SHARED,0809,2004-05-03,Male,White,Not Hispanic or Latino,Full term,typical,English,NA,2 hands free,Eye tracking,8 year olds,Hammers,Spoons,Intake,Funky Tools,Lab,English,US,NY,114
+7905,NA,2012-02-09,SHARED,0810,2003-07-21,Female,White,Not Hispanic or Latino,Full term,typical,English,NA,2 hands free,Eye tracking,8 year olds,Hammers,Spoons,Intake,Funky Tools,Lab,English,US,NY,114
+7906,NA,2012-XX-XX,PRIVATE,0811,NA,Male,White,Not Hispanic or Latino,Full term,typical,English,NA,2 hands free,Eye tracking,8 year olds,Hammers,Spoons,Intake,Funky Tools,Lab,English,US,NY,114
+7907,NA,2012-03-25,SHARED,0812,2005-04-27,Male,Asian,Not Hispanic or Latino,Full term,typical,English,NA,2 hands free,Eye tracking,8 year olds,Hammers,Spoons,Intake,Funky Tools,Lab,English,US,NY,114
+7908,NA,2012-08-21,SHARED,0813,2003-12-18,Female,White,Hispanic or Latino,Full term,typical,English,NA,2 hands free,Eye tracking,8 year olds,Hammers,Intake,Funky Tools,NA,Lab,English,US,NY,114
+7909,NA,2011-12-12,SHARED,1201,1999-08-24,Female,White,Unknown or not reported,Full term,typical,English,NA,2 hands free,Eye tracking,12 year olds,Hammers,Intake,Funky Tools,NA,Lab,English,US,NY,114
+7910,NA,2011-12-12,EXCERPTS,1202,1999-05-11,Female,White,Unknown or not reported,Full term,typical,English,NA,2 hands free,Eye tracking,12 year olds,Hammers,Intake,Funky Tools,NA,Lab,English,US,NY,114
+7911,NA,2011-XX-XX,NA,1203,NA,Female,Unknown or not reported,Unknown or not reported,Full term,typical,English,NA,2 hands free,Eye tracking,12 year olds,Hammers,Intake,Funky Tools,NA,Lab,English,US,NY,114
+7912,NA,2011-12-12,SHARED,1204,1999-05-15,Female,White,Unknown or not reported,Full term,typical,English,NA,2 hands free,Eye tracking,12 year olds,Hammers,Intake,Funky Tools,NA,Lab,English,US,NY,114
+7913,NA,2011-12-12,SHARED,1205,1998-11-09,Female,White,Unknown or not reported,Full term,typical,English,NA,2 hands free,Eye tracking,12 year olds,Intake,Hammers,Funky Tools,NA,Lab,English,US,NY,114
+7914,NA,2012-07-20,SHARED,1206,2000-06-11,Male,White,Not Hispanic or Latino,Full term,typical,English,NA,2 hands free,Eye tracking,12 year olds,Hammers,Intake,NA,NA,Lab,English,US,NY,114
+7915,NA,2012-XX-XX,PRIVATE,1207,NA,Male,Unknown or not reported,Unknown or not reported,Full term,typical,English,NA,2 hands free,Eye tracking,12 year olds,Hammers,Funky Tools,NA,NA,Lab,English,US,NY,114
+7916,NA,2012-08-16,SHARED,1208,2000-06-05,Male,White,Not Hispanic or Latino,Full term,typical,English,NA,2 hands free,NA,12 year olds,Hammers,Intake,Funky Tools,NA,Lab,English,US,NY,114
+7917,NA,2012-XX-XX,PRIVATE,1209,NA,Female,More than one,Hispanic or Latino,Full term,typical,English,NA,2 hands free,Eye tracking,12 year olds,Hammers,Intake,Funky Tools,NA,Lab,English,US,NY,114
+7918,NA,2012-08-27,SHARED,1210,2000-07-10,Female,White,Hispanic or Latino,Full term,typical,English,NA,2 hands free,Eye tracking,12 year olds,Hammers,Intake,Funky Tools,NA,Lab,English,US,NY,114
+7920,NA,2012-08-27,SHARED,1211,2000-07-01,Female,White,Not Hispanic or Latino,Full term,typical,English,NA,2 hands free,Eye tracking,12 year olds,Hammers,Intake,Funky Tools,NA,Lab,English,US,NY,114
+7923,NA,2012-08-28,EXCERPTS,1212,2000-06-08,Female,White,Not Hispanic or Latino,Full term,typical,English,NA,2 hands free,Eye tracking,12 year olds,Hammers,Intake,Funky Tools,NA,Lab,English,US,NY,114
+7924,NA,2012-08-28,EXCERPTS,1213,2000-08-16,Male,White,Not Hispanic or Latino,Full term,typical,English,NA,2 hands free,Eye tracking,12 year olds,Hammers,Intake,Funky Tools,NA,Lab,English,US,NY,114
+7925,NA,2012-08-28,EXCERPTS,1214,2000-10-19,Male,White,Hispanic or Latino,Full term,typical,English,NA,2 hands free,Eye tracking,12 year olds,Hammers,Intake,Funky Tools,NA,Lab,English,US,NY,114
+7926,NA,2014-08-14,EXCERPTS,2009,1992-04-18,Female,Asian,Not Hispanic or Latino,Full term,typical,English,NA,Dominant hand only,NA,Adults,Hammers,NA,NA,NA,Lab,English,US,NY,114
+7927,NA,2014-08-25,EXCERPTS,2010,1993-05-27,Female,Asian,Not Hispanic or Latino,Full term,typical,English,NA,Dominant hand only,NA,Adults,Hammers,NA,NA,NA,Lab,English,US,NY,114
+7928,NA,2013-11-05,EXCERPTS,4001,2009-02-09,Male,More than one,Not Hispanic or Latino,Full term,typical,English,NA,Dominant hand only,NA,4 year olds,Hammers,NA,NA,NA,Lab,English,US,NY,114
+7929,NA,2013-11-07,EXCERPTS,4002,2009-02-10,Female,White,Not Hispanic or Latino,Full term,typical,English,Procedural/experimenter error,Dominant hand only,NA,4 year olds,Hammers,NA,NA,NA,Lab,English,US,NY,114
+7930,NA,2013-11-07,EXCERPTS,4003,2009-02-10,Female,White,Not Hispanic or Latino,Full term,typical,English,Procedural/experimenter error,Dominant hand only,NA,4 year olds,Hammers,NA,NA,NA,Lab,English,US,NY,114
+7931,NA,2013-11-11,EXCERPTS,4004,2009-03-09,Female,White,Hispanic or Latino,Full term,typical,English,NA,Dominant hand only,NA,4 year olds,Hammers,NA,NA,NA,Lab,English,US,NY,114
+7932,NA,2013-11-25,EXCERPTS,4005,2009-10-29,Male,White,Not Hispanic or Latino,Full term,typical,English,NA,Dominant hand only,NA,4 year olds,Intake,Hammers,Funky Tools,NA,Lab,English,US,NY,114
+7933,NA,2013-12-03,SHARED,4006,2009-11-02,Female,White,Not Hispanic or Latino,Full term,typical,English,NA,Dominant hand only,NA,4 year olds,Intake,Hammers,NA,NA,Lab,English,US,NY,114
+7934,NA,2013-12-06,SHARED,4007,2009-09-14,Male,White,Not Hispanic or Latino,Full term,typical,English,NA,Dominant hand only,NA,4 year olds,Intake,Hammers,NA,NA,Lab,English,US,NY,114
+7935,NA,2013-12-09,EXCERPTS,4008,2009-09-17,Female,Asian,Not Hispanic or Latino,Full term,typical,English,NA,Dominant hand only,NA,4 year olds,Intake,Hammers,NA,NA,Lab,English,US,NY,114
+7936,NA,2013-12-12,EXCERPTS,4009,2009-10-20,Male,White,Not Hispanic or Latino,Full term,typical,English,NA,Dominant hand only,NA,4 year olds,Intake,Hammers,NA,NA,Lab,English,US,NY,114
+7937,NA,2014-02-07,SHARED,4010,2009-11-24,Male,White,Not Hispanic or Latino,Full term,typical,English,NA,Dominant hand only,NA,4 year olds,Intake,Hammers,NA,NA,Lab,English,US,NY,114
+7938,NA,2014-02-07,EXCERPTS,4011,2009-12-18,Male,White,Not Hispanic or Latino,Full term,typical,English,NA,Dominant hand only,NA,4 year olds,Intake,Hammers,NA,NA,Lab,English,US,NY,114
+7939,NA,2014-02-12,EXCERPTS,4012,2009-12-08,Male,White,Not Hispanic or Latino,Full term,typical,English,NA,Dominant hand only,NA,4 year olds,Intake,Hammers,NA,NA,Lab,English,US,NY,114
+7940,NA,2014-02-14,EXCERPTS,4013,2009-12-10,Female,White,Hispanic or Latino,Full term,typical,English,NA,Dominant hand only,NA,4 year olds,Intake,Hammers,NA,NA,Lab,English,US,NY,114
+7941,NA,2014-02-17,EXCERPTS,4014,2010-02-10,Female,More than one,Not Hispanic or Latino,Full term,typical,English,NA,Dominant hand only,NA,4 year olds,Intake,Hammers,NA,NA,Lab,English,US,NY,114
+7942,NA,2014-02-20,EXCERPTS,4015,2010-01-13,Male,More than one,Not Hispanic or Latino,Full term,typical,English,NA,Dominant hand only,NA,4 year olds,Intake,Hammers,NA,NA,Lab,English,US,NY,114
+7943,NA,2014-03-03,EXCERPTS,4016,2010-05-10,Male,White,Not Hispanic or Latino,Full term,typical,English,NA,Dominant hand only,NA,4 year olds,Intake,Hammers,NA,NA,Lab,English,US,NY,114
+7944,NA,2014-04-10,EXCERPTS,4017,2010-05-19,Female,Black or African American,Not Hispanic or Latino,Full term,typical,English,Procedural/experimenter error,Dominant hand only,NA,4 year olds,Intake,Hammers,NA,NA,Lab,English,US,NY,114
+7945,NA,2014-05-06,SHARED,4018,2010-05-06,Female,More than one,Not Hispanic or Latino,Full term,typical,English,Withdrew/fussy/tired,Dominant hand only,NA,4 year olds,Hammers,NA,NA,NA,Lab,English,US,NY,114
+7946,NA,2014-05-12,EXCERPTS,4019,2010-07-14,Female,White,Not Hispanic or Latino,Full term,typical,English,NA,Dominant hand only,NA,4 year olds,Intake,Hammers,NA,NA,Lab,English,US,NY,114
+7947,NA,2014-05-13,EXCERPTS,4020,2010-08-07,Female,White,Not Hispanic or Latino,Full term,typical,English,NA,Dominant hand only,NA,4 year olds,Intake,Hammers,NA,NA,Lab,English,US,NY,114
+7948,NA,2014-05-16,EXCERPTS,4021,2010-07-01,Female,Black or African American,Not Hispanic or Latino,Full term,typical,English,NA,Dominant hand only,NA,4 year olds,Intake,Hammers,NA,NA,Lab,English,US,NY,114
+7949,NA,2014-05-23,EXCERPTS,4022,2010-03-05,Female,White,Hispanic or Latino,Full term,typical,English,NA,Dominant hand only,NA,4 year olds,Intake,Hammers,NA,NA,Lab,English,US,NY,114
+7950,NA,2014-05-29,EXCERPTS,4023,2010-07-12,Female,Asian,Not Hispanic or Latino,Full term,typical,English,NA,Dominant hand only,NA,4 year olds,Intake,Hammers,NA,NA,Lab,English,US,NY,114
+7951,NA,2014-XX-XX,NA,4024,NA,Male,White,Not Hispanic or Latino,Full term,typical,English,Did not meet inclusion criteria,Dominant hand only,NA,4 year olds,Hammers,NA,NA,NA,Lab,English,US,NY,114
+7952,NA,2014-07-17,EXCERPTS,4025,2010-06-09,Male,White,Not Hispanic or Latino,Full term,typical,English,NA,Dominant hand only,NA,4 year olds,Intake,Hammers,NA,NA,Lab,English,US,NY,114
+7953,NA,2014-07-18,SHARED,4026,2010-04-28,Male,White,Not Hispanic or Latino,Full term,typical,English,NA,Dominant hand only,NA,4 year olds,Intake,Hammers,NA,NA,Lab,English,US,NY,114
+7954,NA,2014-07-29,EXCERPTS,4027,2010-06-23,Male,White,Not Hispanic or Latino,Full term,typical,English,NA,Dominant hand only,NA,4 year olds,Intake,Hammers,NA,NA,Lab,English,US,NY,114
+7955,NA,2014-08-08,EXCERPTS,4028,2010-06-09,Male,White,Not Hispanic or Latino,Full term,typical,English,NA,Dominant hand only,NA,4 year olds,Intake,Hammers,NA,NA,Lab,English,US,NY,114
+7956,NA,2014-XX-XX,PRIVATE,4029,NA,Male,More than one,Unknown or not reported,Full term,typical,English,NA,Dominant hand only,NA,4 year olds,Intake,Hammers,NA,NA,Lab,English,US,NY,114
+7957,NA,2014-08-12,EXCERPTS,4030,2010-07-29,Male,White,Not Hispanic or Latino,Full term,typical,English,NA,Dominant hand only,NA,4 year olds,Intake,Hammers,NA,NA,Lab,English,US,NY,114
+7958,NA,2014-08-21,EXCERPTS,4031,2010-11-17,Female,White,Not Hispanic or Latino,Full term,typical,English,NA,Dominant hand only,NA,4 year olds,Intake,Hammers,NA,NA,Lab,English,US,NY,114
+7959,NA,2014-09-25,EXCERPTS,4032,2010-09-14,Female,More than one,Not Hispanic or Latino,Full term,typical,English,NA,Dominant hand only,NA,4 year olds,Intake,Hammers,NA,NA,Lab,English,US,NY,114
+7960,NA,2014-09-27,EXCERPTS,4033,2010-08-19,Female,Black or African American,Hispanic or Latino,Full term,typical,English,NA,Dominant hand only,NA,5 year olds,Intake,Hammers,NA,NA,Lab,English,US,NY,114
+9852,Top-level materials,materials,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,114

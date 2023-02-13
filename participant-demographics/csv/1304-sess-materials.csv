@@ -1,0 +1,302 @@
+session_id,session_name,session_date,session_release,vol_id
+53979,NA,materials,NA,1304
+54252,"Contagion PB Behavioral Time 1, S4",2013-03-06,SHARED,1304
+54258,"Contagion PB Behavioral Time 1, S7",2013-03-16,SHARED,1304
+54259,"Contagion PB Behavioral Time 1, S11",2013-03-06,SHARED,1304
+54260,"Contagion PB Behavioral Time 1, S14",2013-05-21,SHARED,1304
+54261,"Contagion PB Behavioral Time 1, S17",2013-05-21,SHARED,1304
+54262,"Contagion PB Behavioral Time 1, S20",2013-05-24,SHARED,1304
+54263,"Contagion PB Behavioral Time 1, S33",2013-06-20,SHARED,1304
+54267,"Contagion PB Behavioral Time 1, S54",2014-05-08,SHARED,1304
+54268,"Contagion PB Behavioral Time 1, S55",2014-05-08,SHARED,1304
+54269,"Contagion PB Behavioral Time 1, S62",2014-05-20,SHARED,1304
+54270,"Contagion PB Behavioral Time 1, S63",2014-05-20,SHARED,1304
+54271,"Contagion PB Biological Time 1, S5",2013-03-06,SHARED,1304
+54272,"Contagion PB Biological Time 1, S13",2013-05-21,SHARED,1304
+54273,"Contagion PB Biological Time 1, S15",2013-05-21,SHARED,1304
+54274,"Contagion PB Biological Time 1, S21",2013-05-24,SHARED,1304
+54275,"Contagion PB Biological Time 1, S22",2013-05-24,SHARED,1304
+54276,"Contagion PB Biological Time 1, S26",2013-05-24,SHARED,1304
+54277,"Contagion PB Biological Time 1, S29",2013-05-24,SHARED,1304
+54278,"Contagion PB Biological Time 1, S42",2014-04-24,SHARED,1304
+54279,"Contagion PB Biological Time 1, S44",2014-04-24,SHARED,1304
+54280,"Contagion PB Biological Time 1, S46",2014-04-24,SHARED,1304
+54281,"Contagion PB Biological Time 1, S51",2014-05-07,SHARED,1304
+54282,"Contagion PB Biological Time 1, S64",2014-05-20,SHARED,1304
+54283,"Contagion PB Physical Time 1, S3",2013-03-06,SHARED,1304
+54284,"Contagion PB Physical Time 1, S16",2013-05-21,SHARED,1304
+54285,"Contagion PB Physical Time 1, S18",2013-05-21,SHARED,1304
+54286,"Contagion PB Physical Time 1, S23",2013-05-24,SHARED,1304
+54370,"Contagion PB Physical Time 1, S36",2013-11-15,SHARED,1304
+54371,"Contagion PB Physical Time 1, S43",2014-04-24,SHARED,1304
+54372,"Contagion PB Physical Time 1, S50",2014-05-07,SHARED,1304
+54373,"Contagion PB Physical Time 1, S52",2014-05-07,SHARED,1304
+54374,"Contagion PB Physical Time 1, S53",2014-05-07,SHARED,1304
+54375,"Contagion PB Physical Time 1, S58",2014-05-08,SHARED,1304
+54376,"Contagion PB Physical Time 1, S59",2014-05-20,SHARED,1304
+54377,"Contagion PB Physical Time 1, S60",2014-05-20,SHARED,1304
+54378,"Contagion PB Physical Time 1, S61",2014-05-20,SHARED,1304
+54442,"Contagion PB Behavioral Time 1, S19",2013-05-24,SHARED,1304
+54443,"Contagion PB Behavioral Time 1, S6",2013-03-06,SHARED,1304
+54445,"Contagion PB Behavioral Time 1, S27",2013-05-24,SHARED,1304
+54446,"Contagion PB Behavioral Time 1, S30",2013-05-24,SHARED,1304
+54447,"Contagion PB Behavioral Time 1, S38",2013-11-15,SHARED,1304
+54448,"Contagion PB Behavioral Time 1, S39",2013-11-15,SHARED,1304
+54449,"Contagion PB Behavioral Time 1, S47",2014-04-24,SHARED,1304
+54450,"Contagion PB Behavioral Time 1, S49",2014-05-07,SHARED,1304
+54451,"Contagion PB Behavioral Time 1, S66",2014-05-20,SHARED,1304
+54452,"Contagion PB Behavioral Time 1, S67",2014-05-20,SHARED,1304
+54453,"Contagion PB Biological Time 1, S34",2013-06-20,SHARED,1304
+54454,"Contagion PB Biological Time 1, S57",2014-05-08,SHARED,1304
+54455,"Contagion PB Biological Time 1, S65",2014-05-20,SHARED,1304
+54456,"Contagion PB Biological Time 1, S8",2013-03-06,SHARED,1304
+54631,"Contagion PB Biological Time 1, S9",2013-03-06,SHARED,1304
+54632,"Contagion PB Biological Time 1, S12",2013-03-06,SHARED,1304
+54633,"Contagion PB Biological Time 1, S35",2013-11-15,SHARED,1304
+54676,"Contagion PB Physical Time 1, S1",2013-03-06,SHARED,1304
+54721,"Contagion PB Physical Time 1, S2",2013-03-16,SHARED,1304
+54748,"Contagion PB Physical Time 1, S10",2013-03-06,SHARED,1304
+54749,"Contagion PB Physical Time 1, S24",2013-05-24,SHARED,1304
+54750,"Contagion PB Physical Time 1, S28",2013-05-24,SHARED,1304
+54751,"Contagion PB Physical Time 1, S31",2013-06-20,SHARED,1304
+54752,"Contagion PB Physical Time 1, S37",2013-11-15,SHARED,1304
+54753,"Contagion PB Physical Time 1, S45",2014-04-24,SHARED,1304
+54754,"Contagion PB Physical Time 1, S48",2014-05-07,SHARED,1304
+54755,"Contagion PB Behavioral Time 2, S4",NA,SHARED,1304
+54760,"Contagion PB Behavioral Time 2, S6",NA,SHARED,1304
+54762,"Contagion PB Behavioral Time 2, S7",NA,SHARED,1304
+54763,"Contagion PB Behavioral Time 2, S11",NA,SHARED,1304
+54764,"Contagion PB Behavioral Time 2, S14",NA,SHARED,1304
+54765,"Contagion PB Behavioral Time 2, S17",NA,SHARED,1304
+54766,"Contagion PB Behavioral Time 2, S19",NA,SHARED,1304
+54767,"Contagion PB Behavioral Time 2, S20",NA,SHARED,1304
+54768,"Contagion PB Behavioral Time 2, S25",NA,SHARED,1304
+54769,"Contagion PB Behavioral Time 2, S27",NA,SHARED,1304
+54770,"Contagion PB Behavioral Time 2, S30",NA,SHARED,1304
+54771,"Contagion PB Behavioral Time 2, S33",NA,SHARED,1304
+54772,"Contagion PB Behavioral Time 2, S39",2013-11-22,SHARED,1304
+54773,"Contagion PB Behavioral Time 2, S47",NA,SHARED,1304
+54774,"Contagion PB Behavioral Time 2, S49",NA,SHARED,1304
+54775,"Contagion PB Behavioral Time 2, S54",NA,SHARED,1304
+54776,"Contagion PB Behavioral Time 2, S55",NA,SHARED,1304
+54777,"Contagion PB Behavioral Time 2, S62",NA,SHARED,1304
+54778,"Contagion PB Behavioral Time 2, S63",NA,SHARED,1304
+54779,"Contagion PB Behavioral Time 2, S66",NA,SHARED,1304
+54780,"Contagion PB Behavioral Time 2, S67",NA,SHARED,1304
+54781,"Contagion PB Biologial Time 2, S5",NA,SHARED,1304
+54782,"Contagion PB Biological Time 2, S9",NA,SHARED,1304
+54783,"Contagion PB Biological Time 2, S13",NA,SHARED,1304
+54784,"Contagion PB Biological Time 2, S15",NA,SHARED,1304
+54785,"Contagion PB Biological Time 2, S21",NA,SHARED,1304
+54787,"Contagion PB Biological Time 2, S22",NA,SHARED,1304
+54788,"Contagion PB Biological Time 2, S26",NA,SHARED,1304
+54789,"Contagion PB Biological Time 2, S29",NA,SHARED,1304
+54825,"Contagion PB Biological Time 2, S32",NA,SHARED,1304
+54954,"Contagion PB Biological Time 2, S34",NA,SHARED,1304
+54960,"Contagion PB Biological Time 2, S35",NA,SHARED,1304
+54961,"Contagion PB Biological Time 2, S42",NA,SHARED,1304
+54962,"Contagion PB Biological Time 2, S44",NA,SHARED,1304
+54963,"Contagion PB Biological Time 2, S46",NA,SHARED,1304
+54964,"Contagion PB Biological Time 2, S51",NA,SHARED,1304
+54965,"Contagion PB Biological Time 2, S56",NA,SHARED,1304
+54966,"Contagion PB Biological Time 2, S57",NA,SHARED,1304
+54967,"Contagion PB Biological Time 2, S64",NA,SHARED,1304
+54968,"Contagion PB Biological Time 2, S65",NA,SHARED,1304
+54969,"Contagion PB Physical Time 2, S1",NA,SHARED,1304
+54970,"Contagion PB Physical Time 2, S2",NA,SHARED,1304
+54972,"Contagion PB Physical Time 2, S3",NA,SHARED,1304
+54973,"Contagion PB Physical Time 2, S10",NA,SHARED,1304
+54976,"Contagion PB Physical Time 2, S12",NA,SHARED,1304
+54977,"Contagion PB Physical Time 2, S16",NA,SHARED,1304
+55077,"Contagion PB Biological Time 2, S5",NA,SHARED,1304
+55079,"Contagion PB Physical Time 2, S18",NA,SHARED,1304
+55081,"Contagion PB Physical Time 2, S23",NA,SHARED,1304
+55082,"Contagion PB Physical Time 2, S24",NA,SHARED,1304
+55083,"Contagion PB Physical Time 2, S28",NA,SHARED,1304
+55084,"Contagion PB Physical Time 2, S31",NA,SHARED,1304
+55086,"Contagion PB Physical Time 2, S36",NA,SHARED,1304
+55099,"Contagion PB Physical Time 2, S37",2013-11-22,SHARED,1304
+55100,"Contagion PB Physical Time 2, S40",2013-11-22,SHARED,1304
+55101,"Contagion PB Physical Time 2, S43",NA,SHARED,1304
+55102,"Contagion PB Physical Time 2, S45",NA,SHARED,1304
+55103,"Contagion PB Physical Time 2, S48",NA,SHARED,1304
+55104,"Contagion PB Physical Time 2, S50",NA,SHARED,1304
+55105,"Contagion PB Physical Time 2, S52",NA,SHARED,1304
+55106,"Contagion PB Physical Time 2, S53",NA,SHARED,1304
+55107,"Contagion PB Physical Time 2, S58",NA,SHARED,1304
+55108,"Contagion PB Physical Time 2, S59",NA,SHARED,1304
+55109,"Contagion PB Physical Time 2, S60",NA,SHARED,1304
+55110,"Contagion PB Physical Time 2, S61",NA,SHARED,1304
+55111,"Contagion PB Biology Time 1, S16",2016-12-09,SHARED,1304
+55112,"Contagion PB Biology Time 1, S17",2016-12-09,SHARED,1304
+55113,"Contagion PB Biology Time 1, S18",2016-12-09,SHARED,1304
+55114,"Contagion PB Biology Time 1, S32",2017-02-01,SHARED,1304
+55115,"Contagion PB Biology Time 1, S33",2017-02-01,SHARED,1304
+55116,"Contagion PB Biology Time 1, S35",2017-02-01,SHARED,1304
+55117,"Contagion PB Biology Time 1, S36",2017-02-01,SHARED,1304
+55118,"Contagion PB Biology Time 1, S37",2017-02-01,SHARED,1304
+55119,"Contagion PB Biology Time 1, S44",2017-02-16,SHARED,1304
+55120,"Contagion PB Biology Time 1, S46",2012-02-16,SHARED,1304
+55121,"Contagion PB Biology Time 1, S47",2017-02-16,SHARED,1304
+55122,"Contagion PB Biology Time 1, S57",2017-03-23,SHARED,1304
+55123,"Contagion PB Biology Time 1, S64",2017-03-21,SHARED,1304
+55124,"Contagion PB Biology Time 1, S81",2017-07-17,SHARED,1304
+55125,"Contagion PB Biology Time 1, S85",2017-07-17,SHARED,1304
+55126,"Contagion PB Biology Time 1, S102",2017-08-15,SHARED,1304
+55127,"Contagion PB Biology Time 1, S104",2017-08-15,SHARED,1304
+55128,"Contagion PB Biology Time 1, S106",2017-08-15,SHARED,1304
+55129,"Contagion PB Biology Time 1, S110",2017-08-25,SHARED,1304
+55130,"Contagion PB Biology Time 1, S115",2017-08-25,SHARED,1304
+55131,"Contagion PB Biology Time 1, S116",2017-08-25,SHARED,1304
+55132,"Contagion PB Biology Time 1, S118",2017-08-25,SHARED,1304
+55170,"Contagion PB Germ Time 1, S1",2016-11-02,SHARED,1304
+55171,"Contagion PB Germ Time 1, S2",2016-11-02,SHARED,1304
+55172,"Contagion PB Germ Time 1, S3",2016-11-02,SHARED,1304
+55173,"Contagion PB Germ Time 1, S4",2016-11-02,SHARED,1304
+55174,"Contagion PB Germ Time 1, S5",2016-11-02,SHARED,1304
+55175,"Contagion PB Germ Time 1, S11",2016-12-05,SHARED,1304
+55176,"Contagion PB Germ Time 1, S12",2016-12-05,SHARED,1304
+55177,"Contagion PB Germ Time 1, S13",2016-12-05,SHARED,1304
+55178,"Contagion PB Germ Time 1, S14",2016-12-05,SHARED,1304
+55179,"Contagion PB Germ Time 1, S15",2016-12-05,SHARED,1304
+55180,"Contagion PB Germ Time 1, S19",2017-01-05,SHARED,1304
+55181,"Contagion PB Germ Time 1, S20",2017-01-05,SHARED,1304
+55182,"Contagion PB Germ Time 1, S21",2017-01-05,SHARED,1304
+55183,"Contagion PB Germ Time 1, S23",2017-01-05,SHARED,1304
+55184,"Contagion PB Germ Time 1, S24",2017-01-05,SHARED,1304
+55185,"Contagion PB Germ Time 1, S25",2017-01-05,SHARED,1304
+55186,"Contagion PB Germ Time 1, S27",2017-01-19,SHARED,1304
+55187,"Contagion PB Germ Time 1, S28",2017-01-19,SHARED,1304
+55188,"Contagion PB Germ Time 1, S29",2017-01-19,SHARED,1304
+55189,"Contagion PB Germ Time 1, S30",2017-01-19,SHARED,1304
+55190,"Contagion PB Germ Time 1, S31",2017-01-19,SHARED,1304
+55191,"Contagion PB Germ Time 1, S52",2017-02-27,SHARED,1304
+55192,"Contagion PB Germ Time 1, S53",2017-02-27,SHARED,1304
+55193,"Contagion PB Germ Time 1, S58",2017-03-23,SHARED,1304
+55194,"Contagion PB Germ Time 1, S61",2017-03-21,SHARED,1304
+55195,"Contagion PB Germ Time 1, S68",2017-04-27,SHARED,1304
+55196,"Contagion PB Germ Time 1, S71",2017-05-26,SHARED,1304
+55197,"Contagion PB Toy Time 1, S6",2016-11-18,SHARED,1304
+55198,"Contagion PB Toy Time 1, S7",2016-11-18,SHARED,1304
+55199,"Contagion PB Toy Time 1, S8",2016-11-18,SHARED,1304
+55200,"Contagion PB Toy Time 1, S9",2016-11-18,SHARED,1304
+55201,"Contagion PB Toy Time 1, S10",2016-11-18,SHARED,1304
+55203,"Contagion PB Toy Time 1, S38",2017-02-27,SHARED,1304
+55204,"Contagion PB Toy Time 1, S39",2017-02-27,SHARED,1304
+55316,"Contagion PB Toy Time 1, S40",2017-02-02,SHARED,1304
+55317,"Contagion PB Toy Time 1, S41",2017-02-02,SHARED,1304
+55318,"Contagion PB Toy Time 1, S42",2017-02-02,SHARED,1304
+55319,"Contagion PB Toy Time 1, S48",2017-02-02,SHARED,1304
+55320,"Contagion PB Toy Time 1, S51",2017-02-27,SHARED,1304
+55321,"Contagion PB Toy Time 1, S54",2017-02-27,SHARED,1304
+55322,"Contagion PB Toy Time 1, S55",2017-03-21,SHARED,1304
+55323,"Contagion PB Toy Time 1, S56",2017-03-21,SHARED,1304
+55324,"Contagion PB Toy Time 1, S59",2017-03-21,SHARED,1304
+55325,"Contagion PB Toy Time 1, S62",2017-03-21,SHARED,1304
+55326,"Contagion PB Toy Time 1, S66",2017-04-27,SHARED,1304
+55327,"Contagion PB Toy Time 1, S67",2017-04-27,SHARED,1304
+55328,"Contagion PB Toy Time 1, S69",2017-04-27,SHARED,1304
+55329,"Contagion PB Toy Time 1, S70",2017-04-27,SHARED,1304
+55330,"Contagion PB Toy Time 1, S74",2017-05-26,SHARED,1304
+55333,"Contagion PB Toy Time 1, S112",2017-08-25,SHARED,1304
+55334,"Contagion PB Biology Time 1, S117",2017-08-25,SHARED,1304
+55335,"Contagion PB No Book Time 1, S3",2018-07-16,SHARED,1304
+55336,"Contagion PB No Book Time 1, S4",2018-07-16,SHARED,1304
+55337,"Contagion PB No Book Time 1, S5",2018-07-17,SHARED,1304
+55370,"Contagion PB No Book Time 1, S8",2018-07-17,SHARED,1304
+55371,"Contagion PB Biological Time 1, S56",2014-05-08,SHARED,1304
+55372,"Contagion PB Behavioral Time 1, S25",2013-05-24,SHARED,1304
+55373,"Contagion PB No Book Time 1, S9",2018-07-17,SHARED,1304
+55374,"Contagion PB No Book Time 1, S13",2018-07-18,SHARED,1304
+55375,"Contagion PB No Book Time 1, S14",2018-07-18,SHARED,1304
+55376,"Contagion PB No Book Time 1, S18",2018-07-25,SHARED,1304
+55377,"Contagion PB No Book Time 1, S23",2018-08-07,SHARED,1304
+55378,"Contagion PB No Book Time 1, S24",2018-08-07,SHARED,1304
+55380,"Contagion PB No Book Time 1, S26",2018-08-07,SHARED,1304
+55381,"Contagion PB No Book Time 1, S32",2018-08-23,SHARED,1304
+55382,"Contagion PB No Book Time 1, S35",2018-10-30,SHARED,1304
+55383,"Contagion PB No Book Time 1, S36",2019-03-06,SHARED,1304
+55385,"Contagion PB No Book Time 1, S37",2019-03-07,SHARED,1304
+55386,"Contagion PB No Book Time 1, S38",2018-11-27,SHARED,1304
+55387,"Contagion PB No Book Time 1, S39",2018-11-27,SHARED,1304
+55388,"Contagion PB No Book Time 1, S40",2018-10-16,SHARED,1304
+55389,"Contagion PB No Book Time 1, S41",2018-10-02,SHARED,1304
+55390,"Contagion PB No Book Time 1, S42",2018-10-16,SHARED,1304
+55391,"Contagion PB No Book Time 1, S43",2018-10-30,SHARED,1304
+55392,"Contagion PB No Book Time 1, S44",2018-12-06,SHARED,1304
+55393,"Contagion PB No Book Time 1, S47",2019-03-12,SHARED,1304
+55394,"Contagion PB No Book Time 1, S59",2019-03-28,SHARED,1304
+55395,"Contagion PB Non Casual Book Time 1, S6",2018-07-17,SHARED,1304
+55396,"Contagion PB Non Casual Book Time 1, S10",2018-07-17,SHARED,1304
+55397,"Contagion PB Non Casual Book Time 1, S11",2018-07-17,SHARED,1304
+55398,"Contagion PB Non Casual Book Time 1, S12",2018-07-17,SHARED,1304
+55399,"Contagion PB Non Casual Book Time 1, S19",2018-07-30,SHARED,1304
+55400,"Contagion PB Non Casual Book Time 1, S21",2018-07-30,SHARED,1304
+55402,"Contagion PB Non Casual Book Time 1, S22",2018-07-30,SHARED,1304
+55403,"Contagion PB Non Casual Book Time 1, S29",2018-08-07,SHARED,1304
+55404,"Contagion PB Non Casual Book Time 1, S31",2018-08-08,SHARED,1304
+55405,"Contagion PB Non Casual Book Time 1, S33",2018-08-23,SHARED,1304
+55406,"Contagion PB Non Casual Book Time 1, S46",2018-11-26,SHARED,1304
+55407,"Contagion PB Non Casual Book Time 1, S48",2018-09-25,SHARED,1304
+55417,"Contagion PB Non Casual Book Time 1, S49",2018-12-06,SHARED,1304
+55418,"Contagion PB Non Casual Book Time 1, S50",2018-11-26,SHARED,1304
+55419,"Contagion PB Non Casual Book Time 1, S51",2019-03-12,SHARED,1304
+55420,"Contagion PB Non Casual Book Time 1, S52",2018-10-16,SHARED,1304
+55421,"Contagion PB Non Casual Book Time 1, S53",2019-03-06,SHARED,1304
+55422,"Contagion PB Non Casual Book Time 1, S54",2018-11-27,SHARED,1304
+55423,"Contagion PB Non Casual Book Time 1, S55",2018-12-06,SHARED,1304
+55424,"Contagion PB Non Casual Book Time 1, S56",2018-11-26,SHARED,1304
+55425,"Contagion PB Non Casual Book Time 1, S57",2019-02-14,SHARED,1304
+55426,"Contagion PB Non Casual Book Time 1, S58",2019-03-06,SHARED,1304
+55427,"Contagion PB Non Casual Book Time 1, S60",2019-03-28,SHARED,1304
+55428,"Contagion PB No Book Time 2, S3",2018-07-23,SHARED,1304
+55429,"Contagion PB No Book Time 2, S4",2018-07-23,SHARED,1304
+55430,"Contagion PB No Book Time 2, S5",2018-07-24,SHARED,1304
+55431,"Contagion PB No Book Time 2, S8",2018-07-24,SHARED,1304
+55432,"Contagion PB No Book Time 2, S9",2018-07-24,SHARED,1304
+55433,"Contagion PB No Book Time 2, S13",2018-07-25,SHARED,1304
+55434,"Contagion PB No Book Time 2, S14",2018-07-25,SHARED,1304
+55435,"Contagion PB No Book Time 2, S18",2018-08-03,SHARED,1304
+55436,"Contagion PB No Book Time 2, S23",2018-08-14,SHARED,1304
+55437,"Contagion PB No Book Time 2, S24",2018-08-14,SHARED,1304
+55438,"Contagion PB No Book Time 2, S26",2018-08-14,SHARED,1304
+55439,"Contagion PB No Book Time 2, S32",2018-08-29,SHARED,1304
+55440,"Contagion PB No Book Time 2, S35",2018-11-06,SHARED,1304
+55441,"Contagion PB No Book Time 2, S36",2019-03-13,SHARED,1304
+55442,"Contagion PB No Book Time 2, S37",2019-03-15,SHARED,1304
+55443,"Contagion PB No Book Time 2, S38",2018-12-04,SHARED,1304
+55444,"Contagion PB No Book Time 2, S39",2018-12-04,SHARED,1304
+55445,"Contagion PB No Book Time 2, S40",2018-10-26,SHARED,1304
+55446,"Contagion PB No Book Time 2, S41",2018-10-09,SHARED,1304
+55447,"Contagion PB No Book Time 2, S42",2018-10-26,SHARED,1304
+55448,"Contagion PB No Book Time 2, S43",2018-11-06,SHARED,1304
+55449,"Contagion PB No Book Time 2, S44",2018-12-13,SHARED,1304
+55450,"Contagion PB No Book Time 2, S47",2019-03-19,SHARED,1304
+55451,"Contagion PB No Book Time 2, S59",2019-04-03,SHARED,1304
+55452,"Contagion PB Toy Time 1, S49",2017-02-24,SHARED,1304
+55487,"Contagion PB Physical Time1, S40",2013-11-15,SHARED,1304
+55488,"Contagion PB Biological Time 2, S8",NA,SHARED,1304
+55489,"Contagion PB Toy Time 1, S79",2017-06-28,SHARED,1304
+55490,"Contagion PB Toy Time 1, S83",2017-07-17,SHARED,1304
+55491,"Contagion PB Toy Time 1, S85",2017-07-17,SHARED,1304
+55492,"Contagion PB Toy Time 1, S95",2017-07-19,SHARED,1304
+55493,"Contagion PB Toy Time 1, S96",2017-08-02,SHARED,1304
+55494,"Contagion PB Toy Time 1, S97",2017-08-02,SHARED,1304
+55495,"Contagion PB Toy Time 1, S98",2017-08-02,SHARED,1304
+55496,"Contagion PB Toy Time 1, S102",2017-08-03,SHARED,1304
+55497,"Contagion PB Germ Time 1, S43",2017-02-24,SHARED,1304
+55498,"Contagion PB Germ Time 1, S86",2017-07-17,SHARED,1304
+55499,"Contagion PB Germ Time 1, S92",2017-07-19,SHARED,1304
+55500,"Contagion PB Germ Time 1, S100",2017-08-02,SHARED,1304
+55501,"Contagion PB Germ Time 1, S103",2017-08-15,SHARED,1304
+55502,"Contagion PB Germ Time 1, S105",2017-08-15,SHARED,1304
+55503,"Contagion PB Biology Time 1, S45",2017-02-24,SHARED,1304
+55504,"Contagion PB Biology Time 1, S50",2017-02-24,SHARED,1304
+55505,"Contagion PB Biology Time 1, S79",2017-06-28,SHARED,1304
+55506,"Contagion PB Biology Time 1, S80",2017-07-17,SHARED,1304
+55507,"Contagion PB Biology Time 1, S82",2017-07-07,SHARED,1304
+55508,"Contagion PB Biology Time 1, S84",2017-07-17,SHARED,1304
+55509,"Contagion PB Biology Time 1, S91",2017-07-19,SHARED,1304
+55510,"Contagion PB Biology Time 1, S94",2016-07-19,SHARED,1304
+55511,"Contagion PB Biology Time 1, S101",2017-08-03,SHARED,1304
+55512,"Contagion PB Biology Time 1, S107",2017-08-03,SHARED,1304

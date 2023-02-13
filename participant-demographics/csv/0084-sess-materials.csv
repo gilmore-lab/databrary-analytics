@@ -1,0 +1,105 @@
+session_id,session_name,session_date,session_release,participant_ID,participant_birthdate,participant_gender,participant_race,participant_ethnicity,participant_disability,participant_language,task_name,task_description,context_setting,context_language,context_state,vol_id
+6545,NA,2014-09-29,EXCERPTS,1,1992-04-18,Female,Asian,Not Hispanic or Latino,typical,English,Study 1,Study 1,Lab,English,NY,84
+6546,NA,2014-10-08,EXCERPTS,2,1991-11-30,Male,Asian,Not Hispanic or Latino,typical,English,Study 1,Study 1,Lab,English,NY,84
+6547,NA,2014-10-08,EXCERPTS,3,1991-09-21,Female,White,Not Hispanic or Latino,typical,English,Study 1,Study 1,Lab,English,NY,84
+6567,NA,2014-10-08,EXCERPTS,4,1992-12-28,Female,White,Not Hispanic or Latino,typical,English,Study 1,Study 1,Lab,English,NY,84
+6568,NA,2014-10-13,EXCERPTS,5,1985-10-31,Female,White,Not Hispanic or Latino,typical,English,Study 1,Study 1,Lab,English,NY,84
+6569,NA,2014-10-15,SHARED,6,1993-04-08,Male,Unknown or not reported,Hispanic or Latino,typical,English,Study 1,Study 1,Lab,English,NY,84
+6570,NA,2014-10-15,EXCERPTS,7,1993-11-11,Female,More than one,Hispanic or Latino,typical,English,Study 1,Study 1,Lab,English,NY,84
+6571,NA,2014-10-17,EXCERPTS,8,1993-09-20,Female,Asian,Not Hispanic or Latino,typical,English,Study 1,Study 1,Lab,English,NY,84
+6572,NA,2014-10-21,EXCERPTS,9,1989-03-10,Male,White,Not Hispanic or Latino,typical,English,Study 1,Study 1,Lab,English,NY,84
+6573,NA,2014-10-29,EXCERPTS,10,1994-04-30,Male,White,Not Hispanic or Latino,typical,English,Study 1,Study 1,Lab,English,NY,84
+6574,NA,2014-10-29,EXCERPTS,11,1989-11-16,Male,White,Not Hispanic or Latino,typical,English,Study 1,Study 1,Lab,English,NY,84
+6575,NA,2014-10-31,EXCERPTS,12,1993-09-18,Male,White,Not Hispanic or Latino,typical,English,Study 1,Study 1,Lab,English,NY,84
+6925,NA,2014-12-05,EXCERPTS,13,1994-01-11,Female,Black or African American,Not Hispanic or Latino,typical,English,Study 1,Study 1,Lab,English,NY,84
+6926,NA,2014-12-05,EXCERPTS,14,1994-03-06,Female,More than one,Not Hispanic or Latino,typical,English,Study 1,Study 1,Lab,English,NY,84
+6927,NA,2014-12-05,SHARED,15,1994-04-14,Female,Asian,Not Hispanic or Latino,typical,English,Study 1,Study 1,Lab,English,NY,84
+6928,NA,2014-12-05,EXCERPTS,16,1994-11-24,Male,Black or African American,Not Hispanic or Latino,typical,English,Study 1,Study 1,Lab,English,NY,84
+6946,NA,2014-12-09,EXCERPTS,17,1995-05-14,Male,Asian,Not Hispanic or Latino,typical,English,Study 1,Study 1,Lab,English,NY,84
+7005,NA,2014-12-12,EXCERPTS,19,1993-09-27,Female,Asian,Not Hispanic or Latino,typical,English,Study 1,Study 1,Lab,English,NY,84
+7006,NA,2014-12-12,EXCERPTS,18,1993-02-12,Female,White,Not Hispanic or Latino,typical,English,Study 1,Study 1,Lab,English,NY,84
+7007,NA,2014-XX-XX,PRIVATE,20,NA,Female,White,Not Hispanic or Latino,typical,English,Study 1,Study 1,Lab,English,NY,84
+7151,NA,2015-01-06,EXCERPTS,21,1991-01-30,Male,Asian,Not Hispanic or Latino,typical,English,Study 2,Study 2,Lab,English,NY,84
+7152,NA,2015-01-07,SHARED,22,1989-03-30,Male,Asian,Not Hispanic or Latino,typical,English,Study 2,Study 2,Lab,English,NY,84
+7178,NA,2015-01-15,EXCERPTS,23,1988-09-30,Female,Unknown or not reported,Hispanic or Latino,typical,English,Study 3,Study 3,Lab,English,NY,84
+7179,NA,2015-01-23,EXCERPTS,24,1991-05-26,Female,Asian,Not Hispanic or Latino,typical,English,Study 3,Study 3,Lab,English,NY,84
+7180,NA,2015-01-23,EXCERPTS,25,1990-12-30,Female,White,Not Hispanic or Latino,typical,English,Study 3,Study 3,Lab,English,NY,84
+7194,NA,2015-01-30,SHARED,26,1987-04-22,Female,White,Not Hispanic or Latino,typical,English,Study 2,Study 2,Lab,English,NY,84
+7195,NA,2015-01-30,EXCERPTS,27,1993-01-25,Male,White,Not Hispanic or Latino,typical,English,Study 3,Study 3,Lab,English,NY,84
+7196,NA,2015-02-06,EXCERPTS,28,1992-09-19,Female,Asian,Not Hispanic or Latino,typical,English,Study 3,Study 3,Lab,English,NY,84
+7284,NA,2015-02-12,EXCERPTS,29,1985-07-06,Male,White,Not Hispanic or Latino,typical,English,Study 3,Study 3,Lab,English,NY,84
+7304,NA,2015-02-13,SHARED,30,1993-08-19,Female,Asian,Not Hispanic or Latino,typical,English,Study 3,Study 3,Lab,English,NY,84
+7305,NA,2015-02-13,EXCERPTS,31,1986-09-15,Female,Asian,Not Hispanic or Latino,typical,English,Study 3,Study 3,Lab,English,NY,84
+7306,NA,2015-02-13,EXCERPTS,32,1996-10-03,Male,Asian,Not Hispanic or Latino,typical,English,Study 3,Study 3,Lab,English,NY,84
+7307,NA,2015-02-13,EXCERPTS,33,1995-05-12,Male,Asian,Not Hispanic or Latino,typical,English,Study 3,Study 3,Lab,English,NY,84
+7334,NA,2015-02-17,EXCERPTS,34,1995-03-17,Male,More than one,Not Hispanic or Latino,typical,English,Study 3,Study 3,Lab,English,NY,84
+7421,NA,2015-02-20,EXCERPTS,35,1995-02-24,Male,Asian,Not Hispanic or Latino,typical,English,Study 4,NA,Lab,English,NY,84
+7422,NA,2015-XX-XX,PRIVATE,36,NA,Female,Asian,Not Hispanic or Latino,typical,English,Study 4,NA,Lab,English,NY,84
+7567,NA,2015-02-24,SHARED,37,1988-01-01,Male,White,Not Hispanic or Latino,typical,English,Study 4,NA,Lab,English,NY,84
+7576,NA,2015-02-27,EXCERPTS,38,1996-07-14,Female,Asian,Not Hispanic or Latino,typical,English,Study 4,NA,Lab,English,NY,84
+7579,NA,2015-02-27,EXCERPTS,39,1996-11-13,Male,More than one,Not Hispanic or Latino,typical,English,Study 4,NA,Lab,English,NY,84
+7594,NA,2015-03-03,EXCERPTS,40,1993-05-29,Female,White,Not Hispanic or Latino,typical,English,Study 4,NA,Lab,English,NY,84
+7719,NA,2015-03-07,EXCERPTS,41,1996-08-13,Male,White,Not Hispanic or Latino,typical,English,Study 4,NA,Lab,English,NY,84
+7720,NA,2015-03-07,EXCERPTS,42,1994-01-21,Female,Black or African American,Not Hispanic or Latino,typical,English,Study 4,NA,Lab,English,NY,84
+7733,NA,2015-03-13,SHARED,43,1995-11-24,Female,Asian,Not Hispanic or Latino,typical,English,Study 4,NA,Lab,English,NY,84
+7745,NA,2015-03-17,EXCERPTS,44,1991-06-13,Female,Asian,Not Hispanic or Latino,typical,English,Study 4,NA,Lab,English,NY,84
+8567,NA,2015-05-29,EXCERPTS,45,1994-04-09,Female,Asian,Not Hispanic or Latino,typical,English,Study 5,Study 5,Lab,English,NY,84
+8568,NA,2015-05-29,EXCERPTS,46,1994-05-23,Female,White,Not Hispanic or Latino,typical,English,Study 5,Study 5,Lab,English,NY,84
+8573,NA,2015-06-01,EXCERPTS,47,1996-10-31,Male,Other,Not Hispanic or Latino,typical,English,Study 5,Study 5,Lab,English,NY,84
+8574,NA,2015-06-01,SHARED,48,1995-08-04,Female,More than one,Not Hispanic or Latino,typical,English,Study 5,Study 5,Lab,English,NY,84
+8575,NA,2015-06-01,EXCERPTS,49,1995-09-01,Female,White,Not Hispanic or Latino,typical,English,Study 5,Study 5,Lab,English,NY,84
+8576,NA,2015-06-01,SHARED,50,1995-03-25,Female,White,Not Hispanic or Latino,typical,English,Study 5,Study 5,Lab,English,NY,84
+8585,NA,2015-06-05,EXCERPTS,51,1995-03-31,Female,White,Not Hispanic or Latino,typical,English,Study 5,Study 5,Lab,English,NY,84
+8586,NA,2015-06-05,EXCERPTS,52,1996-09-26,Female,White,Not Hispanic or Latino,typical,English,Study 6,Study 6,Lab,English,NY,84
+8587,NA,2015-06-05,EXCERPTS,53,1996-06-01,Female,Unknown or not reported,Not Hispanic or Latino,typical,English,Study 6,Study 6,Lab,English,NY,84
+8594,NA,2015-06-09,EXCERPTS,54,1993-12-17,Female,Asian,Not Hispanic or Latino,typical,English,Study 6,Study 6,Lab,English,NY,84
+8698,NA,2015-06-15,EXCERPTS,55,1994-05-16,Male,White,Not Hispanic or Latino,typical,English,Study 5,Study 5,Lab,English,NY,84
+8724,NA,2015-06-17,EXCERPTS,56,1988-02-25,Male,White,Hispanic or Latino,typical,English,Study 5,Study 5,Lab,English,NY,84
+8725,NA,2015-06-17,EXCERPTS,57,1994-10-30,Female,White,Not Hispanic or Latino,typical,English,Study 6,Study 6,Lab,English,NY,84
+8727,NA,2015-06-18,EXCERPTS,58,1992-01-15,Male,White,Not Hispanic or Latino,typical,English,Study 6,Study 6,Lab,English,NY,84
+8728,NA,2015-06-18,EXCERPTS,59,1994-03-16,Male,Asian,Not Hispanic or Latino,typical,English,Study 5,Study 5,Lab,English,NY,84
+8729,NA,2015-06-18,EXCERPTS,60,1987-08-27,Female,White,Not Hispanic or Latino,typical,English,Study 6,Study 6,Lab,English,NY,84
+8818,NA,2015-06-24,EXCERPTS,61,1995-11-30,Male,Asian,Not Hispanic or Latino,typical,English,Study 6,Study 6,Lab,English,NY,84
+8821,NA,2015-06-24,SHARED,62,1986-11-04,Female,More than one,Hispanic or Latino,typical,English,Study 6,Study 6,Lab,English,NY,84
+8841,NA,2015-07-01,EXCERPTS,63,1994-11-15,Male,White,Hispanic or Latino,typical,English,Study 6,Study 6,Lab,English,NY,84
+8926,NA,2015-07-09,EXCERPTS,64,2010-03-05,Female,Unknown or not reported,Hispanic or Latino,typical,English,Study 6,Study 6,Lab,English,NY,84
+8927,NA,2015-07-10,EXCERPTS,65,2010-01-13,Male,More than one,Not Hispanic or Latino,typical,English,Study 6,Study 6,Lab,English,NY,84
+8930,NA,2015-07-13,EXCERPTS,67,2009-10-14,Male,White,Not Hispanic or Latino,typical,English,Study 6,Study 6,Lab,English,NY,84
+8934,NA,2015-07-14,EXCERPTS,68,2010-03-02,Male,White,Not Hispanic or Latino,typical,English,Study 6,Study 6,Lab,English,NY,84
+8936,NA,2015-07-15,EXCERPTS,69,1992-09-30,Male,White,Not Hispanic or Latino,typical,English,Study 5,Study 5,Lab,English,NY,84
+8979,NA,2015-07-24,EXCERPTS,70,2009-01-09,Female,More than one,Not Hispanic or Latino,typical,English,Study 6,Study 6,Lab,English,NY,84
+8994,NA,2015-08-03,EXCERPTS,71,1993-07-20,Male,Asian,Not Hispanic or Latino,typical,English,Study 5,Study 5,Lab,English,NY,84
+8996,NA,2015-08-03,EXCERPTS,72,1991-02-23,Male,White,Not Hispanic or Latino,typical,English,Study 5,Study 5,Lab,English,NY,84
+9004,NA,2015-08-13,EXCERPTS,73,2010-02-14,Female,White,Not Hispanic or Latino,typical,English,Study 6,Study 6,Lab,English,NY,84
+9015,NA,2015-08-18,EXCERPTS,74,1986-07-08,Male,White,Not Hispanic or Latino,typical,English,Study 5,Study 5,Lab,English,NY,84
+9134,NA,2015-08-25,EXCERPTS,75,2010-06-09,Male,White,Not Hispanic or Latino,typical,English,Study 6,Study 6,Lab,"English, Korean",NY,84
+9136,NA,2015-08-26,EXCERPTS,76,2009-08-20,Female,White,Not Hispanic or Latino,typical,English,Study 6,Study 6,Lab,English,NY,84
+9226,NA,2015-09-19,EXCERPTS,77,2009-10-24,Female,More than one,Hispanic or Latino,typical,English,Study 6,Study 6,Lab,English,NY,84
+9796,NA,2016-02-09,EXCERPTS,84,2010-04-01,Female,White,Not Hispanic or Latino,typical,English,Study 6,Study 6,Lab,English,NY,84
+9934,NA,2015-11-09,EXCERPTS,78,2009-08-18,Male,White,Not Hispanic or Latino,typical,English,Study 6,Study 6,Lab,English,NY,84
+9970,NA,2015-11-13,EXCERPTS,79,2009-10-28,Female,Black or African American,Hispanic or Latino,typical,English,Study 6,Study 6,Lab,English,NY,84
+10228,NA,2015-12-19,EXCERPTS,80,2010-01-27,Female,White,Not Hispanic or Latino,typical,English,Study 6,Study 6,Lab,English,NY,84
+10229,NA,2015-12-19,EXCERPTS,81,2009-12-18,Male,White,Not Hispanic or Latino,typical,English,Study 6,Study 6,Lab,English,NY,84
+10332,NA,2016-01-12,EXCERPTS,82,2010-11-17,Female,White,Not Hispanic or Latino,typical,English,Study 6,Study 6,Lab,English,NY,84
+10333,NA,2016-01-13,SHARED,83,2010-02-20,Male,White,Not Hispanic or Latino,typical,English,Study 6,Study 6,Lab,English,NY,84
+10513,NA,2016-02-15,SHARED,85,2010-03-25,Male,White,Not Hispanic or Latino,typical,English,Study 6,Study 6,Lab,English,NY,84
+10541,NA,2016-02-16,EXCERPTS,86,2010-05-05,Male,White,Not Hispanic or Latino,typical,English,Study 6,Study 6,Lab,English,NY,84
+10550,NA,2016-02-18,EXCERPTS,87,2010-03-02,Female,White,Not Hispanic or Latino,typical,"English, French",Study 6,Study 6,Lab,English,NY,84
+10590,NA,2016-02-21,EXCERPTS,90,2010-03-25,Male,White,Not Hispanic or Latino,typical,English,Study 6,Study 6,Lab,English,NY,84
+10592,NA,2016-02-20,EXCERPTS,88,2010-03-21,Female,Asian,Not Hispanic or Latino,typical,"English, Korean",Study 6,Study 6,Lab,"English, Korean",NY,84
+10593,NA,2016-02-20,EXCERPTS,89,2010-09-10,Male,More than one,Not Hispanic or Latino,typical,English,Study 6,Study 6,Lab,English,NY,84
+11753,NA,2016-05-25,EXCERPTS,91,1994-09-22,Female,White,Not Hispanic or Latino,typical,English,Study 2,Study 2,Lab,English,NY,84
+11754,NA,2016-XX-XX,PRIVATE,113,NA,Male,Asian,Not Hispanic or Latino,typical,English,Study 2,Study 2,Lab,English,NY,84
+16362,NA,2015-07-10,EXCERPTS,66,2009-11-17,Female,More than one,Not Hispanic or Latino,typical,English,Study 6,Study 6,Lab,English,NY,84
+16363,NA,2015-07-31,EXCERPTS,111,1987-01-27,Female,Unknown or not reported,Hispanic or Latino,typical,"English, Spanish",Study 2,Study 2,Lab,English,NY,84
+16364,NA,2015-07-31,EXCERPTS,112,1995-03-31,Female,White,Not Hispanic or Latino,typical,English,Study 2,Study 2,Lab,English,NY,84
+16399,NA,2016-10-12,EXCERPTS,201,1994-12-16,Female,More than one,Hispanic or Latino,typical,English,Study 7,Study 7,Lab,English,NY,84
+16400,NA,2016-10-12,EXCERPTS,202,1991-01-20,Male,White,Not Hispanic or Latino,typical,English,Study 7,Study 7,Lab,English,NY,84
+16401,NA,2016-10-12,EXCERPTS,203,1993-08-16,Female,Asian,Not Hispanic or Latino,typical,English,Study 7,Study 7,Lab,English,NY,84
+16402,NA,2016-10-12,EXCERPTS,204,1997-06-12,Male,White,Not Hispanic or Latino,typical,English,Study 7,Study 7,Lab,English,NY,84
+16403,NA,2016-10-12,SHARED,205,1988-01-01,Male,White,Not Hispanic or Latino,typical,English,Study 7,Study 7,Lab,English,NY,84
+16404,NA,2016-10-12,EXCERPTS,206,1994-09-18,Female,White,Not Hispanic or Latino,typical,English,Study 7,Study 7,Lab,English,NY,84
+16405,NA,2016-10-12,EXCERPTS,207,1991-08-14,Male,Asian,Unknown or not reported,typical,English,Study 7,Study 7,Lab,English,NY,84
+16406,NA,2016-10-12,EXCERPTS,208,1993-06-25,Female,Asian,Not Hispanic or Latino,typical,English,Study 7,Study 7,Lab,English,NY,84
+16407,NA,2016-10-12,EXCERPTS,209,1996-08-19,Female,White,Not Hispanic or Latino,typical,English,Study 7,Study 7,Lab,English,NY,84
+16408,NA,2016-10-14,EXCERPTS,210,1991-05-09,Male,White,Not Hispanic or Latino,typical,English,Study 7,Study 7,Lab,English,NY,84

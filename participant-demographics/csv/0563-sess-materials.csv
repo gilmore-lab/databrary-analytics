@@ -1,0 +1,121 @@
+session_id,session_name,session_date,session_release,participant_ID,participant_birthdate,participant_gender,participant_race,participant_ethnicity,participant_disability,participant_language,exclusion_reason,group_name,context_setting,context_language,context_country,context_state,vol_id
+24098,LEGO_S#002_Visit1,2017-XX-XX,PRIVATE,002,NA,Male,White,Not Hispanic or Latino,typical,English,NA,13 mos Walkers,Home,English,US,NY,563
+24099,LEGO_S#002_Visit2,2017-XX-XX,PRIVATE,002,NA,Male,White,Not Hispanic or Latino,typical,English,NA,13 mos Walkers,Home,English,US,NY,563
+24192,LEGO_S#003_Visit1,2018-01-09,EXCERPTS,003,2016-02-11,Male,More than one,Not Hispanic or Latino,typical,English,NA,23 mos,Home,English,US,NY,563
+24362,LEGO_S#005_Visit1,2018-01-18,EXCERPTS,005,2016-12-13,Female,White,Not Hispanic or Latino,typical,English,NA,13 mos Walkers,Home,English,US,NY,563
+24643,LEGO_S#005_Visit2,2018-01-25,EXCERPTS,005,2016-12-13,Female,White,Not Hispanic or Latino,typical,English,NA,13 mos Walkers,Home,English,US,NY,563
+24658,LEGO_S#006_Visit1,2018-01-19,EXCERPTS,006,2016-02-18,Female,White,Not Hispanic or Latino,typical,English,NA,23 mos,Home,English,US,NY,563
+24861,LEGO_S#007_Visit1,2018-02-05,EXCERPTS,007,2016-03-14,Male,White,Not Hispanic or Latino,typical,English,NA,23 mos,Home,English,US,NY,563
+24964,LEGO_S#007_Visit2,2018-02-12,EXCERPTS,007,2016-03-14,Male,White,Not Hispanic or Latino,typical,English,NA,23 mos,Home,English,US,NY,563
+24967,LEGO_S#004_Visit1,2018-01-10,EXCERPTS,004,2016-12-05,Female,White,Not Hispanic or Latino,typical,English,NA,13 mos Walkers,Home,English,US,NY,563
+24968,LEGO_S#004_Visit2,2018-01-17,EXCERPTS,004,2016-12-05,Female,White,Not Hispanic or Latino,typical,English,NA,13 mos Walkers,Home,English,US,NY,563
+25105,LEGO_S#008_Visit1,2018-02-16,SHARED,008,2017-01-16,Female,White,Hispanic or Latino,typical,English,NA,13 mos Crawler,Home,English,US,NY,563
+25106,LEGO_S#009_Visit1,2018-02-19,SHARED,009,2017-01-23,Male,White,Not Hispanic or Latino,typical,English,NA,13 mos Crawler,Home,English,US,NY,563
+25245,LEGO_S#008_Visit2,2018-02-22,EXCERPTS,008,2017-01-16,Female,White,Hispanic or Latino,typical,English,NA,13 mos Crawler,Home,English,US,NY,563
+25346,LEGO_S#009_Visit2,2018-02-26,SHARED,009,2017-01-23,Male,White,Not Hispanic or Latino,typical,English,NA,13 mos Crawler,Home,English,US,NY,563
+25541,LEGO_S#010_Visit1,2018-03-12,EXCERPTS,010,2017-02-08,Male,White,Not Hispanic or Latino,typical,"English, Italian",NA,13 mos Crawler,Home,English,US,NY,563
+25568,LEGO_S#011_Visit1,2018-03-13,EXCERPTS,011,2016-04-13,Male,More than one,Not Hispanic or Latino,typical,English,NA,23 mos,Home,English,US,NY,563
+25624,LEGO_S#010_Visit2,2018-03-15,EXCERPTS,010,2017-02-08,Male,White,Not Hispanic or Latino,typical,"English, Italian",NA,13 mos Crawler,Home,English,US,NY,563
+25627,LEGO_S#012_Visit1,2018-03-16,EXCERPTS,012,2016-04-22,Male,White,Not Hispanic or Latino,typical,English,NA,23 mos,Home,English,US,NY,563
+25654,LEGO_S#012_Visit2,2018-03-19,EXCERPTS,012,2016-04-22,Male,White,Not Hispanic or Latino,typical,English,NA,23 mos,Home,English,US,NY,563
+25655,LEGO_S#006_Visit2,2018-01-26,SHARED,006,2016-02-18,Female,White,Not Hispanic or Latino,typical,English,NA,23 mos,Home,English,US,NY,563
+25661,LEGO_S#011_Visit2,2018-03-20,EXCERPTS,011,2016-04-13,Male,More than one,Not Hispanic or Latino,typical,English,NA,23 mos,Home,English,US,NY,563
+25711,LEGO_S#013_Visit1,2018-03-26,EXCERPTS,013,2017-02-17,Female,White,Not Hispanic or Latino,atypical,English,NA,13 mos Crawler,Home,English,US,NY,563
+25817,LEGO_S#014_Visit1,2018-XX-XX,PRIVATE,014,2016-09-26,Female,White,Not Hispanic or Latino,typical,English,NA,18 mos,Home,English,US,NY,563
+25818,LEGO_S#014_Visit2,2018-03-28,EXCERPTS,014,2016-09-26,Female,White,Not Hispanic or Latino,typical,English,NA,18 mos,Home,English,US,NY,563
+25945,LEGO_S#013_Visit2,2018-03-30,EXCERPTS,013,2017-02-17,Female,White,Not Hispanic or Latino,atypical,English,NA,13 mos Crawler,Home,English,US,NY,563
+25973,LEGO_S#015_Visit1,2018-04-02,EXCERPTS,015,2016-10-07,Female,White,Not Hispanic or Latino,typical,English,NA,18 mos,Home,English,US,NY,563
+25974,LEGO_S#015_Visit2,2018-04-03,EXCERPTS,015,2016-10-07,Female,White,Not Hispanic or Latino,typical,English,NA,18 mos,Home,English,US,NY,563
+26340,LEGO_S#016_Visit1,2018-04-10,SHARED,016,2016-05-15,Female,White,Not Hispanic or Latino,typical,English,NA,23 mos,Home,English,US,NY,563
+26343,LEGO_S#017_Visit1,2018-XX-XX,PRIVATE,017,NA,Male,White,Not Hispanic or Latino,typical,English,NA,13 mos Walkers,Home,English,US,NY,563
+26344,LEGO_S#017_Visit2,2018-XX-XX,PRIVATE,017,NA,Male,White,Not Hispanic or Latino,typical,English,NA,13 mos Walkers,Home,English,US,NY,563
+26890,LEGO_S#018_Visit1,2018-04-18,SHARED,018,2017-03-26,Female,White,Not Hispanic or Latino,typical,English,NA,13 mos Crawler,Home,English,US,NY,563
+27064,LEGO_S#019_Visit1,2018-04-20,EXCERPTS,019,2016-05-23,Male,More than one,Hispanic or Latino,typical,English,NA,23 mos,Home,English,US,NY,563
+27109,LEGO_S#018_Visit2,2018-04-24,SHARED,018,2017-03-26,Female,White,Not Hispanic or Latino,typical,English,NA,13 mos Crawler,Home,English,US,NY,563
+27457,LEGO_S#020_Visit1,2018-XX-XX,PRIVATE,020,NA,Male,More than one,Hispanic or Latino,typical,English,NA,13 mos Crawler,Home,English,US,NY,563
+27920,LEGO_S#021_Visit1,2018-05-23,SHARED,021,2016-11-26,Female,White,Not Hispanic or Latino,typical,English,NA,18 mos,Home,English,US,NY,563
+28159,LEGO_S#021_Visit2,2018-XX-XX,PRIVATE,021,2016-11-26,Female,White,Not Hispanic or Latino,typical,English,NA,18 mos,Home,English,US,NY,563
+28959,LEGO_S#022_Visit1,2018-06-05,EXCERPTS,022,2016-12-02,Male,White,Not Hispanic or Latino,typical,English,NA,18 mos,Home,English,US,NY,563
+29302,LEGO_S#022_Visit2,2018-06-07,EXCERPTS,022,2016-12-02,Male,White,Not Hispanic or Latino,typical,English,NA,18 mos,Home,English,US,NY,563
+29347,LEGO_S#023_Visit1,2018-06-12,EXCERPTS,023,2016-07-17,Male,Other,Hispanic or Latino,typical,English,NA,23 mos,Home,English,US,NY,563
+29464,LEGO_S#024_Visit1,2018-XX-XX,PRIVATE,024,NA,Male,White,Not Hispanic or Latino,typical,English,NA,18 mos,Home,English,US,NY,563
+29543,LEGO_S#024_Visit2,2018-XX-XX,PRIVATE,024,NA,Male,White,Not Hispanic or Latino,typical,English,NA,18 mos,Home,English,US,NY,563
+29595,LEGO_S#023_Visit2,2018-XX-XX,PRIVATE,023,2016-07-17,Male,Other,Hispanic or Latino,typical,English,NA,23 mos,Home,English,US,NY,563
+29895,LEGO_S#025_Visit1,2018-07-09,EXCERPTS,025,2017-01-02,Male,White,Not Hispanic or Latino,typical,English,NA,18 mos,Home,English,US,NY,563
+29906,LEGO_S#025_Visit2,2018-07-10,EXCERPTS,025,2017-01-02,Male,White,Not Hispanic or Latino,typical,English,NA,18 mos,Home,English,US,NY,563
+29971,LEGO_S#026_Visit1,2018-07-12,EXCERPTS,026,2017-06-07,Male,White,Not Hispanic or Latino,typical,English,NA,13 mos Walkers,Home,English,US,NY,563
+30156,LEGO_S#027_Visit1,2018-07-16,SHARED,027,2016-08-16,Female,White,Hispanic or Latino,typical,English,NA,23 mos,Home,English,US,NY,563
+30240,LEGO_S#026_Visit2,2018-07-18,EXCERPTS,026,2017-06-07,Male,White,Not Hispanic or Latino,typical,English,NA,13 mos Walkers,Home,English,US,NY,563
+30242,LEGO_S#028_Visit1,2018-XX-XX,PRIVATE,028,NA,Female,More than one,Not Hispanic or Latino,typical,English,NA,13 mos Walkers,Home,English,US,NY,563
+30290,LEGO_S#028_Visit2,2018-XX-XX,PRIVATE,028,NA,Female,More than one,Not Hispanic or Latino,typical,English,NA,13 mos Walkers,Home,English,US,NY,563
+30453,LEGO_S#029_Visit1,2018-XX-XX,PRIVATE,029,2017-02-09,Male,White,Not Hispanic or Latino,typical,English,NA,18 mos,Home,English,US,NY,563
+30487,LEGO_S#030_Visit1,2018-08-16,SHARED,030,2017-02-12,Female,More than one,Not Hispanic or Latino,typical,English,NA,18 mos,Home,English,US,NY,563
+30494,LEGO_S#029_Visit2,2018-08-17,SHARED,029,2017-02-09,Male,White,Not Hispanic or Latino,typical,English,NA,18 mos,Home,English,US,NY,563
+30511,LEGO_S#030_Visit2,2018-XX-XX,PRIVATE,030,2017-02-12,Female,More than one,Not Hispanic or Latino,typical,English,NA,18 mos,Home,English,US,NY,563
+30524,LEGO_S#020_Visit2,2018-XX-XX,PRIVATE,020,NA,Male,More than one,Hispanic or Latino,typical,English,NA,13 mos Crawler,Home,English,US,NY,563
+30525,LEGO_S#016_Visit2,2018-04-16,SHARED,016,2016-05-15,Female,White,Not Hispanic or Latino,typical,English,NA,23 mos,Home,English,US,NY,563
+30526,LEGO_S#019_Visit2,2018-04-26,EXCERPTS,019,2016-05-23,Male,More than one,Hispanic or Latino,typical,English,NA,23 mos,Home,English,US,NY,563
+31726,LEGO_S#031_Visit1,2018-10-05,EXCERPTS,031,2016-11-05,Female,More than one,Hispanic or Latino,typical,English,NA,23 mos,Home,English,US,NY,563
+31749,LEGO_S#032_Visit1,2018-10-08,EXCERPTS,032,2016-11-06,Male,White,Not Hispanic or Latino,typical,English,NA,23 mos,Home,English,US,NY,563
+31801,LEGO_S#031_Visit2,2018-10-12,EXCERPTS,031,2016-11-05,Female,More than one,Hispanic or Latino,typical,English,NA,23 mos,Home,English,US,NY,563
+31805,LEGO_S#032_Visit2,2018-10-15,EXCERPTS,032,2016-11-06,Male,White,Not Hispanic or Latino,typical,English,NA,23 mos,Home,English,US,NY,563
+31895,LEGO_S#033_Visit1,2018-10-19,EXCERPTS,033,2017-04-20,Female,White,Not Hispanic or Latino,typical,English,NA,18 mos,Home,English,US,NY,563
+32142,LEGO_S#033_Visit2,2018-10-26,EXCERPTS,033,2017-04-20,Female,White,Not Hispanic or Latino,typical,English,NA,18 mos,Home,English,US,NY,563
+32454,LEGO_S#034_Visit1,2018-11-07,EXCERPTS,034,2016-12-03,Male,White,Not Hispanic or Latino,typical,English,NA,23 mos,Home,English,US,NY,563
+32463,LEGO_S#034_Visit2,2018-11-09,EXCERPTS,034,2016-12-03,Male,White,Not Hispanic or Latino,typical,English,NA,23 mos,Home,English,US,NY,563
+32807,LEGO_S#035_Visit1,2018-XX-XX,PRIVATE,035,2017-11-02,Male,White,Not Hispanic or Latino,typical,English,NA,13 mos Walkers,Home,English,US,NY,563
+32827,LEGO_S#036_Visit1,2018-12-03,EXCERPTS,036,2017-11-06,Male,More than one,Not Hispanic or Latino,typical,English,NA,13 mos Walkers,Home,English,US,NY,563
+32866,LEGO_S#035_Visit2,2018-12-06,SHARED,035,2017-11-02,Male,White,Not Hispanic or Latino,typical,English,NA,13 mos Walkers,Home,English,US,NY,563
+32974,LEGO_S#037_Visit1,2018-12-17,SHARED,037,2017-01-23,Female,White,Not Hispanic or Latino,typical,English,NA,23 mos,Home,English,US,NY,563
+32990,LEGO_S#037_Visit2,2018-12-19,SHARED,037,2017-01-23,Female,White,Not Hispanic or Latino,typical,English,NA,23 mos,Home,English,US,NY,563
+33000,LEGO_S#036_Visit2,2018-12-10,SHARED,036,2017-11-06,Male,More than one,Not Hispanic or Latino,typical,English,NA,13 mos Walkers,Home,English,US,NY,563
+33008,LEGO_S#038_Visit1,2018-12-20,SHARED,038,2017-11-14,Female,White,Not Hispanic or Latino,typical,English,NA,13 mos Crawler,Home,English,US,NY,563
+33459,LEGO_S#040_Visit1,2019-XX-XX,PRIVATE,040,NA,Male,White,Not Hispanic or Latino,typical,English,NA,18 mos,Home,English,US,NY,563
+34133,LEGO_S#041_Visit1,2019-02-18,EXCERPTS,041,2017-03-15,Female,White,Not Hispanic or Latino,typical,English,NA,23 mos,Home,English,US,NY,563
+34439,LEGO_S#041_Visit2,2019-02-21,EXCERPTS,041,2017-03-15,Female,White,Not Hispanic or Latino,typical,English,NA,23 mos,Home,English,US,NY,563
+34870,LEGO_S#042_Visit1,2019-03-05,EXCERPTS,042,2018-01-26,Female,White,Not Hispanic or Latino,typical,English,NA,13 mos Walkers,Home,English,US,NY,563
+34961,LEGO_S#038_Visit2,2019-01-04,SHARED,038,2017-11-14,Female,White,Not Hispanic or Latino,typical,English,NA,13 mos Crawler,Home,English,US,NY,563
+35063,LEGO_S#042_Visit2,2019-03-12,EXCERPTS,042,2018-01-26,Female,White,Not Hispanic or Latino,typical,English,NA,13 mos Walkers,Home,English,US,NY,563
+35095,LEGO_S#043_Visit1,2019-03-13,EXCERPTS,043,2018-02-04,Male,Black or African American,Not Hispanic or Latino,typical,English,NA,13 mos Walkers,Home,English,US,NY,563
+35172,LEGO_S#043_Visit2,2019-03-19,EXCERPTS,043,2018-02-04,Male,Black or African American,Not Hispanic or Latino,typical,English,NA,13 mos Walkers,Home,English,US,NY,563
+36221,LEGO_S#044_Visit1,2019-XX-XX,PRIVATE,044,NA,Male,Asian,Not Hispanic or Latino,typical,English,NA,13 mos Walkers,Home,English,US,NY,563
+36745,LEGO_S#045_Visit1,2019-04-30,SHARED,045,2017-06-04,Female,White,Not Hispanic or Latino,typical,English,NA,23 mos,Home,English,US,NY,563
+36926,LEGO_S#045_Visit2,2019-05-07,SHARED,045,2017-06-04,Female,White,Not Hispanic or Latino,typical,English,NA,23 mos,Home,English,US,NY,563
+38271,LEGO_S#046_Visit1,2019-06-18,SHARED,046,2017-12-10,Male,White,Not Hispanic or Latino,typical,English,NA,18 mos,Home,English,US,NY,563
+38306,LEGO_S#046_Visit2,2019-06-20,EXCERPTS,046,2017-12-10,Male,White,Not Hispanic or Latino,typical,English,NA,18 mos,Home,English,US,NY,563
+38934,LEGO_S#047_Visit1,2019-07-15,EXCERPTS,047,2017-08-21,Male,White,Not Hispanic or Latino,typical,English,NA,23 mos,Home,English,US,NY,563
+39246,LEGO_S#048_Visit1,2019-07-29,EXCERPTS,048,2018-01-30,Female,White,Not Hispanic or Latino,typical,English,NA,18 mos,Home,English,US,NY,563
+39375,LEGO_S#048_Visit2,2019-XX-XX,PRIVATE,048,2018-01-30,Female,White,Not Hispanic or Latino,typical,English,NA,18 mos,Home,English,US,NY,563
+39474,LEGO_S#049_Visit1,2019-XX-XX,PRIVATE,049,NA,Female,Black or African American,Not Hispanic or Latino,typical,English,NA,18 mos,Home,English,US,NY,563
+39478,LEGO_S#047_Visit2,2019-XX-XX,PRIVATE,047,NA,Male,White,Not Hispanic or Latino,typical,English,NA,23 mos,Home,English,US,NY,563
+39554,LEGO_S#050_Visit1,2019-08-19,EXCERPTS,050,2018-07-25,Male,More than one,Hispanic or Latino,typical,English,NA,13 mos Walkers,Home,English,US,NY,563
+39597,LEGO_S#050_Visit2,2019-08-23,EXCERPTS,050,2018-07-25,Male,More than one,Hispanic or Latino,typical,English,NA,13 mos Walkers,Home,English,US,NY,563
+39646,LEGO_S#051_Visit1,2019-08-28,SHARED,051,2018-07-23,Female,More than one,Hispanic or Latino,typical,English,NA,13 mos Walkers,Home,English,US,NY,563
+39882,LEGO_S#052_Visit1,2019-08-30,SHARED,052,2018-08-06,Male,More than one,Hispanic or Latino,typical,English,NA,13 mos Crawler,Home,English,US,NY,563
+39890,LEGO_S#051_Visit2,2019-09-03,EXCERPTS,051,2018-07-23,Female,More than one,Hispanic or Latino,typical,English,NA,13 mos Walkers,Home,English,US,NY,563
+39939,LEGO_S#052_Visit2,2019-09-04,SHARED,052,2018-08-06,Male,More than one,Hispanic or Latino,typical,English,NA,13 mos Crawler,Home,English,US,NY,563
+40267,LEGO_S#053_Visit1,2019-09-09,SHARED,053,2018-03-03,Male,White,Not Hispanic or Latino,typical,English,NA,18 mos,Home,English,US,NY,563
+40428,LEGO_S#053_Visit2,2019-09-13,EXCERPTS,053,2018-03-03,Male,White,Not Hispanic or Latino,typical,English,NA,18 mos,Home,English,US,NY,563
+40456,LEGO_S#054_Visit1,2019-09-16,SHARED,054,2018-03-14,Female,More than one,Hispanic or Latino,typical,English,NA,18 mos,Home,English,US,NY,563
+40518,LEGO_S#054_Visit2,2019-09-20,SHARED,054,2018-03-14,Female,More than one,Hispanic or Latino,typical,English,NA,18 mos,Home,English,US,NY,563
+40817,LEGO_S#055_Visit1,2019-XX-XX,PRIVATE,055,NA,Male,More than one,Hispanic or Latino,typical,English,NA,13 mos Walkers,Home,English,US,NY,563
+41504,LEGO_S#056_Visit1,2019-XX-XX,PRIVATE,056,2018-04-12,Male,Asian,Not Hispanic or Latino,typical,English,NA,18 mos,Home,English,US,NY,563
+41554,LEGO_S#056_Visit2,2019-10-18,SHARED,056,2018-04-12,Male,Asian,Not Hispanic or Latino,typical,English,NA,18 mos,Home,English,US,NY,563
+41637,LEGO_S#055_Visit2,2019-XX-XX,PRIVATE,055,NA,Male,More than one,Hispanic or Latino,typical,English,NA,13 mos Walkers,Home,English,US,NY,563
+41913,LEGO_S#057_Visit1,2019-11-13,SHARED,057,2018-05-27,Female,More than one,Not Hispanic or Latino,typical,English,NA,18 mos,Home,English,US,NY,563
+41975,LEGO_S#057_Visit2,2019-11-15,SHARED,057,2018-05-27,Female,More than one,Not Hispanic or Latino,typical,English,NA,18 mos,Home,English,US,NY,563
+42054,LEGO_S#058_Visit1,2019-11-21,EXCERPTS,058,2017-12-12,Female,White,Hispanic or Latino,typical,English,NA,23 mos,Home,English,US,NY,563
+42107,LEGO_S#058_Visit2,2019-11-26,EXCERPTS,058,2017-12-12,Female,White,Hispanic or Latino,typical,English,NA,23 mos,Home,English,US,NY,563
+42248,LEGO_S#059_Visit1,2019-12-10,EXCERPTS,059,2018-01-14,Female,White,Not Hispanic or Latino,typical,English,NA,23 mos,Home,English,US,NY,563
+42297,LEGO_S#059_Visit2,2019-12-13,EXCERPTS,059,2018-01-14,Female,White,Not Hispanic or Latino,typical,English,NA,23 mos,Home,English,US,NY,563
+42455,LEGO_S#060_Visit1,2020-01-15,EXCERPTS,060,2018-12-15,Female,More than one,Hispanic or Latino,typical,English,NA,13 mos Walkers,Home,English,US,NY,563
+42684,LEGO_S#060_Visit2,2020-01-21,EXCERPTS,060,2018-12-15,Female,More than one,Hispanic or Latino,typical,English,NA,13 mos Walkers,Home,English,US,NY,563
+42794,LEGO_S#061_Visit1,2020-01-27,EXCERPTS,061,2018-07-31,Male,More than one,Not Hispanic or Latino,typical,English,NA,18 mos,Home,English,US,NY,563
+43004,LEGO_S#061_Visit2,2020-02-06,EXCERPTS,061,2018-07-31,Male,More than one,Not Hispanic or Latino,typical,English,NA,18 mos,Home,English,US,NY,563
+43052,LEGO_S#062_Visit1,2020-02-10,EXCERPTS,062,2019-01-16,Female,More than one,Not Hispanic or Latino,typical,English,NA,13 mos Walkers,Home,English,US,NY,563
+43160,LEGO_S#062_Visit2,2020-02-17,EXCERPTS,062,2019-01-16,Female,More than one,Not Hispanic or Latino,typical,English,NA,13 mos Walkers,Home,English,US,NY,563
+43696,LEGO_S#063_Visit1,2020-XX-XX,PRIVATE,063,NA,Female,More than one,Not Hispanic or Latino,typical,English,NA,23 mos,Home,English,US,NY,563
+44826,Infant object play: Coded Datavyu files and Coding manual,materials,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,563
+45374,LEGO_S#039_Visit1,2019-01-24,SHARED,039,2017-07-25,Male,Other,Not Hispanic or Latino,typical,English,NA,18 mos,Home,English,US,NY,563
+56315,LEGO_S#001,2017-10-02,EXCERPTS,001,2016-04-07,Male,More than one,Hispanic or Latino,typical,"English, Spanish",Pilot,18 mos,Home,English,US,NY,563
+57498,Questionnaire_Data,materials,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,563

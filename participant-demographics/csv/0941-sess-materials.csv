@@ -1,0 +1,33 @@
+session_id,session_name,session_date,session_release,participant_ID,participant_birthdate,participant_gender,participant_race,participant_ethnicity,participant_gestational age,participant_birth weight,participant_disability,participant_language,pilot_pilot,exclusion_reason,group_name,vol_id
+38902,S#01,2019-XX-XX,PRIVATE,01,NA,Female,Asian,Not Hispanic or Latino,NA,NA,typical,Mandarin,NA,pilot,crawler,941
+39987,S#02,2019-07-19,EXCERPTS,02,2018-06-09,Male,White,Not Hispanic or Latino,NA,NA,typical,English,NA,pilot,walker,941
+39988,S#03,2019-07-25,EXCERPTS,03,2018-07-01,Female,White,Not Hispanic or Latino,NA,NA,typical,English,NA,NA,crawler,941
+39989,S#04,2019-XX-XX,PRIVATE,04,NA,Female,White,Not Hispanic or Latino,NA,NA,typical,English,NA,NA,crawler,941
+40457,S#05,2019-XX-XX,PRIVATE,05,NA,Male,White,Not Hispanic or Latino,NA,NA,typical,English,NA,out of age range,crawler,941
+40458,S#06,2019-09-17,SHARED,06,2018-09-13,Female,White,Not Hispanic or Latino,NA,NA,typical,English,NA,NA,walker,941
+43165,S#07,2019-10-02,EXCERPTS,07,2018-09-16,Male,Asian,Not Hispanic or Latino,NA,NA,typical,English,NA,NA,crawler,941
+43166,S#08,2019-10-31,EXCERPTS,08,2018-11-13,Male,White,Not Hispanic or Latino,NA,NA,typical,English,NA,NA,crawler,941
+43167,S#09,2019-11-01,EXCERPTS,09,2018-10-17,Female,Asian,Not Hispanic or Latino,NA,NA,typical,English,NA,NA,crawler,941
+43168,S#10,2019-11-07,SHARED,10,2018-09-15,Male,White,Not Hispanic or Latino,NA,NA,typical,English,NA,NA,walker,941
+43169,S#11,2019-11-07,EXCERPTS,11,2018-11-02,Female,White,Not Hispanic or Latino,NA,NA,typical,English,NA,NA,crawler,941
+43170,S#12,2019-11-19,EXCERPTS,12,2018-09-16,Male,White,Hispanic or Latino,NA,NA,typical,Spanish,NA,NA,walker,941
+43171,S#13,2019-11-27,EXCERPTS,13,2018-12-03,Female,White,Not Hispanic or Latino,NA,NA,typical,English,NA,NA,crawler,941
+43172,S#14,2019-12-17,EXCERPTS,14,2018-12-19,Male,White,Not Hispanic or Latino,NA,NA,typical,English,NA,NA,crawler,941
+43173,S#15,2020-XX-XX,PRIVATE,15,NA,Male,White,Not Hispanic or Latino,NA,NA,typical,English,NA,NA,crawler,941
+56301,S#16,2020-03-03,EXCERPTS,16,2019-02-23,Male,More than one,Not Hispanic or Latino,NA,NA,typical,English,NA,NA,crawler,941
+56302,S#17,2020-03-11,EXCERPTS,17,2019-01-29,Male,White,Not Hispanic or Latino,NA,NA,typical,English,NA,NA,walker,941
+56303,S#18,2021-10-13,EXCERPTS,18,2020-08-28,Female,More than one,Hispanic or Latino,NA,NA,typical,English,NA,NA,crawler,941
+56304,S#19,2021-10-13,EXCERPTS,19,2020-08-11,Female,More than one,Hispanic or Latino,NA,NA,typical,English,NA,NA,walker,941
+57527,S#20,2022-02-17,SHARED,20,2021-01-26,Female,White,Hispanic or Latino,NA,NA,typical,English,NA,NA,walker,941
+57528,S#21,2022-02-01,EXCERPTS,21,2021-01-04,Female,More than one,Not Hispanic or Latino,NA,NA,typical,English,NA,NA,walker,941
+59741,S#22,2022-03-03,SHARED,22,2021-01-09,Female,More than one,Hispanic or Latino,NA,NA,typical,English,NA,NA,walker,941
+59742,S#23,2022-03-07,SHARED,23,2021-02-05,Female,Asian,Chose Not to Disclose,NA,NA,typical,English,NA,NA,walker,941
+59743,S#24,2022-05-26,SHARED,24,2021-04-13,Female,White,Not Hispanic or Latino,NA,NA,typical,English,NA,NA,walker,941
+59744,S#25,2022-05-30,SHARED,25,2021-04-30,Male,White,Not Hispanic or Latino,NA,NA,typical,English,NA,NA,walker,941
+59855,S#26,2022-06-08,EXCERPTS,26,2021-05-02,Male,White,Not Hispanic or Latino,NA,NA,typical,English,NA,NA,walker,941
+59859,S#27,2022-06-08,SHARED,27,2021-05-05,Female,White,Not Hispanic or Latino,NA,NA,typical,English,NA,NA,walker,941
+59900,S#28,2022-06-13,EXCERPTS,28,0021-04-21,Female,White,Not Hispanic or Latino,NA,NA,typical,english,NA,NA,walker,941
+59960,S#29,2022-06-17,SHARED,29,2021-04-18,Male,White,Not Hispanic or Latino,NA,NA,typical,English,NA,NA,walker,941
+59961,S#30,2022-06-22,SHARED,30,2021-06-18,Male,White,Not Hispanic or Latino,NA,NA,typical,English,NA,NA,walker,941
+61016,S#32,2022-08-05,EXCERPTS,32,20222-08-05,Male,More than one,Not Hispanic or Latino,NA,NA,typical,English,NA,NA,crawker,941
+61018,S#31,2022-06-20,EXCERPTS,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,941

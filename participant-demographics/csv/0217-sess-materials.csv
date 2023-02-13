@@ -1,0 +1,14 @@
+session_id,session_name,session_date,session_release,participant_ID,participant_birthdate,participant_gender,participant_race,participant_ethnicity,participant_disability,participant_language,task1_name,task1_description,task2_name,task2_description,context_setting,context_language,context_country,context_state,vol_id
+11075,NA,2013-03-28,EXCERPTS,1,1993-04-06,Female,Asian,Not Hispanic or Latino,typical,English,HK,Hands-knees crawling,HF,Hands-feet crawling,Lab,English,US,NY,217
+11076,NA,2013-03-28,EXCERPTS,2,1991-09-21,Female,White,Not Hispanic or Latino,typical,English,HK,Hands-knees crawling,HF,Hands-feet crawling,Lab,English,US,NY,217
+11077,NA,2013-03-28,EXCERPTS,3,1986-08-17,Male,White,Not Hispanic or Latino,typical,English,HK,Hands-knees crawling,HF,Hands-feet crawling,Lab,English,US,NY,217
+11078,NA,2013-03-28,EXCERPTS,4,1992-09-10,Female,Asian,Not Hispanic or Latino,typical,English,HK,Hands-knees crawling,HF,Hands-feet crawling,Lab,English,US,NY,217
+11079,NA,2013-03-28,EXCERPTS,5,1992-02-03,Female,White,Not Hispanic or Latino,typical,English,HK,Hands-knees crawling,HF,Hands-feet crawling,Lab,English,US,NY,217
+11080,NA,2013-03-28,EXCERPTS,6,1988-11-19,Female,Asian,Not Hispanic or Latino,typical,English,HK,Hands-knees crawling,HF,Hands-feet crawling,Lab,English,US,NY,217
+11081,NA,2013-03-28,EXCERPTS,7,1984-05-14,Female,White,Not Hispanic or Latino,typical,English,HK,Hands-knees crawling,HF,Hands-feet crawling,Lab,English,US,NY,217
+11082,NA,2013-03-28,EXCERPTS,8,1991-04-03,Female,Asian,Not Hispanic or Latino,typical,English,HK,Hands-knees crawling,HF,Hands-feet crawling,Lab,English,US,NY,217
+11083,NA,2013-XX-XX,PRIVATE,9,NA,Male,White,Not Hispanic or Latino,typical,English,HK,Hands-knees crawling,HF,Hands-feet crawling,Lab,English,US,NY,217
+11084,NA,2013-05-13,EXCERPTS,10,1993-03-11,Female,White,Not Hispanic or Latino,typical,English,HK,Hands-knees crawling,HF,Hands-feet crawling,Lab,English,US,NY,217
+11085,NA,2013-05-13,EXCERPTS,11,1991-03-07,Male,Unknown or not reported,Hispanic or Latino,typical,English,HK,Hands-knees crawling,HF,Hands-feet crawling,Lab,English,US,NY,217
+11086,NA,2013-05-31,EXCERPTS,12,1987-06-25,Male,Black or African American,Not Hispanic or Latino,typical,English,HK,Hands-knees crawling,HF,Hands-feet crawling,Lab,English,US,NY,217
+11087,NA,2013-05-31,EXCERPTS,13,1993-01-06,Male,Asian,Not Hispanic or Latino,typical,English,HK,Hands-knees crawling,HF,Hands-feet crawling,Lab,English,US,NY,217

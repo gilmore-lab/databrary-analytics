@@ -1,0 +1,47 @@
+session_id,session_name,session_date,session_release,participant_ID,participant_birthdate,participant_gender,participant_race,participant_ethnicity,participant_language,group_name,context_setting,context_language,context_country,context_state,vol_id
+16634,01,NA,EXCERPTS,01,2014-05-19,Female,White,Not Hispanic or Latino,English,12 months,Home,English,US,NY,335
+16638,02,NA,EXCERPTS,02,2014-05-29,Male,White,Not Hispanic or Latino,English,12 months,Home,English,US,NY,335
+16639,03,NA,EXCERPTS,03,2014-06-22,Male,White,Not Hispanic or Latino,English,12 months,Home,English,US,NY,335
+16640,04,NA,EXCERPTS,04,2014-06-26,Male,White,Not Hispanic or Latino,English,12 months,Home,English,US,NY,335
+16641,05,NA,EXCERPTS,05,2014-06-22,Male,Black or African American,Not Hispanic or Latino,English,12 months,Home,English,US,NY,335
+16642,06,NA,EXCERPTS,06,2014-07-03,Female,White,Not Hispanic or Latino,English,12 months,Home,English,US,NY,335
+16643,07,NA,EXCERPTS,07,2014-06-30,Male,White,Not Hispanic or Latino,English,12 months,Home,English,US,NY,335
+16644,08,NA,EXCERPTS,08,2014-07-02,Female,More than one,Not Hispanic or Latino,English,12 months,Home,English,US,NY,335
+16645,09,NA,EXCERPTS,09,2014-07-09,Male,White,Not Hispanic or Latino,English,12 months,Home,English,US,NY,335
+16646,10,NA,SHARED,10,2014-07-11,Female,White,Not Hispanic or Latino,English,12 months,Home,English,US,NY,335
+16647,11,NA,EXCERPTS,11,2014-07-22,Male,White,Not Hispanic or Latino,English,12 months,Home,English,US,NY,335
+16648,12,NA,EXCERPTS,12,2014-07-31,Male,White,Not Hispanic or Latino,English,12 months,Home,English,US,NY,335
+16650,13,NA,EXCERPTS,13,2014-08-03,Male,White,Not Hispanic or Latino,English,12 months,Home,English,US,NY,335
+16651,14,NA,EXCERPTS,14,2014-08-09,Female,White,Not Hispanic or Latino,English,12 months,Home,English,US,NY,335
+16652,15,NA,EXCERPTS,15,2014-08-14,Male,White,Not Hispanic or Latino,English,12 months,Home,English,US,NY,335
+16653,16,NA,EXCERPTS,16,2014-08-28,Male,White,Not Hispanic or Latino,English,12 months,Home,English,US,NY,335
+16654,17,NA,EXCERPTS,17,2014-09-09,Female,White,Not Hispanic or Latino,English,12 months,Home,English,US,NY,335
+16655,18,NA,EXCERPTS,18,2014-09-04,Male,White,Not Hispanic or Latino,English,12 months,Home,English,US,NY,335
+16656,19,NA,SHARED,19,2014-09-13,Female,White,Not Hispanic or Latino,English,12 months,Home,English,US,NY,335
+16659,20,NA,EXCERPTS,20,2014-09-22,Female,White,Not Hispanic or Latino,English,12 months,Home,English,US,NY,335
+16661,21,NA,EXCERPTS,21,2014-10-02,Male,White,Not Hispanic or Latino,English,12 months,Home,English,US,NY,335
+16666,22,NA,EXCERPTS,22,2014-10-07,Female,White,Not Hispanic or Latino,English,12 months,Home,English,US,NY,335
+16667,23,NA,EXCERPTS,23,2014-10-04,Male,White,Not Hispanic or Latino,English,12 months,Home,English,US,NY,335
+16716,25,NA,EXCERPTS,25,2014-10-22,Male,White,Not Hispanic or Latino,English,12 months,Home,English,US,NY,335
+16717,26,NA,EXCERPTS,26,2014-10-30,Female,White,Not Hispanic or Latino,English,12 months,Home,English,US,NY,335
+16718,27,NA,EXCERPTS,27,2014-11-03,Male,White,Not Hispanic or Latino,English,12 months,Home,English,US,NY,335
+16719,28,NA,EXCERPTS,28,2014-11-02,Female,White,Not Hispanic or Latino,English,12 months,Home,English,US,NY,335
+16720,29,NA,EXCERPTS,29,2014-11-07,Female,White,Not Hispanic or Latino,English,12 months,Home,English,US,NY,335
+16721,30,NA,EXCERPTS,30,2014-11-13,Male,White,Not Hispanic or Latino,English,12 months,Home,English,US,NY,335
+16722,31,NA,EXCERPTS,31,2014-11-20,Female,White,Not Hispanic or Latino,English,12 months,Home,English,US,NY,335
+16723,32,NA,EXCERPTS,32,2014-11-20,Female,White,Not Hispanic or Latino,English,12 months,Home,English,US,NY,335
+16724,33,NA,EXCERPTS,33,2014-11-24,Male,White,Not Hispanic or Latino,English,12 months,Home,English,US,NY,335
+16725,34,NA,EXCERPTS,34,2014-11-23,Male,More than one,Not Hispanic or Latino,English,12 months,Home,English,US,NY,335
+16726,35,NA,EXCERPTS,35,2014-12-15,Female,White,Not Hispanic or Latino,English,12 months,Home,English,US,NY,335
+16727,36,NA,EXCERPTS,36,2014-12-07,Female,White,Not Hispanic or Latino,English,12 months,Home,English,US,NY,335
+16728,37,NA,EXCERPTS,37,2014-12-08,Male,White,Not Hispanic or Latino,English,12 months,Home,English,US,NY,335
+16736,38,NA,EXCERPTS,38,2014-12-06,Female,White,Not Hispanic or Latino,English,12 months,Home,English,US,NY,335
+16737,39,NA,EXCERPTS,39,2014-12-16,Female,White,Not Hispanic or Latino,English,12 months,Home,English,US,NY,335
+16738,40,NA,EXCERPTS,40,2014-12-18,Male,White,Not Hispanic or Latino,English,12 months,Home,English,US,NY,335
+16739,41,NA,EXCERPTS,41,2014-12-26,Male,White,Not Hispanic or Latino,English,12 months,Home,English,US,NY,335
+16740,42,NA,EXCERPTS,42,2014-12-26,Female,White,Not Hispanic or Latino,English,12 months,Home,English,US,NY,335
+16741,43,NA,SHARED,43,2015-01-06,Female,White,Not Hispanic or Latino,English,12 months,Home,English,US,NY,335
+16742,44,NA,EXCERPTS,44,2015-01-31,Female,White,Not Hispanic or Latino,English,12 months,Home,English,US,NY,335
+16743,45,NA,EXCERPTS,45,2015-01-29,Male,White,Hispanic or Latino,English,12 months,Home,English,US,NY,335
+16744,46,NA,SHARED,46,2015-01-29,Male,White,Not Hispanic or Latino,English,12 months,Home,English,US,NY,335
+52971,24,NA,EXCERPTS,24,2014-10-17,Male,White,Not Hispanic or Latino,English,12 months,Home,English,US,NY,335

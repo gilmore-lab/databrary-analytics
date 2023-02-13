@@ -1,0 +1,238 @@
+session_id,session_name,session_date,session_release,participant1_ID,participant1_birthdate,participant1_gender,participant1_race,participant1_ethnicity,participant1_disability,participant1_language,participant2_ID,participant2_birthdate,participant2_gender,participant2_race,participant2_ethnicity,participant2_disability,participant2_language,pilot_pilot,exclusion_reason,context_setting,context_language,context_country,vol_id
+6122,NA,2013-XX-XX,PRIVATE,1017,NA,Male,More than one,Not Hispanic or Latino,typical,English,NA,NA,NA,NA,NA,typical,English,NA,NA,Home,English,US,11
+6123,NA,2013-12-20,EXCERPTS,1015,2013-06-28,Female,White,Not Hispanic or Latino,typical,English,NA,NA,NA,NA,NA,typical,English,NA,NA,Home,English,US,11
+6124,NA,2013-XX-XX,PRIVATE,1014,NA,Male,White,Not Hispanic or Latino,typical,English,NA,NA,NA,NA,NA,typical,English,NA,NA,Home,English,US,11
+6125,NA,2013-XX-XX,PRIVATE,1013,NA,Male,White,Not Hispanic or Latino,typical,English,NA,NA,NA,NA,NA,typical,English,NA,NA,Home,English,US,11
+6126,NA,2013-12-17,SHARED,1012,2012-08-05,Male,White,Not Hispanic or Latino,typical,English,NA,NA,NA,NA,NA,typical,English,NA,NA,Home,English,US,11
+6127,NA,2013-12-07,EXCERPTS,1011,2012-03-19,Male,White,Not Hispanic or Latino,typical,English,NA,NA,NA,NA,NA,typical,English,NA,NA,Home,English,US,11
+6128,NA,2013-XX-XX,PRIVATE,1010,NA,Female,White,Not Hispanic or Latino,typical,English,NA,NA,NA,NA,NA,typical,English,NA,NA,Home,English,US,11
+6129,NA,2013-05-14,EXCERPTS,1009,2012-09-11,Male,White,Not Hispanic or Latino,typical,English,NA,NA,NA,NA,NA,typical,English,NA,NA,Home,English,US,11
+6130,NA,2013-05-10,EXCERPTS,1008,2012-09-11,Female,White,Not Hispanic or Latino,typical,"English, Swedish",NA,NA,NA,NA,NA,typical,English,NA,NA,Home,English,US,11
+6131,NA,2014-05-07,EXCERPTS,1007,2012-09-03,Female,White,Not Hispanic or Latino,typical,English,NA,NA,NA,NA,NA,typical,English,NA,NA,Home,English,US,11
+6132,NA,2013-05-03,SHARED,1006,2012-08-27,Female,White,Not Hispanic or Latino,typical,English,NA,NA,NA,NA,NA,typical,English,NA,NA,Home,English,US,11
+6133,NA,2013-05-03,EXCERPTS,1005,2012-09-05,Male,White,Not Hispanic or Latino,typical,English,NA,NA,NA,NA,NA,typical,English,NA,NA,Home,English,US,11
+6134,NA,2013-XX-XX,PRIVATE,1004,NA,Male,White,Not Hispanic or Latino,typical,English,NA,NA,NA,NA,NA,typical,English,NA,NA,Home,English,US,11
+6135,NA,2013-XX-XX,PRIVATE,1003,NA,Male,White,Not Hispanic or Latino,typical,English,NA,NA,NA,NA,NA,typical,English,NA,NA,Home,English,US,11
+6136,NA,2013-XX-XX,PRIVATE,1002,NA,Female,Unknown or not reported,Unknown or not reported,typical,English,NA,NA,NA,NA,NA,typical,English,NA,NA,Home,English,US,11
+6137,NA,2013-XX-XX,PRIVATE,1001,NA,Male,White,Not Hispanic or Latino,typical,English,NA,NA,NA,NA,NA,typical,English,NA,NA,Home,English,US,11
+6138,NA,2014-02-04,SHARED,102,2012-01-25,Female,Asian,Not Hispanic or Latino,typical,Tajik,NA,NA,NA,NA,NA,typical,English,NA,Did not meet inclusion criteria,Home,Tajik,Tajikistan,11
+6139,NA,2014-01-30,EXCERPTS,101,2013-01-24,Female,Asian,Not Hispanic or Latino,typical,Tajik,NA,NA,NA,NA,NA,typical,English,NA,Did not meet inclusion criteria,Home,Tajik,Tajikistan,11
+6140,NA,2014-01-30,SHARED,100,2013-05-30,Female,Asian,Not Hispanic or Latino,typical,Tajik,NA,NA,NA,NA,NA,typical,English,NA,Did not meet inclusion criteria,Home,Tajik,Tajikistan,11
+6141,NA,2014-01-29,EXCERPTS,099,2012-05-24,Male,Asian,Not Hispanic or Latino,typical,Tajik,NA,NA,NA,NA,NA,typical,English,NA,Did not meet inclusion criteria,Home,Tajik,Tajikistan,11
+6142,NA,2013-12-12,EXCERPTS,098,2013-04-06,Male,Asian,Not Hispanic or Latino,typical,Tajik,NA,NA,NA,NA,NA,typical,English,NA,NA,Home,Tajik,Tajikistan,11
+6143,NA,2013-12-12,EXCERPTS,097,2013-04-19,Female,Asian,Not Hispanic or Latino,typical,Tajik,NA,NA,NA,NA,NA,typical,English,NA,NA,Home,Tajik,Tajikistan,11
+6144,NA,2013-12-11,EXCERPTS,096,2012-08-15,Male,Asian,Not Hispanic or Latino,typical,Tajik,NA,NA,NA,NA,NA,typical,English,NA,NA,Home,Tajik,Tajikistan,11
+6145,NA,2013-12-10,EXCERPTS,095,2013-04-06,Male,Asian,Not Hispanic or Latino,typical,Tajik,NA,NA,NA,NA,NA,typical,English,NA,NA,Home,Tajik,Tajikistan,11
+6146,NA,2013-12-10,EXCERPTS,094,2013-08-07,Male,Asian,Not Hispanic or Latino,typical,Tajik,NA,NA,NA,NA,NA,typical,English,NA,NA,Home,Tajik,Tajikistan,11
+6147,NA,2013-12-06,EXCERPTS,093,2012-04-06,Male,Asian,Not Hispanic or Latino,typical,Tajik,NA,NA,NA,NA,NA,typical,English,NA,NA,Home,Tajik,Tajikistan,11
+6148,NA,2013-12-06,EXCERPTS,092,2013-04-05,Female,Asian,Not Hispanic or Latino,typical,Tajik,NA,NA,NA,NA,NA,typical,English,NA,NA,Home,Tajik,Tajikistan,11
+6149,NA,2013-12-05,EXCERPTS,091,2011-12-04,Male,Asian,Not Hispanic or Latino,typical,Tajik,NA,NA,NA,NA,NA,typical,English,NA,NA,Home,Tajik,Tajikistan,11
+6150,NA,2013-12-05,EXCERPTS,090,2012-03-31,Male,Asian,Not Hispanic or Latino,typical,Tajik,NA,NA,NA,NA,NA,typical,English,NA,NA,Home,Tajik,Tajikistan,11
+6151,NA,2013-12-04,EXCERPTS,089,2012-11-30,Female,Asian,Not Hispanic or Latino,typical,Tajik,NA,NA,NA,NA,NA,typical,English,NA,NA,Home,Tajik,Tajikistan,11
+6152,NA,2013-12-04,SHARED,088,2012-04-28,Male,Asian,Not Hispanic or Latino,typical,Tajik,NA,NA,NA,NA,NA,typical,English,NA,Did not meet inclusion criteria,Home,Tajik,Tajikistan,11
+6153,NA,2013-12-03,SHARED,087,2011-11-26,Female,Asian,Not Hispanic or Latino,typical,Tajik,NA,NA,NA,NA,NA,typical,English,NA,NA,Home,Tajik,Tajikistan,11
+6154,NA,2013-12-03,EXCERPTS,086,2012-03-29,Male,Asian,Not Hispanic or Latino,typical,Tajik,NA,NA,NA,NA,NA,typical,English,NA,NA,Home,Tajik,Tajikistan,11
+6155,NA,2013-11-29,EXCERPTS,085,2012-08-01,Female,Asian,Not Hispanic or Latino,typical,Tajik,NA,NA,NA,NA,NA,typical,English,NA,NA,Home,Tajik,Tajikistan,11
+6156,NA,2013-11-28,EXCERPTS,084,2012-04-01,Male,Asian,Not Hispanic or Latino,typical,Tajik,NA,NA,NA,NA,NA,typical,English,NA,NA,Home,Tajik,Tajikistan,11
+6157,NA,2013-11-27,EXCERPTS,083,2012-07-21,Female,Asian,Not Hispanic or Latino,typical,Tajik,NA,NA,NA,NA,NA,typical,English,NA,NA,Home,Tajik,Tajikistan,11
+6158,NA,2013-11-27,EXCERPTS,082,2011-11-21,Male,Asian,Not Hispanic or Latino,typical,Tajik,NA,NA,NA,NA,NA,typical,English,NA,NA,Home,Tajik,Tajikistan,11
+6159,NA,2013-11-26,EXCERPTS,081,2012-07-26,Male,Asian,Not Hispanic or Latino,typical,Tajik,NA,NA,NA,NA,NA,typical,English,NA,NA,Home,Tajik,Tajikistan,11
+6160,NA,2013-11-26,EXCERPTS,080,2011-11-26,Female,Asian,Not Hispanic or Latino,typical,Tajik,NA,NA,NA,NA,NA,typical,English,NA,NA,Home,Tajik,Tajikistan,11
+6161,NA,2013-XX-XX,NA,079,NA,Female,Asian,Not Hispanic or Latino,typical,Tajik,NA,NA,NA,NA,NA,typical,English,NA,NA,Home,Tajik,Tajikistan,11
+6162,NA,2013-11-22,EXCERPTS,078,2012-07-15,Female,Asian,Not Hispanic or Latino,typical,Tajik,NA,NA,NA,NA,NA,typical,English,NA,NA,Home,Tajik,Tajikistan,11
+6163,NA,2013-11-20,EXCERPTS,077,2012-11-23,Female,Asian,Not Hispanic or Latino,typical,Tajik,NA,NA,NA,NA,NA,typical,English,NA,NA,Home,Tajik,Tajikistan,11
+6164,NA,2013-11-20,EXCERPTS,076,2012-03-27,Female,Asian,Not Hispanic or Latino,typical,Tajik,NA,NA,NA,NA,NA,typical,English,NA,NA,Home,Tajik,Tajikistan,11
+6165,NA,2013-11-15,EXCERPTS,075,2011-11-16,Male,Asian,Not Hispanic or Latino,typical,Tajik,NA,NA,NA,NA,NA,typical,English,NA,NA,Home,Tajik,Tajikistan,11
+6166,NA,2013-11-14,EXCERPTS,074,2012-03-19,Female,Asian,Not Hispanic or Latino,typical,Tajik,NA,NA,NA,NA,NA,typical,English,NA,NA,Home,Tajik,Tajikistan,11
+6167,NA,2013-11-13,EXCERPTS,073,2012-11-12,Male,Asian,Not Hispanic or Latino,typical,Tajik,NA,NA,NA,NA,NA,typical,English,NA,NA,Home,Tajik,Tajikistan,11
+6168,NA,2013-11-13,EXCERPTS,072,2012-03-15,Female,Asian,Not Hispanic or Latino,typical,Tajik,NA,NA,NA,NA,NA,typical,English,NA,NA,Home,Tajik,Tajikistan,11
+6169,NA,2013-11-12,EXCERPTS,071,2011-11-11,Female,Asian,Not Hispanic or Latino,typical,Tajik,NA,NA,NA,NA,NA,typical,English,NA,NA,Home,Tajik,Tajikistan,11
+6170,NA,2013-11-05,EXCERPTS,070,2012-07-12,Male,Asian,Not Hispanic or Latino,typical,Tajik,NA,NA,NA,NA,NA,typical,English,NA,NA,Home,Tajik,Tajikistan,11
+6171,NA,2013-11-04,EXCERPTS,069,2013-04-04,Male,Asian,Not Hispanic or Latino,typical,Tajik,NA,NA,NA,NA,NA,typical,English,NA,Did not meet inclusion criteria,Home,Tajik,Tajikistan,11
+6172,NA,2013-11-04,EXCERPTS,068,2012-11-03,Female,Asian,Not Hispanic or Latino,typical,Tajik,NA,NA,NA,NA,NA,typical,English,NA,NA,Home,Tajik,Tajikistan,11
+6173,NA,2013-09-12,EXCERPTS,067,2013-01-07,Female,Asian,Not Hispanic or Latino,typical,Tajik,NA,NA,NA,NA,NA,typical,English,NA,NA,Home,Tajik,Tajikistan,11
+6174,NA,2013-09-06,EXCERPTS,066,2013-05-10,Female,Asian,Not Hispanic or Latino,typical,Tajik,NA,NA,NA,NA,NA,typical,English,NA,NA,Home,Tajik,Tajikistan,11
+6175,NA,2013-09-05,EXCERPTS,065,2012-12-29,Female,Asian,Not Hispanic or Latino,typical,Tajik,NA,NA,NA,NA,NA,typical,English,NA,NA,Home,Tajik,Tajikistan,11
+6176,NA,2013-09-04,EXCERPTS,064,2013-05-04,Female,Asian,Not Hispanic or Latino,typical,Tajik,NA,NA,NA,NA,NA,typical,English,NA,NA,Home,Tajik,Tajikistan,11
+6177,NA,2013-09-03,EXCERPTS,063,2013-05-05,Male,Asian,Not Hispanic or Latino,typical,Tajik,NA,NA,NA,NA,NA,typical,English,NA,NA,Home,Tajik,Tajikistan,11
+6178,NA,2013-08-30,EXCERPTS,062,2012-12-25,Male,Asian,Not Hispanic or Latino,typical,Tajik,NA,NA,NA,NA,NA,typical,English,NA,NA,Home,Tajik,Tajikistan,11
+6179,NA,2013-08-28,EXCERPTS,061,2013-04-27,Male,Asian,Not Hispanic or Latino,typical,Tajik,NA,NA,NA,NA,NA,typical,English,NA,NA,Home,Tajik,Tajikistan,11
+6180,NA,2013-08-28,EXCERPTS,060,2012-05-03,Female,Asian,Not Hispanic or Latino,typical,Tajik,NA,NA,NA,NA,NA,typical,English,NA,NA,Home,Tajik,Tajikistan,11
+6181,NA,2013-08-28,EXCERPTS,059,2012-08-28,Male,Asian,Not Hispanic or Latino,typical,Tajik,NA,NA,NA,NA,NA,typical,English,NA,NA,Home,Tajik,Tajikistan,11
+6182,NA,2013-08-27,EXCERPTS,058,2013-01-03,Male,Asian,Not Hispanic or Latino,typical,Tajik,NA,NA,NA,NA,NA,typical,English,NA,NA,Home,Tajik,Tajikistan,11
+6183,NA,2013-08-27,EXCERPTS,057,2013-01-01,Male,Asian,Not Hispanic or Latino,typical,Tajik,NA,NA,NA,NA,NA,typical,English,NA,NA,Home,Tajik,Tajikistan,11
+6184,NA,2013-08-23,EXCERPTS,056,2012-08-22,Female,Asian,Not Hispanic or Latino,typical,Tajik,NA,NA,NA,NA,NA,typical,English,NA,NA,Home,Tajik,Tajikistan,11
+6185,NA,2013-08-22,EXCERPTS,055,2012-12-21,Female,Asian,Not Hispanic or Latino,typical,Tajik,NA,NA,NA,NA,NA,typical,English,NA,NA,Home,Tajik,Tajikistan,11
+6186,NA,2013-08-21,EXCERPTS,054,2012-04-18,Female,Asian,Not Hispanic or Latino,typical,Tajik,NA,NA,NA,NA,NA,typical,English,NA,NA,Home,Tajik,Tajikistan,11
+6187,NA,2013-08-20,EXCERPTS,053,2012-04-13,Male,Asian,Not Hispanic or Latino,typical,Tajik,NA,NA,NA,NA,NA,typical,English,NA,NA,Home,Tajik,Tajikistan,11
+6188,NA,2013-08-19,EXCERPTS,052,2012-08-26,Male,Asian,Not Hispanic or Latino,typical,Tajik,NA,NA,NA,NA,NA,typical,English,NA,Did not meet inclusion criteria,Home,Tajik,Tajikistan,11
+6189,NA,2013-08-19,EXCERPTS,051,2012-12-12,Female,Asian,Not Hispanic or Latino,typical,Tajik,NA,NA,NA,NA,NA,typical,English,NA,Did not meet inclusion criteria,Home,Tajik,Tajikistan,11
+6190,NA,2013-08-16,EXCERPTS,050,2012-08-13,Male,Asian,Not Hispanic or Latino,typical,Tajik,NA,NA,NA,NA,NA,typical,English,NA,Did not meet inclusion criteria,Home,Tajik,Tajikistan,11
+6191,NA,2013-08-16,EXCERPTS,049,2013-01-10,Male,Asian,Not Hispanic or Latino,typical,Tajik,NA,NA,NA,NA,NA,typical,English,NA,Did not meet inclusion criteria,Home,Tajik,Tajikistan,11
+6192,NA,2013-07-24,EXCERPTS,048,2012-03-25,Female,Asian,Not Hispanic or Latino,typical,Tajik,NA,NA,NA,NA,NA,typical,English,NA,Did not meet inclusion criteria,Home,Tajik,Tajikistan,11
+6193,NA,2013-07-16,EXCERPTS,047,2012-11-07,Male,Asian,Not Hispanic or Latino,typical,Tajik,NA,NA,NA,NA,NA,typical,English,NA,Did not meet inclusion criteria,Home,Tajik,Tajikistan,11
+6194,NA,2013-07-16,EXCERPTS,046,2013-07-01,Male,Asian,Not Hispanic or Latino,typical,Tajik,NA,NA,NA,NA,NA,typical,English,NA,NA,Home,Tajik,Tajikistan,11
+6195,NA,2013-07-15,EXCERPTS,045,2013-03-21,Male,Asian,Not Hispanic or Latino,typical,Tajik,NA,NA,NA,NA,NA,typical,English,NA,NA,Home,Tajik,Tajikistan,11
+6196,NA,2013-07-15,EXCERPTS,044,2013-03-23,Female,Asian,Not Hispanic or Latino,typical,Tajik,NA,NA,NA,NA,NA,typical,English,NA,NA,Home,Tajik,Tajikistan,11
+6197,NA,2013-07-11,EXCERPTS,043,2013-06-02,Female,Asian,Not Hispanic or Latino,typical,Tajik,NA,NA,NA,NA,NA,typical,English,NA,NA,Home,Tajik,Tajikistan,11
+6198,NA,2013-07-11,EXCERPTS,042,2012-11-09,Female,Asian,Not Hispanic or Latino,typical,Tajik,NA,NA,NA,NA,NA,typical,English,NA,Did not meet inclusion criteria,Home,Tajik,Tajikistan,11
+6199,NA,2013-07-10,EXCERPTS,041,2011-11-09,Female,Asian,Not Hispanic or Latino,typical,Tajik,NA,NA,NA,NA,NA,typical,English,NA,NA,Home,Tajik,Tajikistan,11
+6200,NA,2013-07-10,EXCERPTS,040,2012-11-06,Male,Asian,Not Hispanic or Latino,typical,Tajik,NA,NA,NA,NA,NA,typical,English,NA,NA,Home,Tajik,Tajikistan,11
+6201,NA,2013-07-09,EXCERPTS,039,2011-07-14,Male,Asian,Not Hispanic or Latino,typical,Tajik,NA,NA,NA,NA,NA,typical,English,NA,NA,Home,Tajik,Tajikistan,11
+6202,NA,2013-07-09,EXCERPTS,038,2012-07-05,Male,Asian,Not Hispanic or Latino,typical,Tajik,NA,NA,NA,NA,NA,typical,English,NA,NA,Home,Tajik,Tajikistan,11
+6203,NA,2013-07-08,EXCERPTS,037,2013-03-09,Female,Asian,Not Hispanic or Latino,typical,Tajik,NA,NA,NA,NA,NA,typical,English,NA,NA,Home,Tajik,Tajikistan,11
+6204,NA,2013-07-08,EXCERPTS,036,2013-05-03,Male,Asian,Not Hispanic or Latino,typical,Tajik,NA,NA,NA,NA,NA,typical,English,NA,NA,Home,Tajik,Tajikistan,11
+6205,NA,2013-07-05,EXCERPTS,035,2011-07-05,Female,Asian,Not Hispanic or Latino,typical,Tajik,034,2011-07-05,Female,Asian,Not Hispanic or Latino,typical,Tajik,NA,Procedural/experimenter error,Home,Tajik,Tajikistan,11
+6207,NA,2013-07-04,EXCERPTS,033,2012-11-05,Male,Asian,Not Hispanic or Latino,typical,Tajik,NA,NA,NA,NA,NA,typical,English,NA,NA,Home,Tajik,Tajikistan,11
+6208,NA,2013-07-04,EXCERPTS,032,2013-05-11,Male,Asian,Not Hispanic or Latino,typical,Tajik,NA,NA,NA,NA,NA,typical,English,NA,NA,Home,Tajik,Tajikistan,11
+6209,NA,2013-07-03,EXCERPTS,028,2012-03-05,Male,Asian,Not Hispanic or Latino,typical,Tajik,NA,NA,NA,NA,NA,typical,English,NA,Did not meet inclusion criteria,Home,Tajik,Tajikistan,11
+6210,NA,2013-07-03,EXCERPTS,030,2012-08-19,Female,Asian,Not Hispanic or Latino,typical,Tajik,029,2012-08-19,Female,Asian,Not Hispanic or Latino,typical,Tajik,NA,Did not meet inclusion criteria,Home,Tajik,Tajikistan,11
+6212,NA,2013-07-02,EXCERPTS,027,2013-05-21,Female,Asian,Not Hispanic or Latino,typical,Tajik,NA,NA,NA,NA,NA,typical,English,NA,NA,Home,Tajik,Tajikistan,11
+6213,NA,2013-07-02,EXCERPTS,026,2013-03-03,Male,Asian,Not Hispanic or Latino,typical,Tajik,NA,NA,NA,NA,NA,typical,English,NA,NA,Home,Tajik,Tajikistan,11
+6214,NA,2013-06-28,EXCERPTS,025,2011-11-30,Female,Asian,Not Hispanic or Latino,typical,Tajik,NA,NA,NA,NA,NA,typical,English,NA,Did not meet inclusion criteria,Home,Tajik,Tajikistan,11
+6215,NA,2013-06-28,EXCERPTS,024,2011-11-29,Male,Asian,Not Hispanic or Latino,typical,Tajik,NA,NA,NA,NA,NA,typical,English,NA,Did not meet inclusion criteria,Home,Tajik,Tajikistan,11
+6216,NA,2013-06-26,EXCERPTS,023,2012-08-18,Male,Asian,Not Hispanic or Latino,typical,Tajik,NA,NA,NA,NA,NA,typical,English,NA,Did not meet inclusion criteria,Home,Tajik,Tajikistan,11
+6217,NA,2013-06-26,EXCERPTS,022,2013-05-10,Male,Asian,Not Hispanic or Latino,typical,Tajik,NA,NA,NA,NA,NA,typical,English,NA,NA,Home,Tajik,Tajikistan,11
+6218,NA,2013-06-20,EXCERPTS,021,2012-10-22,Male,Asian,Not Hispanic or Latino,typical,Tajik,NA,NA,NA,NA,NA,typical,English,NA,NA,Home,Tajik,Tajikistan,11
+6219,NA,2013-06-20,EXCERPTS,020,2013-05-17,Female,Asian,Not Hispanic or Latino,typical,Tajik,NA,NA,NA,NA,NA,typical,English,NA,NA,Home,Tajik,Tajikistan,11
+6220,NA,2013-06-13,EXCERPTS,019,2011-10-20,Male,Asian,Not Hispanic or Latino,typical,Tajik,NA,NA,NA,NA,NA,typical,English,NA,NA,Home,Tajik,Tajikistan,11
+6221,NA,2013-06-13,EXCERPTS,018,2011-10-11,Male,Asian,Not Hispanic or Latino,typical,Tajik,NA,NA,NA,NA,NA,typical,English,NA,NA,Home,Tajik,Tajikistan,11
+6222,NA,2013-06-12,EXCERPTS,017,2012-04-03,Female,Asian,Not Hispanic or Latino,typical,Tajik,NA,NA,NA,NA,NA,typical,English,NA,Did not meet inclusion criteria,Home,Tajik,Tajikistan,11
+6223,NA,2013-06-12,EXCERPTS,016,2011-06-05,Male,Asian,Not Hispanic or Latino,typical,Tajik,NA,NA,NA,NA,NA,typical,English,NA,NA,Home,Tajik,Tajikistan,11
+6224,NA,2013-06-12,EXCERPTS,015,2011-06-08,Male,Asian,Not Hispanic or Latino,typical,Tajik,NA,NA,NA,NA,NA,typical,English,NA,Did not meet inclusion criteria,Home,Tajik,Tajikistan,11
+6225,NA,2013-06-11,SHARED,014,2012-09-14,Male,Asian,Not Hispanic or Latino,typical,Tajik,NA,NA,NA,NA,NA,typical,English,NA,Did not meet inclusion criteria,Home,Tajik,Tajikistan,11
+6226,NA,2013-06-11,EXCERPTS,013,2012-06-16,Male,Asian,Not Hispanic or Latino,typical,Tajik,NA,NA,NA,NA,NA,typical,English,NA,NA,Home,Tajik,Tajikistan,11
+6227,NA,2013-06-07,EXCERPTS,012,2012-06-07,Male,Asian,Not Hispanic or Latino,typical,Tajik,NA,NA,NA,NA,NA,typical,English,NA,Did not meet inclusion criteria,Home,Tajik,Tajikistan,11
+6228,NA,2013-06-07,EXCERPTS,011,2012-02-10,Female,Asian,Not Hispanic or Latino,typical,Tajik,NA,NA,NA,NA,NA,typical,English,NA,NA,Home,Tajik,Tajikistan,11
+6229,NA,2013-06-06,EXCERPTS,010,2013-04-17,Female,Asian,Not Hispanic or Latino,typical,Tajik,NA,NA,NA,NA,NA,typical,English,NA,NA,Home,Tajik,Tajikistan,11
+6230,NA,2013-06-06,EXCERPTS,009,2012-05-31,Female,Asian,Not Hispanic or Latino,typical,Tajik,NA,NA,NA,NA,NA,typical,English,NA,NA,Home,Tajik,Tajikistan,11
+6231,NA,2013-05-31,EXCERPTS,008,2013-03-10,Male,Asian,Not Hispanic or Latino,typical,Tajik,NA,NA,NA,NA,NA,typical,English,NA,Did not meet inclusion criteria,Home,Tajik,Tajikistan,11
+6232,NA,2013-05-31,EXCERPTS,007,2013-02-06,Female,Asian,Not Hispanic or Latino,typical,Tajik,NA,NA,NA,NA,NA,typical,English,NA,Did not meet inclusion criteria,Home,Tajik,Tajikistan,11
+6233,NA,2013-05-30,EXCERPTS,006,2012-01-26,Female,Asian,Not Hispanic or Latino,typical,Tajik,NA,NA,NA,NA,NA,typical,English,NA,Did not meet inclusion criteria,Home,Tajik,Tajikistan,11
+6234,NA,2013-05-30,EXCERPTS,005,2012-09-19,Male,Asian,Not Hispanic or Latino,typical,Tajik,NA,NA,NA,NA,NA,typical,English,NA,Did not meet inclusion criteria,Home,Tajik,Tajikistan,11
+6235,NA,2013-05-29,EXCERPTS,004,2012-09-09,Male,Asian,Not Hispanic or Latino,typical,Tajik,NA,NA,NA,NA,NA,typical,English,NA,Did not meet inclusion criteria,Home,Tajik,Tajikistan,11
+6236,NA,2013-05-19,SHARED,003,2012-03-26,Male,Asian,Not Hispanic or Latino,typical,Tajik,NA,NA,NA,NA,NA,typical,English,NA,Did not meet inclusion criteria,Home,Tajik,Tajikistan,11
+6237,NA,2013-05-27,EXCERPTS,002,2012-06-30,Female,Asian,Not Hispanic or Latino,typical,Tajik,NA,NA,NA,NA,NA,typical,English,NA,Did not meet inclusion criteria,Home,Tajik,Tajikistan,11
+6238,NA,2013-05-27,EXCERPTS,001,2012-01-09,Female,Asian,Not Hispanic or Latino,typical,Tajik,NA,NA,NA,NA,NA,typical,English,NA,Did not meet inclusion criteria,Home,Tajik,Tajikistan,11
+6255,NA,2013-12-20,EXCERPTS,1016,2013-02-23,Male,More than one,Not Hispanic or Latino,typical,English,NA,NA,NA,NA,NA,typical,English,NA,NA,Home,English,US,11
+7753,NA,2014-02-14,EXCERPTS,103,2012-10-20,Male,Asian,Not Hispanic or Latino,typical,Tajik,NA,NA,NA,NA,NA,typical,English,NA,NA,Home,Tajik,Tajikistan,11
+7754,NA,2014-02-18,EXCERPTS,104,2013-06-22,Male,Asian,Not Hispanic or Latino,typical,Tajik,NA,NA,NA,NA,NA,typical,English,NA,NA,Home,Tajik,Tajikistan,11
+7755,NA,2014-02-19,SHARED,105,2012-06-22,Male,Asian,Not Hispanic or Latino,typical,Tajik,NA,NA,NA,NA,NA,typical,English,NA,NA,Home,Tajik,Tajikistan,11
+7756,NA,2014-XX-XX,NA,106,NA,Female,Asian,Not Hispanic or Latino,typical,Tajik,NA,NA,NA,NA,NA,typical,English,NA,NA,Home,Tajik,Tajikistan,11
+7757,NA,2014-02-21,EXCERPTS,107,2012-10-17,Female,Asian,Not Hispanic or Latino,typical,Tajik,NA,NA,NA,NA,NA,typical,English,NA,NA,Home,Tajik,Tajikistan,11
+7758,NA,2014-02-26,EXCERPTS,108,2012-02-18,Female,Asian,Not Hispanic or Latino,typical,Tajik,NA,NA,NA,NA,NA,typical,English,NA,NA,Home,Tajik,Tajikistan,11
+7759,NA,2014-XX-XX,NA,109,NA,Male,Asian,Not Hispanic or Latino,typical,Tajik,NA,NA,NA,NA,NA,typical,English,NA,NA,Home,Tajik,Tajikistan,11
+7760,NA,2014-02-28,EXCERPTS,110,2012-11-06,Female,Asian,Not Hispanic or Latino,typical,Tajik,NA,NA,NA,NA,NA,typical,English,NA,NA,Home,Tajik,Tajikistan,11
+7761,NA,2014-03-04,EXCERPTS,111,2013-07-05,Female,Asian,Not Hispanic or Latino,typical,Tajik,NA,NA,NA,NA,NA,typical,English,NA,NA,Home,Tajik,Tajikistan,11
+7762,NA,2014-03-05,EXCERPTS,112,2012-11-08,Male,Asian,Not Hispanic or Latino,typical,Tajik,NA,NA,NA,NA,NA,typical,English,NA,NA,Home,Tajik,Tajikistan,11
+7765,NA,2014-03-06,EXCERPTS,113,2013-06-30,Female,Asian,Not Hispanic or Latino,typical,Tajik,NA,NA,NA,NA,NA,typical,English,NA,NA,Home,Tajik,Tajikistan,11
+7766,NA,2014-XX-XX,NA,114,NA,Male,Asian,Not Hispanic or Latino,typical,Tajik,NA,NA,NA,NA,NA,typical,English,NA,NA,Home,Tajik,Tajikistan,11
+7767,NA,2014-03-12,EXCERPTS,115,2012-07-14,Female,Asian,Not Hispanic or Latino,typical,Tajik,NA,NA,NA,NA,NA,typical,English,NA,NA,Home,Tajik,Tajikistan,11
+7768,NA,2014-03-13,EXCERPTS,116,2013-07-10,Female,Asian,Not Hispanic or Latino,typical,Tajik,NA,NA,NA,NA,NA,typical,English,NA,NA,Home,Tajik,Tajikistan,11
+7769,NA,2014-03-14,EXCERPTS,117,2012-07-11,Female,Asian,Not Hispanic or Latino,typical,Tajik,NA,NA,NA,NA,NA,typical,English,NA,NA,Home,Tajik,Tajikistan,11
+7770,NA,2014-04-03,EXCERPTS,118,2013-03-29,Female,Asian,Not Hispanic or Latino,typical,Tajik,NA,NA,NA,NA,NA,typical,English,NA,NA,Home,Tajik,Tajikistan,11
+7771,NA,2014-04-04,EXCERPTS,119,2013-09-01,Female,Asian,Not Hispanic or Latino,typical,Tajik,NA,NA,NA,NA,NA,typical,English,NA,NA,Home,Tajik,Tajikistan,11
+7772,NA,2014-04-07,EXCERPTS,120,2012-12-16,Male,Asian,Not Hispanic or Latino,typical,Tajik,NA,NA,NA,NA,NA,typical,English,NA,NA,Home,Tajik,Tajikistan,11
+7773,NA,2014-04-07,SHARED,121,2012-09-14,Female,Asian,Not Hispanic or Latino,typical,Tajik,NA,NA,NA,NA,NA,typical,English,NA,NA,Home,Tajik,Tajikistan,11
+7774,NA,2014-04-08,EXCERPTS,122,2013-09-03,Female,Asian,Not Hispanic or Latino,typical,Tajik,NA,NA,NA,NA,NA,typical,English,NA,NA,Home,Tajik,Tajikistan,11
+7775,NA,2014-04-09,EXCERPTS,123,2012-04-19,Female,Asian,Not Hispanic or Latino,typical,Tajik,NA,NA,NA,NA,NA,typical,English,NA,NA,Home,Tajik,Tajikistan,11
+7776,NA,2014-04-09,EXCERPTS,124,2012-12-12,Male,Asian,Not Hispanic or Latino,typical,Tajik,NA,NA,NA,NA,NA,typical,English,NA,NA,Home,Tajik,Tajikistan,11
+7777,NA,2014-04-11,EXCERPTS,125,2012-08-15,Male,Asian,Not Hispanic or Latino,typical,Tajik,NA,NA,NA,NA,NA,typical,English,NA,NA,Home,Tajik,Tajikistan,11
+7778,NA,2014-04-14,EXCERPTS,126,2013-08-07,Male,Asian,Not Hispanic or Latino,typical,Tajik,NA,NA,NA,NA,NA,typical,English,NA,NA,Home,Tajik,Tajikistan,11
+7779,NA,2014-04-15,EXCERPTS,127,2012-08-18,Male,Asian,Not Hispanic or Latino,typical,Tajik,NA,NA,NA,NA,NA,typical,English,NA,NA,Home,Tajik,Tajikistan,11
+7780,NA,2014-04-15,EXCERPTS,128,2012-04-22,Male,Asian,Not Hispanic or Latino,typical,Tajik,NA,NA,NA,NA,NA,typical,English,NA,NA,Home,Tajik,Tajikistan,11
+7781,NA,2014-04-16,EXCERPTS,129,2012-12-10,Male,Asian,Not Hispanic or Latino,typical,Tajik,NA,NA,NA,NA,NA,typical,English,NA,NA,Home,Tajik,Tajikistan,11
+7782,NA,2014-04-17,EXCERPTS,130,2012-12-25,Female,Asian,Not Hispanic or Latino,typical,Tajik,NA,NA,NA,NA,NA,typical,English,NA,NA,Home,Tajik,Tajikistan,11
+7783,NA,2014-04-17,EXCERPTS,131,2013-04-12,Male,Asian,Not Hispanic or Latino,typical,Tajik,NA,NA,NA,NA,NA,typical,English,NA,NA,Home,Tajik,Tajikistan,11
+7784,NA,2014-XX-XX,NA,132,NA,Male,Asian,Not Hispanic or Latino,typical,Tajik,NA,NA,NA,NA,NA,typical,English,NA,NA,Home,Tajik,Tajikistan,11
+7785,NA,2014-04-19,EXCERPTS,133,2012-08-18,Male,Asian,Not Hispanic or Latino,typical,Tajik,NA,NA,NA,NA,NA,typical,English,NA,NA,Home,Tajik,Tajikistan,11
+7786,NA,2014-04-22,EXCERPTS,134,2013-04-26,Male,Asian,Not Hispanic or Latino,typical,Tajik,NA,NA,NA,NA,NA,typical,English,NA,NA,Home,Tajik,Tajikistan,11
+7787,NA,2014-04-22,EXCERPTS,135,2013-08-20,Female,Asian,Not Hispanic or Latino,typical,Tajik,NA,NA,NA,NA,NA,typical,English,NA,NA,Home,Tajik,Tajikistan,11
+7788,NA,2014-04-23,EXCERPTS,136,2012-12-22,Female,Asian,Not Hispanic or Latino,typical,Tajik,NA,NA,NA,NA,NA,typical,English,NA,NA,Home,Tajik,Tajikistan,11
+7789,NA,2014-04-23,EXCERPTS,137,2012-12-18,Female,Asian,Not Hispanic or Latino,typical,Tajik,NA,NA,NA,NA,NA,typical,English,NA,NA,Home,Tajik,Tajikistan,11
+7790,NA,2014-04-24,EXCERPTS,138,2012-08-18,Female,Asian,Not Hispanic or Latino,typical,Tajik,NA,NA,NA,NA,NA,typical,English,NA,NA,Home,Tajik,Tajikistan,11
+7791,NA,2014-04-25,EXCERPTS,139,2012-08-27,Male,Asian,Not Hispanic or Latino,typical,Tajik,NA,NA,NA,NA,NA,typical,English,NA,NA,Home,Tajik,Tajikistan,11
+7792,NA,2014-04-25,EXCERPTS,140,2012-09-01,Male,Asian,Not Hispanic or Latino,typical,Tajik,NA,NA,NA,NA,NA,typical,English,NA,NA,Home,Tajik,Tajikistan,11
+7793,NA,2014-04-28,EXCERPTS,141,2012-12-22,Male,Asian,Not Hispanic or Latino,typical,Tajik,NA,NA,NA,NA,NA,typical,English,NA,NA,Home,Tajik,Tajikistan,11
+7794,NA,2014-04-29,EXCERPTS,142,2013-04-20,Male,Asian,Not Hispanic or Latino,typical,Tajik,NA,NA,NA,NA,NA,typical,English,NA,NA,Home,Tajik,Tajikistan,11
+7795,NA,2014-04-29,EXCERPTS,143,2013-04-30,Female,Asian,Not Hispanic or Latino,typical,Tajik,NA,NA,NA,NA,NA,typical,English,NA,NA,Home,Tajik,Tajikistan,11
+7796,NA,2014-04-30,EXCERPTS,144,2012-04-28,Male,Asian,Not Hispanic or Latino,typical,Tajik,NA,NA,NA,NA,NA,typical,English,NA,NA,Home,Tajik,Tajikistan,11
+7797,NA,2014-05-02,EXCERPTS,145,2012-09-05,Male,Asian,Not Hispanic or Latino,typical,Tajik,NA,NA,NA,NA,NA,typical,English,NA,NA,Home,Tajik,Tajikistan,11
+7798,NA,2014-05-02,SHARED,146,2013-05-08,Male,Asian,Not Hispanic or Latino,typical,Tajik,NA,NA,NA,NA,NA,typical,English,NA,NA,Home,Tajik,Tajikistan,11
+7799,NA,2014-05-05,EXCERPTS,147,2013-05-05,Male,Asian,Not Hispanic or Latino,typical,Tajik,NA,NA,NA,NA,NA,typical,English,NA,NA,Home,Tajik,Tajikistan,11
+7800,NA,2014-05-07,EXCERPTS,148,2012-05-09,Female,Asian,Not Hispanic or Latino,typical,Tajik,NA,NA,NA,NA,NA,typical,English,NA,NA,Home,Tajik,Tajikistan,11
+7801,NA,2014-05-07,SHARED,149,2012-12-27,Female,Asian,Not Hispanic or Latino,typical,Tajik,NA,NA,NA,NA,NA,typical,English,NA,NA,Home,Tajik,Tajikistan,11
+7802,NA,2014-05-08,EXCERPTS,150,2012-05-16,Male,Asian,Not Hispanic or Latino,typical,Tajik,NA,NA,NA,NA,NA,typical,English,NA,NA,Home,Tajik,Tajikistan,11
+7807,NA,2014-05-12,EXCERPTS,151,2013-05-04,Female,Asian,Not Hispanic or Latino,typical,Tajik,NA,NA,NA,NA,NA,typical,English,NA,NA,Home,Tajik,Tajikistan,11
+7808,NA,2014-05-13,EXCERPTS,152,2012-05-23,Female,Asian,Not Hispanic or Latino,typical,Tajik,NA,NA,NA,NA,NA,typical,English,NA,NA,Home,Tajik,Tajikistan,11
+7809,NA,2014-05-13,EXCERPTS,153,2013-05-17,Female,Asian,Not Hispanic or Latino,typical,Tajik,NA,NA,NA,NA,NA,typical,English,NA,NA,Home,Tajik,Tajikistan,11
+7810,NA,2014-05-14,EXCERPTS,154,2012-09-08,Male,Asian,Not Hispanic or Latino,typical,Tajik,NA,NA,NA,NA,NA,typical,English,NA,NA,Home,Tajik,Tajikistan,11
+7811,NA,2014-05-14,EXCERPTS,155,2013-09-12,Female,Asian,Not Hispanic or Latino,typical,Tajik,NA,NA,NA,NA,NA,typical,English,NA,NA,Home,Tajik,Tajikistan,11
+7812,NA,2014-05-15,SHARED,156,2012-05-25,Female,Asian,Not Hispanic or Latino,typical,Tajik,NA,NA,NA,NA,NA,typical,English,NA,NA,Home,Tajik,Tajikistan,11
+7813,NA,2014-05-16,EXCERPTS,157,2013-05-19,Male,Asian,Not Hispanic or Latino,typical,Tajik,NA,NA,NA,NA,NA,typical,English,NA,NA,Home,Tajik,Tajikistan,11
+7814,NA,2014-05-20,EXCERPTS,158,2013-09-15,Male,Asian,Not Hispanic or Latino,typical,Tajik,NA,NA,NA,NA,NA,typical,English,NA,NA,Home,Tajik,Tajikistan,11
+7815,NA,2014-05-21,EXCERPTS,159,2013-09-23,Male,Asian,Not Hispanic or Latino,typical,Tajik,NA,NA,NA,NA,NA,typical,English,NA,NA,Home,Tajik,Tajikistan,11
+7816,NA,2014-05-21,EXCERPTS,160,2013-01-23,Male,Asian,Not Hispanic or Latino,typical,Tajik,NA,NA,NA,NA,NA,typical,English,NA,NA,Home,Tajik,Tajikistan,11
+7817,NA,2014-05-22,EXCERPTS,161,2013-01-25,Male,Asian,Not Hispanic or Latino,typical,Tajik,NA,NA,NA,NA,NA,typical,English,NA,NA,Home,Tajik,Tajikistan,11
+7818,NA,2014-05-23,EXCERPTS,162,2012-09-19,Female,Asian,Not Hispanic or Latino,typical,Tajik,NA,NA,NA,NA,NA,typical,English,NA,NA,Home,Tajik,Tajikistan,11
+7819,NA,2014-05-24,EXCERPTS,163,2013-01-25,Male,Asian,Not Hispanic or Latino,typical,Tajik,NA,NA,NA,NA,NA,typical,English,NA,NA,Home,Tajik,Tajikistan,11
+7822,NA,2014-05-26,EXCERPTS,164,2012-09-28,Female,Asian,Not Hispanic or Latino,typical,Tajik,NA,NA,NA,NA,NA,typical,English,NA,NA,Home,Tajik,Tajikistan,11
+7823,NA,2014-05-26,EXCERPTS,165,2013-05-28,Female,Asian,Not Hispanic or Latino,typical,Tajik,NA,NA,NA,NA,NA,typical,English,NA,NA,Home,Tajik,Tajikistan,11
+7826,NA,2014-05-27,EXCERPTS,166,2013-05-25,Female,Asian,Not Hispanic or Latino,typical,Tajik,NA,NA,NA,NA,NA,typical,English,NA,NA,Home,Tajik,Tajikistan,11
+7827,NA,2014-05-27,EXCERPTS,167,2012-09-21,Male,Asian,Not Hispanic or Latino,typical,Tajik,NA,NA,NA,NA,NA,typical,English,NA,NA,Home,Tajik,Tajikistan,11
+7828,NA,2014-05-28,EXCERPTS,168,2013-09-20,Male,Asian,Not Hispanic or Latino,typical,Tajik,NA,NA,NA,NA,NA,typical,English,NA,NA,Home,Tajik,Tajikistan,11
+7829,NA,2014-05-28,EXCERPTS,169,2013-06-08,Male,Asian,Not Hispanic or Latino,typical,Tajik,NA,NA,NA,NA,NA,typical,English,NA,NA,Home,Tajik,Tajikistan,11
+7830,NA,2014-05-29,EXCERPTS,170,2013-01-22,Male,Asian,Not Hispanic or Latino,typical,Tajik,NA,NA,NA,NA,NA,typical,English,NA,NA,Home,Tajik,Tajikistan,11
+7831,NA,2014-05-29,EXCERPTS,171,2013-06-01,Female,Asian,Not Hispanic or Latino,typical,Tajik,NA,NA,NA,NA,NA,typical,English,NA,NA,Home,Tajik,Tajikistan,11
+7832,NA,2014-05-30,EXCERPTS,172,2013-06-09,Female,Asian,Not Hispanic or Latino,typical,Tajik,NA,NA,NA,NA,NA,typical,English,NA,NA,Home,Tajik,Tajikistan,11
+7833,NA,2014-06-06,EXCERPTS,173,2012-10-06,Female,Asian,Not Hispanic or Latino,typical,Tajik,NA,NA,NA,NA,NA,typical,English,NA,NA,Home,Tajik,Tajikistan,11
+7838,NA,2014-06-09,EXCERPTS,174,2013-06-16,Male,Asian,Not Hispanic or Latino,typical,Tajik,NA,NA,NA,NA,NA,typical,English,NA,NA,Home,Tajik,Tajikistan,11
+7839,NA,2014-06-09,EXCERPTS,175,2013-06-15,Male,Asian,Not Hispanic or Latino,typical,Tajik,NA,NA,NA,NA,NA,typical,English,NA,NA,Home,Tajik,Tajikistan,11
+7840,NA,2014-06-10,EXCERPTS,176,2012-06-16,Male,Asian,Not Hispanic or Latino,typical,Tajik,NA,NA,NA,NA,NA,typical,English,NA,NA,Home,Tajik,Tajikistan,11
+7841,NA,2014-06-11,EXCERPTS,177,2012-10-05,Male,Asian,Not Hispanic or Latino,typical,Tajik,NA,NA,NA,NA,NA,typical,English,NA,NA,Home,Tajik,Tajikistan,11
+7842,NA,2014-06-12,EXCERPTS,178,2012-06-02,Female,Asian,Not Hispanic or Latino,typical,Tajik,NA,NA,NA,NA,NA,typical,English,NA,NA,Home,Tajik,Tajikistan,11
+7843,NA,2014-06-13,EXCERPTS,179,2013-02-12,Female,Asian,Not Hispanic or Latino,typical,Tajik,NA,NA,NA,NA,NA,typical,English,NA,NA,Home,Tajik,Tajikistan,11
+7844,NA,2014-06-18,SHARED,180,2013-10-23,Female,Asian,Not Hispanic or Latino,typical,Tajik,NA,NA,NA,NA,NA,typical,English,NA,NA,Home,Tajik,Tajikistan,11
+7845,NA,2014-06-18,EXCERPTS,181,2013-02-11,Male,Asian,Not Hispanic or Latino,typical,Tajik,NA,NA,NA,NA,NA,typical,English,NA,NA,Home,Tajik,Tajikistan,11
+7847,NA,2014-06-19,EXCERPTS,182,2012-06-26,Male,Asian,Not Hispanic or Latino,typical,Tajik,NA,NA,NA,NA,NA,typical,English,NA,NA,Home,Tajik,Tajikistan,11
+7848,NA,2014-06-19,EXCERPTS,183,2013-02-24,Female,Asian,Not Hispanic or Latino,typical,Tajik,NA,NA,NA,NA,NA,typical,English,NA,NA,Home,Tajik,Tajikistan,11
+7849,NA,2014-06-20,EXCERPTS,184,2013-06-24,Female,Asian,Not Hispanic or Latino,typical,Tajik,NA,NA,NA,NA,NA,typical,English,NA,NA,Home,Tajik,Tajikistan,11
+7850,NA,2014-06-24,EXCERPTS,185,2013-02-15,Male,Asian,Not Hispanic or Latino,typical,Tajik,NA,NA,NA,NA,NA,typical,English,NA,NA,Home,Tajik,Tajikistan,11
+7851,NA,2014-06-25,EXCERPTS,186,2012-06-16,Female,Asian,Not Hispanic or Latino,typical,Tajik,NA,NA,NA,NA,NA,typical,English,NA,NA,Home,Tajik,Tajikistan,11
+7852,NA,2014-08-01,EXCERPTS,187,2013-11-25,Female,Asian,Not Hispanic or Latino,typical,Tajik,NA,NA,NA,NA,NA,typical,English,NA,NA,Home,Tajik,Tajikistan,11
+7963,NA,2014-08-05,EXCERPTS,188,2013-04-02,Male,Asian,Not Hispanic or Latino,typical,Tajik,NA,NA,NA,NA,NA,typical,English,NA,NA,Home,Tajik,Tajikistan,11
+7964,NA,2014-08-06,EXCERPTS,189,2012-12-02,Female,Asian,Not Hispanic or Latino,typical,Tajik,NA,NA,NA,NA,NA,typical,English,NA,NA,Home,Tajik,Tajikistan,11
+7965,NA,2014-08-07,EXCERPTS,190,2013-08-15,Female,Asian,Not Hispanic or Latino,typical,Tajik,NA,NA,NA,NA,NA,typical,English,NA,Did not meet inclusion criteria,Home,Tajik,Tajikistan,11
+7966,NA,2014-08-12,EXCERPTS,191,2014-01-06,Male,Asian,Not Hispanic or Latino,typical,Tajik,NA,NA,NA,NA,NA,typical,English,NA,NA,Home,Tajik,Tajikistan,11
+7967,NA,2014-08-13,EXCERPTS,192,2013-12-19,Male,Asian,Not Hispanic or Latino,typical,Tajik,NA,NA,NA,NA,NA,typical,English,NA,NA,Home,Tajik,Tajikistan,11
+7968,NA,2014-08-14,EXCERPTS,193,2013-01-08,Male,Asian,Not Hispanic or Latino,typical,Tajik,NA,NA,NA,NA,NA,typical,English,NA,NA,Home,Tajik,Tajikistan,11
+7969,NA,2014-08-17,EXCERPTS,194,2013-04-17,Female,Asian,Not Hispanic or Latino,typical,Tajik,NA,NA,NA,NA,NA,typical,English,NA,NA,Home,Tajik,Tajikistan,11
+7970,NA,2014-09-05,EXCERPTS,195,2014-01-04,Male,Asian,Not Hispanic or Latino,typical,Tajik,NA,NA,NA,NA,NA,typical,English,NA,Did not meet inclusion criteria,Home,Tajik,Tajikistan,11
+7971,NA,2014-09-08,EXCERPTS,196,2013-05-18,Female,Asian,Not Hispanic or Latino,typical,Tajik,NA,NA,NA,NA,NA,typical,English,NA,Did not meet inclusion criteria,Home,Tajik,Tajikistan,11
+7973,NA,2014-09-10,EXCERPTS,197,2014-01-08,Female,Asian,Not Hispanic or Latino,typical,Tajik,NA,NA,NA,NA,NA,typical,English,NA,NA,Home,Tajik,Tajikistan,11
+7974,NA,2014-09-10,EXCERPTS,198,2012-12-29,Female,Asian,Not Hispanic or Latino,typical,Tajik,NA,NA,NA,NA,NA,typical,English,NA,NA,Home,Tajik,Tajikistan,11
+7975,NA,2014-09-12,EXCERPTS,199,2011-07-14,Male,Asian,Not Hispanic or Latino,typical,Tajik,NA,NA,NA,NA,NA,typical,English,NA,Did not meet inclusion criteria,Home,Tajik,Tajikistan,11
+7976,NA,2014-09-29,SHARED,200,2014-01-31,Female,Asian,Not Hispanic or Latino,typical,Tajik,NA,NA,NA,NA,NA,typical,English,NA,NA,Home,Tajik,Tajikistan,11
+7978,NA,2014-09-30,EXCERPTS,201,2012-10-11,Female,Asian,Not Hispanic or Latino,typical,Tajik,NA,NA,NA,NA,NA,typical,English,NA,NA,Home,Tajik,Tajikistan,11
+7979,NA,2014-10-07,EXCERPTS,202,2014-06-01,Male,Asian,Not Hispanic or Latino,typical,Tajik,NA,NA,NA,NA,NA,typical,English,NA,NA,Home,Tajik,Tajikistan,11
+7980,NA,2014-10-08,SHARED,203,2014-02-12,Male,Asian,Not Hispanic or Latino,typical,Tajik,NA,NA,NA,NA,NA,typical,English,NA,NA,Home,Tajik,Tajikistan,11
+7981,NA,2014-10-09,EXCERPTS,204,2014-09-18,Male,Asian,Not Hispanic or Latino,typical,Tajik,NA,NA,NA,NA,NA,typical,English,NA,NA,Home,Tajik,Tajikistan,11
+7982,NA,2014-10-09,EXCERPTS,205,2014-06-19,Male,Asian,Not Hispanic or Latino,typical,Tajik,NA,NA,NA,NA,NA,typical,English,NA,NA,Home,Tajik,Tajikistan,11
+7983,NA,2014-10-13,EXCERPTS,206,2014-09-27,Male,Asian,Not Hispanic or Latino,typical,Tajik,NA,NA,NA,NA,NA,typical,English,NA,NA,Home,Tajik,Tajikistan,11
+16136,NA,2014-10-14,EXCERPTS,207,2014-02-15,Female,Asian,Not Hispanic or Latino,typical,Tajik,NA,NA,NA,NA,NA,typical,English,NA,NA,Home,Tajik,Tajikistan,11
+16137,NA,2014-10-16,EXCERPTS,210,2012-10-13,Female,Asian,Not Hispanic or Latino,typical,Tajik,NA,NA,NA,NA,NA,typical,English,NA,NA,Home,Tajik,Tajikistan,11
+16147,NA,2013-07-03,EXCERPTS,031,2013-05-05,Male,Asian,Not Hispanic or Latino,typical,Tajik,NA,NA,NA,NA,NA,typical,English,NA,NA,Home,Tajik,Tajikistan,11
+16148,NA,2014-10-15,EXCERPTS,208,2014-10-06,Male,Asian,Not Hispanic or Latino,typical,Tajik,NA,NA,NA,NA,NA,typical,English,NA,NA,Home,Tajik,Tajikistan,11
+16149,NA,2014-10-15,EXCERPTS,209,2014-02-07,Female,Asian,Not Hispanic or Latino,typical,Tajik,NA,NA,NA,NA,NA,typical,English,NA,NA,Home,Tajik,Tajikistan,11
+16150,NA,2014-10-17,EXCERPTS,211,2012-10-08,Female,Asian,Not Hispanic or Latino,typical,Tajik,NA,NA,NA,NA,NA,typical,English,NA,NA,Home,Tajik,Tajikistan,11
+16151,NA,2014-10-21,EXCERPTS,212,2014-09-25,Female,Asian,Not Hispanic or Latino,typical,Tajik,NA,NA,NA,NA,NA,typical,English,NA,NA,Home,Tajik,Tajikistan,11
+16239,NA,2014-10-22,EXCERPTS,213,2014-06-05,Female,Asian,Not Hispanic or Latino,typical,Tajik,NA,NA,NA,NA,NA,typical,English,NA,NA,Home,Tajik,Tajikistan,11
+16240,NA,2014-10-22,EXCERPTS,214,2014-09-09,Female,Asian,Not Hispanic or Latino,typical,Tajik,NA,NA,NA,NA,NA,typical,English,NA,NA,Home,Tajik,Tajikistan,11
+16241,NA,2014-10-28,EXCERPTS,215,2014-09-16,Male,Asian,Not Hispanic or Latino,typical,Tajik,NA,NA,NA,NA,NA,typical,English,NA,NA,Home,Tajik,Tajikistan,11
+16242,NA,2014-10-28,EXCERPTS,216,2014-06-28,Female,Asian,Not Hispanic or Latino,typical,Tajik,NA,NA,NA,NA,NA,typical,English,NA,NA,Home,Tajik,Tajikistan,11
+16243,NA,2014-10-28,EXCERPTS,217,2014-06-21,Male,Asian,Not Hispanic or Latino,typical,Tajik,NA,NA,NA,NA,NA,typical,English,NA,NA,Home,Tajik,Tajikistan,11
+16244,NA,2014-10-30,EXCERPTS,218,2014-10-05,Male,Asian,Not Hispanic or Latino,typical,Tajik,NA,NA,NA,NA,NA,typical,English,NA,NA,Home,Tajik,Tajikistan,11
+16245,NA,2014-10-30,SHARED,219,2014-06-26,Female,Asian,Not Hispanic or Latino,typical,Tajik,NA,NA,NA,NA,NA,typical,English,NA,NA,Home,Tajik,Tajikistan,11
+57101,Exemplar Clips & Photos,materials,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,11
+57102,The Ties That Bind: Coding Manual & Related Materials,materials,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,11
+57103,The Ties That Bind: Datavyu Coded Spreadsheets,materials,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,11

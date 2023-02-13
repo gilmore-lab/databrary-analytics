@@ -1,0 +1,3 @@
+session_id,session_name,session_date,session_release,group1_name,group1_description,group2_name,group2_description,task1_name,task1_description,task2_name,task2_description,task3_name,task3_description,task4_name,task4_description,task5_name,task5_description,task6_name,task6_description,context_setting,vol_id
+7183,NA,1989-08-21,PRIVATE,00912,NA,wave-1,wave 1 of 3,M-C1,Mother with Child 1,M-C2,Mother with Child 2,C1-C2,Child 1 with Child 2,F-C2,Father with Child 2,F-C1,Father with Child 1,M-F,Mother with Father,Home,104
+7184,NA,1989-08-25,PRIVATE,00912,NA,wave-1,wave 1 of 3,M-Triad,Mother with Child 1 and Child 2,F-Triad,Father with Child 1 and Child 2,Tetrad,"Mother, Father, Child 1 and Child 2",NA,NA,NA,NA,NA,NA,Home,104
