@@ -1845,10 +1845,11 @@ get_inst_info <-
         }
         df
       } else {
+        if (vb) message("Party ", inst_id, " is not an institution. Skipping.")
         NULL
       }
     } else {
-      message("`inst_id` must be a positive number.")
+      if (vb) message("`inst_id` must be a positive number.")
     }
   }
 
@@ -1863,6 +1864,10 @@ get_inst_info_save_csv <-
     stopifnot(is.character(csv_dir))
     stopifnot(dir.exists(csv_dir))
     
+    if (party_id == 2) {
+      if (vb) message("Party 2 is not a physical institution. Skipping.")
+      return(NULL)
+    }
     this_inst <- get_inst_info(party_id, update_geo, vb)
     
     if (!is.null(this_inst)) {
@@ -1913,6 +1918,23 @@ db_credentials_valid <- function() {
     FALSE
   }
 }
+
+update_inst_lat_lon <- function(df, vb = FALSE) {
+  if (!is.data.frame(df)) {
+    stop('`df` must be a data frame.')
+  }
+  
+  ll <- ggmap::geocode(as.character(df$inst_name))
+  
+  df$lat = NA
+  df$lon = NA
+  
+  if (!is.na(ll$lat)) df$lat<- ll$lat
+  if (!is.na(ll$lon)) df$lon<- ll$lon
+  
+  df
+}
+
 
 ################################################################################
 # Data about shared volumes and their sessions.

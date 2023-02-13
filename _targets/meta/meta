@@ -28,13 +28,13 @@ generate_volume_asset_csv_list|function|d32bbbcf9023a249|||||||||||||||
 get_ais_from_inst|function|6d16bb9e1c38d78a|||||||||||||||
 get_all_owners_save_csvs|function|3e77e1eea5cc686f|||||||||||||||
 get_assets_in_vol|function|3f3179340aeb950a|||||||||||||||
-get_auth_inst_list|function|a4d45df25e525437|||||||||||||||
-get_inst_info|function|a50052acae4ce70b|||||||||||||||
-get_inst_info_save_csv|function|e21e3baff505cc82|||||||||||||||
+get_auth_inst_list|function|036b4e85df225fa9|||||||||||||||
+get_inst_info|function|3f08da75274b44de|||||||||||||||
+get_inst_info_save_csv|function|bb48d2e13d9f37a3|||||||||||||||
 get_inst_invest_datab|function|4b85521a45fc05c1|||||||||||||||
 get_many_volumes_data|function|ebe9ef7e84acd4c7|||||||||||||||
 get_max_party_id|function|9cacc9a77572bf7e|||||||||||||||
-get_save_many_inst_csvs|function|385ed7211fda7acb|||||||||||||||
+get_save_many_inst_csvs|function|56afeecf2137bad0|||||||||||||||
 get_save_multiple_volume_ss|function|a50b4437caa9ece4|||||||||||||||
 get_save_volume_ss|function|f8cb7ad1946c502f|||||||||||||||
 get_save_volumes_demo|function|de8f53c20fcc13a6|||||||||||||||
@@ -69,9 +69,11 @@ load_old_tags_data|function|c17a37a7d0dabb33|||||||||||||||
 load_owner_csvs|function|87bd403eccdf0a61|||||||||||||||
 make_all_session_df|function|274061771851c76a|||||||||||||||
 make_cleaned_session_df|function|0f87528410585ad4|||||||||||||||
+make_inst_csvs|stem||6b03ecde86670710|4865d95e18eb785a|819447320||t19398.9456843698s||0|rds|local|vector|||1.561||1m22m36mℹ39m In index 9.1mCaused by error in if ... NULL22m33m39m missing value where TRUEFALSE needed
 make_stem_tags_df|function|cce46e18c29adfe5|||||||||||||||
 make_volume_assets_stats_df|function|3b989c50e46f2022|||||||||||||||
 make_volume_tags_df|function|b678117b868da715|||||||||||||||
+max_party_id|stem|a2b14ff062c18af0|06b59a452892d9b2|ef46db3751d8e999|-497437831||t19398.9437355911s|c9aaea90a821e608|53|rds|local|vector|||0.603||
 max_vol_id|stem|7198d6702209bd20|ad0a3174f1edbf5e|ef46db3751d8e999|804642499||t19391.7361194817s|c9aaea90a821e608|53|rds|local|vector|||0.001||
 max_volume_id|object|59bd8c616f7250f1|||||||||||||||
 mins_to_hrs|function|eed140de550e8a84|||||||||||||||
@@ -93,16 +95,17 @@ secs_to_mins|function|3969f87ab0910307|||||||||||||||
 select_particip_sess_by_number|function|4439750ee27b2844|||||||||||||||
 select_tags|object|98783343f487c5ad|||||||||||||||
 update_all_vol_stats|function|38273ff0d068809c|||||||||||||||
-update_inst_csv|function|8fb68d62f14a6236|||||||||||||||
+update_inst_csv|function|95585b37ada9bed8|||||||||||||||
 update_inst_invest_csv|function|898113117f3f5242|||||||||||||||
 update_inst_invest_df|function|7d918cf8d5359468|||||||||||||||
-update_invest_csv|function|34dbaf5459b71ed2|||||||||||||||
+update_inst_lat_lon|function|9d4ef1068a0e5ea0|||||||||||||||
+update_invest_csv|function|eec1379abc105571|||||||||||||||
 update_vol_asset_stats|function|d52487388fa4d5d5|||||||||||||||
 update_vol_tags_csv|function|7f4b7b7564d144c1|||||||||||||||
 update_volume_funders_csv|function|089de70feea08767|||||||||||||||
 vol_csv_avail|function|6766b75910ff6742|||||||||||||||
 vol_tags_csv|stem|d6f15f91b7066453|be19fdbca9907b76|983744893ec77b32|-1340783785||t19397.9351961947s|d11bc7b72fe729fe|14137|rds|local|vector|||0.025||
-vols_sess_df|stem|5163bfa0b527cd6d|39c7dfe02a9e68d6|96aa17389b314677|613955833||t19398.7010610391s||37976|rds|local|vector|||191.163||1m22m36mℹ39m In index 1505.1mCaused by error in curlcurl_fetch_memory22m33m39m LibreSSL SSL_read Operation timed out, errno 60
+vols_sess_df|stem|a352734cb23c84ad|39c7dfe02a9e68d6|96aa17389b314677|613955833||t19398.9456780271s|f93544b57fe7e622|40179|rds|local|vector|||167.77||
 volume_asset_csv_list|stem|f8a047ed6de503a9|0ea0986b34981f73|b8284977ba50fc2b|1104642854||t19397.8772175873s|7c08b6911a348b50|283|rds|local|vector|||0.69||
 volume_asset_stats_csvs|stem|b47af4f8be956aa8|95e7bcc0f2e133b1|c43e85e2d3243dae|-485789987||t19397.9351956461s|878d38ccdb93879f|22817|rds|local|vector|||3955.613||
 volume_asset_stats_df|stem|260f300539baefe2|9544ea09951cdd47|47f71bcd7cf61350|1097683627||t19397.8778370072s|b66b00b962fb7865|2853|rds|local|vector|||0.829||

@@ -72,7 +72,6 @@ if (params$archive_old) {
 }
 ```
 
-
 ## Community
 
 The Databrary community consists of Institutions and their Authorized Investigators. Authorized Investigators may, in turn, grant access to Affiliates whose access they supervise.

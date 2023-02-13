@@ -23,9 +23,11 @@ tar_option_set(
 )
 
 list(
-  # institution and investigator aggregate numbers
   tar_target(max_vol_id,
              1520),
+  tar_target(max_party_id,
+             10868),
+  # institution and investigator aggregate numbers
   tar_target(
     inst_invest_df,
     update_inst_invest_df("src/csv"),
@@ -87,6 +89,8 @@ list(
   tar_target(volume_demog_df,
              create_complete_demog_df(volume_ss_csv_fl)),
   # Institutions and investigators (detailed)
+  tar_target(make_inst_csvs,
+             get_save_many_inst_csvs(10868, max_party_id, update_geo = TRUE)),
   tar_target(institution_csv_fl,
              list.files("src/csv", "inst\\-[0-9]+\\.csv", full.names = TRUE)),
   #--- Skip party 2 (staff)
