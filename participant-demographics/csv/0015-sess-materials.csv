@@ -1,0 +1,14 @@
+session_id,session_name,session_date,session_release,participant_ID,participant_birthdate,participant_gender,participant_race,participant_ethnicity,participant_gestational age,condition1_name,condition1_description,condition2_name,condition2_description,condition3_name,condition3_description,vol_id
+6259,NA,2006-11-09,SHARED,86,2006-05-14,Female,Black or African American,Not Hispanic or Latino,39,Face-to-face,Mother or father played with infant for three minutes face to face,Still face,Mother or father adopted a still face for two minutes,Reunion,Mother or father reengaged interaction with the infant for three minutes,15
+6260,NA,2007-05-08,SHARED,89,2006-10-24,Male,White,Not Hispanic or Latino,40,Face-to-face,Mother or father played with infant for three minutes face to face,Still face,Mother or father adopted a still face for two minutes,Reunion,Mother or father reengaged interaction with the infant for three minutes,15
+6261,NA,2007-05-09,SHARED,91,2006-11-14,Male,Black or African American,Not Hispanic or Latino,40,Face-to-face,Mother or father played with infant for three minutes face to face,Still face,Mother or father adopted a still face for two minutes,Reunion,Mother or father reengaged interaction with the infant for three minutes,15
+6262,NA,2007-06-19,SHARED,93,2006-12-05,Female,Asian,Not Hispanic or Latino,40,Face-to-face,Mother or father played with infant for three minutes face to face,Still face,Mother or father adopted a still face for two minutes,Reunion,Mother or father reengaged interaction with the infant for three minutes,15
+6263,NA,2007-09-04,SHARED,99,2007-02-21,Female,White,Hispanic or Latino,38,Face-to-face,Mother or father played with infant for three minutes face to face,Still face,Mother or father adopted a still face for two minutes,Reunion,Mother or father reengaged interaction with the infant for three minutes,15
+6264,NA,2008-02-19,SHARED,109,2007-08-16,Male,White,Hispanic or Latino,39,Face-to-face,Mother or father played with infant for three minutes face to face,Still face,Mother or father adopted a still face for two minutes,Reunion,Mother or father reengaged interaction with the infant for three minutes,15
+7139,NA,2007-XX-XX,NA,86,2006-05-14,Female,Black or African American,Not Hispanic or Latino,39,Strange Situation,NA,NA,NA,NA,NA,15
+7140,NA,2008-XX-XX,NA,89,2006-10-24,Male,White,Not Hispanic or Latino,40,Strange Situation,NA,NA,NA,NA,NA,15
+7141,NA,2008-02-18,SHARED,91,2006-11-14,Male,Black or African American,Not Hispanic or Latino,40,Strange Situation,NA,NA,NA,NA,NA,15
+7142,NA,2008-03-05,SHARED,93,2006-12-05,Female,Asian,Not Hispanic or Latino,40,Strange Situation,NA,NA,NA,NA,NA,15
+7143,NA,2008-05-29,SHARED,99,2007-02-21,Female,White,Hispanic or Latino,38,Strange Situation,NA,NA,NA,NA,NA,15
+7144,NA,2008-11-20,SHARED,109,2007-08-16,Male,White,Hispanic or Latino,39,Strange Situation,NA,NA,NA,NA,NA,15
+9829,Top-level materials,materials,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,15

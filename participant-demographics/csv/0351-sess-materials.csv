@@ -1,0 +1,20 @@
+session_id,session_name,session_date,session_release,participant_ID,participant_gender,participant_race,participant_ethnicity,participant_pregnancy term,participant_disability,pilot_pilot,condition_name,group_name,vol_id
+17212,478_free,2017-XX-XX,PRIVATE,478,Male,White,Not Hispanic or Latino,Full term,typical,NA,free,8 months,351
+17249,478_airoff,2017-XX-XX,PRIVATE,478,Male,White,Not Hispanic or Latino,Full term,typical,NA,air off,8 months,351
+17264,478_airon,2017-XX-XX,PRIVATE,478,Male,White,Not Hispanic or Latino,Full term,typical,NA,air on,8 months,351
+17265,HA_free,2017-XX-XX,PRIVATE,HA,Female,White,Not Hispanic or Latino,Full term,typical,NA,free,8 months,351
+17266,MF_free,2017-XX-XX,PRIVATE,MF,Male,NA,NA,Full term,typical,NA,free,8 months,351
+17325,983_free,2017-XX-XX,PRIVATE,983,Male,White,Not Hispanic or Latino,Full term,typical,NA,free,6 months,351
+17326,983_free2,2017-XX-XX,PRIVATE,983,Male,White,Not Hispanic or Latino,Full term,typical,NA,free,6 months,351
+17358,983_airoff,2017-XX-XX,PRIVATE,983,Male,White,Not Hispanic or Latino,Full term,typical,NA,air off,6 months,351
+17359,983_airoff2,2017-XX-XX,PRIVATE,983,Male,White,Not Hispanic or Latino,Full term,typical,NA,air off,6 months,351
+17361,983_airon,2017-XX-XX,PRIVATE,983,Male,White,Not Hispanic or Latino,Full term,typical,NA,air on,6 months,351
+17362,508_free,2017-XX-XX,PRIVATE,508,Male,White,Not Hispanic or Latino,Full term,typical,NA,free,6 months,351
+17363,508_airoff,2017-XX-XX,PRIVATE,508,Male,White,Not Hispanic or Latino,Full term,typical,NA,air off,6 months,351
+17364,508_airon,2017-XX-XX,PRIVATE,508,Male,White,Not Hispanic or Latino,Full term,typical,NA,air on,6 months,351
+17365,508-airon,2017-XX-XX,PRIVATE,508,Male,White,Not Hispanic or Latino,Full term,typical,NA,air on,6 months,351
+17869,570-free,2017-XX-XX,PRIVATE,570,Female,White,Not Hispanic or Latino,Full term,typical,NA,free,9 months,351
+17870,570-airoff,2017-XX-XX,PRIVATE,570,Female,White,Not Hispanic or Latino,Full term,typical,NA,air off,9 months,351
+17871,570-airon,2017-XX-XX,PRIVATE,570,Female,White,Not Hispanic or Latino,Full term,typical,NA,air on,9 months,351
+17872,570-toys,2017-XX-XX,PRIVATE,570,Female,White,Not Hispanic or Latino,Full term,typical,NA,toys,9 months,351
+20898,NA,materials,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,351

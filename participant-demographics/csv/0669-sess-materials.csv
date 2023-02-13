@@ -1,0 +1,47 @@
+session_id,session_name,session_date,session_release,participant_ID,participant_birthdate,participant_gender,participant_race,participant_ethnicity,participant_language,context_setting,context_language,context_country,context_state,vol_id
+29186,01,NA,EXCERPTS,01,2014-05-19,Female,White,Not Hispanic or Latino,English,Home,English,US,NY,669
+29187,02,NA,EXCERPTS,02,2014-05-29,Male,White,Not Hispanic or Latino,English,Home,English,US,NY,669
+29188,03,NA,PRIVATE,03,NA,Male,White,Not Hispanic or Latino,English,Home,English,US,NY,669
+29189,04,NA,EXCERPTS,04,2014-06-26,Male,White,Not Hispanic or Latino,English,Home,English,US,NY,669
+29190,05,NA,EXCERPTS,05,2014-06-22,Male,Black or African American,Not Hispanic or Latino,English,Home,English,US,NY,669
+29191,06,NA,EXCERPTS,06,2014-07-03,Female,White,Not Hispanic or Latino,English,Home,English,US,NY,669
+29192,07,NA,EXCERPTS,07,2014-06-30,Male,White,Not Hispanic or Latino,English,Home,English,US,NY,669
+29193,08,NA,EXCERPTS,08,2014-07-02,Female,More than one,Not Hispanic or Latino,English,Home,English,US,NY,669
+29194,09,NA,EXCERPTS,09,2014-07-09,Male,White,Not Hispanic or Latino,English,Home,English,US,NY,669
+29195,10,NA,SHARED,10,2014-07-11,Female,White,Not Hispanic or Latino,English,Home,English,US,NY,669
+29196,11,NA,EXCERPTS,11,2014-07-22,Male,White,Not Hispanic or Latino,English,Home,English,US,NY,669
+29197,12,NA,EXCERPTS,12,2014-07-31,Male,White,Not Hispanic or Latino,English,Home,English,US,NY,669
+29198,13,NA,EXCERPTS,13,2014-08-03,Male,White,Not Hispanic or Latino,English,Home,English,US,NY,669
+29199,14,NA,EXCERPTS,14,2014-08-09,Female,White,Not Hispanic or Latino,English,Home,English,US,NY,669
+29200,15,NA,EXCERPTS,15,2014-08-14,Male,White,Not Hispanic or Latino,English,Home,English,US,NY,669
+29201,16,NA,EXCERPTS,16,2014-08-28,Male,White,Not Hispanic or Latino,English,Home,English,US,NY,669
+29202,17,NA,EXCERPTS,17,2014-09-09,Female,White,Not Hispanic or Latino,English,Home,English,US,NY,669
+29203,18,NA,EXCERPTS,18,2014-09-04,Male,White,Not Hispanic or Latino,English,Home,English,US,NY,669
+29204,19,NA,PRIVATE,19,NA,Female,White,Not Hispanic or Latino,English,Home,English,US,NY,669
+29205,20,NA,EXCERPTS,20,2014-09-22,Female,White,Not Hispanic or Latino,English,Home,English,US,NY,669
+29206,21,NA,EXCERPTS,21,2014-10-02,Male,White,Not Hispanic or Latino,English,Home,English,US,NY,669
+29207,22,NA,EXCERPTS,22,2014-10-07,Female,White,Not Hispanic or Latino,English,Home,English,US,NY,669
+29208,23,NA,EXCERPTS,23,2014-10-04,Male,White,Not Hispanic or Latino,English,Home,English,US,NY,669
+29209,24,NA,EXCERPTS,24,2014-10-17,Male,White,Not Hispanic or Latino,English,Home,English,US,NY,669
+29210,25,NA,EXCERPTS,25,2014-10-22,Male,White,Not Hispanic or Latino,English,Home,English,US,NY,669
+29211,26,NA,EXCERPTS,26,2014-10-30,Female,White,Not Hispanic or Latino,English,Home,English,US,NY,669
+29212,27,NA,EXCERPTS,27,2014-11-03,Male,White,Not Hispanic or Latino,English,Home,English,US,NY,669
+29213,28,NA,EXCERPTS,28,2014-11-02,Female,White,Not Hispanic or Latino,English,Home,English,US,NY,669
+29214,29,NA,EXCERPTS,29,2014-11-07,Female,White,Not Hispanic or Latino,English,Home,English,US,NY,669
+29215,30,NA,EXCERPTS,30,2014-11-13,Male,White,Not Hispanic or Latino,English,Home,English,US,NY,669
+29216,31,NA,EXCERPTS,31,2014-11-20,Female,White,Not Hispanic or Latino,English,Home,English,US,NY,669
+29217,32,NA,EXCERPTS,32,2014-11-20,Female,White,Not Hispanic or Latino,English,Home,English,US,NY,669
+29218,33,NA,EXCERPTS,33,2014-11-24,Male,White,Not Hispanic or Latino,English,Home,English,US,NY,669
+29219,34,NA,EXCERPTS,34,2014-11-23,Male,More than one,Not Hispanic or Latino,English,Home,English,US,NY,669
+29220,35,NA,EXCERPTS,35,2014-12-15,Female,White,Not Hispanic or Latino,English,Home,English,US,NY,669
+29221,36,NA,EXCERPTS,36,2014-12-07,Female,White,Not Hispanic or Latino,English,Home,English,US,NY,669
+29222,37,NA,EXCERPTS,37,2014-12-08,Male,White,Not Hispanic or Latino,English,Home,English,US,NY,669
+29223,38,NA,EXCERPTS,38,2014-12-06,Female,White,Not Hispanic or Latino,English,Home,English,US,NY,669
+29224,39,NA,SHARED,39,2014-12-16,Female,White,Not Hispanic or Latino,English,Home,English,US,NY,669
+29225,40,NA,EXCERPTS,40,2014-12-18,Male,White,Not Hispanic or Latino,English,Home,English,US,NY,669
+29226,41,NA,EXCERPTS,41,2014-12-26,Male,White,Not Hispanic or Latino,English,Home,English,US,NY,669
+29227,42,NA,EXCERPTS,42,2014-12-26,Female,White,Not Hispanic or Latino,English,Home,English,US,NY,669
+29228,43,NA,SHARED,43,2015-01-06,Female,White,Not Hispanic or Latino,English,Home,English,US,NY,669
+29229,44,NA,EXCERPTS,44,2015-01-31,Female,White,Not Hispanic or Latino,English,Home,English,US,NY,669
+29230,45,NA,EXCERPTS,45,2015-01-29,Male,White,Hispanic or Latino,English,Home,English,US,NY,669
+29231,46,NA,SHARED,46,2015-01-29,Male,White,Not Hispanic or Latino,English,Home,English,US,NY,669

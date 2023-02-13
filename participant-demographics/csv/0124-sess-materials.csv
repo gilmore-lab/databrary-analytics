@@ -1,0 +1,15 @@
+session_id,session_name,session_date,session_release,participant_ID,participant_birthdate,participant_gender,participant_race,participant_ethnicity,participant_pregnancy term,participant_disability,participant_language,pilot_pilot,exclusion_reason,context_setting,context_language,context_country,context_state,vol_id
+8260,NA,2009-XX-XX,NA,1,NA,Male,White,Not Hispanic or Latino,Full term,typical,English,NA,Procedural/experimenter error,Lab,English,US,NY,124
+8261,NA,2009-XX-XX,NA,2,NA,Female,More than one,Not Hispanic or Latino,Full term,typical,English,NA,NA,Lab,English,US,NY,124
+8262,NA,2009-XX-XX,NA,3,NA,Male,Asian,Not Hispanic or Latino,Full term,typical,English,NA,NA,Lab,English,US,NY,124
+8263,NA,2009-XX-XX,NA,4,NA,Male,Asian,Not Hispanic or Latino,Full term,typical,English,NA,NA,Lab,English,US,NY,124
+8264,NA,2009-XX-XX,NA,5,NA,Male,White,Not Hispanic or Latino,Full term,typical,English,NA,Withdrew/fussy/tired,Lab,English,US,NY,124
+8265,NA,2009-XX-XX,NA,6,NA,Male,Asian,Not Hispanic or Latino,Full term,typical,English,NA,NA,Lab,English,US,NY,124
+8266,NA,2009-XX-XX,NA,7,NA,Female,White,Not Hispanic or Latino,Full term,typical,English,NA,NA,Lab,English,US,NY,124
+8267,NA,2009-XX-XX,NA,8,NA,Female,White,Not Hispanic or Latino,Full term,typical,English,NA,Procedural/experimenter error,Lab,English,US,NY,124
+8268,NA,2009-XX-XX,NA,9,NA,Female,More than one,Not Hispanic or Latino,Full term,typical,English,NA,NA,Lab,English,US,NY,124
+8269,NA,2009-09-23,EXCERPTS,10,2008-07-12,Female,White,Not Hispanic or Latino,Full term,typical,English,NA,Procedural/experimenter error,Lab,English,US,NY,124
+8270,NA,2010-07-21,EXCERPTS,11,2009-07-03,Female,More than one,Not Hispanic or Latino,Full term,typical,English,NA,Withdrew/fussy/tired,Lab,English,US,NY,124
+8271,NA,2010-07-21,EXCERPTS,12,2009-05-18,Male,More than one,Not Hispanic or Latino,Full term,typical,English,NA,NA,Lab,English,US,NY,124
+8272,NA,2010-XX-XX,NA,13,NA,Male,White,Not Hispanic or Latino,Full term,typical,English,NA,NA,Lab,English,US,NY,124
+20366,Excerpt: Putting Headgear on baby,NA,EXCERPTS,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,124

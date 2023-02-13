@@ -1,0 +1,35 @@
+session_id,session_name,session_date,session_release,participant_ID,participant_info,participant_birthdate,participant_gender,participant_race,participant_ethnicity,participant_disability,participant_language,condition_name,vol_id
+25169,NA,2014-XX-XX,NA,2014-187,Video,NA,Female,White,NA,typical,English,1.1,592
+25170,NA,2014-XX-XX,NA,2014-188,Video,NA,Male,White,NA,typical,English,1.1,592
+25171,NA,2014-XX-XX,NA,2014-189,Video,NA,Female,White,NA,typical,English,1.2,592
+25172,NA,2014-XX-XX,NA,2014-191,Video,NA,Male,Black or African American,NA,typical,English,1.2,592
+25173,NA,2014-XX-XX,NA,2014-192,Video,NA,Female,White,NA,typical,English,2.1,592
+25174,NA,2014-XX-XX,NA,2014-193,Video,NA,Female,White,NA,typical,English,2.2,592
+25175,NA,2014-XX-XX,NA,2014-200,Video,NA,Male,Black or African American,NA,typical,English,2.2,592
+25176,NA,2014-XX-XX,NA,2014-203,Video,NA,Female,Black or African American,NA,typical,English,2.1,592
+25177,NA,2014-XX-XX,NA,2014-206,Video,NA,Male,White,NA,typical,English,3.1,592
+25179,NA,2014-XX-XX,NA,2014-207,Video,NA,Male,Black or African American,NA,typical,English,3.1,592
+25180,NA,2014-XX-XX,NA,2014-208,Video,NA,Female,White,NA,typical,English,1.1,592
+25181,NA,2014-XX-XX,NA,2014-209,Video,NA,Male,White,NA,typical,English,1.2,592
+25182,NA,2014-XX-XX,NA,2014-217,Video,NA,Male,White,NA,typical,English,2.1,592
+25183,NA,2014-XX-XX,NA,2014-219,Video,NA,Male,White,NA,typical,English,2.1,592
+25184,NA,2014-XX-XX,NA,2014-229,Video,NA,Male,White,NA,typical,English,2.2,592
+25185,NA,2014-XX-XX,NA,2014-230,Audio,NA,Male,White,NA,typical,English,3.2,592
+25186,NA,2014-XX-XX,NA,2014-231,Video,NA,Female,White,NA,typical,English,3.1,592
+25187,NA,2014-XX-XX,NA,2014-232,Video,NA,Female,White,NA,typical,English,3.2,592
+25188,NA,2014-XX-XX,NA,2014-234,Video,NA,Male,White,NA,typical,English,2.2,592
+25189,NA,2014-XX-XX,NA,2014-235,Video,NA,Female,White,NA,typical,English,3.1,592
+25190,NA,2014-XX-XX,NA,2014-236,Video,NA,Male,White,NA,typical,English,3.2,592
+25191,NA,2014-XX-XX,NA,2014-237,Video,NA,Female,White,NA,typical,English,1.1,592
+25192,NA,2014-XX-XX,NA,2014-241,Audio,NA,Male,NA,NA,typical,English,2.1,592
+25193,NA,2014-XX-XX,NA,2014-242,Video,NA,Female,Black or African American,NA,typical,English,3.1,592
+25194,NA,2014-XX-XX,NA,2014-244,Audio,NA,Male,Black or African American,NA,typical,English,2.2,592
+25195,NA,2014-XX-XX,NA,2014-257,Audio,NA,Male,White,NA,typical,English,1.2,592
+25196,NA,2014-XX-XX,NA,2014-258,Vidao,NA,Female,White,NA,typical,English,2.1,592
+25197,NA,2014-XX-XX,NA,2014-259,Video,NA,Female,White,NA,typical,English,2.2,592
+25198,NA,2014-XX-XX,NA,2014-261,Video,NA,Male,Black or African American,NA,typical,English,2.2,592
+25199,NA,2014-XX-XX,NA,2014-262,Video,NA,Female,Black or African American,NA,typical,English,3.2,592
+25200,NA,2014-XX-XX,NA,2014-266,Video,NA,Male,Black or African American,NA,typical,English,1.1,592
+25201,NA,2014-XX-XX,NA,2014-270,Video,NA,Male,White,NA,typical,English,1.1,592
+25202,NA,2014-XX-XX,NA,2014-271,Video,NA,Male,Asian,NA,typical,English,2.1,592
+25203,NA,2014-XX-XX,NA,2014-272,Video,NA,Female,White,NA,typical,English,1.2,592

@@ -1,0 +1,40 @@
+session_id,session_name,session_date,session_release,participant_ID,participant_birthdate,participant_gender,participant_race,participant_ethnicity,exclusion1_reason,exclusion2_reason,task_name,vol_id
+8983,NA,2015-07-16,PRIVATE,1003,2015-02-16,Male,Unknown or not reported,Unknown or not reported,NA,NA,inf_2pat_lamrad,146
+10055,NA,2015-08-12,PRIVATE,1015,2014-12-14,Female,Unknown or not reported,Unknown or not reported,NA,NA,inf_2pat_lamrad,146
+10056,NA,2015-09-08,PRIVATE,1019,2015-03-06,Female,Unknown or not reported,Unknown or not reported,NA,NA,inf_2pat_lamrad,146
+10057,NA,2015-09-24,PRIVATE,1023,2015-01-17,Female,Unknown or not reported,Unknown or not reported,NA,NA,inf_2pat_lamrad,146
+10058,NA,2015-11-13,PRIVATE,1038,2015-06-27,Female,Unknown or not reported,Unknown or not reported,NA,NA,inf_2pat_lamrad,146
+10855,NA,2016-02-19,PRIVATE,1044,2015-07-25,Male,Unknown or not reported,Unknown or not reported,NA,NA,inf_2pat_lamrad,146
+10856,NA,2016-02-26,PRIVATE,1047,2015-09-08,Female,Unknown or not reported,Unknown or not reported,NA,NA,inf_2pat_lamrad,146
+11442,NA,materials,NA,NA,NA,NA,NA,NA,NA,NA,inf_2pat_lamrad,146
+11449,NA,2016-03-21,PRIVATE,1049,2015-07-18,Male,Unknown or not reported,Unknown or not reported,NA,NA,inf_2pat_lamrad,146
+11450,NA,2016-02-22,PRIVATE,1050,2015-08-27,Male,Unknown or not reported,Unknown or not reported,Too Few Blocks,NA,inf_2pat_lamrad,146
+11451,NA,2016-04-06,PRIVATE,1051,2015-08-25,Male,White,Not Hispanic or Latino,NA,NA,inf_2pat_lamrad,146
+11452,NA,2016-02-25,PRIVATE,1052,2015-06-18,Female,Unknown or not reported,Unknown or not reported,NA,NA,inf_2pat_lamrad,146
+11576,NA,2016-03-16,PRIVATE,1053,2015-07-18,Male,Unknown or not reported,Unknown or not reported,Channels over Threshold,NA,inf_2pat_lamrad,146
+11579,NA,2016-05-07,EXCERPTS,1061,2015-09-19,Female,White,Not Hispanic or Latino,NA,NA,inf_2pat_lamrad,146
+11629,NA,2016-05-10,SHARED,1064,2015-09-08,Female,White,Not Hispanic or Latino,NA,NA,inf_2pat_lamrad,146
+11825,NA,2016-05-26,SHARED,1068,2015-09-24,Female,White,Not Hispanic or Latino,NA,NA,inf_2pat_lamrad,146
+12041,NA,2016-06-15,EXCERPTS,1070,2015-10-07,Female,White,Not Hispanic or Latino,NA,NA,inf_2pat_lamrad,146
+12577,NA,2016-06-27,SHARED,1072,2015-12-03,Male,White,Not Hispanic or Latino,NA,NA,inf_2pat_lamrad,146
+12578,NA,2016-06-27,SHARED,1069,2015-10-06,Female,White,Not Hispanic or Latino,NA,NA,inf_2pat_lamrad,146
+12579,NA,2016-07-01,EXCERPTS,1071,2015-11-05,Male,White,Not Hispanic or Latino,NA,NA,inf_2pat_lamrad,146
+12908,NA,2014-12-08,PRIVATE,0998,2014-05-25,Female,Unknown or not reported,Unknown or not reported,file missing,NA,inf_2pat_lamrad,146
+12909,NA,2014-12-15,PRIVATE,0999,2014-09-14,Male,Unknown or not reported,Unknown or not reported,Refusal to Wear EEG Net,NA,NA,146
+12910,NA,2015-04-08,PRIVATE,1001,2014-05-02,Female,Unknown or not reported,Unknown or not reported,Experimenter Error,NA,inf_2pat_lamrad,146
+12911,NA,2015-05-27,PRIVATE,1000,2014-12-07,Male,Unknown or not reported,Unknown or not reported,Experimenter Error,NA,inf_2pat_lamrad,146
+12912,NA,2015-07-15,PRIVATE,1012,2015-01-10,Male,Unknown or not reported,Unknown or not reported,Channels over Threshold,NA,inf_2pat_lamrad,146
+12913,NA,2015-07-30,PRIVATE,1014,2014-12-17,Female,Unknown or not reported,Unknown or not reported,Channels over Threshold,NA,inf_2pat_lamrad,146
+12914,NA,2015-10-20,PRIVATE,1028,2015-02-13,Male,Unknown or not reported,Unknown or not reported,Refusal to Wear EEG Net,NA,NA,146
+12915,NA,2015-12-01,PRIVATE,1039,2015-03-17,Male,Unknown or not reported,Unknown or not reported,Experimenter Error,NA,inf_2pat_lamrad,146
+12916,NA,2016-03-29,PRIVATE,1057,2015-10-19,Female,Unknown or not reported,Unknown or not reported,Experimenter Error,NA,inf_2pat_lamrad,146
+12917,NA,2016-04-25,PRIVATE,1056,2015-09-10,Male,Unknown or not reported,Unknown or not reported,Net Size Unavailable,NA,NA,146
+14185,NA,2016-08-15,PRIVATE,1092,2016-04-05,Male,White,Not Hispanic or Latino,NA,NA,inf_2pat_lamrad,146
+14918,NA,2016-10-31,SHARED,1101,2016-04-06,Male,White,Not Hispanic or Latino,Experimenter Error,Too much participant motion,inf_2pat_lamrad,146
+14919,NA,2016-10-27,SHARED,1093,2016-06-06,Male,White,Not Hispanic or Latino,NA,NA,inf_2pat_lamrad,146
+14920,NA,2016-10-19,SHARED,1099,2016-05-11,Male,White,Not Hispanic or Latino,NA,NA,inf_2pat_lamrad,146
+14921,NA,2016-10-13,SHARED,1098,2016-03-29,Female,White,Not Hispanic or Latino,Trials 1 and 2 excluded - experimenter error,NA,inf_2pat_lamrad,146
+14981,NA,2016-11-10,SHARED,1095,2016-06-14,Male,White,Not Hispanic or Latino,NA,NA,inf_2pat_lamrad,146
+14982,NA,2016-10-12,PRIVATE,1097,2016-05-16,Female,White,Not Hispanic or Latino,Too Few Blocks,NA,inf_2pat_lamrad,146
+15090,NA,2016-11-17,SHARED,1096,2016-07-15,Male,White,Not Hispanic or Latino,NA,NA,inf_2pat_lamrad,146
+15361,NA,2016-11-30,SHARED,1100,2016-06-02,Female,White,Not Hispanic or Latino,NA,NA,inf_2pat_lamrad,146

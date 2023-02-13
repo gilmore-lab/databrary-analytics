@@ -1,0 +1,97 @@
+session_id,session_name,session_date,session_release,participant_ID,participant_birthdate,participant_gender,participant_race,participant_ethnicity,participant_disability,participant_language,vol_id
+39131,2019-057,2019-XX-XX,PRIVATE,2019-057,NA,Male,White,Unknown or not reported,typical,English,950
+39132,2019-058,2019-07-27,EXCERPTS,2019-058,2012-05-09,Female,White,Unknown or not reported,typical,English,950
+39133,2019-060,2019-07-27,EXCERPTS,2019-060,2011-07-22,Female,White,Unknown or not reported,typical,English,950
+39134,2019-061,2019-07-27,EXCERPTS,2019-061,2014-06-27,Male,White,Unknown or not reported,typical,English,950
+39135,2019-063,2019-XX-XX,PRIVATE,2019-063,NA,Female,White,NA,typical,English,950
+39136,2019-068,2019-XX-XX,PRIVATE,2019-068,NA,Male,Asian,Unknown or not reported,typical,English,950
+39137,2019-069,2019-07-27,EXCERPTS,2019-069,2012-02-09,Male,White,Unknown or not reported,typical,English,950
+39138,2019-070,2019-07-27,EXCERPTS,2019-070,2010-02-11,Male,Black or African American,NA,typical,English,950
+39139,2019-071,2019-07-27,SHARED,2019-071,2009-05-20,Male,White,Not Hispanic or Latino,typical,English,950
+39140,2019-072,2019-07-27,EXCERPTS,2019-072,2014-07-27,Female,White,NA,typical,English,950
+39141,2019-073,2019-07-27,EXCERPTS,2019-073,2014-06-21,Female,White,NA,typical,English,950
+39142,2019-074,2019-07-27,SHARED,2019-074,2014-07-11,NA,NA,NA,typical,English,950
+39143,2019-075,2019-XX-XX,PRIVATE,2019-075,NA,Female,Asian,NA,typical,English,950
+39144,2019-076,2019-07-27,SHARED,2019-076,2012-05-23,Female,White,NA,typical,English,950
+39145,2019-077,2019-07-27,EXCERPTS,2019-077,2014-06-15,Female,White,NA,typical,English,950
+39146,2019-078,2019-07-27,EXCERPTS,2019-078,2011-07-27,Female,White,NA,typical,English,950
+39147,2019-079,2019-XX-XX,PRIVATE,2019-079,NA,Male,White,NA,typical,English,950
+39148,2019-080,2019-07-27,EXCERPTS,2019-080,2014-12-06,Male,White,NA,typical,English,950
+39149,2019-081,2019-07-27,EXCERPTS,2019-081,2011-07-28,Female,White,NA,typical,English,950
+39150,2019-082,2019-XX-XX,PRIVATE,2019-082,NA,Male,White,Hispanic or Latino,typical,English,950
+39151,2019-083,2019-07-27,SHARED,2019-083,2015-07-23,Male,White,NA,typical,English,950
+39884,2019-001,2019-08-21,EXCERPTS,2019-001,2012-11-14,Male,White,Not Hispanic or Latino,typical,English,950
+39885,2019-088,2019-08-30,EXCERPTS,2019-088,2012-10-02,Female,White,Not Hispanic or Latino,typical,English,950
+41330,2019-112,2019-09-27,EXCERPTS,2019-112,2015-03-27,Female,White,NA,typical,English,950
+41331,2019-114,2019-09-27,EXCERPTS,2019-114,2015-05-09,Female,White,Not Hispanic or Latino,typical,English,950
+41332,2019-115,2019-XX-XX,PRIVATE,2019-115,NA,Female,Black or African American,NA,typical,English,950
+41333,2019-116,2019-09-27,EXCERPTS,2019-116,2012-04-17,Female,White,NA,typical,English,950
+41334,2019-117,2019-09-27,SHARED,2019-117,2014-07-07,Male,White,Not Hispanic or Latino,typical,English,950
+41335,2019-118,2019-09-27,EXCERPTS,2019-118,2012-12-17,Male,NA,Hispanic or Latino,typical,English,950
+41336,2019-125,2019-10-03,EXCERPTS,2019-125,2013-10-06,Male,White,Unknown or not reported,typical,English,950
+41337,2019-126,2019-XX-XX,PRIVATE,2019-126,NA,Male,Unknown or not reported,Unknown or not reported,typical,English,950
+41338,2019-127,2019-10-04,EXCERPTS,2019-127,2010-05-27,Male,White,Unknown or not reported,typical,English,950
+41339,2019-128,2019-10-04,SHARED,2019-128,2012-02-26,Female,White,Unknown or not reported,typical,English,950
+41340,2019-129,2019-10-04,EXCERPTS,2019-129,2012-10-11,Male,Unknown or not reported,Unknown or not reported,typical,English,950
+41341,2019-130,2019-XX-XX,PRIVATE,2019-130,NA,Male,White,Unknown or not reported,typical,English,950
+41342,2019-131,2019-10-04,EXCERPTS,2019-131,2015-03-15,Female,Asian,Unknown or not reported,typical,English,950
+41343,2019-132,2019-10-04,EXCERPTS,2019-132,2014-10-17,Male,White,Unknown or not reported,typical,English,950
+41344,2019-133,2019-10-04,EXCERPTS,2019-133,2013-03-13,Female,White,Unknown or not reported,typical,English,950
+41345,2019-134,2019-10-04,SHARED,2019-134,2015-07-14,Male,White,Unknown or not reported,typical,English,950
+41560,2019-143,2019-10-11,EXCERPTS,2019-143,2013-09-05,Male,White,Unknown or not reported,typical,English,950
+41561,2019-144,2019-XX-XX,PRIVATE,2019-144,NA,Female,White,Unknown or not reported,typical,English,950
+41562,2019-145,2019-XX-XX,PRIVATE,2019-145,NA,Male,White,Unknown or not reported,typical,English,950
+41563,2019-146,2019-XX-XX,PRIVATE,2019-146,NA,Female,White,Unknown or not reported,typical,English,950
+41564,2019-147,2019-10-11,EXCERPTS,2019-147,2015-03-28,Male,White,Unknown or not reported,typical,English,950
+41710,2019-148,2019-XX-XX,PRIVATE,2019-148,NA,Female,White,Not Hispanic or Latino,typical,English,950
+41713,2019-149,2019-10-25,SHARED,2019-149,2014-01-14,Female,White,Unknown or not reported,typical,English,950
+41717,2019-150,2019-10-25,SHARED,2019-150,2015-08-07,Male,White,Unknown or not reported,typical,English,950
+41720,2019-151,2019-10-25,EXCERPTS,2019-151,2012-12-02,Male,White,Unknown or not reported,typical,English,950
+41838,2019-159,2019-XX-XX,PRIVATE,2019-159,NA,Male,White,Unknown or not reported,typical,English,950
+41841,2019-160,2019-XX-XX,PRIVATE,2019-160,NA,Female,White,Unknown or not reported,typical,English,950
+42088,2019-187,2019-11-15,EXCERPTS,2019-187,2014-12-10,Female,White,Not Hispanic or Latino,typical,English,950
+42089,2019-188,2019-11-15,EXCERPTS,2019-188,2010-08-15,Male,White,Unknown or not reported,typical,English,950
+42090,2019-189,2019-11-15,EXCERPTS,2019-189,2011-08-24,Male,Unknown or not reported,Hispanic or Latino,typical,English,950
+42091,2019-190,2019-XX-XX,PRIVATE,2019-190,NA,Male,White,Unknown or not reported,typical,English,950
+42093,2019-192,2019-11-22,EXCERPTS,2019-192,2015-10-05,Male,White,Unknown or not reported,typical,English,950
+42094,2019-193,2019-11-22,EXCERPTS,2019-193,2015-09-16,Female,Unknown or not reported,Unknown or not reported,typical,English,950
+42095,2019-194,2019-11-22,EXCERPTS,2019-194,2015-11-10,Male,White,Unknown or not reported,typical,English,950
+42096,2019-195,2019-11-22,EXCERPTS,2019-195,2014-02-17,Female,White,Unknown or not reported,typical,English,950
+42097,2019-196,2019-XX-XX,PRIVATE,2019-196,NA,Female,Black or African American,Unknown or not reported,typical,English,950
+42098,2019-197,2019-11-22,EXCERPTS,2019-197,2014-08-24,Male,White,Unknown or not reported,typical,English,950
+42099,2019-198,2019-XX-XX,PRIVATE,2019-198,NA,Male,White,Unknown or not reported,typical,English,950
+42100,2019-199,2019-XX-XX,PRIVATE,2019-199,NA,Female,Unknown or not reported,Unknown or not reported,typical,English,950
+42101,2019-200,2019-11-22,SHARED,2019-200,2011-10-02,Male,Black or African American,Not Hispanic or Latino,typical,English,950
+42102,2019-201,2019-11-22,SHARED,2019-201,2013-09-28,Male,Black or African American,Not Hispanic or Latino,typical,English,950
+42103,2019-202,2019-11-22,SHARED,2019-202,2015-09-15,Female,Black or African American,Not Hispanic or Latino,typical,English,950
+42200,2019-211,2019-12-06,EXCERPTS,2019-211,2013-10-17,Male,White,Unknown or not reported,typical,English,950
+42201,2019-212,2019-12-06,EXCERPTS,2019-212,2014-12-06,Male,White,Unknown or not reported,typical,English,950
+42202,2019-213,2019-12-06,EXCERPTS,2019-213,2015-01-14,Female,Unknown or not reported,Unknown or not reported,typical,English,950
+42203,2019-214,2019-12-06,SHARED,2019-214,2015-10-22,Female,White,Not Hispanic or Latino,typical,English,950
+42204,2019-215,2019-XX-XX,PRIVATE,2019-215,NA,Female,Unknown or not reported,Unknown or not reported,typical,English,950
+42205,2019-217,2019-12-06,SHARED,2019-217,2009-06-30,Male,Unknown or not reported,Unknown or not reported,typical,English,950
+42206,2019-218,2019-12-06,SHARED,2019-218,2011-08-07,Female,Unknown or not reported,Unknown or not reported,typical,English,950
+42207,2019-219,2019-12-06,SHARED,2019-219,2013-03-04,Female,Unknown or not reported,Unknown or not reported,typical,English,950
+42328,2019-226,2019-XX-XX,PRIVATE,2019-226,NA,Male,Black or African American,Hispanic or Latino,typical,English,950
+42329,2019-227,2019-XX-XX,PRIVATE,2019-227,NA,Male,Unknown or not reported,Unknown or not reported,typical,English,950
+42330,2019-228,2019-XX-XX,PRIVATE,2019-228,NA,Female,Unknown or not reported,Hispanic or Latino,typical,English,950
+42331,2019-229,2019-XX-XX,PRIVATE,2019-229,NA,Female,White,Unknown or not reported,typical,English,950
+42332,2019-230,2019-12-19,EXCERPTS,2019-230,2015-06-03,Male,Unknown or not reported,Unknown or not reported,typical,English,950
+42333,2019-231,2019-12-19,SHARED,2019-231,2012-02-19,Male,Black or African American,Hispanic or Latino,typical,English,950
+42334,2019-232,2019-XX-XX,PRIVATE,2019-232,NA,Female,Unknown or not reported,Hispanic or Latino,typical,English,950
+42335,2019-233,2019-XX-XX,PRIVATE,2019-233,NA,Male,Unknown or not reported,Hispanic or Latino,typical,English,950
+42336,2019-234,2019-XX-XX,NA,2019-234,NA,Male,Unknown or not reported,Unknown or not reported,typical,English,950
+42349,2019-235,2019-XX-XX,PRIVATE,2019-235,NA,Male,Asian,Unknown or not reported,typical,English,950
+42762,2020-001,2020-01-25,EXCERPTS,2020-001,2011-08-02,Female,Unknown or not reported,Unknown or not reported,typical,English,950
+42763,2020-002,2020-01-25,EXCERPTS,2020-002,2012-09-25,Female,White,Hispanic or Latino,typical,English,950
+42764,2020-003,2020-01-25,EXCERPTS,2020-003,2011-09-03,Female,White,Unknown or not reported,typical,English,950
+42765,2020-006,2020-01-25,EXCERPTS,2020-006,2012-02-21,Female,Unknown or not reported,Hispanic or Latino,typical,English,950
+42766,2020-007,2020-XX-XX,PRIVATE,2020-007,NA,Male,Asian,Unknown or not reported,typical,English,950
+42767,2020-008,2020-XX-XX,PRIVATE,2020-008,NA,Female,White,Not Hispanic or Latino,typical,English,950
+42768,2020-009,2020-01-25,EXCERPTS,2020-009,2012-06-27,Male,White,Unknown or not reported,typical,English,950
+42769,2020-010,2020-XX-XX,PRIVATE,2020-010,NA,Male,Black or African American,Unknown or not reported,typical,English,950
+42770,2020-011,2020-01-25,EXCERPTS,2020-011,2009-06-18,Male,White,Unknown or not reported,typical,English,950
+42771,2020-012,2020-01-25,EXCERPTS,2020-012,2011-08-29,Female,More than one,Hispanic or Latino,typical,English,950
+42772,2020-013,2020-01-25,EXCERPTS,2020-013,2010-12-23,Female,More than one,Not Hispanic or Latino,typical,English,950
+42773,2020-014,2020-01-25,EXCERPTS,2020-014,2012-10-03,Female,White,Unknown or not reported,typical,English,950
+42774,2020-015,2020-01-25,EXCERPTS,2020-015,2012-08-24,Male,White,Unknown or not reported,typical,English,950

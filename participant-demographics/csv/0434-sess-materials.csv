@@ -1,0 +1,84 @@
+session_id,session_name,session_date,session_release,participant_ID,participant_birthdate,participant_gender,participant_race,participant_ethnicity,participant_disability,participant_language,pilot_pilot,exclusion_reason,condition_name,group_name,task1_name,task2_name,task3_name,task4_name,task5_name,task6_name,task7_name,context_setting,context_language,context_country,context_state,vol_id
+18294,NA,2017-02-22,EXCERPTS,01,2012-03-05,Female,White,Not Hispanic or Latino,typical,Unknown,NA,NA,Right,4 Year Olds,Production,Duplo,Squigz,NA,NA,NA,NA,Lab,English,US,NY,434
+18297,NA,2017-02-22,EXCERPTS,02,2012-02-28,Male,More than one,Not Hispanic or Latino,typical,Unknown,NA,NA,Right,4 Year Olds,Production,Duplo,Squigz,NA,NA,NA,NA,Lab,English,US,NY,434
+18298,NA,2017-03-01,EXCERPTS,03,2012-09-29,Male,White,Hispanic or Latino,typical,Unknown,NA,NA,Right,4 Year Olds,Production,Duplo,Squigz,NA,NA,NA,NA,Lab,English,US,NY,434
+18299,NA,2017-03-08,EXCERPTS,04,2012-03-10,Female,White,Not Hispanic or Latino,typical,Unknown,NA,NA,Right,4 Year Olds,Production,Duplo,Squigz,NA,NA,NA,NA,Lab,English,US,NY,434
+18300,NA,2017-03-09,EXCERPTS,05,2012-03-01,Male,White,Not Hispanic or Latino,typical,Unknown,NA,NA,Right,4 Year Olds,Production,Duplo,Squigz,NA,NA,NA,NA,Lab,English,US,NY,434
+18301,NA,2017-03-10,EXCERPTS,06,2012-08-22,Female,Unknown or not reported,Unknown or not reported,typical,Unknown,NA,NA,Right,4 Year Olds,Production,Duplo,Squigz,NA,NA,NA,NA,Lab,English,US,NY,434
+18302,NA,2017-03-29,EXCERPTS,07,1985-10-14,Female,White,Not Hispanic or Latino,typical,"Hebrew, Russian, English",NA,NA,Right,Adults,Production,Duplo,Squigz,NA,NA,NA,NA,Lab,English,US,NY,434
+18304,NA,2017-03-31,EXCERPTS,08,1994-10-30,Female,White,Not Hispanic or Latino,typical,"English, Portuguese",NA,NA,Right,Adults,Production,Duplo,Squigz,NA,NA,NA,NA,Lab,English,US,NY,434
+18306,NA,2017-03-31,EXCERPTS,09,1998-07-06,Male,Asian,Not Hispanic or Latino,typical,"Bengali, English",NA,NA,Right,Adults,Production,Duplo,Squigz,NA,NA,NA,NA,Lab,English,US,NY,434
+18307,NA,2017-03-31,EXCERPTS,10,1995-01-22,Female,White,Not Hispanic or Latino,typical,"English, French",NA,NA,Right,Adults,Production,Duplo,Squigz,NA,NA,NA,NA,Lab,English,US,NY,434
+18315,NA,2017-04-07,EXCERPTS,11,1993-06-25,Female,Asian,Not Hispanic or Latino,typical,"Mandarin, English",NA,NA,Right,Adults,Production,Duplo,Squigz,NA,NA,NA,NA,Lab,English,US,NY,434
+18316,NA,2017-04-07,EXCERPTS,12,1994-10-01,Female,White,Not Hispanic or Latino,typical,English,NA,NA,Right,Adults,Production,Duplo,Squigz,NA,NA,NA,NA,Lab,English,US,NY,434
+18318,NA,2017-04-12,SHARED,13,2012-09-06,Male,More than one,Not Hispanic or Latino,typical,Unknown,NA,NA,Right,4 Year Olds,Production,Duplo,Squigz,NA,NA,NA,NA,Lab,English,US,NY,434
+18319,NA,2017-04-18,EXCERPTS,14,2012-05-10,Male,White,Not Hispanic or Latino,typical,Unknown,NA,NA,Right,4 Year Olds,Production,Duplo,Squigz,NA,NA,NA,NA,Lab,English,US,NY,434
+18320,NA,2017-04-26,EXCERPTS,15,2012-05-13,Male,More than one,Not Hispanic or Latino,typical,Unknown,NA,NA,Right,4 Year Olds,Production,Duplo,Squigz,Shape Sorter,NA,NA,NA,Lab,English,US,NY,434
+18321,NA,2017-04-26,EXCERPTS,16,2014-03-12,Female,White,Not Hispanic or Latino,typical,Unknown,NA,Did not meet inclusion criteria,Right,4 Year Olds,Production,Duplo,Squigz,Shape Sorter,NA,NA,NA,Lab,English,US,NY,434
+18322,NA,2017-04-28,EXCERPTS,17,2013-04-25,Female,White,Not Hispanic or Latino,typical,Unknown,NA,NA,Right,4 Year Olds,Production,Duplo,Squigz,Shape Sorter,NA,NA,NA,Lab,English,US,NY,434
+18323,NA,2017-06-19,EXCERPTS,18,1990-12-17,Male,White,Hispanic or Latino,typical,Unknown,NA,Procedural/experimenter error,Right,Adults,Production,Duplo,Squigz,Shape Sorter,NA,NA,NA,Lab,English,US,NY,434
+18567,NA,2017-XX-XX,PRIVATE,19,NA,Male,Asian,Not Hispanic or Latino,typical,"Mandarin, English",NA,Did not meet inclusion criteria,Right,4 Year Olds,NA,NA,NA,NA,NA,NA,NA,Lab,English,US,NY,434
+18568,NA,2017-06-26,EXCERPTS,20,2013-04-29,Male,White,Not Hispanic or Latino,typical,English,NA,NA,Right,4 Year Olds,Production,Duplo,Squigz,Shape Sorter,NA,NA,NA,Lab,English,US,NY,434
+18636,NA,2017-06-28,EXCERPTS,22,2013-09-17,Female,White,Not Hispanic or Latino,typical,English,NA,NA,Right,4 Year Olds,Production,Duplo,Squigz,Shape Sorter,NA,NA,NA,Lab,English,US,NY,434
+18637,NA,2017-06-27,EXCERPTS,21,1996-11-22,Male,White,Not Hispanic or Latino,typical,English,NA,NA,Right,Adults,Production,Duplo,Squigz,Shape Sorter,NA,NA,NA,Lab,English,US,NY,434
+18638,NA,2017-06-28,EXCERPTS,23,2012-07-26,Male,White,Not Hispanic or Latino,typical,"English, French",NA,NA,Right,4 Year Olds,Production,Duplo,Squigz,Shape Sorter,NA,NA,NA,Lab,English,US,NY,434
+18671,NA,2017-06-29,EXCERPTS,24,1995-06-27,Female,More than one,Hispanic or Latino,typical,English,NA,NA,Left,Adults,Production,Duplo,Squigz,Shape Sorter,NA,NA,NA,Lab,English,US,NY,434
+19054,NA,2017-07-11,EXCERPTS,32,1998-03-03,Female,Asian,Not Hispanic or Latino,typical,English,NA,NA,Right,Adults,Production,Duplo,Squigz,Shape Sorter,NA,NA,NA,Lab,English,US,NY,434
+19060,NA,2017-07-11,EXCERPTS,33,1996-01-05,Male,Asian,Not Hispanic or Latino,typical,"English, Tagalog",NA,NA,Right,Adults,Production,Duplo,Squigz,Shape Sorter,NA,NA,NA,Lab,English,US,NY,434
+19251,NA,2017-07-14,EXCERPTS,34,1998-09-28,Female,White,Not Hispanic or Latino,typical,English,NA,NA,Right,Adults,Production,Duplo,Squigz,Shape Sorter,NA,NA,NA,Lab,English,US,NY,434
+19288,NA,2017-XX-XX,NA,36,NA,Male,Asian,Not Hispanic or Latino,typical,English,NA,NA,Right,Adults,Production,Duplo,Squigz,Shape Sorter,NA,NA,NA,Lab,English,US,NY,434
+19289,NA,2017-XX-XX,PRIVATE,35,NA,Female,Asian,Not Hispanic or Latino,typical,English,NA,NA,Right,Adults,Production,Duplo,Squigz,Shape Sorter,NA,NA,NA,Lab,English,US,NY,434
+19384,NA,2017-07-18,EXCERPTS,37,1995-01-14,Female,White,Not Hispanic or Latino,typical,English,NA,NA,Right,Adults,Production,Duplo,Squigz,Shape Sorter,NA,NA,NA,Lab,English,US,NY,434
+19617,NA,2017-07-21,EXCERPTS,38,1996-01-27,Female,White,Not Hispanic or Latino,typical,English,NA,NA,Right,Adults,Production,Duplo,Squigz,Shape Sorter,NA,NA,NA,Lab,English,US,NY,434
+19717,NA,2017-07-25,EXCERPTS,39,1993-03-26,Male,Asian,Not Hispanic or Latino,typical,English,NA,NA,Left,Adults,Production,Duplo,Squigz,Shape Sorter,NA,NA,NA,Lab,English,US,NY,434
+19773,NA,2017-07-27,SHARED,40,2013-09-19,Male,White,Not Hispanic or Latino,typical,English,NA,NA,Left,4 Year Olds,Production,Duplo,Squigz,Shape Sorter,NA,NA,NA,Lab,English,US,NY,434
+19912,NA,2017-08-01,EXCERPTS,41,1996-09-07,Female,White,Not Hispanic or Latino,typical,English,NA,NA,Right,Adults,Production,Duplo,Squigz,Shape Sorter,NA,NA,NA,Lab,English,US,NY,434
+19913,NA,2017-08-03,EXCERPTS,44,2013-09-11,Female,White,Not Hispanic or Latino,typical,"English, Polish",NA,NA,Right,4 Year Olds,Production,Duplo,Squigz,Shape Sorter,NA,NA,NA,Lab,English,US,NY,434
+19914,NA,2017-08-01,EXCERPTS,42,2013-05-06,Female,White,Not Hispanic or Latino,typical,English,NA,NA,Right,4 Year Olds,Production,Duplo,Squigz,Shape Sorter,NA,NA,NA,Lab,English,US,NY,434
+19915,NA,2017-08-01,EXCERPTS,43,1994-02-07,Male,Asian,Not Hispanic or Latino,typical,"English, Korean",NA,NA,Left,Adults,Production,Duplo,Squigz,Shape Sorter,NA,NA,NA,Lab,English,US,NY,434
+19921,NA,2017-08-04,EXCERPTS,45,2013-12-28,Male,Black or African American,Not Hispanic or Latino,typical,English,NA,NA,Right,4 Year Olds,Production,Duplo,Squigz,Shape Sorter,NA,NA,NA,Lab,English,US,NY,434
+19970,NA,2017-08-04,EXCERPTS,46,1994-10-06,Female,White,Not Hispanic or Latino,typical,English,NA,NA,Right,Adults,Production,Duplo,Squigz,Shape Sorter,NA,NA,NA,Lab,English,US,NY,434
+19974,NA,2017-08-08,EXCERPTS,47,2013-03-07,Male,White,Not Hispanic or Latino,typical,"English, Spanish",NA,NA,Right,4 Year Olds,Production,Duplo,Squigz,Shape Sorter,NA,NA,NA,Lab,English,US,NY,434
+19980,NA,2017-08-09,SHARED,48,2017-04-30,Male,Asian,Not Hispanic or Latino,typical,English,NA,NA,Right,4 Year Olds,Production,Duplo,Squigz,Shape Sorter,NA,NA,NA,Lab,English,US,NY,434
+20058,NA,2017-08-10,EXCERPTS,49,2013-02-25,Female,White,Not Hispanic or Latino,typical,English,NA,NA,Right,4 Year Olds,Production,Duplo,Squigz,Shape Sorter,NA,NA,NA,Lab,English,US,NY,434
+20124,NA,2017-08-14,EXCERPTS,50,2013-05-12,Female,White,Not Hispanic or Latino,typical,English,NA,Withdrew/fussy/tired,Right,4 Year Olds,NA,NA,NA,NA,NA,NA,NA,Lab,English,US,NY,434
+20250,NA,2017-08-21,EXCERPTS,51,2013-08-31,Female,White,Not Hispanic or Latino,typical,English,NA,NA,Right,4 Year Olds,Production,Duplo,Squigz,Shape Sorter,NA,NA,NA,Lab,English,US,NY,434
+20267,NA,2017-06-29,EXCERPTS,25,1994-02-26,Female,More than one,Hispanic or Latino,typical,"English, Spanish",NA,NA,Right,Adults,Production,Duplo,Squigz,Shape Sorter,NA,NA,NA,Lab,English,US,NY,434
+20268,NA,2017-06-29,EXCERPTS,26,1996-02-28,Female,Asian,Not Hispanic or Latino,typical,English,NA,NA,Right,Adults,Production,Duplo,Squigz,Shape Sorter,NA,NA,NA,Lab,English,US,NY,434
+20269,NA,2017-07-03,EXCERPTS,27,2013-03-13,Male,Black or African American,Not Hispanic or Latino,typical,English,NA,NA,Right,4 Year Olds,Production,Duplo,Squigz,Shape Sorter,NA,NA,NA,Lab,English,US,NY,434
+20270,NA,2017-07-03,EXCERPTS,28,1992-09-30,Male,White,Not Hispanic or Latino,typical,English,NA,NA,Right,Adults,Production,Duplo,Squigz,Shape Sorter,NA,NA,NA,Lab,English,US,NY,434
+20271,NA,2017-07-07,EXCERPTS,29,1996-02-14,Male,Unknown or not reported,Hispanic or Latino,typical,English,NA,NA,Right,Adults,Production,Duplo,Squigz,Shape Sorter,NA,NA,NA,Lab,English,US,NY,434
+20272,NA,2017-07-07,EXCERPTS,30,1996-02-21,Male,Asian,Not Hispanic or Latino,typical,English,NA,NA,Right,Adults,Production,Duplo,Squigz,Shape Sorter,NA,NA,NA,Lab,English,US,NY,434
+20273,NA,2017-07-07,EXCERPTS,31,1997-06-14,Male,Asian,Not Hispanic or Latino,typical,"English, Mandarin, Cantonese",NA,NA,Right,Adults,Production,Duplo,Squigz,Shape Sorter,NA,NA,NA,Lab,English,US,NY,434
+21211,NA,2017-10-25,EXCERPTS,53,2014-01-17,Female,More than one,Hispanic or Latino,typical,"English, Spanish",NA,NA,Right,4 Year Olds,Production,Duplo,Squigz,Shape Sorter,NA,NA,NA,Lab,English,US,NY,434
+21238,NA,2017-10-27,EXCERPTS,54,2013-09-10,Male,More than one,Not Hispanic or Latino,typical,"English, Spanish",NA,NA,Right,4 Year Olds,Production,Duplo,Squigz,NA,NA,NA,NA,Lab,English,US,NY,434
+21337,NA,2017-10-30,EXCERPTS,55,2014-02-25,Male,White,Not Hispanic or Latino,typical,English,NA,NA,Right,4 Year Olds,Production,Duplo,Squigz,Shape Sorter,NA,NA,NA,Lab,English,US,NY,434
+21428,NA,2017-11-03,EXCERPTS,56,2013-10-15,Female,White,Not Hispanic or Latino,typical,English,NA,NA,Right,4 Year Olds,Production,Duplo,Squigz,Shape Sorter,NA,NA,NA,Lab,English,US,NY,434
+24844,NA,2018-XX-XX,PRIVATE,58,NA,Female,White,Not Hispanic or Latino,typical,English,NA,NA,Right,4 Year Olds,Production,Duplo,Squigz,Shape Sorter,NA,NA,NA,Lab,English,US,NY,434
+25204,NA,2018-02-20,EXCERPTS,59,2014-10-08,Female,White,Not Hispanic or Latino,typical,"English, Sweedish",NA,Exclude because using both hands,Both,4 Year Olds,Production,Duplo,Shape Sorter,Squiz,NA,NA,NA,Lab,English,US,NY,434
+25239,NA,2018-02-21,EXCERPTS,60,2014-08-03,Female,White,Hispanic or Latino,typical,English,NA,NA,Left,4 Year Olds,NA,NA,NA,NA,NA,NA,NA,Lab,English,US,NY,434
+25428,NA,2018-03-02,EXCERPTS,61,2014-07-08,Female,More than one,Hispanic or Latino,typical,"English, Spanish",NA,NA,Right,4 Year Olds,Production,Duplo,Squigz,Shape Sorter,NA,NA,NA,Lab,English,US,NY,434
+25429,NA,2018-03-02,EXCERPTS,62,2014-07-26,Male,White,Not Hispanic or Latino,typical,English,NA,NA,Right,4 Year Olds,Production,Duplo,Squigz,NA,NA,NA,NA,Lab,English,US,NY,434
+25518,NA,2018-03-09,EXCERPTS,63,2014-07-30,Male,Asian,Not Hispanic or Latino,typical,English,NA,NA,Right,4 Year Olds,Production,Duplo,Squigz,Shapesorter,NA,NA,NA,Lab,English,US,NY,434
+25585,NA,2018-03-14,EXCERPTS,64,2014-02-11,Female,White,Not Hispanic or Latino,typical,English,NA,NA,Right,4 Year Olds,Production,Duplo,Squigz,NA,NA,NA,NA,Lab,English,US,NY,434
+25628,NA,2018-03-16,EXCERPTS,65,2014-07-03,Female,White,Not Hispanic or Latino,typical,English,NA,NA,Left,4 Year Olds,Production,Duplo,Squigz,Shapesorter,NA,NA,NA,Lab,English,US,NY,434
+25736,NA,2018-03-27,EXCERPTS,66,1997-10-21,Female,Unknown or not reported,Not Hispanic or Latino,typical,English,NA,NA,Right,Adults,Production,Duplo,Squigz,Shapesorter,Zipper,Twist top,Cabinets,Lab,English,US,NY,434
+25737,NA,2018-03-27,EXCERPTS,67,1997-10-23,Female,Asian,Not Hispanic or Latino,typical,English,NA,NA,Left,Adults,Production,Duplo,Squigz,Shapesorter,Zipper,Twist top,Cabinets,Lab,English,US,NY,434
+25738,NA,2018-03-27,EXCERPTS,68,1995-10-16,Female,White,Not Hispanic or Latino,typical,English,NA,NA,Right,Adults,Production,Duplo,Squigz,Shapesorter,Zipper,Cabinets,Twist tops,Lab,English,US,NY,434
+25739,NA,2018-03-27,EXCERPTS,69,1996-05-14,Female,Asian,Not Hispanic or Latino,typical,"English, Chinese",NA,NA,Right,Adults,Production,Duplo,Squigz,Shapesorter,Zipper,Cabinets,Twist tops,Lab,English,US,NY,434
+25944,NA,2018-03-30,EXCERPTS,70,1995-12-16,Female,Asian,Not Hispanic or Latino,typical,"English, Chinese",NA,NA,Right,Adults,Production,Duplo,Squigz,Shapesorter,Zipper,Twist top,Cabinets,Lab,English,US,NY,434
+25946,NA,2018-03-30,EXCERPTS,71,1996-07-06,Female,Asian,Not Hispanic or Latino,typical,English,NA,NA,Left,Adults,Production,Duplo,Squigz,Shapesorter,Zipper,Twist top,Cabinets,Lab,English,US,NY,434
+25975,NA,2018-04-02,EXCERPTS,72,2014-07-29,Male,Asian,Not Hispanic or Latino,typical,English,NA,NA,Right,4 Year Olds,Production,Duplo,Squigz,NA,NA,NA,NA,Lab,English,US,NY,434
+26232,NA,2018-04-06,EXCERPTS,73,2014-09-10,Male,White,Not Hispanic or Latino,typical,"English, Spanish",NA,NA,Right,4 Year Olds,Production,Duplo,Squigz,Shapesorter,NA,NA,NA,Lab,English,US,NY,434
+27708,NA,2018-05-11,EXCERPTS,74,2014-08-11,Male,White,Not Hispanic or Latino,typical,English,NA,NA,Right,4 Year Olds,Production,Duplo,Squigz,Shapesorter,NA,NA,NA,Lab,English,US,NY,434
+28126,NA,2018-05-25,EXCERPTS,75,2014-07-25,Female,More than one,Not Hispanic or Latino,typical,English,NA,NA,Right,4 Year Olds,Production,Duplo,Squigz,Shapesorter,NA,NA,NA,Lab,English,US,NY,434
+28173,NA,2018-05-31,EXCERPTS,76,2014-02-09,Male,White,Hispanic or Latino,typical,"English, Spanish",NA,NA,Right,4 Year Olds,Production,Duplo,Squigz,Shapesorter,NA,NA,NA,Lab,English,US,NY,434
+29492,NA,2018-06-19,EXCERPTS,77,2014-11-05,Female,White,Hispanic or Latino,typical,"English, French, Spanish",NA,NA,Right,4 Year Olds,Production,Duplo,Squigz,Shapesorter,NA,NA,NA,Lab,English,US,NY,434
+29541,NA,2018-06-21,EXCERPTS,78,2015-05-04,Female,White,Not Hispanic or Latino,typical,English,NA,NA,Right,4 Year Olds,Production,Duplo,Squigz,Shapesorter,NA,NA,NA,Lab,English,US,NY,434
+30161,NA,2018-07-16,EXCERPTS,79,2013-09-01,Female,White,Not Hispanic or Latino,typical,English,NA,NA,Both,4 Year Olds,Production,Duplo,Squigz,Shapesorter,NA,NA,NA,Lab,English,US,NY,434
+41686,NA,2017-08-25,EXCERPTS,52,2013-08-21,Male,More than one,Not Hispanic or Latino,typical,English,NA,NA,Right,4 Year Olds,Duplo,Squigz,Shapesorter,Hammering,NA,NA,NA,Lab,English,US,NY,434
+41687,NA,2017-11-06,EXCERPTS,57,2013-07-22,Male,White,Not Hispanic or Latino,typical,English,NA,NA,Right,4 Year Olds,Duplo,Squigz,Shapesorter,Hammering,NA,NA,NA,Lab,English,US,NY,434
+45990,NA,materials,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,434
+51705,Exemplar implementation error,materials,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,434
+51706,Last moment grip selection,materials,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,434
+51707,Looking probability video,NA,PUBLIC,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,434

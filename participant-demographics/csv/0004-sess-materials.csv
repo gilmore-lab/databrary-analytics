@@ -1,0 +1,70 @@
+session_id,session_name,session_date,session_release,participant_ID,participant_birthdate,participant_gender,participant_race,participant_ethnicity,participant_pregnancy term,participant_disability,pilot_pilot,exclusion_reason,condition_name,group_name,context_setting,context_language,context_country,context_state,vol_id
+13,NA,2012-07-19,EXCERPTS,1,2011-06-20,Female,Asian,Unknown or not reported,Full term,typical,NA,NA,Motion tracking,Crawler,Lab,English,US,NY,4
+14,NA,2012-07-26,EXCERPTS,2,2011-06-27,Female,More than one,Hispanic or Latino,Full term,typical,NA,NA,Motion tracking,Walker,Lab,English,US,NY,4
+15,NA,2012-07-27,EXCERPTS,3,2011-06-14,Male,White,Not Hispanic or Latino,Full term,typical,NA,NA,Motion tracking,Walker,Lab,English,US,NY,4
+16,NA,2012-07-31,EXCERPTS,4,2011-06-26,Male,White,Not Hispanic or Latino,Full term,typical,NA,NA,Motion tracking,Walker,Lab,English,US,NY,4
+17,NA,2012-08-02,EXCERPTS,5,2011-06-27,Female,White,Not Hispanic or Latino,Full term,typical,NA,NA,Motion tracking,Crawler,Lab,English,US,NY,4
+18,NA,2012-XX-XX,PRIVATE,6,NA,Male,Unknown or not reported,Unknown or not reported,Full term,typical,NA,NA,Motion tracking,Walker,Lab,English,US,NY,4
+19,NA,2012-08-21,EXCERPTS,7,2011-07-22,Male,White,Hispanic or Latino,Full term,typical,NA,NA,Motion tracking,Crawler,Lab,English,US,NY,4
+20,NA,2012-09-15,EXCERPTS,8,2011-08-22,Male,White,Not Hispanic or Latino,Full term,typical,NA,NA,Motion tracking,Crawler,Lab,English,US,NY,4
+21,NA,2012-XX-XX,PRIVATE,9,NA,Male,White,Hispanic or Latino,Full term,typical,NA,Did not meet inclusion criteria,Motion tracking,Crawler,Lab,English,US,NY,4
+22,NA,2012-10-02,EXCERPTS,10,2011-09-02,Female,Asian,Not Hispanic or Latino,Full term,typical,NA,Did not meet inclusion criteria,Motion tracking,Crawler,Lab,English,US,NY,4
+23,NA,2012-10-05,EXCERPTS,11,2011-09-01,Female,White,Not Hispanic or Latino,Full term,typical,NA,NA,Motion tracking,Crawler,Lab,English,US,NY,4
+24,NA,2012-10-25,EXCERPTS,12,2011-09-28,Male,White,Not Hispanic or Latino,Full term,typical,NA,NA,Motion tracking,Crawler,Lab,English,US,NY,4
+25,NA,2013-03-14,EXCERPTS,13,2012-02-08,Male,Asian,Not Hispanic or Latino,Full term,typical,NA,Procedural/experimenter error,Motion tracking,Crawler,Lab,English,US,NY,4
+26,NA,2013-04-08,EXCERPTS,14,2012-03-05,Female,White,Not Hispanic or Latino,Full term,typical,NA,NA,Motion tracking,Crawler,Lab,English,US,NY,4
+27,NA,2013-04-11,EXCERPTS,15,2012-03-10,Female,White,Not Hispanic or Latino,Full term,typical,NA,NA,Motion tracking,Crawler,Lab,English,US,NY,4
+28,NA,2013-05-02,EXCERPTS,16,2012-03-24,Male,White,Not Hispanic or Latino,Full term,typical,NA,NA,Motion tracking,Crawler,Lab,English,US,NY,4
+29,NA,2013-05-23,EXCERPTS,17,2012-04-26,Female,More than one,Not Hispanic or Latino,Full term,typical,NA,Did not meet inclusion criteria,Motion tracking,Crawler,Lab,English,US,NY,4
+30,NA,2013-06-18,EXCERPTS,19,2012-05-08,Female,More than one,Unknown or not reported,Full term,typical,NA,NA,Motion tracking,Crawler,Lab,English,US,NY,4
+32,NA,2010-08-27,EXCERPTS,1,2009-07-24,Male,Asian,Not Hispanic or Latino,Full term,typical,NA,NA,Eye tracking,Crawler,Lab,English,US,NY,4
+33,NA,2010-08-30,EXCERPTS,2,2009-07-25,Male,More than one,Not Hispanic or Latino,Full term,typical,NA,NA,Eye tracking,Walker,Lab,English,US,NY,4
+34,NA,2010-09-03,EXCERPTS,3,2009-07-21,Male,White,Not Hispanic or Latino,Full term,typical,NA,NA,Eye tracking,Crawler,Lab,English,US,NY,4
+35,NA,2010-10-07,EXCERPTS,4,2009-08-31,Female,White,Not Hispanic or Latino,Full term,typical,NA,Withdrew/fussy/tired,Eye tracking,Walker,Lab,English,US,NY,4
+36,NA,2010-10-11,EXCERPTS,5,2009-09-17,Male,White,Not Hispanic or Latino,Full term,typical,NA,NA,Eye tracking,Crawler,Lab,English,US,NY,4
+37,NA,2010-10-15,EXCERPTS,6,2009-09-17,Female,Unknown or not reported,Unknown or not reported,Full term,typical,NA,NA,Eye tracking,Walker,Lab,English,US,NY,4
+38,NA,2010-10-19,EXCERPTS,7,2009-09-22,Male,Unknown or not reported,Hispanic or Latino,Full term,typical,NA,Did not meet inclusion criteria,Eye tracking,Walker,Lab,English,US,NY,4
+39,NA,2010-11-09,EXCERPTS,8,2009-10-04,Male,White,Not Hispanic or Latino,Full term,typical,NA,NA,Eye tracking,Walker,Lab,English,US,NY,4
+40,NA,2010-12-10,EXCERPTS,9,2009-11-03,Male,White,Hispanic or Latino,Full term,typical,NA,NA,Eye tracking,Walker,Lab,English,US,NY,4
+41,NA,2011-XX-XX,PRIVATE,10,NA,Male,Asian,Not Hispanic or Latino,Full term,typical,NA,Did not meet inclusion criteria,Eye tracking,Walker,Lab,English,US,NY,4
+42,NA,2011-02-16,EXCERPTS,11,2010-01-13,Male,More than one,Not Hispanic or Latino,Full term,typical,NA,NA,Eye tracking,Walker,Lab,English,US,NY,4
+43,NA,2011-XX-XX,PRIVATE,12,NA,Female,White,Not Hispanic or Latino,Full term,typical,NA,Procedural/experimenter error,Eye tracking,Walker,Lab,English,US,NY,4
+44,NA,2011-03-02,EXCERPTS,13,2010-01-25,Female,White,Not Hispanic or Latino,Full term,typical,NA,NA,Eye tracking,Walker,Lab,English,US,NY,4
+45,NA,2011-03-17,EXCERPTS,14,2010-02-10,Female,More than one,Not Hispanic or Latino,Full term,typical,NA,NA,Eye tracking,Crawler,Lab,English,US,NY,4
+46,NA,2011-04-06,EXCERPTS,15,2010-03-03,Male,White,Not Hispanic or Latino,Full term,typical,NA,Did not meet inclusion criteria,Eye tracking,Walker,Lab,English,US,NY,4
+47,NA,2011-04-08,EXCERPTS,16,2010-03-01,Female,White,Not Hispanic or Latino,Full term,typical,NA,NA,Eye tracking,Walker,Lab,English,US,NY,4
+48,NA,2011-04-27,EXCERPTS,17,2010-03-19,Male,White,Not Hispanic or Latino,Full term,typical,NA,NA,Eye tracking,Walker,Lab,English,US,NY,4
+49,NA,2011-XX-XX,NA,18,NA,Female,White,Not Hispanic or Latino,Full term,typical,NA,NA,Eye tracking,Walker,Lab,English,US,NY,4
+50,NA,2011-XX-XX,PRIVATE,19,NA,Male,White,Not Hispanic or Latino,Full term,typical,NA,Procedural/experimenter error,Eye tracking,Crawler,Lab,English,US,NY,4
+51,NA,2011-XX-XX,PRIVATE,20,NA,Female,White,Not Hispanic or Latino,Full term,typical,NA,Withdrew/fussy/tired,Eye tracking,Walker,Lab,English,US,NY,4
+52,NA,2011-07-19,EXCERPTS,21,2010-06-14,Male,Asian,Not Hispanic or Latino,Full term,typical,NA,NA,Eye tracking,Walker,Lab,English,US,NY,4
+53,NA,2011-XX-XX,PRIVATE,22,NA,Female,White,Not Hispanic or Latino,Full term,typical,NA,NA,Eye tracking,Walker,Lab,English,US,NY,4
+54,NA,2011-07-27,EXCERPTS,23,2010-06-21,Male,Asian,Not Hispanic or Latino,Full term,typical,NA,Did not meet inclusion criteria,Eye tracking,Walker,Lab,English,US,NY,4
+55,NA,2011-07-29,EXCERPTS,24,2010-07-01,Female,Black or African American,Not Hispanic or Latino,Full term,typical,NA,NA,Eye tracking,Crawler,Lab,English,US,NY,4
+56,NA,2011-XX-XX,PRIVATE,25,NA,Female,White,Not Hispanic or Latino,Full term,typical,NA,NA,Eye tracking,Walker,Lab,English,US,NY,4
+57,NA,2011-08-05,EXCERPTS,26,2010-06-29,Female,More than one,Not Hispanic or Latino,Full term,typical,NA,Withdrew/fussy/tired,Eye tracking,Walker,Lab,English,US,NY,4
+58,NA,2011-08-05,EXCERPTS,27,2010-06-30,Male,White,Not Hispanic or Latino,Full term,typical,NA,NA,Eye tracking,Crawler,Lab,English,US,NY,4
+59,NA,2011-XX-XX,PRIVATE,28,NA,Male,Unknown or not reported,Unknown or not reported,Full term,typical,NA,Did not meet inclusion criteria,Eye tracking,Walker,Lab,English,US,NY,4
+60,NA,2011-08-19,EXCERPTS,29,2010-07-14,Male,White,Not Hispanic or Latino,Full term,typical,NA,NA,Eye tracking,Crawler,Lab,English,US,NY,4
+61,NA,2011-08-31,EXCERPTS,30,2010-07-28,Male,White,Not Hispanic or Latino,Full term,typical,NA,Withdrew/fussy/tired,Eye tracking,Walker,Lab,English,US,NY,4
+62,NA,2011-09-12,EXCERPTS,31,2010-08-12,Male,More than one,Hispanic or Latino,Full term,typical,NA,NA,Eye tracking,Walker,Lab,English,US,NY,4
+63,NA,2011-10-03,EXCERPTS,32,2010-09-02,Male,Asian,Not Hispanic or Latino,Full term,typical,NA,NA,Eye tracking,Crawler,Lab,English,US,NY,4
+64,NA,2011-10-04,EXCERPTS,33,2010-09-08,Male,White,Not Hispanic or Latino,Full term,typical,NA,NA,Eye tracking,Walker,Lab,English,US,NY,4
+65,NA,2011-10-18,EXCERPTS,34,2010-09-22,Female,Black or African American,Not Hispanic or Latino,Full term,typical,NA,NA,Eye tracking,Crawler,Lab,English,US,NY,4
+66,NA,2011-11-03,EXCERPTS,35,2010-09-30,Male,White,Not Hispanic or Latino,Full term,typical,NA,Withdrew/fussy/tired,Eye tracking,Walker,Lab,English,US,NY,4
+67,NA,2011-11-07,EXCERPTS,36,2010-10-14,Male,White,Not Hispanic or Latino,Full term,typical,NA,NA,Eye tracking,Crawler,Lab,English,US,NY,4
+68,NA,2011-11-09,EXCERPTS,37,2010-10-13,Male,Asian,Not Hispanic or Latino,Full term,typical,NA,NA,Eye tracking,Crawler,Lab,English,US,NY,4
+69,NA,2011-11-18,EXCERPTS,38,2010-10-11,Female,Unknown or not reported,Hispanic or Latino,Full term,typical,NA,NA,Eye tracking,Crawler,Lab,English,US,NY,4
+70,NA,2011-12-13,EXCERPTS,39,2010-11-09,Male,White,Not Hispanic or Latino,Full term,typical,NA,Withdrew/fussy/tired,Eye tracking,Crawler,Lab,English,US,NY,4
+71,NA,2012-XX-XX,PRIVATE,40,NA,Female,More than one,Hispanic or Latino,Full term,typical,NA,Did not meet inclusion criteria,Eye tracking,Walker,Lab,English,US,NY,4
+72,NA,2012-02-21,EXCERPTS,41,2011-01-17,Female,White,Not Hispanic or Latino,Full term,typical,NA,NA,Eye tracking,Walker,Lab,English,US,NY,4
+73,NA,2012-02-22,EXCERPTS,42,2011-01-17,Female,White,Not Hispanic or Latino,Full term,typical,NA,Withdrew/fussy/tired,Eye tracking,Crawler,Lab,English,US,NY,4
+74,NA,2012-XX-XX,PRIVATE,43,NA,Female,White,Not Hispanic or Latino,Full term,typical,NA,NA,Eye tracking,Crawler,Lab,English,US,NY,4
+75,NA,2012-05-22,EXCERPTS,44,2011-04-14,Female,White,Not Hispanic or Latino,Full term,typical,NA,NA,Eye tracking,Walker,Lab,English,US,NY,4
+76,NA,2012-05-24,EXCERPTS,45,2011-04-14,Female,White,Not Hispanic or Latino,Full term,typical,NA,NA,Eye tracking,Crawler,Lab,English,US,NY,4
+77,NA,2012-06-04,EXCERPTS,46,2011-05-01,Male,White,Not Hispanic or Latino,Full term,typical,NA,Withdrew/fussy/tired,Eye tracking,Crawler,Lab,English,US,NY,4
+78,NA,2012-06-26,EXCERPTS,47,2011-05-23,Male,More than one,Not Hispanic or Latino,Full term,typical,NA,Procedural/experimenter error,Eye tracking,Crawler,Lab,English,US,NY,4
+79,NA,2012-06-26,EXCERPTS,48,2011-05-24,Female,White,Hispanic or Latino,Full term,typical,NA,NA,Eye tracking,Crawler,Lab,English,US,NY,4
+80,NA,2012-07-13,EXCERPTS,49,2011-06-05,Male,More than one,Hispanic or Latino,Full term,typical,NA,NA,Eye tracking,Crawler,Lab,English,US,NY,4
+6249,NA,materials,NA,NA,NA,NA,NA,NA,Full term,typical,NA,NA,Eye tracking,NA,NA,NA,NA,NA,4
+6250,NA,materials,NA,NA,NA,NA,NA,NA,Full term,typical,NA,NA,Motion tracking,NA,NA,NA,NA,NA,4

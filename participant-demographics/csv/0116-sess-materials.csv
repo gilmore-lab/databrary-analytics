@@ -1,0 +1,7 @@
+session_id,session_name,session_date,session_release,participant1_ID,participant1_birthdate,participant1_gender,participant1_race,participant1_ethnicity,participant1_disability,participant1_language,participant2_ID,participant2_birthdate,participant2_gender,participant2_race,participant2_ethnicity,participant2_disability,participant2_language,context_setting,context_state,vol_id
+7739,dyad-16,2010-01-25,SHARED,16-1,2009-04-30,Female,White,Not Hispanic or Latino,typical,English,16-2,NA,NA,NA,NA,typical,English,Indoor,NY,116
+7740,dyad-17,NA,NA,17-1,NA,NA,NA,NA,typical,English,17-2,NA,NA,NA,NA,typical,English,Indoor,NY,116
+7741,dyad-18,NA,NA,18-1,NA,NA,NA,NA,typical,English,18-2,NA,NA,NA,NA,typical,English,Indoor,NY,116
+7742,dyad-22,NA,NA,22-1,NA,NA,NA,NA,typical,English,22-2,NA,NA,NA,NA,typical,English,Indoor,NY,116
+7743,dyad-23,NA,NA,23-1,NA,NA,NA,NA,typical,English,23-2,NA,NA,NA,NA,typical,English,Indoor,NY,116
+7744,dyad-27,NA,NA,27-1,NA,NA,NA,NA,typical,English,27-2,NA,NA,NA,NA,typical,English,Indoor,NY,116
