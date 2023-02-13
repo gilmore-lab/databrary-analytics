@@ -91,11 +91,16 @@ list(
   # Institutions and investigators (detailed)
   tar_target(make_inst_csvs,
              get_save_many_inst_csvs(10868, max_party_id, update_geo = TRUE)),
+  tar_target(invest_df, 
+             readr::read_csv('src/csv/all-ais.csv', show_col_types = FALSE)),
   tar_target(institution_csv_fl,
              list.files("src/csv", "inst\\-[0-9]+\\.csv", full.names = TRUE)),
+  tar_target(make_all_ais_csv, 
+             update_invest_csv(inst_df)),
   #--- Skip party 2 (staff)
   tar_target(inst_df,
-             load_inst_df_from_csvs(institution_csv_fl[2:length(institution_csv_fl)])),
+             load_inst_df_from_csvs(institution_csv_fl[2:length(institution_csv_fl)]),
+            ),
   # Volume-level sessions
   tar_target(vols_sess_df,
              get_many_volumes_data(1, max_vol_id),

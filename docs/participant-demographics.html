@@ -1586,10 +1586,8 @@ n_sessions
 </h4>
 <p>The following summarizes the number of individual participant-sessions for whom there are data.</p>
 <pre><code>## age_grp
-##    &lt;3m   3-6m  6m-1y   1-2y   2-3y   3-4y   4-5y  5-15y 15-20y 
-##     90    129   1065   2870    764    450    886   1431     67 
-## 20-25y   &gt;25y 
-##    299    398</code></pre>
+##    &lt;3m   3-6m  6m-1y   1-2y   2-3y   3-4y   4-5y  5-15y 15-20y 20-25y   &gt;25y 
+##     90    129   1065   2870    764    450    886   1431     67    299    398</code></pre>
 <div class="sourceCode" id="cb10"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">demo_df</span> <span class="op">%&gt;%</span></span>
 <span>  <span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html">filter</a></span><span class="op">(</span><span class="va">.</span>, <span class="va">age_days</span> <span class="op">&lt;=</span> <span class="fl">365.24</span><span class="op">*</span><span class="fl">5</span><span class="op">)</span> <span class="op">%&gt;%</span></span>
@@ -11030,7 +11028,7 @@ Unknown
 <footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
 
   <div class="col-12 col-md-6 mt-3">
-    <p>"<strong>Databrary analytics</strong>" was written by Rick Gilmore. It was last built on 2023-02-10.</p>
+    <p>"<strong>Databrary analytics</strong>" was written by Rick Gilmore. It was last built on 2023-02-13.</p>
   </div>
 
   <div class="col-12 col-md-6 mt-3">

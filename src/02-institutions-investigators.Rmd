@@ -11,11 +11,6 @@ suppressPackageStartupMessages(library(tidyverse))
 library(targets)
 tar_load(inst_df, store = "../_targets/")
 
-# l <- list.files("csv", "inst\\-[0-9]+\\.csv", full.names = TRUE)
-# ll <- length(l)
-# 
-# inst_df <- load_inst_df_from_csvs(l[2:ll])
-
 inst_daa_df <- dplyr::filter(inst_df , daa == TRUE)
 ```
 
@@ -32,14 +27,39 @@ inst_daa_df |>
   geom_histogram()
 ```
 
+```{r}
+ai_stats <- fivenum(inst_daa_df$n_auth_invest)
+```
+
+The number of authorized investigators/institution is in the range of [`r ai_stats[1]`, `r ai_stats[5]`], with a median of `r ai_stats[3]` and a mean of `r mean(inst_daa_df$n_auth_inv)`.
+
 ### Table
 
 ```{r}
 inst_daa_df %>%
-  dplyr::select(., -c("lat", "lon", "daa", "inst_url")) %>%
+  dplyr::select(., -c("lat", "lon", "daa", "inst_url", "databrary_url")) %>%
   dplyr::arrange(., desc(n_auth_invest)) %>%
-  kableExtra::kable(format = 'html')
+  kableExtra::kable(format = 'html') %>%
+  kableExtra::kable_styling(bootstrap_options = c("striped", "hover", "condensed", "responsive"))
 ```
+
+### Map
+
+```{r site-map, fig.align='center', out.width='80%'}
+lat_lon_df <- inst_daa_df %>%
+  dplyr::filter(., !is.na(lat), !is.na(lon))
+
+ggmap::qmplot(lon, lat, 
+              data = lat_lon_df, 
+              geom = "point",
+              scale = 4)
+```
+
+::: {.rmdnote}
+
+**TODO**: Add the automatic creation of the JSON file needed to render the map on the Databrary home page.
+
+:::
 
 ## Investigators
 
@@ -49,3 +69,90 @@ These summaries are a work-in-progress.
 
 :::
 
+### Import data
+
+```{r, eval = FALSE}
+tar_load(invest_df, store = "../_targets/")
+# invest_df <- readr::read_csv("src/csv/all-ais.csv", show_col_types = FALSE)
+# invest_df <- dplyr::distinct(invest_df)
+```
+
+### Visualize and summarize {.tabset .tabset-fade .tabset-pills}
+
+```{r, eval = FALSE}
+gte2_affils <- invest_df %>%
+  dplyr::filter(., n_affils >= 2)
+gte5_affils <- invest_df %>%
+  dplyr::filter(., n_affils >= 5)
+gte10_affils <- invest_df %>%
+  dplyr::filter(., n_affils >= 10)
+no_affils <- invest_df %>%
+  dplyr::filter(., n_affils < 1)
+```
+
+Note that there are `r dim(gte10_affils)[1]` Authorized Investigators with 10 or more affiliates; `r dim(gte5_affils)[1]` with 5 or more; `r dim(gte2_affils)[1]` with 2 or more affiliates; and `r dim(no_affils)[1]` with no affilates.
+
+#### 10+ affiliates
+
+```{r, eval = FALSE}
+ggplot(gte10_affils) +
+  aes(n_affils) +
+  geom_histogram(bins = 10)
+```
+
+```{r, eval = FALSE}
+gte10_affils %>%
+  dplyr::arrange(., desc(n_affils)) %>%
+  dplyr::select(., ai_id, ai_last, ai_first, affiliation, ai_db_url, n_affils) %>%
+  kableExtra::kbl(.) %>%
+  kableExtra::kable_styling()
+```
+
+#### 5+ affiliates
+
+```{r, eval = FALSE}
+ggplot(gte5_affils) +
+  aes(n_affils) +
+  geom_histogram(bins = 10)
+```
+
+```{r, eval = FALSE}
+gte5_affils %>%
+  dplyr::arrange(., desc(n_affils)) %>%
+  dplyr::select(., ai_id, ai_last, ai_first, affiliation, ai_db_url, n_affils) %>%
+  kableExtra::kbl(.) %>%
+  kableExtra::kable_styling()
+```
+
+#### 2+ affiliates
+
+```{r, eval = FALSE}
+ggplot(gte2_affils) +
+  aes(n_affils) +
+  geom_histogram(bins = 15)
+```
+
+```{r, eval = FALSE}
+gte2_affils %>%
+  dplyr::arrange(., desc(n_affils)) %>%
+  dplyr::select(., ai_id, ai_last, ai_first, affiliation, ai_db_url, n_affils) %>%
+  kableExtra::kbl(.) %>%
+  kableExtra::kable_styling()
+```
+
+#### ## All
+
+```{r, eval = FALSE}
+ggplot(invest_df) +
+  aes(n_affils) +
+  geom_histogram(bins = 20)
+```
+
+```{r, eval = FALSE}
+invest_df %>%
+  
+  dplyr::arrange(., desc(n_affils)) %>%
+  dplyr::select(., ai_id, ai_last, ai_first, affiliation, ai_db_url, n_affils) %>%
+  kableExtra::kbl(.) %>%
+  kableExtra::kable_styling()
+```

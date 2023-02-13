@@ -15,7 +15,14 @@ investigators-and-institutions
 institutions
 histogram
 table
+map
 investigators
+import-data
+visualize-and-summarize
+affiliates
+affiliates-1
+affiliates-2
+all
 tags-and-keywords
 purpose-1
 load-tags-data
@@ -71,7 +78,7 @@ volumes-and-sessions-6
 number-of-participants-6
 shared-volumes-and-sessions
 purpose-5
-import-data
+import-data-1
 how-shared-by-unique-volume
 full-volume
 overview-only

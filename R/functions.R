@@ -1654,54 +1654,101 @@ create_complete_demog_df <- function(fl, vb = FALSE) {
 # if update_inst is TRUE, updates the institutional database first then uses the updated
 # institutions list to generate the authorized investigators data frame.
 # if save_new is FALSE, no file is saved.
-update_invest_csv <- function(csv_fn = "src/csv/investigators.csv",
-                              save_new = TRUE,
-                              update_inst = TRUE,
-                              return_df = FALSE,
+# update_invest_csv <- function(csv_fn = "src/csv/investigators.csv",
+#                               save_new = TRUE,
+#                               update_inst = TRUE,
+#                               return_df = FALSE,
+#                               vb = FALSE) {
+#   if (vb)
+#     message("Updating list of authorizing institutions.")
+#   inst_ids <- get_auth_inst_list(update_inst)
+#   
+#   if (vb)
+#     message("Retrieving authorized investigators from institutions.")
+#   df <-
+#     purrr::map_df(inst_ids, get_ais_from_inst, .progress = "AIs from inst:")
+#   
+#   if (file.exists(csv_fn)) {
+#     message(paste0("File exists: ", csv_fn))
+#     if (save_new == TRUE) {
+#       message(paste0("Overwriting."))
+#       write_csv(df, csv_fn)
+#     } else {
+#       message("No file saved.")
+#     }
+#   } else {
+#     message(paste0("Creating new file: ", csv_fn))
+#   }
+#   if (return_df) {
+#     df
+#   }
+# }
+
+#-------------------------------------------------------------------------------
+update_invest_csv <- function(all_inst_df,
+                              csv_dir = "src/csv",
                               vb = FALSE) {
-  if (vb)
-    message("Updating list of authorizing institutions.")
-  inst_ids <- get_auth_inst_list(update_inst)
+
+  # Filter
+  # if (vb) message("Getting updated institutional info")
+  # all_inst_df <- get_all_inst(csv_dir, save_csv = TRUE, vb)
   
-  if (vb)
-    message("Retrieving authorized investigators from institutions.")
-  df <-
-    purrr::map_df(inst_ids, get_ais_from_inst, .progress = "AIs from inst:")
+  if (vb) message("Filtering for active institutions with AIs.")
+  inst_ids <- dplyr::filter(all_inst_df, daa == TRUE, n_auth_invest > 0) %>%
+    dplyr::select(inst_id)
+  ids <- as.integer(unlist(inst_ids))
   
-  if (file.exists(csv_fn)) {
-    message(paste0("File exists: ", csv_fn))
-    if (save_new == TRUE) {
-      message(paste0("Overwriting."))
-      write_csv(df, csv_fn)
-    } else {
-      message("No file saved.")
+  if (vb) message("There are n=", dim(ids)[1], " institutions with AIs. Retrieving AI info." )
+  
+   ais_l <- purrr::map(ids, get_ais_from_inst, vb, .progress = "AIs from insts:")
+   
+   if (vb) message("Making data frame.")
+   ais_df <- purrr::list_rbind(ais_l)
+   
+   fn <- file.path(csv_dir, "all-ais.csv")
+   if (vb) message("Writing CSV: ", fn)
+   readr::write_csv(ais_df, fn)
+}
+
+#-------------------------------------------------------------------------------
+# get_auth_inst_list <- function(update_inst = FALSE,
+#                                csv_fn = "src/csv/institutions.csv",
+#                                vb = TRUE) {
+#   if (update_inst)
+#     update_inst_csv(csv_fn, vb = vb)
+#   if (file.exists(csv_fn)) {
+#     inst_df <- readr::read_csv(csv_fn, show_col_types = FALSE)
+#     unique(inst_df$inst_id)
+#   } else {
+#     warning(paste("Institutions file not found: ", csv_fn))
+#     NULL
+#   }
+# }
+
+#-------------------------------------------------------------------------------
+get_all_inst <- function(csv_dir = "src/csv",
+                               save_csv = TRUE,
+                               vb = FALSE) {
+    
+    inst_fl <- list.files(csv_dir, "inst\\-[0-9]+", full.names = TRUE)
+    
+    if (vb) message("Loading institution CSVs from ", csv_dir)
+    inst_l <- purrr::map(inst_fl, readr::read_csv, show_col_types = FALSE)
+    
+    if (vb) message("Making dataframe.")
+    inst_df <- purrr::list_rbind(inst_l)
+    
+    if (save_csv) {
+      fn <- file.path(csv_dir, "all-institutions.csv")
+      if (vb) message("Writing ", fn)
+      readr::write_csv(inst_df, fn)
     }
-  } else {
-    message(paste0("Creating new file: ", csv_fn))
-  }
-  if (return_df) {
-    df
-  }
+    inst_df
 }
 
 #-------------------------------------------------------------------------------
-get_auth_inst_list <- function(update_inst = FALSE,
-                               csv_fn = "src/csv/institutions.csv",
-                               vb = TRUE) {
-  if (update_inst)
-    update_inst_csv(csv_fn, vb = vb)
-  if (file.exists(csv_fn)) {
-    inst_df <- readr::read_csv(csv_fn, show_col_types = FALSE)
-    unique(inst_df$inst_id)
-  } else {
-    warning(paste("Institutions file not found: ", csv_fn))
-    NULL
-  }
-}
-
-#-------------------------------------------------------------------------------
-get_ais_from_inst <- function(inst_id = 8) {
-  message("Getting AIs from institution ", inst_id)
+get_ais_from_inst <- function(inst_id = 8, vb = FALSE) {
+  if (vb) message("Getting AIs from institution ", inst_id)
   inst_df <- databraryapi::list_party(inst_id)
   
   if (!is.null(dim(inst_df$children))) {
@@ -1746,7 +1793,7 @@ count_affiliates_for_ais <- function(ai_ids) {
 
 #-------------------------------------------------------------------------------
 update_inst_csv <- function(csv_fn = "src/csv/institutions.csv",
-                            max_id = 9000,
+                            max_id = 10868,
                             save_new = TRUE,
                             update_geo = FALSE,
                             vb = FALSE) {
@@ -1807,7 +1854,7 @@ get_inst_info <-
       inst_id <- as.numeric(inst_id)
     }
     
-    require(databraryapi)
+    suppressPackageStartupMessages(require(databraryapi))
     
     if (!db_credentials_valid()) {
       warning("Not logged in to Databrary. Run `databraryapi::login_db()`.")
@@ -1891,7 +1938,7 @@ get_save_many_inst_csvs <-
     stopifnot(min_id > 0)
     stopifnot(is.numeric(max_id))
     stopifnot(max_id > 0)
-    stopifnot(max_id > min_id)
+    stopifnot(max_id >= min_id)
     stopifnot(is.character(csv_dir))
     stopifnot(dir.exists(csv_dir))
     
@@ -1907,6 +1954,7 @@ get_save_many_inst_csvs <-
 load_inst_df_from_csvs <- function(csv_fl, vb = FALSE) {
   stopifnot(is.character(csv_fl))
   
+  if (vb) message("Creating data frame from institution CSVs.")
   purrr::map(csv_fl, readr::read_csv, show_col_types = FALSE) |> purrr::list_rbind()
 }
 
