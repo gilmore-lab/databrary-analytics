@@ -1,0 +1,49 @@
+# (APPENDIX) Appendix {-}
+
+# Workflow {-}
+
+This page describes the set of tools we use to generate these data and present them in this site.
+
+## GitHub
+
+We use GitHub's pages feature to serve the web site files.
+
+At present, we are using a repository associated with Rick Gilmore's lab group (https://github.com/gilmore-lab/databrary-analytics/).
+Once the migration to the `bookdown` package is complete, we will move the repo to the Databrary organization on GitHub.
+That will result in the analytics site having the following url: https://databrary.github.io/analytics/.
+
+The site is built locally by Rick Gilmore or Andrea Seisler, then pushed to GitHub.
+
+## RStudio
+
+We use RStudio as the development environment for the site.
+The site is a project in RStudio, and most of the code is in R Markdown and R.
+
+We use a number of packages in the workflow.
+
+### Databrary API
+
+The [`databraryapi` package](https://github.com/PLAY-behaviorome/databraryapi/) provides a set of tools for interacting with the Databrary API and gathering data from the site.
+
+Most data and metadata can be accessed by the public, but specific data about individual participants requires that the user be authorized and logged in to the site.
+
+See <https://play-behaviorome.github.io/databraryapi/> for documentation about the package.
+
+## Targets
+
+We use the `targets` package to generate data and metadata files that are used to create the visualizations and summaries.
+
+Some of the components are rendered on a regular, time-determined basis, like the weekly report. Others are rendered less often, typically quarterly.
+
+Most of the targets call functions in `R/functions.R`. The specific targets can be viewed in the `_targets.R` file in the root directory of the repository.
+
+A typical workflow to 'make' or update the data files, is as follows:
+
+```
+library(targets)
+tar_make()
+```
+
+## Package Reproducibility
+
+We use the `renv` package to track package dependencies.

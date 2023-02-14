@@ -31,7 +31,7 @@ inst_daa_df |>
 ai_stats <- fivenum(inst_daa_df$n_auth_invest)
 ```
 
-The number of authorized investigators/institution is in the range of [`r ai_stats[1]`, `r ai_stats[5]`], with a median of `r ai_stats[3]` and a mean of `r mean(inst_daa_df$n_auth_inv)`.
+The number of authorized investigators/institution is in the range of [`r ai_stats[1]`, `r ai_stats[5]`], with a median of `r ai_stats[3]` and a mean of `r mean(inst_daa_df$n_auth_invest)`.
 
 ### Table
 
@@ -63,23 +63,15 @@ ggmap::qmplot(lon, lat,
 
 ## Investigators
 
-::: {.rmdnote}
-
-These summaries are a work-in-progress.
-
-:::
-
 ### Import data
 
 ```{r, eval = FALSE}
 tar_load(invest_df, store = "../_targets/")
-# invest_df <- readr::read_csv("src/csv/all-ais.csv", show_col_types = FALSE)
-# invest_df <- dplyr::distinct(invest_df)
 ```
 
-### Visualize and summarize {.tabset .tabset-fade .tabset-pills}
+### Visualize and summarize
 
-```{r, eval = FALSE}
+```{r}
 gte2_affils <- invest_df %>%
   dplyr::filter(., n_affils >= 2)
 gte5_affils <- invest_df %>%
@@ -94,7 +86,7 @@ Note that there are `r dim(gte10_affils)[1]` Authorized Investigators with 10 or
 
 #### 10+ affiliates
 
-```{r, eval = FALSE}
+```{r}
 ggplot(gte10_affils) +
   aes(n_affils) +
   geom_histogram(bins = 10)
@@ -103,7 +95,7 @@ ggplot(gte10_affils) +
 ```{r, eval = FALSE}
 gte10_affils %>%
   dplyr::arrange(., desc(n_affils)) %>%
-  dplyr::select(., ai_id, ai_last, ai_first, affiliation, ai_db_url, n_affils) %>%
+  dplyr::select(., ai_id, ai_last, ai_first, affiliation, n_affils) %>%
   kableExtra::kbl(.) %>%
   kableExtra::kable_styling()
 ```
@@ -116,33 +108,33 @@ ggplot(gte5_affils) +
   geom_histogram(bins = 10)
 ```
 
-```{r, eval = FALSE}
+```{r}
 gte5_affils %>%
   dplyr::arrange(., desc(n_affils)) %>%
-  dplyr::select(., ai_id, ai_last, ai_first, affiliation, ai_db_url, n_affils) %>%
+  dplyr::select(., ai_id, ai_last, ai_first, affiliation, n_affils) %>%
   kableExtra::kbl(.) %>%
   kableExtra::kable_styling()
 ```
 
 #### 2+ affiliates
 
-```{r, eval = FALSE}
+```{r}
 ggplot(gte2_affils) +
   aes(n_affils) +
   geom_histogram(bins = 15)
 ```
 
-```{r, eval = FALSE}
+```{r}
 gte2_affils %>%
   dplyr::arrange(., desc(n_affils)) %>%
-  dplyr::select(., ai_id, ai_last, ai_first, affiliation, ai_db_url, n_affils) %>%
+  dplyr::select(., ai_id, ai_last, ai_first, affiliation, n_affils) %>%
   kableExtra::kbl(.) %>%
   kableExtra::kable_styling()
 ```
 
-#### ## All
+#### All
 
-```{r, eval = FALSE}
+```{r}
 ggplot(invest_df) +
   aes(n_affils) +
   geom_histogram(bins = 20)
@@ -150,9 +142,8 @@ ggplot(invest_df) +
 
 ```{r, eval = FALSE}
 invest_df %>%
-  
   dplyr::arrange(., desc(n_affils)) %>%
-  dplyr::select(., ai_id, ai_last, ai_first, affiliation, ai_db_url, n_affils) %>%
+  dplyr::select(., ai_id, ai_last, ai_first, affiliation, n_affils) %>%
   kableExtra::kbl(.) %>%
   kableExtra::kable_styling()
 ```

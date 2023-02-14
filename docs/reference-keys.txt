@@ -85,3 +85,8 @@ overview-only
 how-shared-by-investigator
 full-volume-1
 overview-only-1
+github
+rstudio
+databrary-api
+targets
+package-reproducibility
