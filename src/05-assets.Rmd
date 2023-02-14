@@ -1,25 +1,18 @@
 # Assets
 
-## Purpose
-
 This report summarizes the types of files (assets) that are stored and shared.
 
-## Import
-
-```{r, message=FALSE, echo=TRUE}
-library(targets)
+```{r}
 tar_load(volume_asset_stats_df, store = "../_targets/")
 ```
 
-## Analyze
-
-### Volumes with shared assets
+## Volumes with shared assets {-}
 
 There are `r length(unique(volume_asset_stats_df$vol_id))` shared volumes with assets.
 
 The following shows the number of shared volumes with a given asset type.
 
-```{r, echo=TRUE}
+```{r}
 volume_asset_stats_df %>%
   dplyr::group_by(asset_type) %>%
   dplyr::count(asset_type) %>%
@@ -28,11 +21,11 @@ volume_asset_stats_df %>%
   kableExtra::kable_styling(.)
 ```
 
-### Assets
+## Assets by type, size, and duration {-}
 
 Total number of assets, total size, and total duration by type:
 
-```{r, echo=TRUE}
+```{r}
 volume_asset_stats_df %>%
   dplyr::group_by(asset_type) %>%
   dplyr::summarise(total_files = sum(n_files),

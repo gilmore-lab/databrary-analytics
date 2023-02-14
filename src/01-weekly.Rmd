@@ -1,22 +1,9 @@
 # Weekly
 
-## Set-up
-
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE, message = FALSE, warning = FALSE)
 
-source("R/helpers.R")
-##install_required_pkgs()
-
-# Log in to Databrary
-if (!databraryapi::login_db(params$db_account)) {
-  message("Log-in failed.")
-} else {
-  message("Log-in succeeded.")
-}
-
-# Add pipe operator to workspace via tidyverse
-library(tidyverse)
+databraryapi::login_db(Sys.getenv("DATABRARY_LOGIN"))
 
 # Graphic theme elements
 ln_size <- 3
@@ -34,42 +21,33 @@ databrary_theme <-
   ggplot2::theme(plot.title = ggplot2::element_text(hjust = 0.5))
 ```
 
-## Institutions & Authorized Users 
+## Institutions & Authorized Users {-}
 
 ```{r child = 'rmd/users.Rmd'}
 ```
 
-### New Institutions
+### New Institutions {-}
 
 ```{r child = 'rmd/institutions.Rmd'}
 ```
 
-### New and Updated Authorized Investigators
+### New and Updated Authorized Investigators {-}
 
 ```{r child = 'rmd/people.Rmd'}
 ```
 
-## Volumes
+## Volumes {-}
 
 ```{r child = 'rmd/volumes_shared.Rmd'}
 ```
 
-## Citations
+## Citations {-}
 
 ```{r child = 'rmd/citations.Rmd'}
 ```
 
-## Archived reports
+## Archived reports {-}
 
 ```{r child = 'rmd/old_weekly_reports.Rmd'}
-```
-
-## Clean-up
-
-```{r clean-up, include=FALSE}
-databraryapi::logout_db()
-if (file.exists(".databrary.RData")) {
-  unlink(".databrary.RData")
-}
 ```
 

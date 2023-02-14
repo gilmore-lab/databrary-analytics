@@ -1,19 +1,15 @@
 # Funders
 
-## Purpose
-
-This document describes generates a list of funders on Databrary projects.
-
-## Gather data
+This document describes funders associated with Databrary projects.
 
 ```{r}
 targets::tar_load(volume_funders_df, store = "../_targets/")
 funders_df <- volume_funders_df
 ```
 
-## Volumes by funder
+## Volumes by funder {-}
 
-### Number of volumes listing funders
+### Number of volumes listing funders {-}
 
 ```{r}
 vols_w_funders <- funders_df %>%
@@ -30,8 +26,7 @@ vols_w_funders %>%
   kableExtra::kable_styling(.)  
 ```
 
-
-### Funders by number of volumes
+### Funders by number of volumes {-}
 
 ```{r}
 funders_filtered <- funders_df %>%

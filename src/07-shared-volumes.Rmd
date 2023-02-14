@@ -1,17 +1,12 @@
 # Shared volumes and sessions
 
-## Purpose
-
 This report summarizes the number of shared volumes by sharing type and by investigator.
 
-## Import data
-
 ```{r}
-library(targets)
 tar_load(vols_sess_df, store = "../_targets/")
 ```
 
-## How shared by unique volume
+## How shared by unique volume {-}
 
 ```{r}
 unique_vols <- vols_sess_df %>%
@@ -26,7 +21,7 @@ unique_vols <- vols_sess_df %>%
 
 There are $n=$ `r dim(unique_vols)[1]` total shared volumes on Databrary.
 
-### Full volume
+### Full volume {-}
 
 ```{r}
 unique_vols_full <- unique_vols %>%
@@ -42,7 +37,7 @@ unique_vols_full %>%
   kableExtra::kable_styling(.)
 ```
 
-### Overview only
+### Overview only {-}
 
 ```{r}
 unique_vols_overview <- unique_vols %>%
@@ -58,7 +53,7 @@ unique_vols_overview %>%
   kableExtra::kable_styling(.)
 ```
 
-## How shared by investigator
+## How shared by investigator {-}
 
 ```{r}
 vols_dat <- vols_sess_df %>%
@@ -86,7 +81,7 @@ vols_dat <- vols_sess_df %>%
 
 Sorted by `tot_sess`, the total number of sessions from these Authorized Investigators.
 
-### Full volume
+### Full volume {-}
 
 ```{r}
 vols_dat %>%
@@ -95,7 +90,7 @@ vols_dat %>%
   kableExtra::kable_styling(.)
 ```
 
-### Overview only
+### Overview only {-}
 
 ```{r}
 vols_dat %>%

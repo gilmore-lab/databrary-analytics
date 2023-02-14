@@ -1,11 +1,6 @@
 # Investigators and Institutions
 
-```{r, include=FALSE}
-suppressPackageStartupMessages(library(tidyverse))
-```
-
-
-## Institutions
+## Institutions {-}
 
 ```{r}
 library(targets)
@@ -18,7 +13,13 @@ There are `r dim(inst_df)[1]` total institutions in the Databrary system.
 
 Of these, `r dim(inst_daa_df)[1]` have active Databrary Access Agreements (DAA).
 
-### Histogram
+## Investigators per institution  {-}
+
+```{r}
+ai_stats <- fivenum(inst_daa_df$n_auth_invest)
+```
+
+The number of authorized investigators/institution is in the range of [`r ai_stats[1]`, `r ai_stats[5]`], with a median of `r ai_stats[3]` and a mean of `r mean(inst_daa_df$n_auth_invest)`.
 
 ```{r n-investigators-per-inst, fig.cap="Distribution of investigators/authorized institution"}
 inst_daa_df |>
@@ -27,13 +28,7 @@ inst_daa_df |>
   geom_histogram()
 ```
 
-```{r}
-ai_stats <- fivenum(inst_daa_df$n_auth_invest)
-```
-
-The number of authorized investigators/institution is in the range of [`r ai_stats[1]`, `r ai_stats[5]`], with a median of `r ai_stats[3]` and a mean of `r mean(inst_daa_df$n_auth_invest)`.
-
-### Table
+### Table {-}
 
 ```{r}
 inst_daa_df %>%
@@ -43,7 +38,7 @@ inst_daa_df %>%
   kableExtra::kable_styling(bootstrap_options = c("striped", "hover", "condensed", "responsive"))
 ```
 
-### Map
+### Map {-}
 
 ```{r site-map, fig.align='center', out.width='80%'}
 lat_lon_df <- inst_daa_df %>%
@@ -61,15 +56,11 @@ ggmap::qmplot(lon, lat,
 
 :::
 
-## Investigators
+## Investigators {-}
 
-### Import data
-
-```{r, eval = FALSE}
+```{r}
 tar_load(invest_df, store = "../_targets/")
 ```
-
-### Visualize and summarize
 
 ```{r}
 gte2_affils <- invest_df %>%
@@ -82,9 +73,9 @@ no_affils <- invest_df %>%
   dplyr::filter(., n_affils < 1)
 ```
 
-Note that there are `r dim(gte10_affils)[1]` Authorized Investigators with 10 or more affiliates; `r dim(gte5_affils)[1]` with 5 or more; `r dim(gte2_affils)[1]` with 2 or more affiliates; and `r dim(no_affils)[1]` with no affilates.
+There are `r dim(gte10_affils)[1]` Authorized Investigators with 10 or more affiliates; `r dim(gte5_affils)[1]` with 5 or more; `r dim(gte2_affils)[1]` with 2 or more affiliates; and `r dim(no_affils)[1]` with no affilates.
 
-#### 10+ affiliates
+#### 10+ affiliates {-}
 
 ```{r}
 ggplot(gte10_affils) +
@@ -92,7 +83,7 @@ ggplot(gte10_affils) +
   geom_histogram(bins = 10)
 ```
 
-```{r, eval = FALSE}
+```{r}
 gte10_affils %>%
   dplyr::arrange(., desc(n_affils)) %>%
   dplyr::select(., ai_id, ai_last, ai_first, affiliation, n_affils) %>%
@@ -100,9 +91,9 @@ gte10_affils %>%
   kableExtra::kable_styling()
 ```
 
-#### 5+ affiliates
+#### 5+ affiliates  {-}
 
-```{r, eval = FALSE}
+```{r}
 ggplot(gte5_affils) +
   aes(n_affils) +
   geom_histogram(bins = 10)
@@ -116,7 +107,7 @@ gte5_affils %>%
   kableExtra::kable_styling()
 ```
 
-#### 2+ affiliates
+#### 2+ affiliates {-}
 
 ```{r}
 ggplot(gte2_affils) +
@@ -132,7 +123,7 @@ gte2_affils %>%
   kableExtra::kable_styling()
 ```
 
-#### All
+#### All  {-}
 
 ```{r}
 ggplot(invest_df) +
@@ -140,7 +131,7 @@ ggplot(invest_df) +
   geom_histogram(bins = 20)
 ```
 
-```{r, eval = FALSE}
+```{r}
 invest_df %>%
   dplyr::arrange(., desc(n_affils)) %>%
   dplyr::select(., ai_id, ai_last, ai_first, affiliation, n_affils) %>%

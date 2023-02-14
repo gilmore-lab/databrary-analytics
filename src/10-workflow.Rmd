@@ -4,7 +4,7 @@
 
 This page describes the set of tools we use to generate these data and present them in this site.
 
-## GitHub
+## GitHub {-}
 
 We use GitHub's pages feature to serve the web site files.
 
@@ -14,36 +14,89 @@ That will result in the analytics site having the following url: https://databra
 
 The site is built locally by Rick Gilmore or Andrea Seisler, then pushed to GitHub.
 
-## RStudio
+## RStudio {-}
 
-We use RStudio as the development environment for the site.
-The site is a project in RStudio, and most of the code is in R Markdown and R.
+We use [RStudio](https://posit.co/products/open-source/rstudio/) as the integrated development environment for the site.
+Most of the code is in R Markdown and R, with some CSS and JavaScript.
 
-We use a number of packages in the workflow.
+We use a number of R packages in the workflow.
 
-### Databrary API
+### Databrary API {-}
 
 The [`databraryapi` package](https://github.com/PLAY-behaviorome/databraryapi/) provides a set of tools for interacting with the Databrary API and gathering data from the site.
+This package may be useful to some analysts whether or not they care about Databrary-specific analytics.
 
-Most data and metadata can be accessed by the public, but specific data about individual participants requires that the user be authorized and logged in to the site.
+Most data and metadata used in these reports can be accessed by the public, but specific data about individual participants requires that the user be authorized and logged in to the site using the `databraryapi::db_login()` function.
+
+The package may be installed via `devtools::install_github(repo="PLAY-behaviorome/databraryapi")`.
 
 See <https://play-behaviorome.github.io/databraryapi/> for documentation about the package.
 
-## Targets
+### Targets {-}
 
-We use the `targets` package to generate data and metadata files that are used to create the visualizations and summaries.
+We use the [`targets`](https://books.ropensci.org/targets/) package to generate data and metadata files that are used to create the visualizations and summaries.
 
 Some of the components are rendered on a regular, time-determined basis, like the weekly report. Others are rendered less often, typically quarterly.
 
 Most of the targets call functions in `R/functions.R`. The specific targets can be viewed in the `_targets.R` file in the root directory of the repository.
 
-A typical workflow to 'make' or update the data files, is as follows:
+A typical workflow to 'make' or update the *data* files, is as follows:
 
 ```
 library(targets)
 tar_make()
 ```
 
-## Package Reproducibility
+### Bookdown {-}
 
-We use the `renv` package to track package dependencies.
+To generate the site, we use the [`bookdown`](https://bookdown.org/yihui/bookdown/) package.
+
+A typical sequence of commands to regenerate the site is the following:
+
+```
+bookdown::render_book('src')
+```
+
+Configuration files using the YAML markup language control the rendering process. 
+These files and the source R Markdown (.Rmd) files used to generate the site are in the `src/` directory.
+
+The rendering command creates a full website in the `docs/` directory.
+
+### Package Reproducibility {-}
+
+We use the [`renv`](https://rstudio.github.io/renv/articles/renv.html) package to track package dependencies.
+
+## Strategy {-}
+
+Some of the data elements in the report change often, but others do not.
+We have found it is faster and more convenient in many cases to download various data files from Databrary and store copies as comma-separated value (CSV) text files in `src/csv`. 
+
+Some of the CSVs contain potentially identifiable human subjects data, so we use a special `.gitignore` file to keep those files out of the git tracking scheme and prevent uploading them to GitHub.
+
+These data analyses and visualizations have developed piecemeal over several years.
+They could undoubtedly be optimized and improved.
+
+The primary developer (Rick Gilmore) has had a 'git-er-done' attitude toward the project, especially with the latest refactoring to `bookdown`, `targets`, and `renv`. 
+
+I take some solace in the following quotation from the father of literate programming, [Donald Knuth](https://en.wikiquote.org/wiki/Donald_Knuth):
+
+>...the real problem is that programmers have spent far too much time worrying about efficiency in the wrong places and at the wrong times; premature optimization is the root of all evil (or at least most of it) in programming.
+
+### Roadmap {-}
+
+- Migrate ARS to `bookdown` branch; merge into main (March 2023).
+- Fix when targets are run for which flows.
+- Separate functions in `R/functions.R` into separate files based on their context. The current `R/functions.R` contains mostly old code from the pre-`bookdown` version of the site. The styles are inconsistent and the large file is hard to maintain.
+- Devise visualizations of assets by investigator/institution.
+- Function to determine max party_id and max volume_id interactively.
+- Eliminate YAML params from `index.Rmd`.
+- Create JSON lat, lon file for Databrary home page.
+- Add state, country summarizes to demographics.
+- Allow user to show code.
+
+```{r logut-databrary, include=FALSE}
+databraryapi::logout_db()
+if (file.exists(".databrary.RData")) {
+  unlink(".databrary.RData", recursive = TRUE)
+}
+```

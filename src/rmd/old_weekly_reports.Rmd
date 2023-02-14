@@ -1,12 +1,7 @@
----
-title: "old_weekly_reports"
-author: "Andrea R Seisler"
-date:  "`r Sys.time()`"
----
 <!-- # Get List of Reports -->
 
 ```{r get-list-old-reports, include=FALSE}
-old_report_files <- list.files("archive", pattern = "*.html")
+old_report_files <- list.files("../archive", pattern = "*.html")
 ```
 
 ```{r create-links}
