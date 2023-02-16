@@ -134,7 +134,7 @@ if (as.logical(params$update_csv)) {
 }
 ```
 
-## New volumes
+## New volumes {-}
 
 ```{r new-volumes}
 # define helper functions

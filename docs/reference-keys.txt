@@ -4,7 +4,6 @@ fig:5y-15y-hist
 fig:15y-plus-hist
 about
 weekly
-new-volumes
 investigators-and-institutions
 tags-and-keywords
 funders
