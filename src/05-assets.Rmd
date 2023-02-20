@@ -4,6 +4,9 @@ This report summarizes the types of files (assets) that are stored and shared.
 
 ```{r}
 tar_load(volume_asset_stats_df, store = "../_targets/")
+# asset_list <- generate_volume_asset_csv_list('csv')
+# volume_asset_stats_df <- make_volume_assets_stats_df(asset_list)
+source("../R/volume_asset_functions.R")
 ```
 
 ## Volumes with shared assets {-}
@@ -21,6 +24,48 @@ volume_asset_stats_df %>%
   kableExtra::kable_styling(.)
 ```
 
+## Assets by volume and comparative storage fees {-}
+
+The following shows data about the number of files and total storage by shared volume. We also show an estimated one-time storage cost if these data were stored on [FigShare Plus](https://knowledge.figshare.com/plus) or [Dryad](https://datadryad.org/stash/faq).
+
+```{r}
+vol_asset_summ <- storage_gb_by_vol(volume_asset_stats_df)
+
+vol_asset_summ %>%
+  dplyr::arrange(., desc(dryad_fee)) %>%
+  kableExtra::kable(., format = 'html') %>%
+  kableExtra::kable_styling(.) %>%
+  kableExtra::scroll_box(width = "100%", height = "300px")
+```
+
+```{r}
+# min, lower-hinge, median, upper-hinge, max.
+files_5_num <- fivenum(vol_asset_summ$n_tot_files)
+gb_5_num <- fivenum(vol_asset_summ$tot_gb)
+figshare_5_num <- fivenum(vol_asset_summ$figshare_fee)
+dryad_5_num <- fivenum(vol_asset_summ$dryad_fee)
+```
+
+### Summary statistics {-}
+
+The following provides summary data about the number of files, total storage provided, and some comparative cost estimates.
+
+| Statistic | min | median | mean | max |
+|-----------|-----|--------|------|-------|
+| `n_tot_files` | `r files_5_num[1]` | `r files_5_num[3]` | `r mean(vol_asset_summ$n_tot_files)` | `r files_5_num[5]` |
+| `tot_gb` | `r gb_5_num[1]` | `r gb_5_num[3]` | `r mean(vol_asset_summ$tot_gb)` | `r gb_5_num[5]` |
+| `figshare_fee` | `r figshare_5_num[1]` | `r figshare_5_num[3]` | `r mean(vol_asset_summ$figshare_fee)` | `r figshare_5_num[5]` |
+| `dryad_fee` | `r dryad_5_num[1]` | `r dryad_5_num[3]` | `r mean(vol_asset_summ$dryad_fee)` | `r dryad_5_num[5]` |
+
+If Databrary charged for storage it provided for free, there could be a one time income stream in the range of \$ `r sum(vol_asset_summ$figshare_fee)/1000` to \$ `r sum(vol_asset_summ$dryad_fee)/1000` ] K.
+
+
+::: {.rmdnote}
+
+This is for *shared* data. We know that the number of private or partially-shared *volumes* is 3-5 times the number of fully shared volumes.
+
+:::
+
 ## Assets by type, size, and duration {-}
 
 Total number of assets, total size, and total duration by type:
@@ -28,11 +73,11 @@ Total number of assets, total size, and total duration by type:
 ```{r}
 volume_asset_stats_df %>%
   dplyr::group_by(asset_type) %>%
-  dplyr::summarise(total_files = sum(n_files),
-            total_size = sum(tot_size_gb),
-            total_dur = sum(tot_dur_hrs)) %>%
-  dplyr::arrange(., desc(total_files)) %>%
-  dplyr::select(asset_type, total_files, total_size, total_dur) %>%
+  dplyr::summarise(n_files = sum(n_files),
+            size_gb = sum(tot_size_gb),
+            dur_hrs = sum(tot_dur_hrs)) %>%
+  dplyr::arrange(., desc(n_files)) %>%
+  dplyr::select(asset_type, n_files, size_gb, dur_hrs) %>%
   kableExtra::kable(., format = 'html') %>%
   kableExtra::kable_styling(.)
 ```

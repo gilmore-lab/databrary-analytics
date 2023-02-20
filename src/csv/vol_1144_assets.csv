@@ -1,5 +1,0 @@
-vol_id,mimetype,extension,asset_type,n_files,tot_size_gb,tot_dur_hrs
-1144,application/vnd.datavyu,opf,Datavyu,32,0,0
-1144,application/vnd.openxmlformats-officedocument.wordprocessingml.document,docx,Microsoft Word (Office Open XML) document,1,0,0
-1144,application/x-spss-sav,sav,SPSS System File,1,0,0
-1144,text/plain,txt,Plain text,3,0,0

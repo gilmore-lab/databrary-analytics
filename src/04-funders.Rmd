@@ -23,7 +23,8 @@ There are $n=$ `r length(unique(vols_w_funders$vol_id))` volumes that list funde
 vols_w_funders %>%
   dplyr::select(., -funder_id) %>%
   kableExtra::kable(., format = 'html') %>%
-  kableExtra::kable_styling(.)  
+  kableExtra::kable_styling(.) %>%
+  kableExtra::scroll_box(width = "100%", height = "300px")
 ```
 
 ### Funders by number of volumes {-}

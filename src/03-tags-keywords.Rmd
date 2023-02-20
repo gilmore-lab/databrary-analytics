@@ -48,7 +48,8 @@ There are `r dim(unique_tags)[1]` unique tags.
 ```{r}
 unique_tags %>%
   knitr::kable(., "html") %>%
-  kableExtra::kable_styling()
+  kableExtra::kable_styling(.) %>%
+  kableExtra::scroll_box(width = "100%", height = "300px")
 ```
 
 ### Word cloud {-}
@@ -65,7 +66,8 @@ tags %>%
   dplyr::filter(., !is.na(weight)) %>%
   dplyr::arrange(., vol_id, weight) %>%
   knitr::kable(., "html") %>%
-  kableExtra::kable_styling()
+  kableExtra::kable_styling(.) %>%
+  kableExtra::scroll_box(width = "100%", height = "300px")
 ```
 
 ## STEM-relevant tags {-}
@@ -80,5 +82,6 @@ select_tags
 stem_vols_df <- make_stem_tags_df(tags)
 stem_vols_df %>%
   knitr::kable(., "html") %>%
-  kableExtra::kable_styling() 
+  kableExtra::kable_styling(.) %>%
+  kableExtra::scroll_box(width = "100%", height = "300px")
 ```

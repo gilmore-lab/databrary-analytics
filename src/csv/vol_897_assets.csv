@@ -1,5 +1,0 @@
-vol_id,mimetype,extension,asset_type,n_files,tot_size_gb,tot_dur_hrs
-897,application/vnd.datavyu,opf,Datavyu,115,0,0
-897,text/csv,csv,Comma-separated values,2,0,0
-897,text/plain,txt,Plain text,3,0,0
-897,video/mp4,mp4,MPEG-4 video,116,0,59.28868111111112

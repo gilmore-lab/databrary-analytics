@@ -1,4 +1,0 @@
-vol_id,mimetype,extension,asset_type,n_files,tot_size_gb,tot_dur_hrs
-884,image/jpeg,jpg,JPEG image,245,0,0
-884,text/csv,csv,Comma-separated values,3,0,0
-884,video/mp4,mp4,MPEG-4 video,82,0,0.20792888888888889

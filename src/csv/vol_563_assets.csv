@@ -1,5 +1,0 @@
-vol_id,mimetype,extension,asset_type,n_files,tot_size_gb,tot_dur_hrs
-563,application/pdf,pdf,Portable document,1,0,0
-563,application/vnd.datavyu,opf,Datavyu,140,0,0
-563,application/vnd.openxmlformats-officedocument.spreadsheetml.sheet,xlsx,Microsoft Excel (Office Open XML) workbook,1,0,0
-563,video/mp4,mp4,MPEG-4 video,339,0,306.4491936111111

@@ -1,8 +1,0 @@
-vol_id,mimetype,extension,asset_type,n_files,tot_size_gb,tot_dur_hrs
-1505,application/vnd.datavyu,opf,Datavyu,627,0,0
-1505,application/vnd.openxmlformats-officedocument.wordprocessingml.document,docx,Microsoft Word (Office Open XML) document,3,1.84478515625e-4,0
-1505,application/x-spss-sav,sav,SPSS System File,3,0,0
-1505,image/jpeg,jpg,JPEG image,5,0,0
-1505,image/png,png,Portable network graphics,3,0,0
-1505,text/plain,txt,Plain text,3,0,0
-1505,video/mp4,mp4,MPEG-4 video,6,0,0.011277777777777777

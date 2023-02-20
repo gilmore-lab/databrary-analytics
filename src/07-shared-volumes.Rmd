@@ -34,7 +34,8 @@ There are $n=$ `r dim(unique_vols_full)[1]` volumes fully shared on Databrary.
 unique_vols_full %>%
   dplyr::arrange(., desc(n_sessions)) %>%
   knitr::kable(., "html") %>%
-  kableExtra::kable_styling(.)
+  kableExtra::kable_styling(.) %>%
+  kableExtra::scroll_box(width = "100%", height = "300px")
 ```
 
 ### Overview only {-}
@@ -50,7 +51,8 @@ There are $n=$ `r dim(unique_vols_overview)[1]` volume overviews shared on Datab
 unique_vols_overview %>%
   dplyr::arrange(., desc(n_sessions)) %>%
   knitr::kable(., "html") %>%
-  kableExtra::kable_styling(.)
+  kableExtra::kable_styling(.) %>%
+  kableExtra::scroll_box(width = "100%", height = "300px")
 ```
 
 ## How shared by investigator {-}
@@ -87,7 +89,8 @@ Sorted by `tot_sess`, the total number of sessions from these Authorized Investi
 vols_dat %>%
   dplyr::filter(., shared_type == "full_volume") %>%
   knitr::kable(., "html") %>%
-  kableExtra::kable_styling(.)
+  kableExtra::kable_styling(.) %>%
+  kableExtra::scroll_box(width = "100%", height = "300px")
 ```
 
 ### Overview only {-}
@@ -96,5 +99,6 @@ vols_dat %>%
 vols_dat %>%
   dplyr::filter(., shared_type == "overview_only") %>%
   knitr::kable(., "html") %>%
-  kableExtra::kable_styling(.)
+  kableExtra::kable_styling(.) %>%
+  kableExtra::scroll_box(width = "100%", height = "300px")
 ```

@@ -15,21 +15,21 @@ vol_id,url,tags,weight
 4,https://nyu.databrary.org/volume/4,coding,1
 4,https://nyu.databrary.org/volume/4,protocols,1
 4,https://nyu.databrary.org/volume/4,manuals,1
-5,https://nyu.databrary.org/volume/5,locomotion,1
 5,https://nyu.databrary.org/volume/5,infants,1
-5,https://nyu.databrary.org/volume/5,manuals,1
+5,https://nyu.databrary.org/volume/5,locomotion,1
 5,https://nyu.databrary.org/volume/5,coding,1
+5,https://nyu.databrary.org/volume/5,manuals,1
 5,https://nyu.databrary.org/volume/5,bridges,1
 6,https://nyu.databrary.org/volume/6,NA,NA
-7,https://nyu.databrary.org/volume/7,locomotion,1
+7,https://nyu.databrary.org/volume/7,affordances,1
+7,https://nyu.databrary.org/volume/7,apertures,1
+7,https://nyu.databrary.org/volume/7,falling,1
 7,https://nyu.databrary.org/volume/7,perception,1
 7,https://nyu.databrary.org/volume/7,judgments,1
 7,https://nyu.databrary.org/volume/7,adult,1
-7,https://nyu.databrary.org/volume/7,affordances,1
-7,https://nyu.databrary.org/volume/7,apertures,1
-7,https://nyu.databrary.org/volume/7,manuals,1
+7,https://nyu.databrary.org/volume/7,locomotion,1
 7,https://nyu.databrary.org/volume/7,coding,1
-7,https://nyu.databrary.org/volume/7,falling,1
+7,https://nyu.databrary.org/volume/7,manuals,1
 8,https://nyu.databrary.org/volume/8,infants,2
 8,https://nyu.databrary.org/volume/8,cognitive,2
 8,https://nyu.databrary.org/volume/8,parent-child interaction,2
@@ -128,18 +128,18 @@ vol_id,url,tags,weight
 34,https://nyu.databrary.org/volume/34,infants,1
 34,https://nyu.databrary.org/volume/34,materials,1
 35,https://nyu.databrary.org/volume/35,cross-cultural research,2
-35,https://nyu.databrary.org/volume/35,language and thought,1
-35,https://nyu.databrary.org/volume/35,numerical cognition,1
-35,https://nyu.databrary.org/volume/35,indigenous peoples,1
 35,https://nyu.databrary.org/volume/35,number,1
+35,https://nyu.databrary.org/volume/35,language and thought,1
+35,https://nyu.databrary.org/volume/35,indigenous peoples,1
 35,https://nyu.databrary.org/volume/35,language development,1
+35,https://nyu.databrary.org/volume/35,numerical cognition,1
 36,https://nyu.databrary.org/volume/36,cognitive,2
-36,https://nyu.databrary.org/volume/36,faces,1
 36,https://nyu.databrary.org/volume/36,social attention,1
-36,https://nyu.databrary.org/volume/36,stimuli,1
-36,https://nyu.databrary.org/volume/36,children,1
-36,https://nyu.databrary.org/volume/36,infants,1
 36,https://nyu.databrary.org/volume/36,visual attention,1
+36,https://nyu.databrary.org/volume/36,faces,1
+36,https://nyu.databrary.org/volume/36,children,1
+36,https://nyu.databrary.org/volume/36,stimuli,1
+36,https://nyu.databrary.org/volume/36,infants,1
 37,https://nyu.databrary.org/volume/37,visual search,2
 37,https://nyu.databrary.org/volume/37,visual attention,2
 37,https://nyu.databrary.org/volume/37,social attention,2
@@ -853,9 +853,9 @@ vol_id,url,tags,weight
 432,https://nyu.databrary.org/volume/432,NA,NA
 433,https://nyu.databrary.org/volume/433,adult female,1
 433,https://nyu.databrary.org/volume/433,luminance matched,1
+433,https://nyu.databrary.org/volume/433,black and white,1
 433,https://nyu.databrary.org/volume/433,luminance varied,1
 433,https://nyu.databrary.org/volume/433,color,1
-433,https://nyu.databrary.org/volume/433,black and white,1
 434,https://nyu.databrary.org/volume/434,NA,NA
 435,https://nyu.databrary.org/volume/435,NA,NA
 436,https://nyu.databrary.org/volume/436,NA,NA
@@ -2136,3 +2136,64 @@ vol_id,url,tags,weight
 1518,https://nyu.databrary.org/volume/1518,NA,NA
 1519,https://nyu.databrary.org/volume/1519,NA,NA
 1520,https://nyu.databrary.org/volume/1520,NA,NA
+1521,https://nyu.databrary.org/volume/1521,images,1
+1521,https://nyu.databrary.org/volume/1521,body,1
+1521,https://nyu.databrary.org/volume/1521,whr,1
+1521,https://nyu.databrary.org/volume/1521,stimuli,1
+1521,https://nyu.databrary.org/volume/1521,visuoperception,1
+1522,https://nyu.databrary.org/volume/1522,NA,NA
+1523,https://nyu.databrary.org/volume/1523,NA,NA
+1524,https://nyu.databrary.org/volume/1524,NA,NA
+1525,https://nyu.databrary.org/volume/1525,NA,NA
+1526,https://nyu.databrary.org/volume/1526,NA,NA
+1527,https://nyu.databrary.org/volume/1527,NA,NA
+1528,https://nyu.databrary.org/volume/1528,NA,NA
+1529,https://nyu.databrary.org/volume/1529,NA,NA
+1530,https://nyu.databrary.org/volume/1530,NA,NA
+1531,https://nyu.databrary.org/volume/1531,NA,NA
+1532,https://nyu.databrary.org/volume/1532,NA,NA
+1533,https://nyu.databrary.org/volume/1533,NA,NA
+1534,https://nyu.databrary.org/volume/1534,NA,NA
+1535,https://nyu.databrary.org/volume/1535,NA,NA
+1536,https://nyu.databrary.org/volume/1536,NA,NA
+1537,https://nyu.databrary.org/volume/1537,NA,NA
+1538,https://nyu.databrary.org/volume/1538,NA,NA
+1539,https://nyu.databrary.org/volume/1539,NA,NA
+1540,https://nyu.databrary.org/volume/1540,NA,NA
+1541,https://nyu.databrary.org/volume/1541,road crossing,1
+1541,https://nyu.databrary.org/volume/1541,pedestrian,1
+1541,https://nyu.databrary.org/volume/1541,affordances,1
+1541,https://nyu.databrary.org/volume/1541,perception-action,1
+1541,https://nyu.databrary.org/volume/1541,virtual environments,1
+1542,https://nyu.databrary.org/volume/1542,bicycling,1
+1542,https://nyu.databrary.org/volume/1542,road crossing,1
+1542,https://nyu.databrary.org/volume/1542,affordances,1
+1542,https://nyu.databrary.org/volume/1542,perception-action,1
+1542,https://nyu.databrary.org/volume/1542,virtual environments,1
+1543,https://nyu.databrary.org/volume/1543,NA,NA
+1544,https://nyu.databrary.org/volume/1544,NA,NA
+1545,https://nyu.databrary.org/volume/1545,NA,NA
+1546,https://nyu.databrary.org/volume/1546,NA,NA
+1547,https://nyu.databrary.org/volume/1547,NA,NA
+1548,https://nyu.databrary.org/volume/1548,NA,NA
+1549,https://nyu.databrary.org/volume/1549,NA,NA
+1550,https://nyu.databrary.org/volume/1550,NA,NA
+1551,https://nyu.databrary.org/volume/1551,NA,NA
+1552,https://nyu.databrary.org/volume/1552,NA,NA
+1553,https://nyu.databrary.org/volume/1553,NA,NA
+1554,https://nyu.databrary.org/volume/1554,NA,NA
+1555,https://nyu.databrary.org/volume/1555,NA,NA
+1556,https://nyu.databrary.org/volume/1556,NA,NA
+1557,https://nyu.databrary.org/volume/1557,NA,NA
+1558,https://nyu.databrary.org/volume/1558,NA,NA
+1559,https://nyu.databrary.org/volume/1559,self-regulation,1
+1559,https://nyu.databrary.org/volume/1559,inhibitory control,1
+1560,https://nyu.databrary.org/volume/1560,images,1
+1561,https://nyu.databrary.org/volume/1561,NA,NA
+1562,https://nyu.databrary.org/volume/1562,NA,NA
+1563,https://nyu.databrary.org/volume/1563,NA,NA
+1564,https://nyu.databrary.org/volume/1564,NA,NA
+1565,https://nyu.databrary.org/volume/1565,NA,NA
+1566,https://nyu.databrary.org/volume/1566,NA,NA
+1567,https://nyu.databrary.org/volume/1567,NA,NA
+1568,https://nyu.databrary.org/volume/1568,NA,NA

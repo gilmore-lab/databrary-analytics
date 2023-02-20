@@ -88,7 +88,8 @@ gte10_affils %>%
   dplyr::arrange(., desc(n_affils)) %>%
   dplyr::select(., ai_id, ai_last, ai_first, affiliation, n_affils) %>%
   kableExtra::kbl(.) %>%
-  kableExtra::kable_styling()
+  kableExtra::kable_styling(.) %>%
+  kableExtra::scroll_box(width = "100%", height = "300px")
 ```
 
 #### 5+ affiliates  {-}
@@ -104,7 +105,8 @@ gte5_affils %>%
   dplyr::arrange(., desc(n_affils)) %>%
   dplyr::select(., ai_id, ai_last, ai_first, affiliation, n_affils) %>%
   kableExtra::kbl(.) %>%
-  kableExtra::kable_styling()
+  kableExtra::kable_styling(.) %>%
+  kableExtra::scroll_box(width = "100%", height = "300px")
 ```
 
 #### 2+ affiliates {-}
@@ -120,7 +122,8 @@ gte2_affils %>%
   dplyr::arrange(., desc(n_affils)) %>%
   dplyr::select(., ai_id, ai_last, ai_first, affiliation, n_affils) %>%
   kableExtra::kbl(.) %>%
-  kableExtra::kable_styling()
+  kableExtra::kable_styling(.) %>%
+  kableExtra::scroll_box(width = "100%", height = "300px")
 ```
 
 #### All  {-}
@@ -136,5 +139,6 @@ invest_df %>%
   dplyr::arrange(., desc(n_affils)) %>%
   dplyr::select(., ai_id, ai_last, ai_first, affiliation, n_affils) %>%
   kableExtra::kbl(.) %>%
-  kableExtra::kable_styling()
+  kableExtra::kable_styling(.) %>%
+  kableExtra::scroll_box(width = "100%", height = "300px")
 ```

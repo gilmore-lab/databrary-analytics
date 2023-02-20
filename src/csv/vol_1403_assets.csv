@@ -1,5 +1,0 @@
-vol_id,mimetype,extension,asset_type,n_files,tot_size_gb,tot_dur_hrs
-1403,application/vnd.datavyu,opf,Datavyu,50,0,0
-1403,application/vnd.openxmlformats-officedocument.spreadsheetml.sheet,xlsx,Microsoft Excel (Office Open XML) workbook,1,0.003092064453125,0
-1403,application/vnd.openxmlformats-officedocument.wordprocessingml.document,docx,Microsoft Word (Office Open XML) document,2,1.12884765625e-4,0
-1403,text/csv,csv,Comma-separated values,2,7.9541015625e-6,0
