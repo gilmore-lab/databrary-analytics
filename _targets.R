@@ -5,6 +5,7 @@ library(tarchetypes)
 
 source("R/functions.R")
 source("R/volume_asset_functions.R")
+source("R/institution_investigator_functions.R")
 source("R/constants.R")
 
 tar_option_set(
@@ -25,15 +26,21 @@ tar_option_set(
 
 list(
   tar_target(
-    max_vol_id,
-    get_max_vol_id(as.numeric(Sys.getenv("MAX_VOL_ID"))),
-    cue = tarchetypes::tar_cue_age(name = inst_invest_df,
+    max_ids,
+    update_max_vol_party_ids(),
+    cue = tarchetypes::tar_cue_age(name = max_vol_party_ids,
                                    age = as.difftime(1, units = "weeks"))
   ),
   tar_target(
     max_party_id,
-    get_max_party_id(as.numeric(Sys.getenv("MAX_PARTY_ID"))),
+    max_ids$MAX_PARTY_ID,
     cue = tarchetypes::tar_cue_age(name = max_party_id,
+                                   age = as.difftime(1, units = "weeks"))
+  ),
+  tar_target(
+    max_vol_id,
+    max_ids$MAX_VOL_ID,
+    cue = tarchetypes::tar_cue_age(name = max_vol_id,
                                    age = as.difftime(1, units = "weeks"))
   ),
   # institution and investigator aggregate numbers
@@ -47,6 +54,7 @@ list(
     inst_invest_csv,
     update_inst_invest_csv(inst_invest_df, "src/csv")
   ),
+  #----------------------------------------------------------------------------
   # Volume tags and keywords
   tar_target(
     volume_tags_df,
@@ -67,6 +75,7 @@ list(
     volume_funders_csv,
     update_volume_funders_csv(volume_funders_df, "src/csv")
   ),
+  #----------------------------------------------------------------------------
   # Volume assets
   tar_target(
     volume_asset_csv_list,
@@ -84,6 +93,7 @@ list(
     volume_asset_stats_df,
     make_volume_assets_stats_df(volume_asset_csv_list)
   ),
+  #----------------------------------------------------------------------------
   # Volume demographics from spreadsheets
   tar_target(
     volume_ss_csvs,
@@ -103,11 +113,18 @@ list(
   ),
   tar_target(volume_demog_df,
              create_complete_demog_df(volume_ss_csv_fl)),
+  #----------------------------------------------------------------------------
   # Institutions and investigators (detailed)
+  #
+  # tar_target(
+  #   update_all_inst_csvs,
+  #   get_save_many_inst_csvs(1, max_party_id, update_geo = TRUE)
+  # ),
   tar_target(
-    make_inst_csvs,
-    get_save_many_inst_csvs(as.numeric(Sys.getenv("MAX_PARTY_ID")), 
-                            max_party_id, update_geo = TRUE)
+    add_new_inst_csvs,
+    get_save_many_inst_csvs(max(extract_inst_csv_id()), max_party_id, update_geo = TRUE),
+    cue = tarchetypes::tar_cue_age(name = add_new_inst_csvs,
+                                   age = as.difftime(1, units = "weeks"))
   ),
   tar_target(
     invest_df,
@@ -121,7 +138,7 @@ list(
              update_invest_csv(inst_df)),
   #--- Skip party 2 (staff)
   tar_target(inst_df,
-             load_inst_df_from_csvs(institution_csv_fl[2:length(institution_csv_fl)]),),
+             load_inst_df_from_csvs(institution_csv_fl[2:length(institution_csv_fl)]), ),
   # Volume-level sessions
   tar_target(
     vols_sess_df,

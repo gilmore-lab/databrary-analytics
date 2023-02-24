@@ -1,42 +1,43 @@
 # Funders
 
-This document describes funders associated with Databrary projects.
+This document describes funders associated with Databrary volumes (projects).
 
 ```{r}
 targets::tar_load(volume_funders_df, store = "../_targets/")
-funders_df <- volume_funders_df
+funders_df <- volume_funders_df |>
+  dplyr::distinct()
 ```
 
 ## Volumes by funder {-}
 
-### Number of volumes listing funders {-}
+### $n$ volumes listing funders {-}
 
 ```{r}
-vols_w_funders <- funders_df %>%
-  dplyr::filter(., !is.na(funder_id), !is.na(funder_name)) %>%
-  dplyr::group_by(., vol_id)
+vols_w_funders <- funders_df |>
+  dplyr::filter(!is.na(funder_id), !is.na(funder_name)) |>
+  dplyr::group_by(vol_id)
 ```
 
 There are $n=$ `r length(unique(vols_w_funders$vol_id))` volumes that list funders.
 
 ```{r}
-vols_w_funders %>%
-  dplyr::select(., -funder_id) %>%
-  kableExtra::kable(., format = 'html') %>%
-  kableExtra::kable_styling(.) %>%
+vols_w_funders |>
+  dplyr::select(-funder_id) |>
+  kableExtra::kable(format = 'html') |>
+  kableExtra::kable_styling() |>
   kableExtra::scroll_box(width = "100%", height = "300px")
 ```
 
 ### Funders by number of volumes {-}
 
 ```{r}
-funders_filtered <- funders_df %>%
-  dplyr::filter(., !is.na(funder_id), !is.na(funder_name)) %>%
-  dplyr::group_by(., funder_name) %>%
-  dplyr::summarize(., n_vols = n()) %>%
-  dplyr::arrange(., desc(n_vols))
+funders_filtered <- funders_df |>
+  dplyr::filter(!is.na(funder_id), !is.na(funder_name)) |>
+  dplyr::group_by(funder_name) |>
+  dplyr::summarize(n_vols = n()) |>
+  dplyr::arrange(desc(n_vols))
 
-funders_filtered %>%
-  kableExtra::kable(., format = 'html') %>%
-  kableExtra::kable_styling(.)
+funders_filtered |>
+  kableExtra::kable(format = 'html') |>
+  kableExtra::kable_styling()
 ```

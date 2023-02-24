@@ -16,12 +16,12 @@ There are `r length(unique(volume_asset_stats_df$vol_id))` shared volumes with a
 The following shows the number of shared volumes with a given asset type.
 
 ```{r}
-volume_asset_stats_df %>%
-  dplyr::group_by(asset_type) %>%
-  dplyr::count(asset_type) %>%
-  dplyr::arrange(., desc(n)) %>%
-  kableExtra::kable(., format = 'html') %>%
-  kableExtra::kable_styling(.)
+volume_asset_stats_df |>
+  dplyr::group_by(asset_type) |>
+  dplyr::count(asset_type) |>
+  dplyr::arrange(desc(n)) |>
+  kableExtra::kable(format = 'html') |>
+  kableExtra::kable_styling()
 ```
 
 ## Assets by volume and comparative storage fees {-}
@@ -31,10 +31,10 @@ The following shows data about the number of files and total storage by shared v
 ```{r}
 vol_asset_summ <- storage_gb_by_vol(volume_asset_stats_df)
 
-vol_asset_summ %>%
-  dplyr::arrange(., desc(dryad_fee)) %>%
-  kableExtra::kable(., format = 'html') %>%
-  kableExtra::kable_styling(.) %>%
+vol_asset_summ |>
+  dplyr::arrange(desc(dryad_fee)) |>
+  kableExtra::kable(format = 'html') |>
+  kableExtra::kable_styling() |>
   kableExtra::scroll_box(width = "100%", height = "300px")
 ```
 
@@ -57,7 +57,7 @@ The following provides summary data about the number of files, total storage pro
 | `figshare_fee` | `r figshare_5_num[1]` | `r figshare_5_num[3]` | `r mean(vol_asset_summ$figshare_fee)` | `r figshare_5_num[5]` |
 | `dryad_fee` | `r dryad_5_num[1]` | `r dryad_5_num[3]` | `r mean(vol_asset_summ$dryad_fee)` | `r dryad_5_num[5]` |
 
-If Databrary charged for storage it provided for free, there could be a one time income stream in the range of \$ `r sum(vol_asset_summ$figshare_fee)/1000` to \$ `r sum(vol_asset_summ$dryad_fee)/1000` ] K.
+If Databrary charged for storage it provided for free, there could be a one time income stream in the range of \$ `r format(sum(vol_asset_summ$figshare_fee)/1000, digits=4)` to \$ `r format(sum(vol_asset_summ$dryad_fee)/1000, digits=2)` K.
 
 
 ::: {.rmdnote}
@@ -71,14 +71,14 @@ This is for *shared* data. We know that the number of private or partially-share
 Total number of assets, total size, and total duration by type:
 
 ```{r}
-volume_asset_stats_df %>%
-  dplyr::group_by(asset_type) %>%
+volume_asset_stats_df |>
+  dplyr::group_by(asset_type) |>
   dplyr::summarise(n_files = sum(n_files),
             size_gb = sum(tot_size_gb),
-            dur_hrs = sum(tot_dur_hrs)) %>%
-  dplyr::arrange(., desc(n_files)) %>%
-  dplyr::select(asset_type, n_files, size_gb, dur_hrs) %>%
-  kableExtra::kable(., format = 'html') %>%
-  kableExtra::kable_styling(.)
+            dur_hrs = sum(tot_dur_hrs)) |>
+  dplyr::arrange(desc(n_files)) |>
+  dplyr::select(asset_type, n_files, size_gb, dur_hrs) |>
+  kableExtra::kable(format = 'html') |>
+  kableExtra::kable_styling()
 ```
 

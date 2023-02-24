@@ -14,20 +14,20 @@ tags <- volume_tags_df
 ## Tag stats {-}
 
 ```{r}
-vols_without_tags <- tags %>%
-  dplyr::filter(., is.na(tags))
+vols_without_tags <- tags |>
+  dplyr::filter(is.na(tags))
 
-vols_with_tags <- tags %>%
-  dplyr::filter(., !is.na(tags)) %>%
-  dplyr::group_by(., vol_id) %>%
-  dplyr::summarise(., n_tags = n())
+vols_with_tags <- tags |>
+  dplyr::filter(!is.na(tags)) |>
+  dplyr::group_by(vol_id) |>
+  dplyr::summarise(n_tags = n())
 ```
 
 ### Histogram of tags/volume {-}
 
 ```{r}
-vols_with_tags %>%
-  ggplot2::ggplot(.) +
+vols_with_tags |>
+  ggplot2::ggplot() +
   aes(n_tags) +
   geom_histogram(bins = 12)
 ```
@@ -35,20 +35,20 @@ vols_with_tags %>%
 ### Unique tags {-}
 
 ```{r}
-unique_tags <- tags %>%
-  dplyr::select(., tags, weight) %>%
-  dplyr::filter(., !is.na(tags)) %>%
-  dplyr::group_by(., tags) %>%
-  dplyr::summarise(., n_vols_using = n(), weight_sum = sum(weight)) %>%
-  dplyr::arrange(., desc(n_vols_using))
+unique_tags <- tags |>
+  dplyr::select(tags, weight) |>
+  dplyr::filter(!is.na(tags)) |>
+  dplyr::group_by(tags) |>
+  dplyr::summarise(n_vols_using = n(), weight_sum = sum(weight)) |>
+  dplyr::arrange(desc(n_vols_using))
 ```
 
 There are `r dim(unique_tags)[1]` unique tags.
 
 ```{r}
-unique_tags %>%
-  knitr::kable(., "html") %>%
-  kableExtra::kable_styling(.) %>%
+unique_tags |>
+  knitr::kable("html") |>
+  kableExtra::kable_styling() |>
   kableExtra::scroll_box(width = "100%", height = "300px")
 ```
 
@@ -62,26 +62,32 @@ wordcloud::wordcloud(words = unique_tags$tags,
 ## Tags by volume {-}
 
 ```{r}
-tags %>% 
-  dplyr::filter(., !is.na(weight)) %>%
-  dplyr::arrange(., vol_id, weight) %>%
-  knitr::kable(., "html") %>%
-  kableExtra::kable_styling(.) %>%
+tags |> 
+  dplyr::filter(!is.na(weight)) |>
+  dplyr::arrange(vol_id, weight) |>
+  knitr::kable("html") |>
+  kableExtra::kable_styling() |>
   kableExtra::scroll_box(width = "100%", height = "300px")
 ```
 
 ## STEM-relevant tags {-}
 
-The following tags are thought to be STEM-relevant:
+The following tags are thought to be science, technology, engineering, or mathematics (STEM)-relevant:
 
 ```{r}
 select_tags
 ```
 
 ```{r}
-stem_vols_df <- make_stem_tags_df(tags)
-stem_vols_df %>%
-  knitr::kable(., "html") %>%
-  kableExtra::kable_styling(.) %>%
+stem_vols_df <- make_stem_tags_df(tags) |>
+  dplyr::distinct()
+```
+
+$n=$ `r dim(stem_vols_df)[1]` volumes contain STEM-relevant tags.
+
+```{r}
+stem_vols_df |>
+  knitr::kable("html") |>
+  kableExtra::kable_styling() |>
   kableExtra::scroll_box(width = "100%", height = "300px")
 ```

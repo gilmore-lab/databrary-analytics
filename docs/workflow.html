@@ -123,8 +123,8 @@ We have found it is faster and more convenient in many cases to download various
 <p>Some of the CSVs contain potentially identifiable human subjects data, so we use a special <code>.gitignore</code> file to keep those files out of the git tracking scheme and prevent uploading them to GitHub.</p>
 <p>These data analyses and visualizations have developed piecemeal over several years.
 They could undoubtedly be optimized and improved.</p>
-<p>The primary developer (Rick Gilmore) has had a ‘git-er-done’ attitude toward the project, especially with the latest refactoring to <code>bookdown</code>, <code>targets</code>, and <code>renv</code>.</p>
-<p>I take some solace in the following quotation from the father of literate programming, <a href="https://en.wikiquote.org/wiki/Donald_Knuth">Donald Knuth</a>:</p>
+<p>The primary developer (Rick Gilmore) has had a ‘git-er-done’ attitude toward the project, especially with the latest refactoring to <a href="https://github.com/rstudio/bookdown">bookdown</a>, <a href="https://docs.ropensci.org/targets/">targets</a>, and <a href="https://rstudio.github.io/renv/">renv</a>.</p>
+<p>Gilmore takes some solace in the following quotation from the father of literate programming, <a href="https://en.wikiquote.org/wiki/Donald_Knuth">Donald Knuth</a>:</p>
 <blockquote>
 <p>…the real problem is that programmers have spent far too much time worrying about efficiency in the wrong places and at the wrong times; premature optimization is the root of all evil (or at least most of it) in programming.</p>
 </blockquote>
@@ -133,14 +133,30 @@ They could undoubtedly be optimized and improved.</p>
 </h3>
 <ul>
 <li>Migrate ARS to <code>bookdown</code> branch; merge into main (March 2023).</li>
-<li>Fix when targets are run for which flows.</li>
-<li>Separate functions in <code>R/functions.R</code> into separate files based on their context. The current <code>R/functions.R</code> contains mostly old code from the pre-<code>bookdown</code> version of the site. The styles are inconsistent and the large file is hard to maintain.</li>
+<li>Fix when targets are run for which flows.
+<ul>
+<li>This is a work in-progress.</li>
+</ul>
+</li>
+<li>Separate functions in <code>R/functions.R</code> into separate files based on their context. The current <code>R/functions.R</code> contains mostly old code from the pre-<code>bookdown</code> version of the site. The styles are inconsistent and the large file is hard to maintain.
+<ul>
+<li>This is in-process as of 2023-02-24.</li>
+</ul>
+</li>
 <li>Devise visualizations of assets by investigator/institution.</li>
-<li>Function to determine max party_id and max volume_id interactively.</li>
+<li>
+<del>Function to determine max party_id and max volume_id interactively</del>.</li>
 <li>Eliminate YAML params from <code>index.Rmd</code>.</li>
 <li>Create JSON lat, lon file for Databrary home page.</li>
-<li>Add state, country summarizes to demographics.</li>
+<li>
+<del>Add state, country summaries to demographics</del>.</li>
 <li>Allow user to show code.</li>
+<li>Move from old pipe <code>%&gt;%</code> to new <code>|&gt;</code>.
+<ul>
+<li>
+<del>Done for <code>*.Rmd</code> files</del>, but not <code>*.R</code> files as of 2023-02-24.</li>
+</ul>
+</li>
 </ul>
 </div>
 </div>
@@ -181,7 +197,7 @@ They could undoubtedly be optimized and improved.</p>
 <footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
 
   <div class="col-12 col-md-6 mt-3">
-    <p>"<strong>Databrary analytics</strong>" was written by Rick Gilmore &amp; Andrea Seisler. It was last built on 2023-02-20.</p>
+    <p>"<strong>Databrary analytics</strong>" was written by Rick Gilmore &amp; Andrea Seisler. It was last built on 2023-02-24.</p>
   </div>
 
   <div class="col-12 col-md-6 mt-3">

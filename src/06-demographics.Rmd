@@ -4,7 +4,8 @@ This report summarizes the demographic characteristics of participants in shared
 
 ```{r, message=FALSE, warning=FALSE}
 targets::tar_load(volume_demog_df, store = "../_targets")
-demo_df <- volume_demog_df
+demo_df <- volume_demog_df |>
+  dplyr::distinct()
 ```
 
 ### Owner data  {-}
@@ -34,8 +35,8 @@ Databrary has demographic data for ~ $n=$ `r sum(!is.na(demo_df$participant_ID))
 This number is an underestimate because the number of unshared volumes is 3-4x the number of shared volumes.
 
 ```{r add-databrary-volume-url}
-demo_df <- volume_demog_df %>%
-  dplyr::mutate(., vol_url = paste0("https://nyu.databrary.org/volume/", as.numeric(vol_id)))
+demo_df <- volume_demog_df |>
+  dplyr::mutate(vol_url = paste0("https://nyu.databrary.org/volume/", as.numeric(vol_id)))
 ```
 
 ## Age {-}
@@ -43,37 +44,38 @@ demo_df <- volume_demog_df %>%
 ### Volumes and session  {-}
 
 ```{r create-age}
-age_df <- demo_df %>%
-  dplyr::filter(., !is.na(age_days)) %>%
-  dplyr::group_by(., vol_id, vol_url) %>%
-  dplyr::summarize(., n_sessions = n()) %>%
-  dplyr::ungroup(.) %>%
-  dplyr::mutate(., n_vols_w_demo = n())
+age_df <- demo_df |>
+  dplyr::filter(!is.na(age_days)) |>
+  dplyr::group_by(vol_id, vol_url) |>
+  dplyr::summarize(n_sessions = n()) |>
+  dplyr::ungroup() |>
+  dplyr::mutate(n_vols_w_demo = n())
 
-age_df %>%
-  dplyr::select(., vol_id, vol_url, n_sessions) %>%
-  dplyr::arrange(., desc(n_sessions)) %>%
-  knitr::kable(., "html") %>%
-  kableExtra::kable_styling(.) %>%
+age_df |>
+  dplyr::select(vol_id, vol_url, n_sessions) |>
+  dplyr::arrange(desc(n_sessions)) |>
+  knitr::kable("html") |>
+  kableExtra::kable_styling() |>
   kableExtra::scroll_box(width = "100%", height = "300px")
 ```
 
-There are `r unique(age_df$n_vols_w_demo)` volumes reporting `age_days`.
 
-### Number of participants and age distribution  {-}
+There are $n=$ `r unique(age_df$n_vols_w_demo)` volumes reporting `age_days`.
+
+### $n$ participants and age distribution  {-}
 
 The following summarizes the number of individual participant-sessions for whom there are data.
 
 ```{r summarize-age}
-age_df <- demo_df %>%
-  dplyr::mutate(., age_grp = cut(as.numeric(demo_df$age_days), c(0, 90, 180, 365.25, 2*365.25, 3*365.25, 4*365.25, 5*365.25, 15*365.25, 20*365.25, 25*365.25, 100*365.25), c("<3m", "3-6m", "6m-1y", "1-2y", "2-3y", "3-4y", "4-5y", "5-15y", "15-20y", "20-25y", ">25y")))
+age_df <- demo_df |>
+  dplyr::mutate(age_grp = cut(as.numeric(demo_df$age_days), c(0, 90, 180, 365.25, 2*365.25, 3*365.25, 4*365.25, 5*365.25, 15*365.25, 20*365.25, 25*365.25, 100*365.25), c("<3m", "3-6m", "6m-1y", "1-2y", "2-3y", "3-4y", "4-5y", "5-15y", "15-20y", "20-25y", ">25y")))
 
 xtabs(formula = ~ age_grp, data = age_df)
 ```
 
 ```{r under-5y-hist, fig.cap="Age distribution of < 5yrs"}
-demo_df %>%
-  dplyr::filter(., age_days <= 365.24*5) %>%
+demo_df |>
+  dplyr::filter(age_days <= 365.24*5) |>
   ggplot() +
   aes(age_days) +
   geom_histogram() +
@@ -81,9 +83,9 @@ demo_df %>%
 ```
 
 ```{r 5y-15y-hist, fig.cap="Age distribution of 5-15 year-olds"}
-demo_df %>%
-  dplyr::filter(., age_days > 365.24*5,
-                age_days <= 365.24*15) %>%
+demo_df |>
+  dplyr::filter(age_days > 365.24*5,
+                age_days <= 365.24*15) |>
   ggplot() +
   aes(age_days) +
   geom_histogram() +
@@ -91,8 +93,8 @@ demo_df %>%
 ```
 
 ```{r 15y-plus-hist, fig.cap="Age distribution of 15+ year-olds"}
-demo_df %>%
-  dplyr::filter(., age_days > 365.24*15) %>%
+demo_df |>
+  dplyr::filter(age_days > 365.24*15) |>
   ggplot() +
   aes(age_days) +
   geom_histogram() +
@@ -104,29 +106,30 @@ demo_df %>%
 ### Volumes and sessions {-}
 
 ```{r gender-volumes}
-gender_df <- demo_df %>%
-  dplyr::filter(., !is.na(participant_gender)) %>%
-  dplyr::group_by(., vol_id, vol_url) %>%
-  dplyr::summarize(., n_sessions = n()) %>%
-  dplyr::ungroup(.) %>%
-  dplyr::mutate(., n_vols_w_demo = n())
+gender_df <- demo_df |>
+  dplyr::filter(!is.na(participant_gender)) |>
+  dplyr::group_by(vol_id, vol_url) |>
+  dplyr::summarize(n_sessions = n()) |>
+  dplyr::ungroup() |>
+  dplyr::mutate(n_vols_w_demo = n())
 
-gender_df %>%
-  dplyr::select(., vol_id, vol_url, n_sessions) %>%
-  dplyr::arrange(., desc(n_sessions)) %>%
-  knitr::kable(., "html") %>%
-  kableExtra::kable_styling(.) %>%
+gender_df |>
+  dplyr::select(vol_id, vol_url, n_sessions) |>
+  dplyr::arrange(desc(n_sessions)) |>
+  knitr::kable("html") |>
+  kableExtra::kable_styling() |>
   kableExtra::scroll_box(width = "100%", height = "300px")
 ```
 
-There are `r unique(gender_df$n_vols_w_demo)` volumes reporting `participant_gender`.
 
-### Number of participants {-}
+There are $n=$`r unique(gender_df$n_vols_w_demo)` volumes reporting `participant_gender`.
+
+### $n$ participants {-}
 
 ```{r gender-table}
-xtabs(formula = ~ participant_gender, data = demo_df) %>%
-  knitr::kable(., "html") %>%
-  kableExtra::kable_styling(.) %>%
+xtabs(formula = ~ participant_gender, data = demo_df) |>
+  knitr::kable("html") |>
+  kableExtra::kable_styling() |>
   kableExtra::scroll_box(width = "100%", height = "300px")
 ```
 
@@ -135,29 +138,30 @@ xtabs(formula = ~ participant_gender, data = demo_df) %>%
 ### Volumes and sessions {-}
 
 ```{r race-volumesE}
-race_df <- demo_df %>%
-  dplyr::filter(., !is.na(participant_race)) %>%
-  dplyr::group_by(., vol_id, vol_url) %>%
-  dplyr::summarize(., n_sessions = n()) %>%
-  dplyr::ungroup(.) %>%
-  dplyr::mutate(., n_vols_w_demo = n())
+race_df <- demo_df |>
+  dplyr::filter(!is.na(participant_race)) |>
+  dplyr::group_by(vol_id, vol_url) |>
+  dplyr::summarize(n_sessions = n()) |>
+  dplyr::ungroup() |>
+  dplyr::mutate(n_vols_w_demo = n())
 
-race_df %>%
-  dplyr::select(., vol_id, vol_url, n_sessions) %>%
-  dplyr::arrange(., desc(n_sessions)) %>%
-  knitr::kable(., "html") %>%
-  kableExtra::kable_styling(.) %>%
+race_df |>
+  dplyr::select(vol_id, vol_url, n_sessions) |>
+  dplyr::arrange(desc(n_sessions)) |>
+  knitr::kable("html") |>
+  kableExtra::kable_styling() |>
   kableExtra::scroll_box(width = "100%", height = "300px")
 ```
 
-There are `r unique(race_df$n_vols_w_demo)` volumes reporting `participant_race`.
 
-### Number of participants {-}
+There are $n=$ `r unique(race_df$n_vols_w_demo)` volumes reporting `participant_race`.
+
+### $n$ participants {-}
 
 ```{r race-table,}
-xtabs(formula = ~ participant_race, data = demo_df) %>%
-  knitr::kable(., "html") %>%
-  kableExtra::kable_styling(.) %>%
+xtabs(formula = ~ participant_race, data = demo_df) |>
+  knitr::kable("html") |>
+  kableExtra::kable_styling() |>
   kableExtra::scroll_box(width = "100%", height = "300px")
 ```
 
@@ -166,29 +170,30 @@ xtabs(formula = ~ participant_race, data = demo_df) %>%
 ### Volumes and sessions {-}
 
 ```{r ethnicity-volumes}
-ethnicity_df <- demo_df %>%
-  dplyr::filter(., !is.na(participant_ethnicity)) %>%
-  dplyr::group_by(., vol_id, vol_url) %>%
-  dplyr::summarize(., n_sessions = n()) %>%
-  dplyr::ungroup(.) %>%
-  dplyr::mutate(., n_vols_w_demo = n())
+ethnicity_df <- demo_df |>
+  dplyr::filter(!is.na(participant_ethnicity)) |>
+  dplyr::group_by(vol_id, vol_url) |>
+  dplyr::summarize(n_sessions = n()) |>
+  dplyr::ungroup() |>
+  dplyr::mutate(n_vols_w_demo = n())
 
-ethnicity_df %>%
-  dplyr::select(., vol_id, vol_url, n_sessions) %>%
-  dplyr::arrange(., desc(n_sessions)) %>%
-  knitr::kable(., "html") %>%
-  kableExtra::kable_styling(.) %>%
+ethnicity_df |>
+  dplyr::select(vol_id, vol_url, n_sessions) |>
+  dplyr::arrange(desc(n_sessions)) |>
+  knitr::kable("html") |>
+  kableExtra::kable_styling() |>
   kableExtra::scroll_box(width = "100%", height = "300px")
 ```
 
-There are `r unique(ethnicity_df$n_vols_w_demo)` volumes reporting `participant_ethnicity`.
 
-### Number of participants {-}
+There are $n=$ `r unique(ethnicity_df$n_vols_w_demo)` volumes reporting `participant_ethnicity`.
+
+### $n$ participants {-}
 
 ```{r ethnicity-table}
-xtabs(formula = ~ participant_ethnicity, data = demo_df) %>%
-  knitr::kable(., "html") %>%
-  kableExtra::kable_styling(.) %>%
+xtabs(formula = ~ participant_ethnicity, data = demo_df) |>
+  knitr::kable("html") |>
+  kableExtra::kable_styling() |>
   kableExtra::scroll_box(width = "100%", height = "300px")
 ```
 
@@ -197,29 +202,30 @@ xtabs(formula = ~ participant_ethnicity, data = demo_df) %>%
 ### Volumes and sessions {-}
 
 ```{r language-volumes}
-language_df <- demo_df %>%
-  dplyr::filter(., !is.na(participant_language)) %>%
-  dplyr::group_by(., vol_id, vol_url) %>%
-  dplyr::summarize(., n_sessions = n()) %>%
-  dplyr::ungroup(.) %>%
-  dplyr::mutate(., n_vols_w_demo = n())
+language_df <- demo_df |>
+  dplyr::filter(!is.na(participant_language)) |>
+  dplyr::group_by(vol_id, vol_url) |>
+  dplyr::summarize(n_sessions = n()) |>
+  dplyr::ungroup() |>
+  dplyr::mutate(n_vols_w_demo = n())
 
-language_df %>%
-  dplyr::select(., vol_id, vol_url, n_sessions) %>%
-  dplyr::arrange(., desc(n_sessions)) %>%
-  knitr::kable(., "html") %>%
-  kableExtra::kable_styling(.) %>%
+language_df |>
+  dplyr::select(vol_id, vol_url, n_sessions) |>
+  dplyr::arrange(desc(n_sessions)) |>
+  knitr::kable("html") |>
+  kableExtra::kable_styling() |>
   kableExtra::scroll_box(width = "100%", height = "300px")
 ```
 
-There are `r unique(language_df$n_vols_w_demo)` volumes reporting `participant_language`.
 
-### Number of participants {-}
+There are $n=$ `r unique(language_df$n_vols_w_demo)` volumes reporting `participant_language`.
+
+### $n$ participants {-}
 
 ```{r language-table}
-xtabs(formula = ~ participant_language, data = demo_df) %>%
-  knitr::kable(., "html") %>%
-  kableExtra::kable_styling(.) %>%
+xtabs(formula = ~ participant_language, data = demo_df) |>
+  knitr::kable("html") |>
+  kableExtra::kable_styling() |>
   kableExtra::scroll_box(width = "100%", height = "300px")
 ```
 
@@ -228,29 +234,29 @@ xtabs(formula = ~ participant_language, data = demo_df) %>%
 ### Volumes and sessions {-}
 
 ```{r pregnancy-term-volumes}
-participant_pregnancy_term_df <- demo_df %>%
-  dplyr::filter(., !is.na(participant_pregnancy_term)) %>%
-  dplyr::group_by(., vol_id, vol_url) %>%
-  dplyr::summarize(., n_sessions = n()) %>%
-  dplyr::ungroup(.) %>%
-  dplyr::mutate(., n_vols_w_demo = n())
+participant_pregnancy_term_df <- demo_df |>
+  dplyr::filter(!is.na(participant_pregnancy_term)) |>
+  dplyr::group_by(vol_id, vol_url) |>
+  dplyr::summarize(n_sessions = n()) |>
+  dplyr::ungroup() |>
+  dplyr::mutate(n_vols_w_demo = n())
 
-participant_pregnancy_term_df %>%
-  dplyr::select(., vol_id, vol_url, n_sessions) %>%
-  dplyr::arrange(., desc(n_sessions)) %>%
-  knitr::kable(., "html") %>%
-  kableExtra::kable_styling(.) %>%
+participant_pregnancy_term_df |>
+  dplyr::select(vol_id, vol_url, n_sessions) |>
+  dplyr::arrange(desc(n_sessions)) |>
+  knitr::kable("html") |>
+  kableExtra::kable_styling() |>
   kableExtra::scroll_box(width = "100%", height = "300px")
 ```
 
 There are `r unique(participant_pregnancy_term_df$n_vols_w_demo)` volumes reporting `participant_pregnancy_term`.
 
-### Number of participants {-}
+### $n$ participants {-}
 
 ```{r pregnancy-term-table}
-xtabs(formula = ~ participant_pregnancy_term, data = demo_df) %>%
-  knitr::kable(., "html") %>%
-  kableExtra::kable_styling(.) %>%
+xtabs(formula = ~ participant_pregnancy_term, data = demo_df) |>
+  knitr::kable("html") |>
+  kableExtra::kable_styling() |>
   kableExtra::scroll_box(width = "100%", height = "300px")
 ```
 
@@ -259,36 +265,37 @@ xtabs(formula = ~ participant_pregnancy_term, data = demo_df) %>%
 ### Volumes and sessions {-}
 
 ```{r birthweight-volumes}
-participant_birth_weight_df <- demo_df %>%
-  dplyr::filter(., !is.na(participant_birth_weight)) %>%
-  dplyr::group_by(., vol_id, vol_url) %>%
-  dplyr::summarize(., n_sessions = n()) %>%
-  dplyr::ungroup(.) %>%
-  dplyr::mutate(., n_vols_w_demo = n())
+participant_birth_weight_df <- demo_df |>
+  dplyr::filter(!is.na(participant_birth_weight)) |>
+  dplyr::group_by(vol_id, vol_url) |>
+  dplyr::summarize(n_sessions = n()) |>
+  dplyr::ungroup() |>
+  dplyr::mutate(n_vols_w_demo = n())
 
-participant_birth_weight_df %>%
-  dplyr::select(., vol_id, vol_url, n_sessions) %>%
-  dplyr::arrange(., desc(n_sessions)) %>%
-  knitr::kable(., "html") %>%
-  kableExtra::kable_styling(.) %>%
+participant_birth_weight_df |>
+  dplyr::select(vol_id, vol_url, n_sessions) |>
+  dplyr::arrange(desc(n_sessions)) |>
+  knitr::kable("html") |>
+  kableExtra::kable_styling() |>
   kableExtra::scroll_box(width = "100%", height = "300px")
 ```
 
-There are `r unique(participant_birth_weight_df$n_vols_w_demo)` volumes reporting `participant_birth_weight`.
 
-### Number of participants {-}
+There are $n=$ `r unique(participant_birth_weight_df$n_vols_w_demo)` volumes reporting `participant_birth_weight`.
+
+### $n$ participants {-}
 
 ```{r birthweight-table}
-xtabs(formula = ~ participant_birth_weight, data = demo_df) %>%
-  knitr::kable(., "html") %>%
-  kableExtra::kable_styling(.) %>%
+xtabs(formula = ~ participant_birth_weight, data = demo_df) |>
+  knitr::kable("html") |>
+  kableExtra::kable_styling() |>
   kableExtra::scroll_box(width = "100%", height = "300px")
 ```
 
 ### Histogram {-}
 
 ```{r birthweight-hist}
-demo_df %>%
+demo_df |>
   ggplot() +
   aes(x = as.numeric(participant_birth_weight)) +
   geom_histogram(bins = 15)
@@ -299,60 +306,61 @@ demo_df %>%
 ### Volumes and sessions {-}
 
 ```{r participant_disability-volumes}
-participant_disability_df <- demo_df %>%
-  dplyr::filter(., !is.na(participant_disability)) %>%
-  dplyr::group_by(., vol_id, vol_url) %>%
-  dplyr::summarize(., n_sessions = n()) %>%
-  dplyr::ungroup(.) %>%
-  dplyr::mutate(., n_vols_w_demo = n())
+participant_disability_df <- demo_df |>
+  dplyr::filter(!is.na(participant_disability)) |>
+  dplyr::group_by(vol_id, vol_url) |>
+  dplyr::summarize(n_sessions = n()) |>
+  dplyr::ungroup() |>
+  dplyr::mutate(n_vols_w_demo = n())
 
-participant_disability_df %>%
-  dplyr::select(., vol_id, vol_url, n_sessions) %>%
-  dplyr::arrange(., desc(n_sessions)) %>%
-  knitr::kable(., "html") %>%
-  kableExtra::kable_styling(.) %>%
+participant_disability_df |>
+  dplyr::select(vol_id, vol_url, n_sessions) |>
+  dplyr::arrange(desc(n_sessions)) |>
+  knitr::kable("html") |>
+  kableExtra::kable_styling() |>
   kableExtra::scroll_box(width = "100%", height = "300px")
 ```
 
-There are `r unique(participant_disability_df$n_vols_w_demo)` volumes reporting `participant_disability`.
 
-### Number of participants {-}
+There are $n=$ `r unique(participant_disability_df$n_vols_w_demo)` volumes reporting `participant_disability`.
+
+### $n$ participants {-}
 
 ```{r disability-table}
-xtabs(formula = ~ participant_disability, data = demo_df) %>%
-  knitr::kable(., "html") %>%
-  kableExtra::kable_styling(.) %>%
+xtabs(formula = ~ participant_disability, data = demo_df) |>
+  knitr::kable("html") |>
+  kableExtra::kable_styling() |>
   kableExtra::scroll_box(width = "100%", height = "300px")
 ```
-
 
 ## Country {-}
 
 ### Volumes and sessions {-}
 
 ```{r participant_country-volumes}
-participant_country_df <- demo_df %>%
-  dplyr::filter(., !is.na(participant_country)) %>%
-  dplyr::group_by(., vol_id, vol_url) %>%
-  dplyr::summarize(., n_sessions = n()) %>%
-  dplyr::ungroup(.) %>%
-  dplyr::mutate(., n_vols_w_demo = n())
+participant_country_df <- demo_df |>
+  dplyr::filter(!is.na(participant_country)) |>
+  dplyr::group_by(vol_id, vol_url) |>
+  dplyr::summarize(n_sessions = n()) |>
+  dplyr::ungroup() |>
+  dplyr::mutate(n_vols_w_demo = n())
 
-participant_country_df %>%
-  dplyr::select(., vol_id, vol_url, n_sessions) %>%
-  dplyr::arrange(., desc(n_sessions)) %>%
-  knitr::kable(., "html") %>%
-  kableExtra::kable_styling(.) %>%
+participant_country_df |>
+  dplyr::select(vol_id, vol_url, n_sessions) |>
+  dplyr::arrange(desc(n_sessions)) |>
+  knitr::kable("html") |>
+  kableExtra::kable_styling() |>
   kableExtra::scroll_box(width = "100%", height = "300px")
 ```
 
-There are `r unique(participant_country_df$n_vols_w_demo)` volumes reporting `participant_country`.
 
-### Number of participants {-}
+There are $n=$ `r unique(participant_country_df$n_vols_w_demo)` volumes reporting `participant_country`.
+
+### $n$ participants {-}
 
 ```{r country-table}
-xtabs(formula = ~ participant_country, data = demo_df) %>%
-  knitr::kable(., "html") %>%
-  kableExtra::kable_styling(.) %>%
+xtabs(formula = ~ participant_country, data = demo_df) |>
+  knitr::kable("html") |>
+  kableExtra::kable_styling() |>
   kableExtra::scroll_box(width = "100%", height = "300px")
 ```

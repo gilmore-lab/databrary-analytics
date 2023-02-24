@@ -3,7 +3,7 @@
 #-------------------------------------------------------------------------------
 party_id_exists <- function(party_id = 1) {
   p = databraryapi::download_party(party_id)
-
+  
   if (is.null(p)) {
     FALSE
   } else {
@@ -12,7 +12,8 @@ party_id_exists <- function(party_id = 1) {
 }
 
 #-------------------------------------------------------------------------------
-get_max_party_id <- function(start_id = 10922, increment = 20) {
+get_max_party_id <- function(start_id = 10922,
+                             increment = 20) {
   stopifnot(is.numeric(start_id))
   stopifnot(start_id > 0)
   stopifnot(is.numeric(increment))
@@ -23,9 +24,9 @@ get_max_party_id <- function(start_id = 10922, increment = 20) {
     unlist()
   
   new_max <- max(p_ids[ps_exist])
-  Sys.setenv("MAX_PARTY_ID" = as.character(new_max))
+  # Sys.setenv("MAX_PARTY_ID" = as.character(new_max))
   new_max
-} 
+}
 
 #-------------------------------------------------------------------------------
 vol_id_exists <- function(vol_id = 1) {
@@ -39,7 +40,8 @@ vol_id_exists <- function(vol_id = 1) {
 }
 
 #-------------------------------------------------------------------------------
-get_max_vol_id <- function(start_id = 1568, increment = 20) {
+get_max_vol_id <- function(start_id = 1568,
+                           increment = 20) {
   stopifnot(is.numeric(start_id))
   stopifnot(start_id > 0)
   stopifnot(is.numeric(increment))
@@ -50,9 +52,45 @@ get_max_vol_id <- function(start_id = 1568, increment = 20) {
     unlist()
   
   new_max <- max(v_ids[vs_exist])
-  Sys.setenv("MAX_VOL_ID" = as.character(new_max))
+  # Sys.setenv("MAX_VOL_ID" = as.character(new_max))
   new_max
 }
+
+#-------------------------------------------------------------------------------
+update_max_vol_party_ids <-
+  function(csv_dir = "src/csv",
+           default_vol = 1567,
+           default_party = 10941,
+           vb = FALSE) {
+    stopifnot(is.character(csv_dir))
+    stopifnot(dir.exists(csv_dir))
+    
+    fn <- file.path(csv_dir, 'max-ids.csv')
+    if (!file.exists(fn)) {
+      if (vb)
+        message(paste0('File does not exist: ', fn, "'. Creating."))
+      max_ids <-
+        data.frame(MAX_VOL_ID = default_vol, MAX_PARTY_ID = default_party)
+      readr::write_csv(max_ids, fn)
+    }
+    old_max_ids <- readr::read_csv(fn, show_col_types = FALSE)
+    if (is.data.frame(old_max_ids)) {
+      if (vb)
+        message("Updating max vol and party IDs.")
+      new_max_vol_id <- get_max_vol_id(old_max_ids$MAX_VOL_ID)
+      new_max_party_id <- get_max_party_id(old_max_ids$MAX_PARTY_ID)
+      max_ids <-
+        data.frame(MAX_VOL_ID = new_max_vol_id, MAX_PARTY_ID = new_max_party_id)
+      if (vb)
+        message("Writing IDs to '", fn, "'.")
+      readr::write_csv(max_ids, fn)
+    } else {
+      if (vb)
+        message("Error opening '", fn, '.')
+      return(NULL)
+    }
+    max_ids
+  }
 
 #-------------------------------------------------------------------------------
 auth_to_google <- function(gacct = "rick.o.gilmore") {
@@ -97,8 +135,8 @@ update_inst_invest_df <-
     
     new_df <- old_df
     next_entry <- dim(old_df)[1] + 1
-    new_df[next_entry,] = NA
-    new_df[next_entry,] <- new_item
+    new_df[next_entry, ] = NA
+    new_df[next_entry, ] <- new_item
     new_df
   }
 
@@ -204,7 +242,7 @@ make_stem_tags_df <- function(tags_df,
   
   stem_vols_df <- stem_vols_df %>%
     dplyr::filter(., vol_id != 109) %>% # Empty volume
-    dplyr::select(., -owners, -permission, -doi)
+    dplyr::select(.,-owners,-permission,-doi)
   
   stem_vols_df
 }
@@ -251,7 +289,7 @@ update_volume_funders_csv <-
 
 # ###############################################################################
 # # Volume-level assets
-# 
+#
 # #-------------------------------------------------------------------------------
 # get_assets_in_vol <- function(vol_id, vb = FALSE) {
 #   if ((as.numeric(vol_id) <= 0)) {
@@ -260,14 +298,14 @@ update_volume_funders_csv <-
 #   if (!is.logical(vb)) {
 #     stop('`vb` must be a logical value.')
 #   }
-#   
+#
 #   suppressPackageStartupMessages(require(tidyverse))
 #   suppressPackageStartupMessages(require(databraryapi))
-#   
+#
 #   if (vb)
 #     message(paste0(" Extracting assets from volume ", vol_id))
 #   vol_data <- databraryapi::list_assets_in_volume(vol_id)
-#   
+#
 #   if (is.null(vol_data)) {
 #     if (vb)
 #       message(" No available assets.")
@@ -286,7 +324,7 @@ update_volume_funders_csv <-
 #     vol_data
 #   }
 # }
-# 
+#
 # #-------------------------------------------------------------------------------
 # calculate_vol_asset_stats <- function(vol_id,
 #                                       save_file = FALSE,
@@ -307,11 +345,11 @@ update_volume_funders_csv <-
 #   if (!is.logical(vb)) {
 #     stop('`vb` must be a logical value.')
 #   }
-#   
+#
 #   suppressPackageStartupMessages(require(tidyverse))
-#   
+#
 #   options(dplyr.summarise.inform = FALSE)
-#   
+#
 #   if (vb)
 #     message(paste0('Retrieving asset data for volume ', vol_id))
 #   vol_assets <- get_assets_in_vol(vol_id, vb)
@@ -328,7 +366,7 @@ update_volume_funders_csv <-
 #         tot_size_gb = bytes_to_gb(sum(size, na.rm = TRUE)),
 #         tot_dur_hrs = ms_to_hrs(sum(duration, na.rm = TRUE))
 #       )
-#     
+#
 #     if (save_file) {
 #       out_fn <-
 #         file.path(save_path, paste0(stringr::str_pad(vol_id, 5, pad = "0"), '-assets.csv'))
@@ -343,7 +381,7 @@ update_volume_funders_csv <-
 #     vol_summary
 #   }
 # }
-# 
+#
 # #-------------------------------------------------------------------------------
 # update_vol_asset_stats <-
 #   function(start_vol_id,
@@ -360,9 +398,9 @@ update_volume_funders_csv <-
 #     if (!(start_vol_id <= end_vol_id)) {
 #       stop('`start_vol_id` must be <= than `end_vol_id`')
 #     }
-#     
+#
 #     suppressPackageStartupMessages(require(purrr))
-#     
+#
 #     message(
 #       paste0(
 #         "Updating volume asset statistics for volumes ",
@@ -382,7 +420,7 @@ update_volume_funders_csv <-
 #       .progress = "Vol assets:"
 #     )
 #   }
-# 
+#
 # #-------------------------------------------------------------------------------
 # update_all_vol_stats <- function(max_volume_id,
 #                                  vols_per_pass = 50,
@@ -413,9 +451,9 @@ update_volume_funders_csv <-
 #   if (!is.logical(vb)) {
 #     stop('`vb` must be a logical value.')
 #   }
-#   
+#
 #   suppressPackageStartupMessages(require(purrr))
-#   
+#
 #   # It may be unnecessary, but I do this in separate chunks
 #   # Some of the larger volumes have a lot of assets, and this
 #   # chunking gives the analyst some feedback about what's happening.
@@ -423,7 +461,7 @@ update_volume_funders_csv <-
 #   range_start_id <-
 #     seq(from = 1, to = max_volume_id, by = vols_per_pass)
 #   range_end_id <- range_start_id + vols_per_pass
-#   
+#
 #   purrr::map2(
 #     range_start_id,
 #     range_end_id,
@@ -433,15 +471,15 @@ update_volume_funders_csv <-
 #     vb = vb
 #   )
 # }
-# 
+#
 # #-------------------------------------------------------------------------------
 # generate_volume_asset_csv_list <- function(csv_dir = "src/csv") {
 #   stopifnot(is.character(csv_dir))
 #   stopifnot(dir.exists(csv_dir))
-#   
+#
 #   list.files(csv_dir, '-assets\\.csv', full.names = TRUE)
 # }
-# 
+#
 # #-------------------------------------------------------------------------------
 # make_volume_assets_stats_df <-
 #   function(csv_fns = "src/csv", vb = FALSE) {
@@ -455,12 +493,12 @@ update_volume_funders_csv <-
 #                     .progress = "Asset CSVs:")
 #     dplyr::arrange(df, vol_id)
 #   }
-# 
+#
 # #-------------------------------------------------------------------------------
 # bytes_to_gb <- function(b) {
 #   b / (1.024e9)
 # }
-# 
+#
 # #-------------------------------------------------------------------------------
 # ms_to_secs <- function(ms) {
 #   if (!is.numeric(ms)) {
@@ -468,7 +506,7 @@ update_volume_funders_csv <-
 #   }
 #   ms / 1000
 # }
-# 
+#
 # #-------------------------------------------------------------------------------
 # secs_to_mins <- function(s) {
 #   if (!is.numeric(s)) {
@@ -476,7 +514,7 @@ update_volume_funders_csv <-
 #   }
 #   s / 60
 # }
-# 
+#
 # #-------------------------------------------------------------------------------
 # mins_to_hrs <- function(m) {
 #   if (!is.numeric(m)) {
@@ -484,7 +522,7 @@ update_volume_funders_csv <-
 #   }
 #   m / 60
 # }
-# 
+#
 # #-------------------------------------------------------------------------------
 # ms_to_mins <- function(ms) {
 #   if (!is.numeric(ms)) {
@@ -492,7 +530,7 @@ update_volume_funders_csv <-
 #   }
 #   ms_to_secs(ms) %>% secs_to_mins(.)
 # }
-# 
+#
 # #-------------------------------------------------------------------------------
 # ms_to_hrs <- function(ms) {
 #   if (!is.numeric(ms)) {
@@ -596,7 +634,7 @@ get_volume_demog <- function(vol_id = 4, vb = FALSE) {
     names(r_df) <- stringr::str_replace_all(names(r_df),
                                             pattern = "[\\-|\\.| ]", replacement = "_")
     r_df <-
-      dplyr::filter(r_df,!(stringr::str_detect(session_date, 'materials')))
+      dplyr::filter(r_df, !(stringr::str_detect(session_date, 'materials')))
     r_df <- dplyr::mutate(r_df,
                           session_id = as.character(session_id))
     # TODO: Devise a more elegant way to clean-up/normalize the spreadsheet data
@@ -1047,7 +1085,7 @@ get_volume_first_owner <- function(vol_id) {
   if (rlang::is_empty(df)) {
     NULL
   } else {
-    df[1, ]
+    df[1,]
   }
 }
 
@@ -1255,7 +1293,7 @@ get_volume_ss <- function(vol_id = 1,
     df <- v_ss
     if (omit_materials) {
       df <-
-        dplyr::filter(df,!(stringr::str_detect(session_date, 'materials')))
+        dplyr::filter(df, !(stringr::str_detect(session_date, 'materials')))
     }
     df$vol_id <- vol_id
     return(df)
@@ -1307,7 +1345,7 @@ get_volume_ss_vroom <- function(vol_id = 4,
     names(df) <- stringr::str_replace_all(names(df), '[-\\. ]', '_')
     if (omit_materials) {
       df <-
-        dplyr::filter(df,!(stringr::str_detect(session_date, 'materials')))
+        dplyr::filter(df, !(stringr::str_detect(session_date, 'materials')))
     }
     df$vol_id <- as.character(vol_id)
     return(df)
@@ -1397,7 +1435,7 @@ extract_sessions_from_vol_csv <-
         message("CSV empty: ", csv_fn)
       NULL
     } else {
-      dplyr::filter(df,!(stringr::str_detect(session_date, 'materials')))
+      dplyr::filter(df, !(stringr::str_detect(session_date, 'materials')))
     }
   }
 
@@ -1414,7 +1452,7 @@ count_sessions_materials_folders <-
       NULL
     } else {
       df_sess <-
-        dplyr::filter(df,!(stringr::str_detect(session_date, 'materials')))
+        dplyr::filter(df, !(stringr::str_detect(session_date, 'materials')))
       n_sess <- dim(df_sess)[1]
       
       df_materials <-
@@ -1553,7 +1591,7 @@ extract_particip_info_session_date <- function(df) {
 
 #-------------------------------------------------------------------------------
 remove_materials <- function(df) {
-  filter(df,!str_detect(`session-date`, '[Mm]aterials'))
+  filter(df, !str_detect(`session-date`, '[Mm]aterials'))
 }
 
 #-------------------------------------------------------------------------------
@@ -1711,12 +1749,12 @@ create_complete_demog_df <- function(fl, vb = FALSE) {
 #   if (vb)
 #     message("Updating list of authorizing institutions.")
 #   inst_ids <- get_auth_inst_list(update_inst)
-#   
+#
 #   if (vb)
 #     message("Retrieving authorized investigators from institutions.")
 #   df <-
 #     purrr::map_df(inst_ids, get_ais_from_inst, .progress = "AIs from inst:")
-#   
+#
 #   if (file.exists(csv_fn)) {
 #     message(paste0("File exists: ", csv_fn))
 #     if (save_new == TRUE) {
@@ -1733,31 +1771,38 @@ create_complete_demog_df <- function(fl, vb = FALSE) {
 #   }
 # }
 
-#-------------------------------------------------------------------------------
-update_invest_csv <- function(all_inst_df,
-                              csv_dir = "src/csv",
-                              vb = FALSE) {
-
-  # Filter
-  # if (vb) message("Getting updated institutional info")
-  # all_inst_df <- get_all_inst(csv_dir, save_csv = TRUE, vb)
-  
-  if (vb) message("Filtering for active institutions with AIs.")
-  inst_ids <- dplyr::filter(all_inst_df, daa == TRUE, n_auth_invest > 0) %>%
-    dplyr::select(inst_id)
-  ids <- as.integer(unlist(inst_ids))
-  
-  if (vb) message("There are n=", dim(ids)[1], " institutions with AIs. Retrieving AI info." )
-  
-   ais_l <- purrr::map(ids, get_ais_from_inst, vb, .progress = "AIs from insts:")
-   
-   if (vb) message("Making data frame.")
-   ais_df <- purrr::list_rbind(ais_l)
-   
-   fn <- file.path(csv_dir, "all-ais.csv")
-   if (vb) message("Writing CSV: ", fn)
-   readr::write_csv(ais_df, fn)
-}
+# #-------------------------------------------------------------------------------
+# update_invest_csv <- function(all_inst_df,
+#                               csv_dir = "src/csv",
+#                               vb = FALSE) {
+#   # Filter
+#   # if (vb) message("Getting updated institutional info")
+#   # all_inst_df <- get_all_inst(csv_dir, save_csv = TRUE, vb)
+#   
+#   if (vb)
+#     message("Filtering for active institutions with AIs.")
+#   inst_ids <-
+#     dplyr::filter(all_inst_df, daa == TRUE, n_auth_invest > 0) %>%
+#     dplyr::select(inst_id)
+#   ids <- as.integer(unlist(inst_ids))
+#   
+#   if (vb)
+#     message("There are n=",
+#             dim(ids)[1],
+#             " institutions with AIs. Retrieving AI info.")
+#   
+#   ais_l <-
+#     purrr::map(ids, get_ais_from_inst, vb, .progress = "AIs from insts:")
+#   
+#   if (vb)
+#     message("Making data frame.")
+#   ais_df <- purrr::list_rbind(ais_l)
+#   
+#   fn <- file.path(csv_dir, "all-ais.csv")
+#   if (vb)
+#     message("Writing CSV: ", fn)
+#   readr::write_csv(ais_df, fn)
+# }
 
 #-------------------------------------------------------------------------------
 # get_auth_inst_list <- function(update_inst = FALSE,
@@ -1774,239 +1819,256 @@ update_invest_csv <- function(all_inst_df,
 #   }
 # }
 
-#-------------------------------------------------------------------------------
-get_all_inst <- function(csv_dir = "src/csv",
-                               save_csv = TRUE,
-                               vb = FALSE) {
-    
-    inst_fl <- list.files(csv_dir, "inst\\-[0-9]+", full.names = TRUE)
-    
-    if (vb) message("Loading institution CSVs from ", csv_dir)
-    inst_l <- purrr::map(inst_fl, readr::read_csv, show_col_types = FALSE)
-    
-    if (vb) message("Making dataframe.")
-    inst_df <- purrr::list_rbind(inst_l)
-    
-    if (save_csv) {
-      fn <- file.path(csv_dir, "all-institutions.csv")
-      if (vb) message("Writing ", fn)
-      readr::write_csv(inst_df, fn)
-    }
-    inst_df
-}
+# #-------------------------------------------------------------------------------
+# get_all_inst <- function(csv_dir = "src/csv",
+#                          save_csv = TRUE,
+#                          vb = FALSE) {
+#   inst_fl <- list.files(csv_dir, "inst\\-[0-9]+", full.names = TRUE)
+#   
+#   if (vb)
+#     message("Loading institution CSVs from ", csv_dir)
+#   inst_l <-
+#     purrr::map(inst_fl, readr::read_csv, show_col_types = FALSE)
+#   
+#   if (vb)
+#     message("Making dataframe.")
+#   inst_df <- purrr::list_rbind(inst_l)
+#   
+#   if (save_csv) {
+#     fn <- file.path(csv_dir, "all-institutions.csv")
+#     if (vb)
+#       message("Writing ", fn)
+#     readr::write_csv(inst_df, fn)
+#   }
+#   inst_df
+# }
+# 
+# #-------------------------------------------------------------------------------
+# get_ais_from_inst <- function(inst_id = 8, vb = FALSE) {
+#   if (vb)
+#     message("Getting AIs from institution ", inst_id)
+#   inst_df <- databraryapi::list_party(inst_id)
+#   
+#   if (!is.null(dim(inst_df$children))) {
+#     ais_df <- as.data.frame(inst_df$children$party)
+#     ais_df <- dplyr::rename(ais_df,
+#                             ai_id = id,
+#                             ai_last = sortname,
+#                             ai_first = prename)
+#     
+#     df <- tibble::tibble(ais_df)
+#     df <- dplyr::mutate(
+#       df,
+#       inst_id = inst_df$id,
+#       inst_name = inst_df$sortname,
+#       inst_db_url = paste0("https://nyu.databrary.org/party/", inst_df$id),
+#       ai_db_url = paste0("https://nyu.databrary.org/party/", ai_id)
+#     )
+#     df$n_affils <- count_affiliates_for_ais(df$ai_id)
+#     
+#     df <- dplyr::arrange(df, desc(n_affils), ai_last, ai_first)
+#     df
+#   } else {
+#     NULL
+#   }
+# }
+# 
+# #-------------------------------------------------------------------------------
+# count_affiliates_for_ai <- function(ai_id) {
+#   affils <- databraryapi::list_affiliates(ai_id)
+#   if (is.null(affils)) {
+#     x <- 0
+#   } else {
+#     x <- dim(affils)[1]
+#   }
+#   x
+# }
+# 
+# #-------------------------------------------------------------------------------
+# count_affiliates_for_ais <- function(ai_ids) {
+#   purrr::map_dbl(ai_ids, count_affiliates_for_ai)
+# }
 
-#-------------------------------------------------------------------------------
-get_ais_from_inst <- function(inst_id = 8, vb = FALSE) {
-  if (vb) message("Getting AIs from institution ", inst_id)
-  inst_df <- databraryapi::list_party(inst_id)
-  
-  if (!is.null(dim(inst_df$children))) {
-    ais_df <- as.data.frame(inst_df$children$party)
-    ais_df <- dplyr::rename(ais_df,
-                            ai_id = id,
-                            ai_last = sortname,
-                            ai_first = prename)
-    
-    df <- tibble::tibble(ais_df)
-    df <- dplyr::mutate(
-      df,
-      inst_id = inst_df$id,
-      inst_name = inst_df$sortname,
-      inst_db_url = paste0("https://nyu.databrary.org/party/", inst_df$id),
-      ai_db_url = paste0("https://nyu.databrary.org/party/", ai_id)
-    )
-    df$n_affils <- count_affiliates_for_ais(df$ai_id)
-    
-    df <- dplyr::arrange(df, desc(n_affils), ai_last, ai_first)
-    df
-  } else {
-    NULL
-  }
-}
-
-#-------------------------------------------------------------------------------
-count_affiliates_for_ai <- function(ai_id) {
-  affils <- databraryapi::list_affiliates(ai_id)
-  if (is.null(affils)) {
-    x <- 0
-  } else {
-    x <- dim(affils)[1]
-  }
-  x
-}
-
-#-------------------------------------------------------------------------------
-count_affiliates_for_ais <- function(ai_ids) {
-  purrr::map_dbl(ai_ids, count_affiliates_for_ai)
-}
-
-#-------------------------------------------------------------------------------
-update_inst_csv <- function(csv_fn = "src/csv/institutions.csv",
-                            max_id = 10868,
-                            save_new = TRUE,
-                            update_geo = FALSE,
-                            vb = FALSE) {
-  if (file.exists(csv_fn)) {
-    if (vb)
-      message("Reading from saved file.")
-    old_inst <- readr::read_csv(csv_fn, show_col_types = FALSE)
-    max_old_inst_id <- unique(max(old_inst$inst_id))
-    if (max_old_inst_id < max_id) {
-      if (vb)
-        message(" Retrieving data from `party_id` ",
-                max_old_inst_id + 1,
-                ":",
-                max_id)
-      new_inst <-
-        purrr::map_df((max_old_inst_id + 1):max_id,
-                      get_inst_info,
-                      update_geo,
-                      .progress = "Geo coords:")
-      if (vb)
-        message(" ", paste0(dim(new_inst)[1], " new institutions added."))
-      df <- rbind(old_inst, new_inst)
-      if (save_new) {
-        if (vb)
-          message(paste0(" Writing new file: ", csv_fn))
-        write_csv(df, csv_fn)
-      }
-    } else {
-      if (vb)
-        message(" No update needed.")
-      df <- old_inst
-    }
-  } else {
-    if (vb)
-      message("No file found. Recreating from inst_id 1:", max_id)
-    df <-
-      purrr::map_df(1:max_id,
-                    get_inst_info,
-                    update_geo = update_geo,
-                    vb,
-                    .progress = "Inst :")
-    if (save_new) {
-      if (vb)
-        message(paste0(" Writing new file: ", csv_fn))
-      write_csv(df, csv_fn)
-    }
-  }
-  df
-}
-
-#-------------------------------------------------------------------------------
-get_inst_info <-
-  function(inst_id = 8,
-           update_geo = FALSE,
-           vb = FALSE) {
-    if (!is.numeric(inst_id)) {
-      warning('`inst_id` must be a number.')
-      inst_id <- as.numeric(inst_id)
-    }
-    
-    suppressPackageStartupMessages(require(databraryapi))
-    
-    if (!db_credentials_valid()) {
-      message("Not logged in to Databrary. Running `databraryapi::login_db()` with default credentials.")
-      databraryapi::login_db(Sys.getenv("DATABRARY_LOGIN"))
-      return(NULL)
-    }
-    
-    if (inst_id > 0) {
-      if (databraryapi::is_institution(inst_id)) {
-        if (vb)
-          message("Getting information for institution ", inst_id)
-        
-        inst_df <- list_party(inst_id)
-        df <- data.frame(
-          inst_id = inst_df$id,
-          inst_name = inst_df$sortname,
-          inst_url = ifelse('url' %in% names(inst_df), inst_df$url, NA),
-          databrary_url = paste0("https://nyu.databrary.org/party/", inst_id)
-        )
-        if (!is.null(dim(inst_df$children))) {
-          df$n_auth_invest <- dim(inst_df$children)[1]
-        } else {
-          df$n_auth_invest = 0
-        }
-        if (!is.null(dim(inst_df$parents))) {
-          df$daa <- TRUE
-        } else {
-          df$daa <- FALSE
-        }
-        # Get lat and lon
-        if (update_geo == TRUE) {
-          df <- update_inst_lat_lon(df)
-        } else {
-          df$lat = NA
-          df$lon = NA
-        }
-        df
-      } else {
-        if (vb) message("Party ", inst_id, " is not an institution. Skipping.")
-        NULL
-      }
-    } else {
-      if (vb) message("`inst_id` must be a positive number.")
-    }
-  }
-
-#-------------------------------------------------------------------------------
-get_inst_info_save_csv <-
-  function(party_id = 8,
-           update_geo = FALSE,
-           csv_dir = "src/csv",
-           vb = FALSE) {
-    stopifnot(is.numeric(party_id))
-    stopifnot(party_id > 0)
-    stopifnot(is.character(csv_dir))
-    stopifnot(dir.exists(csv_dir))
-    
-    if (party_id == 2) {
-      if (vb) message("Party 2 is not a physical institution. Skipping.")
-      return(NULL)
-    }
-    this_inst <- get_inst_info(party_id, update_geo, vb)
-    
-    if (!is.null(this_inst)) {
-      fn <-
-        file.path(csv_dir, paste0("inst-", stringr::str_pad(party_id, 5, pad = "0"), ".csv"))
-      if (vb)
-        message(" Saving ", fn)
-      readr::write_csv(this_inst, fn)
-    }     
-}
-
-
-#-------------------------------------------------------------------------------
-get_save_many_inst_csvs <-
-  function(min_id = 1,
-           max_id = 100,
-           update_geo = FALSE,
-           csv_dir = 'src/csv',
-           vb = FALSE) {
-    stopifnot(is.numeric(min_id))
-    stopifnot(min_id > 0)
-    stopifnot(is.numeric(max_id))
-    stopifnot(max_id > 0)
-    stopifnot(max_id >= min_id)
-    stopifnot(is.character(csv_dir))
-    stopifnot(dir.exists(csv_dir))
-    
-    purrr::walk(min_id:max_id,
-               get_inst_info_save_csv,
-               update_geo,
-               csv_dir,
-               vb,
-               .progress = "Inst CSVs:")
-  }
-
-#-------------------------------------------------------------------------------
-load_inst_df_from_csvs <- function(csv_fl, vb = FALSE) {
-  stopifnot(is.character(csv_fl))
-  
-  if (vb) message("Creating data frame from institution CSVs.")
-  purrr::map(csv_fl, readr::read_csv, show_col_types = FALSE) |> purrr::list_rbind()
-}
+# #-------------------------------------------------------------------------------
+# update_inst_csv <- function(csv_fn = "src/csv/institutions.csv",
+#                             max_id = 10868,
+#                             save_new = TRUE,
+#                             update_geo = FALSE,
+#                             vb = FALSE) {
+#   if (file.exists(csv_fn)) {
+#     if (vb)
+#       message("Reading from saved file.")
+#     old_inst <- readr::read_csv(csv_fn, show_col_types = FALSE)
+#     max_old_inst_id <- unique(max(old_inst$inst_id))
+#     if (max_old_inst_id < max_id) {
+#       if (vb)
+#         message(" Retrieving data from `party_id` ",
+#                 max_old_inst_id + 1,
+#                 ":",
+#                 max_id)
+#       new_inst <-
+#         purrr::map_df((max_old_inst_id + 1):max_id,
+#                       get_inst_info,
+#                       update_geo,
+#                       .progress = "Geo coords:")
+#       if (vb)
+#         message(" ", paste0(dim(new_inst)[1], " new institutions added."))
+#       df <- rbind(old_inst, new_inst)
+#       if (save_new) {
+#         if (vb)
+#           message(paste0(" Writing new file: ", csv_fn))
+#         write_csv(df, csv_fn)
+#       }
+#     } else {
+#       if (vb)
+#         message(" No update needed.")
+#       df <- old_inst
+#     }
+#   } else {
+#     if (vb)
+#       message("No file found. Recreating from inst_id 1:", max_id)
+#     df <-
+#       purrr::map_df(1:max_id,
+#                     get_inst_info,
+#                     update_geo = update_geo,
+#                     vb,
+#                     .progress = "Inst :")
+#     if (save_new) {
+#       if (vb)
+#         message(paste0(" Writing new file: ", csv_fn))
+#       write_csv(df, csv_fn)
+#     }
+#   }
+#   df
+# }
+# 
+# #-------------------------------------------------------------------------------
+# get_inst_info <-
+#   function(inst_id = 8,
+#            update_geo = FALSE,
+#            vb = FALSE) {
+#     if (!is.numeric(inst_id)) {
+#       warning('`inst_id` must be a number.')
+#       inst_id <- as.numeric(inst_id)
+#     }
+#     
+#     suppressPackageStartupMessages(require(databraryapi))
+#     
+#     if (!db_credentials_valid()) {
+#       message(
+#         "Not logged in to Databrary. Running `databraryapi::login_db()` with default credentials."
+#       )
+#       databraryapi::login_db(Sys.getenv("DATABRARY_LOGIN"))
+#       return(NULL)
+#     }
+#     
+#     if (inst_id > 0) {
+#       if (databraryapi::is_institution(inst_id)) {
+#         if (vb)
+#           message("Getting information for institution ", inst_id)
+#         
+#         inst_df <- databraryapi::list_party(inst_id)
+#         df <- data.frame(
+#           inst_id = inst_df$id,
+#           inst_name = inst_df$sortname,
+#           inst_url = ifelse('url' %in% names(inst_df), inst_df$url, NA),
+#           databrary_url = paste0("https://nyu.databrary.org/party/", inst_id)
+#         )
+#         if (!is.null(dim(inst_df$children))) {
+#           df$n_auth_invest <- dim(inst_df$children)[1]
+#         } else {
+#           df$n_auth_invest = 0
+#         }
+#         if (!is.null(dim(inst_df$parents))) {
+#           df$daa <- TRUE
+#         } else {
+#           df$daa <- FALSE
+#         }
+#         # Get lat and lon
+#         if (update_geo == TRUE) {
+#           if (vb) message(" Updating lat/lon coords.")
+#           df <- update_inst_lat_lon(df, vb)
+#         } else {
+#           df$lat = NA
+#           df$lon = NA
+#         }
+#         df
+#       } else {
+#         if (vb)
+#           message("Party ", inst_id, " is not an institution. Skipping.")
+#         NULL
+#       }
+#     } else {
+#       if (vb)
+#         message("`inst_id` must be a positive number.")
+#     }
+#   }
+# 
+# #-------------------------------------------------------------------------------
+# get_inst_info_save_csv <-
+#   function(party_id = 8,
+#            update_geo = FALSE,
+#            csv_dir = "src/csv",
+#            vb = FALSE,
+#            non_insts = c(2, 9, 10, 12, 15)) {
+#     stopifnot(is.numeric(party_id))
+#     stopifnot(party_id > 0)
+#     stopifnot(is.character(csv_dir))
+#     stopifnot(dir.exists(csv_dir))
+#     
+#     if (party_id %in% non_insts) {
+#       if (vb)
+#         message("Party ", party_id, " is not a physical institution. Skipping.")
+#       return(NULL)
+#     }
+#     this_inst <- get_inst_info(party_id, update_geo, vb)
+#     
+#     if (!is.null(this_inst)) {
+#       fn <-
+#         file.path(csv_dir, paste0("inst-", stringr::str_pad(party_id, 5, pad = "0"), ".csv"))
+#       if (vb)
+#         message(" Saving ", fn)
+#       readr::write_csv(this_inst, fn)
+#     }
+#   }
+# 
+# 
+# #-------------------------------------------------------------------------------
+# get_save_many_inst_csvs <-
+#   function(min_id = 1,
+#            max_id = 100,
+#            update_geo = FALSE,
+#            csv_dir = 'src/csv',
+#            vb = FALSE) {
+#     stopifnot(is.numeric(min_id))
+#     stopifnot(min_id > 0)
+#     stopifnot(is.numeric(max_id))
+#     stopifnot(max_id > 0)
+#     stopifnot(max_id >= min_id)
+#     stopifnot(is.character(csv_dir))
+#     stopifnot(dir.exists(csv_dir))
+#     
+#     if (!ggmap::has_google_key()) {
+#       if (vb) message("No Google maps key found. No geo info will be updated.")
+#       update_geo = FALSE
+#     }
+#     
+#     purrr::walk(min_id:max_id,
+#                 get_inst_info_save_csv,
+#                 update_geo,
+#                 csv_dir,
+#                 vb,
+#                 .progress = "Inst CSVs:")
+#   }
+# 
+# #-------------------------------------------------------------------------------
+# load_inst_df_from_csvs <- function(csv_fl, vb = FALSE) {
+#   stopifnot(is.character(csv_fl))
+#   
+#   if (vb)
+#     message("Creating data frame from institution CSVs.")
+#   purrr::map(csv_fl, readr::read_csv, show_col_types = FALSE) |> purrr::list_rbind()
+# }
 
 #-------------------------------------------------------------------------------
 db_credentials_valid <- function() {
@@ -2017,73 +2079,96 @@ db_credentials_valid <- function() {
   }
 }
 
-update_inst_lat_lon <- function(df, vb = FALSE) {
-  if (!is.data.frame(df)) {
-    stop('`df` must be a data frame.')
-  }
-  
-  ll <- ggmap::geocode(as.character(df$inst_name))
-  
-  df$lat = NA
-  df$lon = NA
-  
-  if (!is.na(ll$lat)) df$lat<- ll$lat
-  if (!is.na(ll$lon)) df$lon<- ll$lon
-  
-  df
-}
+# #-------------------------------------------------------------------------------
+# update_inst_lat_lon <- function(inst_df, vb = FALSE) {
+#   stopifnot(is.data.frame(inst_df))
+#   
+#   if (vb) message(" Calling ggmap::geocode() with '", inst_df$inst_name, "'.")
+#   ll <- ggmap::geocode(as.character(inst_df$inst_name), override_limit = TRUE)
+#   
+#   inst_df$lat = NA
+#   inst_df$lon = NA
+#   
+#   if (!is.na(ll$lat))
+#     inst_df$lat <- ll$lat
+#   if (!is.na(ll$lon))
+#     inst_df$lon <- ll$lon
+#   
+#   inst_df
+# }
+# 
+# #-------------------------------------------------------------------------------
+# extract_inst_csv_id <- function(csv_dir = "src/csv", vb = FALSE) {
+#   stopifnot(is.character(csv_dir))
+#   stopifnot(dir.exists(csv_dir))
+#   
+#   inst_fl <- list.files(csv_dir, "^inst\\-[0-9]{5}")
+#   as.numeric(stringr::str_extract(inst_fl, "[0-9]{5}"))
+# }
 
 
 ################################################################################
 # Data about shared volumes and their sessions.
 
 #-------------------------------------------------------------------------------
-get_volume_data <- function(vol_id = 1, skip_vols = c(1276, 1277), vb = FALSE) {
-  stopifnot(is.numeric(vol_id))
-  stopifnot(vol_id > 0)
-  
-  if (vol_id %in% skip_vols) return(NULL)
-  
-  vol_data <- databraryapi::download_containers_records(vol_id)
-  if (is.null(vol_data)) {
-    if (vb) message(paste0("No data in volume ", vol_id))
-    NULL
-  } else {
-    if (vb) message(paste0("Gathering data from volume ", vol_id))
-    data.frame(
-      vol_id = vol_data$id,
-      vol_name = vol_data$name,
-      sharing_level = vol_data$publicaccess,
-      owner_ids = vol_data$owners,
-      sessions_shared = ifelse(
-        is.null(vol_data$publicsharefull),
-        FALSE,
-        vol_data$publicsharefull
-      ),
-      n_sessions = dim(vol_data$containers)[1] - 1,
-      created_date = lubridate::as_datetime(vol_data$creation)
-    )
+get_volume_data <-
+  function(vol_id = 1,
+           skip_vols = c(1276, 1277),
+           vb = FALSE) {
+    stopifnot(is.numeric(vol_id))
+    stopifnot(vol_id > 0)
+    
+    if (vol_id %in% skip_vols)
+      return(NULL)
+    
+    vol_data <- databraryapi::download_containers_records(vol_id)
+    if (is.null(vol_data)) {
+      if (vb)
+        message(paste0("No data in volume ", vol_id))
+      NULL
+    } else {
+      if (vb)
+        message(paste0("Gathering data from volume ", vol_id))
+      data.frame(
+        vol_id = vol_data$id,
+        vol_name = vol_data$name,
+        sharing_level = vol_data$publicaccess,
+        owner_ids = vol_data$owners,
+        sessions_shared = ifelse(
+          is.null(vol_data$publicsharefull),
+          FALSE,
+          vol_data$publicsharefull
+        ),
+        n_sessions = dim(vol_data$containers)[1] - 1,
+        created_date = lubridate::as_datetime(vol_data$creation)
+      )
+    }
   }
-}
 
 #-------------------------------------------------------------------------------
-get_many_volumes_data <- function(min_vol = 1, max_vol = 10, vb = FALSE) {
-  
-  stopifnot(is.numeric(min_vol))
-  stopifnot(min_vol > 0)
-  stopifnot(is.numeric(max_vol))
-  stopifnot(max_vol > 0)
-  stopifnot(min_vol < max_vol)
-  stopifnot(databraryapi::login_db(Sys.getenv("DATABRARY_LOGIN")))
-  
-  vol_index <- min_vol:max_vol
-  # vols_data <- lapply(vol_index, get_volume_data)
-  vols_data <- purrr::map(vol_index, get_volume_data, vb = vb, .progress = "Vols data:")
-  
-  # Merge data frames
-  # data.table::rbindlist(vols_data)
-  purrr::list_rbind(vols_data)
-}
+get_many_volumes_data <-
+  function(min_vol = 1,
+           max_vol = 10,
+           vb = FALSE) {
+    stopifnot(is.numeric(min_vol))
+    stopifnot(min_vol > 0)
+    stopifnot(is.numeric(max_vol))
+    stopifnot(max_vol > 0)
+    stopifnot(min_vol < max_vol)
+    stopifnot(databraryapi::login_db(Sys.getenv("DATABRARY_LOGIN")))
+    
+    vol_index <- min_vol:max_vol
+    # vols_data <- lapply(vol_index, get_volume_data)
+    vols_data <-
+      purrr::map(vol_index,
+                 get_volume_data,
+                 vb = vb,
+                 .progress = "Vols data:")
+    
+    # Merge data frames
+    # data.table::rbindlist(vols_data)
+    purrr::list_rbind(vols_data)
+  }
 
 #-------------------------------------------------------------------------------
 get_volume_name <- function(vol_id) {
