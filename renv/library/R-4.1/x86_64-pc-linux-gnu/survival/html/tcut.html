@@ -1,0 +1,85 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title>R: Factors for person-year calculations</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="R.css" />
+</head><body>
+
+<table width="100%" summary="page for tcut {survival}"><tr><td>tcut {survival}</td><td style="text-align: right;">R Documentation</td></tr></table>
+
+<h2>Factors for person-year calculations</h2>
+
+<h3>Description</h3>
+
+<p>Attaches categories for person-year calculations to a variable without
+losing the underlying continuous representation
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>
+tcut(x, breaks, labels, scale=1)
+## S3 method for class 'tcut'
+levels(x)
+</pre>
+
+
+<h3>Arguments</h3>
+
+<table summary="R argblock">
+<tr valign="top"><td><code>x</code></td>
+<td>
+<p>numeric/date variable </p>
+</td></tr>
+<tr valign="top"><td><code>breaks</code></td>
+<td>
+<p>breaks between categories, which are right-continuous </p>
+</td></tr>
+<tr valign="top"><td><code>labels</code></td>
+<td>
+<p>labels for categories </p>
+</td></tr>
+<tr valign="top"><td><code>scale</code></td>
+<td>
+<p>Multiply <code>x</code> and <code>breaks</code> by this.</p>
+</td></tr>
+</table>
+
+
+<h3>Value</h3>
+
+<p>An object of class <code>tcut</code>
+</p>
+
+
+<h3>See Also</h3>
+
+ <p><code><a href="../../base/html/cut.html">cut</a></code>, <code><a href="../../survival/help/pyears.html">pyears</a></code> </p>
+
+
+<h3>Examples</h3>
+
+<pre>
+# For pyears, all time variable need to be on the same scale; but
+# futime is in months and age is in years
+test &lt;- mgus2
+test$years &lt;- test$futime/30.5   # follow-up in years
+
+# first grouping based on years from starting age (= current age)
+# second based on years since enrollment (all start at 0)
+test$agegrp &lt;- tcut(test$age, c(0,60, 70, 80, 100), 
+                     c("&lt;=60", "60-70", "70-80", "&gt;80"))
+test$fgrp  &lt;- tcut(rep(0, nrow(test)), c(0, 1, 5, 10, 100),
+                   c("0-1yr", "1-5yr", "5-10yr", "&gt;10yr"))
+
+# death rates per 1000, by age group
+pfit1 &lt;- pyears(Surv(years, death) ~ agegrp, scale =1000, data=test)
+round(pfit1$event/ pfit1$pyears) 
+
+#death rates per 100, by follow-up year and age
+# there are excess deaths in the first year, within each age stratum
+pfit2 &lt;- pyears(Surv(years, death) ~ fgrp + agegrp, scale =1000, data=test)
+round(pfit2$event/ pfit2$pyears)  
+</pre>
+
+<hr /><div style="text-align: center;">[Package <em>survival</em> version 3.5-3 <a href="00Index.html">Index</a>]</div>
+</body></html>
