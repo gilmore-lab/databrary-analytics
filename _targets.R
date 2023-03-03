@@ -60,16 +60,17 @@ list(
     volume_tags_df,
     refresh_volume_tags_df(1:max_vol_id),
     cue = tarchetypes::tar_cue_age(name = volume_tags_df,
-                                   age = as.difftime(1, units = "weeks"))
+                                   age = as.difftime(4, units = "weeks"))
   ),
   tar_target(vol_tags_csv,
              update_vol_tags_csv(volume_tags_df, "src/csv")),
+  #----------------------------------------------------------------------------
   # Funders
   tar_target(
     volume_funders_df,
     refresh_volume_funders_df(1:max_vol_id),
     cue = tarchetypes::tar_cue_age(name = volume_funders_df,
-                                   age = as.difftime(1, units = "weeks"))
+                                   age = as.difftime(4, units = "weeks"))
   ),
   tar_target(
     volume_funders_csv,
@@ -121,24 +122,34 @@ list(
   #   get_save_many_inst_csvs(1, max_party_id, update_geo = TRUE)
   # ),
   tar_target(
+    inst_df,
+    make_inst_df_from_csvs(n_inst_csvs)
+  ),
+  tar_target(
+    n_inst_csvs,
+    length(list.files('src/csv', "inst\\-[0-9]+\\.csv")),
+    cue = tarchetypes::tar_cue_age(name = n_inst_csvs,
+                                   age = as.difftime(1, units = "weeks"))
+  ),
+  tar_target(
     add_new_inst_csvs,
     get_save_many_inst_csvs(max(extract_inst_csv_id()), max_party_id, update_geo = TRUE),
     cue = tarchetypes::tar_cue_age(name = add_new_inst_csvs,
                                    age = as.difftime(1, units = "weeks"))
   ),
-  tar_target(
-    invest_df,
-    readr::read_csv('src/csv/all-ais.csv', show_col_types = FALSE)
-  ),
-  tar_target(
-    institution_csv_fl,
-    list.files("src/csv", "inst\\-[0-9]+\\.csv", full.names = TRUE)
-  ),
+  # tar_target(
+  #   invest_df,
+  #   readr::read_csv('src/csv/all-ais.csv', show_col_types = FALSE)
+  # ),
+  tar_target(invest_df,
+             make_ais_df(inst_df)),
+  # tar_target(
+  #   institution_csv_fl,
+  #   list.files("src/csv", "inst\\-[0-9]+\\.csv", full.names = TRUE)
+  # ),
   tar_target(make_all_ais_csv,
              update_invest_csv(inst_df)),
-  #--- Skip party 2 (staff)
-  tar_target(inst_df,
-             load_inst_df_from_csvs(institution_csv_fl[2:length(institution_csv_fl)]), ),
+  
   # Volume-level sessions
   tar_target(
     vols_sess_df,

@@ -8,28 +8,28 @@ vol_id,url,tags,weight
 2,https://nyu.databrary.org/volume/2,motion,1
 2,https://nyu.databrary.org/volume/2,adult,1
 3,https://nyu.databrary.org/volume/3,NA,NA
-4,https://nyu.databrary.org/volume/4,infants,1
-4,https://nyu.databrary.org/volume/4,motor development,1
 4,https://nyu.databrary.org/volume/4,locomotion,1
+4,https://nyu.databrary.org/volume/4,motor development,1
 4,https://nyu.databrary.org/volume/4,materials,1
 4,https://nyu.databrary.org/volume/4,coding,1
-4,https://nyu.databrary.org/volume/4,protocols,1
 4,https://nyu.databrary.org/volume/4,manuals,1
-5,https://nyu.databrary.org/volume/5,infants,1
+4,https://nyu.databrary.org/volume/4,protocols,1
+4,https://nyu.databrary.org/volume/4,infants,1
 5,https://nyu.databrary.org/volume/5,locomotion,1
-5,https://nyu.databrary.org/volume/5,coding,1
+5,https://nyu.databrary.org/volume/5,infants,1
 5,https://nyu.databrary.org/volume/5,manuals,1
+5,https://nyu.databrary.org/volume/5,coding,1
 5,https://nyu.databrary.org/volume/5,bridges,1
 6,https://nyu.databrary.org/volume/6,NA,NA
-7,https://nyu.databrary.org/volume/7,affordances,1
-7,https://nyu.databrary.org/volume/7,apertures,1
-7,https://nyu.databrary.org/volume/7,falling,1
+7,https://nyu.databrary.org/volume/7,locomotion,1
 7,https://nyu.databrary.org/volume/7,perception,1
 7,https://nyu.databrary.org/volume/7,judgments,1
 7,https://nyu.databrary.org/volume/7,adult,1
-7,https://nyu.databrary.org/volume/7,locomotion,1
-7,https://nyu.databrary.org/volume/7,coding,1
+7,https://nyu.databrary.org/volume/7,affordances,1
+7,https://nyu.databrary.org/volume/7,apertures,1
 7,https://nyu.databrary.org/volume/7,manuals,1
+7,https://nyu.databrary.org/volume/7,coding,1
+7,https://nyu.databrary.org/volume/7,falling,1
 8,https://nyu.databrary.org/volume/8,infants,2
 8,https://nyu.databrary.org/volume/8,cognitive,2
 8,https://nyu.databrary.org/volume/8,parent-child interaction,2
@@ -128,18 +128,18 @@ vol_id,url,tags,weight
 34,https://nyu.databrary.org/volume/34,infants,1
 34,https://nyu.databrary.org/volume/34,materials,1
 35,https://nyu.databrary.org/volume/35,cross-cultural research,2
-35,https://nyu.databrary.org/volume/35,number,1
 35,https://nyu.databrary.org/volume/35,language and thought,1
-35,https://nyu.databrary.org/volume/35,indigenous peoples,1
-35,https://nyu.databrary.org/volume/35,language development,1
 35,https://nyu.databrary.org/volume/35,numerical cognition,1
+35,https://nyu.databrary.org/volume/35,indigenous peoples,1
+35,https://nyu.databrary.org/volume/35,number,1
+35,https://nyu.databrary.org/volume/35,language development,1
 36,https://nyu.databrary.org/volume/36,cognitive,2
-36,https://nyu.databrary.org/volume/36,social attention,1
-36,https://nyu.databrary.org/volume/36,visual attention,1
 36,https://nyu.databrary.org/volume/36,faces,1
-36,https://nyu.databrary.org/volume/36,children,1
+36,https://nyu.databrary.org/volume/36,social attention,1
 36,https://nyu.databrary.org/volume/36,stimuli,1
+36,https://nyu.databrary.org/volume/36,children,1
 36,https://nyu.databrary.org/volume/36,infants,1
+36,https://nyu.databrary.org/volume/36,visual attention,1
 37,https://nyu.databrary.org/volume/37,visual search,2
 37,https://nyu.databrary.org/volume/37,visual attention,2
 37,https://nyu.databrary.org/volume/37,social attention,2
@@ -995,7 +995,10 @@ vol_id,url,tags,weight
 550,https://nyu.databrary.org/volume/550,NA,NA
 551,https://nyu.databrary.org/volume/551,NA,NA
 552,https://nyu.databrary.org/volume/552,NA,NA
-553,https://nyu.databrary.org/volume/553,NA,NA
+553,https://nyu.databrary.org/volume/553,pretense,1
+553,https://nyu.databrary.org/volume/553,embodiment,1
+553,https://nyu.databrary.org/volume/553,preschool,1
+553,https://nyu.databrary.org/volume/553,pretend play,1
 554,https://nyu.databrary.org/volume/554,NA,NA
 555,https://nyu.databrary.org/volume/555,NA,NA
 556,https://nyu.databrary.org/volume/556,NA,NA
@@ -2197,3 +2200,5 @@ vol_id,url,tags,weight
 1566,https://nyu.databrary.org/volume/1566,NA,NA
 1567,https://nyu.databrary.org/volume/1567,NA,NA
 1568,https://nyu.databrary.org/volume/1568,NA,NA
+1569,https://nyu.databrary.org/volume/1569,NA,NA
+1570,https://nyu.databrary.org/volume/1570,NA,NA

@@ -9,9 +9,10 @@
 update_invest_csv <- function(all_inst_df,
                               csv_dir = "src/csv",
                               vb = FALSE) {
-  # Filter
-  # if (vb) message("Getting updated institutional info")
-  # all_inst_df <- get_all_inst(csv_dir, save_csv = TRUE, vb)
+  stopifnot(is.data.frame(all_inst_df))
+  stopifnot(is.character(csv_dir))
+  stopifnot(dir.exists(csv_dir))
+  stopifnot(is.logical(vb))
   
   if (vb)
     message("Filtering for active institutions with AIs.")
@@ -36,6 +37,33 @@ update_invest_csv <- function(all_inst_df,
   if (vb)
     message("Writing CSV: ", fn)
   readr::write_csv(ais_df, fn)
+}
+
+#-------------------------------------------------------------------------------
+make_ais_df <- function(all_inst_df, vb = TRUE) {
+  
+  stopifnot(is.data.frame(all_inst_df))
+  stopifnot(is.logical(vb))
+  
+  if (vb)
+    message("Filtering for active institutions with AIs.")
+  inst_ids <-
+    dplyr::filter(all_inst_df, daa == TRUE, n_auth_invest > 0) |>
+    dplyr::select(inst_id)
+  ids <- as.integer(unlist(inst_ids))
+  
+  if (vb)
+    message("There are n = ",
+            length(ids)[1],
+            " institutions with AIs. Retrieving AI info.")
+  
+  ais_l <-
+    purrr::map(ids, get_ais_from_inst, vb, .progress = "AIs from insts:")
+  
+  if (vb)
+    message("Making data frame.")
+  purrr::list_rbind(ais_l)
+  
 }
 
 #-------------------------------------------------------------------------------
@@ -205,7 +233,8 @@ get_inst_info <-
         }
         # Get lat and lon
         if (update_geo == TRUE) {
-          if (vb) message(" Updating lat/lon coords.")
+          if (vb)
+            message(" Updating lat/lon coords.")
           df <- update_inst_lat_lon(df, vb)
         } else {
           df$lat = NA
@@ -268,7 +297,8 @@ get_save_many_inst_csvs <-
     stopifnot(dir.exists(csv_dir))
     
     if (!ggmap::has_google_key()) {
-      if (vb) message("No Google maps key found. No geo info will be updated.")
+      if (vb)
+        message("No Google maps key found. No geo info will be updated.")
       update_geo = FALSE
     }
     
@@ -286,15 +316,20 @@ load_inst_df_from_csvs <- function(csv_fl, vb = FALSE) {
   
   if (vb)
     message("Creating data frame from institution CSVs.")
-  purrr::map(csv_fl, readr::read_csv, show_col_types = FALSE) |> purrr::list_rbind()
+  purrr::map(csv_fl,
+             readr::read_csv,
+             show_col_types = FALSE,
+             .progress = "Inst CSVs:") |> purrr::list_rbind()
 }
 
 #-------------------------------------------------------------------------------
 update_inst_lat_lon <- function(inst_df, vb = FALSE) {
   stopifnot(is.data.frame(inst_df))
   
-  if (vb) message(" Calling ggmap::geocode() with '", inst_df$inst_name, "'.")
-  ll <- ggmap::geocode(as.character(inst_df$inst_name), override_limit = TRUE)
+  if (vb)
+    message(" Calling ggmap::geocode() with '", inst_df$inst_name, "'.")
+  ll <-
+    ggmap::geocode(as.character(inst_df$inst_name), override_limit = TRUE)
   
   inst_df$lat = NA
   inst_df$lon = NA
@@ -315,3 +350,23 @@ extract_inst_csv_id <- function(csv_dir = "src/csv", vb = FALSE) {
   inst_fl <- list.files(csv_dir, "^inst\\-[0-9]{5}")
   as.numeric(stringr::str_extract(inst_fl, "[0-9]{5}"))
 }
+
+#-------------------------------------------------------------------------------
+make_inst_df_from_csvs <-
+  function(n_inst_csvs, csv_dir = "src/csv",
+           omit_inst_id = '00002',
+           vb = FALSE) {
+    stopifnot(is.character(csv_dir))
+    stopifnot(dir.exists(csv_dir))
+    
+    if (vb) message("Stored n CSVS: ", n_inst_csvs)
+    
+    fl <-
+      list.files(csv_dir, "inst\\-[0-9]+\\.csv", full.names = TRUE)
+    
+    if (vb) message("Retrieved n CSVs: ", length(fl))
+    
+    omitted_inst <- stringr::str_detect(fl, omit_inst_id)
+    fl <- fl[!omitted_inst]
+    load_inst_df_from_csvs(fl, vb)
+  }
