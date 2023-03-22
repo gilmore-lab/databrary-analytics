@@ -21,15 +21,15 @@ vol_id,url,tags,weight
 5,https://nyu.databrary.org/volume/5,manuals,1
 5,https://nyu.databrary.org/volume/5,bridges,1
 6,https://nyu.databrary.org/volume/6,NA,NA
-7,https://nyu.databrary.org/volume/7,locomotion,1
+7,https://nyu.databrary.org/volume/7,affordances,1
+7,https://nyu.databrary.org/volume/7,apertures,1
+7,https://nyu.databrary.org/volume/7,falling,1
 7,https://nyu.databrary.org/volume/7,perception,1
 7,https://nyu.databrary.org/volume/7,judgments,1
 7,https://nyu.databrary.org/volume/7,adult,1
-7,https://nyu.databrary.org/volume/7,affordances,1
-7,https://nyu.databrary.org/volume/7,apertures,1
-7,https://nyu.databrary.org/volume/7,manuals,1
+7,https://nyu.databrary.org/volume/7,locomotion,1
 7,https://nyu.databrary.org/volume/7,coding,1
-7,https://nyu.databrary.org/volume/7,falling,1
+7,https://nyu.databrary.org/volume/7,manuals,1
 8,https://nyu.databrary.org/volume/8,infants,2
 8,https://nyu.databrary.org/volume/8,cognitive,2
 8,https://nyu.databrary.org/volume/8,parent-child interaction,2
@@ -51,20 +51,20 @@ vol_id,url,tags,weight
 9,https://nyu.databrary.org/volume/9,social,1
 9,https://nyu.databrary.org/volume/9,motion,1
 10,https://nyu.databrary.org/volume/10,numerical cognition,2
-10,https://nyu.databrary.org/volume/10,cross-cultural research,1
-10,https://nyu.databrary.org/volume/10,infants,1
 10,https://nyu.databrary.org/volume/10,adult-child interaction,1
+10,https://nyu.databrary.org/volume/10,infants,1
+10,https://nyu.databrary.org/volume/10,cross-cultural research,1
 10,https://nyu.databrary.org/volume/10,amazon,1
 11,https://nyu.databrary.org/volume/11,NA,NA
 12,https://nyu.databrary.org/volume/12,NA,NA
 13,https://nyu.databrary.org/volume/13,NA,NA
 14,https://nyu.databrary.org/volume/14,NA,NA
 15,https://nyu.databrary.org/volume/15,still-face,2
-15,https://nyu.databrary.org/volume/15,expressions,1
-15,https://nyu.databrary.org/volume/15,infants,1
 15,https://nyu.databrary.org/volume/15,attachment,1
 15,https://nyu.databrary.org/volume/15,coding,1
 15,https://nyu.databrary.org/volume/15,manuals,1
+15,https://nyu.databrary.org/volume/15,expressions,1
+15,https://nyu.databrary.org/volume/15,infants,1
 16,https://nyu.databrary.org/volume/16,adult,1
 16,https://nyu.databrary.org/volume/16,walking,1
 16,https://nyu.databrary.org/volume/16,uner tan syndrome,1
@@ -2205,3 +2205,5 @@ vol_id,url,tags,weight
 1571,https://nyu.databrary.org/volume/1571,NA,NA
 1572,https://nyu.databrary.org/volume/1572,NA,NA
 1573,https://nyu.databrary.org/volume/1573,NA,NA
+1574,https://nyu.databrary.org/volume/1574,NA,NA
+1575,https://nyu.databrary.org/volume/1575,NA,NA

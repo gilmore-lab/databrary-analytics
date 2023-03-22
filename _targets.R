@@ -27,28 +27,20 @@ tar_option_set(
 list(
   tar_target(
     max_ids,
-    update_max_vol_party_ids(),
-    cue = tarchetypes::tar_cue_age(name = max_vol_party_ids,
-                                   age = as.difftime(1, units = "weeks"))
+    update_max_vol_party_ids()
   ),
   tar_target(
     max_party_id,
-    max_ids$MAX_PARTY_ID,
-    cue = tarchetypes::tar_cue_age(name = max_party_id,
-                                   age = as.difftime(1, units = "weeks"))
+    max_ids$MAX_PARTY_ID
   ),
   tar_target(
     max_vol_id,
-    max_ids$MAX_VOL_ID,
-    cue = tarchetypes::tar_cue_age(name = max_vol_id,
-                                   age = as.difftime(1, units = "weeks"))
+    max_ids$MAX_VOL_ID
   ),
   # institution and investigator aggregate numbers
   tar_target(
     inst_invest_df,
-    update_inst_invest_df("src/csv"),
-    cue = tarchetypes::tar_cue_age(name = inst_invest_df,
-                                   age = as.difftime(1, units = "weeks"))
+    update_inst_invest_df("src/csv")
   ),
   tar_target(
     inst_invest_csv,
@@ -58,9 +50,7 @@ list(
   # Volume tags and keywords
   tar_target(
     volume_tags_df,
-    refresh_volume_tags_df(1:max_vol_id),
-    cue = tarchetypes::tar_cue_age(name = volume_tags_df,
-                                   age = as.difftime(4, units = "weeks"))
+    refresh_volume_tags_df(1:max_vol_id)
   ),
   tar_target(vol_tags_csv,
              update_vol_tags_csv(volume_tags_df, "src/csv")),
@@ -68,9 +58,7 @@ list(
   # Funders
   tar_target(
     volume_funders_df,
-    refresh_volume_funders_df(1:max_vol_id),
-    cue = tarchetypes::tar_cue_age(name = volume_funders_df,
-                                   age = as.difftime(4, units = "weeks"))
+    refresh_volume_funders_df(1:max_vol_id)
   ),
   tar_target(
     volume_funders_csv,
@@ -81,14 +69,11 @@ list(
   tar_target(
     volume_asset_csv_list,
     generate_volume_asset_csv_list("src/csv"),
-    cue = tarchetypes::tar_cue_age(name = volume_asset_csv_list,
-                                   age = as.difftime(1, units = "weeks"))
+    cue = tar_cue(mode = "always")
   ),
   tar_target(
     volume_asset_stats_csvs,
-    update_all_vol_stats(max_vol_id),
-    cue = tarchetypes::tar_cue_age(name = volume_asset_stats_csvs,
-                                   age = as.difftime(1, units = "weeks"))
+    update_all_vol_stats(max_vol_id)
   ),
   tar_target(
     volume_asset_stats_df,
@@ -98,19 +83,16 @@ list(
   # Volume demographics from spreadsheets
   tar_target(
     volume_ss_csvs,
-    get_volume_demo_save_csv_mult(1, max_vol_id),
-    cue = tarchetypes::tar_cue_age(name = volume_ss_csvs,
-                                   age = as.difftime(4, units = "weeks"))
+    get_volume_demo_save_csv_mult(1, max_vol_id)
   ),
   tar_target(
     volume_owners_csv,
-    get_all_owners_save_csvs(max_vol_id),
-    cue = tarchetypes::tar_cue_age(name = volume_owners_csv,
-                                   age = as.difftime(1, units = "weeks"))
+    get_all_owners_save_csvs(max_vol_id)
   ),
   tar_target(
     volume_ss_csv_fl,
-    list.files('src/csv', "[0-9]+\\-sess\\-materials\\.csv", full.names = TRUE)
+    list.files('src/csv', "[0-9]+\\-sess\\-materials\\.csv", full.names = TRUE),
+    cue = tar_cue(mode = "always")
   ),
   tar_target(volume_demog_df,
              create_complete_demog_df(volume_ss_csv_fl)),
@@ -123,19 +105,16 @@ list(
   # ),
   tar_target(
     inst_df,
-    make_inst_df_from_csvs(n_inst_csvs)
+    make_inst_df_from_csvs(n_inst_csvs),
+    cue = tar_cue(mode = "always")
   ),
   tar_target(
     n_inst_csvs,
-    length(list.files('src/csv', "inst\\-[0-9]+\\.csv")),
-    cue = tarchetypes::tar_cue_age(name = n_inst_csvs,
-                                   age = as.difftime(1, units = "weeks"))
+    length(list.files('src/csv', "inst\\-[0-9]+\\.csv"))
   ),
   tar_target(
     add_new_inst_csvs,
-    get_save_many_inst_csvs(max(extract_inst_csv_id()), max_party_id, update_geo = TRUE),
-    cue = tarchetypes::tar_cue_age(name = add_new_inst_csvs,
-                                   age = as.difftime(1, units = "weeks"))
+    get_save_many_inst_csvs(max(extract_inst_csv_id()), max_party_id, update_geo = TRUE)
   ),
   # tar_target(
   #   invest_df,
@@ -153,8 +132,6 @@ list(
   # Volume-level sessions
   tar_target(
     vols_sess_df,
-    get_many_volumes_data(1, max_vol_id),
-    cue = tarchetypes::tar_cue_age(name = vols_sess_df,
-                                   age = as.difftime(1, units = "weeks"))
+    get_many_volumes_data(1, max_vol_id)
   )
 )

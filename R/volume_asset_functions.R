@@ -140,7 +140,7 @@ update_all_vol_stats <- function(max_volume_id,
     seq(from = 1, to = max_volume_id, by = vols_per_pass)
   range_end_id <- range_start_id + vols_per_pass
   
-  purrr::walk(
+  purrr::walk2(
     range_start_id,
     range_end_id,
     update_vol_asset_stats,
@@ -157,7 +157,13 @@ generate_volume_asset_csv_list <- function(csv_dir = "src/csv") {
   stopifnot(is.character(csv_dir))
   stopifnot(dir.exists(csv_dir))
   
-  list.files(csv_dir, '-assets\\.csv', full.names = TRUE)
+  fl <- list.files(csv_dir, '-assets\\.csv', full.names = TRUE)
+  if (length(fl) == 0) {
+    warning("No volume asset files found in '", csv_dir, "'.")
+    NULL
+  } else {
+    fl
+  }
 }
 
 #-------------------------------------------------------------------------------
