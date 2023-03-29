@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+<head><title>R: Interacts With the Databrary.org API</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+<link rel="stylesheet" type="text/css" href="R.css" />
+</head><body><div class="container">
+<h1> Interacts With the Databrary.org API
+<img class="toplogo" src="../../../doc/html/Rlogo.svg" alt="[R logo]" />
+</h1>
+<hr/>
+<div style="text-align: center;">
+<a href="../../../doc/html/packages.html"><img class="arrow" src="../../../doc/html/left.jpg" alt="[Up]" /></a>
+<a href="../../../doc/html/index.html"><img class="arrow" src="../../../doc/html/up.jpg" alt="[Top]" /></a>
+</div><h2>Documentation for package &lsquo;databraryapi&rsquo; version 0.2.9</h2>
+
+<ul><li><a href="../DESCRIPTION">DESCRIPTION file</a>.</li>
+</ul>
+
+<h2>Help Pages</h2>
+
+
+<table style="width: 100%;">
+<tr><td style="width: 25%;"><a href="assign_constants.html">assign_constants</a></td>
+<td>Downloads Databrary contants from API.</td></tr>
+<tr><td style="width: 25%;"><a href="config_passwd.html">config_passwd</a></td>
+<td>Stores Databrary account credentials in secure system-level file.</td></tr>
+<tr><td style="width: 25%;"><a href="download_asset.html">download_asset</a></td>
+<td>Download a specific video file.</td></tr>
+<tr><td style="width: 25%;"><a href="download_containers_records.html">download_containers_records</a></td>
+<td>Downloads container and record structure from Databrary volume. This function is deprecated, as it duplicates list_containers_records().</td></tr>
+<tr><td style="width: 25%;"><a href="download_datavyu.html">download_datavyu</a></td>
+<td>Download a specific Datavyu (.opf) file.</td></tr>
+<tr><td style="width: 25%;"><a href="download_party.html">download_party</a></td>
+<td>Lists basic information about people on Databrary.</td></tr>
+<tr><td style="width: 25%;"><a href="download_party_avatar.html">download_party_avatar</a></td>
+<td>Returns the avatar (image) for a given person.</td></tr>
+<tr><td style="width: 25%;"><a href="download_party_json.html">download_party_json</a></td>
+<td>Lists basic information about people on Databrary.</td></tr>
+<tr><td style="width: 25%;"><a href="download_session_csv.html">download_session_csv</a></td>
+<td>Downloads session spreadsheet as a CSV.</td></tr>
+<tr><td style="width: 25%;"><a href="download_session_zip.html">download_session_zip</a></td>
+<td>Download a zip archive with all data from a specified volume and session</td></tr>
+<tr><td style="width: 25%;"><a href="download_video.html">download_video</a></td>
+<td>Download a specific video file.</td></tr>
+<tr><td style="width: 25%;"><a href="download_vids_in_session.html">download_vids_in_session</a></td>
+<td>Download all videos in a session and save to a local directory.</td></tr>
+<tr><td style="width: 25%;"><a href="download_vids_in_volume.html">download_vids_in_volume</a></td>
+<td>Download all videos in a volume and save to a local directory.</td></tr>
+<tr><td style="width: 25%;"><a href="download_volume_zip.html">download_volume_zip</a></td>
+<td>Download a zip archive with all data in a volume.</td></tr>
+<tr><td style="width: 25%;"><a href="dv_to_csv.html">dv_to_csv</a></td>
+<td>Converts a Datavyu (.opf) file to CSV.</td></tr>
+<tr><td style="width: 25%;"><a href="extract_dv.html">extract_dv</a></td>
+<td>Extracts the elements from a raw (*.opf) Datavyu coding file.</td></tr>
+<tr><td style="width: 25%;"><a href="extract_dv_code_defs.html">extract_dv_code_defs</a></td>
+<td>Extracts the code definitions from a Datavyu (.opf) file.</td></tr>
+<tr><td style="width: 25%;"><a href="format_to_filetypes.html">format_to_filetypes</a></td>
+<td>Converts volume asset data frame to one with media types.</td></tr>
+<tr><td style="width: 25%;"><a href="get_asset_segment_range.html">get_asset_segment_range</a></td>
+<td>Get the time range from a given video or audio asset.</td></tr>
+<tr><td style="width: 25%;"><a href="GET_db_contents.html">GET_db_contents</a></td>
+<td>Queries the Databrary API with an HTML GET command</td></tr>
+<tr><td style="width: 25%;"><a href="get_db_stats.html">get_db_stats</a></td>
+<td>Downloads session spreadsheet as a CSV.</td></tr>
+<tr><td style="width: 25%;"><a href="get_file_duration.html">get_file_duration</a></td>
+<td>Get the the duration (in ms) of a file.</td></tr>
+<tr><td style="width: 25%;"><a href="get_permission_levels.html">get_permission_levels</a></td>
+<td>Extracts Databrary permission level codes and labels.</td></tr>
+<tr><td style="width: 25%;"><a href="get_release_levels.html">get_release_levels</a></td>
+<td>Shows release level codes</td></tr>
+<tr><td style="width: 25%;"><a href="get_supported_file_types.html">get_supported_file_types</a></td>
+<td>Extracts Databrary supported file types.</td></tr>
+<tr><td style="width: 25%;"><a href="get_video_stats.html">get_video_stats</a></td>
+<td>Reports summary statistics about the videos available from a given volume.</td></tr>
+<tr><td style="width: 25%;"><a href="HHMMSSmmm_to_ms.html">HHMMSSmmm_to_ms</a></td>
+<td>Get the time range from a given video or audio asset.</td></tr>
+<tr><td style="width: 25%;"><a href="is_institution.html">is_institution</a></td>
+<td>Tests whether given party ID is from an institution.</td></tr>
+<tr><td style="width: 25%;"><a href="is_person.html">is_person</a></td>
+<td>Tests whether given party ID is from a person.</td></tr>
+<tr><td style="width: 25%;"><a href="list_affiliates.html">list_affiliates</a></td>
+<td>Lists affiliates (sponsored researchers) for a given Databrary party (institution or person).</td></tr>
+<tr><td style="width: 25%;"><a href="list_assets_by_type.html">list_assets_by_type</a></td>
+<td>Lists stored assets (files) by type.</td></tr>
+<tr><td style="width: 25%;"><a href="list_assets_in_session.html">list_assets_in_session</a></td>
+<td>Lists assets in a given Databrary volume and session (slot).</td></tr>
+<tr><td style="width: 25%;"><a href="list_assets_in_volume.html">list_assets_in_volume</a></td>
+<td>Lists all the assets/files in a given volume.</td></tr>
+<tr><td style="width: 25%;"><a href="list_assets_json.html">list_assets_json</a></td>
+<td>Lists assets in a given Databrary volume and session (slot).</td></tr>
+<tr><td style="width: 25%;"><a href="list_containers_records.html">list_containers_records</a></td>
+<td>Lists containers and record structure from Databrary volume.</td></tr>
+<tr><td style="width: 25%;"><a href="list_containers_records_json.html">list_containers_records_json</a></td>
+<td>Lists containers and record structure from Databrary volume.</td></tr>
+<tr><td style="width: 25%;"><a href="list_individual_sponsors.html">list_individual_sponsors</a></td>
+<td>Lists a party's individual sponsors (people).</td></tr>
+<tr><td style="width: 25%;"><a href="list_institutional_sponsors.html">list_institutional_sponsors</a></td>
+<td>Lists a party's institutional sponsors.</td></tr>
+<tr><td style="width: 25%;"><a href="list_party.html">list_party</a></td>
+<td>Lists data for a given Databrary party (institution or person).</td></tr>
+<tr><td style="width: 25%;"><a href="list_people.html">list_people</a></td>
+<td>Lists basic information about people on Databrary.</td></tr>
+<tr><td style="width: 25%;"><a href="list_sessions.html">list_sessions</a></td>
+<td>Downloads list of sessions.</td></tr>
+<tr><td style="width: 25%;"><a href="list_sessions_in_volume.html">list_sessions_in_volume</a></td>
+<td>Lists the sessions in a given volume. This is an alias for list_sessions().</td></tr>
+<tr><td style="width: 25%;"><a href="list_session_activity.html">list_session_activity</a></td>
+<td>List activity in a given Databrary session for which the user has ownership privileges.</td></tr>
+<tr><td style="width: 25%;"><a href="list_specified_assets_in_session.html">list_specified_assets_in_session</a></td>
+<td>Lists assets in a given Databrary volume and session (slot).</td></tr>
+<tr><td style="width: 25%;"><a href="list_sponsors.html">list_sponsors</a></td>
+<td>Lists sponsors for a given Databrary party (institution or person).</td></tr>
+<tr><td style="width: 25%;"><a href="list_volume.html">list_volume</a></td>
+<td>Lists data for a given Databrary volume.</td></tr>
+<tr><td style="width: 25%;"><a href="list_volume_activity.html">list_volume_activity</a></td>
+<td>List activity in a given Databrary volume.</td></tr>
+<tr><td style="width: 25%;"><a href="list_volume_excerpts.html">list_volume_excerpts</a></td>
+<td>Lists image or video excerpts associated with a Databrary volume.</td></tr>
+<tr><td style="width: 25%;"><a href="list_volume_funding.html">list_volume_funding</a></td>
+<td>Lists funders associated with a Databrary volume.</td></tr>
+<tr><td style="width: 25%;"><a href="list_volume_links.html">list_volume_links</a></td>
+<td>Retrieves URL links associated with a Databrary volume.</td></tr>
+<tr><td style="width: 25%;"><a href="list_volume_metadata.html">list_volume_metadata</a></td>
+<td>List volume metadata.</td></tr>
+<tr><td style="width: 25%;"><a href="list_volume_owners.html">list_volume_owners</a></td>
+<td>List vol.id owners.</td></tr>
+<tr><td style="width: 25%;"><a href="list_volume_tags.html">list_volume_tags</a></td>
+<td>Lists keywords and tags associated with a Databrary volume.</td></tr>
+<tr><td style="width: 25%;"><a href="login_db.html">login_db</a></td>
+<td>Logs in to Databrary.org.</td></tr>
+<tr><td style="width: 25%;"><a href="logout_db.html">logout_db</a></td>
+<td>Logs out of Databrary.org.</td></tr>
+<tr><td style="width: 25%;"><a href="read_csv_data_as_df.html">read_csv_data_as_df</a></td>
+<td>Download a stored CSV data file as a data.frame.</td></tr>
+<tr><td style="width: 25%;"><a href="search_for_funder.html">search_for_funder</a></td>
+<td>Search for funders.</td></tr>
+<tr><td style="width: 25%;"><a href="search_for_keywords.html">search_for_keywords</a></td>
+<td>Search for keywords in Databrary volumes.</td></tr>
+<tr><td style="width: 25%;"><a href="search_for_tags.html">search_for_tags</a></td>
+<td>Search for tags on volumes or sessions.</td></tr>
+<tr><td style="width: 25%;"><a href="summarize_demo_part_w_video.html">summarize_demo_part_w_video</a></td>
+<td>Summarize demographic data for participants in sessions with videos</td></tr>
+<tr><td style="width: 25%;"><a href="summarize_videos_in_volume.html">summarize_videos_in_volume</a></td>
+<td>Summarize the number and hours of videos in a volume.</td></tr>
+<tr><td style="width: 25%;"><a href="validate_segment_id.html">validate_segment_id</a></td>
+<td>Download all videos in a session and save to a local directory.</td></tr>
+</table>
+</div></body></html>

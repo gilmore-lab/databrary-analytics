@@ -1,0 +1,36 @@
+Package: databraryapi
+Type: Package
+Title: Interacts With the Databrary.org API
+Version: 0.2.9
+Author: Rick O. Gilmore [aut, cre]
+Authors@R: person("Rick", "O. Gilmore", email = "rog1@psu.edu",
+  role = c("aut", "cre"))
+Maintainer: Rick O. Gilmore <rog1@psu.edu>
+Description: This package provides commands to interact with the 
+  Databrary.org API. There are some public assets on Databrary. 
+  But for most interesting use cases, a user will need to 
+  register <http://databrary.org/register> and receive authorization 
+  from an institution. Once authorized, users can download data 
+  and metadata from Databrary.
+License: MIT + file LICENSE
+Encoding: UTF-8
+Imports: dplyr, ggplot2, httr, rvest, magrittr, jsonlite, keyring,
+        stringr, rmarkdown, magick
+RoxygenNote: 7.1.0
+Suggests: knitr, testthat
+VignetteBuilder: knitr
+URL: http://github.com/PLAY-behaviorome/databraryapi
+BugReports: http://github.com/PLAY-behaviorome/databraryapi/issues
+RemoteType: github
+RemoteHost: api.github.com
+RemoteRepo: databraryapi
+RemoteUsername: PLAY-behaviorome
+RemoteRef: HEAD
+RemoteSha: ff3ea059dd72ca6f5b9273f9bd7d28f66d70d830
+GithubRepo: databraryapi
+GithubUsername: PLAY-behaviorome
+GithubRef: HEAD
+GithubSHA1: ff3ea059dd72ca6f5b9273f9bd7d28f66d70d830
+NeedsCompilation: no
+Packaged: 2023-03-29 19:34:57 UTC; ars17
+Built: R 4.2.2; ; 2023-03-29 19:34:57 UTC; unix

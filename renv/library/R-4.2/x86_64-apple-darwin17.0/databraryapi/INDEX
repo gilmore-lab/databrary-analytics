@@ -1,0 +1,113 @@
+GET_db_contents         Queries the Databrary API with an HTML GET
+                        command
+HHMMSSmmm_to_ms         Get the time range from a given video or audio
+                        asset.
+assign_constants        Downloads Databrary contants from API.
+config_passwd           Stores Databrary account credentials in secure
+                        system-level file.
+download_asset          Download a specific video file.
+download_containers_records
+                        Downloads container and record structure from
+                        Databrary volume. This function is deprecated,
+                        as it duplicates list_containers_records().
+download_datavyu        Download a specific Datavyu (.opf) file.
+download_party          Lists basic information about people on
+                        Databrary.
+download_party_avatar   Returns the avatar (image) for a given person.
+download_party_json     Lists basic information about people on
+                        Databrary.
+download_session_csv    Downloads session spreadsheet as a CSV.
+download_session_zip    Download a zip archive with all data from a
+                        specified volume and session
+download_video          Download a specific video file.
+download_vids_in_session
+                        Download all videos in a session and save to a
+                        local directory.
+download_vids_in_volume
+                        Download all videos in a volume and save to a
+                        local directory.
+download_volume_zip     Download a zip archive with all data in a
+                        volume.
+dv_to_csv               Converts a Datavyu (.opf) file to CSV.
+extract_dv              Extracts the elements from a raw (*.opf)
+                        Datavyu coding file.
+extract_dv_code_defs    Extracts the code definitions from a Datavyu
+                        (.opf) file.
+format_to_filetypes     Converts volume asset data frame to one with
+                        media types.
+get_asset_segment_range
+                        Get the time range from a given video or audio
+                        asset.
+get_db_stats            Downloads session spreadsheet as a CSV.
+get_file_duration       Get the the duration (in ms) of a file.
+get_permission_levels   Extracts Databrary permission level codes and
+                        labels.
+get_release_levels      Shows release level codes
+get_supported_file_types
+                        Extracts Databrary supported file types.
+get_video_stats         Reports summary statistics about the videos
+                        available from a given volume.
+is_institution          Tests whether given party ID is from an
+                        institution.
+is_person               Tests whether given party ID is from a person.
+list_affiliates         Lists affiliates (sponsored researchers) for a
+                        given Databrary party (institution or person).
+list_assets_by_type     Lists stored assets (files) by type.
+list_assets_in_session
+                        Lists assets in a given Databrary volume and
+                        session (slot).
+list_assets_in_volume   Lists all the assets/files in a given volume.
+list_assets_json        Lists assets in a given Databrary volume and
+                        session (slot).
+list_containers_records
+                        Lists containers and record structure from
+                        Databrary volume.
+list_containers_records_json
+                        Lists containers and record structure from
+                        Databrary volume.
+list_individual_sponsors
+                        Lists a party's individual sponsors (people).
+list_institutional_sponsors
+                        Lists a party's institutional sponsors.
+list_party              Lists data for a given Databrary party
+                        (institution or person).
+list_people             Lists basic information about people on
+                        Databrary.
+list_session_activity   List activity in a given Databrary session for
+                        which the user has ownership privileges.
+list_sessions           Downloads list of sessions.
+list_sessions_in_volume
+                        Lists the sessions in a given volume. This is
+                        an alias for list_sessions().
+list_specified_assets_in_session
+                        Lists assets in a given Databrary volume and
+                        session (slot).
+list_sponsors           Lists sponsors for a given Databrary party
+                        (institution or person).
+list_volume             Lists data for a given Databrary volume.
+list_volume_activity    List activity in a given Databrary volume.
+list_volume_excerpts    Lists image or video excerpts associated with a
+                        Databrary volume.
+list_volume_funding     Lists funders associated with a Databrary
+                        volume.
+list_volume_links       Retrieves URL links associated with a Databrary
+                        volume.
+list_volume_metadata    List volume metadata.
+list_volume_owners      List vol.id owners.
+list_volume_tags        Lists keywords and tags associated with a
+                        Databrary volume.
+login_db                Logs in to Databrary.org.
+logout_db               Logs out of Databrary.org.
+read_csv_data_as_df     Download a stored CSV data file as a
+                        data.frame.
+search_for_funder       Search for funders.
+search_for_keywords     Search for keywords in Databrary volumes.
+search_for_tags         Search for tags on volumes or sessions.
+summarize_demo_part_w_video
+                        Summarize demographic data for participants in
+                        sessions with videos
+summarize_videos_in_volume
+                        Summarize the number and hours of videos in a
+                        volume.
+validate_segment_id     Download all videos in a session and save to a
+                        local directory.
