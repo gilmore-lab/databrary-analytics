@@ -1,0 +1,153 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title>R: Virtual Class '&quot;packedMatrix&quot;' of Packed Dense Matrices</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="R.css" />
+</head><body>
+
+<table width="100%" summary="page for packedMatrix-class {Matrix}"><tr><td>packedMatrix-class {Matrix}</td><td style="text-align: right;">R Documentation</td></tr></table>
+
+<h2>Virtual Class <code>"packedMatrix"</code> of Packed Dense Matrices</h2>
+
+<h3>Description</h3>
+
+<p>Class <code>"packedMatrix"</code> is the <em>virtual</em> class of dense
+symmetric or triangular matrices in &quot;packed&quot; format, storing only
+the <code>choose(n+1,2) == n*(n+1)/2</code> elements of the upper or
+lower triangle of an <code>n</code>-by-<code>n</code> matrix. It is used to
+define common methods for efficient subsetting, transposing, etc.
+of its <em>proper</em> subclasses: currently <code>"[dln]spMatrix"</code>
+(packed symmetric), <code>"[dln]tpMatrix"</code> (packed triangular),
+and subclasses of these, such as
+<code>"<a href="../../Matrix/help/dppMatrix-class.html">dppMatrix</a>"</code>,
+<code>"<a href="../../Matrix/help/pCholesky-class.html">pCholesky</a>"</code>, and
+<code>"<a href="../../Matrix/help/pBunchKaufman-class.html">pBunchKaufman</a>"</code>.
+</p>
+
+
+<h3>Slots</h3>
+
+
+<dl>
+<dt><code>uplo</code>:</dt><dd><p><code>"character"</code>; either &quot;U&quot;, for upper triangular, and &quot;L&quot;, for lower.</p>
+</dd>
+<dt><code>Dim</code>, <code>Dimnames</code>:</dt><dd><p>as all <code><a href="../../Matrix/help/Matrix-class.html">Matrix</a></code> objects.</p>
+</dd>
+</dl>
+
+
+
+<h3>Extends</h3>
+
+<p>Class <code>"<a href="../../Matrix/help/denseMatrix-class.html">denseMatrix</a>"</code>, directly.
+Class <code>"<a href="../../Matrix/help/Matrix-class.html">Matrix</a>"</code>, by class <code>"denseMatrix"</code>,
+distance 2.
+Class <code>"mMatrix"</code>, by class <code>"Matrix"</code>, distance 3.
+Class <code>"replValueSp"</code>, by class <code>"Matrix"</code>, distance 3.
+</p>
+
+
+<h3>Methods</h3>
+
+
+<dl>
+<dt>pack</dt><dd><p><code>signature(x = "packedMatrix")</code>: ... </p>
+</dd>
+<dt>unpack</dt><dd><p><code>signature(x = "packedMatrix")</code>: ... </p>
+</dd>
+<dt>isSymmetric</dt><dd><p><code>signature(object = "packedMatrix")</code>: ... </p>
+</dd>
+<dt>isTriangular</dt><dd><p><code>signature(object = "packedMatrix")</code>: ... </p>
+</dd>
+<dt>isDiagonal</dt><dd><p><code>signature(object = "packedMatrix")</code>: ... </p>
+</dd>
+<dt>t</dt><dd><p><code>signature(x = "packedMatrix")</code>: ... </p>
+</dd>
+<dt>diag</dt><dd><p><code>signature(x = "packedMatrix")</code>: ... </p>
+</dd>
+<dt>diag&lt;-</dt><dd><p><code>signature(x = "packedMatrix")</code>: ... </p>
+</dd>
+<dt>[</dt><dd><p><code>signature(x = "packedMatrix", i = "missing", j = "missing", drop = "missing")</code>: ... </p>
+</dd>
+<dt>[</dt><dd><p><code>signature(x = "packedMatrix", i = "NULL", j = "missing", drop = "missing")</code>: ... </p>
+</dd>
+<dt>[</dt><dd><p><code>signature(x = "packedMatrix", i = "index", j = "missing", drop = "missing")</code>: ... </p>
+</dd>
+<dt>[</dt><dd><p><code>signature(x = "packedMatrix", i = "matrix", j = "missing", drop = "missing")</code>: ... </p>
+</dd>
+<dt>[</dt><dd><p><code>signature(x = "packedMatrix", i = "lMatrix", j = "missing", drop = "missing")</code>: ... </p>
+</dd>
+<dt>[</dt><dd><p><code>signature(x = "packedMatrix", i = "missing", j = "NULL", drop = "missing")</code>: ... </p>
+</dd>
+<dt>[</dt><dd><p><code>signature(x = "packedMatrix", i = "NULL", j = "NULL", drop = "missing")</code>: ... </p>
+</dd>
+<dt>[</dt><dd><p><code>signature(x = "packedMatrix", i = "index", j = "NULL", drop = "missing")</code>: ... </p>
+</dd>
+<dt>[</dt><dd><p><code>signature(x = "packedMatrix", i = "matrix", j = "NULL", drop = "missing")</code>: ... </p>
+</dd>
+<dt>[</dt><dd><p><code>signature(x = "packedMatrix", i = "lMatrix", j = "NULL", drop = "missing")</code>: ... </p>
+</dd>
+<dt>[</dt><dd><p><code>signature(x = "packedMatrix", i = "missing", j = "index", drop = "missing")</code>: ... </p>
+</dd>
+<dt>[</dt><dd><p><code>signature(x = "packedMatrix", i = "NULL", j = "index", drop = "missing")</code>: ... </p>
+</dd>
+<dt>[</dt><dd><p><code>signature(x = "packedMatrix", i = "index", j = "index", drop = "missing")</code>: ... </p>
+</dd>
+<dt>[</dt><dd><p><code>signature(x = "packedMatrix", i = "matrix", j = "index", drop = "missing")</code>: ... </p>
+</dd>
+<dt>[</dt><dd><p><code>signature(x = "packedMatrix", i = "lMatrix", j = "index", drop = "missing")</code>: ... </p>
+</dd>
+<dt>[</dt><dd><p><code>signature(x = "packedMatrix", i = "missing", j = "missing", drop = "logical")</code>: ... </p>
+</dd>
+<dt>[</dt><dd><p><code>signature(x = "packedMatrix", i = "NULL", j = "missing", drop = "logical")</code>: ... </p>
+</dd>
+<dt>[</dt><dd><p><code>signature(x = "packedMatrix", i = "index", j = "missing", drop = "logical")</code>: ... </p>
+</dd>
+<dt>[</dt><dd><p><code>signature(x = "packedMatrix", i = "matrix", j = "missing", drop = "logical")</code>: ... </p>
+</dd>
+<dt>[</dt><dd><p><code>signature(x = "packedMatrix", i = "lMatrix", j = "missing", drop = "logical")</code>: ... </p>
+</dd>
+<dt>[</dt><dd><p><code>signature(x = "packedMatrix", i = "missing", j = "NULL", drop = "logical")</code>: ... </p>
+</dd>
+<dt>[</dt><dd><p><code>signature(x = "packedMatrix", i = "NULL", j = "NULL", drop = "logical")</code>: ... </p>
+</dd>
+<dt>[</dt><dd><p><code>signature(x = "packedMatrix", i = "index", j = "NULL", drop = "logical")</code>: ... </p>
+</dd>
+<dt>[</dt><dd><p><code>signature(x = "packedMatrix", i = "matrix", j = "NULL", drop = "logical")</code>: ... </p>
+</dd>
+<dt>[</dt><dd><p><code>signature(x = "packedMatrix", i = "lMatrix", j = "NULL", drop = "logical")</code>: ... </p>
+</dd>
+<dt>[</dt><dd><p><code>signature(x = "packedMatrix", i = "missing", j = "index", drop = "logical")</code>: ... </p>
+</dd>
+<dt>[</dt><dd><p><code>signature(x = "packedMatrix", i = "NULL", j = "index", drop = "logical")</code>: ... </p>
+</dd>
+<dt>[</dt><dd><p><code>signature(x = "packedMatrix", i = "index", j = "index", drop = "logical")</code>: ... </p>
+</dd>
+<dt>[</dt><dd><p><code>signature(x = "packedMatrix", i = "matrix", j = "index", drop = "logical")</code>: ... </p>
+</dd>
+<dt>[</dt><dd><p><code>signature(x = "packedMatrix", i = "lMatrix", j = "index", drop = "logical")</code>: ... </p>
+</dd>
+</dl>
+
+
+
+<h3>Author(s)</h3>
+
+<p>Mikael Jagan</p>
+
+
+<h3>See Also</h3>
+
+<p><code><a href="../../Matrix/help/pack.html">pack</a></code> and <code><a href="../../Matrix/help/unpack.html">unpack</a></code>; its virtual &quot;complement&quot;
+<code>"<a href="../../Matrix/help/unpackedMatrix-class.html">unpackedMatrix</a>"</code>; its proper subclasses
+<code>"<a href="../../Matrix/help/dspMatrix-class.html">dspMatrix</a>"</code>, <code>"<a href="../../Matrix/help/ltpMatrix-class.html">ltpMatrix</a>"</code>, etc.
+</p>
+
+
+<h3>Examples</h3>
+
+<pre>
+showClass("packedMatrix")
+showMethods(classes = "packedMatrix")
+</pre>
+
+<hr /><div style="text-align: center;">[Package <em>Matrix</em> version 1.5-3 <a href="00Index.html">Index</a>]</div>
+</body></html>

@@ -79,6 +79,6 @@ Approximately quarterly, we generate updates of multiple reports by running `sou
 - Use `usethis::create_github_token()` to create a GitHub access token and `gitcreds::gitcreds_set()` to set it for the local environment. Running `usethis::git_sitrep()` is a useful diagnostic. See <https://usethis.r-lib.org/articles/git-credentials.html>
 
 ## Databrary Access
-
+- Ensure the `devtools` package is installed by using `install.packages("devtools")` 
 - Install the `databraryapi` package via `devtools::install_github("PLAY-behaviorome/databraryapi")`.
 - Run `databraryapi::config_passwd()` to create a local keyring store associated with your Databrary user name and password.
