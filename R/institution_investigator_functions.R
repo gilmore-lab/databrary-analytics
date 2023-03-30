@@ -142,6 +142,8 @@ update_inst_csv <- function(csv_fn = "src/csv/institutions.csv",
                             save_new = TRUE,
                             update_geo = FALSE,
                             vb = FALSE) {
+  require(tidyverse)
+  
   if (file.exists(csv_fn)) {
     if (vb)
       message("Reading from saved file.")
@@ -164,7 +166,7 @@ update_inst_csv <- function(csv_fn = "src/csv/institutions.csv",
       if (save_new) {
         if (vb)
           message(paste0(" Writing new file: ", csv_fn))
-        write_csv(df, csv_fn)
+        readr::write_csv(df, csv_fn)
       }
     } else {
       if (vb)
@@ -183,7 +185,7 @@ update_inst_csv <- function(csv_fn = "src/csv/institutions.csv",
     if (save_new) {
       if (vb)
         message(paste0(" Writing new file: ", csv_fn))
-      write_csv(df, csv_fn)
+      readr::write_csv(df, csv_fn)
     }
   }
   df

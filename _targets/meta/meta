@@ -1,5 +1,5 @@
 name|type|data|command|depend|seed|path|time|size|bytes|format|repository|iteration|parent|children|seconds|warnings|error
-add_new_inst_csvs|stem|c5dab77b3a29bda0|a53f1922a8790d70|cdfaa1bfec53526a|-1555508277||t19431.6373442672s|241bf920421d9078|105|rds|local|vector|||4.958||
+add_new_inst_csvs|stem|fc1d5db2096349ca|a53f1922a8790d70|6e094966897ed84d|-1555508277||t19438.8006045786s|4ff05336d644dae2|106|rds|local|vector|||13.218||
 alter_sess_df_w_mult_part|function|7d2269f8f8b7597e|||||||||||||||
 auth_to_google|function|a895f65c72041d58|||||||||||||||
 bytes_to_gb|function|d38896a56c3fcde1|||||||||||||||
@@ -26,7 +26,7 @@ extract_sessions_from_vol_csv|function|cee95a8c9f8caf06|||||||||||||||
 extract_single_participant|function|9fe29b16fa7b4f77|||||||||||||||
 extract_unique_participant_info|function|d5f75aab33af874c|||||||||||||||
 generate_sessions_materials_df|function|b58c5a6d9e15c509|||||||||||||||
-generate_volume_asset_csv_list|function|d32bbbcf9023a249|||||||||||||||
+generate_volume_asset_csv_list|function|720cf6ac09e01af9|||||||||||||||
 get_ais_from_inst|function|22cc7dc1f23ae094|||||||||||||||
 get_all_inst|function|89d100497f457ade|||||||||||||||
 get_all_owners_save_csvs|function|3e77e1eea5cc686f|||||||||||||||
@@ -62,18 +62,18 @@ get_volume_ss_vroom|function|f192c7318c7e52f5|||||||||||||||
 get_volumes_demo|function|b8f9b1154c3cf15d|||||||||||||||
 get_volumes_first_owners|function|2d771f3148796635|||||||||||||||
 get_volumes_owners|function|99bbdfb1c8ab828c|||||||||||||||
-inst_df|stem|2ca0bf6b0e49e561|385e06ede9eb06e7|e6a35949d3356862|-39249179||t19431.6277107604s|ee78f716f83eefc6|32539|rds|local|vector|||6.536||
-inst_invest_csv|stem|078b66b8aa06aaab|0cdab3a1a63555e5|51074d36c74c884d|96982013||t19431.6277109517s|dd185a3a4470c384|2533|rds|local|vector|||0.008||
-inst_invest_df|stem|078b66b8aa06aaab|f200511381d53766|3dcc6e07b257f45f|-1292201014||t19431.6275956975s|dd185a3a4470c384|2533|rds|local|vector|||0.542||
+inst_df|stem|48d9c8905830eb94|385e06ede9eb06e7|0a1824d459375d63|-39249179||t19438.8734741176s|9a87620196a2e911|32540|rds|local|vector|||6.255||
+inst_invest_csv|stem|c2f4da5bd746d69a|0cdab3a1a63555e5|48f5c53722e03bb9|96982013||t19438.7301591857s|fefb17b998ea0fea|2546|rds|local|vector|||0.015||
+inst_invest_df|stem|c2f4da5bd746d69a|f200511381d53766|3dcc6e07b257f45f|-1292201014||t19438.5156565576s|fefb17b998ea0fea|2546|rds|local|vector|||0.874||
 institution_csv_fl|stem|1cb5cb15259ceb97|b4ae3bcfa4c7df53|88559740b2c6d4c9|2028229775||t19398.6528577819s|38698b2dd0294d4b|2281|rds|local|vector|||0.703||
-invest_df|stem|3753b4c3a3dbb387|d15997c99b193db0|91f3ad59848d61b5|1783705798||t19431.6423212269s|fed1a75486a1f150|75803|rds|local|vector|||237.302||
+invest_df|stem|d314e395924cffdc|d15997c99b193db0|8f911c2b9bfc3cc7|1783705798||t19438.8767081914s|090973477c4d337f|57919|rds|local|vector|||136.861||
 load_demog_csvs|function|7e6417fce4f41e84|||||||||||||||
 load_inst_df_from_csvs|function|28a65b0edc460a93|||||||||||||||
 load_old_inst_invest_data|function|266cdab27d0940b4|||||||||||||||
 load_old_tags_data|function|c17a37a7d0dabb33|||||||||||||||
 load_owner_csvs|function|87bd403eccdf0a61|||||||||||||||
 make_ais_df|function|38f42347c78cca2c|||||||||||||||
-make_all_ais_csv|stem|3753b4c3a3dbb387|68608897c53904a8|9af1a83a14d1a30c|1343518348||t19431.639574447s|fed1a75486a1f150|75803|rds|local|vector|||192.662||
+make_all_ais_csv|stem|d314e395924cffdc|68608897c53904a8|ddfa3e18d668f3d2|1343518348||t19438.8751239842s|090973477c4d337f|57919|rds|local|vector|||142.496||
 make_all_ais_df|stem|7c4d001e492a5da1|24c8fa89d082ee97|c3b5fc02cdc369c1|1118731324||t19401.9410050971s|67f2148a26b5cbf9|58676|rds|local|vector|||0.684||
 make_all_session_df|function|274061771851c76a|||||||||||||||
 make_cleaned_session_df|function|0f87528410585ad4|||||||||||||||
@@ -82,16 +82,16 @@ make_inst_df_from_csvs|function|fecb5ca4cadb961f|||||||||||||||
 make_stem_tags_df|function|cce46e18c29adfe5|||||||||||||||
 make_volume_assets_stats_df|function|3b989c50e46f2022|||||||||||||||
 make_volume_tags_df|function|b678117b868da715|||||||||||||||
-max_ids|stem|10a3aacc77f6ee78|f73920d7b115a6ed|7438527f0df84e6e|-206273353||t19431.6275892214s|aa4b28cd19784daa|145|rds|local|vector|||2.406||
-max_party_id|stem|d6ec1741d733af32|32441c4eca029566|6ede282dbeb948d0|-497437831||t19431.6276349983s|b6d2e014b07bc296|51|rds|local|vector|||0||
-max_vol_id|stem|e40b3c69152b462f|6b2517915f2b6de7|6ede282dbeb948d0|804642499||t19431.6276349305s|b6d2e014b07bc296|51|rds|local|vector|||0||
+max_ids|stem|8c6c9119f10aa0b7|f73920d7b115a6ed|7438527f0df84e6e|-206273353||t19438.5156461916s|aa4b28cd19784daa|145|rds|local|vector|||3.239||
+max_party_id|stem|a34c90010acac912|32441c4eca029566|80e0c69cb2fed2a0|-497437831||t19438.7300768104s|b6d2e014b07bc296|51|rds|local|vector|||0||
+max_vol_id|stem|681ac79f67611144|6b2517915f2b6de7|80e0c69cb2fed2a0|804642499||t19438.7300767303s|b6d2e014b07bc296|51|rds|local|vector|||0||
 max_volume_id|object|59bd8c616f7250f1|||||||||||||||
 mins_to_hrs|function|eed140de550e8a84|||||||||||||||
 ms_to_hrs|function|5468a572735c6ab8|||||||||||||||
 ms_to_mins|function|3cbc8cf5159183c8|||||||||||||||
 ms_to_secs|function|36d97f9fbc12a198|||||||||||||||
 my_gender|function|14fb78886fa1a7c7|||||||||||||||
-n_inst_csvs|stem|3d0aebe80fdcc3d8|e07fe259ad73f617|a5f1076f8f459d1b|1747753546||t19431.627589338s|44989414465ff33d|49|rds|local|vector|||0.005||
+n_inst_csvs|stem|645617b20103b337|e07fe259ad73f617|a5f1076f8f459d1b|1747753546||t19438.51564636s|b6d2e014b07bc296|51|rds|local|vector|||0.003||
 n_particip_in_session|function|f93aecd4681a0cae|||||||||||||||
 old_max_party_id|stem|0df5c6625aa9da22|2c274496432f046c|ed5ea2e38cc5846f|-11510734||t19408.8119741965s|c9aaea90a821e608|53|rds|local|vector|||0.001||
 old_max_vol_id|stem|0df5c6625aa9da22|7265b7f82e763650|ed5ea2e38cc5846f|-1393393201||t19408.8119741271s|c9aaea90a821e608|53|rds|local|vector|||0||
@@ -109,8 +109,8 @@ secs_to_mins|function|3969f87ab0910307|||||||||||||||
 select_particip_sess_by_number|function|4439750ee27b2844|||||||||||||||
 select_tags|object|98783343f487c5ad|||||||||||||||
 storage_gb_by_vol|function|84c7a815eefb734f|||||||||||||||
-update_all_vol_stats|function|7106c9c8f722d178|||||||||||||||
-update_inst_csv|function|9b7b0fbe6f9c21bb|||||||||||||||
+update_all_vol_stats|function|a6f66bcffb24d760|||||||||||||||
+update_inst_csv|function|bc172fafbafb248e|||||||||||||||
 update_inst_invest_csv|function|898113117f3f5242|||||||||||||||
 update_inst_invest_df|function|7d918cf8d5359468|||||||||||||||
 update_inst_lat_lon|function|619534b03d2d709e|||||||||||||||
@@ -121,18 +121,18 @@ update_vol_tags_csv|function|7f4b7b7564d144c1|||||||||||||||
 update_volume_funders_csv|function|089de70feea08767|||||||||||||||
 vol_csv_avail|function|6766b75910ff6742|||||||||||||||
 vol_id_exists|function|bed3469df01a2671|||||||||||||||
-vol_tags_csv|stem|145ceaa9a519e4f4|be19fdbca9907b76|daf786e5aee0c900|-1340783785||t19431.642321875s|5ab5e45f0c5084ca|14573|rds|local|vector|||0.021||
-vols_sess_df|stem|1bedf22998c28892|39c7dfe02a9e68d6|765fdcecf192d028|613955833||t19431.6342735489s|5556e17bfed35b5f|41950|rds|local|vector|||167.977||
-volume_asset_csv_list|stem|ff08644a26375f46|0ea0986b34981f73|b8284977ba50fc2b|1104642854||t19431.6275612957s|0e641db36dbe9518|1147|rds|local|vector|||0.688||
-volume_asset_stats_csvs|stem|976b5984c138c56f|95e7bcc0f2e133b1|e7fba741fd202404|-485789987||t19431.6372867838s|ac45463db19e2cbe|48|rds|local|vector|||0.479||
-volume_asset_stats_df|stem|de062486b5f13150|9544ea09951cdd47|5df7aeecd6619e63|1097683627||t19431.6276348702s|05a7384f75394f1b|14046|rds|local|vector|||3.373||
-volume_demog_df|stem|a492ec68d39a63a5|ab527123003c386a|cc312e1bdd0b6881|289017409||t19397.8053434024s|2318e89f1674328b|110050|rds|local|vector|||12.7|1m22mThere was 1 warning in mutate.1m22m36mℹ39m In argument sessiondate  lubridateymdsessiondate.Caused by warning33m39m  206 failed to parse.. 1m22mThere was 1 warning in mutate.1m22m36mℹ39m In argument sessiondate  lubridateymdsessiondate.Caused by warning33m39m  2 failed to parse.. 1m22mThere was 1 warning in mutate.1m22m36mℹ39m In argument sessiondate  lubridateymdsessiondate.Caused by warning33m39m  9 failed to parse.. 1m22mThere was 1 warning in mutate.1m22m36mℹ39m In argument sessiondate  lubridateymdsessiondate.Caused by warning33m39m  9 failed to parse.. 1m22mThere was 1 warning in mutate.1m22m36mℹ39m In argument sessiondate  lubridateymdsessiondate.Caused by warning33m39m  1 failed to parse.. 1m22mThere was 1 warning in mutate.1m22m36mℹ39m In argument sessiondate  lubridateymdsessiondate.Caused by warning33m39m  30 failed to parse.. 1m22mThere was 1 warning in mutate.1m22m36mℹ39m In argument sessiondate  lubridateymdsessiondate.Caused by warning33m39m  23 failed to parse.. 1m22mThere was 1 warning in mutate.1m22m36mℹ39m In argument sessiondate  lubridateymdsessiondate.Caused by warning33m39m All formats failed to parse. No formats found.. 1m22mThere was 1 warning in mutate.1m22m36mℹ39m In argument sessiondate  lubridateymdsessiondate.Caused by warning33m39m  143 failed to parse.. 1m22mThere was 1 warning in mutate.1m22m36mℹ39m In argument sessiondate  lubridateymdsessiondate.Caused by warning33m39m  54 failed to parse.. 1m22mThere was 1 warning in mutate.1m22m36mℹ39m In argument sessiondate  lubridateymdsessiondate.Caused by warning33m39m  2 failed to parse.. 1m22mThere was 1 warning in mutate.|
-volume_funders_csv|stem|bc19d164c0bedea1|2a138138f2ceff2d|dd65fc8b2a3ed608|-1817194351||t19431.6423215234s|367bfd8c3c96a0a5|7360|rds|local|vector|||0.018||
-volume_funders_df|stem|bc19d164c0bedea1|7cc8a1f72a120920|47e7fac64220d15d|1974613460||t19431.6287297265s|367bfd8c3c96a0a5|7360|rds|local|vector|||88.014||
-volume_owners_csv|stem|f55cc055fc9a9f07|4cda15eb392d9831|5662f9612dee70a7|1374981367||t19431.6323292188s|fb695229440e0292|1175|rds|local|vector|||195.155||
-volume_ss_csv_fl|stem|05ba48c6d78bf95a|8a009bbc12c103e4|88559740b2c6d4c9|658438836||t19396.6783767281s|bf6c4ee4d331679c|1218|rds|local|vector|||0.727||
-volume_ss_csvs|stem|976b5984c138c56f|2735e9f0c6844125|93c80a1b8d897a20|915210189||t19431.6372810971s|ac45463db19e2cbe|48|rds|local|vector|||259.845|1m22mOne or more parsing issues, call problems on your data frame for details,e.g.  dat  vroom...  problemsdat. 1m22mOne or more parsing issues, call problems on your data frame for details,e.g.  dat  vroom...  problemsdat. 1m22mOne or more parsing issues, call problems on your data frame for details,e.g.  dat  vroom...  problemsdat. 1m22mOne or more parsing issues, call problems on your data frame for details,e.g.  dat  vroom...  problemsdat. 1m22mOne or more parsing issues, call problems on your data frame for details,e.g.  dat  vroom...  problemsdat. 1m22mOne or more parsing issues, call problems on your data frame for details,e.g.  dat  vroom...  problemsdat. 1m22mOne or more parsing issues, call problems on your data frame for details,e.g.  dat  vroom...  problemsdat. 1m22mOne or more parsing issues, call problems on your data frame for details,e.g.  dat  vroom...  problemsdat. 1m22mOne or more parsing issues, call problems on your data frame for details,e.g.  dat  vroom...  problemsdat. 1m22mOne or more parsing issues, call problems on your data frame for details,e.g.  dat  vroom...  problemsdat. 1m22mOne or more parsing issues, call problems on your data frame for details,e.g.  dat  vroom...  problemsdat. 1m22mOne or more parsing issues, call problems on your data frame for details,e.g.  dat  vroom...  problemsdat. 1m22mOne or more parsing issues, call problems on your data frame for details,e.g.  dat  vroom...  problemsdat. 1m22mOne or more parsing issues, call problems on your data frame for details,e.g.  dat  vroom...  problemsdat. 1m22mOne or more parsing issues, call problems on your data frame for details,e.g.  dat  vroom...  problemsdat. 1m22mOne or more parsing issues, call problems on your data frame for details,e.g.  dat|
+vol_tags_csv|stem|158aab13854fa8bc|be19fdbca9907b76|e3cf2f9c0543f960|-1340783785||t19438.805188442s|695ee0b3f7ae577e|14583|rds|local|vector|||0.019||
+vols_sess_df|stem|a851e16c8eea8da7|39c7dfe02a9e68d6|6fc78ddc8e968dbe|613955833||t19438.7370778487s|60ef4c2c39ff3bed|42107|rds|local|vector|||188.975||
+volume_asset_csv_list|stem|cbed5dbb15239d3b|0ea0986b34981f73|ce188ca62954aede|1104642854||t19438.8733524836s|e9d221807e642eee|1146|rds|local|vector|||0.003||
+volume_asset_stats_csvs|stem|976b5984c138c56f|95e7bcc0f2e133b1|970e4ab07e3faaf3|-485789987||t19438.8004513274s|ac45463db19e2cbe|48|rds|local|vector|||4927.441||
+volume_asset_stats_df|stem|c167e8f97199ad8c|9544ea09951cdd47|9c12f700ee8e61f1|1097683627||t19438.7300764311s|03f87bd8ad516f83|14115|rds|local|vector|||3.338||
+volume_demog_df|stem|fcb8cac0cf62e857|ab527123003c386a|e6220afb8a09587e|289017409||t19438.8734014334s|74d54cea3664fc15|111861|rds|local|vector|||4.162|1m22mThere was 1 warning in mutate.1m22m36mℹ39m In argument sessiondate  lubridateymdsessiondate.Caused by warning33m39m  206 failed to parse.. 1m22mThere was 1 warning in mutate.1m22m36mℹ39m In argument sessiondate  lubridateymdsessiondate.Caused by warning33m39m  2 failed to parse.. 1m22mThere was 1 warning in mutate.1m22m36mℹ39m In argument sessiondate  lubridateymdsessiondate.Caused by warning33m39m  9 failed to parse.. 1m22mThere was 1 warning in mutate.1m22m36mℹ39m In argument sessiondate  lubridateymdsessiondate.Caused by warning33m39m  9 failed to parse.. 1m22mThere was 1 warning in mutate.1m22m36mℹ39m In argument sessiondate  lubridateymdsessiondate.Caused by warning33m39m  1 failed to parse.. 1m22mThere was 1 warning in mutate.1m22m36mℹ39m In argument sessiondate  lubridateymdsessiondate.Caused by warning33m39m  30 failed to parse.. 1m22mThere was 1 warning in mutate.1m22m36mℹ39m In argument sessiondate  lubridateymdsessiondate.Caused by warning33m39m  23 failed to parse.. 1m22mThere was 1 warning in mutate.1m22m36mℹ39m In argument sessiondate  lubridateymdsessiondate.Caused by warning33m39m All formats failed to parse. No formats found.. 1m22mThere was 1 warning in mutate.1m22m36mℹ39m In argument sessiondate  lubridateymdsessiondate.Caused by warning33m39m  143 failed to parse.. 1m22mThere was 1 warning in mutate.1m22m36mℹ39m In argument sessiondate  lubridateymdsessiondate.Caused by warning33m39m  54 failed to parse.. 1m22mThere was 1 warning in mutate.1m22m36mℹ39m In argument sessiondate  lubridateymdsessiondate.Caused by warning33m39m  2 failed to parse.. 1m22mThere was 1 warning in mutate.|
+volume_funders_csv|stem|9aaa0433e57b1901|2a138138f2ceff2d|d31ec06c4d1f1ca5|-1817194351||t19438.8051881348s|dcfd5f88c4c94293|7365|rds|local|vector|||0.025||
+volume_funders_df|stem|9aaa0433e57b1901|7cc8a1f72a120920|872cfc1cd927ad68|1974613460||t19438.731220346s|dcfd5f88c4c94293|7365|rds|local|vector|||91.674||
+volume_owners_csv|stem|f91c34f30953affa|4cda15eb392d9831|d70b05aa035215c2|1374981367||t19438.7348904585s|0b575e4744178968|1201|rds|local|vector|||194.316||
+volume_ss_csv_fl|stem|e00d010307733d49|8a009bbc12c103e4|88559740b2c6d4c9|658438836||t19438.8733523222s|406a1b0e94623d1c|1266|rds|local|vector|||0.849||
+volume_ss_csvs|stem|976b5984c138c56f|2735e9f0c6844125|6c1312f0f6a14c8e|915210189||t19438.7434204949s|ac45463db19e2cbe|48|rds|local|vector|||547.996|1m22mOne or more parsing issues, call problems on your data frame for details,e.g.  dat  vroom...  problemsdat. 1m22mOne or more parsing issues, call problems on your data frame for details,e.g.  dat  vroom...  problemsdat. 1m22mOne or more parsing issues, call problems on your data frame for details,e.g.  dat  vroom...  problemsdat. 1m22mOne or more parsing issues, call problems on your data frame for details,e.g.  dat  vroom...  problemsdat. 1m22mOne or more parsing issues, call problems on your data frame for details,e.g.  dat  vroom...  problemsdat. 1m22mOne or more parsing issues, call problems on your data frame for details,e.g.  dat  vroom...  problemsdat. 1m22mOne or more parsing issues, call problems on your data frame for details,e.g.  dat  vroom...  problemsdat. 1m22mOne or more parsing issues, call problems on your data frame for details,e.g.  dat  vroom...  problemsdat. 1m22mOne or more parsing issues, call problems on your data frame for details,e.g.  dat  vroom...  problemsdat. 1m22mOne or more parsing issues, call problems on your data frame for details,e.g.  dat  vroom...  problemsdat. 1m22mOne or more parsing issues, call problems on your data frame for details,e.g.  dat  vroom...  problemsdat. 1m22mOne or more parsing issues, call problems on your data frame for details,e.g.  dat  vroom...  problemsdat. 1m22mOne or more parsing issues, call problems on your data frame for details,e.g.  dat  vroom...  problemsdat. 1m22mOne or more parsing issues, call problems on your data frame for details,e.g.  dat  vroom...  problemsdat. 1m22mOne or more parsing issues, call problems on your data frame for details,e.g.  dat  vroom...  problemsdat. 1m22mOne or more parsing issues, call problems on your data frame for details,e.g.  dat|
 volume_ss_df|stem|523fe803b1181920|0496fcba8712f5be|5cef9cd54f966583|-144603786||t19394.8532546107s|c548ba681d7e656c|171339|rds|local|vector|||1.473||
-volume_tags_df|stem|145ceaa9a519e4f4|0c8c67ccb8ed010b|5edde5fe9cacb596|-1736127828||t19431.630070401s|5ab5e45f0c5084ca|14573|rds|local|vector|||115.824||
+volume_tags_df|stem|158aab13854fa8bc|0c8c67ccb8ed010b|db1e791db1e470f2|-1736127828||t19438.7326412725s|695ee0b3f7ae577e|14583|rds|local|vector|||122.745||
 weekly|object|994cf5164eeba6e2|||||||||||||||
 weekly_interval|object|a2a52dfe4e065e93|||||||||||||||
