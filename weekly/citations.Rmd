@@ -93,7 +93,7 @@ citations_plot <-
     group = type
   )) +
   geom_point() +
-  geom_line(size = ln_size) +
+  geom_line(linewidth = ln_size) +
   scale_colour_manual(values = c(color_orange, color_teal)) +
   ggtitle(paste("Citations as of ", Sys.Date())) +
   ylab("Citations") +

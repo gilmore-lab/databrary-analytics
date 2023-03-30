@@ -71,7 +71,7 @@ vols_plot <- gathered_vols %>%
     group = type
   )) +
   geom_point() +
-  geom_line(size = ln_size) +
+  geom_line(linewidth = ln_size) +
   scale_colour_manual(values = c(color_orange, color_teal)) +
   ggtitle(paste("Volumes as of ", Sys.Date())) +
   ylab("Volumes") +

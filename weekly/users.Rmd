@@ -81,7 +81,7 @@ users_plot <- gathered_stats %>%
   )) +
   scale_x_date(date_labels = "%Y", date_breaks = '1 year') +
   geom_point() +
-  geom_line(size = ln_size) +
+  geom_line(linewidth = ln_size) +
   scale_colour_manual(values = c(color_orange, color_teal)) +
   ggtitle(paste("Authorizations as of ", Sys.Date())) +
   ylab("Authorizations") +
