@@ -27,7 +27,8 @@ tar_option_set(
 list(
   tar_target(
     max_ids,
-    update_max_vol_party_ids()
+    update_max_vol_party_ids(),
+    cue = tar_cue(mode = "always")
   ),
   tar_target(
     max_party_id,

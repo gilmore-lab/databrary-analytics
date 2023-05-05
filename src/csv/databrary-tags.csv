@@ -1,35 +1,35 @@
 vol_id,url,tags,weight
-1,https://nyu.databrary.org/volume/1,icis nola,1
 1,https://nyu.databrary.org/volume/1,icis,1
-1,https://nyu.databrary.org/volume/1,talk,1
-1,https://nyu.databrary.org/volume/1,presentations,1
+1,https://nyu.databrary.org/volume/1,icis nola,1
 1,https://nyu.databrary.org/volume/1,workshops,1
 1,https://nyu.databrary.org/volume/1,meetings,1
+1,https://nyu.databrary.org/volume/1,talk,1
+1,https://nyu.databrary.org/volume/1,presentations,1
 2,https://nyu.databrary.org/volume/2,motion,1
 2,https://nyu.databrary.org/volume/2,adult,1
 3,https://nyu.databrary.org/volume/3,NA,NA
-4,https://nyu.databrary.org/volume/4,infants,1
-4,https://nyu.databrary.org/volume/4,motor development,1
 4,https://nyu.databrary.org/volume/4,locomotion,1
+4,https://nyu.databrary.org/volume/4,motor development,1
 4,https://nyu.databrary.org/volume/4,materials,1
 4,https://nyu.databrary.org/volume/4,coding,1
-4,https://nyu.databrary.org/volume/4,protocols,1
 4,https://nyu.databrary.org/volume/4,manuals,1
-5,https://nyu.databrary.org/volume/5,infants,1
+4,https://nyu.databrary.org/volume/4,protocols,1
+4,https://nyu.databrary.org/volume/4,infants,1
 5,https://nyu.databrary.org/volume/5,locomotion,1
-5,https://nyu.databrary.org/volume/5,coding,1
+5,https://nyu.databrary.org/volume/5,infants,1
 5,https://nyu.databrary.org/volume/5,manuals,1
+5,https://nyu.databrary.org/volume/5,coding,1
 5,https://nyu.databrary.org/volume/5,bridges,1
 6,https://nyu.databrary.org/volume/6,NA,NA
-7,https://nyu.databrary.org/volume/7,affordances,1
-7,https://nyu.databrary.org/volume/7,apertures,1
-7,https://nyu.databrary.org/volume/7,falling,1
+7,https://nyu.databrary.org/volume/7,locomotion,1
 7,https://nyu.databrary.org/volume/7,perception,1
 7,https://nyu.databrary.org/volume/7,judgments,1
 7,https://nyu.databrary.org/volume/7,adult,1
-7,https://nyu.databrary.org/volume/7,locomotion,1
-7,https://nyu.databrary.org/volume/7,coding,1
+7,https://nyu.databrary.org/volume/7,affordances,1
+7,https://nyu.databrary.org/volume/7,apertures,1
 7,https://nyu.databrary.org/volume/7,manuals,1
+7,https://nyu.databrary.org/volume/7,coding,1
+7,https://nyu.databrary.org/volume/7,falling,1
 8,https://nyu.databrary.org/volume/8,infants,2
 8,https://nyu.databrary.org/volume/8,cognitive,2
 8,https://nyu.databrary.org/volume/8,parent-child interaction,2
@@ -101,7 +101,7 @@ vol_id,url,tags,weight
 30,https://nyu.databrary.org/volume/30,faces,8
 30,https://nyu.databrary.org/volume/30,facial expressions,7
 30,https://nyu.databrary.org/volume/30,emotions,7
-30,https://nyu.databrary.org/volume/30,expressions,5
+30,https://nyu.databrary.org/volume/30,expressions,6
 30,https://nyu.databrary.org/volume/30,condition,2
 30,https://nyu.databrary.org/volume/30,cafe,2
 30,https://nyu.databrary.org/volume/30,white,2
@@ -477,10 +477,10 @@ vol_id,url,tags,weight
 169,https://nyu.databrary.org/volume/169,NA,NA
 170,https://nyu.databrary.org/volume/170,NA,NA
 171,https://nyu.databrary.org/volume/171,adult,1
-171,https://nyu.databrary.org/volume/171,scientific reasoning,1
 171,https://nyu.databrary.org/volume/171,science,1
-171,https://nyu.databrary.org/volume/171,psych pool,1
+171,https://nyu.databrary.org/volume/171,scientific reasoning,1
 171,https://nyu.databrary.org/volume/171,reasoning,1
+171,https://nyu.databrary.org/volume/171,psych pool,1
 172,https://nyu.databrary.org/volume/172,NA,NA
 173,https://nyu.databrary.org/volume/173,NA,NA
 174,https://nyu.databrary.org/volume/174,rem sleep,1
@@ -499,14 +499,14 @@ vol_id,url,tags,weight
 181,https://nyu.databrary.org/volume/181,NA,NA
 182,https://nyu.databrary.org/volume/182,NA,NA
 183,https://nyu.databrary.org/volume/183,NA,NA
-184,https://nyu.databrary.org/volume/184,physics,1
-184,https://nyu.databrary.org/volume/184,fantasy,1
-184,https://nyu.databrary.org/volume/184,preschool,1
-184,https://nyu.databrary.org/volume/184,learning,1
-184,https://nyu.databrary.org/volume/184,children,1
 184,https://nyu.databrary.org/volume/184,stories,1
-184,https://nyu.databrary.org/volume/184,biology,1
+184,https://nyu.databrary.org/volume/184,children,1
+184,https://nyu.databrary.org/volume/184,learning,1
 184,https://nyu.databrary.org/volume/184,fiction,1
+184,https://nyu.databrary.org/volume/184,fantasy,1
+184,https://nyu.databrary.org/volume/184,physics,1
+184,https://nyu.databrary.org/volume/184,biology,1
+184,https://nyu.databrary.org/volume/184,preschool,1
 185,https://nyu.databrary.org/volume/185,NA,NA
 186,https://nyu.databrary.org/volume/186,NA,NA
 187,https://nyu.databrary.org/volume/187,NA,NA
@@ -514,8 +514,8 @@ vol_id,url,tags,weight
 189,https://nyu.databrary.org/volume/189,NA,NA
 190,https://nyu.databrary.org/volume/190,NA,NA
 191,https://nyu.databrary.org/volume/191,NA,NA
-192,https://nyu.databrary.org/volume/192,infants,1
 192,https://nyu.databrary.org/volume/192,eye-tracking,1
+192,https://nyu.databrary.org/volume/192,infants,1
 192,https://nyu.databrary.org/volume/192,free-viewing,1
 192,https://nyu.databrary.org/volume/192,saliency,1
 192,https://nyu.databrary.org/volume/192,gaze,1
@@ -538,25 +538,25 @@ vol_id,url,tags,weight
 206,https://nyu.databrary.org/volume/206,NA,NA
 207,https://nyu.databrary.org/volume/207,NA,NA
 208,https://nyu.databrary.org/volume/208,NA,NA
-209,https://nyu.databrary.org/volume/209,word learning,1
-209,https://nyu.databrary.org/volume/209,stimuli,1
 209,https://nyu.databrary.org/volume/209,perception,1
-209,https://nyu.databrary.org/volume/209,novelty ratings,1
-209,https://nyu.databrary.org/volume/209,novel objects,1
 209,https://nyu.databrary.org/volume/209,language development,1
-209,https://nyu.databrary.org/volume/209,unnameable stimuli,1
-209,https://nyu.databrary.org/volume/209,visual memory,1
-209,https://nyu.databrary.org/volume/209,picture database,1
+209,https://nyu.databrary.org/volume/209,word learning,1
 209,https://nyu.databrary.org/volume/209,categorization,1
 209,https://nyu.databrary.org/volume/209,language,1
+209,https://nyu.databrary.org/volume/209,novel objects,1
+209,https://nyu.databrary.org/volume/209,unnameable stimuli,1
+209,https://nyu.databrary.org/volume/209,picture database,1
+209,https://nyu.databrary.org/volume/209,novelty ratings,1
+209,https://nyu.databrary.org/volume/209,stimuli,1
+209,https://nyu.databrary.org/volume/209,visual memory,1
 210,https://nyu.databrary.org/volume/210,NA,NA
 211,https://nyu.databrary.org/volume/211,NA,NA
 212,https://nyu.databrary.org/volume/212,childhood development,2
+212,https://nyu.databrary.org/volume/212,anxiety,1
+212,https://nyu.databrary.org/volume/212,fear,1
 212,https://nyu.databrary.org/volume/212,emotion,1
 212,https://nyu.databrary.org/volume/212,risk,1
-212,https://nyu.databrary.org/volume/212,anxiety,1
 212,https://nyu.databrary.org/volume/212,regulation,1
-212,https://nyu.databrary.org/volume/212,fear,1
 213,https://nyu.databrary.org/volume/213,NA,NA
 214,https://nyu.databrary.org/volume/214,stimuli,1
 214,https://nyu.databrary.org/volume/214,materials,1
@@ -721,11 +721,11 @@ vol_id,url,tags,weight
 318,https://nyu.databrary.org/volume/318,NA,NA
 319,https://nyu.databrary.org/volume/319,NA,NA
 320,https://nyu.databrary.org/volume/320,NA,NA
-321,https://nyu.databrary.org/volume/321,development,1
 321,https://nyu.databrary.org/volume/321,eeg,1
 321,https://nyu.databrary.org/volume/321,eye tracking,1
-321,https://nyu.databrary.org/volume/321,deep learning,1
 321,https://nyu.databrary.org/volume/321,action perception,1
+321,https://nyu.databrary.org/volume/321,development,1
+321,https://nyu.databrary.org/volume/321,deep learning,1
 322,https://nyu.databrary.org/volume/322,NA,NA
 323,https://nyu.databrary.org/volume/323,NA,NA
 324,https://nyu.databrary.org/volume/324,texture,1
@@ -1522,7 +1522,13 @@ vol_id,url,tags,weight
 1003,https://nyu.databrary.org/volume/1003,NA,NA
 1004,https://nyu.databrary.org/volume/1004,NA,NA
 1005,https://nyu.databrary.org/volume/1005,NA,NA
-1006,https://nyu.databrary.org/volume/1006,NA,NA
+1006,https://nyu.databrary.org/volume/1006,fpvs,1
+1006,https://nyu.databrary.org/volume/1006,infancy,1
+1006,https://nyu.databrary.org/volume/1006,ssvep,1
+1006,https://nyu.databrary.org/volume/1006,eeg,1
+1006,https://nyu.databrary.org/volume/1006,visual attention,1
+1006,https://nyu.databrary.org/volume/1006,other face effect,1
+1006,https://nyu.databrary.org/volume/1006,face perception,1
 1007,https://nyu.databrary.org/volume/1007,NA,NA
 1008,https://nyu.databrary.org/volume/1008,NA,NA
 1009,https://nyu.databrary.org/volume/1009,NA,NA
@@ -2207,3 +2213,19 @@ vol_id,url,tags,weight
 1573,https://nyu.databrary.org/volume/1573,NA,NA
 1574,https://nyu.databrary.org/volume/1574,NA,NA
 1575,https://nyu.databrary.org/volume/1575,NA,NA
+1576,https://nyu.databrary.org/volume/1576,NA,NA
+1577,https://nyu.databrary.org/volume/1577,NA,NA
+1578,https://nyu.databrary.org/volume/1578,NA,NA
+1579,https://nyu.databrary.org/volume/1579,NA,NA
+1580,https://nyu.databrary.org/volume/1580,NA,NA
+1581,https://nyu.databrary.org/volume/1581,NA,NA
+1582,https://nyu.databrary.org/volume/1582,NA,NA
+1583,https://nyu.databrary.org/volume/1583,NA,NA
+1584,https://nyu.databrary.org/volume/1584,NA,NA
+1585,https://nyu.databrary.org/volume/1585,NA,NA
+1586,https://nyu.databrary.org/volume/1586,NA,NA
+1587,https://nyu.databrary.org/volume/1587,NA,NA
+1588,https://nyu.databrary.org/volume/1588,NA,NA
+1589,https://nyu.databrary.org/volume/1589,NA,NA
+1590,https://nyu.databrary.org/volume/1590,NA,NA
+1591,https://nyu.databrary.org/volume/1591,NA,NA

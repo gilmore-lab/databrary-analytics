@@ -49,13 +49,15 @@ prepare_to_update_csvs <- function() {
 }
 
 #------------------------------------------------------------------------------
-update_csv_folders_and_data <- function() {
+update_csv_folders_data_rpt <- function() {
   prepare_to_update_csvs()
   
   library(targets)
   
   message("Updating supporting CSV files. Please be patient.")
   tar_make()
+  
+  bookdown::render_book('src')
 }
 
 #------------------------------------------------------------------------------
