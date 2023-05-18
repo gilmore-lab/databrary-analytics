@@ -1,5 +1,7 @@
 # R/volume_asset_functions.R
 
+library(tidyverse)
+
 #-------------------------------------------------------------------------------
 get_assets_in_vol <- function(vol_id, vb = FALSE) {
   stopifnot(is.numeric(vol_id))

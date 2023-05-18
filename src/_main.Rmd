@@ -1,0 +1,1069 @@
+---
+title: "Databrary analytics"
+author: "Rick Gilmore & Andrea Seisler"
+date: "`r Sys.Date()`"
+description: "Reports on Databrary users and usage"
+params:
+  db_account: email@provider.com
+  update_gs: False
+  update_stats: True
+  from_gs: False
+  update_csv: True
+  vols_to_test: 10
+---
+
+```{r setup-index, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE,
+                      fig.align = "center",
+                      fig.path = "include/img/")
+
+suppressPackageStartupMessages(library(tidyverse))
+suppressPackageStartupMessages(library(targets))
+
+source("../R/functions.R")
+source("../R/constants.R")
+```
+
+# About
+
+These pages summarize information about the Databrary data library.
+
+## Purpose {-}
+
+The separate reports take different views of Databrary's holdings.
+The goal of the reports together is to provide useful information to the people who are running the repository and to those who wish to use data from it.
+
+For information about Databrary, see <https://databrary.github.io/guide/>.
+
+<!--chapter:end:index.Rmd-->
+
+# Weekly
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, message = FALSE, warning = FALSE)
+
+databraryapi::login_db(Sys.getenv("DATABRARY_LOGIN"))
+
+# Graphic theme elements
+ln_size <- 3
+base_size <- 14
+color_orange <- "#ec7751"
+color_teal <- "#4CAE99"
+color_purple <-"#AB00FF"
+
+databrary_theme <- 
+  ggplot2::theme_classic(base_size = base_size) +
+  ggplot2::theme(axis.title.x = ggplot2::element_blank()) +
+  ggplot2::theme(legend.position="none", 
+        axis.text = ggplot2::element_text(size = ggplot2::rel(0.8), colour = "black")) +
+  ggplot2::theme(axis.line = ggplot2::element_blank()) +
+  ggplot2::theme(plot.title = ggplot2::element_text(hjust = 0.5))
+```
+
+## Institutions & Authorized Users {-}
+
+```{r child = 'rmd/users.Rmd'}
+```
+
+### New Institutions {-}
+
+```{r child = 'rmd/institutions.Rmd'}
+```
+
+### New and Updated Authorized Investigators {-}
+
+```{r child = 'rmd/people.Rmd'}
+```
+
+## Volumes {-}
+
+```{r child = 'rmd/volumes_shared.Rmd'}
+```
+
+## Citations {-}
+
+```{r child = 'rmd/citations.Rmd'}
+```
+
+## Archived reports {-}
+
+```{r child = 'rmd/old_weekly_reports.Rmd'}
+```
+
+
+<!--chapter:end:01-weekly.Rmd-->
+
+# Investigators and Institutions
+
+## Institutions {-}
+
+```{r}
+library(targets)
+tar_load(inst_df, store = "../_targets/")
+
+inst_daa_df <- dplyr::filter(inst_df , daa == TRUE)
+```
+
+There are `r dim(inst_df)[1]` total institutions in the Databrary system.
+
+Of these, `r dim(inst_daa_df)[1]` or `r paste0(format(dim(inst_daa_df)[1]/dim(inst_df)[1] * 100, digits = 3, nsmall = 1), "%")` have active Databrary Access Agreements (DAA).
+
+## Investigators per institution  {-}
+
+```{r}
+ai_stats <- fivenum(inst_daa_df$n_auth_invest)
+```
+
+The number of authorized investigators/institution is in the range of [`r ai_stats[1]`, `r ai_stats[5]`], with a median of `r ai_stats[3]` and a mean of `r format(mean(inst_daa_df$n_auth_invest), digits = 3, nsmall = 1)`.
+
+```{r n-investigators-per-inst, fig.cap="Distribution of investigators/authorized institution"}
+inst_daa_df |>
+  ggplot() +
+  aes(n_auth_invest) +
+  geom_histogram()
+```
+
+### $n$ Authorized Investigators by Institution {-}
+
+```{r}
+inst_daa_df |>
+  dplyr::select(-c("lat", "lon", "daa", "inst_url", "databrary_url")) |>
+  dplyr::arrange(desc(n_auth_invest)) |>
+  kableExtra::kable(format = 'html') |>
+  kableExtra::kable_styling() |>
+  kableExtra::scroll_box(width = "100%", height = "300px")
+```
+
+### Map {-}
+
+```{r site-map, fig.align='center', out.width='100%'}
+lat_lon_df <- inst_daa_df |>
+  dplyr::filter(!is.na(lat), !is.na(lon))
+
+ggmap::qmplot(lon, lat, 
+              data = lat_lon_df, 
+              geom = "point",
+              scale = 4)
+```
+
+::: {.rmdnote}
+
+**TODO**: Add the automatic creation of the JSON file needed to update and render the map on the Databrary home page.
+
+:::
+
+## Investigators {-}
+
+```{r}
+tar_load(invest_df, store = "../_targets/")
+
+invest_df <- dplyr::distinct(invest_df)
+```
+
+```{r}
+gte2_affils <- invest_df |>
+  dplyr::filter(n_affils >= 2) |>
+  dplyr::arrange(desc(n_affils)) |>
+  dplyr::select(ai_id, ai_last, ai_first, affiliation, n_affils) |>
+  dplyr::distinct()
+gte5_affils <- invest_df |>
+  dplyr::filter(n_affils >= 5) |>
+  dplyr::arrange(desc(n_affils)) |>
+  dplyr::select(ai_id, ai_last, ai_first, affiliation, n_affils) |>
+  dplyr::distinct()
+gte10_affils <- invest_df |>
+  dplyr::filter(n_affils >= 10) |>
+  dplyr::arrange(desc(n_affils)) |>
+  dplyr::select(ai_id, ai_last, ai_first, affiliation, n_affils) |>
+  dplyr::distinct()
+no_affils <- invest_df |>
+  dplyr::filter(n_affils < 1) |>
+  dplyr::arrange(desc(n_affils)) |>
+  dplyr::select(ai_id, ai_last, ai_first, affiliation, n_affils) |>
+  dplyr::distinct()
+```
+
+There are $n=$ `r dim(gte10_affils)[1]` Authorized Investigators with 10 or more affiliates; $n=$ `r dim(gte5_affils)[1]` with 5 or more; $n=$ `r dim(gte2_affils)[1]` with 2 or more affiliates; and $n=$ `r dim(no_affils)[1]` with no affilates.
+
+#### 10+ affiliates {-}
+
+```{r}
+ggplot(gte10_affils) +
+  aes(n_affils) +
+  geom_histogram(bins = 10)
+```
+
+```{r}
+gte10_affils |>
+  dplyr::arrange(desc(n_affils)) |>
+  dplyr::select(ai_id, ai_last, ai_first, affiliation, n_affils) |>
+  kableExtra::kbl() |>
+  kableExtra::kable_styling() |>
+  kableExtra::scroll_box(width = "100%", height = "300px")
+```
+
+#### 5+ affiliates  {-}
+
+```{r}
+ggplot(gte5_affils) +
+  aes(n_affils) +
+  geom_histogram(bins = 10)
+```
+
+```{r}
+gte5_affils |>
+  dplyr::arrange(desc(n_affils)) |>
+  dplyr::select(ai_id, ai_last, ai_first, affiliation, n_affils) |>
+  kableExtra::kbl() |>
+  kableExtra::kable_styling() |>
+  kableExtra::scroll_box(width = "100%", height = "300px")
+```
+
+#### 2+ affiliates {-}
+
+```{r}
+ggplot(gte2_affils) +
+  aes(n_affils) +
+  geom_histogram(bins = 15)
+```
+
+```{r}
+gte2_affils |>
+  dplyr::arrange(desc(n_affils)) |>
+  dplyr::select(ai_id, ai_last, ai_first, affiliation, n_affils) |>
+  kableExtra::kbl() |>
+  kableExtra::kable_styling() |>
+  kableExtra::scroll_box(width = "100%", height = "300px")
+```
+
+#### All  {-}
+
+```{r}
+ggplot(invest_df) +
+  aes(n_affils) +
+  geom_histogram(bins = 20)
+```
+
+```{r}
+invest_df |>
+  dplyr::arrange(desc(n_affils)) |>
+  dplyr::select(ai_id, ai_last, ai_first, affiliation, n_affils) |>
+  kableExtra::kbl() |>
+  kableExtra::kable_styling() |>
+  kableExtra::scroll_box(width = "100%", height = "300px")
+```
+
+<!--chapter:end:02-institutions-investigators.Rmd-->
+
+# Tags and keywords
+
+This report summarizes data about searchable tags on all shared Databrary volumes.
+
+The tags data is updated approximately every 13 weeks.
+
+The most recent tags data were collected on `r file.info("csv/databrary-tags.csv")$mtime`.
+
+```{r}
+targets::tar_load(volume_tags_df, store = '../_targets/')
+tags <- volume_tags_df
+```
+
+## Tag stats {-}
+
+```{r}
+vols_without_tags <- tags |>
+  dplyr::filter(is.na(tags))
+
+vols_with_tags <- tags |>
+  dplyr::filter(!is.na(tags)) |>
+  dplyr::group_by(vol_id) |>
+  dplyr::summarise(n_tags = n())
+```
+
+### Histogram of tags/volume {-}
+
+```{r}
+vols_with_tags |>
+  ggplot2::ggplot() +
+  aes(n_tags) +
+  geom_histogram(bins = 12)
+```
+
+### Unique tags {-}
+
+```{r}
+unique_tags <- tags |>
+  dplyr::select(tags, weight) |>
+  dplyr::filter(!is.na(tags)) |>
+  dplyr::group_by(tags) |>
+  dplyr::summarise(n_vols_using = n(), weight_sum = sum(weight)) |>
+  dplyr::arrange(desc(n_vols_using))
+```
+
+There are `r dim(unique_tags)[1]` unique tags.
+
+```{r}
+unique_tags |>
+  knitr::kable("html") |>
+  kableExtra::kable_styling() |>
+  kableExtra::scroll_box(width = "100%", height = "300px")
+```
+
+### Word cloud {-}
+
+```{r}
+wordcloud::wordcloud(words = unique_tags$tags, 
+                     freq = unique_tags$n_vols_using)
+```
+
+## Tags by volume {-}
+
+```{r}
+tags |> 
+  dplyr::filter(!is.na(weight)) |>
+  dplyr::arrange(vol_id, weight) |>
+  knitr::kable("html") |>
+  kableExtra::kable_styling() |>
+  kableExtra::scroll_box(width = "100%", height = "300px")
+```
+
+## STEM-relevant tags {-}
+
+The following tags are thought to be science, technology, engineering, or mathematics (STEM)-relevant:
+
+```{r}
+select_tags
+```
+
+```{r}
+stem_vols_df <- make_stem_tags_df(tags) |>
+  dplyr::distinct()
+```
+
+$n=$ `r dim(stem_vols_df)[1]` volumes contain STEM-relevant tags.
+
+```{r}
+stem_vols_df |>
+  knitr::kable("html") |>
+  kableExtra::kable_styling() |>
+  kableExtra::scroll_box(width = "100%", height = "300px")
+```
+
+<!--chapter:end:03-tags-keywords.Rmd-->
+
+# Funders
+
+This document describes funders associated with Databrary volumes (projects).
+
+```{r}
+targets::tar_load(volume_funders_df, store = "../_targets/")
+funders_df <- volume_funders_df |>
+  dplyr::distinct()
+```
+
+## Volumes by funder {-}
+
+### $n$ volumes listing funders {-}
+
+```{r}
+vols_w_funders <- funders_df |>
+  dplyr::filter(!is.na(funder_id), !is.na(funder_name)) |>
+  dplyr::group_by(vol_id)
+```
+
+There are $n=$ `r length(unique(vols_w_funders$vol_id))` volumes that list funders.
+
+```{r}
+vols_w_funders |>
+  dplyr::select(-funder_id) |>
+  kableExtra::kable(format = 'html') |>
+  kableExtra::kable_styling() |>
+  kableExtra::scroll_box(width = "100%", height = "300px")
+```
+
+### Funders by number of volumes {-}
+
+```{r}
+funders_filtered <- funders_df |>
+  dplyr::filter(!is.na(funder_id), !is.na(funder_name)) |>
+  dplyr::group_by(funder_name) |>
+  dplyr::summarize(n_vols = n()) |>
+  dplyr::arrange(desc(n_vols))
+
+funders_filtered |>
+  kableExtra::kable(format = 'html') |>
+  kableExtra::kable_styling()
+```
+
+<!--chapter:end:04-funders.Rmd-->
+
+# Assets
+
+This report summarizes the types of files (assets) that are stored and shared.
+
+```{r}
+tar_load(volume_asset_stats_df, store = "../_targets/")
+# asset_list <- generate_volume_asset_csv_list('csv')
+# volume_asset_stats_df <- make_volume_assets_stats_df(asset_list)
+source("../R/volume_asset_functions.R")
+```
+
+## Volumes with shared assets {-}
+
+There are `r length(unique(volume_asset_stats_df$vol_id))` shared volumes with assets.
+
+The following shows the number of shared volumes with a given asset type.
+
+```{r}
+volume_asset_stats_df |>
+  dplyr::group_by(asset_type) |>
+  dplyr::count(asset_type) |>
+  dplyr::arrange(desc(n)) |>
+  kableExtra::kable(format = 'html') |>
+  kableExtra::kable_styling()
+```
+
+## Assets by volume and comparative storage fees {-}
+
+The following shows data about the number of files and total storage by shared volume. We also show an estimated one-time storage cost if these data were stored on [FigShare Plus](https://knowledge.figshare.com/plus) or [Dryad](https://datadryad.org/stash/faq).
+
+```{r}
+vol_asset_summ <- storage_gb_by_vol(volume_asset_stats_df)
+
+vol_asset_summ |>
+  dplyr::arrange(desc(dryad_fee)) |>
+  kableExtra::kable(format = 'html') |>
+  kableExtra::kable_styling() |>
+  kableExtra::scroll_box(width = "100%", height = "300px")
+```
+
+```{r}
+# min, lower-hinge, median, upper-hinge, max.
+files_5_num <- fivenum(vol_asset_summ$n_tot_files)
+gb_5_num <- fivenum(vol_asset_summ$tot_gb)
+figshare_5_num <- fivenum(vol_asset_summ$figshare_fee)
+dryad_5_num <- fivenum(vol_asset_summ$dryad_fee)
+```
+
+### Summary statistics {-}
+
+The following provides summary data about the number of files, total storage provided, and some comparative cost estimates.
+
+| Statistic | min | median | mean | max |
+|-----------|-----|--------|------|-------|
+| `n_tot_files` | `r files_5_num[1]` | `r files_5_num[3]` | `r mean(vol_asset_summ$n_tot_files)` | `r files_5_num[5]` |
+| `tot_gb` | `r gb_5_num[1]` | `r gb_5_num[3]` | `r mean(vol_asset_summ$tot_gb)` | `r gb_5_num[5]` |
+| `figshare_fee` | `r figshare_5_num[1]` | `r figshare_5_num[3]` | `r mean(vol_asset_summ$figshare_fee)` | `r figshare_5_num[5]` |
+| `dryad_fee` | `r dryad_5_num[1]` | `r dryad_5_num[3]` | `r mean(vol_asset_summ$dryad_fee)` | `r dryad_5_num[5]` |
+
+If Databrary charged for storage it provided for free, there could be a one time income stream in the range of \$ `r format(sum(vol_asset_summ$figshare_fee)/1000, digits=4)` to \$ `r format(sum(vol_asset_summ$dryad_fee)/1000, digits=2)` K.
+
+
+::: {.rmdnote}
+
+This is for *shared* data. We know that the number of private or partially-shared *volumes* is 3-5 times the number of fully shared volumes.
+
+:::
+
+## Assets by type, size, and duration {-}
+
+Total number of assets, total size, and total duration by type:
+
+```{r}
+volume_asset_stats_df |>
+  dplyr::group_by(asset_type) |>
+  dplyr::summarise(n_files = sum(n_files),
+            size_gb = sum(tot_size_gb),
+            dur_hrs = sum(tot_dur_hrs)) |>
+  dplyr::arrange(desc(n_files)) |>
+  dplyr::select(asset_type, n_files, size_gb, dur_hrs) |>
+  kableExtra::kable(format = 'html') |>
+  kableExtra::kable_styling()
+```
+
+
+<!--chapter:end:05-assets.Rmd-->
+
+# Participant demographics
+
+This report summarizes the demographic characteristics of participants in shared volumes on Databrary.
+
+```{r, message=FALSE, warning=FALSE}
+targets::tar_load(volume_demog_df, store = "../_targets")
+demo_df <- volume_demog_df |>
+  dplyr::distinct()
+```
+
+### Owner data  {-}
+
+All owners.
+
+::: {.rmdnote}
+
+**TODO**: Fix importing of owners data.
+
+:::
+
+```{r import-saved-owners, message=FALSE, warning=FALSE, eval=FALSE}
+owner_df <- load_owner_csvs("csv", fn_suffix = "-owners")  
+```
+
+::: {.rmdnote}
+
+The session-level CSV data are stored in a local directory that is **not** synched with GitHub.
+To generate the report, one must generate and save the data locally.
+
+:::
+
+## Overall {-}
+
+Databrary has demographic data for ~ $n=$ `r sum(!is.na(demo_df$participant_ID))` individual participant-sessions.
+This number is an underestimate because the number of unshared volumes is 3-4x the number of shared volumes.
+
+```{r add-databrary-volume-url}
+demo_df <- volume_demog_df |>
+  dplyr::mutate(vol_url = paste0("https://nyu.databrary.org/volume/", as.numeric(vol_id)))
+```
+
+## Age {-}
+
+### Volumes and session  {-}
+
+```{r create-age}
+age_df <- demo_df |>
+  dplyr::filter(!is.na(age_days)) |>
+  dplyr::group_by(vol_id, vol_url) |>
+  dplyr::summarize(n_sessions = n()) |>
+  dplyr::ungroup() |>
+  dplyr::mutate(n_vols_w_demo = n())
+
+age_df |>
+  dplyr::select(vol_id, vol_url, n_sessions) |>
+  dplyr::arrange(desc(n_sessions)) |>
+  knitr::kable("html") |>
+  kableExtra::kable_styling() |>
+  kableExtra::scroll_box(width = "100%", height = "300px")
+```
+
+
+There are $n=$ `r unique(age_df$n_vols_w_demo)` shared volumes reporting `age_days`.
+
+### $n$ participants and age distribution  {-}
+
+The following summarizes the number of individual participant-sessions for whom there are data.
+
+```{r summarize-age}
+age_df <- demo_df |>
+  dplyr::mutate(age_grp = cut(as.numeric(demo_df$age_days), c(0, 90, 180, 365.25, 2*365.25, 3*365.25, 4*365.25, 5*365.25, 15*365.25, 20*365.25, 25*365.25, 100*365.25), c("<3m", "3-6m", "6m-1y", "1-2y", "2-3y", "3-4y", "4-5y", "5-15y", "15-20y", "20-25y", ">25y")))
+
+xtabs(formula = ~ age_grp, data = age_df)
+```
+
+```{r under-5y-hist, fig.cap="Age distribution of < 5yrs"}
+demo_df |>
+  dplyr::filter(age_days <= 365.24*5) |>
+  ggplot() +
+  aes(age_days) +
+  geom_histogram() +
+  ggtitle("Age at test (days) for 5-year-olds and younger")
+```
+
+```{r 5y-15y-hist, fig.cap="Age distribution of 5-15 year-olds"}
+demo_df |>
+  dplyr::filter(age_days > 365.24*5,
+                age_days <= 365.24*15) |>
+  ggplot() +
+  aes(age_days) +
+  geom_histogram() +
+  ggtitle("Age at test (days) for 5-15 year-olds")
+```
+
+```{r 15y-plus-hist, fig.cap="Age distribution of 15+ year-olds"}
+demo_df |>
+  dplyr::filter(age_days > 365.24*15) |>
+  ggplot() +
+  aes(age_days) +
+  geom_histogram() +
+  ggtitle("Age at test (days) 15+ year-olds")
+```
+
+## Gender {-}
+
+### Volumes and sessions {-}
+
+```{r gender-volumes}
+gender_df <- demo_df |>
+  dplyr::filter(!is.na(participant_gender)) |>
+  dplyr::group_by(vol_id, vol_url) |>
+  dplyr::summarize(n_sessions = n()) |>
+  dplyr::ungroup() |>
+  dplyr::mutate(n_vols_w_demo = n())
+
+gender_df |>
+  dplyr::select(vol_id, vol_url, n_sessions) |>
+  dplyr::arrange(desc(n_sessions)) |>
+  knitr::kable("html") |>
+  kableExtra::kable_styling() |>
+  kableExtra::scroll_box(width = "100%", height = "300px")
+```
+
+
+There are $n=$ `r unique(gender_df$n_vols_w_demo)` shared volumes reporting `participant_gender`.
+
+### $n$ participants {-}
+
+```{r gender-table}
+xtabs(formula = ~ participant_gender, data = demo_df) |>
+  knitr::kable("html") |>
+  kableExtra::kable_styling() |>
+  kableExtra::scroll_box(width = "100%", height = "300px")
+```
+
+## Race {-}
+
+### Volumes and sessions {-}
+
+```{r race-volumesE}
+race_df <- demo_df |>
+  dplyr::filter(!is.na(participant_race)) |>
+  dplyr::group_by(vol_id, vol_url) |>
+  dplyr::summarize(n_sessions = n()) |>
+  dplyr::ungroup() |>
+  dplyr::mutate(n_vols_w_demo = n())
+
+race_df |>
+  dplyr::select(vol_id, vol_url, n_sessions) |>
+  dplyr::arrange(desc(n_sessions)) |>
+  knitr::kable("html") |>
+  kableExtra::kable_styling() |>
+  kableExtra::scroll_box(width = "100%", height = "300px")
+```
+
+There are $n=$ `r unique(race_df$n_vols_w_demo)` shared volumes reporting `participant_race`.
+
+### $n$ participants {-}
+
+```{r race-table,}
+xtabs(formula = ~ participant_race, data = demo_df) |>
+  knitr::kable("html") |>
+  kableExtra::kable_styling() |>
+  kableExtra::scroll_box(width = "100%", height = "300px")
+```
+
+## Ethnicity {-}
+
+### Volumes and sessions {-}
+
+```{r ethnicity-volumes}
+ethnicity_df <- demo_df |>
+  dplyr::filter(!is.na(participant_ethnicity)) |>
+  dplyr::group_by(vol_id, vol_url) |>
+  dplyr::summarize(n_sessions = n()) |>
+  dplyr::ungroup() |>
+  dplyr::mutate(n_vols_w_demo = n())
+
+ethnicity_df |>
+  dplyr::select(vol_id, vol_url, n_sessions) |>
+  dplyr::arrange(desc(n_sessions)) |>
+  knitr::kable("html") |>
+  kableExtra::kable_styling() |>
+  kableExtra::scroll_box(width = "100%", height = "300px")
+```
+
+
+There are $n=$ `r unique(ethnicity_df$n_vols_w_demo)` shared volumes reporting `participant_ethnicity`.
+
+### $n$ participants {-}
+
+```{r ethnicity-table}
+xtabs(formula = ~ participant_ethnicity, data = demo_df) |>
+  knitr::kable("html") |>
+  kableExtra::kable_styling() |>
+  kableExtra::scroll_box(width = "100%", height = "300px")
+```
+
+## Participant language {-}
+
+### Volumes and sessions {-}
+
+```{r language-volumes}
+language_df <- demo_df |>
+  dplyr::filter(!is.na(participant_language)) |>
+  dplyr::group_by(vol_id, vol_url) |>
+  dplyr::summarize(n_sessions = n()) |>
+  dplyr::ungroup() |>
+  dplyr::mutate(n_vols_w_demo = n())
+
+language_df |>
+  dplyr::select(vol_id, vol_url, n_sessions) |>
+  dplyr::arrange(desc(n_sessions)) |>
+  knitr::kable("html") |>
+  kableExtra::kable_styling() |>
+  kableExtra::scroll_box(width = "100%", height = "300px")
+```
+
+
+There are $n=$ `r unique(language_df$n_vols_w_demo)` shared volumes reporting `participant_language`.
+
+### $n$ participants {-}
+
+```{r language-table}
+xtabs(formula = ~ participant_language, data = demo_df) |>
+  knitr::kable("html") |>
+  kableExtra::kable_styling() |>
+  kableExtra::scroll_box(width = "100%", height = "300px")
+```
+
+## Pregnancy term {-}
+
+### Volumes and sessions {-}
+
+```{r pregnancy-term-volumes}
+participant_pregnancy_term_df <- demo_df |>
+  dplyr::filter(!is.na(participant_pregnancy_term)) |>
+  dplyr::group_by(vol_id, vol_url) |>
+  dplyr::summarize(n_sessions = n()) |>
+  dplyr::ungroup() |>
+  dplyr::mutate(n_vols_w_demo = n())
+
+participant_pregnancy_term_df |>
+  dplyr::select(vol_id, vol_url, n_sessions) |>
+  dplyr::arrange(desc(n_sessions)) |>
+  knitr::kable("html") |>
+  kableExtra::kable_styling() |>
+  kableExtra::scroll_box(width = "100%", height = "300px")
+```
+
+There are `r unique(participant_pregnancy_term_df$n_vols_w_demo)` shared volumes reporting `participant_pregnancy_term`.
+
+### $n$ participants {-}
+
+```{r pregnancy-term-table}
+xtabs(formula = ~ participant_pregnancy_term, data = demo_df) |>
+  knitr::kable("html") |>
+  kableExtra::kable_styling() |>
+  kableExtra::scroll_box(width = "100%", height = "300px")
+```
+
+## Birthweight {-}
+
+### Volumes and sessions {-}
+
+```{r birthweight-volumes}
+participant_birth_weight_df <- demo_df |>
+  dplyr::filter(!is.na(participant_birth_weight)) |>
+  dplyr::group_by(vol_id, vol_url) |>
+  dplyr::summarize(n_sessions = n()) |>
+  dplyr::ungroup() |>
+  dplyr::mutate(n_vols_w_demo = n())
+
+participant_birth_weight_df |>
+  dplyr::select(vol_id, vol_url, n_sessions) |>
+  dplyr::arrange(desc(n_sessions)) |>
+  knitr::kable("html") |>
+  kableExtra::kable_styling() |>
+  kableExtra::scroll_box(width = "100%", height = "300px")
+```
+
+
+There are $n=$ `r unique(participant_birth_weight_df$n_vols_w_demo)` shared volumes reporting `participant_birth_weight`.
+
+### $n$ participants {-}
+
+```{r birthweight-table}
+xtabs(formula = ~ participant_birth_weight, data = demo_df) |>
+  knitr::kable("html") |>
+  kableExtra::kable_styling() |>
+  kableExtra::scroll_box(width = "100%", height = "300px")
+```
+
+### Histogram {-}
+
+```{r birthweight-hist}
+demo_df |>
+  ggplot() +
+  aes(x = as.numeric(participant_birth_weight)) +
+  geom_histogram(bins = 15)
+```
+
+## Disability {-}
+
+### Volumes and sessions {-}
+
+```{r participant_disability-volumes}
+participant_disability_df <- demo_df |>
+  dplyr::filter(!is.na(participant_disability)) |>
+  dplyr::group_by(vol_id, vol_url) |>
+  dplyr::summarize(n_sessions = n()) |>
+  dplyr::ungroup() |>
+  dplyr::mutate(n_vols_w_demo = n())
+
+participant_disability_df |>
+  dplyr::select(vol_id, vol_url, n_sessions) |>
+  dplyr::arrange(desc(n_sessions)) |>
+  knitr::kable("html") |>
+  kableExtra::kable_styling() |>
+  kableExtra::scroll_box(width = "100%", height = "300px")
+```
+
+
+There are $n=$ `r unique(participant_disability_df$n_vols_w_demo)` shared volumes reporting `participant_disability`.
+
+### $n$ participants {-}
+
+```{r disability-table}
+xtabs(formula = ~ participant_disability, data = demo_df) |>
+  knitr::kable("html") |>
+  kableExtra::kable_styling() |>
+  kableExtra::scroll_box(width = "100%", height = "300px")
+```
+
+## Country {-}
+
+### Volumes and sessions {-}
+
+```{r participant_country-volumes}
+participant_country_df <- demo_df |>
+  dplyr::filter(!is.na(participant_country)) |>
+  dplyr::group_by(vol_id, vol_url) |>
+  dplyr::summarize(n_sessions = n()) |>
+  dplyr::ungroup() |>
+  dplyr::mutate(n_vols_w_demo = n())
+
+participant_country_df |>
+  dplyr::select(vol_id, vol_url, n_sessions) |>
+  dplyr::arrange(desc(n_sessions)) |>
+  knitr::kable("html") |>
+  kableExtra::kable_styling() |>
+  kableExtra::scroll_box(width = "100%", height = "300px")
+```
+
+
+There are $n=$ `r unique(participant_country_df$n_vols_w_demo)` shared volumes reporting `participant_country`.
+
+### $n$ participants {-}
+
+```{r country-table}
+xtabs(formula = ~ participant_country, data = demo_df) |>
+  knitr::kable("html") |>
+  kableExtra::kable_styling() |>
+  kableExtra::scroll_box(width = "100%", height = "300px")
+```
+
+<!--chapter:end:06-demographics.Rmd-->
+
+# Shared volumes and sessions
+
+This report summarizes the number of shared volumes by sharing type and by investigator.
+
+```{r}
+tar_load(vols_sess_df, store = "../_targets/")
+```
+
+## How shared by unique volume {-}
+
+```{r}
+unique_vols <- vols_sess_df |>
+  dplyr::rename(investigator = owner_ids.name, party_id = owner_ids.id) |>
+  dplyr::mutate(shared_type = ifelse(sharing_level == "full", 
+                                     "full_volume", "overview_only")) |>
+  dplyr::mutate(vol_url = paste0("https://nyu.databrary.org/volume/", vol_id)) |>
+  dplyr::group_by(vol_id, vol_name, vol_url, created_date, shared_type, n_sessions) |>
+  dplyr::summarise(n_owners = n())
+```
+
+There are $n=$ `r dim(unique_vols)[1]` total shared volumes on Databrary.
+
+### Full volume {-}
+
+```{r}
+unique_vols_full <- unique_vols |>
+  dplyr::filter(shared_type == "full_volume")
+```
+
+There are $n=$ `r dim(unique_vols_full)[1]` volumes fully shared on Databrary.
+
+```{r}
+unique_vols_full |>
+  dplyr::arrange(desc(n_sessions)) |>
+  knitr::kable("html") |>
+  kableExtra::kable_styling() |>
+  kableExtra::scroll_box(width = "100%", height = "300px")
+```
+
+### Overview only {-}
+
+```{r}
+unique_vols_overview <- unique_vols |>
+  dplyr::filter(shared_type == "overview_only")
+```
+
+There are $n=$ `r dim(unique_vols_overview)[1]` volume overviews shared on Databrary.
+
+```{r}
+unique_vols_overview |>
+  dplyr::arrange(desc(n_sessions)) |>
+  knitr::kable("html") |>
+  kableExtra::kable_styling() |>
+  kableExtra::scroll_box(width = "100%", height = "300px")
+```
+
+## How shared by investigator {-}
+
+```{r}
+vols_dat <- vols_sess_df |>
+  # change variable names, create full_volume vs. overview_only
+  dplyr::group_by(owner_ids.name, owner_ids.id) |>
+  dplyr::rename(investigator = owner_ids.name, party_id = owner_ids.id) |>
+  dplyr::mutate(shared_type = ifelse(sharing_level == "full", "full_volume", "overview_only")) |>
+  dplyr::select(investigator,
+                party_id,
+                vol_id,
+                created_date,
+                shared_type,
+                n_sessions) |>
+  dplyr::mutate(url = paste0("https://nyu.databrary.org/party/", party_id)) |>
+  dplyr::group_by(investigator, url, shared_type) |>
+  # summarise by total shared volumes by type with session stats
+  dplyr::summarise(
+    n_vols = n(),
+    tot_sess = sum(n_sessions),
+    min_n_sess = min(n_sessions),
+    max_n_sess = max(n_sessions)
+  ) |>
+  dplyr::arrange(shared_type, desc(tot_sess))
+```
+
+Sorted by `tot_sess`, the total number of sessions from these Authorized Investigators.
+
+### Full volume {-}
+
+```{r}
+vols_dat |>
+  dplyr::filter(shared_type == "full_volume") |>
+  knitr::kable("html") |>
+  kableExtra::kable_styling() |>
+  kableExtra::scroll_box(width = "100%", height = "300px")
+```
+
+### Overview only {-}
+
+```{r}
+vols_dat |>
+  dplyr::filter(shared_type == "overview_only") |>
+  knitr::kable("html") |>
+  kableExtra::kable_styling() |>
+  kableExtra::scroll_box(width = "100%", height = "300px")
+```
+
+<!--chapter:end:07-shared-volumes.Rmd-->
+
+# (APPENDIX) Appendix {-}
+
+# Workflow {-}
+
+This page describes the set of tools we use to generate these data and present them in this site.
+
+## GitHub {-}
+
+We use GitHub's pages feature to serve the web site files.
+
+At present, we are using a repository associated with Rick Gilmore's lab group (https://github.com/gilmore-lab/databrary-analytics/).
+Once the migration to the `bookdown` package is complete, we will move the repo to the Databrary organization on GitHub.
+That will result in the analytics site having the following url: https://databrary.github.io/analytics/.
+
+The site is built locally by Rick Gilmore or Andrea Seisler, then pushed to GitHub.
+
+## RStudio {-}
+
+We use [RStudio](https://posit.co/products/open-source/rstudio/) as the integrated development environment for the site.
+Most of the code is in R Markdown and R, with some CSS and JavaScript.
+
+We use a number of R packages in the workflow.
+
+### Databrary API {-}
+
+The [`databraryapi` package](https://github.com/PLAY-behaviorome/databraryapi/) provides a set of tools for interacting with the Databrary API and gathering data from the site.
+This package may be useful to some analysts whether or not they care about Databrary-specific analytics.
+
+Most data and metadata used in these reports can be accessed by the public, but specific data about individual participants requires that the user be authorized and logged in to the site using the `databraryapi::db_login()` function.
+
+The package may be installed via `devtools::install_github(repo="PLAY-behaviorome/databraryapi")`.
+
+See <https://play-behaviorome.github.io/databraryapi/> for documentation about the package.
+
+### Targets {-}
+
+We use the [`targets`](https://books.ropensci.org/targets/) package to generate data and metadata files that are used to create the visualizations and summaries.
+
+Some of the components are rendered on a regular, time-determined basis, like the weekly report. Others are rendered less often, typically quarterly.
+
+Most of the targets call functions in `R/functions.R`. The specific targets can be viewed in the `_targets.R` file in the root directory of the repository.
+
+A typical workflow to 'make' or update the *data* files, is as follows:
+
+```
+library(targets)
+tar_make()
+```
+
+### Bookdown {-}
+
+To generate the site, we use the [`bookdown`](https://bookdown.org/yihui/bookdown/) package.
+
+A typical sequence of commands to regenerate the site is the following:
+
+```
+bookdown::render_book('src')
+```
+
+Configuration files using the YAML markup language control the rendering process. 
+These files and the source R Markdown (.Rmd) files used to generate the site are in the `src/` directory.
+
+The rendering command creates a full website in the `docs/` directory.
+
+### Package Reproducibility {-}
+
+We use the [`renv`](https://rstudio.github.io/renv/articles/renv.html) package to track package dependencies.
+
+## Strategy {-}
+
+Some of the data elements in the report change often, but others do not.
+We have found it is faster and more convenient in many cases to download various data files from Databrary and store copies as comma-separated value (CSV) text files in `src/csv`. 
+
+Some of the CSVs contain potentially identifiable human subjects data, so we use a special `.gitignore` file to keep those files out of the git tracking scheme and prevent uploading them to GitHub.
+
+These data analyses and visualizations have developed piecemeal over several years.
+They could undoubtedly be optimized and improved.
+
+The primary developer (Rick Gilmore) has had a 'git-er-done' attitude toward the project, especially with the latest refactoring to `{bookdown}`, `{targets}`, and `{renv}`. 
+
+Gilmore takes some solace in the following quotation from the father of literate programming, [Donald Knuth](https://en.wikiquote.org/wiki/Donald_Knuth):
+
+>...the real problem is that programmers have spent far too much time worrying about efficiency in the wrong places and at the wrong times; premature optimization is the root of all evil (or at least most of it) in programming.
+
+### Roadmap {-}
+
+- Migrate ARS to `bookdown` branch; merge into main (March 2023).
+- Fix when targets are run for which flows.
+    - This is a work in-progress.
+- Separate functions in `R/functions.R` into separate files based on their context. The current `R/functions.R` contains mostly old code from the pre-`bookdown` version of the site. The styles are inconsistent and the large file is hard to maintain.
+    - This is in-process as of 2023-02-24.
+- Devise visualizations of assets by investigator/institution.
+- ~~Function to determine max party_id and max volume_id interactively~~.
+- Eliminate YAML params from `index.Rmd`.
+- Create JSON lat, lon file for Databrary home page.
+- ~~Add state, country summaries to demographics~~.
+- Allow user to show code.
+- Move from old pipe `%>%` to new `|>`. 
+    - ~~Done for `*.Rmd` files~~, but not `*.R` files as of 2023-02-24.
+
+```{r logut-databrary, include=FALSE}
+databraryapi::logout_db()
+if (file.exists(".databrary.RData")) {
+  unlink(".databrary.RData", recursive = TRUE)
+}
+```
+
+<!--chapter:end:10-workflow.Rmd-->
+
