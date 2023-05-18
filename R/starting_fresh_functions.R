@@ -34,6 +34,12 @@ setup_anew <- function(my_db_login, vb = TRUE) {
   
   if (vb) message("\nGenerating session-level asset statistics...")
   generate_fresh_asset_stats_csvs()
+  
+  if (vb) message("\nGenerating volume demographics CSVs...")
+  generate_fresh_volume_demo_csvs()
+  
+  if (vb) message("\nGenerating volume owner CSVs...")
+  generate_fresh_owners_csvs()
 }
 
 #------------------------------------------------------------------------------
@@ -76,6 +82,21 @@ check_all_credentials <- function(my_db_login) {
   } else {
     message("Google maps credentials verified.")
   }
+}
+
+#------------------------------------------------------------------------------
+generate_fresh_volume_demo_csvs <- function() {
+  unlink("src/csv/*demog.csv")
+  
+  max_ids <- update_max_vol_party_ids()
+  get_volume_demo_save_csv_mult(1, max_ids$MAX_VOL_ID)
+}
+
+#------------------------------------------------------------------------------
+generate_fresh_owners_csvs <- function() {
+  unlink("src/csv/*owners.csv")
+  max_ids <- update_max_vol_party_ids()
+  get_all_owners_save_csvs(max_ids$MAX_VOL_ID)
 }
 
 #------------------------------------------------------------------------------

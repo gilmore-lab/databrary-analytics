@@ -5,6 +5,7 @@ bookdown::bs4_book:
   repo:
     base: https://github.com/gilmore-lab/databrary-analytics
     branch: main
+    subdir: src
 
 bookdown::gitbook:
   css: include/css/style.css
