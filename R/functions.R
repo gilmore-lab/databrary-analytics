@@ -1591,7 +1591,7 @@ extract_particip_info_session_date <- function(df) {
 
 #-------------------------------------------------------------------------------
 remove_materials <- function(df) {
-  filter(df, !str_detect(`session-date`, '[Mm]aterials'))
+  dplyr::filter(df, !str_detect(df$`session-date`, '[Mm]aterials'))
 }
 
 #-------------------------------------------------------------------------------
@@ -1696,7 +1696,7 @@ convert_vol_ss_csv_to_particip_df <- function(csv_fn,
                                               vb = FALSE) {
   stopifnot(is.character(csv_fn))
   
-  vol_id <- unique(str_extract(basename(csv_fn), '([0-9]{4})'))
+  vol_id <- unique(str_extract(basename(csv_fn), '([0-9]{5})'))
   
   if (vb)
     message(" Reading ", csv_fn)

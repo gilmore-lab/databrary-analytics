@@ -93,8 +93,8 @@ generate_fresh_volume_demo_csvs <- function() {
 }
 
 #------------------------------------------------------------------------------
-generate_fresh_owners_csvs <- function() {
-  unlink("src/csv/*owners.csv")
+generate_fresh_owners_csvs <- function(delete_old = FALSE) {
+  if (delete_old) unlink("src/csv/*owners.csv")
   max_ids <- update_max_vol_party_ids()
   get_all_owners_save_csvs(max_ids$MAX_VOL_ID)
 }
