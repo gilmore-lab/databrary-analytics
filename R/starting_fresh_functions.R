@@ -29,14 +29,14 @@ setup_anew <- function(my_db_login, vb = TRUE) {
   if (vb) message("\nChecking data directories and .gitignore files...")
   prepare_to_update_csvs()
   
-  if (vb) message("\nGenerating institution-level CSVs...")
-  generate_fresh_inst_csvs()
+  if (vb) message("\nGenerating new institution-level CSVs...")
+  generate_fresh_inst_csvs(delete_old = TRUE)
   
   if (vb) message("\nGenerating session-level asset statistics...")
-  generate_fresh_asset_stats_csvs()
+  generate_fresh_asset_stats_csvs(delete_old = TRUE)
   
   if (vb) message("\nGenerating volume demographics CSVs...")
-  generate_fresh_volume_demo_csvs()
+  generate_fresh_volume_demo_csvs(delete_old = TRUE)
   
   if (vb) message("\nGenerating volume owner CSVs...")
   generate_fresh_owners_csvs()
@@ -85,8 +85,8 @@ check_all_credentials <- function(my_db_login) {
 }
 
 #------------------------------------------------------------------------------
-generate_fresh_volume_demo_csvs <- function() {
-  unlink("src/csv/*demog.csv")
+generate_fresh_volume_demo_csvs <- function(delete_old = FALSE) {
+  if (delete_old) unlink("src/csv/*demog.csv")
   
   max_ids <- update_max_vol_party_ids()
   get_volume_demo_save_csv_mult(1, max_ids$MAX_VOL_ID)
@@ -100,15 +100,16 @@ generate_fresh_owners_csvs <- function(delete_old = FALSE) {
 }
 
 #------------------------------------------------------------------------------
-generate_fresh_inst_csvs <- function() {
-  unlink("src/csv/institutions.csv")
+generate_fresh_inst_csvs <- function(delete_old = FALSE) {
+  if (delete_old) unlink("src/csv/institutions.csv")
   
   max_ids <- update_max_vol_party_ids()
   update_inst_csv(max_id = max_ids$MAX_PARTY_ID, update_geo = TRUE)
 }
 
 #------------------------------------------------------------------------------
-generate_fresh_asset_stats_csvs <- function() {
+generate_fresh_asset_stats_csvs <- function(delete_old = FALSE) {
+  if (delete_old) unlink("src/csv/*assets.csv")
   max_ids <- update_max_vol_party_ids()
   
   update_all_vol_stats(max_volume_id = max_ids$MAX_VOL_ID, vb = TRUE)
