@@ -1,8 +1,0 @@
-vol_id,mimetype,extension,asset_type,n_files,tot_size_gb,tot_dur_hrs
-232,application/msword,doc,Microsoft Word document,3,1.87e-4,0
-232,application/pdf,pdf,Portable document,15,0.0028006640625,0
-232,application/vnd.datavyu,opf,Datavyu,1,3.37890625e-6,0
-232,application/vnd.openxmlformats-officedocument.wordprocessingml.document,docx,Microsoft Word (Office Open XML) document,1,9.3056640625e-6,0
-232,audio/mpeg,mp3,MPEG-1 or MPEG-2 audio layer III,5,0.4480673671875,6.8946274999999995
-232,image/png,png,Portable network graphics,2,0.0010672412109375,0
-232,video/mp4,mp4,MPEG-4 video,6,2.8767805712890624,5.095604444444445

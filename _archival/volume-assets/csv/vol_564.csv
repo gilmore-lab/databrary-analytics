@@ -1,7 +1,0 @@
-vol_id,mimetype,extension,asset_type,n_files,tot_size_gb,tot_dur_hrs
-564,application/pdf,pdf,Portable document,32,0.0463445595703125,0
-564,application/vnd.ms-excel,xls,Microsoft Excel spreadsheet,14,0.001442,0
-564,application/vnd.openxmlformats-officedocument.spreadsheetml.sheet,xlsx,Microsoft Excel (Office Open XML) workbook,2,2.8560546875e-5,0
-564,application/vnd.openxmlformats-officedocument.wordprocessingml.document,docx,Microsoft Word (Office Open XML) document,2,1.10283203125e-4,0
-564,text/csv,csv,Comma-separated values,23,7.735908203125e-4,0
-564,video/mp4,mp4,MPEG-4 video,1962,397.43094591503905,480.60847194444443

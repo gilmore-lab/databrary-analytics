@@ -12,9 +12,6 @@ new_stats$date <- lubridate::as_datetime(new_stats$date)
 
 ```{r, load-volumes-data}
 if (params$from_gs) {
-  db <- googlesheets::gs_title('Databrary-analytics')
-  old_vols <- db %>%
-    googlesheets::gs_read(ws = 'volumes-shared-unshared')
 } else {
   old_vols <- readr::read_csv("../csv/volumes-shared-unshared.csv", show_col_types = FALSE)
 }

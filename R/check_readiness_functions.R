@@ -61,14 +61,15 @@ update_csv_folders_data_rpt <- function() {
 }
 
 #------------------------------------------------------------------------------
-check_db_creds <- function(env_var = "DATABRARY_LOGIN") {
-  stopifnot(is.character(env_var))
-  
-  db_login <- Sys.getenv(env_var)
-  if (db_login == "") {
-    message(env_var, " not found in user .Renviron.")
-    message("Recommend saving ",  env_var, " in user or project .Renviron. via `usethis::edit_r_environment()`.")
-  } else {
-    message(env_var, " found in `.Renviron`.")
-  }
-}
+# check_db_creds <- function(env_var = "DATABRARY_LOGIN") {
+#   stopifnot(is.character(env_var))
+#   
+#   db_login <- Sys.getenv(env_var)
+#   if (db_login == "") {
+#     message(env_var, " not found in user .Renviron.")
+#     message("Recommend saving ",  env_var, " in user or project .Renviron. via `usethis::edit_r_environment()`.")
+#     message("Add DATABRARY_LOGIN='", env_var, "' to .Renviron.")
+#   } else {
+#     message(env_var, " found in `.Renviron`.")
+#   }
+# }

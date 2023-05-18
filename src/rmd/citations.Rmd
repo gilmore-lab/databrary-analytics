@@ -8,10 +8,6 @@ date:  "`r Sys.time()`"
 
 ```{r}
 if (params$from_gs) {
-  db <- googlesheets::gs_title('Databrary-analytics')  
-
-  old_citations <- db %>%
-    googlesheets::gs_read(ws = 'citations-monthly')
 } else {
   old_citations <- readr::read_csv("../csv/citations-monthly.csv", show_col_types = FALSE)
 }
@@ -138,11 +134,11 @@ Google Scholar Citations for  [Databrary](https://scholar.google.com/scholar?hl=
 
 ```{r update-citations-gs}
 if (as.logical(params$update_gs)) {
-  new_data <- citations$date[next_value,]
-  db <- db %>%
-    googlesheets::gs_add_row(ws = 'citations-monthly', 
-                             input = new_data)
-  message("'update_gs' parameter is 'TRUE', so Google Sheet data will be updated.")
+  # new_data <- citations$date[next_value,]
+  # db <- db %>%
+  #   googlesheets::gs_add_row(ws = 'citations-monthly', 
+  #                            input = new_data)
+  # message("'update_gs' parameter is 'TRUE', so Google Sheet data will be updated.")
 } else {
   message("'update_gs' parameter is 'FALSE', so Google Sheet data unmodified.")
 }
