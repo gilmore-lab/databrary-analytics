@@ -31,7 +31,7 @@ There are a number of components to set up for before you are able to render the
 
 ### Check credentials
 
-- Run `source("R/starting_fresh_functions.R")`, then run `check_all_credentials(YOUR_DATABRARY_ID)` to verify that your Databrary and Google maps credentials have been properly stored.
+- Run `source("R/starting_fresh_functions.R")`, then run `check_all_credentials("YOUR_DATABRARY_ID")` to verify that your Databrary and Google maps credentials have been properly stored.
 
 ### Generate 'fresh' CSVs
 
@@ -46,5 +46,5 @@ There are a number of components to set up for before you are able to render the
 ### Render the reports
 
 - At this point, you should be able to render the full set of reports. This does not take very much time.
-- Run `bookdown::render('src')`.
+- Run `bookdown::render_book('src')`.
 - If this completes successfully, you can view the rendered site in `docs/`.
