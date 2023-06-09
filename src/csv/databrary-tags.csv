@@ -1,35 +1,35 @@
 vol_id,url,tags,weight
-1,https://nyu.databrary.org/volume/1,icis nola,1
 1,https://nyu.databrary.org/volume/1,icis,1
-1,https://nyu.databrary.org/volume/1,talk,1
-1,https://nyu.databrary.org/volume/1,presentations,1
+1,https://nyu.databrary.org/volume/1,icis nola,1
 1,https://nyu.databrary.org/volume/1,workshops,1
 1,https://nyu.databrary.org/volume/1,meetings,1
+1,https://nyu.databrary.org/volume/1,talk,1
+1,https://nyu.databrary.org/volume/1,presentations,1
 2,https://nyu.databrary.org/volume/2,motion,1
 2,https://nyu.databrary.org/volume/2,adult,1
 3,https://nyu.databrary.org/volume/3,NA,NA
-4,https://nyu.databrary.org/volume/4,infants,1
-4,https://nyu.databrary.org/volume/4,motor development,1
 4,https://nyu.databrary.org/volume/4,locomotion,1
+4,https://nyu.databrary.org/volume/4,motor development,1
 4,https://nyu.databrary.org/volume/4,materials,1
 4,https://nyu.databrary.org/volume/4,coding,1
-4,https://nyu.databrary.org/volume/4,protocols,1
 4,https://nyu.databrary.org/volume/4,manuals,1
-5,https://nyu.databrary.org/volume/5,infants,1
+4,https://nyu.databrary.org/volume/4,protocols,1
+4,https://nyu.databrary.org/volume/4,infants,1
 5,https://nyu.databrary.org/volume/5,locomotion,1
-5,https://nyu.databrary.org/volume/5,coding,1
+5,https://nyu.databrary.org/volume/5,infants,1
 5,https://nyu.databrary.org/volume/5,manuals,1
+5,https://nyu.databrary.org/volume/5,coding,1
 5,https://nyu.databrary.org/volume/5,bridges,1
 6,https://nyu.databrary.org/volume/6,NA,NA
-7,https://nyu.databrary.org/volume/7,affordances,1
-7,https://nyu.databrary.org/volume/7,apertures,1
-7,https://nyu.databrary.org/volume/7,falling,1
+7,https://nyu.databrary.org/volume/7,locomotion,1
 7,https://nyu.databrary.org/volume/7,perception,1
 7,https://nyu.databrary.org/volume/7,judgments,1
 7,https://nyu.databrary.org/volume/7,adult,1
-7,https://nyu.databrary.org/volume/7,locomotion,1
-7,https://nyu.databrary.org/volume/7,coding,1
+7,https://nyu.databrary.org/volume/7,affordances,1
+7,https://nyu.databrary.org/volume/7,apertures,1
 7,https://nyu.databrary.org/volume/7,manuals,1
+7,https://nyu.databrary.org/volume/7,coding,1
+7,https://nyu.databrary.org/volume/7,falling,1
 8,https://nyu.databrary.org/volume/8,infants,2
 8,https://nyu.databrary.org/volume/8,cognitive,2
 8,https://nyu.databrary.org/volume/8,parent-child interaction,2
@@ -258,11 +258,11 @@ vol_id,url,tags,weight
 68,https://nyu.databrary.org/volume/68,infants,1
 69,https://nyu.databrary.org/volume/69,NA,NA
 70,https://nyu.databrary.org/volume/70,teaching,2
+70,https://nyu.databrary.org/volume/70,infants,1
 70,https://nyu.databrary.org/volume/70,motor development,1
-70,https://nyu.databrary.org/volume/70,historical,1
 70,https://nyu.databrary.org/volume/70,children,1
 70,https://nyu.databrary.org/volume/70,stages,1
-70,https://nyu.databrary.org/volume/70,infants,1
+70,https://nyu.databrary.org/volume/70,historical,1
 71,https://nyu.databrary.org/volume/71,NA,NA
 72,https://nyu.databrary.org/volume/72,NA,NA
 73,https://nyu.databrary.org/volume/73,motion coherence,1
@@ -1853,10 +1853,10 @@ vol_id,url,tags,weight
 1280,https://nyu.databrary.org/volume/1280,NA,NA
 1281,https://nyu.databrary.org/volume/1281,rem sleep,1
 1281,https://nyu.databrary.org/volume/1281,active sleep,1
-1281,https://nyu.databrary.org/volume/1281,non-rem sleep,1
-1281,https://nyu.databrary.org/volume/1281,quiet sleep,1
 1281,https://nyu.databrary.org/volume/1281,sensorimotor,1
+1281,https://nyu.databrary.org/volume/1281,quiet sleep,1
 1281,https://nyu.databrary.org/volume/1281,sleep spindle,1
+1281,https://nyu.databrary.org/volume/1281,non-rem sleep,1
 1282,https://nyu.databrary.org/volume/1282,NA,NA
 1283,https://nyu.databrary.org/volume/1283,NA,NA
 1284,https://nyu.databrary.org/volume/1284,NA,NA
@@ -2245,3 +2245,6 @@ vol_id,url,tags,weight
 1605,https://nyu.databrary.org/volume/1605,NA,NA
 1606,https://nyu.databrary.org/volume/1606,NA,NA
 1607,https://nyu.databrary.org/volume/1607,NA,NA
+1608,https://nyu.databrary.org/volume/1608,NA,NA
+1609,https://nyu.databrary.org/volume/1609,NA,NA
+1610,https://nyu.databrary.org/volume/1610,NA,NA
