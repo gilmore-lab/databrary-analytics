@@ -1,24 +1,24 @@
 vol_id,url,tags,weight
-1,https://nyu.databrary.org/volume/1,icis,1
 1,https://nyu.databrary.org/volume/1,icis nola,1
-1,https://nyu.databrary.org/volume/1,workshops,1
-1,https://nyu.databrary.org/volume/1,meetings,1
+1,https://nyu.databrary.org/volume/1,icis,1
 1,https://nyu.databrary.org/volume/1,talk,1
 1,https://nyu.databrary.org/volume/1,presentations,1
+1,https://nyu.databrary.org/volume/1,workshops,1
+1,https://nyu.databrary.org/volume/1,meetings,1
 2,https://nyu.databrary.org/volume/2,motion,1
 2,https://nyu.databrary.org/volume/2,adult,1
 3,https://nyu.databrary.org/volume/3,NA,NA
-4,https://nyu.databrary.org/volume/4,locomotion,1
+4,https://nyu.databrary.org/volume/4,infants,1
 4,https://nyu.databrary.org/volume/4,motor development,1
+4,https://nyu.databrary.org/volume/4,locomotion,1
 4,https://nyu.databrary.org/volume/4,materials,1
 4,https://nyu.databrary.org/volume/4,coding,1
-4,https://nyu.databrary.org/volume/4,manuals,1
 4,https://nyu.databrary.org/volume/4,protocols,1
-4,https://nyu.databrary.org/volume/4,infants,1
-5,https://nyu.databrary.org/volume/5,locomotion,1
+4,https://nyu.databrary.org/volume/4,manuals,1
 5,https://nyu.databrary.org/volume/5,infants,1
-5,https://nyu.databrary.org/volume/5,manuals,1
+5,https://nyu.databrary.org/volume/5,locomotion,1
 5,https://nyu.databrary.org/volume/5,coding,1
+5,https://nyu.databrary.org/volume/5,manuals,1
 5,https://nyu.databrary.org/volume/5,bridges,1
 6,https://nyu.databrary.org/volume/6,NA,NA
 7,https://nyu.databrary.org/volume/7,locomotion,1
@@ -30,41 +30,41 @@ vol_id,url,tags,weight
 7,https://nyu.databrary.org/volume/7,manuals,1
 7,https://nyu.databrary.org/volume/7,coding,1
 7,https://nyu.databrary.org/volume/7,falling,1
-8,https://nyu.databrary.org/volume/8,infants,2
-8,https://nyu.databrary.org/volume/8,cognitive,2
-8,https://nyu.databrary.org/volume/8,parent-child interaction,2
 8,https://nyu.databrary.org/volume/8,emotional,2
-8,https://nyu.databrary.org/volume/8,grocery shopping,1
-8,https://nyu.databrary.org/volume/8,longitudinal,1
+8,https://nyu.databrary.org/volume/8,cognitive,2
+8,https://nyu.databrary.org/volume/8,infants,2
+8,https://nyu.databrary.org/volume/8,parent-child interaction,2
 8,https://nyu.databrary.org/volume/8,language,1
-8,https://nyu.databrary.org/volume/8,gender,1
-8,https://nyu.databrary.org/volume/8,culture,1
 8,https://nyu.databrary.org/volume/8,social,1
-8,https://nyu.databrary.org/volume/8,play,1
-8,https://nyu.databrary.org/volume/8,children,1
-8,https://nyu.databrary.org/volume/8,cross-cultural research,1
-8,https://nyu.databrary.org/volume/8,book reading,1
-8,https://nyu.databrary.org/volume/8,free play,1
+8,https://nyu.databrary.org/volume/8,gender,1
 8,https://nyu.databrary.org/volume/8,school readiness,1
+8,https://nyu.databrary.org/volume/8,children,1
+8,https://nyu.databrary.org/volume/8,play,1
+8,https://nyu.databrary.org/volume/8,free play,1
+8,https://nyu.databrary.org/volume/8,cross-cultural research,1
+8,https://nyu.databrary.org/volume/8,grocery shopping,1
+8,https://nyu.databrary.org/volume/8,book reading,1
+8,https://nyu.databrary.org/volume/8,culture,1
+8,https://nyu.databrary.org/volume/8,longitudinal,1
 9,https://nyu.databrary.org/volume/9,children,2
-9,https://nyu.databrary.org/volume/9,free play,1
-9,https://nyu.databrary.org/volume/9,social,1
 9,https://nyu.databrary.org/volume/9,motion,1
+9,https://nyu.databrary.org/volume/9,social,1
+9,https://nyu.databrary.org/volume/9,free play,1
 10,https://nyu.databrary.org/volume/10,numerical cognition,2
-10,https://nyu.databrary.org/volume/10,adult-child interaction,1
-10,https://nyu.databrary.org/volume/10,infants,1
 10,https://nyu.databrary.org/volume/10,cross-cultural research,1
+10,https://nyu.databrary.org/volume/10,infants,1
+10,https://nyu.databrary.org/volume/10,adult-child interaction,1
 10,https://nyu.databrary.org/volume/10,amazon,1
 11,https://nyu.databrary.org/volume/11,NA,NA
 12,https://nyu.databrary.org/volume/12,NA,NA
 13,https://nyu.databrary.org/volume/13,NA,NA
 14,https://nyu.databrary.org/volume/14,NA,NA
 15,https://nyu.databrary.org/volume/15,still-face,2
+15,https://nyu.databrary.org/volume/15,expressions,1
+15,https://nyu.databrary.org/volume/15,infants,1
 15,https://nyu.databrary.org/volume/15,attachment,1
 15,https://nyu.databrary.org/volume/15,coding,1
 15,https://nyu.databrary.org/volume/15,manuals,1
-15,https://nyu.databrary.org/volume/15,expressions,1
-15,https://nyu.databrary.org/volume/15,infants,1
 16,https://nyu.databrary.org/volume/16,adult,1
 16,https://nyu.databrary.org/volume/16,walking,1
 16,https://nyu.databrary.org/volume/16,uner tan syndrome,1
@@ -95,9 +95,9 @@ vol_id,url,tags,weight
 28,https://nyu.databrary.org/volume/28,slopes,1
 28,https://nyu.databrary.org/volume/28,infants,1
 29,https://nyu.databrary.org/volume/29,eye-tracking,2
+29,https://nyu.databrary.org/volume/29,perception,1
 29,https://nyu.databrary.org/volume/29,visual development,1
 29,https://nyu.databrary.org/volume/29,infants,1
-29,https://nyu.databrary.org/volume/29,perception,1
 30,https://nyu.databrary.org/volume/30,faces,8
 30,https://nyu.databrary.org/volume/30,facial expressions,7
 30,https://nyu.databrary.org/volume/30,emotions,7
@@ -258,11 +258,11 @@ vol_id,url,tags,weight
 68,https://nyu.databrary.org/volume/68,infants,1
 69,https://nyu.databrary.org/volume/69,NA,NA
 70,https://nyu.databrary.org/volume/70,teaching,2
-70,https://nyu.databrary.org/volume/70,infants,1
 70,https://nyu.databrary.org/volume/70,motor development,1
+70,https://nyu.databrary.org/volume/70,historical,1
 70,https://nyu.databrary.org/volume/70,children,1
 70,https://nyu.databrary.org/volume/70,stages,1
-70,https://nyu.databrary.org/volume/70,historical,1
+70,https://nyu.databrary.org/volume/70,infants,1
 71,https://nyu.databrary.org/volume/71,NA,NA
 72,https://nyu.databrary.org/volume/72,NA,NA
 73,https://nyu.databrary.org/volume/73,motion coherence,1
@@ -288,11 +288,11 @@ vol_id,url,tags,weight
 79,https://nyu.databrary.org/volume/79,materials,1
 80,https://nyu.databrary.org/volume/80,NA,NA
 81,https://nyu.databrary.org/volume/81,culture,3
-81,https://nyu.databrary.org/volume/81,infants,2
 81,https://nyu.databrary.org/volume/81,visual development,2
-81,https://nyu.databrary.org/volume/81,cross-cultural research,1
-81,https://nyu.databrary.org/volume/81,icis,1
+81,https://nyu.databrary.org/volume/81,infants,2
 81,https://nyu.databrary.org/volume/81,optic flow,1
+81,https://nyu.databrary.org/volume/81,icis,1
+81,https://nyu.databrary.org/volume/81,cross-cultural research,1
 81,https://nyu.databrary.org/volume/81,icis nola,1
 81,https://nyu.databrary.org/volume/81,motion,1
 82,https://nyu.databrary.org/volume/82,NA,NA
@@ -694,10 +694,10 @@ vol_id,url,tags,weight
 300,https://nyu.databrary.org/volume/300,NA,NA
 301,https://nyu.databrary.org/volume/301,NA,NA
 302,https://nyu.databrary.org/volume/302,faces,1
-302,https://nyu.databrary.org/volume/302,face processing,1
-302,https://nyu.databrary.org/volume/302,fmri,1
-302,https://nyu.databrary.org/volume/302,ffa,1
 302,https://nyu.databrary.org/volume/302,visual perception,1
+302,https://nyu.databrary.org/volume/302,face processing,1
+302,https://nyu.databrary.org/volume/302,ffa,1
+302,https://nyu.databrary.org/volume/302,fmri,1
 303,https://nyu.databrary.org/volume/303,computational models,1
 303,https://nyu.databrary.org/volume/303,workshop,1
 303,https://nyu.databrary.org/volume/303,cds,1
@@ -853,9 +853,9 @@ vol_id,url,tags,weight
 432,https://nyu.databrary.org/volume/432,NA,NA
 433,https://nyu.databrary.org/volume/433,adult female,1
 433,https://nyu.databrary.org/volume/433,luminance matched,1
-433,https://nyu.databrary.org/volume/433,black and white,1
 433,https://nyu.databrary.org/volume/433,luminance varied,1
 433,https://nyu.databrary.org/volume/433,color,1
+433,https://nyu.databrary.org/volume/433,black and white,1
 434,https://nyu.databrary.org/volume/434,NA,NA
 435,https://nyu.databrary.org/volume/435,NA,NA
 436,https://nyu.databrary.org/volume/436,NA,NA
@@ -894,10 +894,10 @@ vol_id,url,tags,weight
 469,https://nyu.databrary.org/volume/469,NA,NA
 470,https://nyu.databrary.org/volume/470,NA,NA
 471,https://nyu.databrary.org/volume/471,motor development,1
-471,https://nyu.databrary.org/volume/471,infant locomotion,1
 471,https://nyu.databrary.org/volume/471,strategy choice,1
-471,https://nyu.databrary.org/volume/471,overlapping waves,1
+471,https://nyu.databrary.org/volume/471,infant locomotion,1
 471,https://nyu.databrary.org/volume/471,end-state comfort,1
+471,https://nyu.databrary.org/volume/471,overlapping waves,1
 472,https://nyu.databrary.org/volume/472,NA,NA
 473,https://nyu.databrary.org/volume/473,NA,NA
 474,https://nyu.databrary.org/volume/474,NA,NA
@@ -2248,3 +2248,6 @@ vol_id,url,tags,weight
 1608,https://nyu.databrary.org/volume/1608,NA,NA
 1609,https://nyu.databrary.org/volume/1609,NA,NA
 1610,https://nyu.databrary.org/volume/1610,NA,NA
+1611,https://nyu.databrary.org/volume/1611,NA,NA
+1612,https://nyu.databrary.org/volume/1612,NA,NA
+1613,https://nyu.databrary.org/volume/1613,NA,NA

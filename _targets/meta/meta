@@ -1,6 +1,6 @@
 name|type|data|command|depend|seed|path|time|size|bytes|format|repository|iteration|parent|children|seconds|warnings|error
 add_gitignore_to_csv_dir|function|95e3d389fa65dcf4|||||||||||||||
-add_new_inst_csvs|stem|5888031765dd9636|a53f1922a8790d70|01dd005a1bc71c05|-1555508277||t19517.5850356228s|bdb532178c146fbe|104|rds|local|vector|||8.117||
+add_new_inst_csvs|stem|d43547f2f3d8e0d2|a53f1922a8790d70|177167f9b864bad7|-1555508277||t19528.9449675218s|f55bdaeb17afeaf9|102|rds|local|vector|||3.203||
 alter_sess_df_w_mult_part|function|7d2269f8f8b7597e|||||||||||||||
 auth_to_google|function|a895f65c72041d58|||||||||||||||
 bytes_to_gb|function|d38896a56c3fcde1|||||||||||||||
@@ -71,18 +71,18 @@ get_volume_ss_vroom|function|f192c7318c7e52f5|||||||||||||||
 get_volumes_demo|function|b8f9b1154c3cf15d|||||||||||||||
 get_volumes_first_owners|function|2d771f3148796635|||||||||||||||
 get_volumes_owners|function|99bbdfb1c8ab828c|||||||||||||||
-inst_df|stem|de11bd5858240d87|385e06ede9eb06e7|629113c96c955ec6|-39249179||t19517.5094119939s|484b22e763a368fe|32965|rds|local|vector|||5.895||
-inst_invest_csv|stem|ca6e8369997b5d1d|0cdab3a1a63555e5|a56661dc6c6fcc73|96982013||t19517.509412935s|486367869399eba7|2592|rds|local|vector|||0.006||
-inst_invest_df|stem|ca6e8369997b5d1d|f200511381d53766|3dcc6e07b257f45f|-1292201014||t19517.5092468705s|486367869399eba7|2592|rds|local|vector|||0.103||
+inst_df|stem|2378f2aa4c29066b|385e06ede9eb06e7|66519c424ce71fd1|-39249179||t19528.8838311617s|91d24d88db34e32a|32902|rds|local|vector|||6.655||
+inst_invest_csv|stem|6a539bf62892981e|0cdab3a1a63555e5|10eca7b805967ab1|96982013||t19528.883831327s|14543f5a535a4827|2603|rds|local|vector|||0.005||
+inst_invest_df|stem|6a539bf62892981e|f200511381d53766|3dcc6e07b257f45f|-1292201014||t19528.8836637486s|14543f5a535a4827|2603|rds|local|vector|||0.123||
 institution_csv_fl|stem|1cb5cb15259ceb97|b4ae3bcfa4c7df53|88559740b2c6d4c9|2028229775||t19398.6528577819s|38698b2dd0294d4b|2281|rds|local|vector|||0.703||
-invest_df|stem|40777dff4d04173c|d15997c99b193db0|0451d824771dc495|1783705798||t19517.5903908204s|2845f00e1ac6e166|77283|rds|local|vector|||235.703||
+invest_df|stem|05847cc23472e38c|d15997c99b193db0|1cca4b1030a9ea82|1783705798||t19528.9492007565s|fbe056df928b5f5d|77257|rds|local|vector|||182.167||
 load_demog_csvs|function|7e6417fce4f41e84|||||||||||||||
 load_inst_df_from_csvs|function|28a65b0edc460a93|||||||||||||||
 load_old_inst_invest_data|function|266cdab27d0940b4|||||||||||||||
 load_old_tags_data|function|c17a37a7d0dabb33|||||||||||||||
 load_owner_csvs|function|87bd403eccdf0a61|||||||||||||||
 make_ais_df|function|38f42347c78cca2c|||||||||||||||
-make_all_ais_csv|stem|40777dff4d04173c|68608897c53904a8|7998a41c656d8861|1343518348||t19517.5876622559s|2845f00e1ac6e166|77283|rds|local|vector|||226.919||
+make_all_ais_csv|stem|05847cc23472e38c|68608897c53904a8|6be0b8c01001ca15|1343518348||t19528.9470920344s|fbe056df928b5f5d|77257|rds|local|vector|||183.536||
 make_all_ais_df|stem|7c4d001e492a5da1|24c8fa89d082ee97|c3b5fc02cdc369c1|1118731324||t19401.9410050971s|67f2148a26b5cbf9|58676|rds|local|vector|||0.684||
 make_all_session_df|function|274061771851c76a|||||||||||||||
 make_cleaned_session_df|function|0f87528410585ad4|||||||||||||||
@@ -91,16 +91,16 @@ make_inst_df_from_csvs|function|fecb5ca4cadb961f|||||||||||||||
 make_stem_tags_df|function|cce46e18c29adfe5|||||||||||||||
 make_volume_assets_stats_df|function|3b989c50e46f2022|||||||||||||||
 make_volume_tags_df|function|b678117b868da715|||||||||||||||
-max_ids|stem|7f213b35b3e7b69c|f73920d7b115a6ed|7438527f0df84e6e|-206273353||t19517.5092454818s|4b9eeb7e647347d1|144|rds|local|vector|||3.267||
-max_party_id|stem|dfb931d56631e554|32441c4eca029566|46ecdbe271a17360|-497437831||t19517.5093436819s|44989414465ff33d|49|rds|local|vector|||0||
-max_vol_id|stem|ef22fc12001135d3|6b2517915f2b6de7|46ecdbe271a17360|804642499||t19517.509343592s|44989414465ff33d|49|rds|local|vector|||0||
+max_ids|stem|bebedae18587455c|f73920d7b115a6ed|7438527f0df84e6e|-206273353||t19528.883661934s|4b9eeb7e647347d1|144|rds|local|vector|||2.737||
+max_party_id|stem|a665c89a81ce0451|32441c4eca029566|70a9aa6614d8803a|-497437831||t19528.8837539193s|44989414465ff33d|49|rds|local|vector|||0||
+max_vol_id|stem|a051b31de7ab415e|6b2517915f2b6de7|70a9aa6614d8803a|804642499||t19528.8837537297s|44989414465ff33d|49|rds|local|vector|||0||
 max_volume_id|object|59bd8c616f7250f1|||||||||||||||
 mins_to_hrs|function|eed140de550e8a84|||||||||||||||
 ms_to_hrs|function|5468a572735c6ab8|||||||||||||||
 ms_to_mins|function|3cbc8cf5159183c8|||||||||||||||
 ms_to_secs|function|36d97f9fbc12a198|||||||||||||||
 my_gender|function|14fb78886fa1a7c7|||||||||||||||
-n_inst_csvs|stem|3f3eded5955d93b7|e07fe259ad73f617|a5f1076f8f459d1b|1747753546||t19517.5092456064s|ac45463db19e2cbe|48|rds|local|vector|||0.002||
+n_inst_csvs|stem|3b288caf06ac1e1e|e07fe259ad73f617|a5f1076f8f459d1b|1747753546||t19528.8836621147s|ac45463db19e2cbe|48|rds|local|vector|||0.005||
 n_particip_in_session|function|f93aecd4681a0cae|||||||||||||||
 old_max_party_id|stem|0df5c6625aa9da22|2c274496432f046c|ed5ea2e38cc5846f|-11510734||t19408.8119741965s|c9aaea90a821e608|53|rds|local|vector|||0.001||
 old_max_vol_id|stem|0df5c6625aa9da22|7265b7f82e763650|ed5ea2e38cc5846f|-1393393201||t19408.8119741271s|c9aaea90a821e608|53|rds|local|vector|||0||
@@ -133,18 +133,18 @@ update_vol_tags_csv|function|7f4b7b7564d144c1|||||||||||||||
 update_volume_funders_csv|function|089de70feea08767|||||||||||||||
 vol_csv_avail|function|6766b75910ff6742|||||||||||||||
 vol_id_exists|function|bed3469df01a2671|||||||||||||||
-vol_tags_csv|stem|f032a3608230d55d|be19fdbca9907b76|0e598bd71f693485|-1340783785||t19517.5903920651s|5620f0efc7cde66f|14823|rds|local|vector|||0.035||
-vols_sess_df|stem|e7f2f928c285f71d|39c7dfe02a9e68d6|bbd9cbdee5daad31|613955833||t19517.5174426242s|587735df793b00e8|43207|rds|local|vector|||191.256||
-volume_asset_csv_list|stem|dc960491a9fcd878|0ea0986b34981f73|ce188ca62954aede|1104642854||t19517.5092074726s|af3c8df1178dfb66|1164|rds|local|vector|||0.003||
-volume_asset_stats_csvs|stem|0301ab1c8d29548f|95e7bcc0f2e133b1|1925ab66c3131fec|-485789987||t19517.5849412065s|6efc4bfe9d27bd5a|46|rds|local|vector|||5527.967||
-volume_asset_stats_df|stem|bd70999ecc6f2a2a|9544ea09951cdd47|fcbcd4a0d8376270|1097683627||t19517.5093434952s|a0151347a33ebe5e|14408|rds|local|vector|||2.8||
-volume_demog_df|stem|cc1b86f8fd377a8e|ab527123003c386a|cbde977060b69fd7|289017409||t19517.5093109355s|66f5564f2240f609|114331|rds|local|vector|||5.489|1m22mThere was 1 warning in mutate.1m22m36mℹ39m In argument sessiondate  lubridateymdsessiondate.Caused by warning33m39m  206 failed to parse.. 1m22mThere was 1 warning in mutate.1m22m36mℹ39m In argument sessiondate  lubridateymdsessiondate.Caused by warning33m39m  2 failed to parse.. 1m22mThere was 1 warning in mutate.1m22m36mℹ39m In argument sessiondate  lubridateymdsessiondate.Caused by warning33m39m  9 failed to parse.. 1m22mThere was 1 warning in mutate.1m22m36mℹ39m In argument sessiondate  lubridateymdsessiondate.Caused by warning33m39m  9 failed to parse.. 1m22mThere was 1 warning in mutate.1m22m36mℹ39m In argument sessiondate  lubridateymdsessiondate.Caused by warning33m39m  1 failed to parse.. 1m22mThere was 1 warning in mutate.1m22m36mℹ39m In argument sessiondate  lubridateymdsessiondate.Caused by warning33m39m  30 failed to parse.. 1m22mThere was 1 warning in mutate.1m22m36mℹ39m In argument sessiondate  lubridateymdsessiondate.Caused by warning33m39m  23 failed to parse.. 1m22mThere was 1 warning in mutate.1m22m36mℹ39m In argument participantbirthdate   lubridateymdparticipantbirthdate.Caused by warning33m39m  1 failed to parse.. 1m22mThere was 1 warning in mutate.1m22m36mℹ39m In argument sessiondate  lubridateymdsessiondate.Caused by warning33m39m All formats failed to parse. No formats found.. 1m22mThere was 1 warning in mutate.1m22m36mℹ39m In argument sessiondate  lubridateymdsessiondate.Caused by warning33m39m  143 failed to parse.. 1m22mThere was 1 warning in mutate.1m22m36mℹ39m In argument sessiondate  lubridateymdsessiondate.Caused by warning33m39m  54 failed to parse.. 1m22mThere was 1 warn|
-volume_funders_csv|stem|33c19dad47854a09|2a138138f2ceff2d|e65f5b5b5c158385|-1817194351||t19517.5903914999s|b714dc816d312dec|7530|rds|local|vector|||0.044||
-volume_funders_df|stem|33c19dad47854a09|7cc8a1f72a120920|9da217936edf5914|1974613460||t19517.5107107975s|b714dc816d312dec|7530|rds|local|vector|||112.119||
-volume_owners_csv|stem|a9574d87f1402e0c|4cda15eb392d9831|42ee8e734fbd7fd2|1374981367||t19517.5152286685s|81cd54fe76eb3bab|1571|rds|local|vector|||239.778||
-volume_ss_csv_fl|stem|f32e677180ebc86f|8a009bbc12c103e4|88559740b2c6d4c9|658438836||t19517.5092072795s|faeee8adf00ba476|1288|rds|local|vector|||0.154||
-volume_ss_csvs|stem|0301ab1c8d29548f|2735e9f0c6844125|a0aef489c27c673d|915210189||t19517.5209599429s|6efc4bfe9d27bd5a|46|rds|local|vector|||303.888|1m22mOne or more parsing issues, call problems on your data frame for details,e.g.  dat  vroom...  problemsdat. 1m22mOne or more parsing issues, call problems on your data frame for details,e.g.  dat  vroom...  problemsdat. 1m22mOne or more parsing issues, call problems on your data frame for details,e.g.  dat  vroom...  problemsdat. 1m22mOne or more parsing issues, call problems on your data frame for details,e.g.  dat  vroom...  problemsdat. 1m22mOne or more parsing issues, call problems on your data frame for details,e.g.  dat  vroom...  problemsdat. 1m22mOne or more parsing issues, call problems on your data frame for details,e.g.  dat  vroom...  problemsdat. 1m22mOne or more parsing issues, call problems on your data frame for details,e.g.  dat  vroom...  problemsdat. 1m22mOne or more parsing issues, call problems on your data frame for details,e.g.  dat  vroom...  problemsdat. unable to translate HTTP1.1 200 OKTransferEncoding chunkedServer databrary1Date Fri, 09 Jun 2023 122538 GMTContentType textcsvcharsetutf8contentdisposition attachment filenamedatabrary34FrankDevelopment_of_infantse2\80\99.csv to a wide string. input string 1 is invalid. 1m22mOne or more parsing issues, call problems on your data frame for details,e.g.  dat  vroom...  problemsdat. unable to translate HTTP1.1 200 OKTransferEncoding chunkedServer databrary1Date Fri, 09 Jun 2023 122542 GMTContentType textcsvcharsetutf8contentdisposition attachment filenamedatabrary70BakerArnold_Geselle2\80\99s_Films_of_Infant.csv to a wide string. input string 1 is invalid. 1m22mOne or more parsing issues, call problems on your data frame for details,e.g.  dat  vroom...  problemsdat. 1m22mOne or more parsing issues, call problems on your data frame for details,e.g.  dat  vroom..|
+vol_tags_csv|stem|9295fdc8c3175887|be19fdbca9907b76|931a64fe8fd5c36a|-1340783785||t19528.9492020304s|24cc20537f549091|14850|rds|local|vector|||0.029||
+vols_sess_df|stem|329f2ca5c7b251c4|39c7dfe02a9e68d6|98b251192ff67ea6|613955833||t19528.8906820104s|c71b9cdc3eb8fdc6|41499|rds|local|vector|||153.444||
+volume_asset_csv_list|stem|25bf5b1eda6cd832|0ea0986b34981f73|ce188ca62954aede|1104642854||t19528.8836299936s|cea0f513114e71e7|958|rds|local|vector|||0.002||
+volume_asset_stats_csvs|stem|0301ab1c8d29548f|95e7bcc0f2e133b1|2509a470cac5d9fc|-485789987||t19528.9449301489s|6efc4bfe9d27bd5a|46|rds|local|vector|||4440.085||
+volume_asset_stats_df|stem|966fee2118af896d|9544ea09951cdd47|0c2b23064b3276db|1097683627||t19528.8837536367s|93f2f306ecedffbd|12179|rds|local|vector|||2.493||
+volume_demog_df|stem|a3cd1947e483ee14|ab527123003c386a|bfcc070a32aab0d6|289017409||t19528.8837245217s|093681a916dd57a5|84550|rds|local|vector|||5.191|1m22mThere was 1 warning in mutate.1m22m36mℹ39m In argument sessiondate  lubridateymdsessiondate.Caused by warning33m39m  12 failed to parse.. 1m22mThere was 1 warning in mutate.1m22m36mℹ39m In argument sessiondate  lubridateymdsessiondate.Caused by warning33m39m  62 failed to parse.. 1m22mThere was 1 warning in mutate.1m22m36mℹ39m In argument sessiondate  lubridateymdsessiondate.Caused by warning33m39m  21 failed to parse.. 1m22mThere was 1 warning in mutate.1m22m36mℹ39m In argument sessiondate  lubridateymdsessiondate.Caused by warning33m39m  206 failed to parse.. 1m22mThere was 1 warning in mutate.1m22m36mℹ39m In argument sessiondate  lubridateymdsessiondate.Caused by warning33m39m  13 failed to parse.. 1m22mThere was 1 warning in mutate.1m22m36mℹ39m In argument sessiondate  lubridateymdsessiondate.Caused by warning33m39m  13 failed to parse.. 1m22mThere was 1 warning in mutate.1m22m36mℹ39m In argument sessiondate  lubridateymdsessiondate.Caused by warning33m39m  2 failed to parse.. 1m22mThere was 1 warning in mutate.1m22m36mℹ39m In argument sessiondate  lubridateymdsessiondate.Caused by warning33m39m  9 failed to parse.. 1m22mThere was 1 warning in mutate.1m22m36mℹ39m In argument sessiondate  lubridateymdsessiondate.Caused by warning33m39m  9 failed to parse.. 1m22mThere was 1 warning in mutate.1m22m36mℹ39m In argument sessiondate  lubridateymdsessiondate.Caused by warning33m39m  3 failed to parse.. 1m22mThere was 1 warning in mutate.1m22m36mℹ39m In argument sessiondate  lubridateymdsessiondate.Caused by warning33m39m  8 failed to parse.. 1m22mThere was 1 warning in mutate.1m22m36mℹ39m In argu|
+volume_funders_csv|stem|17382bf6d82f409d|2a138138f2ceff2d|96c0ef7e802eb16f|-1817194351||t19528.9492014264s|2ea98c55e159b4ca|7538|rds|local|vector|||0.04||
+volume_funders_df|stem|17382bf6d82f409d|7cc8a1f72a120920|62130091aeae4fd0|1974613460||t19528.8848737803s|2ea98c55e159b4ca|7538|rds|local|vector|||90.058||
+volume_owners_csv|stem|c6412fed06d4633a|4cda15eb392d9831|c0d6a772c9a90dfe|1374981367||t19528.8889057965s|d4be1280d0d2bfa6|1596|rds|local|vector|||187.063||
+volume_ss_csv_fl|stem|e1cca1c0abce4e2a|8a009bbc12c103e4|88559740b2c6d4c9|658438836||t19528.8836298524s|4efd5d5027a77bce|1057|rds|local|vector|||0.147||
+volume_ss_csvs|stem|0301ab1c8d29548f|2735e9f0c6844125|ba2ea8e0ac3f501a|915210189||t19528.8935401096s|6efc4bfe9d27bd5a|46|rds|local|vector|||246.928|1m22mOne or more parsing issues, call problems on your data frame for details,e.g.  dat  vroom...  problemsdat. 1m22mOne or more parsing issues, call problems on your data frame for details,e.g.  dat  vroom...  problemsdat. 1m22mOne or more parsing issues, call problems on your data frame for details,e.g.  dat  vroom...  problemsdat. 1m22mOne or more parsing issues, call problems on your data frame for details,e.g.  dat  vroom...  problemsdat. 1m22mOne or more parsing issues, call problems on your data frame for details,e.g.  dat  vroom...  problemsdat. 1m22mOne or more parsing issues, call problems on your data frame for details,e.g.  dat  vroom...  problemsdat. 1m22mOne or more parsing issues, call problems on your data frame for details,e.g.  dat  vroom...  problemsdat. 1m22mOne or more parsing issues, call problems on your data frame for details,e.g.  dat  vroom...  problemsdat. unable to translate HTTP1.1 200 OKTransferEncoding chunkedServer databrary1Date Tue, 20 Jun 2023 212304 GMTContentType textcsvcharsetutf8contentdisposition attachment filenamedatabrary34FrankDevelopment_of_infantse2\80\99.csv to a wide string. input string 1 is invalid. 1m22mOne or more parsing issues, call problems on your data frame for details,e.g.  dat  vroom...  problemsdat. unable to translate HTTP1.1 200 OKTransferEncoding chunkedServer databrary1Date Tue, 20 Jun 2023 212307 GMTContentType textcsvcharsetutf8contentdisposition attachment filenamedatabrary70BakerArnold_Geselle2\80\99s_Films_of_Infant.csv to a wide string. input string 1 is invalid. 1m22mOne or more parsing issues, call problems on your data frame for details,e.g.  dat  vroom...  problemsdat. 1m22mOne or more parsing issues, call problems on your data frame for details,e.g.  dat  vroom..|
 volume_ss_df|stem|523fe803b1181920|0496fcba8712f5be|5cef9cd54f966583|-144603786||t19394.8532546107s|c548ba681d7e656c|171339|rds|local|vector|||1.473||
-volume_tags_df|stem|f032a3608230d55d|0c8c67ccb8ed010b|f9ead346052002b0|-1736127828||t19517.5124532792s|5620f0efc7cde66f|14823|rds|local|vector|||150.535||
+volume_tags_df|stem|9295fdc8c3175887|0c8c67ccb8ed010b|5ecc32267e65ec06|-1736127828||t19528.886740564s|24cc20537f549091|14850|rds|local|vector|||161.272||
 weekly|object|994cf5164eeba6e2|||||||||||||||
 weekly_interval|object|a2a52dfe4e065e93|||||||||||||||
