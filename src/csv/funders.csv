@@ -1390,7 +1390,7 @@ vol_id,funder_id,funder_name,award
 1327,NA,NA,NA
 1328,NA,NA,NA
 1329,NA,NA,NA
-1330,NA,NA,NA
+1330,100000071,National Institute of Child Health and Human Development (NICHD),R01 HD041607
 1331,NA,NA,NA
 1332,NA,NA,NA
 1333,NA,NA,NA
@@ -1422,7 +1422,11 @@ vol_id,funder_id,funder_name,award
 1358,-900000002,LEGO Foundation (LEGO),The Science of Everyday Play
 1359,NA,NA,NA
 1360,NA,NA,NA
-1361,NA,NA,NA
+1361,100000002,National Institutes of Health (NIH),UL1 RR024153
+1361,100000002,National Institutes of Health (NIH),UL1 TR000005
+1361,100000071,National Institute of Child Health and Human Development (NICHD),R01 HD073255
+1361,100000025,National Institute of Mental Health (NIMH),T32 MH018269
+1361,100000055,National Institute on Deafness and Other Communication Disorders (NIDCD),F31 DC014614
 1362,NA,NA,NA
 1363,NA,NA,NA
 1364,100000004,Environmental Protection Agency (EPA),84020201-0
@@ -1686,3 +1690,12 @@ vol_id,funder_id,funder_name,award
 1611,NA,NA,NA
 1612,NA,NA,NA
 1613,NA,NA,NA
+1614,NA,NA,NA
+1615,NA,NA,NA
+1616,NA,NA,NA
+1617,NA,NA,NA
+1618,NA,NA,NA
+1619,NA,NA,NA
+1620,NA,NA,NA
+1621,NA,NA,NA
+1622,NA,NA,NA
