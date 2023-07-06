@@ -2,7 +2,7 @@
 
 #-------------------------------------------------------------------------------
 party_id_exists <- function(party_id = 1) {
-  p = databraryapi::download_party(party_id)
+  p = databraryr::download_party(party_id)
   
   if (is.null(p)) {
     FALSE
@@ -30,7 +30,7 @@ get_max_party_id <- function(start_id = 10922,
 
 #-------------------------------------------------------------------------------
 vol_id_exists <- function(vol_id = 1) {
-  v = databraryapi::list_volume(vol_id)
+  v = databraryr::list_volume(vol_id)
   
   if (is.null(v)) {
     FALSE
@@ -112,7 +112,7 @@ load_old_inst_invest_data <-
 get_inst_invest_datab <- function() {
   suppressPackageStartupMessages(require(tidyverse))
   
-  new_stats <- databraryapi::get_db_stats()
+  new_stats <- databraryr::get_db_stats()
   new_stats$date <- lubridate::as_datetime(new_stats$date)
   
   new_stats <- new_stats %>%
@@ -196,7 +196,7 @@ update_vol_tags_csv <-
 make_volume_tags_df <- function(vol_id, vb = FALSE) {
   if (vb)
     message(paste0("Gathering tags from volume ", vol_id))
-  these_tags <- databraryapi::list_volume_tags(vol_id)
+  these_tags <- databraryr::list_volume_tags(vol_id)
   if (rlang::is_empty(these_tags)) {
     df <- data.frame(
       vol_id = vol_id,
@@ -233,7 +233,7 @@ make_stem_tags_df <- function(tags_df,
             " volumes.")
   stem_vols_df <- purrr::map_df(
     .x = stem_vol_ids,
-    .f = databraryapi::list_volume_metadata,
+    .f = databraryr::list_volume_metadata,
     .progress = "STEM tags:"
   )
   
@@ -256,7 +256,7 @@ get_volume_funding <- function(vol_id, vb = FALSE) {
   
   if (vb)
     message('Getting funders for volume ', vol_id)
-  databraryapi::list_volume_funding(vol_id)
+  databraryr::list_volume_funding(vol_id)
 }
 
 #-------------------------------------------------------------------------------
@@ -300,11 +300,11 @@ update_volume_funders_csv <-
 #   }
 #
 #   suppressPackageStartupMessages(require(tidyverse))
-#   suppressPackageStartupMessages(require(databraryapi))
+#   suppressPackageStartupMessages(require(databraryr))
 #
 #   if (vb)
 #     message(paste0(" Extracting assets from volume ", vol_id))
-#   vol_data <- databraryapi::list_assets_in_volume(vol_id)
+#   vol_data <- databraryr::list_assets_in_volume(vol_id)
 #
 #   if (is.null(vol_data)) {
 #     if (vb)
@@ -752,7 +752,7 @@ get_volume_ss_save_csv <-
 #-------------------------------------------------------------------------------
 get_volume_birthdate <- function(vol_id, vb = FALSE) {
   v_ss <-
-    try(databraryapi::download_session_csv(vol_id), silent = TRUE)
+    try(databraryr::download_session_csv(vol_id), silent = TRUE)
   if (vb)
     message(paste0(
       "....Gathering participant_birthdate data from volume ",
@@ -775,7 +775,7 @@ get_volume_birthdate <- function(vol_id, vb = FALSE) {
 #-------------------------------------------------------------------------------
 get_volume_session_date <- function(vol_id, vb = FALSE) {
   v_ss <-
-    try(databraryapi::download_session_csv(vol_id), silent = TRUE)
+    try(databraryr::download_session_csv(vol_id), silent = TRUE)
   if (vb)
     message(paste0("....Gathering session_date data from volume ",
                    vol_id))
@@ -793,7 +793,7 @@ get_volume_session_date <- function(vol_id, vb = FALSE) {
 #-------------------------------------------------------------------------------
 get_volume_gender <- function(vol_id, vb = FALSE) {
   v_ss <-
-    try(databraryapi::download_session_csv(vol_id), silent = TRUE)
+    try(databraryr::download_session_csv(vol_id), silent = TRUE)
   if (vb)
     message(paste0("....Gathering participant_gender data from volume ", vol_id))
   
@@ -813,7 +813,7 @@ get_volume_gender <- function(vol_id, vb = FALSE) {
 #-------------------------------------------------------------------------------
 get_volume_race <- function(vol_id, vb = FALSE) {
   v_ss <-
-    try(databraryapi::download_session_csv(vol_id), silent = TRUE)
+    try(databraryr::download_session_csv(vol_id), silent = TRUE)
   if (vb)
     message(paste0("....Gathering participant_race data from volume ", vol_id))
   
@@ -833,7 +833,7 @@ get_volume_race <- function(vol_id, vb = FALSE) {
 #-------------------------------------------------------------------------------
 get_volume_ethnicity <- function(vol_id, vb = FALSE) {
   v_ss <-
-    try(databraryapi::download_session_csv(vol_id), silent = TRUE)
+    try(databraryr::download_session_csv(vol_id), silent = TRUE)
   if (vb)
     message(paste0(
       "....Gathering participant_ethnicity data from volume ",
@@ -865,7 +865,7 @@ get_volumes_demo <- function(min_vol_id = 1,
   
   vols_range <- min_vol_id:max_vol_id
   
-  db_status <- databraryapi::login_db(Sys.getenv("DATABRARY_LOGIN"))
+  db_status <- databraryr::login_db(Sys.getenv("DATABRARY_LOGIN"))
   if (!db_status) {
     message("Unable to login to Databrary. Only public data will be gathered")
   }
@@ -882,7 +882,7 @@ get_volumes_demo <- function(min_vol_id = 1,
   ml <-
     purrr::map_df(vols_range, get_volume_demog, vb, .progress = "Vol demog:")
   
-  databraryapi::logout_db()
+  databraryr::logout_db()
   
   purrr::list_rbind(ml)
 }
@@ -902,7 +902,7 @@ get_volume_demo_save_csv_mult <- function(min_vol_id = 1,
   
   vols_range <- min_vol_id:max_vol_id
   
-  db_status <- databraryapi::login_db(Sys.getenv("DATABRARY_LOGIN"))
+  db_status <- databraryr::login_db(Sys.getenv("DATABRARY_LOGIN"))
   if (!db_status) {
     message("Unable to login to Databrary. Only public data will be gathered")
   }
@@ -918,7 +918,7 @@ get_volume_demo_save_csv_mult <- function(min_vol_id = 1,
   
   purrr::walk(vols_range, get_volume_ss_save_csv, csv_dir, vb, .progress = "Vol ss:")
   
-  databraryapi::logout_db()
+  databraryr::logout_db()
 }
 
 #-------------------------------------------------------------------------------
@@ -1075,13 +1075,13 @@ get_volumes_owners <- function(min_vol_id = 1,
     message("Gathering owners from volumes ", min_vol_id, ":", max_vol_id)
   purrr::map_dfr(
     .x = vols_range,
-    .f = databraryapi::list_volume_owners,
+    .f = databraryr::list_volume_owners,
     .progress = "Vol owners:"
   )
 }
 
 get_volume_first_owner <- function(vol_id) {
-  df <- databraryapi::list_volume_owners(vol_id)
+  df <- databraryr::list_volume_owners(vol_id)
   if (rlang::is_empty(df)) {
     NULL
   } else {
@@ -1247,7 +1247,7 @@ render_participant_demog_report <- function(db_login) {
     "participant-demographics/participant-demog-report.Rmd",
     params = list(db_login = db_login)
   )
-  databraryapi::logout_db()
+  databraryr::logout_db()
   if (file.exists("participant-demographics/.databrary.RData")) {
     file.remove("participant-demographics/.databrary.RData")
   }
@@ -1279,7 +1279,7 @@ get_volume_ss <- function(vol_id = 1,
   }
   
   v_ss <-
-    try(databraryapi::download_session_csv(vol_id), silent = TRUE)
+    try(databraryr::download_session_csv(vol_id), silent = TRUE)
   
   if ('try-error' %in% class(v_ss)) {
     message(".Error loading CSV for volume ", vol_id)
@@ -1407,7 +1407,7 @@ get_save_multiple_volume_ss <-
     stopifnot(dir.exists(csv_dir))
     
     db_status <-
-      databraryapi::login_db(Sys.getenv("DATABRARY_LOGIN"))
+      databraryr::login_db(Sys.getenv("DATABRARY_LOGIN"))
     if (!db_status) {
       message("Unable to login to Databrary. Only public data will be gathered")
     }
@@ -1847,7 +1847,7 @@ create_complete_demog_df <- function(fl, vb = FALSE) {
 # get_ais_from_inst <- function(inst_id = 8, vb = FALSE) {
 #   if (vb)
 #     message("Getting AIs from institution ", inst_id)
-#   inst_df <- databraryapi::list_party(inst_id)
+#   inst_df <- databraryr::list_party(inst_id)
 #   
 #   if (!is.null(dim(inst_df$children))) {
 #     ais_df <- as.data.frame(inst_df$children$party)
@@ -1875,7 +1875,7 @@ create_complete_demog_df <- function(fl, vb = FALSE) {
 # 
 # #-------------------------------------------------------------------------------
 # count_affiliates_for_ai <- function(ai_id) {
-#   affils <- databraryapi::list_affiliates(ai_id)
+#   affils <- databraryr::list_affiliates(ai_id)
 #   if (is.null(affils)) {
 #     x <- 0
 #   } else {
@@ -1952,22 +1952,22 @@ create_complete_demog_df <- function(fl, vb = FALSE) {
 #       inst_id <- as.numeric(inst_id)
 #     }
 #     
-#     suppressPackageStartupMessages(require(databraryapi))
+#     suppressPackageStartupMessages(require(databraryr))
 #     
 #     if (!db_credentials_valid()) {
 #       message(
-#         "Not logged in to Databrary. Running `databraryapi::login_db()` with default credentials."
+#         "Not logged in to Databrary. Running `databraryr::login_db()` with default credentials."
 #       )
-#       databraryapi::login_db(Sys.getenv("DATABRARY_LOGIN"))
+#       databraryr::login_db(Sys.getenv("DATABRARY_LOGIN"))
 #       return(NULL)
 #     }
 #     
 #     if (inst_id > 0) {
-#       if (databraryapi::is_institution(inst_id)) {
+#       if (databraryr::is_institution(inst_id)) {
 #         if (vb)
 #           message("Getting information for institution ", inst_id)
 #         
-#         inst_df <- databraryapi::list_party(inst_id)
+#         inst_df <- databraryr::list_party(inst_id)
 #         df <- data.frame(
 #           inst_id = inst_df$id,
 #           inst_name = inst_df$sortname,
@@ -2121,7 +2121,7 @@ get_volume_data <-
     if (vol_id %in% skip_vols)
       return(NULL)
     
-    vol_data <- databraryapi::download_containers_records(vol_id)
+    vol_data <- databraryr::download_containers_records(vol_id)
     if (is.null(vol_data)) {
       if (vb)
         message(paste0("No data in volume ", vol_id))
@@ -2155,7 +2155,7 @@ get_many_volumes_data <-
     stopifnot(is.numeric(max_vol))
     stopifnot(max_vol > 0)
     stopifnot(min_vol < max_vol)
-    stopifnot(databraryapi::login_db(Sys.getenv("DATABRARY_LOGIN")))
+    stopifnot(databraryr::login_db(Sys.getenv("DATABRARY_LOGIN")))
     
     vol_index <- min_vol:max_vol
     # vols_data <- lapply(vol_index, get_volume_data)
@@ -2173,7 +2173,7 @@ get_many_volumes_data <-
 #-------------------------------------------------------------------------------
 get_volume_name <- function(vol_id) {
   message("Getting name for volume ", vol_id)
-  vol_metadata <- databraryapi::list_volume_metadata(vol_id)
+  vol_metadata <- databraryr::list_volume_metadata(vol_id)
   if (!is.null(vol_metadata)) {
     tibble::tibble(vol_id = vol_id,
                    vol_name = as.character(vol_metadata$name))

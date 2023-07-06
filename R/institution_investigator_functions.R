@@ -94,7 +94,7 @@ get_all_inst <- function(csv_dir = "src/csv",
 get_ais_from_inst <- function(inst_id = 8, vb = FALSE) {
   if (vb)
     message("Getting AIs from institution ", inst_id)
-  inst_df <- databraryapi::list_party(inst_id)
+  inst_df <- databraryr::list_party(inst_id)
   
   if (!is.null(dim(inst_df$children))) {
     ais_df <- as.data.frame(inst_df$children$party)
@@ -122,7 +122,7 @@ get_ais_from_inst <- function(inst_id = 8, vb = FALSE) {
 
 #-------------------------------------------------------------------------------
 count_affiliates_for_ai <- function(ai_id) {
-  affils <- databraryapi::list_affiliates(ai_id)
+  affils <- databraryr::list_affiliates(ai_id)
   if (is.null(affils)) {
     x <- 0
   } else {
@@ -201,22 +201,22 @@ get_inst_info <-
       inst_id <- as.numeric(inst_id)
     }
     
-    suppressPackageStartupMessages(require(databraryapi))
+    suppressPackageStartupMessages(require(databraryr))
     
     if (!db_credentials_valid()) {
       message(
-        "Not logged in to Databrary. Running `databraryapi::login_db()` with default credentials."
+        "Not logged in to Databrary. Running `databraryr::login_db()` with default credentials."
       )
-      databraryapi::login_db(Sys.getenv("DATABRARY_LOGIN"))
+      databraryr::login_db(Sys.getenv("DATABRARY_LOGIN"))
       return(NULL)
     }
     
     if (inst_id > 0) {
-      if (databraryapi::is_institution(inst_id)) {
+      if (databraryr::is_institution(inst_id)) {
         if (vb)
           message("Getting information for institution ", inst_id)
         
-        inst_df <- databraryapi::list_party(inst_id)
+        inst_df <- databraryr::list_party(inst_id)
         df <- data.frame(
           inst_id = inst_df$id,
           inst_name = inst_df$sortname,

@@ -10,7 +10,7 @@ get_assets_in_vol <- function(vol_id, vb = FALSE) {
   
   if (vb)
     message(paste0(" Extracting assets from volume ", vol_id))
-  vol_data <- databraryapi::list_assets_in_volume(vol_id)
+  vol_data <- databraryr::list_assets_in_volume(vol_id)
   
   if (is.null(vol_data)) {
     if (vb)
@@ -132,7 +132,7 @@ update_all_vol_stats <- function(max_volume_id,
   
   options(dplyr.summarise.inform = FALSE)
   
-  databraryapi::login_db(db_login)
+  databraryr::login_db(db_login)
   
   # It may be unnecessary, but I do this in separate chunks
   # Some of the larger volumes have a lot of assets, and this
@@ -151,7 +151,7 @@ update_all_vol_stats <- function(max_volume_id,
     vb = vb
   )
   
-  databraryapi::logout_db()
+  databraryr::logout_db()
 }
 
 #-------------------------------------------------------------------------------

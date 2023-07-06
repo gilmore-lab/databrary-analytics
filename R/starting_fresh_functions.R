@@ -57,10 +57,10 @@ check_all_credentials <- function(my_db_login) {
   
   stopifnot(is.character(my_db_login))
   
-  db_status <- databraryapi::login_db(my_db_login)
+  db_status <- databraryr::login_db(my_db_login)
   if (db_status == FALSE) {
     message("Invalid Databrary credentials.")
-    message("Run `databraryapi::config_pwd()` to add login credentials.")
+    message("Run `databraryr::config_pwd()` to add login credentials.")
   } else {
     message("Credentials verified with Databrary.")
     databrary_login_renviron <- Sys.getenv("DATABRARY_LOGIN")
