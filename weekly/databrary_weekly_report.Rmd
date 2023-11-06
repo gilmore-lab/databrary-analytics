@@ -1,90 +1,12 @@
 ---
-title: "Databrary Weekly"
+title: "Databrary Weekly (superceded)"
 author: "Rick O. Gilmore & Andrea Seisler"
-date: "`r Sys.time()`"
-output:
-  html_document:
-    code_folding: hide
-    number_sections: yes
-    self_contained: yes
-    toc: yes
-    toc_depth: 3
-    toc_float: yes
-params:
-  db_account: email@provider.com
-  update_gs: False
-  update_stats: False
-  from_gs: False
-  update_csv: False
-  vols_to_test: 10
+date: "November 6, 2023"
+output: html_document
 ---
 
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = FALSE, message = FALSE, warning = FALSE)
+**NOTE: The Databrary weekly report has been moved to the Databrary GitHub organization**
 
-source("R/helpers.R")
-##install_required_pkgs()
+You may find the weekly report and other related reports here:
 
-# Log in to Databrary
-if (!databraryapi::login_db(params$db_account)) {
-  message("Log-in failed.")
-} else {
-  message("Log-in succeeded.")
-}
-
-# Add pipe operator to workspace via tidyverse
-library(tidyverse)
-
-# Graphic theme elements
-ln_size <- 3
-base_size <- 14
-color_orange <- "#ec7751"
-color_teal <- "#4CAE99"
-color_purple <-"#AB00FF"
-
-databrary_theme <- 
-  ggplot2::theme_classic(base_size = base_size) +
-  ggplot2::theme(axis.title.x = ggplot2::element_blank()) +
-  ggplot2::theme(legend.position="none", 
-        axis.text = ggplot2::element_text(size = ggplot2::rel(0.8), colour = "black")) +
-  ggplot2::theme(axis.line = ggplot2::element_blank()) +
-  ggplot2::theme(plot.title = ggplot2::element_text(hjust = 0.5))
-```
-
-# Institutions & Authorized Users 
-
-```{r child = 'users.Rmd'}
-```
-
-## New Institutions
-
-```{r child = 'institutions.Rmd'}
-```
-
-## New and Updated Authorized Investigators
-
-```{r child = 'people.Rmd'}
-```
-
-# Volumes
-
-```{r child = 'volumes_shared.Rmd'}
-```
-
-# Citations
-
-```{r child = 'citations.Rmd'}
-```
-
-# Archived reports
-
-```{r child = 'old_weekly_reports.Rmd'}
-```
-
-```{r clean-up, include=FALSE}
-databraryapi::logout_db()
-if (file.exists(".databrary.RData")) {
-  unlink(".databrary.RData")
-}
-```
-
+<https://databrary.github.io/analytics>
